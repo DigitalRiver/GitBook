@@ -1,0 +1,89 @@
+TAXGROUP,TAXTYPE,SABRIXCODE,UNSPSC
+Downloadable Goods (Non-Software),Digital Image,4512.100,43230000
+Downloadable Goods (Non-Software),Virtual Goods,55111509.12,55111509
+Downloadable Goods (Non-Software),Music,55111512.100,55111512
+Downloadable Goods (Non-Software),Electronic Newspapers (Includes Subscriptions),55111507.120,55111507
+Downloadable Goods (Non-Software),Electronic Magazines (Includes Subscriptions),55111506.120,55111506
+Downloadable Goods (Non-Software),Educational / Vocational Texts,55111513.120,55111513
+Downloadable Goods (Non-Software),eBooks,55111502.120,55111502
+"Food, Beverage & Household",Non-Prescription Vitamins,51191905,51191905
+"Food, Beverage & Household",Non-Prescription Drugs,5124,51240000
+"Food, Beverage & Household",Miscellaneous Supplies,47,47000000
+"Food, Beverage & Household",Food - General,50,50000000
+Physical Goods,Automatic Blood Pressure Monitors,531316.150,531316.150
+Physical Goods,Energy Star - Stove,52141545.100,52141545.100
+Physical Goods,Energy Star - Dehumidifier,4010.200,4010.200
+Physical Goods,Energy Star - Air Conditioner,4010.100,4010.100
+Physical Goods,Energy Star - Ceiling Fan,40101609.100,40101609.100
+Physical Goods,Energy Star - Light Bulbs,39101629.100,39101629.100
+Physical Goods,Energy Star - Freezer,52141506.100,52141506.100
+Physical Goods,Energy Star - Refrigerator,52141501.100,52141501.100
+Physical Goods,Energy Star - Washer,52141601.100,52141601.100
+Physical Goods,Energy Star - Dryer,52141602.100,52141602.100
+Physical Goods,Energy Star - Dishwasher,52141505.100,52141505.100
+Physical Goods,Computer Supplies - Subscription,4321_S,43210000
+Physical Goods,Mobile Devices,43211509,43211509
+Physical Goods,Medical Equipment,42,42000000
+Physical Goods,"Consumer Electronics (Photographic, Filming, or Video Equipment)",4512,52160000
+Physical Goods,"Consumer Electronics (T.V., Monitor, Display) - Size (>4""<15"")",52161500_C,52160000
+Physical Goods,"Consumer Electronics (T.V., Monitor, Display) - Size (= or >35"")",52161500_B,52160000
+Physical Goods,"Consumer Electronics (T.V., Monitor, Display) - Size (= or >15""<35"")",52161500_A,52160000
+Physical Goods,Video Game Consoles and Accessories,601410,60141200
+Physical Goods,Uniforms,531027,53102700
+Physical Goods,Sports and Recreation Equipment,49,49000000
+Physical Goods,School Supplies,441216,44121600
+Physical Goods,School Instructional Materials,6010,60100000
+Physical Goods,Safety Clothing (Not Suitable for Everyday Use),461815.100,46181500
+Physical Goods,Printed Media (Non-Subscription),5510,55100000
+Physical Goods,Newspapers (Includes Subscription),55101504.100,55101504
+Physical Goods,Magazines (Includes Subscriptions),55101506.100,55101506
+Physical Goods,General Merchandise,601410,60141000
+Physical Goods,Consumer Electronics (Non-Computer),5216,52160000
+Physical Goods,Computers,4321_A,43211500
+Physical Goods,Computer Supplies,4321_C,43210000
+Physical Goods,Computer Peripheral Devices,4321_B,43211600
+Physical Goods,Books - General Purpose,55101510,55101510
+Physical Goods,Books - Educational and Vocational Texts,55101509,55101509
+Physical Goods,Backpacks,53121603,53121603
+Physical Goods,Apparel & Footwear (Everyday Use),531029.100,53102900
+Physical Goods,Apparel & Footwear (Athletic Use),531029.200,53102900
+Services & Miscellaneous,Installation Service Charges Provided by the Seller of TPP,70.360,
+Services & Miscellaneous,"Mandatory Maintenance Agreements - Services and Upgrades, Only for Downloadable",81112201.121,81112201
+Services & Miscellaneous,Computer Services,8111,81110000
+Services & Miscellaneous,Consulting Services,70.60,
+Services & Miscellaneous,General Services,70.100,
+Services & Miscellaneous,Gift Cards,70.120,14111608
+Services & Miscellaneous,"Mandatory Maintenance Agreements - Services and Upgrades, for Downloadable and Physical Products",81112201.120,81112201
+Services & Miscellaneous,Non-warranty Repairs,70.150,00000000
+Services & Miscellaneous,Online Data Storage,811121,81112100
+Services & Miscellaneous,"Optional Maintenance Agreements - Services and Upgrades, for Downloadable Products",81112201.420,81112201
+Services & Miscellaneous,"Optional Maintenance Agreements - Services and Upgrades, for Physical Products",81112201.410,81112201
+Services & Miscellaneous,"Optional Maintenance Agreements - Services Only, for Downloadable and Physical Products",81112201.200,81112201
+Services & Miscellaneous,Seminar Classes,70.300,
+Services & Miscellaneous,Software Training,70.280,
+Services & Miscellaneous,Technical Support,811118.100,81111800
+Services & Miscellaneous,Virtual Currency,70.120_A,14111608
+Services & Miscellaneous,Membership Dues - General,70.220,
+Services & Miscellaneous,Membership Dues & Professional Organization,70.222,
+Services & Miscellaneous,Web Hosting,81112105,81112105
+Software (Downloadable & Physical),Backup Media (CD/DVD) - One Disc per Order,4323.310_B,43230000
+Software (Downloadable & Physical),Software as a Service,81112106,81112106
+Software (Downloadable & Physical),Physical Software (Gaming Only),4323.310_E,43230000
+Software (Downloadable & Physical),Physical Software (Non-Gaming),4323.310_A,43230000
+Software (Downloadable & Physical),Physical Media Kits,4323.310_D,43230000
+Software (Downloadable & Physical),Backup Media (CD/DVD) - One Disc per Product,4323.310_C,43230000
+Software (Downloadable & Physical),Downloadable Media Kits,4323.320_C,43230000
+Software (Downloadable & Physical),Downloadable Software (Gaming Only),4323.320_D,43230000
+Software (Downloadable & Physical),"Downloadable Software (Non-Gaming, Includes Software Subscriptions)",4323.320_A,43230000
+Software (Downloadable & Physical),Extended Download Service,4323.320_B,43230000
+Warranties,"Optional Warranties - Purchased at Time of Sale of for Consumer Goods, Labor Only",95.210,81112201
+Warranties,"Optional Warranties - NOT Purchased at Time of Sale of for Consumer Goods, Parts & Labor",95.222,81112201
+Warranties,"Optional Warranties - NOT Purchased at Time of Sale of for Consumer Goods, Labor Only",95.220,81112201
+Warranties,Mandatory Warranties,95.100,81112201
+Warranties,"Optional Warranties - Purchased at Time of Sale of for Consumer Goods, Parts & Labor",95.212,81112201
+
+"SELECT TTCG.DISPLAY_NAME AS TaxGroup, TTCD.NAME AS TaxType, TTC.DOMESTIC_CODE AS SabrixCode, TTC.UNSPSC_CODE AS UNSPSC
+FROM TAX_TAX_CODE TTC, TAX_TAX_CODE_DATA TTCD, TAX_TAX_CODE_GROUP TTCG
+WHERE TTC.TAX_CODE_ID = TTCD.TAX_CODE_ID
+AND TTC.TAX_CODE_GROUP_ID = TTCG.TAX_CODE_GROUP_ID
+ORDER BY TTCG.DISPLAY_NAME"
