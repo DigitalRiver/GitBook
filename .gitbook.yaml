@@ -3,5 +3,7 @@ structure:
     summary: SUMMARY.md​
     
 redirects:  
-    home/big-commerce: .docs.digitalriver.com/bigcommerce/v/1.0-4/install-the-digital-river-app.md
-    big-commerce: .docs.digitalriver.com/bigcommerce/v/1.0-4/install-the-digital-river-app.md
+    paths:
+        '^/home/big-commerce': 
+        to: 'https://docs.digitalriver.com/big-commerce/bigcommerce/v/1.0-4/install-the-digital-river-app.md'
+        regexp: true
