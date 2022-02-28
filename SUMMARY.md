@@ -1,0 +1,17 @@
+# Table of contents
+
+* [Magento Extension 1.0.0](README.md)
+* [Introduction](introduction/README.md)
+  * [Features](introduction/features.md)
+  * [What's new in version 1.0.0](introduction/whats-new.md)
+* [Install the Magento Extension](install-the-magento-extension.md)
+* [Configure the Magento Extension](configure-the-magento-extension.md)
+* [Configure tax settings](configure-tax-settings.md)
+* [Configuring a second web site, store, or store view](configuring-a-second-web-site-store-or-store-view.md)
+* [Operation, work, and process flows](operation-work-and-process-flows/README.md)
+  * [Error handling and exception policy](operation-work-and-process-flows/error-handling-and-exception-policy.md)
+  * [Payment methods](operation-work-and-process-flows/payment-methods.md)
+  * [Post-order processes](operation-work-and-process-flows/post-order-processes.md)
+  * [Other considerations](operation-work-and-process-flows/other-considerations.md)
+* [Support](support.md)
+* [Appendix](appendix.md)
