@@ -5,5 +5,5 @@ structure:
     summary: SUMMARY.md​
     
 redirects:  
-        home/big-commerce: 'https://docs.digitalriver.com/big-commerce/bigcommerce/v/1.0-4/install-the-digital-river-app.md'
-        'big-commerce': 'https://docs.digitalriver.com/big-commerce/bigcommerce/v/1.0-4/install-the-digital-river-app.md'        
+        home/big-commerce: https://docs.digitalriver.com/big-commerce/bigcommerce/v/1.0-4/install-the-digital-river-app.md
+        big-commerce: https://docs.digitalriver.com/big-commerce/bigcommerce/v/1.0-4/install-the-digital-river-app.md        
