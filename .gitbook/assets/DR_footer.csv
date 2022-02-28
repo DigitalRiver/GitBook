@@ -1,0 +1,14 @@
+﻿$contentCatalog=electronicsContentCatalog
+$contentCatalogName=Electronics Content Catalog
+"$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Online])[default=$contentCatalog:Online]"
+$lang=en
+
+
+INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+;;DRComplianceFooter;DR Paragraph Component;DRComplianceFooter
+
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
+";;DRComplianceFooter;""<div id=""""drComplianceFooter"""">DR Footer</div>"""
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
+";;SideContent-multiStepCheckoutSummaryPage;Side Slot for multiStepCheckoutSummaryPage;true;DRComplianceFooter,HelpParagraphComponent"
