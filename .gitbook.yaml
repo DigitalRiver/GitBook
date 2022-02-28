@@ -4,5 +4,7 @@ structure:
     
 redirects:  
     paths:
-        '/big-commerce': 
+        'home/big-commerce': 
         to: 'https://docs.digitalriver.com/big-commerce/bigcommerce/v/1.0-4/install-the-digital-river-app.md
+        'big-commerce': 
+        to: 'https://docs.digitalriver.com/big-commerce/bigcommerce/v/1.0-4/install-the-digital-river-app.md        
