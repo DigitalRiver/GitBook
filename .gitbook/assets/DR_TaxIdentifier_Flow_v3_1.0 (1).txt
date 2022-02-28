@@ -1,0 +1,109 @@
+#begin base settings for diagram
+fontfamily arial
+lifelinestyle :2
+//activecolor #lightgrey
+participantspacing equal
+autonumber
+#autoactivation
+#end base settings for diagram
+title Salesforce B2B Global Tax Identifier Subprocess
+#begin particpant list
+participant "**Shopper" as shp
+participant "**SalesforceB2B" as cms
+participant "**DR B2B Connector" as esb
+participant "**DR Application" as gc
+#end particpant list
+#begin diagram
+#Tax Exempt Option Avialable for US Customer Start
+alt (ShopperType=Business(Default), Country=Non-US) - Apply Tax Identifier(s) to checkout(This is applied on Buyer Info page)
+shp->cms:shopper selects **Individual/Business** as Purchase Type on Buyer Info Page and proceeds to next step
+cms->esb:Update Customer Type on cart to **individual/business**
+box over esb,gc#FAE5D3:Set Customer type on Checkout to **individual/business** in Create Checkout Request (Order Review page)
+cms->shp:Render Order Review page(user will reach this after going through User info and delivery method page in checkout)
+alt shopper navigates to add a new tax identifier to shopper's profile
+shp->cms:Shopper clicks on **New tax identifiers** under **Saved Tax Identifiers**
+cms->esb:add tax identifier to shopper profile
+
+
+
+#create tax identifier start
+alt tax_identifier_saved_to_customer_success
+esb-#DeepSkyBlue:3>gc:**DR API: /tax-identifiers
+gc--#DeepSkyBlue:3>esb:**tax identifier is created
+esb-#DeepSkyBlue:3>gc:**DR API: /customers/{{id}}/tax- identifiers/{{id}}
+#Customers Lookup / Create Start
+alt customer exists
+gc--#DeepSkyBlue:3>esb:**customer is updated
+else customer does not exist
+esb-#DeepSkyBlue:3>gc:**DR API: Create Customer /POST/customers/{id}
+gc--#DeepSkyBlue:3>esb:**201 customers is created
+esb-#DeepSkyBlue:3>gc:**DR API: /customers/{{id}}/tax-identifiers/{{id}}
+gc--#DeepSkyBlue:3>esb:**customer is updated
+
+end
+
+
+#Customers Lookup / Create End
+esb-->cms:update saved tax identifier list on order review page
+cms -->shp: Success Message
+else tax_identifier_saved_to_customer_failed
+esb-#DeepSkyBlue:3>gc:**DR API: /tax-identifiers
+gc--#DeepSkyBlue:3>esb:**error response (4xx, 5xx)
+esb --> cms:error message thrown and logged
+cms -->shp: Failed Message
+esb-#DeepSkyBlue:3>gc:**DR API: /customers/{{id}}/tax-identifiers/{{id}}
+gc--#DeepSkyBlue:3>esb: **error response (4xx, 5xx)
+esb --> cms:error message thrown and logged
+cms -->shp: Failed Message
+end
+#create tax identifier end
+
+#Apply Tax Identifier(s) to Checkout
+else shopper chooses to apply saved tax identifier(s) from saved tax identifier section
+shp->cms:shopper selects existing saved tax identifier(s) and clicks on **Apply Tax Identifiers**
+cms->esb:update checkout with applied tax identifier(s)
+alt tax_identifier_applied_to_checkout_success
+esb-#DeepSkyBlue:3>gc:**DR API: POST /checkouts/{id}
+gc--#DeepSkyBlue:3>esb:**Checkout is updated with Tax Identifier(s)
+esb-->cms:Update SF Cart with DR Tax Identifier(s)
+cms->shp:Amount sections on order review page will get refreshed. Message with applied tax identifiers
+else tax_identifier_applied_to_checkout_failed
+esb-#DeepSkyBlue:3>gc:**DR API: POST /checkouts/{id}
+gc--#DeepSkyBlue:3>esb:**error response (4xx, 5xx)
+esb --> cms:error message thrown and logged
+cms -->shp: Failed Message
+end
+#Apply Tax Identifier(s) to Checkout
+#Apply Tax Identifier(s) to Checkout
+else shopper chooses to apply a tax identifier (not from saved tax identifier list) directly to checkout
+shp->cms:shopper apply tax identifier directly to checkout
+cms->esb:create and apply tax identifier to checkout
+alt tax_identifier_applied_to_checkout_success
+esb-#DeepSkyBlue:3>gc:**DR API: /tax-identifiers
+gc--#DeepSkyBlue:3>esb:**tax identifier is created
+esb-#DeepSkyBlue:3>gc:**DR API: POST /checkouts/{id}
+gc--#DeepSkyBlue:3>esb:**Checkout is updated with Tax Identifier(s)
+esb-->cms:Update SF Cart with DR Tax Identifier(s)
+cms->shp:Amount sections on order review page will get refreshed. Message with applied tax identifiers
+else tax_identifier_applied_to_checkout_failed
+esb-#DeepSkyBlue:3>gc:**DR API: /tax-identifiers
+gc--#DeepSkyBlue:3>esb:**tax identifier is created
+esb --> cms:error message thrown and logged
+cms -->shp: Failed Message
+esb-#DeepSkyBlue:3>gc:**DR API: POST /checkouts/{id}
+gc--#DeepSkyBlue:3>esb:**error response (4xx, 5xx)
+esb --> cms:error message thrown and logged
+cms -->shp: Failed Message
+end
+#Apply Tax Identifier(s) to Checkout
+end
+
+else [ShopperType=Business/Individual, Country=Non-US] - Tax Identifier not Applied to Checkout
+shp->cms:shopper selects **Individual/Business** as Purchase Type on Buyer Info Page and proceeds to next step
+cms->esb:Update Customer Type on cart to **individual/business**
+box over esb,gc#FAE5D3:Set Customer type on Checkout to **individual/business** in Create Checkout Request (Order Review page)
+cms->shp:Render Order Review page(user will reach this after going through User info and delivery method page)
+shp->shp:shopper chooses not to apply Tax Identifier(s) to Checkout or \n Tax Identifier cannot be Applied to Current Checkout (hasIdentifier=false)
+#Tax Exempt Option Avialable for US Customer End
+end
+#Tax Exempt Option Avialable for US Customer Start
