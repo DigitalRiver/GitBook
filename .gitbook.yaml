@@ -4,6 +4,6 @@ structure:
     
 redirects:  
     paths:
-        '^/home/big-commerce': 
+        '^/big-commerce': 
         to: 'https://docs.digitalriver.com/big-commerce/bigcommerce/v/1.0-4/install-the-digital-river-app.md'
         regexp: true
