@@ -7,7 +7,7 @@ description: Learn what webhooks are enabled with Digital River configuration.
 The webhooks listed below become automatically enabled once registration with Digital River is completed, and configure the Digital River **** app for your store.
 
 {% hint style="info" %}
-Each time you click **Save** on the [Payment Methods page](configure-the-bigCommerce-settings/step-2-configure-payments.md) in BigCommerce, BigCommerce automatically [creates a new webhook endpoint](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/webhooks/creating-a-webhook) within your Digital River account  You are responsible for [deleting any duplicate or old webhook endpoints](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/webhooks/deleting-a-webhook) within Digital River to avoid sending duplicate event data to BigCommerce.
+Each time you click **Save** on the [Payment Methods page](configure-the-bigcommerce-settings/step-2-configure-payments.md) in BigCommerce, BigCommerce automatically [creates a new webhook endpoint](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/webhooks/creating-a-webhook) within your Digital River account  You are responsible for [deleting any duplicate or old webhook endpoints](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/webhooks/deleting-a-webhook) within Digital River to avoid sending duplicate event data to BigCommerce.
 {% endhint %}
 
 | Webhook                         | Description                                                                                                                                                                                                      |

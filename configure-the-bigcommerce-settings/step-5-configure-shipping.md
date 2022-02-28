@@ -29,7 +29,7 @@ To configure the shipping address:
     2. To configure shipping quotes for a country, click **Configure** next to the country you added.
     3. Choose one of the following options:
        * To enable static shipping quotes, toggle one of the options to enable under **Static shipping quotes**, complete the fields, and click **Submit**. Repeat this step for each additional option.\
-         ![](<../.gitbook/assets/Static-shipping-quotes (1).png>)
+         ![](../.gitbook/assets/Static-shipping-quotes.png)
        * To configure real-time shipping quotes, click **Connect** next to the real-time shipping option you want to use under **Real-time shipping quotes**, complete the fields under each tab, and click **Submit**. Repeat this step for each additional option.\
          .![](../.gitbook/assets/Real-time-shipping-quotes.png)
     4. Click **Done**.
@@ -47,7 +47,7 @@ To add a custom zone:&#x20;
 3. Click **Configure** next to the zone you added.
 4. Choose one of the following options:
    * To enable static shipping quotes, toggle one of the options to enable under **Static shipping quotes**, complete the fields, and click **Submit**. Repeat this step for each additional option.\
-     ![](<../.gitbook/assets/Static-shipping-quotes (1).png>)
+     ![](../.gitbook/assets/Static-shipping-quotes.png)
    * To configure real-time shipping quotes, click **Connect** next to the real-time shipping option you want to use under **Real-time shipping quotes**, complete the fields under each tab, and click **Submit**. Repeat this step for each additional option.\
      .![](../.gitbook/assets/Real-time-shipping-quotes.png)
 5. Click **Done**.

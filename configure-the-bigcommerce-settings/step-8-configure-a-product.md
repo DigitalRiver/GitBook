@@ -26,7 +26,7 @@ To add a product:
     ![](../.gitbook/assets/Pricing.png)
 6.  Under **Custom Fields**, click **Add Custom Fields**.
 
-    ![](../.gitbook/assets/Custom-Fields.png)
+    ![](<../.gitbook/assets/Custom-Fields (1).png>)
 7.  An ECCN field is required. To create an [Export Control Classification Number (ECCN)](https://docs.digitalriver.com/digital-river-api/skus/creating-and-updating-skus#eccn) field, enter `ECCN` in the **Custom Field Name** field and enter an [ECCN value](https://www.bis.doc.gov/index.php/licensing/commerce-control-list-classification/export-control-classification-number-eccn) in the **Custom Field Value** field.
 
     **Note**: In BigCommerce, you must enter the number without the decimal points.\

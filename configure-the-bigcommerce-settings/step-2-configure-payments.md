@@ -25,7 +25,7 @@ To configure payments:
     ![](../.gitbook/assets/Digitalriversettings.PNG)
 7.  Enter your Digital River API keys obtained from the [Digital River Dashboard](https://dashboard.digitalriver.com/login).
 
-    ![](<../.gitbook/assets/APIkeys (1).PNG>)
+    ![](../.gitbook/assets/APIkeys.PNG)
 
     * **Production Confidential Key**–Your Production Confidential Key provided to you by Digital River
     * **Production Public Key**–Your Production Public Key provided to you by Digital River
