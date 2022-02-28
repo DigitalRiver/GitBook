@@ -1,0 +1,77 @@
+ccrz__E_Product__c batteryCCProduct = new ccrz__E_Product__c();
+batteryCCProduct.Name ='battery';
+batteryCCProduct.ccrz__SKU__c = 'battery';
+batteryCCProduct.ccrz__ProductIndexStatus__c ='Not Current';
+batteryCCProduct.ccrz__Storefront__c = 'DefaultStore';
+batteryCCProduct.ccrz__StartDate__c = Date.Today()-10;
+batteryCCProduct.ccrz__EndDate__c =Date.Today()+20000;
+batteryCCProduct.ccrz__ProductStatus__c = 'Released';
+batteryCCProduct.ccrz__LeadTime__c = 1;
+batteryCCProduct.ccrz__ExcludeFromProductIndex__c =true;
+batteryCCProduct.digitalriverv2__Regulatory_Fee_Product__c = true;
+batteryCCProduct.ccrz__ShortDescRT__c = 'Batteries and Accumulators and their Waste';
+batteryCCProduct.ccrz__LongDescRT__c ='Batteries and Accumulators and their Waste';
+batteryCCProduct.ccrz__Quantityperunit__c = 1;
+batteryCCProduct.ccrz__ProductType__c = 'Product';
+batteryCCProduct.ccrz__UnitOfMeasure__c = 'Each';
+insert batteryCCProduct;
+
+
+ccrz__E_Product__c eWasteCCProduct = new ccrz__E_Product__c();
+eWasteCCProduct.Name ='e_waste';
+eWasteCCProduct.ccrz__SKU__c = 'e_waste';
+eWasteCCProduct.ccrz__ProductIndexStatus__c ='Not Current';
+eWasteCCProduct.ccrz__Storefront__c = 'DefaultStore';
+eWasteCCProduct.ccrz__StartDate__c = Date.Today()-10;
+eWasteCCProduct.ccrz__EndDate__c =Date.Today()+20000;
+eWasteCCProduct.ccrz__ProductStatus__c = 'Released';
+eWasteCCProduct.ccrz__LeadTime__c = 1;
+eWasteCCProduct.ccrz__ExcludeFromProductIndex__c =true;
+eWasteCCProduct.digitalriverv2__Regulatory_Fee_Product__c = true;
+eWasteCCProduct.ccrz__ShortDescRT__c = 'Waste Electrical and Electronic Equipment';
+eWasteCCProduct.ccrz__LongDescRT__c ='Waste Electrical and Electronic Equipment';
+eWasteCCProduct.ccrz__Quantityperunit__c = 1;
+eWasteCCProduct.ccrz__ProductType__c = 'Product';
+eWasteCCProduct.ccrz__UnitOfMeasure__c = 'Each';
+insert eWasteCCProduct;
+
+
+
+ccrz__E_Product__c copyright = new ccrz__E_Product__c();
+copyright.Name ='copyright';
+copyright.ccrz__SKU__c = 'copyright';
+copyright.ccrz__ProductIndexStatus__c ='Not Current';
+copyright.ccrz__Storefront__c = 'DefaultStore';
+copyright.ccrz__StartDate__c = Date.Today()-10;
+copyright.ccrz__EndDate__c =Date.Today()+20000;
+copyright.ccrz__ProductStatus__c = 'Released';
+copyright.ccrz__LeadTime__c = 1;
+copyright.ccrz__ExcludeFromProductIndex__c =true;
+copyright.digitalriverv2__Regulatory_Fee_Product__c = true;
+copyright.ccrz__ShortDescRT__c = 'Information Society Directive (also known as the EU Copyright Directive)';
+copyright.ccrz__LongDescRT__c ='Information Society Directive (also known as the EU Copyright Directive)';
+copyright.ccrz__Quantityperunit__c = 1;
+copyright.ccrz__ProductType__c = 'Product';
+copyright.ccrz__UnitOfMeasure__c = 'Each';
+insert copyright;
+
+
+
+
+ccrz__E_Product__c weeeProduct = new ccrz__E_Product__c();
+weeeProduct.Name ='weee';
+weeeProduct.ccrz__SKU__c = 'weee';
+weeeProduct.ccrz__ProductIndexStatus__c ='Not Current';
+weeeProduct.ccrz__Storefront__c = 'DefaultStore';
+weeeProduct.ccrz__StartDate__c = Date.Today()-10;
+weeeProduct.ccrz__EndDate__c =Date.Today()+20000;
+weeeProduct.ccrz__ProductStatus__c = 'Released';
+weeeProduct.ccrz__LeadTime__c = 1;
+weeeProduct.ccrz__ExcludeFromProductIndex__c =true;
+weeeProduct.digitalriverv2__Regulatory_Fee_Product__c = true;
+weeeProduct.ccrz__ShortDescRT__c = 'Waste Electrical and Electronic Equipment (WEEE): A directive in the European Union that designates safe and responsible collection, recycling, and recovery procedures for all types of electronic waste.';
+weeeProduct.ccrz__LongDescRT__c ='Waste Electrical and Electronic Equipment (WEEE): A directive in the European Union that designates safe and responsible collection, recycling, and recovery procedures for all types of electronic waste.';
+weeeProduct.ccrz__Quantityperunit__c = 1;
+weeeProduct.ccrz__ProductType__c = 'Product';
+weeeProduct.ccrz__UnitOfMeasure__c = 'Each';
+insert weeeProduct;
