@@ -1,0 +1,117 @@
+Page Name,PageLabelId,Page Label Name,ValueRT,Storefront
+All,DR_REGULATORY_ITEMS_INSERTION_ERRORGlobalAll,DR_REGULATORY_ITEMS_INSERTION_ERROR,Unable to Add Regulatory Fee to Cart Items,Global
+All,DR_WIRE_TRANSFER_SUBSCRIPTION_CART_WARNING_MSGGlobalAll,DR_WIRE_TRANSFER_SUBSCRIPTION_CART_WARNING_MSG,This payment method is not supported for subscription cart items.,Global
+All,DR_SERVER_PAYMENT_ERRORGlobalAll,DR_SERVER_PAYMENT_ERROR,Your payment method was rejected. Please use a new or different payment method.,Global
+All,DR_CLIENT_PAYMENT_ERRORGlobalAll,DR_CLIENT_PAYMENT_ERROR,"An internal error has occurred, please &lt;a style=&quot;cursor: pointer;&quot; onclick=&quot;javascript:(function() { location.reload(); })()&quot;&gt;try again&lt;/a&gt;.",Global
+All,DR_Empty_DropIN_ErrorGlobalAll,DR_Empty_DropIN_Error,There is a problem initiating payment. Please contact customer support.,Global
+All,Order_Confirmation_Wire TransferGlobalAll,Order_Confirmation_Wire Transfer,Wire Transfer,Global
+All,Order_Confirmation_payPalGlobalAll,Order_Confirmation_payPal,{1},Global
+All,Order_Confirmation_creditCardGlobalAll,Order_Confirmation_creditCard,Credit Card: {1},Global
+All,DR_CancelButtonTextGlobalAll,DR_CancelButtonText,Go back and update payment,Global
+All,DR_ProceedButtonTextGlobalAll,DR_ProceedButtonText,Continue with this billing address,Global
+All,DR_MismatchBillingAddressTextGlobalAll,DR_MismatchBillingAddressText,Your Wallet billing address does not match this payment method. Please choose to proceed with this payment method or go back.,Global
+DRRefunds,DR_Refund_Request_FailedGlobalDRRefunds,DR_Refund_Request_Failed,Failed to submit Refund request.,Global
+DRRefunds,DR_Refund_Request_Submitted_SuccessfullyGlobalDRRefunds,DR_Refund_Request_Submitted_Successfully,Refund Request submitted successfully.,Global
+DRRefunds,DR_Refund_Fetch_Refund_ErrorGlobalDRRefunds,DR_Refund_Fetch_Refund_Error,Unable to fetch the previous refund information for this order.,Global
+DRRefunds,DR_NO_Permission_On_Fulfillment_ObjectGlobalDRRefunds,DR_NO_Permission_On_Fulfillment_Object,No permission on digitalriverv2__DR_Fulfillment__c object.,Global
+DRRefunds,DR_Fulfillment_Not_CreatedGlobalDRRefunds,DR_Fulfillment_Not_Created,Fulfillment is not yet done for this order.,Global
+DRRefunds,DR_No_Previous_Refund_FoundGlobalDRRefunds,DR_No_Previous_Refund_Found,No Previous Refund Information found for this order.,Global
+DRRefunds,DR_Refund_No_Order_IdGlobalDRRefunds,DR_Refund_No_Order_Id,Existing Order does not have a DR Order ID.,Global
+All,MyWallet_DR_Source_Not_ChargeableGlobalAll,MyWallet_DR_Source_Not_Chargeable,There was a problem to add this Payment Method. Please select another Payment Method.,Global
+All,MyWallet_DR_Attach_Source_Customer_FailedGlobalAll,MyWallet_DR_Attach_Source_Customer_Failed,Failed to Add / Update Payment Source on Server,Global
+All,MyWallet_DR_DropIn_Intilization_FailedGlobalAll,MyWallet_DR_DropIn_Intilization_Failed,Failed to Intilize available Payment Sources,Global
+All,MyWallet_UpdateDRPymtMtdGlobalAll,MyWallet_UpdateDRPymtMtd,Update Digital River Payment Method,Global
+All,MyWallet_DR_Redirect_MyWalletGlobalAll,MyWallet_DR_Redirect_MyWallet,You will redirected to your wallet section,Global
+All,MyWallet_DR_Successfully_Updated_PaymentGlobalAll,MyWallet_DR_Successfully_Updated_Payment,You Successfully updated a payment .,Global
+All,DR_Missing_Phone_NumberGlobalAll,DR_Missing_Phone_Number,Missing phone number.,Global
+All,MyWallet_DR_Successfully_Added_PaymentGlobalAll,MyWallet_DR_Successfully_Added_Payment,You Successfully added a new payment in your wallet.,Global
+DRConncterConfig,DR_Submit_ButtonGlobalDRConncterConfig,DR_Submit_Button,Submit,Global
+DRConncterConfig,DR_Config_GDPR_TabGlobalDRConncterConfig,DR_Config_GDPR_Tab,GDPR CONFIG,Global
+All,MyWallet_AddDRPymtMtdGlobalAll,MyWallet_AddDRPymtMtd,Add New Digital River Payment Method,Global
+DRConncterConfig,DR_Config_Failure_Save_Config_MsgGlobalDRConncterConfig,DR_Config_Failure_Save_Config_Msg,Unable to save DB Connector Configuration,Global
+DRConncterConfig,DR_Config_Success_Save_Config_MsgGlobalDRConncterConfig,DR_Config_Success_Save_Config_Msg,Configuration update request has been submitted. You will receive an email after the job is completed.,Global
+DRConncterConfig,DR_Config_Failure_Connection_MsgGlobalDRConncterConfig,DR_Config_Failure_Connection_Msg,Failure: Could not Connect to Digital River.,Global
+DRConncterConfig,DR_Config_Successful_Connection_MsgGlobalDRConncterConfig,DR_Config_Successful_Connection_Msg,Success: Successful Connection to Digital River.,Global
+All,PaymentType_drGlobalAll,PaymentType_dr,Payment DR,Global
+DRConncterConfig,DR_Config_Product_Sync_TabGlobalDRConncterConfig,DR_Config_Product_Sync_Tab,Product Sync,Global
+DRConncterConfig,DR_Config_FulFillment_Config_TabGlobalDRConncterConfig,DR_Config_FulFillment_Config_Tab,FullFillment Config,Global
+DRConncterConfig,DR_Config_Save_ButtonGlobalDRConncterConfig,DR_Config_Save_Button,Save,Global
+DRConncterConfig,DR_Config_Test_DR_Connection_ButtonGlobalDRConncterConfig,DR_Config_Test_DR_Connection_Button,Test DR Connection,Global
+DRConncterConfig,DR_Config_Sync_All_ButtonGlobalDRConncterConfig,DR_Config_Sync_All_Button,Sync All,Global
+All,DR_error_message_for_paymentsGlobalAll,DR_error_message_for_payments,Failed to get source Id.,Global
+All,Upload_Your_CertificateGlobalAll,Upload_Your_Certificate,Upload Your Certificate : *,Global
+All,Tax_ID/VAT_NumberGlobalAll,Tax_ID/VAT_Number,Tax ID/VAT Number,Global
+All,Tax_Exempt_StatusGlobalAll,Tax_Exempt_Status,Tax Exempt Status,Global
+All,Tax_Exempt_AppliedGlobalAll,Tax_Exempt_Applied,Tax Exemption has been applied on this Cart,Global
+All,Tax_Exemption_Not_AppliedGlobalAll,Tax_Exemption_Not_Applied,Tax Exemption is not applied on this Cart.,Global
+All,Tax_Exemption_AppliedGlobalAll,Tax_Exemption_Applied,Tax Exemption has been applied on this Cart.,Global
+All,taxAuthorityErrormessageGlobalAll,taxAuthorityErrormessage,Tax Authority is Required,Global
+All,TaxAuthorityGlobalAll,TaxAuthority,Tax Authority,Global
+All,Support_File_Type_ListGlobalAll,Support_File_Type_List,"pdf&#39;, &#39;PDF&#39;, &#39;JPG&#39;, &#39;jpg&#39;, &#39;GIF&#39;, &#39;gif&#39;",Global
+All,Support_File_TypeGlobalAll,Support_File_Type,"Supported file types : pdf, jpg, gif",Global
+All,Supported_File_ErrorGlobalAll,Supported_File_Error,"Supported file types : pdf, jpg, gif.",Global
+All,Supported_FileGlobalAll,Supported_File,"Max File Size Less then 1 MB (Supported File Types: GIF, JPG, PDF)",Global
+All,Submit_Your_Tax_ExemptionGlobalAll,Submit_Your_Tax_Exemption,Please Submit Your Tax Exemption Details,Global
+All,Start_Date_Past_ValidationGlobalAll,Start_Date_Past_Validation,Start Date Cannot be Future Date,Global
+All,Start_Date_End_Date_ValidationGlobalAll,Start_Date_End_Date_Validation,End Date cannot be less than Start Date,Global
+All,Start_DateGlobalAll,Start_Date,Start Date,Global
+All,startDateErrormessageGlobalAll,startDateErrormessage,Start Date is Required,Global
+All,selectFileErrormessageGlobalAll,selectFileErrormessage,Please select a file to upload.,Global
+All,Salesforce_IDGlobalAll,Salesforce_ID,Salesforce_ID,Global
+All,PaymentDisplay_drGlobalAll,PaymentDisplay_dr,{3} : {1},Global
+All,Order_AcctType_paypalGlobalAll,Order_AcctType_paypal,paypal,Global
+All,Order_AcctNum_paypalGlobalAll,Order_AcctNum_paypal,paypal: {1},Global
+All,No_Tax_Record_foundGlobalAll,No_Tax_Record_found,No Tax Certificate on file. Please use the below form to upload a new certificate,Global
+All,DR_Tax_Certificate_File_Name_HeaderGlobalAll,DR_Tax_Certificate_File_Name_Header,Name,Global
+All,My_Tax_CertificatesGlobalAll,My_Tax_Certificates,My Tax Certificates,Global
+All,DR_CARD_NAME_REQUIREDGlobalAll,DR_CARD_NAME_REQUIRED,Card Name Required for Saved Payment.,Global
+All,DR_API_KEY_ERRORGlobalAll,DR_API_KEY_ERROR,Unable to get api key from server.,Global
+All,DR_Address_Missing_Error_MessageGlobalAll,DR_Address_Missing_Error_Message,Default billing address is not set.,Global
+All,Display_Certificate_Link_CCGlobalAll,Display_Certificate_Link_CC,Click here If you are making a tax exempt purchase,Global
+All,Country_NameGlobalAll,Country_Name,Country Name : *,Global
+All,Company_Name_RequiredGlobalAll,Company_Name_Required,Company Name Required,Global
+All,Company_Name_LimitGlobalAll,Company_Name_Limit,Company Name Less then 70 Character.,Global
+All,Company_NameGlobalAll,Company_Name,Company Name : *,Global
+All,companyNameErrorMessageGlobalAll,companyNameErrorMessage,Company Name is Required,Global
+All,DR_Tax_Certificate_Company_HeaderGlobalAll,DR_Tax_Certificate_Company_Header,Company,Global
+All,Certificate_Tax_Authority_RequiredGlobalAll,Certificate_Tax_Authority_Required,Exemption Certificate Tax Authority Required,Global
+DRConncterConfig,DR_Config_Genreral_Config_TabGlobalDRConncterConfig,DR_Config_Genreral_Config_Tab,GENERAL CONFIG,Global
+All,MyWallet_AcctType_drGlobalAll,MyWallet_AcctType_dr,Digital River,Global
+All,MyWallet_AcctNum_drGlobalAll,MyWallet_AcctNum_dr,{1},Global
+All,MANAGE_TAX_EXEMPTIONGlobalAll,MANAGE_TAX_EXEMPTION,MANAGE TAX EXEMPTION,Global
+All,File_RequiredGlobalAll,File_Required,You must choose a file before trying to upload it,Global
+All,File_Reading_ErrorGlobalAll,File_Reading_Error,There was an error reading the file. Please try again.,Global
+All,File_Name_LimitGlobalAll,File_Name_Limit,File Name Less then 80 Character.,Global
+All,File_Limit_ExceedGlobalAll,File_Limit_Exceed,File cannot be more then 1.5 MB in size. Your file is too large. Please try again.,Global
+All,fileSizeErrormessageGlobalAll,fileSizeErrormessage,File cannot be more then 1 MB in size. Your file is too large. Please try again.,Global
+All,Exemption_Start_DateGlobalAll,Exemption_Start_Date,Exemption Start Date : *,Global
+All,Exemption_Expiration_DateGlobalAll,Exemption_Expiration_Date,Exemption Expiration Date : *,Global
+All,Exemption_Certificate_Tax_AuthorityGlobalAll,Exemption_Certificate_Tax_Authority,Exemption Certificate Tax Authority : *,Global
+All,Error_during_submitting_paymentsGlobalAll,Error_during_submitting_payments,Error while submitting payments.,Global
+All,End_Date_Past_ValidationGlobalAll,End_Date_Past_Validation,End Date Cannot be Past Date,Global
+All,End_DateGlobalAll,End_Date,Expiry Date,Global
+All,endDateErrormessageGlobalAll,endDateErrormessage,End Date is Required,Global
+All,DR_Success_message_for_update_recordGlobalAll,DR_Success_message_for_update_record,Your credit card details have been updated.,Global
+All,DR_Success_message_for_new_recordGlobalAll,DR_Success_message_for_new_record,Your new card has been added to the Wallet.,Global
+All,DR_SOURCE_ID_MISSINGGlobalAll,DR_SOURCE_ID_MISSING,Failed to get source Id from Digital River.,Global
+All,DR_CHECKOUT_SUBSCRIPTION_ERRORGlobalAll,DR_CHECKOUT_SUBSCRIPTION_ERROR,Please select Save Payment to continue or select a saved payment method from your wallet.,Global
+All,DR_SOURCE_ID_ERROR_TYPEGlobalAll,DR_SOURCE_ID_ERROR_TYPE,Failed to get SourceId from Digital River.(Error Type :,Global
+All,DR_SERVER_PAYMENT_FAILEDGlobalAll,DR_SERVER_PAYMENT_FAILED,We could not process your payment. Please click &lt;a style=&quot;cursor: pointer;&quot; onclick=&quot;javascript:(function() { location.reload(); })()&quot;&gt;<b>here</b>&lt;/a&gt; to try again.,Global
+All,DR_SELECT_SAVE_PAYMENT_OPTIONGlobalAll,DR_SELECT_SAVE_PAYMENT_OPTION,You have a subscription product in your cart. So It is required to select the Save Payment option for future payments.,Global
+All,DR_Process_PaymentsGlobalAll,DR_Process_Payments,Place Order,Global
+All,DR_INTERNET_CONNECTIONGlobalAll,DR_INTERNET_CONNECTION,Check your internet connection.,Global
+All,DR_Failed_to_add_payment_methodsGlobalAll,DR_Failed_to_add_payment_methods,Unable to save card to wallet.,Global
+All,PaymentProcessorTab_drGlobalAll,PaymentProcessorTab_dr,Digital River,Global
+CheckOutNew,Checkout_TaxCalculationErrorGlobalCheckOutNew,Checkout_TaxCalculationError,Error calculating tax. Contact your administrator.,
+All,AWAITED_WIRETRANSFER_INFOGlobalAll,AWAITED_WIRETRANSFER_INFO,Awaiting wire transfer payment instructions.,Global
+All,MyWallet_AddPymtMtdGlobalAll,MyWallet_AddPymtMtd,Select Payment Method,Global
+OrderView,OrderConfirmation_StatusInfoGlobalOrderView,OrderConfirmation_StatusInfo,You can view your order status at any time by checking your,Global
+All,DR_Get_Customer_Type_ErrorGlobalAll,DR_Get_Customer_Type_Error,Error while getting customer Type,Global
+All,DR_No_Tax_Record_found_Account_TabGlobalAll,DR_No_Tax_Record_found_Account_Tab,No Tax Certificate on file.,Global
+All,DR_SAVE_PAYMENT_WARNING_MSGGlobalAll,DR_SAVE_PAYMENT_WARNING_MSG,This payment method is not supported for future use.,Global
+All,DR_SAVE_PAYMENT_SUB_PRODUCT_WARNING_MSGGlobalAll,DR_SAVE_PAYMENT_SUB_PRODUCT_WARNING_MSG,This payment method is not supported for subscription items.,Global
+All,DR_CustomerType_Update_ErrorGlobalAll,DR_CustomerType_Update_Error,Error while updating CC cart,Global
+All,DR_Upload_Tax_CertificatesGlobalAll,DR_Upload_Tax_Certificates,Click here to Manage your Tax Certificates,Global
+All,DR_Tax_Exampt_purchaseGlobalAll,DR_Tax_Exampt_purchase,Are�you�making�a�tax�exempt�purchase?,Global
+All,MyWallet_DR_Source_Not_SavedGlobalAll,MyWallet_DR_Source_Not_Saved,Could not save payment. Please try again.,Global
+All,DR_SAVE_PAYMENT_CHECKBOX_WARNING_MSGGlobalAll,DR_SAVE_PAYMENT_CHECKBOX_WARNING_MSG,You have subscription product(s) in cart. Please save Card for Subscription renewals.�,Global
