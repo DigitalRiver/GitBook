@@ -1,0 +1,103 @@
+"$contentCatalog=electronicsContentCatalog $contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Online])[default=$contentCatalog:Online] $lang=en INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang] ;;OrderConfirmationEmailBody;"" #macro( genHtmlBoldFont $text ) $text #end #macro(genHtmlLinkStartTag $url) #end #macro(genHtmlLinkEndTag) #end #macro(genHtmlLink $url $bodyContent) $bodyContent #end #macro(displayNegationForDiscount $priceData) #if (${priceData.value} > 0) - #end ${priceData.formattedValue} #end"					
+					
+"${ctx.messages.getMessage('salutation', ${ctx.title},${ctx.displayName})},"					
+					
+"${ctx.messages.getMessage('thankYouForOrder', ""#genHtmlLinkStartTag($orderInfoUrl)"", ""#genHtmlBoldFont(${ctx.order.code})"", ""#genHtmlLinkEndTag()"", ""#genHtmlBoldFont(${ctx.order.totalPriceWithTax.formattedValue})"")}"					
+					
+#if(${ctx.coupons.size()} > 0 )					
+#foreach( $coupon in ${ctx.coupons} )					
+"#if(${coupon.startDate} && !${coupon.endDate}) #set ($formattedCouponStartDate = $ctx.dateTool.format('MM/dd/yy', $coupon.startDate))"					
+"#end #if(!${coupon.startDate} && ${coupon.endDate}) #set ($formattedCouponEndDate = $ctx.dateTool.format('MM/dd/yy', $coupon.endDate))"					
+"#end #if(${coupon.startDate} && ${coupon.endDate}) #set ($formattedCouponStartDate = $ctx.dateTool.format('MM/dd/yy', $coupon.startDate)) #set ($formattedCouponEndDate = $ctx.dateTool.format('MM/dd/yy', $coupon.endDate))"					
+#end #end					
+#if(${ctx.coupons.size()} == 1 ) ${ctx.messages.getMessage('getGiftCoupon')} #else ${ctx.messages.getMessage('getGiftCoupons')} #end					
+${coupon.name} 					
+"${ctx.messages.getMessage('giftCouponCode', ${coupon.couponCode})}"					
+"${ctx.messages.getMessage('giftCouponValidFrom', ${formattedCouponStartDate})}"					
+"${ctx.messages.getMessage('giftCouponValidUntil', ${formattedCouponEndDate})}"					
+"${ctx.messages.getMessage('giftCouponValidRange', ${formattedCouponStartDate}, ${formattedCouponEndDate})}"					
+					
+#end					
+#if(${ctx.order.pickupItemsQuantity} > 0)					
+${ctx.messages.getMessage('pickUpWarning')}					
+					
+#end					
+${ctx.messages.deliveryAddress} #if(${ctx.order.deliveryItemsQuantity} > 0 && $!{ctx.order.deliveryAddress})	${ctx.messages.deliveryOptions} #if(${ctx.order.deliveryItemsQuantity} > 0 && $!{ctx.order.deliveryMode})	${ctx.messages.paymentDetails} #if(${ctx.order.paymentInfo})			
+$!{ctx.order.deliveryAddress.title} ${ctx.order.deliveryAddress.firstName} ${ctx.order.deliveryAddress.lastName}	${ctx.order.deliveryMode.name}	"${ctx.messages.getMessage('paymentCardType', ${ctx.order.paymentInfo.cardType})}"			
+${ctx.order.deliveryAddress.line1}	"${ctx.messages.getMessage('deliveryETA', ${ctx.order.deliveryMode.description})}"	#end #if(${ctx.order.drpaymentInfo})			
+#if($ctx.order.deliveryAddress.line2.line2 && $ctx.order.deliveryAddress.line2 != '')${ctx.order.deliveryAddress.line2}	#else	${ctx.order.drpaymentInfo.drSourceType}			
+#end ${ctx.order.deliveryAddress.town}	${ctx.messages.noDelivery}	#end			
+${ctx.order.deliveryAddress.postalCode}	#end				
+${ctx.order.deliveryAddress.country.name} 					
+#else					
+${ctx.messages.noDelivery}					
+#end	#if(${ctx.order.pickupItemsQuantity} > 0) ${ctx.messages.pickupInStore} #end 	#if(${ctx.order.paymentInfo})			
+	"${ctx.messages.getMessage('pickupItems', ${ctx.order.pickupItemsQuantity})}"	${ctx.messages.billingAddress}			
+	"#set($numGrps = $ctx.order.pickupOrderGroups.size()) ${ctx.messages.getMessage('pickupPoints', $numGrps)}"	${ctx.order.paymentInfo.billingAddress.firstName} ${ctx.order.paymentInfo.billingAddress.lastName}			
+		${ctx.order.paymentInfo.billingAddress.line1}			
+		#if($ctx.order.paymentInfo.billingAddress.line2 && $ctx.order.paymentInfo.billingAddress.line2 != '') ${ctx.order.paymentInfo.billingAddress.line2}			
+		#end ${ctx.order.paymentInfo.billingAddress.town}			
+		${ctx.order.paymentInfo.billingAddress.postalCode}			
+		${ctx.order.paymentInfo.billingAddress.country.name} 			
+		#end			
+					
+#if ($ctx.order.deliveryOrderGroups.size() > 0)					
+#foreach( $orderGroup in ${ctx.order.deliveryOrderGroups} )					
+#foreach( $entry in ${orderGroup.entries} )					
+#end					
+${ctx.messages.yourDeliveryItems}					
+			${ctx.messages.quantity}	${ctx.messages.itemPrice}	${ctx.messages.total}
+#foreach($image in $entry.product.images) #if($image.imageType == 'PRIMARY' && $image.format == 'thumbnail' ) #end #end ÿ	$entry.product.name		$entry.quantity	$entry.basePrice.formattedValue	#if($entry.totalPrice.value > 0) $entry.totalPrice.formattedValue #else ${ctx.messages.free} #end
+	#if (!$entry.product.baseOptions.isEmpty()) #foreach ($option in $entry.product.baseOptions) #if ($option.selected && ($option.selected.url == $entry.product.url))				
+	#foreach ($selectedOption in $option.selected.variantOptionQualifiers)				
+	#end				
+	$selectedOption.name:	$selectedOption.value			
+	#end #end #end #if (!$ctx.order.appliedProductPromotions.isEmpty()) #foreach( $promotion in $ctx.order.appliedProductPromotions) #set ($displayed = false) #foreach ($consumedEntry in $promotion.consumedEntries) #if (!$displayed && ($consumedEntry.orderEntryNumber == $entry.entryNumber)) #set ($displayed = true)				
+	${promotion.description}				
+	#end #end #end #end 				
+#end					
+#end #if ($ctx.order.pickupOrderGroups.size() > 0)					
+#foreach( $orderGroup in ${ctx.order.pickupOrderGroups} ) #set ($location = ${orderGroup.entries.get(0).deliveryPointOfService})					
+#foreach( $entry in ${orderGroup.entries} )					
+#end					
+"${ctx.messages.pickupFrom} - ${location.name}, ${location.address.line1} #if( ${location.address.line2} )${location.address.line2}#end, ${location.address.town}"					
+			${ctx.messages.quantity}	${ctx.messages.itemPrice}	${ctx.messages.total}
+#foreach($image in $entry.product.images) #if($image.imageType == 'PRIMARY' && $image.format == 'thumbnail' ) #end #end ÿ	$entry.product.name		$entry.quantity	$entry.basePrice.formattedValue	#if($entry.totalPrice.value > 0) $entry.totalPrice.formattedValue #else ${ctx.messages.free} #end
+	#if (!$entry.product.baseOptions.isEmpty()) #foreach ($option in $entry.product.baseOptions) #if ($option.selected && ($option.selected.url == $entry.product.url))				
+	#foreach ($selectedOption in $option.selected.variantOptionQualifiers)				
+	#end				
+	$selectedOption.name:	$selectedOption.value			
+	#end #end #end #if (!$ctx.order.appliedProductPromotions.isEmpty()) #foreach( $promotion in $ctx.order.appliedProductPromotions) #set ($displayed = false) #foreach ($consumedEntry in $promotion.consumedEntries) #if (!$displayed && ($consumedEntry.orderEntryNumber == $entry.entryNumber)) #set ($displayed = true)				
+	${promotion.description}				
+	#end #end #end #end 				
+					
+					
+#end					
+#end					
+		${ctx.messages.orderTotals}			
+		#if (${ctx.order.quoteDiscounts.value} > 0)			
+		#end			
+		${ctx.messages.subtotal}:		${ctx.order.subTotal.formattedValue}	
+		${ctx.messages.orderDiscounts}:		#displayNegationForDiscount($ctx.order.totalDiscounts)	
+		${ctx.messages.quoteDiscounts}:		- ${ctx.order.quoteDiscounts.formattedValue}	
+		${ctx.messages.delivery}:		#if($!{ctx.order.deliveryCost} && ${ctx.order.deliveryCost.value} > 0) ${ctx.order.deliveryCost.formattedValue} #else ${ctx.messages.free} #end	
+		${ctx.messages.total}:		${ctx.order.totalPriceWithTax.formattedValue}	
+					
+		"${ctx.messages.getMessage('includesTax', ${ctx.order.totalTax.formattedValue})}"			
+"#set ($mailToUrl = 'mailto:${ctx.messages.contactUsEmailAddress}') #if(${ctx.baseSite.Uid} == 'electronics') #set ( $paragraphContactUs = ${ctx.messages.getMessage('paragraphContactUs_electronics', ""#genHtmlLinkStartTag(${ctx.messages.contactUsPage})"", ""#genHtmlLinkEndTag()"", ""#genHtmlLink($mailToUrl ${ctx.messages.contactUsEmailAddress})"")} ) #else #set ($faqPage = '${ctx.baseUrl}/faq') #set ( $paragraphContactUs = ${ctx.messages.getMessage('paragraphContactUs', ""#genHtmlLinkStartTag($faqPage)"", ""#genHtmlLinkEndTag()"", ""#genHtmlLinkStartTag(${ctx.messages.contactUsPage})"", ""#genHtmlLinkEndTag()"", ""#genHtmlLink($mailToUrl ${ctx.messages.contactUsEmailAddress})"")} ) #end #if (! $ctx.order.guestCustomer )"					
+					
+"${ctx.messages.getMessage('paragraphAccountLocation', ""#genHtmlLinkStartTag($accountUrl)"", ""#genHtmlLinkEndTag()"")}"					
+					
+#end					
+					
+${ctx.messages.paragraphCreateAccount}					
+					
+"${ctx.messages.getMessage('paragraphDeliveryInfo', ""#genHtmlLinkStartTag($orderInfoUrl)"", ""#genHtmlLinkEndTag()"")}"					
+					
+$paragraphContactUs					
+					
+${ctx.messages.complimentaryClosing}					
+					
+${ctx.messages.signature}					
+					
+""""					
