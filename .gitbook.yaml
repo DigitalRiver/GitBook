@@ -1,0 +1,6 @@
+structure:  
+    readme: README.md  
+    summary: SUMMARY.md​
+    
+redirects:  
+    home/big-commerce: ./partner-integrations/bigcommerce/master.md
