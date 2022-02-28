@@ -4,3 +4,4 @@ structure:
     
 redirects:  
     home/big-commerce: ./partner-integrations/bigcommerce/master.md
+    big/commerce: ./partner-integrations/bigcommerce/master.md
