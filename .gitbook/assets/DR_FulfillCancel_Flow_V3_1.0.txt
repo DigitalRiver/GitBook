@@ -1,0 +1,151 @@
+#begin base settings for diagram
+fontfamily arial
+lifelineweight 3
+activecolor #lightgrey
+participantspacing equal
+autonumber
+#end base settings for diagram
+
+
+
+title SFB2B - DigitalRiver Connector Fulfillment Flow
+#begin particpant list
+participant "**Salesforce" as cms
+participant "**DR B2B Package" as esb
+participant "**DigitalRiver" as gc
+#end particpant list
+#begin diagram
+
+
+
+
+
+
+
+
+#begin API block
+gc-#coral>esb:**DR Webhook order.accepted\n /services/apexrest/digitalriverv3/Webhooks/
+entryspacing 0
+rbox over gc:          **Event: order.accepted\n--<color #red> Call Webhook Endpoint with Order Details
+linear
+cms<-esb:Create DR Fulfillment Record with DR Order Information. Update SF Order with DR Order state
+space 1
+note over cms,esb:1. DR Fulfillment Record with DR Order Id and DR Order State is created and DR Fulfillment Status field is set to Open\n2. "Eligible for Fulfillment" flag On DR Fulfillment Record is set to True\n3. DR order state on SF Order is updated to accepted
+space 1
+entryspacing 1
+linear off
+#response
+parallel
+esb-->gc: response
+rbox over esb:**Event: order.accepted\n--<color #red>            response code
+parallel off
+#end API block
+space 5
+
+group when order.accepted (i.e., ready to fulfill)
+  alt Order Level Fulfillment
+    alt Client completes Fulfillment
+    	cms->esb:Client updates DR Order State on SF order to **fulfilled
+        note over cms,esb:1. DR Fulfillment Request Log Record is created for each Order Item that has not been previously fulfilled or cancelled.\n2. Fulfill quantity on Fulfillment Request Log record will be set equal to the Order Item Open Quantity and Cancel Quantity will be set to 0\n3. DR Open Quantity on each Order Item will be updated to 0 by the connector\n4. Relevant SF and DR Order information on DR Fulfillment record is updated. DR Order Item state is set to fulfilled\n5. Corresponding DR Line-Item Fulfillment records with relevant information like DR Order Item Id, Quantity to Fulfill and Quantity to Cancel \n    are created for each order line item that has not previously been fulfilled or cancelled\n6. Fulfillment OrderItem Status on DR LineItem Fulfillment records is set to **Open
+    	
+    else Client cancels Fulfillment
+    	cms->esb:Client updates DR Order State on SF order to **cancelled
+        note over cms,esb:1. DR Fulfillment Request Log Record is created for each Order Item that has not been previously fulfilled or cancelled.\n2. Cancel quantity on Fulfillment Request Log record will be set equal to the Order Item Open Quantity and Fulfill Quantity will be set to 0\n3. DR Open Quantity on each Order Item will be updated to 0 by the connector\n4. Relevant SF and DR Order information on DR Fulfillment record is updated. DR Order Item state is set to cancelled\n5. Corresponding DR Line-Item Fulfillment records with relevant information like DR Order Item Id, Quantity to Fulfill and Quantity to Cancel \n.   are created for each order line item that has not previously been fulfilled or cancelled\n6. Fulfillment OrderItem Status on DR LineItem Fulfillment records is set to **Open
+    	
+    end
+  else Line Level Fulfillment
+	alt Client completes Fulfillment of Line Item
+    	cms->esb:Client creates relevant DR Fulfillment Request Log record for the Order Item record in question
+        note over cms,esb:1. Client will create DR Fulfillment Request Log Record for the Order Item in question by populating SF Order Id, SF Order Item Id, \n    Fulfill Quantity and Cancel Quantity\n2. Client will set the Fulfill quantity on Fulfillment Request Log record equal to the Order Item Open Quantity and Cancel Quantity to 0\n3. DR Open Quantity on the Order Item will be updated to 0 by the Connector\n4. Relevant SF and DR Order information on DR Fulfillment record will be updated by the Connector\n5. Corresponding DR Line-Item Fulfillment record will be created with relevant information like DR Order Item Id, Quantity to Fulfill \n    and Quantity to Cancel for the Order line item by the Connector\n6. Fulfillment OrderItem Status on DR LineItem Fulfillment record will be set to **Open** by the Connector
+    else Client cancels Fulfillment of Line Item
+    	cms->esb:Client creates relevant DR Fulfillment Request Log record for the Order Item record in question
+        note over cms,esb:1. Client will create DR Fulfillment Request Log Record for the Order Item in question by populating SF Order Id, SF Order Item Id, \n    Fulfill Quantity and Cancel Quantity\n2. Client will set the Cancel quantity on Fulfillment Request Log record equal to the Order Item Open Quantity and Fulfill Quantity to 0\n3. DR Open Quantity on the Order Item will be updated to 0 by the Connector\n4. Relevant SF and DR Order information on DR Fulfillment record will be updated by the Connector\n5. Corresponding DR Line-Item Fulfillment record will be created with relevant information like DR Order Item Id, Quantity to Fulfill \n    and Quantity to Cancel for the Order line item by the Connector\n6. Fulfillment OrderItem Status on DR LineItem Fulfillment record will be set to **Open** by the Connector
+    end
+  end
+end
+
+space 2
+#begin API block
+entryspacing 0
+group DR Order Fulfillment Job (scheduled)
+space 1
+note over cms,gc:1. Query all DR Fulfillment Records ordered by Created Date where **DR Fulfillment Status** is **Open** or **Reprocess** and **Eligible for Fulfillment** is True and **Number of Line Item Records to process** is greater than 0 i.e., have Line Item Fulfillment Records to process
+space 2
+loop for each DR Fulfillment Record
+space 2
+note over cms,gc:1. Get all Child Line Item Fulfillment Records whose Fulfillment OrderItem Status is **Open** or **Reprocess**\n2. Build a Fulfillment Request containing all Line Items with relevant Fulfill and Cancel Quantity captured on Line Item Fulfillment Record\n3. Post the Fulfillment Request to Digital River
+space 2
+alt Submit Fulfillment - Success (201 Response Status Code)
+esb-#DeepSkyBlue:3>gc:**DR API: POST /fulfillments
+space 1
+box over gc#FAE5D3:**Partial line item fulfillments are not supported in this version of the connector.
+gc--#DeepSkyBlue:3>esb:**201 Fulfillment Details
+gc->gc: initiates funds capture for fulfilled items
+space 2
+gc->gc: reverses authorization for cancelled items
+space 2
+note over cms,gc:1. Fulfillment OrderItem Status on all DR Line Item Fulfillment Records is updated to **Completed**\n2. Message field on all DR Line Item Fulfillment Records is updated to **Request processed successfully by DR**\n3. If the Fulfill quantity on DR Line Item Fulfillment record is greater than 0 then DR Order Item State on corresponding SF Order Item is set to **fulfilled** \n4. If the Cancel quantity on DR Line Item Fulfillment record is greater than 0 then DR Order Item State on corresponding SF Order Item is set to **cancelled**\n5. DR Fulfilled quantity on the Order Item will be updated to match the Fulfill quantity field on corresponding DR Line Item Fulfillment record\n6. DR Cancelled quantity on the Order Item will be updated to match the Cancel quantity field on corresponding DR Line Item Fulfillment record\n7. Digital River Fulfillment Status field on DR Fulfillment record will be updated to **Completed** if the all the Order Items for this corresponding SF Order are either Fulfilled or Cancelled
+space 2
+else Submit Fulfillment - Success (409 Response Status Code)
+esb-#DeepSkyBlue:3>gc:**DR API: POST /fulfillments
+space 1
+gc--#DeepSkyBlue:3>esb:**Response is 409 Error
+space 2
+alt Error Code is **order_complete**
+space 2
+note over cms,gc:1. Fulfillment Order Item Status on all DR Line Item Fulfillment Records is set to **Completed**\n2. Message field on all DR Line Item Fulfillment Records is set to the **Error Message** received in the response\n3. If the Fulfill quantity on DR Line Item Fulfillment record is greater than 0 then DR Order Item State on corresponding SF Order Item is set to **fulfilled** \n4. If the Cancel quantity on DR Line Item Fulfillment record is greater than 0 then DR Order Item State on corresponding SF Order Item is set to **cancelled**\n5. DR Fulfilled quantity on the Order Item will be updated to match the Fulfill quantity field on corresponding DR Line Item Fulfillment record\n6. DR Cancelled quantity on the Order Item will be updated to match the Cancel quantity field on corresponding DR Line Item Fulfillment record\n7. Digital River Fulfillment Status field on DR Fulfillment record will be updated to **Completed**
+space 2
+else Error Code is **order_cancelled**
+space 2
+note over cms,gc:1. Fulfillment Order Item Status on all DR Line Item Fulfillment Records is set to **Completed**\n2. Message field on all DR Line Item Fulfillment Records is set to the **Error Message** received in the response\n3. If the Fulfill quantity on DR Line Item Fulfillment record is greater than 0 then DR Order Item State on corresponding SF Order Item is set to **fulfilled**. \n    This scenario will not happen as DR Order state will be cancelled only when all the Line items are cancelled\n4. If the Cancel quantity on DR Line Item Fulfillment record is greater than 0 then DR Order Item State on corresponding SF Order Item is set to **cancelled**\n5. DR Fulfilled quantity on the Order Item will be updated to match the Fulfill quantity field on corresponding DR Line Item Fulfillment record\n6. DR Cancelled quantity on the Order Item will be updated to match the Cancel quantity field on corresponding DR Line Item Fulfillment record\n7. Digital River Fulfillment Status field on DR Fulfillment record will be updated to **Completed**
+space 2
+else Error Code is **item_fulfilled**
+space 2
+note over cms,gc:1. DR Order Item Id is captured from the Error Message.\n2. Fulfillment Order Item status is set to **Completed** for the DR Line Item Fulfillment record that corresponds to the Order Item that is already **fulfilled**\n3. DR Order Item State on corresponding SF Order Item is set to **fulfilled**\n4. DR Fulfilled quantity on corresponding SF Order Item will be updated to match the Fulfill quantity field on corresponding DR Line Item Fulfillment record\n5. Digital River Fulfillment Status field on DR Fulfillment record will remain in **Open** state as there are more Line Items to be processed
+space 2
+else Error Code is **item_cancelled**
+space 2
+note over cms,gc:1. DR Order Item Id is captured from the Error Message.\n2. Fulfillment Order Item status is set to **Completed** for the DR Line Item Fulfillment record that corresponds to the Order Item that is already **cancelled**\n3. DR Order Item State on corresponding SF Order Item is set to **cancelled**\n4. DR Cancelled quantity on corresponding SF Order Item will be updated to match the Cancel quantity field on corresponding DR Line Item Fulfillment record\n5. Digital River Fulfillment Status field on DR Fulfillment record will remain in **Open** state as there are more Line Items to be processed
+space 2
+end
+space 2
+else Submit Fulfillment - Failed (409 Response Status Code)
+esb-#DeepSkyBlue:3>gc:**DR API: POST /fulfillments
+space 1
+gc--#DeepSkyBlue:3>esb:**Response is 409 Error
+space 2
+note over cms,gc:1. Fulfillment OrderItem Status on the DR Line Item Fulfillment Record is set to **Reprocess** if the retry attempts made is less than the Fulfillment Retry Limit set in Digital River App Config page\n2. Fulfillment OrderItem Status on the DR Line Item Fulfillment Record is set to **Failed** if the retry attempts exceeded the Fulfillment Retry Limit set in Digital River App Config page \n3. Message field on all DR Line Item Fulfillment Records is updated to **Issue with one or more of the line items in the Fulfillment/Cancellation Request**
+space 2
+end
+space 4
+end
+space 3
+end 
+space 4
+#response
+alt Order is complete
+space 
+note over cms,gc:All Line Item(s) are fulfilled or Some Line Item(s) are fulfilled and the remaining cancelled
+space
+gc->gc: funds are captured
+space
+gc->gc: order moved to completed state
+space 2
+gc-#coral>esb:**DR Webhook order.complete\n /services/apexrest/digitalriverv3/Webhooks/
+
+rbox over gc:            **Event: order.complete\n--<color #red> Call Webhook Endpoint with Order Details
+linear
+cms<-esb:Update DR Order State on SF Order and DR Fulfillment record to complete.
+space 2
+else Order is cancelled
+space 
+note over cms,gc:All Line Item(s) are cancelled
+space
+gc->gc: reverses authorization for cancelled items
+space
+gc->gc: order moved to cancelled state
+space 2
+
+end
+parallel off
+#end API block

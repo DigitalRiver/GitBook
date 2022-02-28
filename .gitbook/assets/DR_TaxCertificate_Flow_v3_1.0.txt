@@ -1,0 +1,82 @@
+  
+#begin base settings for diagram
+fontfamily arial
+lifelinestyle :2
+//activecolor #lightgrey
+participantspacing equal
+autonumber
+#autoactivation
+#end base settings for diagram
+
+title Salesforce B2B Tax Exemption Subprocess
+#begin particpant list
+participant "**Shopper" as shp
+participant "**B2B Commerce" as cms
+participant "**DR B2B Connector" as esb
+participant "**DR Application" as gc
+#end particpant list
+#begin diagram
+#Tax Exempt Option Avialable for US Customer Start
+alt (ShopperType=Business, Country=United States) - Create Tax Exempt file for checkout
+shp->cms:shopper selects **Business** as the Purchase Type in Buyer Info Page 
+
+
+
+alt shopper navigates to upload their tax certificate - Tax certificates that were previously uploaded by shopper along with the new one(s) uploaded will be applied to checkout
+shp->cms:shopper clicks on **Manage your Tax Certificates**
+cms->esb:upload tax certificate to DR
+
+esb-#DeepSkyBlue:3>gc:**DR API: POST /customers
+
+#create file start
+#Customers Lookup / Create Start
+alt customer already exists
+gc--#DeepSkyBlue:3>esb:**409 "A customer with {id} already exists"
+esb-#DeepSkyBlue:3>gc:**DR API: GET /customers/{id}
+gc--#DeepSkyBlue:3>esb:**200 OK
+else customer does not exist
+gc--#DeepSkyBlue:3>esb:**201 customer is created
+end
+#Customers Lookup / Create End
+
+#Upload Tax Exemption Certificate
+alt tax_document_customer_upload_success
+esb-#DeepSkyBlue:3>gc:**DR API: /files
+gc--#DeepSkyBlue:3>esb:**file is created
+esb-#DeepSkyBlue:3>gc:**DR API: /customers/{id}
+gc--#DeepSkyBlue:3>esb:**customers is updated
+#Create Tax Exempt File/ UPdate Customer end
+esb --> cms:Tax Certificate screen is refreshed with information about all the tax certificates uploaded by the shopper
+cms -->shp: Success Message
+
+shp->cms:Proceeds to next step
+cms->esb:Update Customer Type on cart to **business**
+box over esb,gc#FAE5D3:Set Customer type on Checkout to **business** in Create Checkout Request (Order Review page)
+
+else tax_document_customer_upload failed 
+esb-#DeepSkyBlue:3>gc:**DR API: /files
+gc--#DeepSkyBlue:3>esb:**error response (4xx, 5xx)
+esb --> cms:error message thrown and logged
+cms -->shp: Failed Message
+
+esb-#DeepSkyBlue:3>gc:**DR API: /customers/{id}
+gc--#DeepSkyBlue:3>esb: **error response (4xx, 5xx)
+esb --> cms:error message thrown and logged
+cms -->shp: Failed Message
+end
+
+
+else shopper chooses not to upload a new tax certificate
+shp->cms:Proceeds to next step
+cms->esb:Update Customer Type on cart to **business**
+box over esb,gc#FAE5D3:Set Customer type on Checkout to **business** in Create Checkout Request (Order Review page)
+shp->shp:tax certificates previously uploaded by shopper will be applied to checkout
+end
+
+else [ShopperType=Individual, Country=United States] - Tax Exemption is not Applied to Checkout
+shp->cms:shopper selects **Individual** as the Purchase Type and Proceeds to next step
+cms->esb:Update Customer Type on cart to **individual**
+box over esb,gc#FAE5D3:Set Customer type on Checkout to **individual** in Create Checkout Request (Order Review page)
+#Tax Exempt Option Avialable for US Customer End
+end
+#Tax Exempt Option Avialable for US Customer Start

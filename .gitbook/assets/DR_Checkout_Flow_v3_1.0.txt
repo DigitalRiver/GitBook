@@ -1,0 +1,116 @@
+  
+#begin base settings for diagram
+fontfamily arial
+lifelinestyle :2
+//activecolor #lightgrey
+participantspacing equal
+autonumber
+#autoactivation
+#end base settings for diagram
+
+title Salesforce B2B Checkout
+#begin particpant list
+participant "**Shopper" as shp
+participant "**SalesforceB2B" as cms
+participant "**DR B2B Connector" as esb
+participant "**DR Application" as gc
+#end particpant list
+#begin diagram
+shp->cms: browses storefront, adds products to cart
+cms->shp: renders storefront, product pages, cart
+shp->cms:selects product and adds to cart
+cms->shp:renders cart page with pre tax totals
+shp->cms:confirms cart details and proceed to checkout
+cms-#DeepSkyBlue:3>esb: create customer
+esb-#DeepSkyBlue:3>gc:**DR API: GET /customers/{id}
+#Customers Lookup / Create Start
+alt customer does not exist
+gc--#DeepSkyBlue:3>esb:**404 "A customer with {id} not found"
+esb-#DeepSkyBlue:3>gc:**DR API: POST /customers
+gc--#DeepSkyBlue:3>esb:**201 OK
+else customer exist
+gc--#DeepSkyBlue:3>esb:**200 ok
+end
+#Customers Lookup / Create End
+
+cms->shp:buyer information page loads with cart info and pre tax total
+opt US Shopper
+box over shp,gc#FAE5D3:**US business shoppers have option to upload tax certificate and make a tax-exempt purchase
+end
+
+shp->cms:shopper complete buyer info page with Name,Email,Phone,Shipto,Billto ,Tax Certificate (If Applicable) and submits form
+cms->shp:shipping/delivery page loads
+shp->cms: shopper completes shipping/delivery page and submits form
+
+cms-#DeepSkyBlue:3>esb: create checkout
+
+
+esb-#DeepSkyBlue:3>gc:**DR API: POST /checkouts
+gc--#DeepSkyBlue:3>esb:**201 checkout details
+
+ 
+
+esb--#DeepSkyBlue:3>cms:updates salesforce Cart with checkout , **"id","tax", "totalFees",\n "paymentSessionId", and sellingEntity** assigned to Cart
+cms-->shp:renders order review page with "tax", "sellingEntity" and compliance links (businessEntityCode, locale)
+opt  Non-US Shopper
+box over shp,gc#FAE5D3:**Non-US shoppers have option to add tax identifier to their profile and also apply them to the checkout
+end
+
+box over shp,gc#FAE5D3:**If shopper edits cart, the create cart process is re-initiated
+shp->cms:shopper reviews, actively accepts DR T&Cs, submits form with Next button
+
+cms->shp:renders Payment Page
+
+cms->shp:renders Payment Drop-in component\n     using **DigitalRiver.js** library
+
+
+
+shp->cms:select any payment method & click Continue
+cms-#DeepSkyBlue:3>gc: **Drop-in Component Creates Payment Source 
+gc--#DeepSkyBlue:3>cms: **SourceID 
+cms-#DeepSkyBlue:3>esb
+opt "Yes, please save this account and payment information on future purchases." is checked
+
+esb-#DeepSkyBlue:3>gc:**DR API: POST /customers/customerId/sources/sourceId assigns source to shopper
+esb<#DeepSkyBlue:3--gc: **200 OK
+end 
+
+esb-#DeepSkyBlue:3>gc:**DR APIPOST /checkouts/{checkoutid}/sources/sourceId apply source to checkout
+cms<#DeepSkyBlue:3--gc: **200 OK
+cms->shp:renders Place Order page with **Payment Method** used, **shipping, tax, fees, IOR Tax and Duties** (if applicable)
+shp->esb:Shopper reviews the information and clicks on Place Order button
+esb-#DeepSkyBlue:3>gc:**DR API: POST /orders
+
+alt Create Order 409 response
+gc--#DeepSkyBlue:3>esb: **Response is 409 Error
+esb--#DeepSkyBlue:3>cms:error message thrown and logged
+cms-->shp: renders payment failure message for shopper
+else Create Order 201 response
+esb<#DeepSkyBlue:3--gc:**201 order is created
+esb-#DeepSkyBlue:3>gc:**DR API: GET /orders/OrderId
+esb<#DeepSkyBlue:3--gc:**200 Ok
+box over esb:**DR Order Status Captured**\n- order.accepted\n- order.review_opened\n- order.pending_payment
+cms<#DeepSkyBlue:3--esb:Create OrderItemTaxLineItem with order item id, tax amount and fee
+cms<#DeepSkyBlue:3--esb:Update the Order and Order item(s) with Digital River Order Id, Digital River Line item id(s), DR Order State, Duty, IOR Tax, Fee and DR Order Fraud State
+cms<#DeepSkyBlue:3--esb:Create custom Transaction Payment record with source info like payment type, token, Order Id, source type 
+shp<#MediumSeaGreen:3-cms:render Order confirmation page
+box over gc:no fraud hold OR \norder.pending_review and fraud process approves order
+gc-#coral>esb:**DR Webhook order.accepted\n /services/apexrest/digitalriverv3/webhooks/
+cms<#DeepSkyBlue:3--esb:Create DR fulfillment record, update w/order{id} and order/state,
+end
+
+group when order.review_opened
+
+alt order is blocked for fraud
+box over gc: fraud process rejects order
+gc-#coral>esb:**DR Webhook order.blocked\n /services/apexrest/digitalriverv3/webhooks/
+cms<#MediumSeaGreen:3-esb:Update DR Order state on Salesforce Order and DR Fulfillment Record to "cancelled"
+
+shp<#MediumSeaGreen:3-cms:Send "Order Cancelled Email" to shopper (outside the scope of connector)
+
+end
+end
+
+group when order.accepted (i.e. ready to fulfill)
+box over shp,gc#FAE5D3:**Client can start Fulfillment process
+end
