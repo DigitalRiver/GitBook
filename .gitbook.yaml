@@ -3,6 +3,6 @@ root: ./
 structure:  
     readme: README.md  
     summary: SUMMARY.md​
-root: ./home    
+root: ./home/    
 redirects:  
         big-commerce: ./bigcommerce/readme.md      
