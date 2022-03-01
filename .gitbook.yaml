@@ -3,7 +3,4 @@ root: ./
 structure:  
     readme: README.md  
     summary: SUMMARY.md​
-    
-redirects:  
-        home/big-commerce: ../../bigcommerce/v/1.0-4/install-the-digital-river-app.md
-        big-commerce: ../../bigcommerce/v/1.0-4/install-the-digital-river-app.md  
+  
