@@ -8,6 +8,7 @@ description: >-
 
 Available versions:
 
+* [1.2](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/5L9fr9j7Pkq0D1IIEUFc/)
 * [1.1](https://docs.digitalriver.com/sap/v/1.1/)
 
 {% embed url="https://vimeo.com/490846872/465089453" %}
