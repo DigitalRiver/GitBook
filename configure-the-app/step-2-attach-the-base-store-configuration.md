@@ -8,7 +8,7 @@ After you create the Digital River configuration, attach the configuration to th
 
 1. Click the **Base Store** option from **Base Commerce** in **Backoffice** and select the appropriate Base Store.\
    &#x20;![](<../.gitbook/assets/Base store 1.png>)&#x20;
-2. Select the Digital River configuration in the **Digital River Configuration** dropdown list.\
+2. Select the Digital River configuration from the **Digital River Configuration** dropdown list.\
    &#x20;![](<../.gitbook/assets/Base store 2.png>)&#x20;
 3. Select **True** for the **External Tax Calculation** attribute, and click **Save**.
 

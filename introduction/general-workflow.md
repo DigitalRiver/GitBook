@@ -4,7 +4,7 @@ description: Learn how the SAP Commerce Cloud extension works.
 
 # General workflow
 
-![](<../.gitbook/assets/shopper flow slides - SAP.png>)
+![](../.gitbook/assets/shopper-flow-slides-sap.png)
 
 Digital River integrates with the SAP Commerce Cloud (Hybris) extension with a seamless front-end purchasing experience. This includes product details, merchandising, checkout, and payment information, while Digital River handles back-end functions, including behind-the-scenes tax compliance, payment processing, and risk mitigation.&#x20;
 

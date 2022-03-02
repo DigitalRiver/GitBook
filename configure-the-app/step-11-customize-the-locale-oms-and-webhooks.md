@@ -2,11 +2,11 @@
 description: Learn how to customize the locale, OMS, and webhooks.
 ---
 
-# Step 10: Customize the locale, OMS, and webhooks
+# Step 11: Customize the locale, OMS, and webhooks
 
 ## Localization
 
-The Digital River extension has a customized storefront message available in English. Properties for all custom messages are added to the `base_en.properties` and `base_de.properties` files in the `digitalriveraddon`module. For other languages in the merchant application, copy the properties from `base_en` to the respective language property.
+The Digital River extension has a customized storefront message available in English. Properties for all custom messages are added to the `base_en.properties` and `base_de.properties` files in the `digitalriveraddon` and `digitalriverb2baddon` modules. For the rest of the supported languages in the merchant application, copy the properties from `base_en` to the respective language property.
 
 {% hint style="info" %}
 This extension does not have any restrictions based on country or currency. However, during checkout, the Tax Exemption page is displayed based on the selected country.
@@ -14,9 +14,9 @@ This extension does not have any restrictions based on country or currency. Howe
 
 ## Order Management System (OMS)&#x20;
 
-The Digital River Order Management System (OMS) extension is built on an Out of Box (OOB) `yacceleratorordermanagement` template. Out of Box order flow and actions have been changed to support various OMS functionalities of Digital River, including fulfillments, cancellations, and returns.
+The Digital River Order Management System (OMS) extension is built on an out-of-the-box (OOB) `yacceleratorordermanagement` template. The OOB order flow and actions have been changed to support various OMS functionalities of Digital River, including fulfillments, cancellations, and returns.
 
-### Order Flow
+### Order flow
 
 * A modified order flow is available in the `projectdata-dynamic-business-process-order.impex` file in the `yacceleratorordermanagement` folder in the provided archive.
 * If the Digital River order status is `in_review` or `pending_payment`, the system pauses the order flow. The system will resume the order flow after the application receives an `order.accepted` or `order.blocked` event from Digital River.
@@ -42,9 +42,9 @@ Transaction tables will be updated with refund entries once the `order.charge.re
 
 #### Customer support return
 
-A customer support agent can go to Digital River [Dashboard](https://dashboard.digitalriver.com/login) to create a refund request for an order. To access the Dashboard, click the `DRRefund` button in the Backoffice Order view. The `DRRefund` **** button will redirect the customer support agent to the respective Order details page in the Dashboard. Support agents will be prompted for their user credentials when they access Dashboard. Appropriate return and refund entries will be made in the Dashboard app once it receives the  `refund.complete` event for that order.
+A customer support agent can go to Digital River [Dashboard](https://dashboard.digitalriver.com/login) to create a refund request for an order. To access the Dashboard, click the **DigitalRiver Refund** button in the Backoffice Order view. The `DRRefund` **** button will redirect the customer support agent to the respective Order details page in the Dashboard. Support agents will be prompted for their user credentials when they access Dashboard. Appropriate return and refund entries will be made in the Dashboard app once it receives the  `refund.complete` event for that order.
 
-![](../.gitbook/assets/11DRRefund.png)
+![](<../.gitbook/assets/Digital River Refund.png>)
 
 ## Event handling
 
@@ -52,12 +52,18 @@ The Digital River SAP Commerce Cloud extension provides the service class for ca
 
 * `order.accepted`
 * `order.blocked`
+* `order.charge.cancelled`
 * `order.charge.capture.complete`
 * `order.charge.completed`
 * `order.charge.refund.complete`
 * `refund.complete`
+* `refund.pending_information`
 
-Merchants can create a [webhook](https://docs.digitalriver.com/digital-river-api/dashboard/developers/webhooks/creating-a-webhook) by providing the URL for the service endpoint URL in the [Dashboard](https://dashboard.digitalriver.com). Check the status of the events mentioned above from the [event log](https://docs.digitalriver.com/digital-river-api/dashboard/developers/event-logs).
+Merchants can create a [webhook ](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/webhooks/creating-a-webhook)by providing the endpoint URL in the [Dashboard](https://dashboard.digitalriver.com). Check the status of the events mentioned above from the [event log](https://docs.digitalriver.com/digital-river-api/dashboard/developers/event-logs).
 
-![](../.gitbook/assets/10CreateWebhook.png)
+Use the following format when creating entering the endpoint URL:
+
+`https://<domain>/digitalriverwebservices/dr/events`
+
+![](../.gitbook/assets/10createwebhook.png)
 

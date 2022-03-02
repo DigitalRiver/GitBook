@@ -5,14 +5,15 @@ description: >-
   ultimate shopping experience.
 ---
 
-# SAP Commerce Cloud Extension 1.1
+# SAP Commerce Cloud Extension 1.2
 
 ## System requirements
 
-* **API Fleet and version**: Digital River API–v2021-02-23
-* **Commerce Platform Version**: This extension is designed and tested with version **1905** of SAP Commerce.
+* **SAP Commerce Cloud Extension version number**: 1.2
+* **API Fleet and version**: Digital River API version 2021-03-23&#x20;
+* **Commerce Platform Version**: This extension is designed and tested with version 2011 of SAP Commerce.
 
 
 
-
+![](.gitbook/assets/SAP\_Certi\_Integration\_SAP\_CX\_R.png)
 

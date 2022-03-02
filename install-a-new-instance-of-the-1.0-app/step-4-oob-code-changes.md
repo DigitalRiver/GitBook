@@ -4,18 +4,20 @@ description: Learn about OOB code changes.
 
 # Step 4: OOB code changes
 
-Files that are changed as a part of the Digital River payment integration, tax management, and Order Management System (OMS) will be available in the OOB folder in the archive (custom folder). The following modified extensions will appear in the archive:&#x20;
+Files that are changed as a part of the Digital River payment integration, tax management, and Order Management System (OMS) will be available in the out-of-the-box (OOB) folder in the archive (custom folder). The following modified extensions will appear in the archive:&#x20;
 
-* `yacceleratorstorefront`
-* `consignmenttrackingaddon`
-* `orderselfserviceaddon`
-* `yacceleratorordermanagement`
+* ``[`yacceleratorstorefront`](step-4-oob-code-changes.md#yacceleratorstorefront-files)``
+* ``[`yb2bacceleratorstorefront`](step-4-oob-code-changes.md#yb2bacceleratorstorefront-files)``
+* ``[`b2bacceleratoraddon`](step-4-oob-code-changes.md#undefined)``
+* ``[`consignmenttrackingaddon`](step-4-oob-code-changes.md#consignmenttrackingaddon-file)``
+* ``[`orderselfserviceaddon`](step-4-oob-code-changes.md#orderselfserviceaddon-files)``
+* ``[`yacceleratorordermanagement`](step-4-oob-code-changes.md#ir)``
 
-### Storefront changes
+## Storefront changes
 
-The OOB __ `yacceleratorstorefront` is the template storefront for Digital River extension development. The following files are updated for tax and payment integration. If the merchant application uses any custom files, update them with the changes for Digital River from this file list:
+The OOB __ `yacceleratorstorefront` and `yb2bacceleratorstorefront` use the template storefront for Digital River extension development for B2C and B2B respectively. The following files are updated for tax and payment integration. If the merchant application uses any custom files, update them with the changes for Digital River from this file list:
 
-#### `yacceleratorstorefront` files
+### yacceleratorstorefront files
 
 * `addressFormElements.tag`
 * `addressFormSelector.tag`
@@ -40,23 +42,53 @@ The OOB __ `yacceleratorstorefront` is the template storefront for Digital River
 * `guestOrderPage.jsp`
 * `acc.silentorderpost.js`
 
-#### `consignmenttrackingaddon` file
+### yb2bacceleratorstorefront files
+
+* `acc.silentorderpost.js`
+* `multi-step-checkout-config.xml`
+* `spring-filter-config.xml`
+* `addressFormElements.tag`
+* `billAddressFormSelector.tag`
+* `checkoutOrderSummary.tag`
+* `orderTortals.tag`
+* `accountOrderDetailOrderTotals.tag`
+* `orderTotalsItem.tag`
+* `orderUnconsignedEntries.tag`
+* `master.tag`
+* `accountProfileEditPage.jsp`
+* `addEditDeliveryddressPage.jsp`
+* `chooseDeliveryMethodPage.jsp`
+* `silentOrderPostPage.jsp`
+* `checkoutConfirmatinThankMessage.jsp`
+* `guestOrderPage.jsp`
+
+### b2bacceleratoraddon files
+
+* `orderUnconsignedEntries.tag`
+* `accountOrderDetailShippingInfo.jsp`
+* `checkoutSummaryPage.jsp`
+* `base_en`
+* `multi-step-checkout-config.xml`
+* `acc.paymentType.js`
+* `PaymentTypeCheckoutStepController.java`
+
+### consignmenttrackingaddon file
 
 * `orderUnconsignedEntries.tag`
 
-This tag, in `consignmenttrackingaddon` and `yacceleratorstorefront`, has changed to display the status for the Digital River product. The merchant application should make the necessary changes in custom implementation for the Digital River product if changes exist.
+This tag, in `consignmenttrackingaddon`, `yacceleratorstorefront`,  and `yb2bacceleratorstorefront` has changed to display the status for the Digital River product. The merchant application should make the necessary changes in custom implementation for the Digital River product if changes exist.
 
-#### **`orderselfserviceaddon`** __ files
+### **orderselfserviceaddon** __ files
 
-The following files in the `order-management\orderselfserviceaddon` are changed for Digital River product cancellation:
+We changed the following files in `order-management\orderselfserviceaddon` to support Digital River product cancellation:
 
 * `CancelOrderPageController.java`
 * `extensioninfo.xml`
 * `accountReturnTotals.tag`
 
-### Order Management System (OMS) file changes
+## Order Management System (OMS) file changes
 
-The following files are added or modified in `order-management\yacceleratorordermanagement` for Digital River OMS support:
+We added or modified the following files in `order-management\yacceleratorordermanagement` to support Digital River OMS:
 
 * `extensioninfo.xml`
 * `order-process-spring.xml`

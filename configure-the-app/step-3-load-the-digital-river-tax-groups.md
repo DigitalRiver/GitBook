@@ -13,7 +13,7 @@ INSERT_UPDATE DRTaxGroup;taxGroup[unique=true]
 
 ;Downloadable Goods (Non-Software)
 
-";Food, Beverage & Household"
+;Food, Beverage & Household
 
 ;Physical Goods
 
@@ -32,23 +32,21 @@ INSERT_UPDATE DRTax;drCode[unique=true];drTaxType;taxGroup(taxGroup)
 
 ;55111512.100;Music;Downloadable Goods (Non-Software)
 
-;55111507.120;Electronic Newspapers (Includes Subscriptions);
-Downloadable Goods (Non-Software)
+;55111507.120;Electronic Newspapers (Includes Subscriptions);Downloadable Goods (Non-Software)
 
-;55111506.120;Electronic Magazines (Includes Subscriptions);
-Downloadable Goods (Non-Software)
+;55111506.120;Electronic Magazines (Includes Subscriptions);Downloadable Goods (Non-Software)
 
 ;55111513.120;Educational / Vocational Texts;Downloadable Goods (Non-Software)
 
 ;55111502.120;eBooks;Downloadable Goods (Non-Software)
 
-";51191905;Non-Prescription Vitamins;Food, Beverage & Household"
+;51191905;Non-Prescription Vitamins;Food, Beverage & Household
 
-";5124;Non-Prescription Drugs;Food, Beverage & Household"
+;5124;Non-Prescription Drugs;Food, Beverage & Household
 
-";47;Miscellaneous Supplies;Food, Beverage & Household"
+;47;Miscellaneous Supplies;Food, Beverage & Household
 
-";50;Food - General;Food, Beverage & Household"
+;50;Food - General;Food, Beverage & Household
 
 ;531316.150;Automatic Blood Pressure Monitors;Physical Goods
 
@@ -78,17 +76,13 @@ Downloadable Goods (Non-Software)
 
 ;42;Medical Equipment;Physical Goods
 
-";4512;Consumer Electronics (Photographic, Filming, or Video Equipment);
-Physical Goods"
+;4512;Consumer Electronics (Photographic, Filming, or Video Equipment);Physical Goods
 
-";52161500_C;Consumer Electronics (T.V., Monitor, Display) - 
-Size (>4""<15"");Physical Goods"
+;52161500_C;Consumer Electronics (T.V., Monitor, Display) - Size (>4"<15");Physical Goods
 
-";52161500_B;Consumer Electronics (T.V., Monitor, Display) - 
-Size (= or >35"");Physical Goods"
+;52161500_B;Consumer Electronics (T.V., Monitor, Display) - Size (= or >35");Physical Goods
 
-";52161500_A;Consumer Electronics (T.V., Monitor, Display) - 
-Size (= or >15""<35"");Physical Goods"
+;52161500_A;Consumer Electronics (T.V., Monitor, Display) - Size (= or >15"<35");Physical Goods
 
 ;601410;Video Game Consoles and Accessories;Physical Goods
 
@@ -128,11 +122,9 @@ Size (= or >15""<35"");Physical Goods"
 
 ;531029.200;Apparel & Footwear (Athletic Use);Physical Goods
 
-;70.360;Installation Service Charges Provided by the Seller of TPP;
-Services & Miscellaneous
+;70.360;Installation Service Charges Provided by the Seller of TPP;Services & Miscellaneous
 
-";81112201.121;Mandatory Maintenance Agreements - Services and Upgrades, 
-Only for Downloadable;Services & Miscellaneous"
+;81112201.121;Mandatory Maintenance Agreements - Services and Upgrades, Only for Downloadable;Services & Miscellaneous
 
 ;8111;Computer Services;Services & Miscellaneous
 
@@ -142,21 +134,17 @@ Only for Downloadable;Services & Miscellaneous"
 
 ;70.120;Gift Cards;Services & Miscellaneous
 
-";81112201.120;Mandatory Maintenance Agreements - Services and Upgrades, 
-for Downloadable and Physical Products;Services & Miscellaneous"
+;81112201.120;Mandatory Maintenance Agreements - Services and Upgrades, for Downloadable and Physical Products;Services & Miscellaneous
 
 ;70.150;Non-warranty Repairs;Services & Miscellaneous
 
 ;811121;Online Data Storage;Services & Miscellaneous
 
-";81112201.420;Optional Maintenance Agreements - Services and Upgrades, 
-for Downloadable Products;Services & Miscellaneous"
+;81112201.420;Optional Maintenance Agreements - Services and Upgrades, for Downloadable Products;Services & Miscellaneous
 
-";81112201.410;Optional Maintenance Agreements - Services and Upgrades, 
-for Physical Products;Services & Miscellaneous"
+;81112201.410;Optional Maintenance Agreements - Services and Upgrades, for Physical Products;Services & Miscellaneous
 
-";81112201.200;Optional Maintenance Agreements - Services Only, 
-for Downloadable and Physical Products;Services & Miscellaneous"
+;81112201.200;Optional Maintenance Agreements - Services Only, for Downloadable and Physical Products;Services & Miscellaneous
 
 ;70.300;Seminar Classes;Services & Miscellaneous
 
@@ -172,8 +160,7 @@ for Downloadable and Physical Products;Services & Miscellaneous"
 
 ;81112105;Web Hosting;Services & Miscellaneous
 
-;4323.310_B;Backup Media (CD/DVD) - One Disc per Order;Software 
-(Downloadable & Physical)
+;4323.310_B;Backup Media (CD/DVD) - One Disc per Order;Software (Downloadable & Physical)
 
 ;81112106;Software as a Service;Software (Downloadable & Physical)
 
@@ -183,31 +170,25 @@ for Downloadable and Physical Products;Services & Miscellaneous"
 
 ;4323.310_D;Physical Media Kits;Software (Downloadable & Physical)
 
-;4323.310_C;Backup Media (CD/DVD) - One Disc per Product;Software 
-(Downloadable & Physical)
+;4323.310_C;Backup Media (CD/DVD) - One Disc per Product;Software (Downloadable & Physical)
 
 ;4323.320_C;Downloadable Media Kits;Software (Downloadable & Physical)
 
 ;4323.320_D;Downloadable Software (Gaming Only);Software (Downloadable & Physical)
 
-";4323.320_A;Downloadable Software (Non-Gaming, Includes Software Subscriptions);
-Software (Downloadable & Physical)"
+;4323.320_A;Downloadable Software (Non-Gaming, Includes Software Subscriptions);Software (Downloadable & Physical)
 
 ;4323.320_B;Extended Download Service;Software (Downloadable & Physical)
 
-";95.210;Optional Warranties - Purchased at Time of Sale of for Consumer Goods, 
-Labor Only;Warranties"
+;95.210;Optional Warranties - Purchased at Time of Sale of for Consumer Goods, Labor Only;Warranties
 
-";95.222;Optional Warranties - NOT Purchased at Time of Sale of for Consumer Goods,
-Parts & Labor;Warranties"
+;95.222;Optional Warranties - NOT Purchased at Time of Sale of for Consumer Goods, Parts & Labor;Warranties
 
-";95.220;Optional Warranties - NOT Purchased at Time of Sale of for Consumer Goods,
-Labor Only;Warranties"
+;95.220;Optional Warranties - NOT Purchased at Time of Sale of for Consumer Goods, Labor Only;Warranties
 
 ;95.100;Mandatory Warranties;Warranties
 
-";95.212;Optional Warranties - Purchased at Time of Sale of for Consumer Goods,
-Parts & Labor;Warranties"
+;95.212;Optional Warranties - Purchased at Time of Sale of for Consumer Goods, Parts & Labor;Warranties
 
 ```
 
