@@ -6,7 +6,7 @@ description: Learn about supported countries.
 
 The BigCommerce app supports Digital River payment integration, tax calculation, and tax management:&#x20;
 
-Your store must be based in one of the following countries: CA, GL, PM, TC, US, AD, AT, BE, DK, FO, FI, FR, DE, GB, GR, IE, IS, IT, LI, LU, MC, NL, NO, PT, SM, ES, SJ, SE, CH, VA, AL, BY, BG, HR, CZ, EE, HU, KZ, LV, LT, MK, PL, RO, RU, RS, SK, SI, TM, TR, UA, UZ, AF, AZ, DZ, BH, BA, CY, ET, EG, IL, IQ, JO, KE, KW, LB, LS, LY, MR, MT, MA, NG, OM, PK, QA, RE, SA, SL, ZA, TA, TN, AE, YE, AR, BO, BR, CO, CL, CR, DO, EC, GF, GT, HN, MX, NI, PA, PY, PE, PR, SV, TT, UY, VE, AU, AS, BV, IO, NZ, JP, CN, CX, CC, CK, GU, HM, HK, KI, MO, MH, FM, NU, NF, MP, NP, PN, GS, LK, IN, BD, KR, TW, TK, TV, UM, SG, BN, ID, TL, PH, MY, MY, KH, LA, MM, TH, VN.
+Your store must be based in one of the following countries: AD, AE, AF, AL, AR, AS, AT, AU, AZ, BA, BD, BE, BG, BH, BN, BO, BR, BV, BY, CA, CC, CH, CK, CL, CN, CO, CR, CX, CY, CZ, DE, DK, DO, DZ, EC, EE, EG, ES, ET, FI, FM, FO, FR, GB, GF, GL, GR, GS, GT, GU, HK, HM, HN, HR, HU, ID, IE, IL, IN, IO, IQ, IS, IT, JO, JP, KE, KH, KI, KR, KW, KZ, LA, LB, LI, LK, LS, LT, LU, LV, LY, MA, MC, MH, MK, MM, MO, MP, MR, MT, MX, MY, NF, NG, NI, NL, NO, NP, NU, NZ, OM, PA, PE, PH, PK, PL, PM, PN, PR, PT, PY, QA, RE, RO, RS, RU, SA, SE, SG, SI, SJ, SK, SL, SM, SV, TA, TC, TH, TK, TL, TM, TN, TR, TT, TV, TW, UA, UM, US, UY, UZ, VA, VE, VN, YE, ZA
 
 We conducted testing for the following country, currency, and locale combinations:&#x20;
 
