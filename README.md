@@ -9,13 +9,14 @@ description: >-
 
 Available versions:
 
-* [2.3.0](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-2.3.0/)
-* [2.2.0](https://docs.digitalriver.com/magento/v/2.2.0/)
+* [2.3.1](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/87FiDCY5lQFT2GLdLrHE/)
+* [2.3.0](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/-MNZuMZbk2cjWhdeZ51z-4045062055/)
 
 Support only:
 
-* [2.1.1](https://docs.digitalriver.com/magento/v/2.1.1/)
-* [1.0.0](https://docs.digitalriver.com/magento/v/1.0.0/)
+* [2.2.0](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/-MNZuMZbk2cjWhdeZ51z-320503991/)
+* [2.1.1](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/-MNZuMZbk2cjWhdeZ51z-457992110/)
+* [1.0.0](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/-MNZuMZbk2cjWhdeZ51z-2024482579/)
 
 {% embed url="https://vimeo.com/385095415" %}
 
