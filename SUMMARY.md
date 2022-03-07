@@ -1,10 +1,10 @@
 # Table of contents
 
-* [Adobe Commerce Extension 2.3.0](README.md)
+* [Adobe Commerce Extension 2.3.1](README.md)
 * [Introduction](introduction/README.md)
   * [How it works](introduction/how-it-works.md)
   * [Features](introduction/features.md)
-  * [What's new in version 2.3.0](introduction/whats-new-in-version-2.1.1.md)
+  * [What's new in version 2.3.1](introduction/whats-new-in-version-2.1.1.md)
 * [Install the Digital River Extension](install-the-magento-extension.md)
 * [Configure the Digital River Extension](configure-the-digital-river-extension/README.md)
   * [Step 1: Retrieve API credentials](configure-the-digital-river-extension/step-1-retrieve-api-credentials.md)
@@ -25,7 +25,7 @@
   * [Digital River columns in the Magento Admin UI](configure-the-digital-river-extension/digital-river-columns-in-the-magento-admin-ui.md)
   * [Shopper experience](configure-the-digital-river-extension/shopper-experience/README.md)
     * [Saving payment methods](configure-the-digital-river-extension/shopper-experience/saving-payment-methods.md)
-    * [My Account pages](configure-the-digital-river-extension/shopper-experience/my-account-pages.md)
+    * [My Account page](configure-the-digital-river-extension/shopper-experience/my-account-page.md)
     * [Store credit](configure-the-digital-river-extension/shopper-experience/store-credit.md)
     * [Gift Cards](configure-the-digital-river-extension/shopper-experience/gift-cards.md)
     * [Tax identification numbers](configure-the-digital-river-extension/shopper-experience/tax-identification-numbers.md)

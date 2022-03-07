@@ -14,7 +14,7 @@ See [Set up multiple websites, stores, and store views in the Admin](https://dev
 
 You can modify all content displayed via the Digital River Extension by adding an `/i18n` directory to the _DrPay_ folder. By default the extension supports the following languages: \[en, es, it, fr, sv, da, ﬁ, cs, pl, hu, de, nl, pt] `/app/code/Digitalriver/DrPay/i18n`.&#x20;
 
-![](../.gitbook/assets/17SpreadsheetListing.png)
+![](../.gitbook/assets/17spreadsheetlisting.png)
 
 After adding or updating the translation ﬁles, rerun the upgrade command:\
 `$ php bin/magento setup:upgrade`

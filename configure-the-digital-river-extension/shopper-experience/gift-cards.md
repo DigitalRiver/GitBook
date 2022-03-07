@@ -14,7 +14,7 @@ With Store Credit, when a shopper pays for an order using a combination of Gift 
 
 You can process refunds for orders paid partially or entirely with Gift Cards through the normal Magento admin screens.
 
-If a shopper used Gift Cards to partially pay for a transaction and used a standard payment method to pay for the remainder of that transaction, Digital River will always refund the standard payment method first up to the amount paid using that payment method on the original purchase. Digital River will then refund any additional amounts to the Gift Card, up to the amount paid with a Gift Card on the original purchase.
+If a shopper used Gift Cards to partially pay for a transaction and used a standard payment method to pay for the remainder of that transaction, Digital River will always refund the standard payment method first up to the amount paid using that payment method on the original purchase. Digital River will then refund any additional amounts to the Gift Card, up to the amount paid with a Gift Card on the original purchase as store credit.
 
 **Note**: Digital River will never refund more to any payment instrument than what was originally paid using that payment instrument on the original purchase.
 

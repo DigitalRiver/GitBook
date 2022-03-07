@@ -1,10 +1,16 @@
 ---
 description: >-
-  Learn about new features for the Digital River Global Commerce version 2.3.0
+  Learn about new features for the Digital River Global Commerce version 2.3.1
   Extension for Adobe Commerce.
 ---
 
-# What's new in version 2.3.0
+# What's new in version 2.3.1
+
+## 2.3.1
+
+* Provides shoppers with the ability to manage saved payments within the My Account page
+
+## 2.3.0
 
 * U.S. Tax Certificate Management&#x20;
 * Regulatory Fee Support (Tax Exclusive Pricing Only)

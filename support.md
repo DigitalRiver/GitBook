@@ -4,7 +4,7 @@ description: Have a problem? We can help!
 
 # Support
 
-Thank you for downloading the Digital River Global Commerce version 2.3.0 Extension for Adobe Commerce.
+Thank you for downloading the Digital River Global Commerce version Extension for Adobe Commerce.
 
 If you have any questions, send us an email at [magento@digitalriver.com](mailto:magento@digitalriver.com) with the following information:&#x20;
 

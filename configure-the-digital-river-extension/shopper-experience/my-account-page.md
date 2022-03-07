@@ -4,7 +4,7 @@ description: >-
   trigger an error.
 ---
 
-# My Account pages
+# My Account page
 
 {% hint style="info" %}
 **Note:** While Magento displays an error when a shopper enters an incorrect ZIP or postal code, it will allow the address to be saved with the incorrect value. This can cause Digital River Drop-in to fail to load in the checkout.

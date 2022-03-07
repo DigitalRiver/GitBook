@@ -8,4 +8,6 @@ description: >-
 
 Since Digital River is the merchant of record on all transactions, our Terms of Sale, Privacy Policy, and other links must be present on checkout. No additional configuration is required. Digital River dynamically determines the appropriate Digital River selling entity for each order and displays the appropriate language, links, and check box.
 
-![](../.gitbook/assets/TermsofSale.png)
+![](../.gitbook/assets/termsofsale.png)
+
+See [Compliance requirements](https://docs.digitalriver.com/digital-river-api/getting-started-1/standards-and-certifications/compliance-requirements) for more information on compliance obligations.

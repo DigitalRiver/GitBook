@@ -10,10 +10,10 @@ Use [Composer ](https://getcomposer.org)to install the Digital River Extension f
 
 1. Run the appropriate Composer commands in the root of Magento:
    * For Magento Open Source only, use the following Composer command: \
-     `composer require digitalriver/module-drpay:2.3.0`
+     `composer require digitalriver/module-drpay:2.3.1`
    * For Adobe Commerce only, run the following Composer commands:\
-     `composer require digitalriver/module-drpay:2.3.0`\
-     `composer require digitalriver/module-drpay-commerce:2.3.2`
+     `composer require digitalriver/module-drpay:2.3.1`\
+     `composer require digitalriver/module-drpay-commerce:2.3.3`
 2. Update Magento to run the install and update scripts in the command line in the root of Magento by issuing the following command:\
    `bin/magento setup:upgrade`
 3. Flush the Magento cache by running the following command: \

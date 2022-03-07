@@ -38,7 +38,6 @@ When creating webhooks, you need to add endpoints from the [Dashboard](https://d
    * `order.accepted`
    * `order.complete`
    * `order.blocked`
-   * `refund.failed`
    * `order.review_opened`
    * `order.invoice.created`
    * `order.credit_memo.created`
