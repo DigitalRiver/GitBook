@@ -10,26 +10,26 @@ The table also lists each payment method's authentication flow and indicates whe
 
 | Payment method                            | Drop-in / DigitalRiver.js | One-off purchases / Recurring payments | Authentication flow | Test environment status |
 | ----------------------------------------- | :-----------------------: | :------------------------------------: | :-----------------: | :---------------------: |
-| Alipay                                    |           X / X           |                 X / NA                 |      `redirect`     |        Supported        |
-| Apple Pay                                 |           X / X           |                 X / NA                 |      `standard`     |        Supported        |
-| Boleto                                    |           NA / X          |                  X / X                 |      `receiver`     |      Not supported      |
-| bPay                                      |           X / X           |                 X / NA                 |      `receiver`     |      Not supported      |
-| Credit Cards                              |           X / X           |                  X / X                 |      `standard`     |        Supported        |
-| Google Pay                                |           X / X           |                 X / NA                 |      `standard`     |        Supported        |
-| Klarna                                    |           X / X           |                  X / X                 |      `redirect`     |        Supported        |
-| Konbini                                   |           X / X           |                 X / NA                 |      `receiver`     |        Supported        |
-| Korea – Bank Transfer                     |           X / X           |                 X / NA                 |      `redirect`     |      Not supported      |
-| Online Banking (IBP)                      |           X / X           |                 X / NA                 |      `redirect`     |        Supported        |
-| PayCo                                     |           X / X           |                 X / NA                 |      `redirect`     |      Not supported      |
-| PayPal                                    |           X / X           |                 X / NA                 |      `redirect`     |        Supported        |
-| PayPal Billing                            |           X / X           |                  X / X                 |      `redirect`     |        Supported        |
-| PayPal Credit                             |           X / X           |                 X / NA                 |      `redirect`     |        Supported        |
-| Pay in 3                                  |           X / X           |                 X / NA                 |      `redirect`     |        Supported        |
-| Pay in 4                                  |           X / X           |                 X / NA                 |      `redirect`     |        Supported        |
-| PayPal RatenZahlung (Installment Payment) |           X / X           |                 X / NA                 |      `redirect`     |        Supported        |
-| SEPA Direct Debit                         |           X / X           |                  X / X                 |      `redirect`     |        Supported        |
-| TreviPay                                  |           X / X           |                  X / X                 |      `redirect`     |        Supported        |
-| Wire Transfer                             |           X / X           |                 X / NA                 |      `receiver`     |        Supported        |
+| Alipay                                    |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |        Supported        |
+| Apple Pay                                 |           ✔ / ✔           |                  ✔ / -                 |      `standard`     |        Supported        |
+| Boleto                                    |           - / ✔           |                  ✔ / ✔                 |      `receiver`     |      Not supported      |
+| bPay                                      |           ✔ / ✔           |                  ✔ / -                 |      `receiver`     |      Not supported      |
+| Credit Cards                              |           ✔ / ✔           |                  ✔ / ✔                 |      `standard`     |        Supported        |
+| Google Pay                                |           ✔ / ✔           |                  ✔ / -                 |      `standard`     |        Supported        |
+| Klarna                                    |           ✔ / ✔           |                  ✔ / ✔                 |      `redirect`     |        Supported        |
+| Konbini                                   |           ✔ / ✔           |                  ✔ / -                 |      `receiver`     |        Supported        |
+| Korea – Bank Transfer                     |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |      Not supported      |
+| Online Banking (IBP)                      |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |        Supported        |
+| PayCo                                     |           ✔ / v           |                  ✔ / -                 |      `redirect`     |      Not supported      |
+| PayPal                                    |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |        Supported        |
+| PayPal Billing                            |           ✔ / ✔           |                  ✔ / ✔                 |      `redirect`     |        Supported        |
+| PayPal Credit                             |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |        Supported        |
+| Pay in 3                                  |           ✔ / v           |                  v / -                 |      `redirect`     |        Supported        |
+| Pay in 4                                  |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |        Supported        |
+| PayPal RatenZahlung (Installment Payment) |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |        Supported        |
+| SEPA Direct Debit                         |           ✔ / ✔           |                  X / ✔                 |      `redirect`     |        Supported        |
+| TreviPay                                  |           ✔ / ✔           |                  ✔ / ✔                 |      `redirect`     |        Supported        |
+| Wire Transfer                             |           ✔ / ✔           |                  ✔ / -                 |      `receiver`     |        Supported        |
 
 Get familiar with our supported payment methods:
 
