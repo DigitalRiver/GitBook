@@ -20,14 +20,14 @@ The table also lists each payment method's authentication flow and indicates whe
 | Konbini                                   |           ✔ / ✔           |                  ✔ / -                 |      `receiver`     |        Supported        |
 | Korea – Bank Transfer                     |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |      Not supported      |
 | Online Banking (IBP)                      |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |        Supported        |
-| PayCo                                     |           ✔ / v           |                  ✔ / -                 |      `redirect`     |      Not supported      |
+| PayCo                                     |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |      Not supported      |
 | PayPal                                    |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |        Supported        |
 | PayPal Billing                            |           ✔ / ✔           |                  ✔ / ✔                 |      `redirect`     |        Supported        |
 | PayPal Credit                             |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |        Supported        |
-| Pay in 3                                  |           ✔ / v           |                  v / -                 |      `redirect`     |        Supported        |
+| Pay in 3                                  |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |        Supported        |
 | Pay in 4                                  |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |        Supported        |
 | PayPal RatenZahlung (Installment Payment) |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |        Supported        |
-| SEPA Direct Debit                         |           ✔ / ✔           |                  X / ✔                 |      `redirect`     |        Supported        |
+| SEPA Direct Debit                         |           ✔ / ✔           |                  ✔ / ✔                 |      `redirect`     |        Supported        |
 | TreviPay                                  |           ✔ / ✔           |                  ✔ / ✔                 |      `redirect`     |        Supported        |
 | Wire Transfer                             |           ✔ / ✔           |                  ✔ / -                 |      `receiver`     |        Supported        |
 
