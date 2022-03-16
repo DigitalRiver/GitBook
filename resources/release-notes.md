@@ -6,9 +6,13 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2022/3/16
+
+We added support for the [Bancontact ](../payment-integrations-1/digitalriver.js/payment-methods/bancontact.md)payment method.
+
 ## 2022/1/26
 
-We added support for the [Boleto ](../payment-integrations-1/digitalriver.js/payment-methods/boleto.md)payment methods.
+We added support for the [Boleto ](../payment-integrations-1/digitalriver.js/payment-methods/boleto.md)payment method.
 
 ## 2021/12/3
 
