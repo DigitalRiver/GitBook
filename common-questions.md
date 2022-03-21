@@ -57,12 +57,6 @@ See [Issuing Refunds](https://docs.digitalriver.com/digital-river-api/returns-an
 
 &#x20;See [Issuing Refunds](https://docs.digitalriver.com/digital-river-api/returns-and-refunds-1/refunds/issuing-refunds).
 
-### Are there any fees for chargebacks and refunds?
-
-* Fee for **Digital River Payments, Fraud, Tax & Compliance Management app:**  No charge**.**
-* Cost for Services Associated with Digital River **** app usage: **** Custom Pricing.  For more information, contact [bigcommerce@digitalriver.com](mailto:bigcommerce@digitalriver.com)
-* For questions regarding chargebacks and refunds, contact [bigcommerce@digitalriver.com](mailto:bigcommerce@digitalriver.com).
-
 ### What are the limitations around refunds?
 
 Once you [apply an order level refund](https://support.bigcommerce.com/s/article/Processing-Refunds?language=en\_US#refund-order), you may then only refund the remaining order amount afterward. If you **Refund individual items** at this point, you will receive an error.&#x20;
