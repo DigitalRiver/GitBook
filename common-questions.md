@@ -10,6 +10,12 @@ description: Find answers to common questions.
 
 [Contact the Digital River Sales team](https://www.digitalriver.com/request-demo/) for information.
 
+### Are there any fees for chargebacks and refunds?
+
+* Fee for **Digital River Payments, Fraud, Tax & Compliance Management app:**  No charge**.**
+* Cost for Services Associated with Digital River **** app usage: **** Custom Pricing.  For more information, contact [bigcommerce@digitalriver.com](mailto:bigcommerce@digitalriver.com)
+* For questions regarding chargebacks and refunds, see [contact our Sales team](https://www.digitalriver.com/request-demo/).
+
 ## Account Eligibility
 
 ### What currencies and countries does the payment gateway support?
