@@ -12,10 +12,10 @@ To populate the fields in this example, click Populate Sample Data In Form. Then
 
 Integrate the DigitalRiver.js into your app or website in four easy steps:
 
-1. [Include DigitalRiver.js on your page](quick-start.md#step-1-include-digitalriver-js-on-your-page).
-2. [Create your payment form](quick-start.md#step-2-create-your-payment-form).
-3. [Create and embed elements](quick-start.md#step-3-create-and-embed-elements).
-4. [Use DigitalRiver.js to create a payment source](quick-start.md#step-4-use-digitalriver-js-to-create-a-payment-source).
+1. [Include DigitalRiver.js on your page](quick-start.md#step-1.-include-digitalriver.js-on-your-page).
+2. [Create your payment form](quick-start.md#step-2.-create-your-payment-form).
+3. [Create and embed elements](quick-start.md#step-3.-create-and-embed-elements).
+4. [Use DigitalRiver.js to create a payment source](quick-start.md#step-4.-use-digitalriver.js-to-create-a-payment-source).
 
 ## Step 1. Include DigitalRiver.js on your page
 
@@ -59,7 +59,7 @@ DigitalRiver.js provides and hosts HTML elements that you can place in your paym
 
 ## Step 3. Create and embed elements
 
-Use the DigitalRiver.js library to create and mount an element to the container created in [step 2](quick-start.md#step-2-create-your-payment-form).
+Use the DigitalRiver.js library to create and mount an element to the container created in [step 2](quick-start.md#step-2.-create-your-payment-form).
 
 {% code title="HTML" %}
 ```markup

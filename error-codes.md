@@ -37,31 +37,11 @@ A basic error message (`error`) includes the following information:
 | `subcode`           | This optional parameter appears when the system has additional information about the error.                   |
 | `description`       | A brief description of the error.                                                                             |
 
-&#x20;If it's a transaction error using a credit card saved in the payment source, the error may contain additional information as shown in the following declined message (`declinedMessage`) example:
-
-```javascript
-"errors": {
-    "error": [
-        {
-            "relation": "https://developers.digitalriver.com/v1/shoppers/SubmitCartResource",
-            "code": "declined",
-            "subcode": "fraud_block",
-            "description": "The transaction has been identified by Digital River as fraudulent.",
-            "declinedMessage": {
-                "merchantDeclinedType": "Hard",
-                "customerDeclinedType": "Hard",
-                "code": "7011"
-            }
-        }
-    ]
-}
-```
-
 ### Declined message
 
 A transaction error for a payment method such as a credit card saved in the payment source may contain additional information as shown in the following declined message (`declinedMessage`) example:
 
-```
+```javascript
 "errors": {
     "error": [
         {
