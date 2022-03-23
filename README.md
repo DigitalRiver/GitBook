@@ -1,3 +1,7 @@
+---
+layout: landing
+---
+
 # Documentation
 
 Learn how to integrate with Digital River to optimize your international global ecommerce business. Digital River provides a single solution for localized payment processing, taxes, fraud, and regulatory compliance.
