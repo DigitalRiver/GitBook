@@ -265,7 +265,7 @@ We added support for Union Pay to [Credit Cards](../payment-integrations-1/digit
 
 ## 2020/9/24
 
-We added support for the [Korea – PayCo](../payment-integrations-1/digitalriver.js/payment-methods/payco.md) payment methods.
+We added support for the [Korea – PayCo](../payment-integrations-1/digitalriver.js/payment-methods/korea-payco.md) payment methods.
 
 ## 2020/9/23
 

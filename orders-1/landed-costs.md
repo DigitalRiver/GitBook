@@ -42,10 +42,10 @@ To enable landed costs for your site from Global Commerce:
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 2. If your company has more than one site, select the site from the **Sites** field. If your company has only one site, Global Commerce automatically populates the **Site** field.\
-   &#x20;![](../.gitbook/assets/Sites.png)&#x20;
+   &#x20;![](../.gitbook/assets/sites.png)&#x20;
 3. Select **Administration**, select **Site**, and click **Configure Site Settings**.
 4. Click the **Fulfillment** tab and scroll down to **Landed Cost Shipment Methods**.\
-   &#x20;![](../.gitbook/assets/Landed-Cost-Shipment-Methods.png)&#x20;
+   &#x20;![](../.gitbook/assets/landed-cost-shipment-methods.png)&#x20;
 5. Select **Enabled** and then click **Save**.
 
 ### Setting the price list to tax exclusive

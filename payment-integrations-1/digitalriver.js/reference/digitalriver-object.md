@@ -23,6 +23,7 @@ Use this method to create an instance of an element that you can use to capture 
 | cardExpiration | A credit card expiration field            |
 | cardNumber     | A credit card number field                |
 | googlepay      | Google Pay                                |
+| iban           | An IBAN element                           |
 | konbini        | A Konbini select                          |
 | onlineBanking  | An online banking select                  |
 | offlineRefund  | An offline refund data collection element |
@@ -136,49 +137,47 @@ This method returns an object with various compliance strings and links that can
 ```javascript
 {
     "disclosure": {
-        "businessEntity": {
-            "name": "Digital River Inc.",
-            "id": "DR_INC-ENTITY"
-        },
-        "resellerDisclosure": {
-            "localizedText": "<a href=\"https://store.digitalriver.com/store/defaults/en_US/DisplayDRAboutDigitalRiverPage/eCommerceProvider.Digital%20River%20Inc.\" target=\"_blank\" class=\"dr_resellerDisclosure\">Digital River Inc.</a> is the authorized reseller and merchant of the products and services offered within this store.",
-            "url": "https://store.digitalriver.com/store/defaults/en_US/DisplayDRAboutDigitalRiverPage/eCommerceProvider.Digital%20River%20Inc."
-        },
         "termsOfSale": {
             "localizedText": "Terms of Sale",
-            "url": "https://store.digitalriver.com/store/defaults/en_US/DisplayDRTermsAndConditionsPage/eCommerceProvider.Digital%20River%20Inc."
+            "url": "https://store.digitalriver.com/store/defaults/en_IE/DisplayDRTermsAndConditionsPage/eCommerceProvider.Digital%20River%20Ireland%20Ltd."
         },
         "privacyPolicy": {
             "localizedText": "Privacy Policy",
-            "url": "https://store.digitalriver.com/store/defaults/en_US/DisplayDRPrivacyPolicyPage/eCommerceProvider.Digital%20River%20Inc."
+            "url": "https://store.digitalriver.com/store/defaults/en_IE/DisplayDRPrivacyPolicyPage/eCommerceProvider.Digital%20River%20Ireland%20Ltd."
         },
         "cookiePolicy": {
             "localizedText": "Cookies",
-            "url": "https://store.digitalriver.com/store/defaults/en_US/DisplayDRCookiesPolicyPage/eCommerceProvider.Digital%20River%20Inc."
-        },
-        "cancellationRights": {
-            "localizedText": "Cancellation Right",
-            "url": "https://store.digitalriver.com/store/defaults/en_US/DisplayDRTermsAndConditionsPage/eCommerceProvider.Digital%20River%20Inc.#cancellationRight"
+            "url": "https://store.digitalriver.com/store/defaults/en_IE/DisplayDRCookiesPolicyPage/eCommerceProvider.Digital%20River%20Ireland%20Ltd."
         },
         "legalNotice": {
             "localizedText": "Legal Notice",
-            "url": "https://store.digitalriver.com/store/defaults/en_US/DisplayDRContactInformationPage/eCommerceProvider.Digital%20River%20Inc."
-        },
-        "confirmDisclosure": {
-            "localizedText": "By submitting my order, I agree to the <a href=\"https://store.digitalriver.com/store/defaults/en_US/DisplayDRTermsAndConditionsPage/eCommerceProvider.Digital%20River%20Inc.\" target=\"_blank\" class=\"dr_termsAndConditions\">Terms of Sale</a> and the <a href=\"https://store.digitalriver.com/store/defaults/en_US/DisplayDRPrivacyPolicyPage/eCommerceProvider.Digital%20River%20Inc.\" target=\"_blank\" class=\"dr_privacyPolicy\">Privacy Policy</a> of Digital River Inc.."
+            "url": "https://store.digitalriver.com/store/defaults/en_IE/DisplayDRContactInformationPage/eCommerceProvider.Digital%20River%20Ireland%20Ltd."
         },
         "autorenewalPlanTerms": {
-            "localizedText": "By checking the box below and completing your purchase, you expressly authorize and permit Digital River to automatically renew your purchased license or subscription for successive renewal terms each equal in length to the initial term specified above, at the purchase price for your initial term (plus taxes and fees, less any applicable discounts) using the payment information you provided for your initial purchase, until you cancel. At least one email will be sent to you to remind you of each upcoming renewal. We may change the renewal price as of the next renewal date if we provide you with prior notice of the change by email (you can elect to cancel automatic renewal as described below if you do not agree to the change). The Digital River <a href=\"https://store.digitalriver.com/store/defaults/en_US/DisplayDRTermsAndConditionsPage/eCommerceProvider.Digital%20River%20Inc.\" target=\"_blank\" class=\"dr_termsAndConditions\">Terms of Sale</a> and <a href=\"https://store.digitalriver.com/store/defaults/en_US/DisplayDRPrivacyPolicyPage/eCommerceProvider.Digital%20River%20Inc.\" target=\"_blank\" class=\"dr_privacyPolicy\">Privacy Policy</a> will apply to each renewal transaction. You may cancel your auto-renewal plan at any time by logging into the account interface (access information will be included in your order confirmation email or on the Customer Service Help page), selecting your product, and selecting the option to disable automatic renewal.<br/><br/>I agree that Digital River may store my payment information for future purchases including the processing of any subsequent subscription renewals which may occur following the date of this order."
+            "localizedText": "By checking the box below and completing your purchase, you expressly authorize and permit Digital River to automatically renew your purchased license or subscription for successive renewal terms each equal in length to the initial term specified above, at the purchase price for your initial term (plus taxes and fees, less any applicable discounts) using the payment information you provided for your initial purchase, until you cancel. At least one email will be sent to you to remind you of each upcoming renewal. We may change the renewal price as of the next renewal date if we provide you with prior notice of the change by email (you can elect to cancel automatic renewal as described below if you do not agree to the change). The Digital River <a href=\"https://store.digitalriver.com/store/defaults/en_IE/DisplayDRTermsAndConditionsPage/eCommerceProvider.Digital%20River%20Ireland%20Ltd.\" target=\"_blank\" class=\"dr_termsAndConditions\">Terms of Sale</a> and <a href=\"https://store.digitalriver.com/store/defaults/en_IE/DisplayDRPrivacyPolicyPage/eCommerceProvider.Digital%20River%20Ireland%20Ltd.\" target=\"_blank\" class=\"dr_privacyPolicy\">Privacy Policy</a> will apply to each renewal transaction. You may cancel your auto-renewal plan at any time by logging into the account interface (access information will be included in your order confirmation email or on the Customer Service Help page), selecting your product, and selecting the option to disable automatic renewal.<br/><br/>I agree that Digital River may store my payment information for future purchases including the processing of any subsequent subscription renewals which may occur following the date of this order."
         },
         "saveCardMandate": {
             "localizedText": "Yes, please save this account and payment information for future purchases."
         },
-        "californiaPrivacyRights": {
-            "localizedText": "Your California Privacy Rights",
-            "url": "https://store.digitalriver.com/store/defaults/en_US/DisplayCCPAPage"
+        "idealRecurringAgreement": {
+            "localizedText": "By clicking the box, you authorize Digital River to collect your first payment via iDEAL and use your IBAN to collect the subsequent subscription payments by SEPA direct debit. You can review your SEPA Direct Debit information after order submission. <br/><br/>As part of your rights, you are entitled to a refund from your bank under the terms and conditions of your agreement with your bank. A refund must be claimed within 8 weeks starting from the date on which your account was debited. "
+        },
+        "businessEntity": {
+            "name": "Digital River Ireland Ltd.",
+            "id": "DR_IRELAND-entity"
+        },
+        "resellerDisclosure": {
+            "localizedText": "<a href=\"https://store.digitalriver.com/store/defaults/en_IE/DisplayDRAboutDigitalRiverPage/eCommerceProvider.Digital%20River%20Ireland%20Ltd.\" target=\"_blank\" class=\"dr_resellerDisclosure\">Digital River Ireland Ltd.</a> is the authorised reseller and merchant of the products and services offered within this store.",
+            "url": "https://store.digitalriver.com/store/defaults/en_IE/DisplayDRAboutDigitalRiverPage/eCommerceProvider.Digital%20River%20Ireland%20Ltd."
+        },
+        "confirmDisclosure": {
+            "localizedText": "By submitting my order, I agree to the <a href=\"https://store.digitalriver.com/store/defaults/en_IE/DisplayDRTermsAndConditionsPage/eCommerceProvider.Digital%20River%20Ireland%20Ltd.\" target=\"_blank\" class=\"dr_termsAndConditions\">Terms of Sale</a> and the <a href=\"https://store.digitalriver.com/store/defaults/en_IE/DisplayDRPrivacyPolicyPage/eCommerceProvider.Digital%20River%20Ireland%20Ltd.\" target=\"_blank\" class=\"dr_privacyPolicy\">Privacy Policy</a> of Digital River Ireland Ltd."
+        },
+        "cancellationRights": {
+            "localizedText": "Cancellation Right",
+            "url": "https://store.digitalriver.com/store/defaults/en_IE/DisplayDRTermsAndConditionsPage/eCommerceProvider.Digital%20River%20Ireland%20Ltd.#cancellationRight"
         }
     }
-}
 ```
 {% endtab %}
 {% endtabs %}
@@ -600,11 +599,11 @@ This method takes two parameters:‌
 * `element`—An optional card expiration element for using the Elements portion of this library.
 * `sourceData`—A required data object which contains additional data that is required to update the payment source.
 
-| Field        | Required | Type            | Description                                                                                                                                       |
-| ------------ | -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| clientSecret | Required | String          | The Client Secret of the source you are updating.                                                                                                 |
-| id           | Required | String          | The ID of the source you are updating.                                                                                                            |
-| owner        | Optional | An Owner Object | <p>An object containing the Owner details.<br><strong>Note</strong>: You can only update the <code>owner</code> information for Credit Cards.</p> |
+| Field        | Required | Type            | Description                                       |
+| ------------ | -------- | --------------- | ------------------------------------------------- |
+| clientSecret | Required | String          | The Client Secret of the source you are updating. |
+| id           | Required | String          | The ID of the source you are updating.            |
+| owner        | Optional | An Owner Object | An object containing the Owner details.           |
 
 `digitalriver.updateSource()` returns a Promise that returns a result object. The result object will have either:‌
 

@@ -18,4 +18,4 @@ Once you sign in to the Knowledge Portal, click **Subscribe** to receive updates
    &#x20;![](../.gitbook/assets/Digital-River-Knowledge-Portal.jpg)&#x20;
 3. Once you sign in to the Knowledge Portal, click Subscribe to receive updates.
 
-![](../.gitbook/assets/Commerce-API-Documentation-Portal-Updates.png)
+![](../.gitbook/assets/commerce-api-documentation-portal-updates.png)

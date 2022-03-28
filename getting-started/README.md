@@ -36,7 +36,7 @@ Make sure you [install Postman](https://www.postman.com/downloads/) before proce
 
 1. Go to the [Commerce API Postman Collection](https://github.com/DigitalRiver/commerce-api) page on GitHub.
 2. To install the Commerce API Postman Collection, click the **Run in Postman** button and select **Postman for Windows**.
-3. Click the ![](<../.gitbook/assets/three dots.png>) icon on the Commerce API Quick Start collection you just imported and select **Edit**.
+3. Click the ![](../.gitbook/assets/three-dots.png) icon on the Commerce API Quick Start collection you just imported and select **Edit**.
 4. In the **Edit Collection** window, select **Variables**.
 5. Using the **Current Value** fields, enter the appropriate API key for each variable, and click **Update**.
 6. Run each request individually or use the [collection runner](https://learning.postman.com/docs/postman/collection-runs/intro-to-collection-runs/) to run each one sequentially.

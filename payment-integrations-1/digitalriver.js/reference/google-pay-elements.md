@@ -40,13 +40,13 @@ var googlepay = digitalriver.createElement('googlepay', paymentRequestData);
 
 Choose one of the following button types:
 
-![](../../../.gitbook/assets/Google-Pay-elements-buttons.png)
+![](../../../.gitbook/assets/google-pay-elements-buttons.png)
 
 #### **Button color**‌
 
 Choose one of the following button colors:
 
-![](../../../.gitbook/assets/Google-Pay-elements-colors.png)
+![](../../../.gitbook/assets/google-pay-elements-colors.png)
 
 ## Google Pay element functions
 

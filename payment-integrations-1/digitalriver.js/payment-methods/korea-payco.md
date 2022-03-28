@@ -4,16 +4,16 @@ description: >-
   share and is expected to grow. Recurring payments are supported.
 ---
 
-# Payco
+# PayCo
 
 ## Configuring PayCo for DigitalRiver.js
 
 Create a PayCo payment method for your app or website in three easy steps:
 
-* [Step 1: Build a PayCo Source Request object](payco.md#step-1-build-a-payco-source-request-and-details-object)
-* [Step 2: Create a PayCo source using DigitalRiver.js](payco.md#step-2-create-a-payco-source-using-digitalriver-js)
-* [Step 3: Authorize the PayCo source](payco.md#step-3-authorize-the-payco-source)
-* [Step 4: Use the authorized source](payco.md#step-4-use-the-authorized-source)
+* [Step 1: Build a PayCo Source Request object](korea-payco.md#step-1-build-a-payco-source-request-and-details-object)
+* [Step 2: Create a PayCo source using DigitalRiver.js](korea-payco.md#step-2-create-a-payco-source-using-digitalriver-js)
+* [Step 3: Authorize the PayCo source](korea-payco.md#step-3-authorize-the-payco-source)
+* [Step 4: Use the authorized source](korea-payco.md#step-4-use-the-authorized-source)
 
 ### Step 1: Build a PayCo Source Request and Details object
 
@@ -23,12 +23,12 @@ Build the PayCo Source Request and Details objects.&#x20;
 
 The PayCo Source Request object requires the following fields.
 
-| Field     | Value                                                                  |
-| --------- | ---------------------------------------------------------------------- |
-| type      | payco                                                                  |
-| sessionId | The payment session identifier.The total value of the transaction.     |
-| owner     | An [Owner object](common-payment-objects.md#owner-object).             |
-| payco     | A [PayCo Source Details object](payco.md#payco-source-details-object). |
+| Field     | Value                                                                        |
+| --------- | ---------------------------------------------------------------------------- |
+| type      | payco                                                                        |
+| sessionId | The payment session identifier.The total value of the transaction.           |
+| owner     | An [Owner object](common-payment-objects.md#owner-object).                   |
+| payco     | A [PayCo Source Details object](korea-payco.md#payco-source-details-object). |
 
 #### PayCo Source Details object
 
