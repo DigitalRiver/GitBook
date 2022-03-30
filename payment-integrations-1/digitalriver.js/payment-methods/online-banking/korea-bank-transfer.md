@@ -27,7 +27,7 @@ The Bank Transfer Source Request object requires the following fields.
 | ------------ | ----------------------------------------------------------------------------------------------------- |
 | type         | bankTransfer                                                                                          |
 | sessionId    | The payment session identifier.                                                                       |
-| owner        |  An [Owner object](common-payment-objects.md#owner-object).                                           |
+| owner        |  An [Owner object](../common-payment-objects.md#owner-object).                                        |
 | bankTransfer |  A [Bank Transfer Source Details object](korea-bank-transfer.md#bank-transfer-source-request-object). |
 
 #### Bank Transfer source details object
@@ -178,7 +178,7 @@ Once authorized, the source state will change to `chargeable`.
 
 ### Step 4: Use the Authorized source
 
-Once authorized, you can use the source by [attaching it to a cart](../../../cart/attaching-a-payment-method-to-a-cart-or-customer.md#attaching-a-payment-method-to-an-order-or-cart).
+Once authorized, you can use the source by [attaching it to a cart](../../../../cart/attaching-a-payment-method-to-a-cart-or-customer.md#attaching-a-payment-method-to-an-order-or-cart).
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}

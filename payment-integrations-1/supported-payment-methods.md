@@ -20,8 +20,8 @@ The table also lists each payment method's authentication flow and indicates whe
 | [iDEAL](digitalriver.js/payment-methods/ideal.md)                                                          |           ✔ / ✔           |                  ✔ / ✔                 |      `standard`     |
 | [Klarna](digitalriver.js/payment-methods/klarna.md)                                                        |           ✔ / ✔           |                  ✔ / ✔                 |      `redirect`     |
 | [Konbini](digitalriver.js/payment-methods/konbini.md)                                                      |           ✔ / ✔           |                  ✔ / -                 |      `receiver`     |
-| [Korea – Bank Transfer](digitalriver.js/payment-methods/korea-bank-transfer.md)                            |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |
-| [Online Banking (IBP)](digitalriver.js/payment-methods/online-banking.md)                                  |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |
+| [Korea – Bank Transfer](digitalriver.js/payment-methods/online-banking/korea-bank-transfer.md)             |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |
+| [Online Banking (IBP)](digitalriver.js/payment-methods/online-banking/online-banking.md)                   |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |
 | [PayCo](digitalriver.js/payment-methods/korea-payco.md)                                                    |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |
 | [PayPal](digitalriver.js/payment-methods/paypal.md#paypal-express-checkout-digital-wallet)                 |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |
 | [PayPal Billing](digitalriver.js/payment-methods/paypal.md#paypal-billing-agreement)                       |           ✔ / ✔           |                  ✔ / ✔                 |      `redirect`     |
