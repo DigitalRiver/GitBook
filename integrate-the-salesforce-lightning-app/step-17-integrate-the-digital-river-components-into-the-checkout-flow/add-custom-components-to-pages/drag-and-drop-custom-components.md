@@ -18,12 +18,12 @@ To customize a page in Experience Builder:
    ![](../../../.gitbook/assets/All-Sites.png)
 4. Click **Builder**. The Experience Builder page appears\
    .![](<../../../.gitbook/assets/Experience Builder Welcome page.png>)
-5. Click **Home** at the top left corner. \
-   ![](<../../../.gitbook/assets/Home button.png>)&#x20;
-6. To create a new custom page, click **+ New Page**.  \
-   ![](<../../../.gitbook/assets/New Page (1).png>) \
+5. Click **Home** at the top left corner.\
+   ![](<../../../.gitbook/assets/Home button.png>)
+6. To create a new custom page, click **+ New Page**.\
+   ![](<../../../.gitbook/assets/New Page (1).png>)\
    The page will also appear on the **Menu Item**.\
-   &#x20;![](<../../../.gitbook/assets/Menu item.png>)&#x20;
+   ![](<../../../.gitbook/assets/Menu item.png>)
 7. Click **Standard Page**.\
    ![](<../../../.gitbook/assets/New Page - Experience Builder.png>)
 8. Select a preconfigured page from the list or click **+ New Blank Page**.![](<../../../.gitbook/assets/New Page - Experience Builder dialog.png>)
@@ -46,11 +46,11 @@ To add a menu:
    ![](../../../.gitbook/assets/Edit-Default-User-Profile-Menu.png)
 7. Click **+ Add Menu item**.\
    ![](../../../.gitbook/assets/Edit-Default-User-Profile-Menu-dialog.png)\
-   &#x20;&#x20;
-8. Select **Site Page** from the **Type** dropdown.&#x20;
-   * Type a name for the menu item in the **New menu Item**  field.
+
+8. Select **Site Page** from the **Type** dropdown.
+   * Type a name for the menu item in the **New menu Item** field.
    * Select the custom page you want to use from the **Page** dropdown list.\
-     ![](<../../../.gitbook/assets/Menu item details.png>)&#x20;
+     ![](<../../../.gitbook/assets/Menu item details.png>)
 9. Click **Save Menu**.
 10. Click **Publish**.
 
@@ -64,8 +64,8 @@ To add a custom component to a custom page:
     ![](<../../../.gitbook/assets/Quick Find - All Sites.png>)
 3. From the All sites page, click **Builder**.\
    ![](../../../.gitbook/assets/All-Sites.png)
-4. Click **Home** at the top left corner. \
-   ![](<../../../.gitbook/assets/Home button.png>)&#x20;
+4. Click **Home** at the top left corner.\
+   ![](<../../../.gitbook/assets/Home button.png>)
 5. Type the name of the custom page in the **Find a page** field, and click the custom page in the results list.\
    ![](<../../../.gitbook/assets/Find a page.png>)
 6. Click Components ![](../../../.gitbook/assets/Components.png) on the upper left side of the page. The list displays the components that you can add to the page.\
@@ -86,12 +86,12 @@ To add a tax certificate component on the **My Account** page:
     ![](<../../../.gitbook/assets/Quick Find - All Sites.png>)
 3. From the All sites page, click **Builder**.\
    ![](../../../.gitbook/assets/All-Sites.png)
-4. Click **Home** at the top left corner. \
-   ![](<../../../.gitbook/assets/Home button.png>)&#x20;
+4. Click **Home** at the top left corner.\
+   ![](<../../../.gitbook/assets/Home button.png>)
 5. Type `My Account` in the **Find a page** field, and click **My Account**.\
    ![](<../../../.gitbook/assets/My Account - tax.png>)
 6. Click Components ![](../../../.gitbook/assets/Components.png) on the upper left side of the page. The list displays the components that you can add to the page.\
    ![](<../../../.gitbook/assets/Components list.png>)
-7. Scroll down to **drb2b\_usersTaxCertificates**.&#x20;
+7. Scroll down to **drb2b\_usersTaxCertificates**.
 8. Drag and drop **drb2b\_usersTaxCertificates** to the My Accounts page.
 9. Click **Publish**.

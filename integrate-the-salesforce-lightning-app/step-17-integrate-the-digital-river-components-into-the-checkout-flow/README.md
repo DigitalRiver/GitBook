@@ -5,5 +5,3 @@ description: Learn how to integrate the Digital River components into the checko
 # Step 17: Integrate the Digital River components into the checkout flow
 
 \
-&#x20;&#x20;
-
