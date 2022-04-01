@@ -6,6 +6,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2022/4/1
+
+We upgraded Google Pay to offer the up-to-date Google Pay wallet experience. You can now [configure the dynamic Google Pay button](../payment-integrations-1/digitalriver.js/reference/google-pay-elements.md#google-pay-element-styles-and-customization) by applying your preferred button styles.
+
 ## 2022/3/28
 
 We added support for the [iDEAL ](../payment-integrations-1/digitalriver.js/reference/ideal.md)payment method.
