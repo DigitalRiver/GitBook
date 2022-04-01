@@ -311,6 +311,10 @@ Use this object to respond to a shipping address change or a shipping option cha
 
 Use this object to display a specific error message to the customer as part of a Details Update message to the Payment Request session.
 
+{% hint style="info" %}
+The Payment request details update error object is only available for Apple Pay.
+{% endhint %}
+
 {% tabs %}
 {% tab title="Payment Request Details Update Error object" %}
 ```javascript

@@ -39,8 +39,8 @@ Use the following styles and types to create an Apple Pay button that you can mo
 
 ### **Button type**‌
 
-* `plain`: ![](../../../.gitbook/assets/applepay-button-black.png)&#x20;
-* `buy`: ![](../../../.gitbook/assets/buywithapplepay-button-black.png)
+* `plain`: ![](../../../.gitbook/assets/ApplePay-Button-Black.png)&#x20;
+* `buy`: ![](../../../.gitbook/assets/BuyWithApplePay-Button-Black.png)
 
 Choose one of the following button types:
 
@@ -48,9 +48,9 @@ Choose one of the following button types:
 
 Choose one of the following button colors:
 
-* ​`light`: ![](../../../.gitbook/assets/applepay-button-white.png)&#x20;
-* `light-outline`: ![](../../../.gitbook/assets/applepay-button-white-outline.png)&#x20;
-* `dark`: ![](../../../.gitbook/assets/applepay-button-black.png)&#x20;
+* ​`light`: ![](../../../.gitbook/assets/ApplePay-Button-White.png)&#x20;
+* `light-outline`: ![](../../../.gitbook/assets/ApplePay-Button-White-Outline.png)&#x20;
+* `dark`: ![](../../../.gitbook/assets/ApplePay-Button-Black.png)&#x20;
 
 ## Apple Pay element functions
 

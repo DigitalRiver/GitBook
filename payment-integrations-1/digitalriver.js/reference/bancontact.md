@@ -27,7 +27,7 @@ The Bancontact Source Request object requires the following fields.
 | ------------ | ------------------------------------------------------------------------------------- |
 | `type`       | `bancontact`                                                                          |
 | `sessionId`  | The payment session identifier.                                                       |
-| `owner`      | An [Owner object](common-payment-objects.md#owner-object).                            |
+| `owner`      | An [Owner object](../payment-methods/common-payment-objects.md#owner-object).         |
 | `bancontact` | A [Bancontact Source Details object](bancontact.md#bancontact-source-details-object). |
 
 #### Bancontact Source Details object

@@ -8,7 +8,7 @@ Subscriptions allow customers to make recurring payments to access a product suc
 
 The following image shows the lifecycle of a subscription from beginning to end where a customer purchases a new subscription to a product. You receive the notification when the customer creates a new subscription. After the trial period expires, the system bills the customer and you receive a trial to active conversion notification. As the customer continues to use the product, you receive renewal notifications at the start of every new subscription period. Finally, when the customer no longer needs the product and their subscription lapses, you receive a cancellation notice.
 
-![](../.gitbook/assets/subscription-timeline-example.png)
+![](<../.gitbook/assets/Subscription timeline example.png>)
 
 The following table defines the terms used in the subscription lifecycle.
 

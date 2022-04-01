@@ -8,11 +8,11 @@ V1 is the base version of the Commerce API. The following dates indicate when we
 
 ## 2022/3/28
 
-We added support for the [iDEAL ](../payment-integrations-1/digitalriver.js/payment-methods/ideal.md)payment method.
+We added support for the [iDEAL ](../payment-integrations-1/digitalriver.js/reference/ideal.md)payment method.
 
 ## 2022/3/16
 
-We added support for the [Bancontact ](../payment-integrations-1/digitalriver.js/payment-methods/bancontact.md)payment method.
+We added support for the [Bancontact ](../payment-integrations-1/digitalriver.js/reference/bancontact.md)payment method.
 
 ## 2022/1/26
 
@@ -269,7 +269,7 @@ We added support for Union Pay to [Credit Cards](../payment-integrations-1/digit
 
 ## 2020/9/24
 
-We added support for the [Korea – PayCo](../payment-integrations-1/digitalriver.js/payment-methods/korea-payco.md) payment methods.
+We added support for the [Korea – PayCo](../payment-integrations-1/digitalriver.js/payment-methods/payco.md) payment methods.
 
 ## 2020/9/23
 

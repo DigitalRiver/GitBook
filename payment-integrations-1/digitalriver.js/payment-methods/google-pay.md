@@ -1,12 +1,12 @@
 ---
 description: >-
   The Google Pay payment method allows a merchant to request any credit or debit
-  card stored in their customer’s Google account.
+  card stored in their customer’s Google Pay account.
 ---
 
 # Google Pay
 
-This payment method adds another layer of ease-of-purchase for consumers to quickly complete transactions from their Google Wallet. All currencies are available in supported countries.
+This payment method adds another layer of ease-of-purchase for consumers to quickly complete transactions from their Google Wallet. All currencies are available in supported countries.&#x20;
 
 This guide describes how to create and customize a Google Pay element for your shoppers.
 
@@ -21,7 +21,7 @@ Create a Google Pay payment method for your app or website in two easy steps:
 
 ### Step 1: Create a Google Pay source using Digital River.js
 
-To create a Google Pay payment source, please follow the [DigitalRiver.js reference guide](../reference/).
+To create a Google Pay payment source, follow the instructions for [DigitalRiver.js reference guide](../reference/).
 
 #### Create a Google Pay element
 

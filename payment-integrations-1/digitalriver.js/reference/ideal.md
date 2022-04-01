@@ -25,7 +25,7 @@ Build an iDEAL Source Request object. An iDEAL Source Request object requires th
 | ----------- | -------------------------------------------------------------------------------------------------- |
 | `type`      | `ideal`                                                                                            |
 | `sessionID` | The payment session identifier.                                                                    |
-| `owner`     | An [Owner object](common-payment-objects.md#owner-object).                                         |
+| `owner`     | An [Owner object](../payment-methods/common-payment-objects.md#owner-object).                      |
 | `ideal`     | An [iDEAL source details object](ideal.md#ideal-source-details-object). (This is currently empty.) |
 
 #### iDEAL source details object
@@ -131,7 +131,7 @@ When you create an iDEAL source, the customer must authorize the charge through 
 
 #### Redirecting the customer for iDEAL authorization
 
-To redirect the customer to the payment provider for authorization, use the `redirectUrl` parameter in your [`createSource` response](../reference/digitalriver-object.md#createsource-sourcedata).
+To redirect the customer to the payment provider for authorization, use the `redirectUrl` parameter in your [`createSource` response](digitalriver-object.md#createsource-sourcedata).
 
 ```javascript
 window.location.href = sourceResponse.redirect.redirectUrl;
@@ -184,7 +184,7 @@ Once authorized, the source `state` will change to `chargeable`.
 
 ### Step 4: Use the authorized source
 
-Once authorized, you can use the source by [attaching it to a cart](wire-transfer.md#attach-the-source-to-a-cart).
+Once authorized, you can use the source by [attaching it to a cart](../payment-methods/wire-transfer.md#attach-the-source-to-a-cart).
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
