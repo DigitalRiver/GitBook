@@ -20,11 +20,7 @@ Create an Online Banking payment method for your app or website in four easy ste
 
 ### Step 1: Build Online Banking objects
 
-Build the Online Banking Source Request Details objects.&#x20;
-
-#### Online Banking source request object
-
-The Online Banking Source Request object requires the following fields.
+Build the Online Banking Source Request Details objects. The Online Banking Source Request object requires the following fields.
 
 | Field           | Value                                                                                               |
 | --------------- | --------------------------------------------------------------------------------------------------- |

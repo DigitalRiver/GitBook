@@ -108,11 +108,11 @@ After you configureTreviPay for DigitalRiver.js, you must [add the organization 
 
 A TreviPay source request object requires the following fields.
 
-| Field     | Value                                                                                                                        |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| type      | msts                                                                                                                         |
-| sessionId | The payment session identifier.                                                                                              |
-| msts      | A [TreviPay source details object](trevipay.md#trevipay-source-details-object) that includes the details of the transaction. |
+| Field       | Value                                                                                                                        |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `type`      | `msts`                                                                                                                       |
+| `sessionId` | The payment session identifier.                                                                                              |
+| `msts`      | A [TreviPay source details object](trevipay.md#trevipay-source-details-object) that includes the details of the transaction. |
 
 #### TreviPay source details object
 
@@ -125,10 +125,10 @@ The TreviPay source details object requires the following fields.
 }
 ```
 
-| Field     | Required/Optional | Description                                                                                                                                                                                 |
-| --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| returnUrl | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing within the TreviPay experience. Note that the `returnUrl` must use `https`. |
-| cancelUrl | Required          | If you choose to utilize the full redirect flow, this is where you will redirect your customer to after canceling within the TreviPay experience.                                           |
+| Field       | Required/Optional | Description                                                                                                                                                                                 |
+| ----------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `returnUrl` | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing within the TreviPay experience. Note that the `returnUrl` must use `https`. |
+| `cancelUrl` | Required          | If you choose to utilize the full redirect flow, this is where you will redirect your customer to after canceling within the TreviPay experience.                                           |
 
 ### Step 2:  Create a TreviPay agreement source using DigitalRiver.js
 
@@ -237,9 +237,8 @@ Once authorized, you can use the source by [attaching it to a cart](../../../car
 
 ## Support matrix
 
-|                         |                                                                            |                       |
-| ----------------------- | -------------------------------------------------------------------------- | --------------------- |
 | Basics                  | Customer                                                                   | Redirect              |
+| ----------------------- | -------------------------------------------------------------------------- | --------------------- |
 |                         | Payment Type                                                               | Buy Now Pay Later B2B |
 | Requirements            | Addendum                                                                   | Yes                   |
 | Supported Product Types | Physical / Digital                                                         | Both                  |

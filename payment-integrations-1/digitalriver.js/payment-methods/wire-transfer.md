@@ -21,12 +21,12 @@ Create a Wire Transfer payment method for your app or website in four easy steps
 
 Build a Wire Transfer Source Request object. A Wire Transfer Source Request object requires the following fields.
 
-| Field        | Value                                                      |
-| ------------ | ---------------------------------------------------------- |
-| type         | wireTransfer                                               |
-| sessionId    | The payment session identifier.                            |
-| owner        | An [Owner object](common-payment-objects.md#owner-object). |
-| wireTransfer | A Wire Transfer object. (This is currently empty)          |
+| Field          | Value                                                      |
+| -------------- | ---------------------------------------------------------- |
+| `type`         | `wireTransfer`                                             |
+| `sessionId`    | The payment session identifier.                            |
+| `owner`        | An [Owner object](common-payment-objects.md#owner-object). |
+| `wireTransfer` | A Wire Transfer object. (This is currently empty)          |
 
 ### Step 2: Create a Wire Transfer source using DigitalRiver.js
 

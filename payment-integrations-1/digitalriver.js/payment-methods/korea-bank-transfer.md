@@ -23,12 +23,12 @@ Build a Bank Transfer Source Request and Details objects.&#x20;
 
 The Bank Transfer Source Request object requires the following fields.
 
-| Field        | Value                                                                                                 |
-| ------------ | ----------------------------------------------------------------------------------------------------- |
-| type         | bankTransfer                                                                                          |
-| sessionId    | The payment session identifier.                                                                       |
-| owner        |  An [Owner object](common-payment-objects.md#owner-object).                                           |
-| bankTransfer |  A [Bank Transfer Source Details object](korea-bank-transfer.md#bank-transfer-source-request-object). |
+| Field          | Value                                                                                                 |
+| -------------- | ----------------------------------------------------------------------------------------------------- |
+| `type`         | `bankTransfer`                                                                                        |
+| `sessionId`    | The payment session identifier.                                                                       |
+| `owner`        |  An [Owner object](common-payment-objects.md#owner-object).                                           |
+| `bankTransfer` |  A [Bank Transfer Source Details object](korea-bank-transfer.md#bank-transfer-source-request-object). |
 
 #### Bank Transfer source details object
 
@@ -40,9 +40,9 @@ The Bank Transfer Source Details object requires the following fields.
 }
 ```
 
-| Field     | Required/Optional | Description                                                                                                                                                       |
-| --------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| returnUrl | Required          | If you choose to use the full redirect flow, this is where you will redirect your Customer to after authorizing or canceling within the Bank Transfer experience. |
+| Field       | Required/Optional | Description                                                                                                                                                       |
+| ----------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `returnUrl` | Required          | If you choose to use the full redirect flow, this is where you will redirect your Customer to after authorizing or canceling within the Bank Transfer experience. |
 
 ### Step 2: Create the Bank Transfer source using DigitalRiver.js
 

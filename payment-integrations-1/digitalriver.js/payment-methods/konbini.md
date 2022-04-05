@@ -23,14 +23,14 @@ Create a Konbini payment method for your app or website in four easy steps:
 
 ### Step 1: Build a Kobini source request object
 
-Build a Kobini Source Request object. A Konbini Source Request object requires the following fields.
+Build a Kobini source request object. A Konbini Source Request object requires the following fields.
 
-| Field     | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type      | konbini                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| sessionId | The payment session identifier.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| owner     | <p>An <a href="common-payment-objects.md#owner-object">Owner object</a>. When the <code>storeId</code> is<code>040</code> (Lawson), use double-byte Kanji without <a href="https://developer.mozilla.org/en-US/docs/Glossary/Whitespace">whitespace </a>for the <code>owner.firstName</code> and <code>owner.lastName</code> to ensure successful payment source creation. You also need to ensure that the <code>lastName</code> precedes the <code>firstName</code>.<br><strong>Example</strong>: </p><p><code>{</code> <br>  <code>"lastName": "山田",</code> <br>  <code>"firstName": "太郎", "email":</code>  <br><code>}</code> <br>If you use a single-byte string, the payment source creation will fail.</p> |
-| konbini   | A [Konbini Source Details object](konbini.md#konbini-source-details-object).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Field       | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`      | `konbini`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `sessionId` | The payment session identifier.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `owner`     | <p>An <a href="common-payment-objects.md#owner-object">Owner object</a>. When the <code>storeId</code> is<code>040</code> (Lawson), use double-byte Kanji without <a href="https://developer.mozilla.org/en-US/docs/Glossary/Whitespace">whitespace </a>for the <code>owner.firstName</code> and <code>owner.lastName</code> to ensure successful payment source creation. You also need to ensure that the <code>lastName</code> precedes the <code>firstName</code>.<br><strong>Example</strong>: </p><p><code>{</code> <br>  <code>"lastName": "山田",</code> <br>  <code>"firstName": "太郎", "email":</code>  <br><code>}</code> <br>If you use a single-byte string, the payment source creation will fail.</p> |
+| `konbini`   | A [Konbini Source Details object](konbini.md#konbini-source-details-object).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 #### Konbini Source Details object
 
@@ -44,9 +44,9 @@ Build a Kobini Source Request object. A Konbini Source Request object requires t
 {% endtab %}
 {% endtabs %}
 
-| Field   | Required/Optional | Description                                                                                                                                                                                                                                |
-| ------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| storeId | Required          | The identifier of the store where the Customer chose to pay. **If you use the DigitalRiver.js Konbini Element, Digital River automatically populates the value for you. If you construct the request yourself, this is a required field.** |
+| Field     | Required/Optional | Description                                                                                                                                                                                                                                |
+| --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `storeId` | Required          | The identifier of the store where the Customer chose to pay. **If you use the DigitalRiver.js Konbini Element, Digital River automatically populates the value for you. If you construct the request yourself, this is a required field.** |
 
 ### Step 2: Create a Konbini source using DigitalRiver.js
 
@@ -107,7 +107,7 @@ konbiniElement .mount('konbini-selector');
 {% endtab %}
 {% endtabs %}
 
-DigitalRiver.js will create and render a select element which populates with the store logo and localized store name of the available stores where the customer can pay using this payment method.
+DigitalRiver.js will create and render a select element that populates with the store logo and localized store name of the available stores where the customer can pay using this payment method.
 
 ![](../../../.gitbook/assets/Konbini\_DRJS\_render.PNG)
 
@@ -249,9 +249,9 @@ Once you reached a point in your flow where the customer has selected a store, y
 **Additional Fields Required**: If you are creating a Konbini source without using the DigitalRiver.js Konbini element, you are required to pass an additional field `storeId`.
 {% endhint %}
 
-| Key     | Value Description                                                         |
-| ------- | ------------------------------------------------------------------------- |
-| storeId | The identifier of the store where the customer will submit their payment. |
+| Key       | Value Description                                                         |
+| --------- | ------------------------------------------------------------------------- |
+| `storeId` | The identifier of the store where the customer will submit their payment. |
 
 {% tabs %}
 {% tab title="Example" %}
@@ -355,13 +355,13 @@ The following example shows how to [attach a payment method to an order or cart]
 
 Once the order has been submitted, the source remains in a `pending_funds` state. At this point, direct your customer to go to the store they chose and pay the invoice. These details are reflected in the `konbini` block of the payment source.
 
-| Field               | Description                                                                              |
-| ------------------- | ---------------------------------------------------------------------------------------- |
-| receiptNumber       | The customer's receipt number.                                                           |
-| printableInvoiceUrl | A URL that links to a printable invoice that can be brought into the store while paying. |
-| storeName           | The name of the store where the customer will submit their payment.                      |
-| localizedStoreName  | The localized name of the store where the customer will submit their payment.            |
-| storeLogoUrl        | The logo of the store where the customer will submit their payment.                      |
+| Field                 | Description                                                                              |
+| --------------------- | ---------------------------------------------------------------------------------------- |
+| `receiptNumber`       | The customer's receipt number.                                                           |
+| `printableInvoiceUrl` | A URL that links to a printable invoice that can be brought into the store while paying. |
+| `storeName`           | The name of the store where the customer will submit their payment.                      |
+| `localizedStoreName`  | The localized name of the store where the customer will submit their payment.            |
+| `storeLogoUrl`        | The logo of the store where the customer will submit their payment.                      |
 
 ## Supported markets
 

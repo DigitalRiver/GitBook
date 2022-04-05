@@ -31,15 +31,11 @@ Build the PayPal objects.&#x20;
 
 A PayPal Source Request object requires the following fields.
 
-| Field     | Value                                                                                                                  |
-| --------- | ---------------------------------------------------------------------------------------------------------------------- |
-| type      | payPal                                                                                                                 |
-| sessionId | The payment session identifier.                                                                                        |
-| payPal    | A [PayPal Source Details object](paypal.md#paypal-source-details-object) that includes the details of the transaction. |
-
-### Step 2: Create a PayPal source using DigitalRiver.js
-
-Use the DigitalRiver.js library to create and mount elements to the HTML container.
+| Field       | Value                                                                                                                  |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `type`      | `payPal`                                                                                                               |
+| `sessionId` | The payment session identifier.                                                                                        |
+| `payPal`    | A [PayPal Source Details object](paypal.md#paypal-source-details-object) that includes the details of the transaction. |
 
 ```javascript
 {
@@ -48,10 +44,14 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 }
 ```
 
-| Field     | Required/Optional | Description                                                                                                                                       |
-| --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| returnUrl | Required          | If you choose to utilize the full redirect flow, this is where you will redirect your customer to after authorizing within the PayPal experience. |
-| cancelUrl | Required          | If you choose to utilize the full redirect flow, this is where you will redirect your customer to after canceling within the PayPal experience.   |
+| Field       | Required/Optional | Description                                                                                                                                       |
+| ----------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `returnUrl` | Required          | If you choose to utilize the full redirect flow, this is where you will redirect your customer to after authorizing within the PayPal experience. |
+| `cancelUrl` | Required          | If you choose to utilize the full redirect flow, this is where you will redirect your customer to after canceling within the PayPal experience.   |
+
+### Step 2: Create a PayPal source using DigitalRiver.js
+
+Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -277,11 +277,11 @@ Create a PayPal Billing Agreement payment method for your app or website in four
 
 Build the PayPal Billing Agreement Source Request object. A PayPal Billing Agreement Source Request object requires the following fields.
 
-| Field         | Value                                                                                                                  |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| type          | payPalBilling                                                                                                          |
-| sessionId     | The payment session identifier.                                                                                        |
-| payPalBilling | A [PayPal Source Details object](paypal.md#paypal-source-details-object) that includes the details of the transaction. |
+| Field           | Value                                                                                                                  |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `type`          | `payPalBilling`                                                                                                        |
+| `sessionId`     | The payment session identifier.                                                                                        |
+| `payPalBilling` | A [PayPal Source Details object](paypal.md#paypal-source-details-object) that includes the details of the transaction. |
 
 #### Step 2: Create a PayPal Billing Agreement source using DigitalRiver.js
 
@@ -360,7 +360,7 @@ digitalriver.createSource(data).then(function(result) {
 
 #### Step 3: Authorize a PayPal Billing Agreement source
 
-When you create a PayPal Billing Agreement source, the customer is required to authorize the charge through PayPal. You can accomplish this by either redirecting the customer to PayPal or use the PayPal SDK to authorize the charge as part of your experience.
+When you create a PayPal Billing Agreement source, the customer is required to authorize the charge through PayPal. You can accomplish this by either redirecting the customer to PayPal or using the PayPal SDK to authorize the charge as part of your experience.
 
 #### Redirecting the customer to PayPal for authorization
 
@@ -517,9 +517,7 @@ PayPal RatenZahlung is a pay later option available through PayPal Express Check
 \
 PayPal RatenZahlung allows shoppers to pay for physical good purchases as follows:
 
-*   **Germany**: shopper selects three, six, twelve, or twenty-four monthly payments with an interest rate of 9.99% for purchases between €99 to €5,000 with the first payment due at checkout
-
-
+* **Germany**: shopper selects three, six, twelve, or twenty-four monthly payments with an interest rate of 9.99% for purchases between €99 to €5,000 with the first payment due at checkout
 
 #### PayPal Credit
 
@@ -540,11 +538,11 @@ Create a PayPal payment method for your app or website in four easy steps:
 
 Build a Credit Source Request object. A PayPal Billing Credit Source Request object requires the following fields.
 
-| Field        | Value                                                                                                                   |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| type         | payPalCredit                                                                                                            |
-| sessionId    | The payment session identifier.                                                                                         |
-| payPalCredit |  A [PayPal Source Details object](paypal.md#paypal-source-details-object) that includes the details of the transaction. |
+| Field          | Value                                                                                                                   |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `type`         | `payPalCredit`                                                                                                          |
+| `sessionId`    | The payment session identifier.                                                                                         |
+| `payPalCredit` |  A [PayPal Source Details object](paypal.md#paypal-source-details-object) that includes the details of the transaction. |
 
 **Step 2: Create a PayPal Credit source using DigitalRiver.js**
 

@@ -36,12 +36,12 @@ Build a Klarna Source Request object. A Klarna Source Request object requires th
 
 #### Klarna Source Request object
 
-| Field        | Value                                                                                                                   |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| type         | klarnaCredit                                                                                                            |
-| sessionId    | The payment session identifier.                                                                                         |
-| owner        | An [Owner object](common-payment-objects.md#owner-object).                                                              |
-| klarnaCredit |  A [Klarna Source Details object](klarna.md#klarna-source-details-object) that includes the details of the transaction. |
+| Field          | Value                                                                                                                   |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `type`         | `klarnaCredit`                                                                                                          |
+| `sessionId`    | The payment session identifier.                                                                                         |
+| `owner`        | An [Owner object](common-payment-objects.md#owner-object).                                                              |
+| `klarnaCredit` |  A [Klarna Source Details object](klarna.md#klarna-source-details-object) that includes the details of the transaction. |
 
 #### Klarna Source Details object
 
@@ -54,10 +54,10 @@ The Klarna Source Details object requires the following fields.
 }
 ```
 
-| Field     | Required/Optional | Description                                                                                                                                        |
-| --------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| returnUrl | Required          | If you choose to utilize the full redirect flow, this is where your Customer will be redirected to after authorizing within the Klarna experience. |
-| cancelUrl | Required          | If you choose to utilize the full redirect flow, this is where your Customer will be redirected to after cancelling within the Klarna experience.  |
+| Field       | Required/Optional | Description                                                                                                                                        |
+| ----------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `returnUrl` | Required          | If you choose to utilize the full redirect flow, this is where your Customer will be redirected to after authorizing within the Klarna experience. |
+| `cancelUrl` | Required          | If you choose to utilize the full redirect flow, this is where your Customer will be redirected to after cancelling within the Klarna experience.  |
 
 ### Step 2: Create a Klarna source using DigitalRiver.js
 
@@ -197,12 +197,12 @@ Once authorized, you can use the source by [attaching it to a cart](../../../car
 For standard payments, you must use the Klarna payment type.
 {% endhint %}
 
-| Field                 | Value                                                                                                                  |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| type                  | klarnaCreditRecurring                                                                                                  |
-| amount                | klarnaCreditRecurring                                                                                                  |
-| owner                 | An [Owner object](common-payment-objects.md#owner-object).                                                             |
-| klarnaCreditRecurring | A [Klarna Source Details object](klarna.md#klarna-source-details-object) that includes the details of the transaction. |
+| Field                   | Value                                                                                                                  |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `type`                  | `klarnaCreditRecurring`                                                                                                |
+| `amount`                | `klarnaCreditRecurring`                                                                                                |
+| `owner`                 | An [Owner object](common-payment-objects.md#owner-object).                                                             |
+| `klarnaCreditRecurring` | A [Klarna Source Details object](klarna.md#klarna-source-details-object) that includes the details of the transaction. |
 
 #### Klarna Recurring source example
 

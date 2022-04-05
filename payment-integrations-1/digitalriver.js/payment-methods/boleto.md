@@ -30,11 +30,7 @@ Create a Boleto payment method for your app or website in four easy steps:
 
 ### Step 1: Build a Boleto Source Request and Details object
 
-Build the Boleto Source Request and Details object.
-
-#### Boleto Source Request object
-
-The Boleto Source Request object requires the following fields:
+Build the Boleto Source Request and Details object.  The Boleto Source Request object requires the following fields:
 
 | Field            | Value                                                      |
 | ---------------- | ---------------------------------------------------------- |

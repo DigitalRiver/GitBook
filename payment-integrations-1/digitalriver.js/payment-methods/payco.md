@@ -17,18 +17,14 @@ Create a PayCo payment method for your app or website in three easy steps:
 
 ### Step 1: Build a PayCo Source Request and Details object
 
-Build the PayCo Source Request and Details objects.&#x20;
+Build the PayCo Source Request and Details objects. The PayCo Source Request object requires the following fields.
 
-#### PayCo Source Request object
-
-The PayCo Source Request object requires the following fields.
-
-| Field     | Value                                                                  |
-| --------- | ---------------------------------------------------------------------- |
-| type      | payco                                                                  |
-| sessionId | The payment session identifier.The total value of the transaction.     |
-| owner     | An [Owner object](common-payment-objects.md#owner-object).             |
-| payco     | A [PayCo Source Details object](payco.md#payco-source-details-object). |
+| Field       | Value                                                                  |
+| ----------- | ---------------------------------------------------------------------- |
+| `type`      | `payco`                                                                |
+| `sessionId` | The payment session identifier.The total value of the transaction.     |
+| `owner`     | An [Owner object](common-payment-objects.md#owner-object).             |
+| `payco`     | A [PayCo Source Details object](payco.md#payco-source-details-object). |
 
 #### PayCo Source Details object
 
@@ -40,9 +36,9 @@ The PayCo Source Details object requires the following fields.
 }
 ```
 
-| Field     | Required/Optional | Description                                                                                                                                               |
-| --------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| returnUrl | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing or canceling within the PayCo experience. |
+| Field       | Required/Optional | Description                                                                                                                                               |
+| ----------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `returnUrl` | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing or canceling within the PayCo experience. |
 
 ### Step 2: Create a PayCo source using DigitalRiver.js
 

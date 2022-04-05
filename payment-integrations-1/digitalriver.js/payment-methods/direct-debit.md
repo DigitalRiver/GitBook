@@ -25,12 +25,12 @@ Build the SEPA Direct Debit Source Request and Details objects.&#x20;
 
 A SEPA Direct Debit Source Request object requires the following fields.
 
-| Field       | Value                                                                                                                                              |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type        | directDebit                                                                                                                                        |
-| sessionId   | The payment session identifier.                                                                                                                    |
-| owner       | An [Owner object](common-payment-objects.md#owner-object).                                                                                         |
-| directDebit | A [SEPA Direct Debit Source Details object](direct-debit.md#sepa-direct-debit-source-details-object) that includes the details of the transaction. |
+| Field         | Value                                                                                                                                              |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type          | `directDebit`                                                                                                                                      |
+| sessionId     | The payment session identifier.                                                                                                                    |
+| `owner`       | An [Owner object](common-payment-objects.md#owner-object).                                                                                         |
+| `directDebit` | A [SEPA Direct Debit Source Details object](direct-debit.md#sepa-direct-debit-source-details-object) that includes the details of the transaction. |
 
 #### SEPA Direct Debit source details object
 
@@ -42,9 +42,9 @@ The SEPA Direct Debit Source Details object requires the following fields.
 }
 ```
 
-| Field     | Required/Optional | Description                                                                                                                                                           |
-| --------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| returnUrl | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing or canceling within the SEPA Direct Debit experience. |
+| Field       | Required/Optional | Description                                                                                                                                                           |
+| ----------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `returnUrl` | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing or canceling within the SEPA Direct Debit experience. |
 
 ### Step 2: Create a SEPA Direct Debit source using DigitalRiver.js
 
