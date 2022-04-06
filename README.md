@@ -3,7 +3,6 @@ description: >-
   Digital River brings a complete checkout solution for global payments, fraud,
   tax, and compliance management to partner platforms like Magento, Salesforce,
   SAP Commerce, and WordPress.
-layout: landing
 ---
 
 # Partner integrations
