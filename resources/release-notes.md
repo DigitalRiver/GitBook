@@ -16,7 +16,7 @@ We added support for the [iDEAL ](../payment-integrations-1/digitalriver.js/refe
 
 ## 2022/3/16
 
-We added support for the [Bancontact ](../payment-integrations-1/digitalriver.js/reference/bancontact.md)payment method.
+We added support for the [Bancontact ](../payment-integrations-1/digitalriver.js/payment-methods/bancontact.md)payment method.
 
 ## 2022/1/26
 
