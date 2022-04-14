@@ -5,11 +5,11 @@ description: >-
   SAP Commerce, and WordPress.
 ---
 
-# Partner integrations
+# Connectors
 
-Together, our partner integrations provide best-of-breed solutions to streamline, enhance, and grow your ecommerce operations worldwide.
+Together, our connectors provide best-of-breed solutions to streamline, enhance, and grow your ecommerce operations worldwide.
 
-These prebuilt partner integrations allow you to easily implement Digital River’s [Global Seller Services](https://www.digitalriver.com/global-seller-services/) solution to unlock the following benefits:
+These prebuilt connectors allow you to easily implement Digital River’s [Global Seller Services](https://www.digitalriver.com/global-seller-services/) solution to unlock the following benefits:
 
 * Increase revenue with localized payment processing&#x20;
 * Reduce the risk and complexity of global taxes and compliance&#x20;
@@ -19,7 +19,7 @@ These prebuilt partner integrations allow you to easily implement Digital River�
 
 ## Commerce partners
 
-Get familiar with our commerce partner integrations:
+Get familiar with our commerce connectors:
 
 * [Adobe Commerce Extension ](https://docs.digitalriver.com/magento/)
 * [BigCommerce App](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/-MYQsO02eKz9DuHs39Wm-887967055/)
@@ -34,7 +34,7 @@ Get familiar with our commerce partner integrations:
 
 ## Subscription partners
 
-Get familiar with our subscription partners:
+Get familiar with our subscription connectors:
 
 * [Chargify](https://docs.digitalriver.com/chargify/)
 * [Fusebill ](https://docs.digitalriver.com/fusebill/)
