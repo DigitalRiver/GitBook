@@ -4,7 +4,7 @@ description: Learn how to use the offline refund element.
 
 # Offline refund element
 
-With certain payment flows such as [Boleto](../payment-methods/boleto.md), [bPay](../payment-methods/bpay.md), [Konbini](../payment-methods/konbini.md), [Online Banking](../payment-methods/online-banking.md), or [Wire Transfer](../payment-methods/wire-transfer.md), it may be necessary to collect details from your customer to facilitate a refund.&#x20;
+With certain payment flows such as [Boleto](../payment-methods/boleto.md), [bPay](../payment-methods/bpay.md), [Konbini](../payment-methods/konbini.md), [Online Banking](../payment-methods/online-banking/online-banking.md), or [Wire Transfer](../payment-methods/wire-transfer.md), it may be necessary to collect details from your customer to facilitate a refund.&#x20;
 
 ## Creating an offline refund element
 
