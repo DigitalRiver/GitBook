@@ -15,7 +15,7 @@ Commerce API users are now able to set up new schedules dedicated to trial subsc
 2. [Find the subscription product](https://help.digitalriver.com/help/gc/Products/All-Products/Editing-a-product.htm#HowToSearchForProduct) you want to update. Click the internal product name for the subscription product under the **Internal Product Name** column. The Edit Product page appears.
 3. Click the **Details** tab.
 4. Scroll down to **Subscriptions** and click **Edit**. \
-   ![](../../.gitbook/assets/trialsubscription.png)&#x20;
+   <img src="../../.gitbook/assets/trialsubscription.png" alt="" data-size="original">&#x20;
 5. Select the **Trial Period** check box to enable the **Trial Period**.
 6. Enter the number of trial days between (a value between 1 to 1095) in **Trial Days**.
 7. Once you set the number of trial days, the applicable trial reminder options will be available.&#x20;
@@ -27,17 +27,17 @@ Commerce API users are now able to set up new schedules dedicated to trial subsc
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do) and select a site.
 2. Select **Catalog**, select **Products**, and then click Import and **Export Products**. \
-   ![](../../.gitbook/assets/importandexportproducts.png)&#x20;
+   <img src="../../.gitbook/assets/importandexportproducts.png" alt="" data-size="original">&#x20;
 3. Click **Configure Product Import & Export Spreadsheet**, and then click the **Global Family Attributes** tab. \
-   ![](../../.gitbook/assets/configureproductimport.png)&#x20;
+   <img src="../../.gitbook/assets/configureproductimport.png" alt="" data-size="original">&#x20;
 4. Scroll down to the **Subscription** section and select the following check boxes:
    * **Time Interval For Manual Trial Reminder Notifications**–to enable the Manual Trial Renewal Reminder.
    * **Time Interval For Trial Reminder Notifications**–to enable the Auto Trial Renewal Reminder. \
-     ![](../../.gitbook/assets/subscriptionselectall.png)&#x20;
+     <img src="../../.gitbook/assets/subscriptionselectall.png" alt="" data-size="original">&#x20;
 5. Click **Save**. You will be redirected to the Products Import and Export page.
 6. Scroll down to **Export Product**, complete the fields, and click **Export** to download the BPU spreadsheet.
 7. In the spreadsheet, you can find the previously chosen fields under the section **Subscription** and **Subscription Association**. Note that **Trial Days** must be a positive integer and **Is Trial Period** must be true to configure the new trial reminder schedule.  \
-   ![](../../.gitbook/assets/subscriptionassociation.png)&#x20;
+   <img src="../../.gitbook/assets/subscriptionassociation.png" alt="" data-size="original">&#x20;
 8. To import the spreadsheet, complete the fields under **Import Products**, and click **Import**.
 
 {% hint style="info" %}

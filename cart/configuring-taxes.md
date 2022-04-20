@@ -20,7 +20,7 @@ You need the Pricing Manager role to perform this task.
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 2. If your company has more than one site, select the site from the **Sites** field. If your company has only one site, Global Commerce automatically populates the **Site** field.\
-   &#x20;![](../.gitbook/assets/Sites.png)&#x20;
+   &#x20;<img src="../.gitbook/assets/Sites.png" alt="" data-size="original">&#x20;
 3. Select **Catalog**, select **Pricing & Plans**, and click **Manage Price Lists**. The Price Lists page appears.
 4. Complete the search fields under the **Search and Filters** tab and then click **Search** ![Search](https://help.digitalriver.com/help/Resources/Images/Shared/search.png) to locate the specific price lists. The results appear in the Price Lists list.
 5. Click the link for the price list under the **Name** column. The Price List Details page appears.

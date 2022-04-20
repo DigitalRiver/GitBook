@@ -1260,19 +1260,19 @@ If you want to display the credit card payment logo on your website, you can use
 **Best Practices**: To ensure you're always using the latest logo, link to the URL instead of downloading the image to your website.
 {% endhint %}
 
-* **Visa** ![](broken-reference) \
+* **Visa** <img src="../../../.gitbook/assets/visa (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/visa.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/visa.png)
-* **Mastercard** ![](broken-reference) \
+* **Mastercard** <img src="../../../.gitbook/assets/mastercard (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/mastercard.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/mastercard.png)
-* **American Express** ![](broken-reference) \
+* **American Express** <img src="../../../.gitbook/assets/amex (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/amex.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/amex.png)
-* **Discover** ![](broken-reference)  \
+* **Discover** <img src="../../../.gitbook/assets/discover (1).png" alt="" data-size="original">  \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/discover.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/discover.png)
-* **JCB** ![](broken-reference) \
+* **JCB** <img src="../../../.gitbook/assets/jcb (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/jcb.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/jcb.png)
-* **Maestro** ![](broken-reference) \
+* **Maestro** <img src="../../../.gitbook/assets/maestro (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/maestro.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/maestro.png)
-* **UnionPay** ![](broken-reference) \
+* **UnionPay** <img src="../../../.gitbook/assets/unionpay (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/unionpay.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/unionpay.png)
 
 ## Retrieving available banks for Online Banking

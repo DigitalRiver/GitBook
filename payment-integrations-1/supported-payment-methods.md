@@ -17,7 +17,7 @@ The table also lists each payment method's authentication flow and indicates whe
 | [bPay](digitalriver.js/payment-methods/bpay.md)                                                            |           ✔ / ✔           |                  ✔ / -                 |      `receiver`     |
 | [Credit Cards](digitalriver.js/payment-methods/credit-cards.md)                                            |           ✔ / ✔           |                  ✔ / ✔                 |      `standard`     |
 | [Google Pay](digitalriver.js/payment-methods/google-pay.md)                                                |           ✔ / ✔           |                  ✔ / ✔                 |      `standard`     |
-| [iDEAL](digitalriver.js/reference/ideal.md)                                                                |           ✔ / ✔           |                  ✔ / ✔                 |      `standard`     |
+| [iDEAL](digitalriver.js/payment-methods/ideal.md)                                                          |           ✔ / ✔           |                  ✔ / ✔                 |      `standard`     |
 | [Klarna](digitalriver.js/payment-methods/klarna.md)                                                        |           ✔ / ✔           |                  ✔ / ✔                 |      `redirect`     |
 | [Konbini](digitalriver.js/payment-methods/konbini.md)                                                      |           ✔ / ✔           |                  ✔ / -                 |      `receiver`     |
 | [Korea – Bank Transfer](digitalriver.js/payment-methods/korea-bank-transfer.md)                            |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |

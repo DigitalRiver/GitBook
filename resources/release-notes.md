@@ -12,7 +12,7 @@ We upgraded Google Pay to offer the up-to-date Google Pay wallet experience. You
 
 ## 2022/3/28
 
-We added support for the [iDEAL ](../payment-integrations-1/digitalriver.js/reference/ideal.md)payment method.
+We added support for the [iDEAL ](../payment-integrations-1/digitalriver.js/payment-methods/ideal.md)payment method.
 
 ## 2022/3/16
 
@@ -131,7 +131,7 @@ We replaced Supported geographies for each [payment method](../payment-integrati
 
 * We made the following to the [Commerce API Reference](https://www.digitalriver.com/docs/commerce-api-reference/):
   * Removed `x-siteid` and `x-companyId` headers for [Subscription ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Manage-Subscription)APIs. You only need to [provide a token](../getting-started/best-practices.md#creating-session-aware-access-tokens) now.\
-    &#x20; ![](../.gitbook/assets/Header-Parameters.png)&#x20;
+    &#x20; <img src="../.gitbook/assets/Header-Parameters.png" alt="" data-size="original">&#x20;
   * Removed `sku` and `displayName` from the `product` object in the response for [`preview`](https://www.digitalriver.com/docs/commerce-api-reference/#operation/previewSubscription), [`preview-cart`](https://www.digitalriver.com/docs/commerce-api-reference/#operation/previewCartSubscription), and [`reduce`](https://www.digitalriver.com/docs/commerce-api-reference/#operation/reduceSubscription) resources.
   * Removed `proratedUnitPrice` from the [`reduce`](https://www.digitalriver.com/docs/commerce-api-reference/#operation/reduceSubscription) resource.
   * Updated the payload for the [API trigger offer](https://www.digitalriver.com/docs/commerce-api-reference/#tag/API-Trigger-Offer/paths/\~1v1\~1shoppers\~1me\~1carts\~1active%20\(API%20Trigger%20Offer\)/post) request.

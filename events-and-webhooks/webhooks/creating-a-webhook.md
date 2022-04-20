@@ -20,11 +20,11 @@ When creating webhooks, you need to add endpoints from Global Commerce:
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 2. Select **Administration**, and then click **Webhook Service**. The Webhook Service page appears.\
-   &#x20;![](../../.gitbook/assets/Webhook-Service.png)&#x20;
+   &#x20;<img src="../../.gitbook/assets/Webhook-Service.png" alt="" data-size="original">&#x20;
 3. From the Webhook Service page, click **Create Webhook**.  \
-   ![](../../.gitbook/assets/Webhook-Service-Create-webhook.png) \
+   <img src="../../.gitbook/assets/Webhook-Service-Create-webhook.png" alt="" data-size="original"> \
    The Create Webhook page appears.\
-   &#x20;![](../../.gitbook/assets/Create-Webhook.png)&#x20;
+   &#x20;<img src="../../.gitbook/assets/Create-Webhook.png" alt="" data-size="original">&#x20;
 4. Enter the URL for the endpoint in the **Endpoint URL** field.&#x20;
 5. Optional. Enter the user credentials for the endpoint in the **Username** and **Password** fields.  These fields are optional. If you do not want to leverage these authentication credentials, you can leave the two fields blank. See [Authentication](https://docs.digitalriver.com/commerce-api/getting-started/best-practices#authentication) for information on how to authenticate the client’s endpoint to add another layer to security.
 6. Optional. Select **Enabled** for **Status**.\

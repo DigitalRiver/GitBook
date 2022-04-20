@@ -15,7 +15,7 @@ Once you sign in to the Knowledge Portal, click **Subscribe** to receive updates
 1. Go to: [https://digitalriver.service-now.com/kb?id=kb\_article\_view\&sysparm\_article=KB0011418](https://digitalriver.service-now.com/kb?id=kb\_article\_view\&sysparm\_article=KB0011418)
 2. Provide your username and password and click **Login**. \
    **Note**: If you are a Digital River employee, click the **Use SSO** (Single Sign-on) link to access all apps on this site.\
-   &#x20;![](../.gitbook/assets/Digital-River-Knowledge-Portal.jpg)&#x20;
+   &#x20;<img src="../.gitbook/assets/Digital-River-Knowledge-Portal.jpg" alt="" data-size="original">&#x20;
 3. Once you sign in to the Knowledge Portal, click Subscribe to receive updates.
 
 ![](../.gitbook/assets/Commerce-API-Documentation-Portal-Updates.png)
