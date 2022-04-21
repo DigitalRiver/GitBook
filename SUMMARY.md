@@ -241,4 +241,3 @@
 * [API reference](https://www.digitalriver.com/docs/commerce-api-reference/)
 * [Connectors](https://docs.digitalriver.com/partner-integrations/)
 * [Postman collection](https://github.com/DigitalRiver)
-* [Subscribe to updates](resources/subscribe-to-updates.md)

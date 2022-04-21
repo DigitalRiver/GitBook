@@ -247,7 +247,7 @@ We added a list of [error codes](../payment-integrations-1/digitalriver.js/refer
 
 ## 2020/10/29
 
-You can now [subscribe to receive](subscribe-to-updates.md) the latest Commerce API information.
+You can now [subscribe to receive](broken-reference) the latest Commerce API information.
 
 ## 2020/10/28
 
