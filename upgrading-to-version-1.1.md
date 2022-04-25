@@ -15,15 +15,20 @@ Use the following instructions to upgrade from a previous version of the Digital
 4. [Enable the order.cancelled event](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/webhooks/creating-a-webhook#step-3-create-webhooks) from the Webhooks page on the [Digital River Dashboard](https://dashboard.digitalriver.com/login). See [Step 11](integrate-the-salesforce-lightning-app/step-11-set-up-webhooks.md) for complete instructions.\
    ![](<.gitbook/assets/enable order cancelled event.png>)
 5. Add a new picklist value called `partially_cancelled` to the `DR_Order_Item_State__c` field on the `OrderItem` object.
-6. Update the **Key** value for the **Connector Version** to `1.1/3.1` using the following instructions:
-   1. Click **Setup** ![](<.gitbook/assets/Setup (1).png>) and select **Setup** from the dropdown list.
-   2. Type `Custom Metadata Types` in the **Quick Find** field and then click **Custom Metadata Types**. The **Custom Metadata Types** page appears with the **All Metadata Types** list.
-   3. Locate the **DR Connector Configuration** metadata type from the lists (Label) and click the **Manage Records** action next to that type selection. \
-      ![](.gitbook/assets/CMDT\_list\_1.jpg)
-   4. On the **DR Connector Configurations** page find the **Connector Version** setting (Label). Click **Edit** next to the **Connector Version** setting.\
-      &#x20;![](.gitbook/assets/CMDT\_version\_2.jpg)
-   5. Update the **Key** value for the **Connector Version** to `1.1/3.1` or as instructed by your project manager.\
-      ![](.gitbook/assets/CMDT\_key\_3.jpg)
-   6. Click **Save** after you have finished updating the version number and return to the **Home** page.\
+6. Add the following new picklist values to the `DR_Order_State__c` field on the `Order` object:
+   1. `cancelled_by_dr`
+   2. `cancelled_by_sf`
+   3. `salesforce_failure`
+7.  Update the **Key** value for the **Connector Version** to `1.1/3.1` using the following instructions:
+
+    1. Click **Setup** ![](<.gitbook/assets/Setup (1).png>) and select **Setup** from the dropdown list.
+    2. Type `Custom Metadata Types` in the **Quick Find** field and then click **Custom Metadata Types**. The **Custom Metadata Types** page appears with the **All Metadata Types** list.
+    3. Locate the **DR Connector Configuration** metadata type from the lists (Label) and click the **Manage Records** action next to that type selection. \
+       ![](.gitbook/assets/CMDT\_list\_1.jpg)
+    4. On the **DR Connector Configurations** page find the **Connector Version** setting (Label). Click **Edit** next to the **Connector Version** setting.\
+       &#x20;![](.gitbook/assets/CMDT\_version\_2.jpg)
+    5. Update the **Key** value for the **Connector Version** to `1.1/3.1` or as instructed by your project manager.\
+       ![](.gitbook/assets/CMDT\_key\_3.jpg)
 
 
+8. Click **Save** after you have finished updating the version number and have made all other listed changes. Return to the **Home** page.
