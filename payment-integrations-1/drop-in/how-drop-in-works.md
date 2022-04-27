@@ -6,6 +6,12 @@ description: Learn how Drop-in works.
 
 When the client goes to checkout, the client-server sends a create cart request to Digital River and Digital River returns the cart. The client-server then sends a request to provide the payment session ID to the client's front end. The client front end instantiates Drop-in with the payment session ID and configurations, and Drop-in displays the payment methods. When the customer selects a payment method and provides their payment details, the client front end triggers an `onSuccess` event and sends the source ID to the client-server. The client-server uses the source with the cart or shopper.
 
+{% hint style="info" %}
+To get a better understanding of how the process works, check out the [interactive Drop-in builder](https://drapi.io/drop-in-builder/).
+{% endhint %}
+
+{% embed url="https://player.vimeo.com/video/683888702?h=2b803b92e0" %}
+
 ![](<../../.gitbook/assets/How Drop-in Works - Commerce API.png>)
 
 ## Drop-in flows
