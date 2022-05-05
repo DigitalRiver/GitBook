@@ -3,3 +3,8 @@ root: ./
 structure:  
     readme: README.md  
     summary: SUMMARY.md​ 
+    
+redirects:
+    order-management/fulfillments#digital-river-coordinated-fulfillments: integration-options/checkouts/handling-digital-river-coordinated-fulfillments.md
+    order-management/fulfillments##assisted-fulfillment-model: integration-options/checkouts/handling-digital-river-coordinated-fulfillments.md#assisted-fulfillment-model.md
+    order-management/fulfillments#automated-fulfillment-model: integration-options/checkouts/handling-digital-river-coordinated-fulfillments.md#automated-fulfillment-model.md
