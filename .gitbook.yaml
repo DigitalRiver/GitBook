@@ -5,6 +5,6 @@ structure:
     summary: SUMMARY.md​ 
     
 redirects:
-    order-management/fulfillments#digital-river-coordinated-fulfillments: integration-options/checkouts/handling-digital-river-coordinated-fulfillments.md
-    order-management/fulfillments##assisted-fulfillment-model: integration-options/checkouts/handling-digital-river-coordinated-fulfillments.md#assisted-fulfillment-model.md
-    order-management/fulfillments#automated-fulfillment-model: integration-options/checkouts/handling-digital-river-coordinated-fulfillments.md#automated-fulfillment-model.md
+    digital-river-api/order-management/fulfillments#digital-river-coordinated-fulfillments: digital-river-api/integration-options/checkouts/handling-digital-river-coordinated-fulfillments.md
+    digital-river-api/order-management/fulfillments##assisted-fulfillment-model: digital-river-api/integration-options/checkouts/handling-digital-river-coordinated-fulfillments.md#assisted-fulfillment-model.md
+    digital-river-api/order-management/fulfillments#automated-fulfillment-model: digital-river-api/integration-options/checkouts/handling-digital-river-coordinated-fulfillments.md#automated-fulfillment-model.md
