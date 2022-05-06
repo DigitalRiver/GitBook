@@ -4,7 +4,7 @@ description: Learn how to specify the type of charge.
 
 # Initiating a charge
 
-When you [create](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post) or [update](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post) a Cart, the Commerce API calculates the `chargeType` based on the information set up in Global Commerce. You can use the `chargeType` parameter to tell Digital River whether you expect the [payment source](../sources/) to be used for a [customer-initiated](initiating-a-charge.md#customer-initiated), [merchant-initiated](initiating-a-charge.md#merchant-initiated), or [mail/telephone-initiated](initiating-a-charge.md#mail-order-telephone-order) transaction.&#x20;
+When [creating ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post)or [updating ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post)a Cart, the Commerce API calculates the `chargeType` based on the information set up in Global Commerce. You can use the `chargeType` parameter to tell Digital River whether you expect the [payment source](../sources/) to be used for a [customer-initiated](initiating-a-charge.md#customer-initiated), [merchant-initiated](initiating-a-charge.md#merchant-initiated), or [mail/telephone-initiated](initiating-a-charge.md#mail-order-telephone-order) transaction.&#x20;
 
 {% tabs %}
 {% tab title="cURL" %}
