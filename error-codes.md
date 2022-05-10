@@ -37,7 +37,7 @@ A basic error message (`error`) includes the following information:
 
 ### Credit card error and declined message
 
-A transaction error for a payment method such as a credit card saved in the payment source may contain additional information as shown in the following declined message (`declinedMessage`) example:
+A transaction error for a payment method such as a credit card saved in the payment source may contain additional information as shown in the following [declined message](https://docs.digitalriver.com/commerce-api/cart/submitting-a-cart/authorization-declines) (`declinedMessage`) example:
 
 ```javascript
 "errors": {
