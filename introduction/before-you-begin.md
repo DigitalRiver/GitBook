@@ -24,7 +24,7 @@ You can integrate payment in multiple locations and flows.
 
 #### **During checkout** <a href="#during-checkout" id="during-checkout"></a>
 
-In the standard checkout flow, you can apply the payment against the order using [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in). Ask your Digital River Business Development Manager to configure your payment methods.
+In the standard checkout flow, you can apply the payment against the order using [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in). Ask your Digital River Business Development Manager to configure your payment methods.
 
 #### **My Wallet page** <a href="#my-wallet-page" id="my-wallet-page"></a>
 
@@ -33,8 +33,8 @@ In the standard checkout flow, you can apply the payment against the order using
 
 ### 3. Disclosures <a href="#3-disclosures" id="3-disclosures"></a>
 
-Digital River requires that you display certain disclosures and related links on the checkout pages and shopper notifications (transactional emails). You can use a [DigitalRiver object](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/digitalriver.js/reference/digitalriver-object) provided by [DigitalRiver.js](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/digitalriver.js) to create various disclosures, Terms of Sale, warranty information, and California Privacy Rights required by Digital River.
+Digital River requires that you display certain disclosures and related links on the checkout pages and shopper notifications (transactional emails). You can use a [Digital River object](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object) provided by [DigitalRiver.js](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/digitalriver.js) to create various disclosures, Terms of Sale, warranty information, and California Privacy Rights required by Digital River.
 
 ### 4. Selling entities <a href="#4-selling-entities" id="4-selling-entities"></a>
 
-The Salesforce B2B Commerce App relies on the Hosted Commerce platform via the Digital River API. See [Selling entities](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/shared-properties/selling-entities) for more information.
+The Salesforce B2B Commerce App relies on the Hosted Commerce platform via the Digital River API. See [Selling entities](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/creating-checkouts/selling-entities) for more information.
