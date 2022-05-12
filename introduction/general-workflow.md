@@ -6,7 +6,7 @@ description: Learn more about installing the connector cartridges and secure pay
 
 ## Install the connector cartridges <a href="#install-the-connector-cartridges" id="install-the-connector-cartridges"></a>
 
-The Salesforce B2C LINK Cartridge package contains three cartridges with the [Drop-in functionality](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) for Storefront Reference Architecture (SFRA):
+The Salesforce B2C LINK Cartridge package contains three cartridges with the [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) functionality for Storefront Reference Architecture (SFRA):
 
 * [bm\_digitalriver](https://app.gitbook.com/@digital-river/s/salesforce-b2c-draft/\~/drafts/-MPjXhMIoSRjoBcAnaPW/v/2.0.0/general-workflow#bm\_digitalriver)
 * [int\_digitalriver](https://app.gitbook.com/@digital-river/s/salesforce-b2c-draft/\~/drafts/-MPjXhMIoSRjoBcAnaPW/v/2.0.0/general-workflow#int\_digitalriver)

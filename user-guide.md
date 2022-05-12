@@ -13,7 +13,7 @@ Before Digital River can process the SKUs, you must complete all of the products
 Digital River needs the optional HS Code property for duty calculation.
 
 {% hint style="info" %}
-**Note**: If your Digital River account is configured for [Landed Costs](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/landed-costs), you will need to configure the HS Code on applicable products. This cartridge code processes duty and appears to customers as a separate total price component without any additional site configuration. To avoid duty inclusion, leave HS Code attributes blank or contact your Digital River Representative.
+**Note**: If your Digital River account is configured for [Landed Costs](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/creating-checkouts/landed-costs), you will need to configure the HS Code on applicable products. This cartridge code processes duty and appears to customers as a separate total price component without any additional site configuration. To avoid duty inclusion, leave HS Code attributes blank or contact your Digital River Representative.
 {% endhint %}
 
 ![](.gitbook/assets/CatalogTaxclass.png)
@@ -67,7 +67,7 @@ The Digital\_River\_Dropin payment processor provides the following order inform
 
 ## Order state management
 
-Digital River provides a range of order statuses to track order payment. Each order has a Digital River order status which reflects the current order position within the [order cycle](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/orders/the-order-lifecycle):
+Digital River provides a range of order statuses to track order payment. Each order has a Digital River order status which reflects the current order position within the [order cycle](https://docs.digitalriver.com/digital-river-api/order-management/orders/the-order-lifecycle):
 
 * **accepted**—order has passed checks and is ready for fulfillment
 * **in\_review**—order is on fraud review and can’t be fulfilled yet
@@ -104,7 +104,7 @@ After the order is placed, the status update is handled through jobs that can be
 * The **DigitalRiver\_updateCompletedOrders** job queries all orders that were shipped or cancelled but still have a Digital River order status of “accepted” and updates their status through a [Digital River call](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/listOrders). Unlike “DigitalRiver\_fulfillOrders” this job doesn’t send fulfillments to Digital River and is applicable only in combination with other integrations when [drOrderHelper.notifyOrderFulfillment](user-guide.md#drorderhelper) or [drOrderHelper.notifyOrderCancellation](user-guide.md#drorderhelper) functions are injected into scripts responsible for shipping management/order cancellation.
 
 {% hint style="info" %}
-**Important**: neither DigitalRiver\_fulfillOrders nor DigitalRiver\_updateCompletedOrders cancel orders or update shipping in the order management system, but only notify Digital River when the order or line item has been shipped or cancelled. Once notified, Digital River will[ capture the payment or cancel the charge](https://docs.digitalriver.com/digital-river-api/fulfillments/informing-digital-river-of-a-fulfillment). You can manage order shipping or cancellation in Business Manager or by other integrations, but it’s not within the scope of this cartridge functionality.
+**Important**: neither DigitalRiver\_fulfillOrders nor DigitalRiver\_updateCompletedOrders cancel orders or update shipping in the order management system, but only notify Digital River when the order or line item has been shipped or cancelled. Once notified, Digital River will [capture the payment or cancel the charge](https://docs.digitalriver.com/digital-river-api/order-management/informing-digital-river-of-a-fulfillment). You can manage order shipping or cancellation in Business Manager or by other integrations, but it’s not within the scope of this cartridge functionality.
 {% endhint %}
 
 * The **DigitalRiver\_updatePendingOrders** job updates the state for all orders that have pending statuses (**in\_review**, **pending\_payment**, **fulfilled**) that wait for resolution on the DigitalRiver side.
@@ -115,10 +115,10 @@ In the following table, you can see all the statuses that you can expect to rece
 
 ## Storefront functionality <a href="#storefront-functionality" id="storefront-functionality"></a>
 
-The DigitalRiver.js library replaces the Salesforce built-in payment method forms and also renders Digital River Drop-in payment integration to fulfill the payment process. The payment methods will display on the billing page. The payment methods that display depend on the configuration of your LINK cartridge key by Digital River. Visit our [Drop-in documentation](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) for an updated listing of payment methods available.
+The DigitalRiver.js library replaces the Salesforce built-in payment method forms and also renders Digital River Drop-in payment integration to fulfill the payment process. The payment methods will display on the billing page. The payment methods that display depend on the configuration of your LINK cartridge key by Digital River. Visit our [Drop-in documentation](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) for an updated listing of payment methods available.
 
 Below is how payment methods will appear on the billing page:\
-&#x20;![](.gitbook/assets/Payment-dialog.png)&#x20;
+&#x20;<img src=".gitbook/assets/Payment-dialog.png" alt="" data-size="original">&#x20;
 
 * When the customer clicks the **Add New** link in the **My Account** section, the **Drop-in** form with the specific configuration will appear. The form allows the customer to add a new payment within **Drop-in** and create a new source.
 
@@ -126,13 +126,13 @@ Below is how payment methods will appear on the billing page:\
 
 ## Order cancellation/fulfillment
 
-Though order and line level fulfillment or cancellation within SFCC or an order management system is not within the scope of the current cartridge, it’s necessary to notify Digital River each time such an operation takes place. Once notified, Digital River will capture the [payment or cancel the charge](https://docs.digitalriver.com/digital-river-api/fulfillments/informing-digital-river-of-a-fulfillment). You can do this in two ways:
+Though order and line level fulfillment or cancellation within SFCC or an order management system is not within the scope of the current cartridge, it’s necessary to notify Digital River each time such an operation takes place. Once notified, Digital River will capture the [payment or cancel the charge](https://docs.digitalriver.com/digital-river-api/order-management/informing-digital-river-of-a-fulfillment). You can do this in two ways:
 
 1. Use the [**DigitalRiver\_fulfillOrders**](user-guide.md#order-status-management-jobs) job. This job is available out of the box. This job provides order level fulfillment and cancellation. It will choose orders with **Shipped** or **Cancelled** statuses and provide respective fulfillment to Digital River. Line level fulfillment and cancellation is not included in this job. It is recommended that this job is scheduled to run on a regular basis.\
    In the Business Manager, change the Shipping Status to “Shipped” to fulfill the order. \
-   ![](.gitbook/assets/OrderDetails.png) \
+   <img src=".gitbook/assets/OrderDetails.png" alt="" data-size="original"> \
    To cancel the order, change the Order Status to “Cancelled”.\
-   &#x20;![](.gitbook/assets/OrderCancelled.png) \
+   &#x20;<img src=".gitbook/assets/OrderCancelled.png" alt="" data-size="original"> \
    The next time the **DigitalRiver\_fulfillOrders** job runs, the fulfillment or cancellation request will be sent to Digital River.
 2. If URL endpoints or 3rd party integration perform order fulfillment/cancellation, you can inject the drOrderHelper module in the code to send fulfillments to Digital River. To do so, import the module:
 

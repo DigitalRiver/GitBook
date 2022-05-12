@@ -338,7 +338,7 @@ There is a service sharing one profile and one credential.
 
 * DigitalRiver.http.service
 
-Also, this cartridge uses the [Digital River Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) external script to handle client payments.
+Also, this cartridge uses the Digital River [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) external script to handle client payments.
 
 {% hint style="info" %}
 **Important**: The DIGITAL\_RIVER\_DROPIN payment integration represents not one but multiple payment types such as credit card, PayPal, Wire Transfer, and so on. The Drop-in integration provides the selection of payment types, and the client-side/backend scripts handle it. We designed this cartridge mainly to handle the credit card payment type, though it will also successfully process any other payment type provided by the Drop-in integration. To add any business logic for a specific payment type or provide shoppers with a better customer experience, you can extend Drop-in data handlers as described below:
