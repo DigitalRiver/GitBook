@@ -4,7 +4,7 @@ description: Learn how to load the Digital River tax groups.
 
 # Step 3: Load the Digital River tax groups
 
-Load the Digital River-supported tax groups in the merchant system for determining the tax code for SKU creation. See [setting-the-tax-code](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/skus/creating-and-updating-skus#setting-the-tax-code) for more details related to tax groups and types.&#x20;
+Load the Digital River-supported tax groups in the merchant system for determining the tax code for SKU creation. See [setting-the-tax-code](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#tax-code) for more details related to tax groups and types.&#x20;
 
 To load and execute the existing tax groups from Digital River, use the `ImpEx` script below.
 

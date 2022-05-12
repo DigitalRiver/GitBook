@@ -57,7 +57,7 @@ The Digital River SAP Commerce Cloud extension provides the service class for ca
 * `order.charge.refund.complete`
 * `refund.complete`
 
-Merchants can create a [webhook](https://docs.digitalriver.com/digital-river-api/dashboard/developers/webhooks/creating-a-webhook) by providing the URL for the service endpoint URL in the [Dashboard](https://dashboard.digitalriver.com). Check the status of the events mentioned above from the [event log](https://docs.digitalriver.com/digital-river-api/dashboard/developers/event-logs).
+Merchants can create a [webhook](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/webhooks/creating-a-webhook) by providing the URL for the service endpoint URL in the [Dashboard](https://dashboard.digitalriver.com). Check the status of the events mentioned above from the [event log](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/event-logs).
 
 ![](../.gitbook/assets/10CreateWebhook.png)
 
