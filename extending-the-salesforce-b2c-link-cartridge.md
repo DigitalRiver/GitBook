@@ -1344,7 +1344,7 @@ if ($('#dropInContainer').data('enabled')) {
 
 ## Drop-in data handlers <a href="#external-interfaces" id="external-interfaces"></a>
 
-The cartridge uses the [Digital River API](https://docs.digitalriver.com/digital-river-api/) endpoints and the [Digital River Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) external script to handle client payments. The DigitalRiver.http.service shares one profile and one credential.
+The cartridge uses the [Digital River API](https://docs.digitalriver.com/digital-river-api/) endpoints and the Digital River [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) external script to handle client payments. The DigitalRiver.http.service shares one profile and one credential.
 
 ### dropinHelper.js
 
@@ -1465,7 +1465,7 @@ The handler script contains simple examples of handlers, which can be modified a
 * `refund.pending`
 * `refund.complete`
 
-If the `hookType` (webhook's [event type](https://docs.digitalriver.com/digital-river-api/events-and-webhooks-1/events-1/event-types)) is set in the request body (see [Step 1: Catch request data](operations-and-maintenance.md#step-1-catch-request-data) in [Controller](operations-and-maintenance.md#controller)), the handler script handles events by the event type and returns a `200 OK` response.
+If the `hookType` (webhook's [event type](https://docs.digitalriver.com/digital-river-api/order-management/events-and-webhooks-1/events-1)) is set in the request body (see [Step 1: Catch request data](operations-and-maintenance.md#step-1-catch-request-data) in [Controller](operations-and-maintenance.md#controller)), the handler script handles events by the event type and returns a `200 OK` response.
 
 ![](.gitbook/assets/Create-Webhook-event-type.png)
 
