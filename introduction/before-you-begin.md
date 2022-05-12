@@ -38,8 +38,8 @@ In the standard checkout flow, you can apply the payment against the order using
 
 ### 3. Disclosures
 
-Digital River requires that you display certain disclosures and related links on the checkout pages and shopper notifications (transactional emails). You can use [DigitalRiver object](https://docs.digitalriver.com/commerce-api/payment-integrations-1/digitalriver.js/reference/digitalriver-object) provided by [DigitalRiver.js](https://docs.digitalriver.com/commerce-api/payment-integrations-1/digitalriver.js) to create various disclosures, Terms of Sale, warranty information, and California Privacy Rights required by Digital River.
+Digital River requires that you display certain disclosures and related links on the checkout pages and shopper notifications (transactional emails). You can use [DigitalRiver object](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object) provided by [DigitalRiver.js](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/digitalriver.js) to create various disclosures, Terms of Sale, warranty information, and California Privacy Rights required by Digital River.
 
 ### 4. Selling entities <a href="#4-selling-entities" id="4-selling-entities"></a>
 
-The Salesforce B2B Commerce App relies on the Hosted Commerce platform via the Commerce API. See [Selling entities](https://docs.digitalriver.com/commerce-api/orders-1/selling-entities) for more information.
+The Salesforce B2B Commerce App relies on the Hosted Commerce platform via the Commerce API. See [Selling entities](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/creating-checkouts/selling-entities) for more information.
