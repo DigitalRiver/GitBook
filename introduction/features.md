@@ -25,6 +25,6 @@ The Salesforce B2C LINK Cartridge provides the following features:
 
 ## Drop-in payment methods
 
-The Digital River Salesforce B2C LINK Cartridge for Commerce Cloud features [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in). Drop-in is a turnkey integration that allows you to dynamically update payment methods in your store's checkout experience. The integration uses the DigitalRiver.js library and comes with a standardized template that can be customized with minimal design work.
+The Digital River Salesforce B2C LINK Cartridge for Commerce Cloud features [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in). Drop-in is a turnkey integration that allows you to dynamically update payment methods in your store's checkout experience. The integration uses the DigitalRiver.js library and comes with a standardized template that can be customized with minimal design work.
 
-See [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) for a complete list of supported payment methods.
+See [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) for a complete list of supported payment methods.
