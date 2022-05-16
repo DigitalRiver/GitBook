@@ -13,7 +13,7 @@ VTEX provides an enterprise commerce platform for delivering the experience cons
 * **API Fleet and version**: Digital River API–v2021-03-23&#x20;
 
 {% hint style="warning" %}
-A Digital River account is required to use this extension. If you do not have a Digital River account, you may [create a test account](https://docs.digitalriver.com/digital-river-api/getting-started-1/quick-start-guide#step-1-create-a-test-account) in our [Dashboard](https://dashboard.digitalriver.com/signup). The extension will not create an account for you. To upgrade to a production-ready account, contact [vtex@digitalriver.com](mailto:vtex@digitalriver.com).&#x20;
+A Digital River account is required to use this extension. If you do not have a Digital River account, you may [create a test account](https://docs.digitalriver.com/digital-river-api/quick-start-guide#step-1-create-a-test-account) in our [Dashboard](https://dashboard.digitalriver.com/signup). The extension will not create an account for you. To upgrade to a production-ready account, contact [vtex@digitalriver.com](mailto:vtex@digitalriver.com).&#x20;
 {% endhint %}
 
 ## Supported browsers

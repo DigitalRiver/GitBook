@@ -6,7 +6,7 @@ description: Learn how to install and configure the Digital River app.
 
 ## Step 1: Install the Digital River app
 
-1. Download the Digital River app from [https://apps.vtex.com/](https://apps.vtex.com).
+1. Download the Digital River app from [https://apps.vtex.com/](https://apps.vtex.com/).
 2. Install the Digital River app in your account using the following command-line interface (CLI):\
    `vtex install vtexus.connector-digital-river`
 
@@ -15,7 +15,7 @@ If you have multiple VTEX accounts configured in a marketplace-seller relationsh
 ## Step 2: Configure the Digital River settings
 
 {% hint style="warning" %}
-You must have a Digital River account and register all SKUs with Digital River. You can register the SKUs using this app's catalog sync feature or through the [Digital River API](https://docs.digitalriver.com/digital-river-api/). If a shopper attempts to check out with an unregistered SKU, the Digital River [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) component will fail to load.&#x20;
+You must have a Digital River account and register all SKUs with Digital River. You can register the SKUs using this app's catalog sync feature or through the [Digital River API](https://docs.digitalriver.com/digital-river-api/). If a shopper attempts to check out with an unregistered SKU, the Digital River [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) component will fail to load.&#x20;
 {% endhint %}
 
 1. Under the **Other** section in the admin sidebar, click `Digital River` and then `Configuration`.&#x20;
