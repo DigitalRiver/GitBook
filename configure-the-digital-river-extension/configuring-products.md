@@ -23,7 +23,7 @@ The API call executed for syncing products with the Digital River SKU Service is
    * **Tax Group**–From the dropdown list, choose the Tax Group that applies to your product. The Tax Group selection will determine the Tax Type options. If you have questions, contact your Digital River account representative.
    * **Tax Type**–From the dropdown list, choose the Tax Type that applies to your product.
    * **Country of Origin**–From the dropdown list, choose the Country of Origin for your product. See this [country codes list](https://www.iso.org/iso-3166-country-codes.html).
-   * **HS Code**–Enter the HS Code that applies to your product. This field is only used if you are set up to provide [landed costs](broken-reference) to your shoppers. If you are interested in enabling landed costs, contact your Digital River account representative.
+   * **HS Code**–Enter the HS Code that applies to your product. This field is only used if you are set up to provide landed costs to your shoppers. If you are interested in enabling landed costs, contact your Digital River account representative.
 
 {% hint style="info" %}
 **Note:** For each product, you must deﬁne all values in the following table except HS codes before launching a live storefront. The HS codes are only required if you want to calculate landed cost. These values will be imported into the Digital River SKU Service and the data will be used to ensure proper taxation.

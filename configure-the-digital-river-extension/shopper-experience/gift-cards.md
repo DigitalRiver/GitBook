@@ -4,7 +4,7 @@ description: Learn how shoppers can use gift cards.
 
 # Gift Cards
 
-Shoppers can use one or more Magento Gift Cards to pay for all or part of an order processed by Digital River. They can use Gift Cards in combination with multiple [payment methods](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/payment-sources/using-the-source-identifier#combining-primary-and-secondary-payment-sources).
+Shoppers can use one or more Magento Gift Cards to pay for all or part of an order processed by Digital River. They can use Gift Cards in combination with [multiple payment methods](https://docs.digitalriver.com/digital-river-api/payments/payment-sources/using-the-source-identifier#combining-primary-and-secondary-payment-sources).
 
 With Store Credit, when a shopper pays for an order using a combination of Gift Card and one of the other supported payment methods, the DR **Payment Method** will be the non-Gift Card payment instrument (for example, PayPal). When the shopper pays an order entirely with a Gift Card, the **DR Payment Method** will be **CustomerCredit**.
 

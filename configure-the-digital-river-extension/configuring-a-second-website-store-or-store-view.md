@@ -6,7 +6,7 @@ description: Learn how to configure a second website, store, or store view.
 
 You can configure the Digital River Extension for the website from the Admin Panel interface. This allows administrators to offer different payment methods and currencies for each region.
 
-The Base Conﬁguration locale ﬁeld is the only field that changes. Digital River will provide the locale needed to meet your language, payment, and currency requirements. Payments are also conﬁgurable via [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) by the website.
+The Base Conﬁguration locale ﬁeld is the only field that changes. Digital River will provide the locale needed to meet your language, payment, and currency requirements. Payments are also conﬁgurable via [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) by the website.
 
 See [Set up multiple websites, stores, and store views in the Admin](https://devdocs.magento.com/guides/v2.3/config-guide/multi-site/ms\_websites.html) for additional information.
 

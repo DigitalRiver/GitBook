@@ -13,14 +13,14 @@ Digital River allows you to self-service your own test account, which you can us
 
 1. In your **Catalog**, fill out the Digital River fields on a product and save it.
 2. In the **Catalog Sync Grid**, click **Manual Sync To Digital River**.\
-   &#x20; ![](.gitbook/assets/ManualCatalogSync.png)&#x20;
+   &#x20; <img src=".gitbook/assets/ManualCatalogSync.png" alt="" data-size="original">&#x20;
 3. When the sync completes, verify that the status is `Success`.
 
 ![](.gitbook/assets/SyncResultsTable.png)
 
 ## Placing an order
 
-1. Place an order in your storefront for one of the products you synced to Digital River. See [Testing scenarios](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/testing-scenarios) for more information.
+1. Place an order in your storefront for one of the products you synced to Digital River. See [Testing scenarios](https://docs.digitalriver.com/digital-river-api/developer-resources/testing-scenarios) for more information.
 2. After placing the order, view that order in the Magento admin screens.
 3. In the **Order & Account Information** section, verify that you see a (DR) Digital River Order ID.&#x20;
 
