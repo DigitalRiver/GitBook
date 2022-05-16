@@ -80,7 +80,7 @@ Your webhook endpoint URL should be the URL to your Magento installation + `drpa
 
 ### Step 3c: Create webhooks&#x20;
 
-When creating webhooks, you need to add endpoints from the [Dashboard](https://dashboard.digitalriver.com):
+When creating webhooks, you need to add endpoints from the [Dashboard](https://dashboard.digitalriver.com/):
 
 1. From the **Webhooks** page, click **Create Webhook**.
 2. Toggle **Disabled** to **Enabled**.
@@ -88,7 +88,7 @@ When creating webhooks, you need to add endpoints from the [Dashboard](https://d
 4. Enter the URL for the endpoint in the **Endpoint URL** field.
 5. Select the check box next to each event you want to associate with the endpoint or select the **Events Selected** check box to select all events. At least one event type must be selected.
 6. Scroll down and click **Save**.\
-   &#x20;![](.gitbook/assets/CreateWebhook.png)&#x20;
+   &#x20;<img src=".gitbook/assets/CreateWebhook.png" alt="" data-size="original">&#x20;
 
 Webhooks must be created for the following events:
 
@@ -139,9 +139,9 @@ To ensure the correct display of taxes in all situations, conﬁgure your Magent
 
 1. Select **Stores**, select **Conﬁguration**, select **Sales**, and then click **Tax**.&#x20;
 2. In the **Tax Classes** section, update **Tax Class for Shipping** to **Taxable Goods**.\
-   &#x20;![](.gitbook/assets/8TaxClassShipping.png)&#x20;
+   &#x20;<img src=".gitbook/assets/8TaxClassShipping.png" alt="" data-size="original">&#x20;
 3. In the **Shopping Cart Display Settings**, keep the **Display Full Tax Summary** set to **No**.\
-   &#x20;![](.gitbook/assets/9DisplayFullTax.png)&#x20;
+   &#x20;<img src=".gitbook/assets/9DisplayFullTax.png" alt="" data-size="original">&#x20;
 
 #### Tax exclusive settings
 
@@ -149,9 +149,9 @@ To display tax exclusive values in your catalog, order summary, and checkout, co
 
 1. Select **Stores**, select **Conﬁguration**, select **Sales**, select **Tax**, and then click **Calculation Settings**.
 2. Verify **Catalog Prices** is set to `Excluding Tax` —this is the default setting.\
-   &#x20;![](.gitbook/assets/10CatalogPrices.png)&#x20;
+   &#x20;<img src=".gitbook/assets/10CatalogPrices.png" alt="" data-size="original">&#x20;
 3. On the same **Tax** page, click to expand the **Price Display Settings** section, the **Shopping Cart Display Settings** section, and the **Orders**, **Invoices**, **Credit Memos Display Settings** section. In each section, verify the following are also conﬁgured for `Excluding Tax`—these are the default settings.\
-   &#x20;![](.gitbook/assets/11PriceDisplaySettings.png)&#x20;
+   &#x20;<img src=".gitbook/assets/11PriceDisplaySettings.png" alt="" data-size="original">&#x20;
 4. All prices in the catalog must be exclusive of tax.
 
 ### Tax Inclusive settings
@@ -159,9 +159,9 @@ To display tax exclusive values in your catalog, order summary, and checkout, co
 To display tax inclusive values in your catalog, order summary, and checkout, configure your settings as follows:
 
 1. Select **Stores**, select **Conﬁguration**, select **Sales**, select **Tax**, and then click **Calculation Settings**.\
-   &#x20;![](.gitbook/assets/13PriceDisplaySettings.png)&#x20;
+   &#x20;<img src=".gitbook/assets/13PriceDisplaySettings.png" alt="" data-size="original">&#x20;
 2. Click the **Catalog Prices** dropdown list and change the setting to `Including Tax`.\
-   &#x20;![](.gitbook/assets/14CatalogPrices.png)&#x20;
+   &#x20;<img src=".gitbook/assets/14CatalogPrices.png" alt="" data-size="original">&#x20;
 3. On the same **Tax** page, click to expand the **Price Display Settings** section, the **Shopping Cart Display Settings** section, and the **Orders, Invoices, Credit Memos Display Settings** section. In each section, update the configuration to `Including Tax`.
 
 ## Configuring products
@@ -248,7 +248,7 @@ Since Digital River is the merchant of record on all transactions, our Terms of 
 
 The Digital River Extension for Magento is conﬁgurable by the website in the Magento Admin Panel interface. This enables administrators to offer different payment methods and different currencies to different regions.
 
-The only ﬁeld that changes is the Base Conﬁguration locale ﬁeld. Digital River will provide the locale needed to meet your language, payment, and currency requirements. Payments are also conﬁgurable via [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) by the website.
+The only ﬁeld that changes is the Base Conﬁguration locale ﬁeld. Digital River will provide the locale needed to meet your language, payment, and currency requirements. Payments are also conﬁgurable via [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) by the website.
 
 See [Set up multiple websites, stores, and store views in the Admin](https://devdocs.magento.com/guides/v2.3/config-guide/multi-site/ms\_websites.html) for additional information.
 
@@ -267,10 +267,10 @@ To ensure translated text is reﬂected on the Magento website or store view, it
 
 Digital River's extension adds two columns to the Sales Orders grid: **DR Order ID** and **DR Payment Method**. To access the Sales Orders grid, select **Sales**, and then select **Orders** using the **Columns** dropdown.
 
-| **Sales Orders Grid**   | Description                                                                                                                                                                                                                                                                                                                                                                                           |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| DR Order ID             | <p>Lists the primary order identification number in Digital River’s systems. <br><strong>Note</strong>: The Magento Commerce ID is a secondary ID in Digital River’s systems. <img src=".gitbook/assets/DR Order ID and DR Payment Method (1).png" alt=""> </p>                                                                                                                                       |
-| DR Payment Method       | <p>Replaces the standard <strong>Payment Method</strong> column. One or both can be used, however, the <strong>Payment Method</strong> column will always display <strong>DigitalRiver Payments</strong>, where the <strong>DR Payment Method</strong> will display the actual payment method used on the transaction.</p><p><img src=".gitbook/assets/DR Payment Method (1).png" alt=""> </p><p></p> |
+| **Sales Orders Grid**   | Description                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| DR Order ID             | <p>Lists the primary order identification number in Digital River’s systems. <br><strong>Note</strong>: The Magento Commerce ID is a secondary ID in Digital River’s systems. <img src=".gitbook/assets/DR Order ID and DR Payment Method (1).png" alt="" data-size="original"> </p>                                                                                                                                       |
+| DR Payment Method       | <p>Replaces the standard <strong>Payment Method</strong> column. One or both can be used, however, the <strong>Payment Method</strong> column will always display <strong>DigitalRiver Payments</strong>, where the <strong>DR Payment Method</strong> will display the actual payment method used on the transaction.</p><p><img src=".gitbook/assets/DR Payment Method (1).png" alt="" data-size="original"> </p><p></p> |
 
 ### Saved payment methods
 
@@ -280,7 +280,7 @@ At this time, payment methods can only be saved to a shopper’s account during 
 
 ### Store Credit&#x20;
 
-Customers can now use Magento Store Credit to pay for all or part of an order processed by Digital River. Store Credit can be used in combination with multiple [payment methods](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/payment-sources/using-the-source-identifier#combining-primary-and-secondary-payment-sources).&#x20;
+Customers can now use Magento Store Credit to pay for all or part of an order processed by Digital River. Store Credit can be used in combination with [multiple payment methods](https://docs.digitalriver.com/digital-river-api/payments/payment-sources/using-the-source-identifier#combining-primary-and-secondary-payment-sources).&#x20;
 
 For orders paid with a combination of Store Credit and one of the other supported payment methods, the **DR Payment Method** will be listed as the non-Store Credit payment instrument (for example,  PayPal). For orders paid entirely with Store Credit, the **DR Payment Method** will be **CustomerCredit**.
 
@@ -312,7 +312,7 @@ Store Credit can still be returned to the shopper’s account by adding it direc
 
 ### Gift Cards
 
-Customers can now use one or more Magento Gift Cards to pay for all or part of an order processed by Digital River. Gift Cards can be used in combination with multiple [payment methods](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/payment-sources/using-the-source-identifier#combining-primary-and-secondary-payment-sources).
+Customers can now use one or more Magento Gift Cards to pay for all or part of an order processed by Digital River. Gift Cards can be used in combination with [multiple payment methods](https://docs.digitalriver.com/digital-river-api/payments/payment-sources/using-the-source-identifier#combining-primary-and-secondary-payment-sources).
 
 With Store Credit, orders paid with a combination of Gift Card and one of the other supported payment methods, the **DR Payment Method** will be listed as the non-Gift Card payment instrument (for example, PayPal). For orders paid entirely with a Gift Card, the **DR Payment Method** will be **CustomerCredit**.
 
@@ -337,8 +337,8 @@ The Digital River Extension allows shoppers to enter their **Tax Identification 
 The shopper must:
 
 1. Check the **This is a Business Purchase** box on the **Shipping Address** screen, when purchasing physical goods, or on the **Payment Information** screen when purchasing digital or virtual goods.\
-   &#x20;![](<.gitbook/assets/Tax ID number 1 (7).png>)\
-   &#x20;![](<.gitbook/assets/Tax ID number 2 (4).png>)&#x20;
+   &#x20;<img src=".gitbook/assets/Tax ID number 1 (7).png" alt="" data-size="original">\
+   &#x20;<img src=".gitbook/assets/Tax ID number 2 (4).png" alt="" data-size="original">&#x20;
 2. Enter the **Tax ID** and click **Apply**. &#x20;
 
 #### **Order summary before application of the Tax ID**&#x20;
