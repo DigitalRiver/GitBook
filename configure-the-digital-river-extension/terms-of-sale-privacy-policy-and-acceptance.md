@@ -10,4 +10,4 @@ Since Digital River is the merchant of record on all transactions, our Terms of 
 
 ![](../.gitbook/assets/termsofsale.png)
 
-See [Compliance requirements](https://docs.digitalriver.com/digital-river-api/getting-started-1/standards-and-certifications/compliance-requirements) for more information on compliance obligations.
+See [Compliance requirements](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/digitalriver.js/reference/elements/compliance-elements) for more information on compliance obligations.

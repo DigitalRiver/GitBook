@@ -8,7 +8,7 @@ description: Learn how shoppers can use store credit.
 **Note:** Store credit is only available in the Adobe Commerce edition.
 {% endhint %}
 
-Shoppers can use Magento Store Credit to pay for all or part of an order processed by Digital River. Store Credit can be used in combination with multiple [payment methods](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/payment-sources/using-the-source-identifier#combining-primary-and-secondary-payment-sources).&#x20;
+Shoppers can use Magento Store Credit to pay for all or part of an order processed by Digital River. Store Credit can be used in combination with [multiple payment methods](https://docs.digitalriver.com/digital-river-api/payments/payment-sources/using-the-source-identifier#combining-primary-and-secondary-payment-sources).&#x20;
 
 For orders paid with a combination of Store Credit and one of the other supported payment methods, the **DR Payment Method** will be listed as the non-Store Credit payment instrument (for example,  PayPal). For orders paid entirely with Store Credit, the **DR Payment Method** will be **CustomerCredit**.
 

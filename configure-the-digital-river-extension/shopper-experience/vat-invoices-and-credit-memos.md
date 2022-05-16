@@ -22,7 +22,7 @@ You can find the shopper's invoices and credit memos on the Order Information pa
 
 ![](../../.gitbook/assets/Invoicesandcreditmemos.PNG)
 
-Use the following link to view mock PDF examples of a [Digital River order invoice and a credit memo](https://docs.digitalriver.com/digital-river-api/orders/accessing-invoices-and-credit-memos#mock-order-invoices-and-credit-memos).
+Use the following link to view [mock PDF examples of a Digital River order invoice and a credit memo](https://docs.digitalriver.com/digital-river-api/order-management/orders/accessing-invoices-and-credit-memos#mock-order-invoices-and-credit-memos).
 
 {% hint style="info" %}
 The VAT Invoice and the reports within the Digital River [Dashboard](https://dashboard.digitalriver.com/login) show the final price of the order. Neither the VAT Invoice nor reports itemize any discounts or the amount paid by a specific payment method if the shopper used multiple payment methods.

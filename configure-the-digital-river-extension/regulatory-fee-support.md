@@ -5,7 +5,7 @@ description: Learn more about regulatory fee support.
 # Regulatory fee support
 
 {% hint style="warning" %}
-**Important**: Regulatory fee creation and management are outside the scope of Digital River’s Extension. Before you enable fixed product taxes, create the [regulatory fees](https://docs.digitalriver.com/digital-river-api/regulatory-fees) in Digital River’s Fee Service. [Create your own fees](https://docs.digitalriver.com/digital-river-api/regulatory-fees/managing-regulatory-fees#creating-a-fee), or work with your Digital River project manager to manage regulatory fees.
+**Important**: Regulatory fee creation and management are outside the scope of Digital River’s Extension. Before you enable fixed product taxes, create the [regulatory fees](https://docs.digitalriver.com/digital-river-api/product-management/regulatory-fees) in Digital River’s Fee Service. [Create your own fees](https://docs.digitalriver.com/digital-river-api/product-management/regulatory-fees/managing-regulatory-fees), or work with your Digital River project manager to manage regulatory fees.
 {% endhint %}
 
 {% hint style="info" %}

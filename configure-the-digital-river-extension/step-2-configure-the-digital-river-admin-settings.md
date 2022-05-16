@@ -34,5 +34,5 @@ description: >-
 
 1. Click Stored Payment Methods to expand it and complete the following fields:&#x20;
    * **Enable**–Select **Yes** or **No**. By selecting **Yes**, you are electing to allow shoppers to store their payment methods for later use.
-   * **Default Selling Entity**–Type the name of the appropriate [selling entity](https://docs.digitalriver.com/digital-river-api/checkouts/selling-entities) provided by your Digital River representative. You must provide the name of the selling entity in this field to ensure the appropriate compliance links appear on the page.
+   * **Default Selling Entity**–Type the name of the appropriate [selling entity](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/creating-checkouts/selling-entities) provided by your Digital River representative. You must provide the name of the selling entity in this field to ensure the appropriate compliance links appear on the page.
 2. Click **Save Config** when you are finished.
