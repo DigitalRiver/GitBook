@@ -18,7 +18,7 @@ description: >-
 
 ## Exhibit A: Direct Debit supported countries
 
-See [Direct Debit](https://app.gitbook.com/@digital-river/s/digitalriver-js/payment-methods/direct-debit) for the latest information on supported countries.
+See [Direct Debit](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/digitalriver.js/payment-methods/direct-debit#configuring-sepa-direct-debit-for-digitalriver.js) for the latest information on supported countries.
 
 |               |                             |
 | ------------- | --------------------------- |
@@ -107,7 +107,7 @@ See [Apple Pay](https://app.gitbook.com/@digital-river/s/digitalriver-js/payment
 
 ## Exhibit D: Wire Transfer supported currencies
 
-See [Wire Transfer](https://app.gitbook.com/@digital-river/s/payment-integrations/digitalriver.js/payment-methods/wire-transfer) for the latest information on supported currencies.
+See [Wire Transfer](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/digitalriver.js/payment-methods/wire-transfer) for the latest information on supported currencies.
 
 |     |     |
 | --- | --- |
@@ -126,7 +126,7 @@ See [Wire Transfer](https://app.gitbook.com/@digital-river/s/payment-integration
 
 ## Exhibit E: Wire Transfer supported countries
 
-See [Wire Transfer](https://app.gitbook.com/@digital-river/s/payment-integrations/digitalriver.js/payment-methods/wire-transfer) for the latest information on supported countries.
+See [Wire Transfer](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/digitalriver.js/payment-methods/wire-transfer) for the latest information on supported countries.
 
 |                |                      |
 | -------------- | -------------------- |
@@ -153,7 +153,7 @@ See [Wire Transfer](https://app.gitbook.com/@digital-river/s/payment-integration
 
 ## Exhibit F: Klarna supported countries and currencies
 
-See [Klarna](https://app.gitbook.com/@digital-river/s/payment-integrations/digitalriver.js/payment-methods/klarna) for the latest information on supported currencies.
+See [Klarna](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/digitalriver.js/payment-methods/klarna) for the latest information on supported currencies.
 
 | Countries      | Currencies |
 | -------------- | ---------- |
@@ -169,7 +169,7 @@ See [Klarna](https://app.gitbook.com/@digital-river/s/payment-integrations/digit
 
 ## Exhibit G: Eligible tax group, type, and code
 
-[Click this link](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/skus/creating-and-updating-skus#setting-the-tax-code) to learn how to set the tax code and what codes are available in the Digital River API.
+[Click this link](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#tax-code) to learn how to set the tax code and what codes are available in the Digital River API.
 
 ## Exhibit H: Web site, store, store view base configuration
 
