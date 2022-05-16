@@ -6,7 +6,7 @@ description: Learn more about tax codes and view the sequence diagram.
 
 ## Exhibit A: Eligible tax group, type, and code
 
-[Click this link](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/skus/creating-and-updating-skus#setting-the-tax-code) to learn which tax codes are available in the Digital River API.&#x20;
+[Click this link](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#tax-code) to learn which tax codes are available in the Digital River API.&#x20;
 
 ## Exhibit B: Sequence diagram&#x20;
 

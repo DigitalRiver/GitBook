@@ -17,7 +17,7 @@ A Digital River account is required to use this extension. If you do not have a 
 
 The Digital River dashboard is your portal to your Digital River account. Dashboard is where you retrieve your API keys, view Payouts, or search API logs.&#x20;
 
-Sign in to [Dashboard](https://dashboard.digitalriver.com/login). On the **API keys** page, make note of the **Standard keys** and **Restricted keys**. You will use these keys in[ Step 2](configure-the-magento-extension.md#step-2-configure-the-digital-river-admin-settings-in-magento). See [Getting your API keys](https://docs.digitalriver.com/digital-river-api/dashboard/developers/api-keys/getting-your-api-keys) in the Dashboard documentation for instructions on retrieving your API credentials.
+Sign in to [Dashboard](https://dashboard.digitalriver.com/login). On the **API keys** page, make note of the **Standard keys** and **Restricted keys**. You will use these keys in[ Step 2](configure-the-magento-extension.md#step-2-configure-the-digital-river-admin-settings-in-magento). See [Getting your API keys](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/api-keys/getting-your-api-keys) in the Dashboard documentation for instructions on retrieving your API credentials.
 
 ![](.gitbook/assets/APIKeysNew.png)
 
@@ -89,9 +89,9 @@ To ensure the correct display of taxes in all situations, conﬁgure your Magent
 
 1. Select **Stores**, select **Conﬁguration**, select **Sales**, and then click **Tax**.&#x20;
 2. In the **Tax Classes** section, update **Tax Class for Shipping** to **Taxable Goods**.\
-   &#x20;![](.gitbook/assets/8TaxClassShipping.png)&#x20;
+   &#x20;<img src=".gitbook/assets/8TaxClassShipping.png" alt="" data-size="original">&#x20;
 3. In the **Shopping Cart Display Settings**, keep the **Display Full Tax Summary** set to **No**.\
-   &#x20;![](.gitbook/assets/9DisplayFullTax.png)&#x20;
+   &#x20;<img src=".gitbook/assets/9DisplayFullTax.png" alt="" data-size="original">&#x20;
 
 #### Tax exclusive settings
 
@@ -99,9 +99,9 @@ To display tax exclusive values in your catalog, order summary, and checkout, co
 
 1. Select **Stores**, select **Conﬁguration**, select **Sales**, select **Tax**, and then click **Calculation Settings**.
 2. Verify **Catalog Prices** is set to `Excluding Tax` —this is the default setting.\
-   &#x20;![](.gitbook/assets/10CatalogPrices.png)&#x20;
+   &#x20;<img src=".gitbook/assets/10CatalogPrices.png" alt="" data-size="original">&#x20;
 3. On the same **Tax** page, click to expand the **Price Display Settings** section, the **Shopping Cart Display Settings** section, and the **Orders**, **Invoices**, **Credit Memos Display Settings** section. In each section, verify the following are also conﬁgured for `Excluding Tax`—these are the default settings.\
-   &#x20;![](.gitbook/assets/11PriceDisplaySettings.png)&#x20;
+   &#x20;<img src=".gitbook/assets/11PriceDisplaySettings.png" alt="" data-size="original">&#x20;
 4. All prices in the catalog must be exclusive of tax.
 
 ### Tax Inclusive settings
@@ -109,9 +109,9 @@ To display tax exclusive values in your catalog, order summary, and checkout, co
 To display tax inclusive values in your catalog, order summary, and checkout, configure your settings as follows:
 
 1. Select **Stores**, select **Conﬁguration**, select **Sales**, select **Tax**, and then click **Calculation Settings**.\
-   &#x20;![](.gitbook/assets/13PriceDisplaySettings.png)&#x20;
+   &#x20;<img src=".gitbook/assets/13PriceDisplaySettings.png" alt="" data-size="original">&#x20;
 2. Click the **Catalog Prices** dropdown list and change the setting to `Including Tax`.\
-   &#x20;![](.gitbook/assets/14CatalogPrices.png)&#x20;
+   &#x20;<img src=".gitbook/assets/14CatalogPrices.png" alt="" data-size="original">&#x20;
 3. On the same **Tax** page, click to expand the **Price Display Settings** section, the **Shopping Cart Display Settings** section, and the **Orders, Invoices, Credit Memos Display Settings** section. In each section, update the configuration to `Including Tax`.
 
 ## Configuring products
@@ -192,7 +192,7 @@ Since Digital River is the Merchant of Record on all transactions, our Terms of 
 
 The Digital River Extension for Magento is conﬁgurable by the website in the Magento Admin Panel interface. This enables administrators to offer different payment methods and different currencies to different regions.
 
-The only ﬁeld that changes is the Base Conﬁguration locale ﬁeld. Digital River will provide the locale needed to meet your language, payment, and currency requirements. Payments are also conﬁgurable via [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) by the website.
+The only ﬁeld that changes is the Base Conﬁguration locale ﬁeld. Digital River will provide the locale needed to meet your language, payment, and currency requirements. Payments are also conﬁgurable via [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) by the website.
 
 See [Set up multiple websites, stores, and store views in the Admin](https://devdocs.magento.com/guides/v2.3/config-guide/multi-site/ms\_websites.html) for additional information.
 
