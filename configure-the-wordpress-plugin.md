@@ -18,7 +18,7 @@ After initial installation, continue following the steps below to customize and 
 
 1. Click Digital River and select **Settings**.
 2. On the **General** tab, enter your Site ID, API Key, API Secret, Domain, Payment Services API Plugin Key, Username, and Password. \
-   &#x20;![](.gitbook/assets/DRSettingsGenl.png) \
+   &#x20;<img src=".gitbook/assets/DRSettingsGenl.png" alt="" data-size="original"> \
    Choose whether you want to run a scheduled product import or import your products manually. Leave the box unchecked to import manually. For a scheduled import, click the check box to set the import schedule. The import occurs twice daily to import and sync products every 12 hours (12 hours from the time the box is checked and the time is set).
 
 ![](.gitbook/assets/DRSettingsGenlScheduled.png)
@@ -63,7 +63,7 @@ For non-U.S. locales, Tax ID is VAT ID at checkout. A valid ID is required and w
 
 ### Step 4d: Payments tab
 
-Multiple payment types are available, such as credit cards, Apple Pay, Google Pay, PayPal, and others. Sample code can be found on the [Digitalriver.js](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/digitalriver.js) and [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) documentation pages. Your Checkout page will reflect the payment types you choose to have configured for your API keys. On the **Payments** tab, click **Save Changes** to save your settings.
+Multiple payment types are available, such as credit cards, Apple Pay, Google Pay, PayPal, and others. Sample code can be found on the [Digitalriver.js](https://docs.digitalriver.com/commerce-api/payment-integrations-1/digitalriver.js) and [Drop-in](https://docs.digitalriver.com/commerce-api/payment-integrations-1/drop-in) documentation pages. Your Checkout page will reflect the payment types you choose to have configured for your API keys. On the **Payments** tab, click **Save Changes** to save your settings.
 
 ![](.gitbook/assets/DRSettingsPayments.png)
 
@@ -71,9 +71,9 @@ Multiple payment types are available, such as credit cards, Apple Pay, Google Pa
 
 1. Click **Digital River** and select **Products**.
 2. To import products manually, click **Import Products** and view a progress bar during the import. \
-   &#x20;![](<.gitbook/assets/ImportingProducts (1).png>)&#x20;
+   &#x20;<img src=".gitbook/assets/ImportingProducts (1).png" alt="" data-size="original">&#x20;
 3. Once imported, you can see your entire product catalog, including details like currencies, locales, and categories.\
-   &#x20;![](<.gitbook/assets/drsettingsimportproducts-1- (1).png>)&#x20;
+   &#x20;<img src=".gitbook/assets/drsettingsimportproducts-1- (1).png" alt="" data-size="original">&#x20;
 
 {% hint style="warning" %}
 **Important**: You can only update products in Global Commerce. Once updated, you must manually sync them with WordPress. See [Edit your product](configure-the-wordpress-plugin.md#edit-your-product) for instructions on updating the product.
@@ -85,12 +85,12 @@ To import updated products, you must click **Import Products** on the Digital Ri
 
 1. Click **Appearance**, click **Menus**, and then click the **Edit Menus** tab if it is not already selected. (Note that you can add a new menu by clicking **create a new menu**, which helps you name and build a new menu.)
 2. In the Add menu items group, expand the **Product Categories** menu. Click either the **Most Used** or **View All** tab, and click the **Product Categories** check boxes for the menu items you want to display. Then click **Add to Menu**.\
-   &#x20;![](.gitbook/assets/AddMenuItems.png) ![](broken-reference)&#x20;
+   &#x20;<img src=".gitbook/assets/AddMenuItems.png" alt="" data-size="original"> <img src="broken-reference" alt="" data-size="original">&#x20;
 3.  The new choices now appear In the Menu structure group.
 
     Use drag and drop to arrange your menu items in the order you want them to appear.\
-    &#x20;![](.gitbook/assets/MenuSettings.png)&#x20;
-4. In the Menu Settings group, click to select the **Auto add pages** option. In the Display location group, click one or more display locations for the menu.  ![](broken-reference)&#x20;
+    &#x20;<img src=".gitbook/assets/MenuSettings.png" alt="" data-size="original">&#x20;
+4. In the Menu Settings group, click to select the **Auto add pages** option. In the Display location group, click one or more display locations for the menu.  <img src="broken-reference" alt="" data-size="original">&#x20;
 5. When you are finished, click **Save Menu** to save your changes.
 6. Verify the menu appears on the Home page.
 
@@ -114,7 +114,7 @@ Note that WordPress only syncs products assigned to the category.
 2. To locate the product you want to edit, enter the product title in the search field, and click **Search Products**.
 3. Click the title of the product you want to edit.
 4. Scroll to and then click the **Manage Products** link to go to Global Commerce.\
-   &#x20;![](.gitbook/assets/DREditProduct.png)&#x20;
+   &#x20;<img src=".gitbook/assets/DREditProduct.png" alt="" data-size="original">&#x20;
 5. Sign in to Global Commerce.
 6. Select **Catalog**, select **Products**, and then click **Manage Products**.
 7. Complete the search fields under the **Search** and **Filters** tab and then click **Search** to locate the specific products. The results appear in the Products list.
@@ -123,7 +123,7 @@ Note that WordPress only syncs products assigned to the category.
 10. When you are finished editing the product, select **Catalog**, select **Products**, and then click **Deploy Products**.
 11. Click the check box next to the product you want to deploy and click **Deploy**.
 12. Return to the Digital River Products section in WordPress, and click **Import Products** to sync data.\
-    &#x20;![](.gitbook/assets/drsettingsimportproducts-1-.png)&#x20;
+    &#x20;<img src=".gitbook/assets/drsettingsimportproducts-1-.png" alt="" data-size="original">&#x20;
 
 ### Edit your theme
 
@@ -146,7 +146,7 @@ The following table lists the file name associated with each section or page.
 
 ## Configure payments
 
-The WordPress Plugin 2.0 supports all payment methods supported by [DigitalRiver.js](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/digitalriver.js) and [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in). All supported methods you choose will appear as choices at checkout.
+The WordPress Plugin 2.0 supports all payment methods supported by [DigitalRiver.js](https://docs.digitalriver.com/commerce-api/payment-integrations-1/digitalriver.js) and [Drop-in](https://docs.digitalriver.com/commerce-api/payment-integrations-1/drop-in). All supported methods you choose will appear as choices at checkout.
 
 ## Configuring Global Commerce
 

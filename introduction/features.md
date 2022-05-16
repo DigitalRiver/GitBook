@@ -16,7 +16,7 @@ description: Learn what features are provided with the Digital River WordPress P
 * Auto-generated commerce pages for the WordPress site
 * Admin settings for quick integration between Digital River and WordPress
 * Mini-cart utilizing [Commerce API](https://docs.digitalriver.com/commerce-api/)
-* [DigitalRiver.js](https://docs.digitalriver.com/commerce-api/payment-integrations-1/digitalriver.js) and [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) powered payments and checkout
+* [DigitalRiver.js](https://docs.digitalriver.com/commerce-api/payment-integrations-1/digitalriver.js) and [Drop-in](https://docs.digitalriver.com/commerce-api/payment-integrations-1/drop-in) powered payments and checkout
 * Merchandising offers automatically flow into your cart
 
 ### Configure and control your offerings <a href="#configure-and-control-your-offerings" id="configure-and-control-your-offerings"></a>
