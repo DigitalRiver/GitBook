@@ -4,13 +4,13 @@ description: Learn how to delete the customer credit payment source from checkou
 
 # deattachPaymentToCheckout
 
-Use this global method to delete the customer credit payment source from checkout.&#x20;
+Use this global method to delete the customer credit payment source from checkout.
 
 In addition to deleting the source from the checkout, this method will delete the Digital River Transition Payment Object corresponding to the `sourceId` and will update the values for `amountRemainingToBeContributed` and `amountContributed` in the `cart` object.
 
 ## Sending a request
 
-This method accepts parameters in JSON string format.  You need to pass the `cartId` and the `sourceId` with this method.&#x20;
+This method accepts parameters in JSON string format. You need to pass the `cartId` and the `sourceId` with this method.
 
 | Parameter  | Required/Optional | Description                                        |
 | ---------- | ----------------- | -------------------------------------------------- |
@@ -30,10 +30,10 @@ This method accepts parameters in JSON string format.  You need to pass the `car
 
 You'll see the following parameters in the response.
 
-| Parameter      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `isSuccess`    | <p>This global method returns a Boolean value where:</p><ul><li> <code>true</code>–indicates the source was successfully deleted.</li><li><code>false</code>–indicates an error occurred while deleting the source from checkout. The system returns an error message when an error occurs, and the Boolean value is <code>false</code>.</li></ul>                                                                                                                                                                                                  |
-| `errorMessage` | <p>If the system returns an error and the value for <code>isSuccess</code> is <code>false</code>, this parameter displays one of the following error messages:</p><ul><li><strong>Missing or invalid input parameters specified</strong>: One of the input parameters are missing or invalid.</li><li><strong>DR API error</strong>: An <a href="https://docs.digitalriver.com/digital-river-api/payment-integrations-1/digitalriver.js/reference/error-types-codes-and-objects">error message</a> that comes from the Digital River API.</li></ul> |
+| Parameter      | Description                                                                                                                                                                                                                                                                                                                                                                                            |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `isSuccess`    | <p>This global method returns a Boolean value where:</p><ul><li><code>true</code>–indicates the source was successfully deleted.</li><li><code>false</code>–indicates an error occurred while deleting the source from checkout. The system returns an error message when an error occurs, and the Boolean value is <code>false</code>.</li></ul>                                                      |
+| `errorMessage` | <p>If the system returns an error and the value for <code>isSuccess</code> is <code>false</code>, this parameter displays one of the following error messages:</p><ul><li><strong>Missing or invalid input parameters specified</strong>: One of the input parameters are missing or invalid.</li><li><strong>DR API error</strong>: An error message that comes from the Digital River API.</li></ul> |
 
 {% code title="Response body example" %}
 ```json
@@ -46,7 +46,7 @@ You'll see the following parameters in the response.
 
 ## Calling the global method from a custom component
 
-Import the `deattachPaymentToCheck` method into your custom component javascript  file with `digialriverv3` as the namespace as shown below.
+Import the `deattachPaymentToCheck` method into your custom component javascript file with `digialriverv3` as the namespace as shown below.
 
 {% code title="Import example" %}
 ```javascript
@@ -73,4 +73,3 @@ handleRemoveCustomerCredit(event){
             });
     }
 ```
-

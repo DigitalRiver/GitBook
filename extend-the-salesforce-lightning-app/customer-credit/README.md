@@ -4,7 +4,7 @@ description: Learn how to enable the customer credit feature.
 
 # Customer credit
 
-You can use the [customer credit feature](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/payment-sources/using-the-source-identifier#secondary-payment-sources) to enable several different storefront functionalities such as gift certificates and rewards points.
+You can use the [customer credit feature](https://docs.digitalriver.com/digital-river-api/payments/payment-sources/using-the-source-identifier#secondary-payment-sources) to enable several different storefront functionalities such as gift certificates and rewards points.
 
 Salesforce B2B Commerce does not natively support gift cards or store credit functionality. Instead, this functionality is provided by 3rd party integrations. Rather than directly integrating with any of these 3rd parties, the Digital River cartridge provides several functions which make the necessary calls to Digital River to support the customer credit. The System Integrator is responsible for implementing the necessary code changes to call the methods provided by the Digital River app to connect to the 3rd-party integration.
 

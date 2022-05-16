@@ -6,11 +6,11 @@ description: Learn how to extend the webhook framework.
 
 The Salesforce Lightning—Digital River Connector App comes with a webhook framework that is capable of accepting and consuming any webhook that can be configured in the Digital River [Dashboard](https://docs.digitalriver.com/digital-river-api/administration/dashboard). For OOTB (out-of-the-box) webhook events, see [Set up webhooks](../integrate-the-salesforce-lightning-app/step-11-set-up-webhooks.md).
 
-You can always extend this framework to implement custom code that will fire upon receipt of a [Webhook](https://docs.digitalriver.com/digital-river-api/events-and-webhooks-1/webhooks) from Digital River. The event needs to be added to the previously-created webhook in the Digital River [Dashboard](https://docs.digitalriver.com/digital-river-api/administration/dashboard).&#x20;
+You can always extend this framework to implement custom code that will fire upon receipt of a [Webhook](https://docs.digitalriver.com/digital-river-api/order-management/events-and-webhooks-1/webhooks) from Digital River. The event needs to be added to the previously-created webhook in the Digital River [Dashboard](https://docs.digitalriver.com/digital-river-api/administration/dashboard).
 
 ## Extending the webhook
 
-To implement the custom business logic for your organization, write the subscriber code that extends the default Webhook Framework Extension point class **** `digitalriverv3.DRB2B_WebhookHandler`.
+To implement the custom business logic for your organization, write the subscriber code that extends the default Webhook Framework Extension point class \*\*\*\* `digitalriverv3.DRB2B_WebhookHandler`.
 
 For example, suppose you want to implement custom business logic for the event `refund.pending`
 
@@ -62,7 +62,7 @@ Event Payload: ' + webhookEventPayload);
 }
 ```
 
-Save your class and resolve any compilation errors.&#x20;
+Save your class and resolve any compilation errors.
 
 ## Configuring the Apex class
 
@@ -70,19 +70,19 @@ Your Apex class must be configured so that the Connector is aware and executes t
 
 1.  Go to the Custom Metadata Type `digitalriverv3_DR_Webhook_Configuration_`
 
-    `mdt` and click **Manage Records**. \
-    ![](<../.gitbook/assets/Custom metadata type.png>)&#x20;
-2. Create a new **Metadata Type Record** for the **DR Webhook Configuration**. \
-   ![](<../.gitbook/assets/Refund pending webhook handler.png>)&#x20;
-   * **Label**: `Refund Pending Webhook Handler` &#x20;
+    `mdt` and click **Manage Records**.\
+    ![](<../.gitbook/assets/Custom metadata type.png>)
+2. Create a new **Metadata Type Record** for the **DR Webhook Configuration**.\
+   ![](<../.gitbook/assets/Refund pending webhook handler.png>)
+   * **Label**: `Refund Pending Webhook Handler`
    * **DR Webhook Configuration Name**: `Refund_Pending_Webhook_Handler`
-   * **Webhook Event Name**: `refund.pending` (This is the [event type](https://docs.digitalriver.com/digital-river-api/events-and-webhooks-1/events-1/event-types) of the webhook.)
-   * **Webhook Handler Name**: `DRB2B_RefundPendingWebhook` (Custom Class Name)&#x20;
+   * **Webhook Event Name**: `refund.pending` (This is the [event type](https://docs.digitalriver.com/digital-river-api/order-management/events-and-webhooks-1/events-1#event-types) of the webhook.)
+   * **Webhook Handler Name**: `DRB2B_RefundPendingWebhook` (Custom Class Name)
 3. Click **Save**.
 4. Set up the webhook for the Event Type `refund.pending` in the [Dashboard](https://docs.digitalriver.com/digital-river-api/administration/dashboard).
 5. Go to **Webhooks** and click the webhook endpoint that you [previously configured](../integrate-the-salesforce-lightning-app/step-11-set-up-webhooks.md) for your organization. The endpoint URL is: `https://<<SF_My_Domain_Name>>/services/apexrest/digitalriverv3/webhooks`\
-   &#x20;![](<../.gitbook/assets/OAuth integration 3.png>)&#x20;
-6. Select the event `refund.pending` for the Webhook Endpoint selected in the previous step. &#x20;
+   ![](<../.gitbook/assets/OAuth integration 3.png>)
+6. Select the event `refund.pending` for the Webhook Endpoint selected in the previous step.
 
 ### DRB2B\_RefundCompleteWebhook
 
@@ -113,7 +113,6 @@ The following example shows how to extend the webhook framework, this time for t
     }
  
 }
-
 ```
 
 {% hint style="info" %}

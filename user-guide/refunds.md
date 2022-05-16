@@ -4,18 +4,18 @@ description: Learn more about refunds.
 
 # Refunds
 
-Refunds at the [Order **** ](../integrate-the-salesforce-lightning-app/step-5-add-custom-fields-to-the-page-layouts.md)and Line Item level are handled by Digital River's [Dashboard](https://dashboard.digitalriver.com/login). The Salesforce Lightning app provides a `Refunds` button on the order. Clicking the **Refunds** button will redirect the user to the **Order** details page in the Dashboard. Detailed steps on [initiating refunds](refunds.md#initiate-refunds) are featured below.
+Refunds at the [Order](../integrate-the-salesforce-lightning-app/step-5-add-custom-fields-to-the-page-layouts.md) and Line Item level are handled by Digital River's [Dashboard](https://dashboard.digitalriver.com/login). The Salesforce Lightning app provides a `Refunds` button on the order. Clicking the **Refunds** button will redirect the user to the **Order** details page in the Dashboard. Detailed steps on [initiating refunds](refunds.md#initiate-refunds) are featured below.
 
 ## Initiate refunds
 
 To initiate a refund:
 
 1. Go to the **Order** record for the completed fulfillment (that is, the **Digital River Order State** field on the order is marked **Complete**).
-2. Click the dropdown menu and select **Refunds**. \
-   ![](<../.gitbook/assets/Refunds 2.png>)&#x20;
+2. Click the dropdown menu and select **Refunds**.\
+   ![](<../.gitbook/assets/Refunds 2.png>)
 3.  Click **Proceed**. You will be redirected to the **Digital River Order** page on the Dashboard.
 
-    &#x20;![](<../.gitbook/assets/Refunds 3.png>)&#x20;
+    <img src="../.gitbook/assets/Refunds 3.png" alt="" data-size="original">
 4. Click [Create refund](https://docs.digitalriver.com/digital-river-api/administration/dashboard/order-management/orders/creating-a-refund) to initiate a refund.\
    The following refund options are available:
    * Complete Order
@@ -24,13 +24,13 @@ To initiate a refund:
    * Importer Duty
    * Importer Tax
    * Tax
-5. Select your refund option and click **Review and Submit**. \
-   ![](<../.gitbook/assets/Refunds 5.png>)&#x20;
-6. Click **Submit**. Once the refund is initiated, the record is created in the **Refund** section of the Dashboard. \
-   ![](<../.gitbook/assets/Refunds 6.png>)&#x20;
+5. Select your refund option and click **Review and Submit**.\
+   ![](<../.gitbook/assets/Refunds 5.png>)
+6. Click **Submit**. Once the refund is initiated, the record is created in the **Refund** section of the Dashboard.\
+   ![](<../.gitbook/assets/Refunds 6.png>)
 
 {% hint style="info" %}
-You must add service representatives to the permission set, **DigitalRiver Connector – Refunds**, before making a refund request.&#x20;
+You must add service representatives to the permission set, **DigitalRiver Connector – Refunds**, before making a refund request.
 
 Refunds can only be made for Orders that are already fulfilled.
 {% endhint %}

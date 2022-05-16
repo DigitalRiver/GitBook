@@ -6,11 +6,11 @@ description: Learn how to configure the Digital River app.
 
 The Digital River app uses the following settings:
 
-* General Config&#x20;
-* Product Sync&#x20;
+* General Config
+* Product Sync
 * Fulfillment Config
 
-The **General Config** tab provides settings to establish secure connections between the Salesforce Lightning app and Digital River. This tab also includes information (for example, Ship From Address**,** DR Default Entity, and DR API Endpoint) that will be used in the requests that will be sent to Digital River.&#x20;
+The **General Config** tab provides settings to establish secure connections between the Salesforce Lightning app and Digital River. This tab also includes information (for example, Ship From Address\*\*,\*\* DR Default Entity, and DR API Endpoint) that will be used in the requests that will be sent to Digital River.
 
 The **Product** tab provides the batch job settings for syncing or re-syncing products between Salesforce and Digital River. See [Step 8: Configure and synchronize the products](step-8-configure-and-synchronize-the-products.md) for information on how to sync the products.
 
@@ -20,10 +20,10 @@ The **Fulfillment** tab provides configuration settings for batching fulfillment
 
 To configure the **General Config** settings:
 
-1. Click **App Launcher** ![](<../.gitbook/assets/App launcher.png>).&#x20;
+1. Click **App Launcher** ![](<../.gitbook/assets/App launcher.png>).
 2. Type `Digital River App` in the **Search apps and items** field and click **Digital River App**. ![](<../.gitbook/assets/Digital River App Search.png>)
-3. Click the **General** tab. This tab includes fields for storing information.&#x20;
-4. Enter the values in the following fields, such as the **DR Secret Key**, **DR Public Key**, and other fields to configure the Digital River app.&#x20;
+3. Click the **General** tab. This tab includes fields for storing information.
+4. Enter the values in the following fields, such as the **DR Secret Key**, **DR Public Key**, and other fields to configure the Digital River app.
 5. Click **Test DR Connection** to verify whether you can successfully connect with the configured Digital River site. If there are errors, check your settings and try again.
 6. Click **Save**.
 
@@ -34,11 +34,11 @@ Use the following fields to store configuration information:
 | DR Secret Key                                                                                                     | [Provide your Digital River secret key](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/api-keys/getting-your-api-keys).                                                                            |
 | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | DR Public Key                                                                                                     | [Provide your Digital River public key](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/api-keys/getting-your-api-keys).                                                                            |
-| DR JS Static Resource                                                                                             | <p>The static resource that points to the DigitalRiver.js file. (Namespace should not be added.)</p><p><strong>Example</strong>: DRJS </p>                                                                                              |
+| DR JS Static Resource                                                                                             | <p>The static resource that points to the DigitalRiver.js file. (Namespace should not be added.)</p><p><strong>Example</strong>: DRJS</p>                                                                                               |
 | DR CSS Static Resource                                                                                            | <p>The static resource that points to the Digital River CSS file. (Namespace should not be added.)</p><p><strong>Example</strong>: DRCSS</p>                                                                                            |
 | Connector Notification Email                                                                                      | The email address for notifications or exceptions.                                                                                                                                                                                      |
 | From Address for System Emails                                                                                    | The email address used to send connector notifications and exceptions.                                                                                                                                                                  |
-| [Client Custom CSS Static Resource](../extend-the-salesforce-lightning-app/overriding-digital-river-css.md)       | <p>The static resource that points to the client CSS. <br><strong>Example</strong>: DROverideCSS</p>                                                                                                                                    |
+| [Client Custom CSS Static Resource](../extend-the-salesforce-lightning-app/overriding-digital-river-css.md)       | <p>The static resource that points to the client CSS.<br><strong>Example</strong>: DROverideCSS</p>                                                                                                                                     |
 | DR Default Entity                                                                                                 | Default Digital River selling entity                                                                                                                                                                                                    |
 | DR API Endpoint                                                                                                   | <p>The Digital River API endpoint.<br><strong>Example</strong>: https://apidigitalriver.com</p>                                                                                                                                         |
 | DR API Timeout                                                                                                    | The Digital River API timeout value.                                                                                                                                                                                                    |
@@ -57,12 +57,12 @@ Use the following fields to store configuration information:
 To configure the Product settings:
 
 1. Click the **Product** tab.
-2. Enter the value in the **Batch Schedule Time** and **Batch Size** fields.&#x20;
+2. Enter the value in the **Batch Schedule Time** and **Batch Size** fields.
 3. Click **Save**.
 
 ![](<../.gitbook/assets/Digital River App Product tab.png>)
 
-The Product Sync **** batch job uses the following configuration settings for its schedule and scope size:
+The Product Sync batch job uses the following configuration settings for its schedule and scope size:
 
 | Field               | Description                                                   |
 | ------------------- | ------------------------------------------------------------- |

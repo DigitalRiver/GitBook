@@ -13,7 +13,7 @@ The Refunds button is only available to users assigned to the [DigitalRiver Conn
 To add the Refunds button to your Order layout:
 
 1. Click the App Launcher ![](<../.gitbook/assets/App launcher.png>).
-2. Type `Orders` **** in the **Search** field and click **Orders**.\
+2. Type `Orders` in the **Search** field and click **Orders**.\
    ![](../.gitbook/assets/Orders.png)
 3. Click a link under the **Order Number** column.\
    ![](<../.gitbook/assets/Orders Recently Viewed.png>)
@@ -37,7 +37,7 @@ To add the Refunds button to your Order layout:
     ![](<../.gitbook/assets/Select field - Custom Permission.png>)
 15. Select **digitalriverv3.Enable\_Refunds\_Button** from the next filter list.![](<../.gitbook/assets/Select field - Enable Refunds Button.png>)
 16. Click **Done**.
-17. Set the **Value** field to **True** and click **Done**. \
+17. Set the **Value** field to **True** and click **Done**.\
     ![](<../.gitbook/assets/Set value to True.png>)
 18. Click **Done**.\
     ![](<../.gitbook/assets/Click Done.png>)\

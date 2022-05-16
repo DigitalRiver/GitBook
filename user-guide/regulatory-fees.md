@@ -4,7 +4,7 @@ description: Learn more about regulatory fees.
 
 # Regulatory fees
 
-[Regulatory fee](https://docs.digitalriver.com/digital-river-api/regulatory-fees) creation and management are outside the scope of the Salesforce Lightning app. Work with your Digital River project manager on the management of regulatory fees.&#x20;
+[Regulatory fee](https://docs.digitalriver.com/digital-river-api/product-management/regulatory-fees) creation and management are outside the scope of the Salesforce Lightning app. Work with your Digital River project manager on the management of regulatory fees.
 
 Once the fees are configured, the app will display any applicable fees to the shopper in the checkout flow.
 

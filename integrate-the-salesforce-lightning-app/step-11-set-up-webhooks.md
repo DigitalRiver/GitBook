@@ -4,7 +4,7 @@ description: Learn how to set up webhooks.
 
 # Step 11: Set up webhooks
 
-Digital River uses [webhooks](https://docs.digitalriver.com/digital-river-api/events-and-webhooks-1/webhooks) to notify the app when events occur. The following instructions explain how to register a client webhook endpoint to set up webhook integration between Salesforce and Digital River
+Digital River uses [webhooks](https://docs.digitalriver.com/digital-river-api/order-management/events-and-webhooks-1/events-1) to notify the app when events occur. The following instructions explain how to register a client webhook endpoint to set up webhook integration between Salesforce and Digital River
 
 To register the Client Webhook Endpoint:
 
@@ -49,7 +49,7 @@ The Digital River Salesforce Lightning app supports the following out of the box
 * `order.credit_memo.created`
 * `order.invoice.created`
 
-Ensure that all the supported Webhook events (Event types) that need to be sent to the configured Endpoint URL are selected (and saved) in the [Event types](https://docs.digitalriver.com/digital-river-api/events-and-webhooks-1/events-1/event-types) section located in the Digital River Dashboard's [webhook](https://docs.digitalriver.com/digital-river-api/events-and-webhooks-1/webhooks) section.
+Ensure that all the supported Webhook events (Event types) that need to be sent to the configured Endpoint URL are selected (and saved) in the [Event types](https://docs.digitalriver.com/digital-river-api/order-management/events-and-webhooks-1/events-1) section located in the Digital River Dashboard's [webhook](https://docs.digitalriver.com/digital-river-api/order-management/events-and-webhooks-1/webhooks) section.
 
 ![](<../.gitbook/assets/Webhook 5.png>)
 
