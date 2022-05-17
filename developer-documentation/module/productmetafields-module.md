@@ -59,8 +59,8 @@ This module has the following field classes:
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `CountryOfOrigin` | The `CountryOfOrigin` field refers to the location where the product originated. The `CountryOfOrigin` is a two-letter Alpha-2 country code as described in the ISO 3166 international standard. Here is a list of [country codes](https://www.iban.com/country-codes). |
 | `ECCN`            | Exports Control Classification Number (ECCN). A list of pre-approved ECCNs is found [here](https://www.digitalriver.com/legal-other/approved-eccns/).                                                                                                                   |
-| `HSCode`          | Read more [here](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/skus/common-attributes#setting-the-harmonized-system-code) about the Harmonized Commodity Description and Coding System (HS Code).                                                |
-| `TaxCode`         | See a list of supported tax codes [here](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/skus/creating-and-updating-skus#setting-the-tax-code).                                                                                                    |
+| `HSCode`          | Read more [here](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#harmonized-system-code) about the Harmonized Commodity Description and Coding System (HS Code).                                                          |
+| `TaxCode`         | See a list of supported tax codes [here](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#tax-code).                                                                                                                       |
 
 
 

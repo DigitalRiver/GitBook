@@ -22,7 +22,7 @@ The following fields are registered by the module:
 | Test confidential key | Test account's API secret key                                                                                                                                                                 |
 | Live public key       | Production account's API public key                                                                                                                                                           |
 | Live confidential key | Production account's API secret key                                                                                                                                                           |
-| Webhook secret key    | Found in the Digital River dashboard's [Webhook](https://docs.digitalriver.com/digital-river-api/events-and-webhooks-1/webhooks) section                                                      |
+| Webhook secret key    | Found in the Digital River [Dashboard's Webhook](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/webhooks) section                                        |
 
 ### Settings Interface
 

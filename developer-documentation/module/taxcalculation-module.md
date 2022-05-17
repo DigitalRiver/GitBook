@@ -14,7 +14,7 @@ The tax calculation is handled via the Digital River platform.&#x20;
 
 1. Use the customer's shipping address for rendering tax rates for products on the **Shop** and **Single Product** page.&#x20;
 2. Hide the tax row from the **Cart** page to finalize the tax rate review on the **Checkout** page.&#x20;
-3. After all the details are on the **Checkout** page, click **Review Order** on the [Drop-in UI](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in).&#x20;
+3. After all the details are on the **Checkout** page, click **Review Order** on the [Drop-in UI](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in).&#x20;
 
 Tax exclusive or inclusive from price depends on **Admin tax** settings. Use those settings to display the tax is inclusive or exclusive from the product price on the **Single product** page and **Shop** page.
 

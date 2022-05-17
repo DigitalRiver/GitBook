@@ -8,7 +8,7 @@ description: Learn about the features and requirements for the WooCommerce exten
 
 The WooCommerce extension includes the following features:
 
-* Payment processing using [Digital River Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in)&#x20;
+* Payment processing using [Digital River Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in)&#x20;
 * PCI compliance&#x20;
 * Tokenization&#x20;
 * Acquirer redundancy&#x20;
