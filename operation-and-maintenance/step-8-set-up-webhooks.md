@@ -4,7 +4,7 @@ description: Learn how to set up webhooks.
 
 # Step 11: Set up webhooks
 
-Digital River uses [webhooks](https://docs.digitalriver.com/digital-river-api/events-and-webhooks-1/webhooks) to notify the app when events occur. &#x20;
+Digital River uses [webhooks](https://docs.digitalriver.com/digital-river-api/order-management/events-and-webhooks-1/webhooks) to notify the app when events occur. &#x20;
 
 ### Register a client webhook endpoint to set up webhook integration between Salesforce and Digital River
 
@@ -12,9 +12,9 @@ To register the Client Webhook Endpoint:
 
 1. Log in to the [Digital River Dashboard](https://docs.digitalriver.com/digital-river-api/administration/dashboard).
 2. Go to **Webhooks** and select **Create webhook**.\
-   &#x20;![](<../.gitbook/assets/Create webhook.png>)&#x20;
+   &#x20;<img src="../.gitbook/assets/Create webhook.png" alt="" data-size="original">&#x20;
 3. Set up the **OAuth Integration** and select **OAuth** as the authentication method. \
-   ![](<../.gitbook/assets/OAuth integration 2 (2).png>)&#x20;
+   <img src="../.gitbook/assets/OAuth integration 2 (2).png" alt="" data-size="original">&#x20;
 4. Complete the following fields:
 
 | Field name     | Description                                                                                                                                                                                     |
@@ -50,7 +50,7 @@ The Digital River Salesforce Lightning app supports the following out of the box
 * `order.credit_memo.created`
 * `order.invoice.created`
 
-Ensure that all the supported Webhook events (Event types) that need to be sent to the configured Endpoint URL are selected (and saved) in the [Event types](https://docs.digitalriver.com/digital-river-api/events-and-webhooks-1/events-1/event-types) section located in the Digital River Dashboard's [webhook](https://docs.digitalriver.com/digital-river-api/events-and-webhooks-1/webhooks) section.
+Ensure that all the supported Webhook events (Event types) that need to be sent to the configured Endpoint URL are selected (and saved) in the [Event types](https://docs.digitalriver.com/digital-river-api/order-management/events-and-webhooks-1/events-1#event-types) section located in the Digital River [Dashboard's webhook](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/webhooks) section.
 
 ![](<../.gitbook/assets/Webhook 5.png>)
 

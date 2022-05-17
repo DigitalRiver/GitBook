@@ -33,17 +33,17 @@ Any changes (additions, deletions, or modifications) to these picklists must be 
 The **Product Sync** tab allows you to configure the behavior of the automated product synchronization. A batch job performs the synchronization, and you can schedule it to run periodically.
 
 {% hint style="warning" %}
-Products missing any required fields (for example, DR Product Country Origin, DR TAXGROUP, DR TAXTYPE, and DR ECCN) will not be synced to Digital River. Digital River uses this information to [calculate tax](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/tax-calculations).&#x20;
+Products missing any required fields (for example, DR Product Country Origin, DR TAXGROUP, DR TAXTYPE, and DR ECCN) will not be synced to Digital River. Digital River uses this information to calculate tax.&#x20;
 {% endhint %}
 
 To update the **Product Sync** settings:
 
-1. Click the App Launcher.![](<../.gitbook/assets/App launcher.png>)&#x20;
+1. Click the App Launcher.<img src="../.gitbook/assets/App launcher.png" alt="" data-size="line">&#x20;
 2. Type **Digital River App** in the **Search** field.\
-   &#x20;![](<../.gitbook/assets/DR App in Search.png>)&#x20;
+   &#x20;<img src="../.gitbook/assets/DR App in Search.png" alt="" data-size="original">&#x20;
 3. Click **Digital River App**.
 4. Click the **Product Sync** tab. \
-   ![](<../.gitbook/assets/Product Sync tab.png>)&#x20;
+   <img src="../.gitbook/assets/Product Sync tab.png" alt="" data-size="original">&#x20;
 5. Complete the following fields:
    * **Batch Schedule Time**: Defines the frequency of the batch job run in minutes.
    * **Batch Size**: The number of Salesforce product records that the job will push to Digital River each time you run the job.

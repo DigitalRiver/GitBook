@@ -7,7 +7,7 @@ description: Learn how to import ECCN codes, tax groups, and tax types.
 {% hint style="warning" %}
 You must load the ECCN codes, tax groups, and tax types and assign them to the Salesforce Lightning products in Salesforce before you do the [Product Sync](step-7.-update-the-product-sync-settings.md#product-synchronization).&#x20;
 
-Products missing any required fields (for example, DR Product Country Origin, DR TAXGROUP, DR TAXTYPE, and DR ECCN) will not be synced to Digital River. Digital River uses this information to [calculate tax](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/tax-calculations).&#x20;
+Products missing any required fields (for example, DR Product Country Origin, DR TAXGROUP, DR TAXTYPE, and DR ECCN) will not be synced to Digital River. Digital River uses this information to calculate tax.&#x20;
 {% endhint %}
 
 To import **ECCN codes**, **Tax Groups**, and **Tax Types**:
@@ -26,7 +26,7 @@ To import **ECCN codes**, **Tax Groups**, and **Tax Types**:
 7. Select **Choose File** and click **Next**. \
    ![](https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-MS-2crEBZIcuq\_A3pl1%2F-McuUJir4CH4M1-EAlOe%2F-McuUPjE6mg0PhPP\_uTR%2FChoose%20file%20and%20click%20next.png?alt=media\&token=ce49aaac-77d0-4eae-80dc-96e7875a189c)
 8. Map the **CSV** column to the **Custom Fields** column. \
-   ![](<../.gitbook/assets/CSV mapping.png>)&#x20;
+   <img src="../.gitbook/assets/CSV mapping.png" alt="" data-size="original">&#x20;
 9. Click **Next**, then click **Start import**.&#x20;
 
 {% hint style="info" %}
