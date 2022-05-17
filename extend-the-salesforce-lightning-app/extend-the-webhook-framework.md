@@ -6,9 +6,9 @@ description: Learn how to extend the webhook framework.
 
 
 
-The Salesforce Lightning—Digital River Connector App comes with a webhook framework that is capable of accepting and consuming any webhook that can be configured in the Digital River [Dashboard](https://docs.digitalriver.com/digital-river-api/administration/dashboard). For OOTB (out-of-the-box) webhook events, see the [set up webhooks](broken-reference) section.
+The Salesforce Lightning—Digital River Connector App comes with a webhook framework that is capable of accepting and consuming any webhook that can be configured in the Digital River [Dashboard](https://docs.digitalriver.com/digital-river-api/administration/dashboard). For OOTB (out-of-the-box) webhook events, see the [set up webhooks](../integrate-the-salesforce-lightning-app/step-11-set-up-webhooks.md) section.
 
-You can always extend this framework to implement custom code that will fire upon receipt of a [Webhook](https://docs.digitalriver.com/digital-river-api/events-and-webhooks-1/webhooks) from Digital River. The event needs to be added to the previously-created webhook in the Digital River [Dashboard](https://docs.digitalriver.com/digital-river-api/administration/dashboard).&#x20;
+You can always extend this framework to implement custom code that will fire upon receipt of a [Webhook](https://docs.digitalriver.com/digital-river-api/order-management/events-and-webhooks-1/webhooks) from Digital River. The event needs to be added to the previously-created webhook in the Digital River [Dashboard](https://docs.digitalriver.com/digital-river-api/administration/dashboard).&#x20;
 
 ## Extending the webhook
 
@@ -73,17 +73,17 @@ Your Apex class must be configured so that the Connector is aware and executes t
 1.  Go to the Custom Metadata Type `digitalriverv3_DR_Webhook_Configuration_`
 
     `mdt` and click **Manage Records**. \
-    ![](<../.gitbook/assets/Custom metadata type.png>)&#x20;
+    <img src="../.gitbook/assets/Custom metadata type.png" alt="" data-size="original">&#x20;
 2. Create a new **Metadata Type Record** for the **DR Webhook Configuration**. \
-   ![](<../.gitbook/assets/Refund pending webhook handler.png>)&#x20;
+   <img src="../.gitbook/assets/Refund pending webhook handler.png" alt="" data-size="original">&#x20;
    * **Label**: Refund Pending Webhook Handler &#x20;
    * **DR Webhook Configuration Name**: Refund\_Pending\_Webhook\_Handler
-   * **Webhook Event Name**: refund.pending (This is the [event type](https://docs.digitalriver.com/digital-river-api/events-and-webhooks-1/events-1/event-types) of the webhook.)
+   * **Webhook Event Name**: refund.pending (This is the event type of the webhook.)
    * **Webhook Handler Name**: DRB2B\_RefundPendingWebhook (Custom Class Name)&#x20;
 3. Click **Save**.
 4. Set up the webhook for the Event Type `refund.pending` in the [Dashboard](https://docs.digitalriver.com/digital-river-api/administration/dashboard).
 5. Configure the webhook for this event by going to **Webhooks** and click the Webhooks endpoint that was[ previously configured](broken-reference) for your organization. It will have an address of `https://<<SF_My_Domain_Name>>/services/apexrest/digitalriverv3/webhooks`\
-   &#x20;![](broken-reference)&#x20;
+   &#x20;<img src="broken-reference" alt="" data-size="original">&#x20;
 6. Select the event `refund.pending` for the Webhook Endpoint selected in the previous step. &#x20;
 
 ### Webhook framework extension (example 2)

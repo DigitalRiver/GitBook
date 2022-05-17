@@ -12,7 +12,7 @@ When the **Recurring Line Item** field value is`true`, it indicates the product 
 
 You will need to populate the **Recurring Line Item** field accordingly so that the app can identify whether a product is a subscription. If the field is not populated, the application will treat the product as a non-subscription. &#x20;
 
-The application will optionally allow you to specify the subscription's `startTime` and `endTime`. The following information is included in the `subscriptionInfo` field and sent across to Digital River during the [create checkout API call](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/checkouts/creating-checkouts#creating-and-updating-the-checkout):&#x20;
+The application will optionally allow you to specify the subscription's `startTime` and `endTime`. The following information is included in the `subscriptionInfo` field and sent across to Digital River during the [create checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createCheckouts) API call:&#x20;
 
 * If the `startTime` and `endTime` are specified, then this information will be included in the `subscriptionInfo` **** block.
 * If only the `endTime` is specified but not the `startTime`, then the app will default the `startTime` to the current date/time.
@@ -20,7 +20,7 @@ The application will optionally allow you to specify the subscription's `startTi
 
 Finally, the following optional fields are available to be populated on the Cart Item. If specified, the values will be sent to Digital River.
 
-| Field            | Description                                                                                                                                                                                                                                                |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `freeTrial`      | This field has a  `true` or `false` value that indicates whether a [free trial period](https://docs.digitalriver.com/digital-river-api/checkouts-and-orders/shared-properties/describing-the-items/subscription-information#free-trial) is being offered.  |
-| `subscriptionId` | This field can be used to supply the client's [subscription identifier](https://docs.digitalriver.com/digital-river-api/subscriptions/subscription-information-1#subscription-identifier) (if applicable).                                                 |
+| Field            | Description                                                                                             |
+| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| `freeTrial`      | This field has a  `true` or `false` value that indicates whether a free trial period is being offered.  |
+| `subscriptionId` | This field can be used to supply the client's subscription identifier (if applicable).                  |
