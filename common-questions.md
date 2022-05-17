@@ -20,7 +20,7 @@ The selected payment method determines the supported currencies.
 
 ### What items are restricted for merchants to sell?
 
-For a list of allowed goods, see [Tax codes](https://docs.digitalriver.com/digital-river-api/skus/creating-and-updating-skus#tax-code).
+For a list of allowed goods, see [Tax codes](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#tax-code).
 
 ## Transactions&#x20;
 
@@ -31,7 +31,7 @@ Assuming the following statements are true, you can start accepting payment on y
 * You are on a BigCommerce paid plan.
 * The [Digital River Payments, Fraud, Tax & Compliance Management app is installed](install-the-digital-river-app.md) on your store.
 * You [created a Digital River account](https://docs.digitalriver.com/digital-river-api/administration/dashboard/quick-start-guide#step-1-creating-a-free-test-account).
-* Digital River has [passed your certification](https://docs.digitalriver.com/digital-river-api/getting-started-1/standards-and-certifications/certification-process). You will work with a Digital River Project Manager to set a timeline launch, including scheduling Checkout Certification.
+* Digital River has [passed your certification](https://docs.digitalriver.com/digital-river-api/developer-resources/standards-and-certifications). You will work with a Digital River Project Manager to set a timeline launch, including scheduling Checkout Certification.
 
 ### How long until the funds are transferred to my bank?
 
@@ -51,11 +51,11 @@ See [Troubleshooting Orders](https://support.bigcommerce.com/s/article/Troublesh
 
 ### How soon after a transaction can I perform a refund?
 
-See [Issuing Refunds](https://docs.digitalriver.com/digital-river-api/returns-and-refunds-1/refunds/issuing-refunds).
+See [Issuing Refunds](https://docs.digitalriver.com/digital-river-api/order-management/returns-and-refunds-1/refunds/issuing-refunds).
 
 ### Is there an amount of time after which I cannot perform a refund?
 
-&#x20;See [Issuing Refunds](https://docs.digitalriver.com/digital-river-api/returns-and-refunds-1/refunds/issuing-refunds).
+&#x20;See [Issuing Refunds](https://docs.digitalriver.com/digital-river-api/order-management/returns-and-refunds-1/refunds/issuing-refunds).
 
 ### What are the limitations around refunds?
 

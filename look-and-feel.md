@@ -4,7 +4,7 @@ description: Learn how to customize Drop-in.
 
 # Look and feel
 
-Using the [Cornerstone theme](https://support.bigcommerce.com/s/article/Cornerstone-Theme-Manual?language=en\_US), you can style the look and feel of the elements within the [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) component using [Page Builder](https://support.bigcommerce.com/s/article/Page-Builder?language=en\_US).
+Using the [Cornerstone theme](https://support.bigcommerce.com/s/article/Cornerstone-Theme-Manual?language=en\_US), you can style the look and feel of the elements within the [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) component using [Page Builder](https://support.bigcommerce.com/s/article/Page-Builder?language=en\_US).
 
 &#x20;You can change the following body text and link attributes:
 

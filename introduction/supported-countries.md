@@ -17,7 +17,7 @@ We conducted testing for the following country, currency, and locale combination
 
 ## Supported markets
 
-For information on supported markets and currencies for [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in), go to:&#x20;
+For information on supported markets and currencies for [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in), go to:&#x20;
 
 * **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
 * **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

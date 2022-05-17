@@ -5,7 +5,7 @@ description: Learn how to configure payments for your store.
 # Step 2: Configure payments
 
 {% hint style="warning" %}
-For the [Drop-in](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) to work, you have to configure the currency on the BigCommerce storefront and also enable the payment method on the **Digital River Settings** tab. You must complete this task for each supported currency listed in the **Show payment methods** dropdown list.&#x20;
+For the [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) to work, you have to configure the currency on the BigCommerce storefront and also enable the payment method on the **Digital River Settings** tab. You must complete this task for each supported currency listed in the **Show payment methods** dropdown list.&#x20;
 {% endhint %}
 
 To configure payments:
@@ -16,7 +16,7 @@ To configure payments:
 3. Disable all non-Digital River payment methods, if applicable.
 4.  Scroll down to **Online Payment Methods** and expand the pane.
 
-    ![](../.gitbook/assets/Online-Payment-Methods.png)
+    <img src="../.gitbook/assets/Online-Payment-Methods.png" alt="" data-size="original">
 5.  Locate **Digital River** and click **Set up**. The Digital River Settings tab appears.
 
     ![](../.gitbook/assets/Digital-River-Set-Up.png)
@@ -25,7 +25,7 @@ To configure payments:
     ![](../.gitbook/assets/Digitalriversettings.PNG)
 7.  Enter your Digital River API keys obtained from the [Digital River Dashboard](https://dashboard.digitalriver.com/login).
 
-    ![](../.gitbook/assets/APIkeys.PNG)
+    ![](<../.gitbook/assets/APIkeys (1).PNG>)
 
     * **Production Confidential Key**–Your Production Confidential Key provided to you by Digital River
     * **Production Public Key**–Your Production Public Key provided to you by Digital River
@@ -35,7 +35,7 @@ To configure payments:
         **Note**: The same values that you entered for the fields above must also be copied into your Digital River Payments, Fraud, Tax & Compliance Management app.
 8.  Select **Yes** from the **Test Mode** dropdown menu. **Test Mode** determines whether your store is in test mode. When you are ready to take payments, change this value to **No** (recommended).
 
-    ![](../.gitbook/assets/Test-Mode.png)
+    <img src="../.gitbook/assets/Test-Mode.png" alt="" data-size="original">
 9.  Required. Set up your warehouse location. You can use the **Multi-Origin Shipping** setting to support multiple warehouse locations in multiple countries, enter the location combinations in the Multi-Origin Shipping field. When entering the shipping location, use the following format: `line1|line2|city|state|postal code|country code`.\
     You can use a comma (`,`) to delimit multiple shipping location combinations and a double pipe (`||`)such as if there is no value. For example: \
     \
@@ -55,8 +55,8 @@ You must copy the same values that you entered in the fields above into your Dig
 {% hint style="info" %}
 You must enable and configure the following features within your Digital River account. They are not configurable within BigCommerce.
 
-* [3D-Secure](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/digitalriver.js/reference/digitalriver-object#authenticating-sources)&#x20;
-* [CVV required](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/digitalriver.js/reference/digitalriver-object)
+* 3D-Secure&#x20;
+* CVV required
 * [Payment methods](https://docs.digitalriver.com/digital-river-api/administration/dashboard/settings/payment-methods)
-* [Stored credit cards](https://docs.digitalriver.com/digital-river-api/getting-started-1/standards-and-certifications/integration-checklists/checkouts-payment-sources-and-orders#provide-option-to-save-credit-card-for-future-use)
+* Stored credit cards
 {% endhint %}

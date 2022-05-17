@@ -21,17 +21,17 @@ To add a product:
 4.  Under **Product Identifiers**, enter the values for **SKU** and the **Manufacturer Part Number (MPN)**. Your fulfillment partner can provide the manufacturer part number if you are using Digital River's Managed Fulfillment.
 
     ![](../.gitbook/assets/Product-Identifiers.png)
-5.  Under **Pricing**, enter the default price of the product (including tax), select **Default Tax Class** from the **Tax Class** dropdown, and provide a code in the **Tax Provider Tax Code** field. See [Tax code](https://docs.digitalriver.com/digital-river-api/skus/creating-and-updating-skus#tax-code) in [Managing SKUs](https://docs.digitalriver.com/digital-river-api/skus/creating-and-updating-skus) for more information. ****&#x20;
+5.  Under **Pricing**, enter the default price of the product (including tax), select **Default Tax Class** from the **Tax Class** dropdown, and provide a code in the **Tax Provider Tax Code** field. See [Tax code](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#tax-code) in [Managing SKUs](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus) for more information. ****&#x20;
 
     ![](../.gitbook/assets/Pricing.png)
 6.  Under **Custom Fields**, click **Add Custom Fields**.
 
-    ![](<../.gitbook/assets/Custom-Fields (1).png>)
-7.  An ECCN field is required. To create an [Export Control Classification Number (ECCN)](https://docs.digitalriver.com/digital-river-api/skus/creating-and-updating-skus#eccn) field, enter `ECCN` in the **Custom Field Name** field and enter an [ECCN value](https://www.bis.doc.gov/index.php/licensing/commerce-control-list-classification/export-control-classification-number-eccn) in the **Custom Field Value** field.
+    <img src="../.gitbook/assets/Custom-Fields.png" alt="" data-size="original">
+7.  An ECCN field is required. To create an [Export Control Classification Number (ECCN)](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#eccn) field, enter `ECCN` in the **Custom Field Name** field and enter an [ECCN value](https://www.bis.doc.gov/index.php/licensing/commerce-control-list-classification/export-control-classification-number-eccn) in the **Custom Field Value** field.
 
     **Note**: In BigCommerce, you must enter the number without the decimal points.\
     ![](<../.gitbook/assets/Custom Fields (1).png>)
-8.  A **skuGroupId** field is required if you are using the Digital River app for landed cost. To create a [SKU Group ID](https://docs.digitalriver.com/digital-river-api/skus/setting-up-sku-groups#unique-identifier) field, enter `skuGroupID` in the **Custom Name** field and enter the skuGroupId value in the **Custom Field Value** field.  The `skuGroupId` uniquely identifies the [SKU group](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/SKUs) associated with the SKU.  See [Grouping SKUs](https://docs.digitalriver.com/digital-river-api/skus/setting-up-sku-groups) for more information.
+8.  A **skuGroupId** field is required if you are using the Digital River app for landed cost. To create a [SKU Group ID](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#sku-group-identifier) field, enter `skuGroupID` in the **Custom Name** field and enter the skuGroupId value in the **Custom Field Value** field.  The `skuGroupId` uniquely identifies the [SKU group](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/SKUs) associated with the SKU.  See [Grouping SKUs](https://docs.digitalriver.com/digital-river-api/product-management/setting-up-sku-groups) for more information.
 
     {% hint style="info" %}
     When updating the `skuGroupId`, you must also update or change the **Basic Product** details. When the webhook triggers, this ensures the product details are synchronized with Digital River.

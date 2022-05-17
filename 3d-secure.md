@@ -8,5 +8,5 @@ The European Union's Strong Customer Authentication (SCA) requirements became ef
 
 This integration supports 3D-Secure 2.0. Digital River account enables 3D-Secure by default and cannot be disabled. Digital River's Drop-in component brokers the 3D-Secure challenge the shopper experiences at checkout.
 
-See [PSD2 and SCA](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/psd2-and-sca) for more information.
+See [PSD2 and SCA](https://docs.digitalriver.com/digital-river-api/payments/psd2-and-sca) for more information.
 
