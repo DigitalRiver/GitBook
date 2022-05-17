@@ -6,7 +6,7 @@ description: Learn how to install the Digital River app.
 
 To install the Digital River **** app:
 
-1. Use the [Quick start guide](https://docs.digitalriver.com/digital-river-api/getting-started-1/quick-start-guide) to set up a test account and then sign in to the Digital River [Dashboard](https://dashboard.digitalriver.com/login) to access your test account, set the API version, and get your [API keys](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/api-keys). From the Dashboard:
+1. Use the [Quick start guide](https://docs.digitalriver.com/digital-river-api/quick-start-guide) to set up a test account and then sign in to the Digital River [Dashboard](https://dashboard.digitalriver.com/login) to access your test account, set the API version, and get your [API keys](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/api-keys). From the Dashboard:
    1. [Set the API version to 2021-02-23](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/api-keys/updating-your-api-version#updating-your-api-version-on-all-keys).
    2.  [Obtain both the Public and Confidential Keys](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/api-keys/getting-your-api-keys). \
 
@@ -14,7 +14,7 @@ To install the Digital River **** app:
        ![](.gitbook/assets/Keysandversioning.png)
 
        ![](.gitbook/assets/Publicandconfidentialkeys.png)
-2. Sign in to [BigCommerce](https://login.bigcommerce.com).&#x20;
+2. Sign in to [BigCommerce](https://login.bigcommerce.com/).&#x20;
    1. Go to [https://www.bigcommerce.com/apps/digital-river/](https://www.bigcommerce.com/apps/digital-river/).
    2. Install the **Digital River** app from the BigCommerce Marketplace. Note that the site owner must install the app.&#x20;
 
