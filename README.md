@@ -10,4 +10,6 @@ Digital River’s checkout solution for payments, tax, fraud, and compliance eli
 
 Available versions:
 
+* [1.1](https://docs.digitalriver.com/woocommerce/v/woocommerce-extension-1.1/)
 * [1.0](https://docs.digitalriver.com/woocommerce/v/1.0-1/)
+
