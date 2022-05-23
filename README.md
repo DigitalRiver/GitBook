@@ -29,7 +29,7 @@ Get familiar with our commerce connectors:
 * [SAP Commerce Cloud Extension](https://docs.digitalriver.com/sap/)
 * [Spark ](https://docs.digitalriver.com/spark/)
 * [VTEX](https://docs.digitalriver.com/vtex-1/)
-* [WooCommerce Plugin](https://docs.digitalriver.com/woocommerce/)&#x20;
+* [WooCommerce Extension](https://docs.digitalriver.com/woocommerce/)
 * [WordPress Plugin ](https://docs.digitalriver.com/wordpress/)
 
 ## Subscription partners
