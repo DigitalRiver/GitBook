@@ -8,7 +8,22 @@ V1 is the base version of the Commerce API. The following dates indicate when we
 
 ## 2022/6/1
 
-Added `cart-charge-failure` to the list of [409 Conflict errors](../error-codes.md#409-conflict) in [Error codes](../error-codes.md).
+We restructured the API tags and descriptions for the Shopper API as follows:
+
+* Renamed Apply Payment Methods to [Apply or Detach Payment Methods](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Submit-Cart/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1submit-cart/post) and added the [Detach all applied payment methods from the cart](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1payment/delete).
+* Restructured the offer API tags and revised their descriptions for [Retrieve all POP offers for a cart](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Cart-Offers/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1point-of-promotions\~1{popName}\~1offers/get) and [Retrieve all offers](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Offers/paths/\~1v1\~1shoppers\~1me\~1offers/get).
+* Updated the sample payload for [Retrieve cart applied offers](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Cart-Offers/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1applied-offers/get).
+* Added [Update shopper payment options](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Payment-Options/paths/\~1v1\~1shoppers\~1me\~1payment-options\~1{paymentOptionId}/post).
+* We moved the following webhook APIs under [Webhook Event Management](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Webhook-Event-Management):
+  * [Get all webhook subscriptions](https://www.digitalriver.com/docs/commerce-api-reference/#operation/getAllWebhooksUsingGET)
+  * [Create a new webhook](https://www.digitalriver.com/docs/commerce-api-reference/#operation/createNewWebhookUsingPOST)
+  * [Get a specific webhook by ID](https://www.digitalriver.com/docs/commerce-api-reference/#operation/getWebhookByIdUsingGET)
+  * [Delete a webhook](https://www.digitalriver.com/docs/commerce-api-reference/#operation/deleteWebhookUsingDELETE)
+  * [Update a webhook](https://www.digitalriver.com/docs/commerce-api-reference/#operation/updateWebhookUsingPATCH)
+* We added [Payment Source](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Source) and added the following source APIs:
+  * [Get a source by source by identifier](https://www.digitalriver.com/docs/commerce-api-reference/#operation/retrieveSources)
+  * [Create a secondary source](https://www.digitalriver.com/docs/commerce-api-reference/#operation/createSources)
+* Added `cart-charge-failure` to the list of [409 Conflict errors](../error-codes.md#409-conflict) in [Error codes](../error-codes.md).
 
 ## 2022/5/6
 

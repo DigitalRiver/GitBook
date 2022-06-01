@@ -118,7 +118,7 @@ The `invalid` error code has the following subcodes:
 
 The `invalid card` error code has the following subcodes:
 
-* &#x20;c`ard_expired`–The card is expired.
+* `card_expired`–The card is expired.
 * `invalid_address`–The address does not match the card network's records.
 * `invalid_card_number`–The card number entered is invalid.
 * `invalid_card_bin`–The card bin is invalid.
