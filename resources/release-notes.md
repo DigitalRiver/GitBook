@@ -6,6 +6,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2022/6/1
+
+Added `cart-charge-failure` to the list of [409 Conflict errors](../error-codes.md#409-conflict) in [Error codes](../error-codes.md).
+
 ## 2022/5/6
 
 * We updated the [authorization decline codes](../cart/submitting-a-cart/authorization-declines.md) for customer-initiated and merchant-initiated transactions.
