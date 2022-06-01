@@ -343,6 +343,9 @@ The following topics contain a list of API error codes.
 * `card_limit_exceeded`–The transaction exceeds the card limit amount.
 * `card_type_block`–The merchant has blocked this card type.
 * `card_velocity_exceeded`–The transaction exceeds the card velocity amount.
+* `cart-charge-failure`–The cart could not be processed due to a charge failure. The possible error descriptions are as follows:
+  * `Failed to charge source.`\
+    Failed to charge the source.
 * `cart-failure`–Some cart operation actions failed. The possible error descriptions are as follows:
   *   `Unable to retrieve the cart details due to data inconsistency.`
 
