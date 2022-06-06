@@ -12,7 +12,7 @@ The table also lists each payment method's authentication flow and indicates whe
 | ---------------------------------------------------------------------------------------------------------- | :-----------------------: | :------------------------------------: | :-----------------: |
 | [Alipay](digitalriver.js/payment-methods/alipay.md)                                                        |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |
 | [Apple Pay](digitalriver.js/payment-methods/apple-pay.md)                                                  |           ✔ / ✔           |                  ✔ / -                 |      `standard`     |
-| [Bancontact](digitalriver.js/payment-methods/bancontact.md)                                                |           ✔ / ✔           |                  ✔ / -                 |      `standard`     |
+| [Bancontact](digitalriver.js/payment-methods/bancontact.md)                                                |           ✔ / ✔           |                  ✔ / -                 |      `redirect`     |
 | [Boleto](digitalriver.js/payment-methods/boleto.md)                                                        |           - / ✔           |                  ✔ / ✔                 |      `redirect`     |
 | [bPay](digitalriver.js/payment-methods/bpay.md)                                                            |           ✔ / ✔           |                  ✔ / -                 |      `receiver`     |
 | [Credit Cards](digitalriver.js/payment-methods/credit-cards.md)                                            |           ✔ / ✔           |                  ✔ / ✔                 |      `standard`     |
