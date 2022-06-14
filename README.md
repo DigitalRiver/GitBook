@@ -18,5 +18,4 @@ Support only:
 * [2.1.1](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/-MNZuMZbk2cjWhdeZ51z-457992110/)
 * [1.0.0](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/-MNZuMZbk2cjWhdeZ51z-2024482579/)
 
-{% embed url="https://vimeo.com/385095415" %}
-
+{% embed url="https://player.vimeo.com/video/379069796?h=2037dcf729)" %}
