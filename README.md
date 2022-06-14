@@ -12,5 +12,9 @@ Available versions:
 
 * [1.1](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/w4LUVtzRnCnYyAQNDxTM/)
 * [1.0.1](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/E4mQlr6JaI21hIMVilNW/)
+
+Support only:
+
 * [1.0](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/-MS-2crEBZIcuq\_A3pl1-694727794/)
 
+{% embed url="https://player.vimeo.com/video/414001674?h=cc59586e08)" %}
