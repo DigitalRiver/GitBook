@@ -16,16 +16,11 @@ To save a credit card during checkout, select the check box named **Yes, please*
 
 To save a credit card to the shopper's account:&#x20;
 
-1. Sign into My Account, select **Stored Payment Methods**, click **Add New Payment**. ![](../../.gitbook/assets/Stored-Payment-Methods.png)\
-   \
-   \
-
+1. Sign into My Account, select **Stored Payment Methods**, click **Add New Payment**. ![](../../.gitbook/assets/Stored-Payment-Methods.png)
 2. Enter the billing address information and click **Continue**.\
-   ![](../../.gitbook/assets/Stored-Payment-Methods-Add-Billing-Address.png)\
-
+   ![](../../.gitbook/assets/Stored-Payment-Methods-Add-Billing-Address.png)
 3. Enter the credit card information.\
-   ![](../../.gitbook/assets/Stored-Payment-Methods-Credit-Card.png)\
-
+   ![](../../.gitbook/assets/Stored-Payment-Methods-Credit-Card.png)
 4. Select the **Yes, please save this account and payment information for future purchases**, and click **Add New Payment Method**.
 
 ## Using a stored payment method

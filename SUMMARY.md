@@ -1,10 +1,10 @@
 # Table of contents
 
-* [Adobe Commerce Extension 2.3.1](README.md)
+* [Adobe Commerce Extension 2.4.0](README.md)
 * [Introduction](introduction/README.md)
   * [How it works](introduction/how-it-works.md)
   * [Features](introduction/features.md)
-  * [What's new in version 2.3.1](introduction/whats-new-in-version-2.1.1.md)
+  * [What's new in version 2.4.0](introduction/whats-new-in-version-2.1.1.md)
 * [Install the Digital River Extension](install-the-magento-extension.md)
 * [Configure the Digital River Extension](configure-the-digital-river-extension/README.md)
   * [Step 1: Retrieve API credentials](configure-the-digital-river-extension/step-1-retrieve-api-credentials.md)
@@ -30,6 +30,7 @@
     * [Gift Cards](configure-the-digital-river-extension/shopper-experience/gift-cards.md)
     * [Tax identification numbers](configure-the-digital-river-extension/shopper-experience/tax-identification-numbers.md)
     * [VAT invoices and credit memos](configure-the-digital-river-extension/shopper-experience/vat-invoices-and-credit-memos.md)
+    * [Use wire transfers for order refunds](configure-the-digital-river-extension/shopper-experience/use-wire-transfers-for-order-refunds.md)
 * [Test the Digital River Extension](test-the-magento-extension.md)
 * [Troubleshooting and maintenance](troubleshooting-and-maintenance.md)
 * [Support](support.md)

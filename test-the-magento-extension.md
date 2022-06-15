@@ -13,7 +13,8 @@ Digital River allows you to self-service your own test account, which you can us
 
 1. In your **Catalog**, fill out the Digital River fields on a product and save it.
 2. In the **Catalog Sync Grid**, click **Manual Sync To Digital River**.\
-   &#x20; <img src=".gitbook/assets/manualcatalogsync.png" alt="" data-size="original">&#x20;
+   \
+   ![](<.gitbook/assets/image (5).png>)  &#x20;
 3. When the sync completes, verify that the status is `Success`.
 
 ![](.gitbook/assets/syncresultstable.png)

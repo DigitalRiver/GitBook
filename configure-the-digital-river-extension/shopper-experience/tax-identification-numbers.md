@@ -9,8 +9,8 @@ The Digital River Extension allows shoppers to enter their **Tax Identification 
 The shopper must:
 
 1. Select the **This is a Business Purchase** check box on the **Shipping Address** screen, when purchasing physical goods, or on the **Payment Information** screen when purchasing digital or virtual goods.\
-   &#x20;![](<../../.gitbook/assets/Tax ID number 1 (7).png>)\
-   &#x20;![](<../../.gitbook/assets/Tax ID number 2 (4).png>)&#x20;
+   &#x20;<img src="../../.gitbook/assets/Tax ID number 1 (7).png" alt="" data-size="original">\
+   &#x20;<img src="../../.gitbook/assets/Tax ID number 2 (4).png" alt="" data-size="original">&#x20;
 2. Enter the **Tax ID** and click **Apply**. &#x20;
 
 ## **Order summary before application of the Tax ID**&#x20;

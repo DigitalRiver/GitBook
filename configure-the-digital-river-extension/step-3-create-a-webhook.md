@@ -25,7 +25,7 @@ Your webhook endpoint URL should be the URL to your Magento installation + `drpa
 
 ## Step 3c: Create webhooks&#x20;
 
-When creating webhooks, you need to add endpoints from the [Dashboard](https://dashboard.digitalriver.com):
+When creating webhooks, you need to add endpoints from the [Dashboard](https://dashboard.digitalriver.com/):
 
 1. From the **Webhooks** page, click **Create Webhook**.
 2. Toggle **Disabled** to **Enabled**.
@@ -33,7 +33,7 @@ When creating webhooks, you need to add endpoints from the [Dashboard](https://d
 4. Enter the URL for the endpoint in the **Endpoint URL** field.
 5. Select the check box next to each event you want to associate with the endpoint or select the **Events Selected** check box to select all events. At least one event type must be selected.
 6. Scroll down and click **Save**.\
-   &#x20;![](../.gitbook/assets/CreateWebhook.png) \
+   &#x20;<img src="../.gitbook/assets/CreateWebhook.png" alt="" data-size="original"> \
    Webhooks must be created for the following events:
    * `order.accepted`
    * `order.complete`
@@ -44,3 +44,4 @@ When creating webhooks, you need to add endpoints from the [Dashboard](https://d
    * `refund.failed`
    * `order.charge.refund.complete`
    * `order.charge.refund.failed`
+   * `refund.pending_information`
