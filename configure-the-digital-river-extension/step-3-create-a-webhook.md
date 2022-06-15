@@ -44,4 +44,3 @@ When creating webhooks, you need to add endpoints from the [Dashboard](https://d
    * `refund.failed`
    * `order.charge.refund.complete`
    * `order.charge.refund.failed`
-   * `refund.pending_information`

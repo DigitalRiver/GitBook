@@ -58,19 +58,6 @@ Based on the response from Digital River, the individual records in the `dr_sync
    * For the **500 error**, the status will be left **Pending** so that the next time the scheduler starts it will try again to sync the data.
    * For the **400 error**, the status will be updated to **Fail**.
 3. The merchant must update the product data based on the error response against that queue row.  When the merchant updates the data from **Admin**, the product will again get added in the queue with the status **Pending** and will get synched to Digital River.
-4.  If there is a failure during the sync, even for a single record, then take note at the end of the sync process and try one of these adjustments, depending on the cause of failure:
-
-    * Update the product to resolve the error.&#x20;
-    * Retry the sync.
-
-
-
-## Use SKU groups
-
-Digital River provides a **SKU Group** field as a method to collect and store data related to your product SKUs. This data lets you correctly determine tax rates and fulfill needed merchant and seller of record responsibilities.&#x20;
-
-You can see this additional **SKU Group** field in the Adobe Commerce catalog.&#x20;
-
-![](../.gitbook/assets/240\_sku\_groups.png)
-
-Work with your Digital River customer support representative to determine if you should be using the new SKU Group field.
+4. If there is a failure during the sync, even for a single record, then take note at the end of the sync process and try one of these adjustments, depending on the cause of failure:
+   * Update the product to resolve the error.&#x20;
+   * Retry the sync.

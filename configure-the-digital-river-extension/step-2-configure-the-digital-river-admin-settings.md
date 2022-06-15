@@ -10,13 +10,10 @@ description: >-
 
 1. From the **Magento Admin Panel**, select **Stores**, select **Conﬁguration**, select **Digital River Settings**, and then click **General Settings**.&#x20;
 2. Click **Configuration** to expand it and complete the following fields:
-   * **Enabled** – Select **Yes**. By selecting **Yes**, you are electing to include all Digital River payments enabled in the **Other Payment Methods** section on the store checkout, and for all transactions to be sent and processed by Digital River per your contract. You must select **Yes** to use the Digital River extension.
-   * **Public Key** – Enter the public API key provided by Digital River.
-   * **Secret Key** – Enter the secret key provided by Digital River.
-   * **Enable debug logging** – By selecting **Yes**, extension errors will log debugging data.
-   * **Disable automatic redirects** – Disable URL redirection_._ This setting applies to payment methods that redirect the shopper from the checkout to a page hosted by the payment instrument (for example,  Klarna, TreviPay, Direct Debit, and Online Banking). You can improve a customer's shopping experience in cases when it is required to redirect them out of the checkout flow in order to complete their transaction. Refer to [Understand redirects on the Payment page](step-4-configure-the-payment-method-settings.md) for more information. <mark style="color:red;"></mark>&#x20;
-   * **Static message** – Enter the message you want to be displayed on invoice and credit memo pages created by Magento Admin Panel. &#x20;
-   * **Default Selling Entity** – Type the name of the appropriate [selling entity](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/creating-checkouts/selling-entities) provided by your Digital River representative. Digital River requires a shopper address in order to determine the correct store entity to select the correct compliance links to display on the checkout page. In cases when a customer address is not yet known, you can specify the Default Selling Entity that will be used for determining the correct compliance links. Use `DR_INC-ENTITY` if you are unsure what to use or contact Digital River customer support for assistance.
+   * **Enabled**–Select **Yes**. By selecting **Yes**, you are electing to include all Digital River payments enabled in the **Other Payment Methods** section on the store checkout, and for all transactions to be sent and processed by Digital River per your contract. You must select **Yes** to use the Digital River extension.
+   * **Public Key**–Enter the public API key provided by Digital River.
+   * **Secret Key**–Enter the secret key provided by Digital River.
+   * **Enable debug logging**–By selecting **Yes**, extension errors will log debugging data.
 
 ## Step 2b: Configure catalog sync settings
 
@@ -36,5 +33,6 @@ description: >-
 ## Step 2c: Configure stored payment methods
 
 1. Click Stored Payment Methods to expand it and complete the following fields:&#x20;
-   * **Enable** – Select **Yes** or **No**. By selecting **Yes**, you are electing to allow shoppers to store their payment methods for later use.
+   * **Enable**–Select **Yes** or **No**. By selecting **Yes**, you are electing to allow shoppers to store their payment methods for later use.
+   * **Default Selling Entity**–Type the name of the appropriate [selling entity](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/creating-checkouts/selling-entities) provided by your Digital River representative. You must provide the name of the selling entity in this field to ensure the appropriate compliance links appear on the page.
 2. Click **Save Config** when you are finished.

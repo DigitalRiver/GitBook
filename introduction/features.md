@@ -1,7 +1,7 @@
 ---
 description: >-
   Learn what features are provided with the Digital River Global Commerce
-  version 2.4.0 Extension for Adobe Commerce.
+  version 2.3.0 Extension for Adobe Commerce.
 ---
 
 # Features
