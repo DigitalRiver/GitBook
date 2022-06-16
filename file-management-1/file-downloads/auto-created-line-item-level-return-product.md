@@ -1,5 +1,5 @@
 ---
-description: Understandthe auto-created line-item level return product.
+description: Understand the auto-created line-item level return product.
 ---
 
 # Auto-created line-item level return product
