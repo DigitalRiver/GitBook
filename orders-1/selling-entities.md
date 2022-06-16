@@ -6,7 +6,7 @@ description: Learn how Digital River dynamically assigns selling entities.
 
 As the [authorized reseller](../) of your products and services, Digital River sells through multiple local entities. These selling entities allow us to support localized payment processing, payment methods, and fulfillment.
 
-The selling entity determines your [eligible payment methods](../payment-integrations-1/digitalriver.js/payment-methods/) and payment processors. It also determines the tax applied to the order and any [tax identifiers](../cart/managing-tax-identifiers.md#tax-identifiers) or certificates that should be collected from the customer.&#x20;
+The selling entity determines your [eligible payment methods](../payments/payments-solutions/digitalriver.js/payment-methods/) and payment processors. It also determines the tax applied to the order and any [tax identifiers](../cart/managing-tax-identifiers.md#tax-identifiers) or certificates that should be collected from the customer.&#x20;
 
 We also assign a buying entity that purchases products from you. This entity does not affect the order but does determine which Digital River entity makes a payout to you.
 

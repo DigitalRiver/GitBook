@@ -4,7 +4,7 @@ description: Learn how to specify the type of charge.
 
 # Initiating a charge
 
-When [creating ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post)or [updating ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post)a Cart, the Commerce API calculates the `chargeType` based on the information set up in Global Commerce. You can use the `chargeType` parameter to tell Digital River whether you expect the [payment source](../sources/) to be used for a [customer-initiated](initiating-a-charge.md#customer-initiated), [merchant-initiated](initiating-a-charge.md#merchant-initiated), or [mail/telephone-initiated](initiating-a-charge.md#mail-order-telephone-order) transaction.&#x20;
+When [creating ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post)or [updating ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post)a Cart, the Commerce API calculates the `chargeType` based on the information set up in Global Commerce. You can use the `chargeType` parameter to tell Digital River whether you expect the [payment source](../../payments/sources/) to be used for a [customer-initiated](initiating-a-charge.md#customer-initiated), [merchant-initiated](initiating-a-charge.md#merchant-initiated), or [mail/telephone-initiated](initiating-a-charge.md#mail-order-telephone-order) transaction.&#x20;
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -74,7 +74,7 @@ You will receive a `200 OK` response. The response shows the `chargeType` in the
 
 ## Customer initiated
 
-In this case, the cardholder actively participates in the transaction. A `customer-initiated` transaction is the most common charge type, representing the majority of online checkouts or invoices. During these transactions, the [customer provides payment details](../sources/retrieving-sources.md) when they submit the cart or uses [stored payment information](../sources/retrieving-sources.md). &#x20;
+In this case, the cardholder actively participates in the transaction. A `customer-initiated` transaction is the most common charge type, representing the majority of online checkouts or invoices. During these transactions, the [customer provides payment details](../../payments/sources/retrieving-sources.md) when they submit the cart or uses [stored payment information](../../payments/sources/retrieving-sources.md). &#x20;
 
 | Can a CVV be used? | Can 3DS measures be used? |
 | ------------------ | ------------------------- |
@@ -86,7 +86,7 @@ A `merchant_initiated`  transaction is submitted using stored payment details wi
 
 Since Digital River acts as the [authorized reseller of record](../../#working-with-digital-river), we initiate and process the transaction on your behalf. You, in turn, are acting on the behalf of your customer.
 
-[Subscription renewals](../sources/retrieving-sources.md) and automated payments for water, sewer, gas, or electric utilities are common examples of this charge type.
+[Subscription renewals](../../payments/sources/retrieving-sources.md) and automated payments for water, sewer, gas, or electric utilities are common examples of this charge type.
 
 | Can a CVV be used? | Can 3DS measures be used? |
 | ------------------ | ------------------------- |

@@ -13,7 +13,7 @@ Use the [`POST /v1/subscriptions/{subscriptionId}/perpetual-price`](https://www.
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request POST 'http://{host}/v1/subscriptions/{subscriptionId}/perpetual-price' \
+curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/perpetual-price' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{
@@ -48,7 +48,7 @@ Use the [`POST /v1/shoppers/me/carts/active`](https://www.digitalriver.com/docs/
 {% tabs %}
 {% tab title="/active cURL" %}
 ```javascript
-curl --location --request POST 'http://{host}/v1/shoppers/me/carts/active' \
+curl --location --request POST 'https://{host}/v1/shoppers/me/carts/active' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{
@@ -108,7 +108,7 @@ curl --location --request POST 'http://{host}/v1/shoppers/me/carts/active' \
 
 {% tab title="/line-items cURL" %}
 ```javascript
-curl --location --request POST 'http://<<host>>/v1/shoppers/me/carts/line-items' \
+curl --location --request POST 'https://<<host>>/v1/shoppers/me/carts/line-items' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{
@@ -174,22 +174,22 @@ You will receive a `200 OK` response. The response to this request creates a sho
 ```javascript
 {
   "cart" : {
-    "uri" : "http://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active",
+    "uri" : "https://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active",
     "paymentMethods" : {
-      "uri" : "http://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/payment-methods"
+      "uri" : "https://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/payment-methods"
     },
     "webCheckout" : {
-      "uri" : "http://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/web-checkout"
+      "uri" : "https://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/web-checkout"
     },
     "id" : 861184190082,
     "lineItems" : {
-      "uri" : "http://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/line-items",
+      "uri" : "https://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/line-items",
       "lineItem" : [ {
-        "uri" : "http://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/line-items/10288020082",
+        "uri" : "https://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/line-items/10288020082",
         "id" : 10288020082,
         "quantity" : 1,
         "product" : {
-          "uri" : "http://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/products/5363866300",
+          "uri" : "https://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/products/5363866300",
           "displayName" : "Monthly auto renewal Subscription",
           "thumbnailImage" : null
         },
@@ -234,11 +234,11 @@ You will receive a `200 OK` response. The response to this request creates a sho
           "formattedImportDuty" : "$0.00"
         }
       }, {
-        "uri" : "http://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/line-items/10288030082",
+        "uri" : "https://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/line-items/10288030082",
         "id" : 10288030082,
         "quantity" : 1,
         "product" : {
-          "uri" : "http://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/products/5400082600",
+          "uri" : "https://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/products/5400082600",
           "displayName" : "Subscription AddOn 1",
           "thumbnailImage" : null
         },
@@ -287,10 +287,10 @@ You will receive a `200 OK` response. The response to this request creates a sho
     "totalItemsInCart" : 2,
     "businessEntityCode" : "DR_INC-ENTITY",
     "billingAddress" : {
-      "uri" : "http://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/billing-address"
+      "uri" : "https://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/billing-address"
     },
     "shippingAddress" : {
-      "uri" : "http://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/shipping-address"
+      "uri" : "https://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/shipping-address"
     },
     "payment" : { },
     "paymentSession" : {
@@ -300,7 +300,7 @@ You will receive a `200 OK` response. The response to this request creates a sho
     },
     "shippingMethod" : { },
     "shippingOptions" : {
-      "uri" : "http://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/shipping-options"
+      "uri" : "https://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active/shipping-options"
     },
     "taxInclusive" : "false",
     "landedCostState" : "NOT_ELIGIBLE",
@@ -355,7 +355,7 @@ Use the [`POST /v1/subscriptions/{subscriptionId}/perpetual-price`](https://www.
 {% tab title="cURL" %}
 ```javascript
 curl -X POST \
-  http://{host}/v1/subscriptions/{subscription_Id}/perpetual-price \
+  https://{host}/v1/subscriptions/{subscription_Id}/perpetual-price \
   -H 'authorization: Basic ****' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \

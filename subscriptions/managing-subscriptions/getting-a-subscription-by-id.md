@@ -9,7 +9,7 @@ The following [`GET /v1/subscriptions/{subscriptionId}`](https://www.digitalrive
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request GET 'http://{host}//v1/subscriptions/{subscriptionId}' \
+curl --location --request GET 'https://{host}//v1/subscriptions/{subscriptionId}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic ***' \
 ```

@@ -11,7 +11,7 @@ Use the [`POST /v1/subscriptions/{subscriptionId}/reduce`](https://www.digitalri
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request POST 'http://{host}/v1/subscriptions/{subscriptionId}>/reduce' \
+curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}>/reduce' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{

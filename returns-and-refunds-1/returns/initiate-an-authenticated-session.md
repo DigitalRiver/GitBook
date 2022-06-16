@@ -4,7 +4,7 @@ description: Learn how to initiate an authenticated session for a return.
 
 # Initiate an authenticated session
 
-Use the `GET /oauth20/authorize` to send the following request to [create an authenticated shopper token](../../getting-started/best-practices.md#creating-authenticated-shopper-tokens) to identify the shopper session:
+Use the `GET /oauth20/authorize` to send the following request to [create an authenticated shopper token](../../resources/API-structure.md#creating-authenticated-shopper-tokens) to identify the shopper session:
 
 {% tabs %}
 {% tab title="cURL" %}

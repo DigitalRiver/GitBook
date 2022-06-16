@@ -9,7 +9,7 @@ The following [`POST /v1/subscriptoins/{subscriptionId}/renewal-type`](https://w
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request POST 'http://{host}/v1/subscriptions/{subscriptionId}/renewal-type' \
+curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/renewal-type' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{

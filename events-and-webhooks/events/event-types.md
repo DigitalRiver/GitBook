@@ -1,8 +1,8 @@
 ---
-description: Understand the event types supported by Digital River.
+description: Understand the key event types supported by Digital River.
 ---
 
-# Event types
+# Key event types
 
 Every event type uses the following format: `resource.event`. This makes coding easier since you know all event types use a consistent format. Digital River supports the following event types:
 
@@ -14,7 +14,7 @@ Every event type uses the following format: `resource.event`. This makes coding 
 
 In [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), when you [create a webhook](../webhooks/creating-a-webhook.md) or [view the details of an existing webhook](../webhooks/searching-for-a-webhook.md), you can find the latest list of event types supported in the Commerce API.
 
-## Subscription created
+## **`subscription.created`**
 
 {% hint style="info" %}
 **Event trigger**: When a customer purchases a new subscription.
@@ -24,7 +24,7 @@ During the shopping experience, a customer orders a subscription to one of your 
 
 If you [created a webhook](../webhooks/creating-a-webhook.md) using the `subscription.created` event for your application (endpoint URL), Digital River notifies your application when a successful subscription acquisition event occurs.
 
-## Subscription renewal
+## `subscription.renewed`
 
 {% hint style="info" %}
 **Event trigger**: When an existing subscription renews (either auto or manual).
@@ -41,7 +41,7 @@ In either case, the system renews the subscription when the payment is complete.
 
 If you [created a webhook](../webhooks/creating-a-webhook.md) using the `subscription.renewed` event for your application (endpoint URL), Digital River notifies your application when a successful subscription renewal event occurs.
 
-## Subscription auto reminder
+## `subscription.auto_reminder`
 
 {% hint style="info" %}
 **Event trigger**: When an existing subscription nears the end of its subscription cycle.

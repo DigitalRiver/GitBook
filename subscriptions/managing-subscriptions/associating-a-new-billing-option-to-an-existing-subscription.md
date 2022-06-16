@@ -13,7 +13,7 @@ The following [`POST /v1/subscriptions/{subscriptionId}/payment-source`](https:/
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request POST 'http://{host}/v1/subscriptions/{subscriptionId}/payment-source' \
+curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/payment-source' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{
@@ -41,7 +41,7 @@ The following [`POST /v1/subscriptions/{subscriptionId}/payment-option`](https:/
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request POST 'http://<<host>>/v1/subscriptions/{subscriptionId}/payment-option' \
+curl --location --request POST 'https://<<host>>/v1/subscriptions/{subscriptionId}/payment-option' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer ***' \
 --data-raw '{

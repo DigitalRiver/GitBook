@@ -9,7 +9,7 @@ The following [`GET /v1/subscriptions/{subscriptionId}/orders`](https://www.digi
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request GET 'http://{host}//v1/subscriptions/{subscriptionId}/orders' \
+curl --location --request GET 'https://{host}//v1/subscriptions/{subscriptionId}/orders' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic ***' \
 ```

@@ -13,7 +13,7 @@ Use the [`POST /v1/subscriptions/{subscriptionId}/preview-cart`](https://www.dig
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request POST 'http://{host}/v1/subscriptions/{subscriptionId}/preview-cart' \
+curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/preview-cart' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{
@@ -73,7 +73,7 @@ Use the  [`POST /v1/subscriptions/{subscriptionId}/preview`](https://www.digital
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request POST 'http://{host}/v1/subscriptions/{subscriptionId}/preview' \
+curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/preview' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{    
@@ -129,7 +129,7 @@ Use the [`POST /v1/subscriptions/{subscriptionId}/renewal-price`](https://www.di
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request POST 'http://{host}/v1/subscriptions/{subscriptionId}/renewal-price' \
+curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/renewal-price' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{    

@@ -9,7 +9,7 @@ The following [`POST /v1/subscriptions/{subscriptionId}/reference-id`](https://w
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request POST 'http://{host}/v1/subscriptions/{subscriptionId}/reference-id' \
+curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/reference-id' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic  ***' \
 --data-raw '{

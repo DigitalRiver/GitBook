@@ -9,7 +9,7 @@ The following [`GET /v1/subscriptions/{subscriptionId}/pending-actions`](https:/
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request GET 'http://{host}//v1/subscriptions/{subscriptionId}/pending-actions' \
+curl --location --request GET 'https://{host}//v1/subscriptions/{subscriptionId}/pending-actions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic ***' \
 ```

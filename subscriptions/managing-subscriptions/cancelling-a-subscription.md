@@ -9,7 +9,7 @@ The following [`POST /v1/subscriptions/{subscriptionId}/cancel`](https://www.dig
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request POST 'http://{host}>/v1/subscriptions/{subscriptionId}/cancel' \
+curl --location --request POST 'https://{host}>/v1/subscriptions/{subscriptionId}/cancel' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{

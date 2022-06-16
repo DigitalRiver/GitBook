@@ -9,7 +9,7 @@ The following [`GET /v1/subscriptions?shopperId={shopperId}`](https://www.digita
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request GET 'http://{host}//v1/subscription?shopperId={shopperId}' \
+curl --location --request GET 'https://{host}//v1/subscription?shopperId={shopperId}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic ***' \
 ```

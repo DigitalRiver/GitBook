@@ -42,8 +42,8 @@ On pre-cart pages, ensure that the expected products, currency, pricing, and dis
 
     See the following topics for more information:
 
-    * [Sources](../cart/sources/)
-    * [Testing scenarios](../payment-integrations-1/testing-scenarios.md)
+    * [Sources](../payments/sources/)
+    * [Testing scenarios](../resources/testing-scenarios.md)
     * [Providing address information](../cart/providing-address-information.md)
 9. From the Review page, review the order details and confirm the previously submitted data is present and accurate, including:
    * The required legal text and disclosures (Terms of Sale, privacy policy, and so on) appear as expected and links to the accompanying legal pages are functioning.

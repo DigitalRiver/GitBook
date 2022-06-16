@@ -158,9 +158,9 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/cart
 {% endtab %}
 {% endtabs %}
 
-Use the `autoRenewal` parameter to tell us whether the subscription is automatically or manually renewed.  If `true`, customers must have agreed to have their card information stored on file and charged at the start of every billing cycle. To do this, you must, at a minimum, [attach a Source to the payment option](sources/using-the-source-identifier.md#attaching-a-source-to-a-payment-option) associated with the subscription and make sure the [Source is reusable](sources/#reusable-or-single-use).&#x20;
+Use the `autoRenewal` parameter to tell us whether the subscription is automatically or manually renewed.  If `true`, customers must have agreed to have their card information stored on file and charged at the start of every billing cycle. To do this, you must, at a minimum, [attach a Source to the payment option](../payments/sources/using-the-source-identifier.md#attaching-a-source-to-a-payment-option) associated with the subscription and make sure the [Source is reusable](../payments/sources/#reusable-or-single-use).&#x20;
 
-If `false`, then the customer needs to manually renew the subscription by resupplying payment date. You can facilitate this by [creating a new instance of Drop-in](../payment-integrations-1/drop-in/) to collect the payment source.&#x20;
+If `false`, then the customer needs to manually renew the subscription by resupplying payment date. You can facilitate this by [creating a new instance of Drop-in](../payments/payments-solutions/drop-in/) to collect the payment source.&#x20;
 
 ## Free trial
 
@@ -182,7 +182,7 @@ In the next version of the Digital River API, the `subscriptionId` attribute wil
 
 ## Creating a billing agreement
 
-You'll first need to ensure that you've [attached a source to the payment option](sources/using-the-source-identifier.md#attaching-a-source-to-a-payment-option) associated with the subscription and that the [source is reusable](sources/#reusable-or-single-use).
+You'll first need to ensure that you've [attached a source to the payment option](../payments/sources/using-the-source-identifier.md#attaching-a-source-to-a-payment-option) associated with the subscription and that the [source is reusable](../payments/sources/#reusable-or-single-use).
 
 You'll then apply the shopper to a cart that includes `subscriptionInfo` hash table in a [`POST/apply-shopper`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post) request and include `billingAgreementId`.&#x20;
 

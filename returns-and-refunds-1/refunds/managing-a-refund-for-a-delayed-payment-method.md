@@ -4,9 +4,9 @@ description: Learn how to manage a refund for a delayed payment method.
 
 # Managing a refund for a delayed payment method
 
-When you [create a refund](creating-a-satisfaction-refund.md#creating-a-satisfaction-refund-programmatically) for a shopper, delayed payment methods such as [Boleto](../../payment-integrations-1/digitalriver.js/payment-methods/boleto.md), [Konbini](../../payment-integrations-1/digitalriver.js/payment-methods/konbini.md), and [Wire Transfer](../../payment-integrations-1/digitalriver.js/payment-methods/wire-transfer.md) require some extra steps to complete the refund.&#x20;
+When you [create a refund](creating-a-satisfaction-refund.md#creating-a-satisfaction-refund-programmatically) for a shopper, delayed payment methods such as [Boleto](../../payments/payments-solutions/digitalriver.js/payment-methods/boleto.md), [Konbini](../../payments/payments-solutions/digitalriver.js/payment-methods/konbini.md), and [Wire Transfer](../../payments/payments-solutions/digitalriver.js/payment-methods/wire-transfer.md) require some extra steps to complete the refund.&#x20;
 
-When a shopper using a delayed payment method requests a refund, they will receive [delayed payment instructions](../../payment-integrations-1/digitalriver.js/reference/delayed-payment-instructions-element.md).
+When a shopper using a delayed payment method requests a refund, they will receive [delayed payment instructions](../../payments/payments-solutions/digitalriver.js/reference/elements/delayed-payment-instructions-element.md).
 
 ![](../../.gitbook/assets/delayed-payment-instructions.png)
 

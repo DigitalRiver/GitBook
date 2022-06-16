@@ -6,7 +6,7 @@ description: >-
 
 # Authorization declines
 
-When you [submit the cart to create an order](./), Digital River submits a request to authorize a charge on the transaction's [payment source](../sources/). Sometimes, however, the request is declined.&#x20;
+When you [submit the cart to create an order](./), Digital River submits a request to authorize a charge on the transaction's [payment source](../../payments/sources/). Sometimes, however, the request is declined.&#x20;
 
 Digital River works with multiple credit card processors using a proprietary solution that maximizes billing success. If an authorization attempt fails with the first credit card processor, we may try billing against a different processor.
 
@@ -22,9 +22,9 @@ Some common reasons for authorization declines are incorrectly entered credit ca
 
 There are two major types of authorization declines: hard and soft.\
 \
-Hard declines are permanent authorization failures.  In other words, retrying the [payment source](../sources/) won't be successful. They are usually due to irreversible events, such as a payment method no longer being valid because the account was closed, or the card was stolen. In these cases, you'll need to inform customers that they must either use a different payment method or fix any payment data that was entered incorrectly.  &#x20;
+Hard declines are permanent authorization failures.  In other words, retrying the [payment source](../../payments/sources/) won't be successful. They are usually due to irreversible events, such as a payment method no longer being valid because the account was closed, or the card was stolen. In these cases, you'll need to inform customers that they must either use a different payment method or fix any payment data that was entered incorrectly.  &#x20;
 
-Soft declines, on the other hand, typically occur when the reason for the decline is temporary. They are often due to insufficient funds or an exceeded daily limit. After a soft decline occurs, retrying the [payment source](../sources/) may be successful but there are certain [retry policies](authorization-declines.md#retry-policies) that you must observe.
+Soft declines, on the other hand, typically occur when the reason for the decline is temporary. They are often due to insufficient funds or an exceeded daily limit. After a soft decline occurs, retrying the [payment source](../../payments/sources/) may be successful but there are certain [retry policies](authorization-declines.md#retry-policies) that you must observe.
 
 ## Decline codes&#x20;
 

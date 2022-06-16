@@ -51,7 +51,7 @@ When you receive an unsuccessful response or experience communication issues (su
 {
 	"GetKeyRequest": {
 		"orderID": {
-			"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+			"_xmlns:xsi": "https://www.w3.org/2001/XMLSchema-instance",
 			"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
 			"_xsi:type": "xsd:string",
 			"__text": "123456789"

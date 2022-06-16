@@ -26,345 +26,345 @@ You can create a custom integration to revoke a key when:
 	"RevocationServiceRequest": {
 		"orderInfo": {
 			"orderID": {
-				"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+				"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 				"_xsi:type": "xsd:string",
 				"__text": "123456789"
 			},
 			"externalReferenceID": {
-				"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+				"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 				"_xsi:type": "xsd:string",
 				"_xsi:nil": "true"
 			},
 			"siteID": {
-				"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+				"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 				"_xsi:type": "xsd:string",
 				"__text": "siteID"
 			},
 			"userKey": {
 				"userID": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "213456789"
 				},
 				"externalReferenceID": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "312456789"
 				},
 				"companyID": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "412356789"
 				},
 				"loginID": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "email@example.com"
 				},
 				"siteID": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "siteID"
 				},
-				"_xmlns:ns2": "http://integration.digitalriver.com/Common/1.0",
+				"_xmlns:ns2": "https://integration.digitalriver.com/Common/1.0",
 				"_xsi:type": "ns2:UserKey"
 			},
 			"paymentInfo": {
 				"accountID": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"_xsi:nil": "true"
 				},
 				"authorizationID": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "512346789"
 				},
 				"cardType": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "CardType"
 				},
 				"customerEmail": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "email2@example.com"
 				},
 				"cardNumber": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "6123456789"
 				},
 				"cardExpirationMonth": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "01"
 				},
 				"cardExpirationYear": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "2080"
 				},
 				"customerPO": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"_xsi:nil": "true"
 				},
 				"ccIssueCode": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"_xsi:nil": "true"
 				},
 				"ccIssueMonth": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"_xsi:nil": "true"
 				},
 				"ccIssueYear": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"_xsi:nil": "true"
 				},
 				"securityIndicator": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"_xsi:nil": "true"
 				},
 				"routingNumber": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"_xsi:nil": "true"
 				},
 				"vatNumber": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"_xsi:nil": "true"
 				},
 				"customerLastName": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "LastName"
 				},
 				"customerFirstName": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "FirstName"
 				},
 				"paymentAmount": {
 					"currencyCode": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "USD"
 					},
 					"amount": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:decimal",
 						"__text": "11.11"
 					},
-					"_xmlns:ns4": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns4": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns4:MoneyInfo"
 				},
 				"paymentMethodName": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "paymentMethod"
 				},
 				"billingAddress": {
 					"addressID": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "712345689"
 					},
 					"city": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "City"
 					},
 					"countryA2": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"_xsi:nil": "true"
 					},
 					"country": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "US"
 					},
 					"countryName": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "United States"
 					},
 					"line1": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "123 Example Street"
 					},
 					"line2": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"_xsi:nil": "true"
 					},
 					"line3": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"_xsi:nil": "true"
 					},
 					"locationCode": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"_xsi:nil": "true"
 					},
 					"name1": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "FirstName"
 					},
 					"name2": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "LastName"
 					},
 					"phoneNumber": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "(123) 456-7890"
 					},
 					"postalCode": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "12345"
 					},
 					"state": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"_xsi:nil": "true"
 					},
 					"email": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "email3@example.com"
 					},
 					"faxPhone": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"_xsi:nil": "true"
 					},
 					"companyName": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "companyName"
 					},
 					"phoneNumber2": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"_xsi:nil": "true"
 					},
 					"countyName": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"_xsi:nil": "true"
 					},
 					"extendedAttributes": {
 						"_xsi:type": "ns5:ExtendedAttributesInfoArray"
 					},
-					"_xmlns:ns5": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns5": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns5:AddressInfo"
 				},
 				"extendedAttributes": {
 					"item": {
 						"name": {
-							"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+							"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 							"_xsi:type": "xsd:string",
 							"__text": "extendedAttributeName"
 						},
 						"value": {
-							"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+							"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 							"_xsi:type": "xsd:string",
 							"__text": "value"
 						},
 						"valueDataType": {
-							"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+							"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 							"_xsi:type": "xsd:string",
 							"__text": "string"
 						},
 						"_xsi:type": "ns6:ExtendedAttributesInfo"
 					},
-					"_xmlns:ns6": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns6": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns6:ExtendedAttributesInfoArray"
 				},
-				"_xmlns:ns3": "http://integration.digitalriver.com/commonRequisition/1.0",
+				"_xmlns:ns3": "https://integration.digitalriver.com/commonRequisition/1.0",
 				"_xsi:type": "ns3:PaymentInformationInfo"
 			},
 			"extendedAttributes": {
 				"item": {
 					"name": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "extendedAttributeName"
 					},
 					"value": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "value"
 					},
 					"valueDataType": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "string"
 					},
 					"_xsi:type": "ns7:ExtendedAttributesInfo"
 				},
-				"_xmlns:ns7": "http://integration.digitalriver.com/Common/1.0",
+				"_xmlns:ns7": "https://integration.digitalriver.com/Common/1.0",
 				"_xsi:type": "ns7:ExtendedAttributesInfoArray"
 			},
-			"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+			"_xmlns:xsi": "https://www.w3.org/2001/XMLSchema-instance",
 			"_xsi:type": "ns1:OrderInfo"
 		},
 		"lineItemInfo": {
 			"lineItemID": {
-				"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+				"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 				"_xsi:type": "xsd:string",
 				"__text": "812345679"
 			},
 			"productInfo": {
 				"productKey": {
 					"productID": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "912345678"
 					},
 					"externalReferenceID": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "012345678"
 					},
 					"companyID": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "102345678"
 					},
 					"locale": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"_xsi:nil": "true"
 					},
-					"_xmlns:ns8": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns8": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns8:ProductKey"
 				},
 				"digitalRight": {
 					"key": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "key"
 					},
 					"keyType": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "KEY_TYPE"
 					},
 					"lineItemQuantityID": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:int",
 						"__text": "1"
 					},
@@ -373,37 +373,37 @@ You can create a custom integration to revoke a key when:
 				"productAttributes": {
 					"item": {
 						"name": {
-							"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+							"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 							"_xsi:type": "xsd:string",
 							"__text": "ExtendedAttributeName"
 						},
 						"value": {
-							"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+							"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 							"_xsi:type": "xsd:string",
 							"__text": "value"
 						},
 						"valueDataType": {
-							"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+							"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 							"_xsi:type": "xsd:string",
 							"__text": "string"
 						},
 						"_xsi:type": "ns9:ExtendedAttributesInfo"
 					},
-					"_xmlns:ns9": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns9": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns9:ExtendedAttributesInfoArray"
 				},
 				"_xsi:type": "ns1:ProductInfo"
 			},
 			"extendedAttributes": {
-				"_xmlns:ns11": "http://integration.digitalriver.com/Common/1.0",
+				"_xmlns:ns11": "https://integration.digitalriver.com/Common/1.0",
 				"_xsi:type": "ns11:ExtendedAttributesInfoArray"
 			},
-			"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+			"_xmlns:xsi": "https://www.w3.org/2001/XMLSchema-instance",
 			"_xsi:type": "ns1:LineItemInfo"
 		},
 		"revocationReason": {
-			"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
-			"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+			"_xmlns:xsi": "https://www.w3.org/2001/XMLSchema-instance",
+			"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 			"_xsi:type": "xsd:string",
 			"__text": "Return-Product"
 		},
@@ -418,158 +418,158 @@ You can create a custom integration to revoke a key when:
 			},
 			"returnInfo": {
 				"returnID": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "2013456789"
 				},
 				"returnLineItemID": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "301245789"
 				},
 				"returnDate": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:dateTime",
 					"__text": "2014-09-14T12:00:32.212Z"
 				},
 				"returnReason": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:string",
 					"__text": "RETURN_REASON"
 				},
 				"returnTotalAmount": {
 					"currencyCode": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "USD"
 					},
 					"amount": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:decimal",
 						"__text": "11.11"
 					},
-					"_xmlns:ns12": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns12": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns12:MoneyInfo"
 				},
 				"returnSubtotalAmount": {
 					"currencyCode": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "USD"
 					},
 					"amount": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:decimal",
 						"__text": "11.11"
 					},
-					"_xmlns:ns13": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns13": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns13:MoneyInfo"
 				},
 				"returnTaxAmount": {
 					"currencyCode": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "USD"
 					},
 					"amount": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:decimal",
 						"__text": "0.00"
 					},
-					"_xmlns:ns14": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns14": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns14:MoneyInfo"
 				},
 				"returnFeesAmount": {
-					"_xmlns:ns17": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns17": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns17:MoneyInfo",
 					"_xsi:nil": "true"
 				},
 				"returnShippingAmount": {
 					"currencyCode": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "USD"
 					},
 					"amount": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:decimal",
 						"__text": "0.00"
 					},
-					"_xmlns:ns18": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns18": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns18:MoneyInfo"
 				},
 				"returnLineItemTotalAmount": {
 					"currencyCode": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "USD"
 					},
 					"amount": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:decimal",
 						"__text": "11.11"
 					},
-					"_xmlns:ns19": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns19": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns19:MoneyInfo"
 				},
 				"returnLineItemSubtotalAmount": {
 					"currencyCode": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "USD"
 					},
 					"amount": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:decimal",
 						"__text": "11.11"
 					},
-					"_xmlns:ns20": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns20": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns20:MoneyInfo"
 				},
 				"returnLineItemTaxAmount": {
 					"currencyCode": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "USD"
 					},
 					"amount": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:decimal",
 						"__text": "0.00"
 					},
-					"_xmlns:ns21": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns21": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns21:MoneyInfo"
 				},
 				"returnLineItemShippingAmount": {
 					"currencyCode": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:string",
 						"__text": "USD"
 					},
 					"amount": {
-						"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+						"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 						"_xsi:type": "xsd:decimal",
 						"__text": "0.00"
 					},
-					"_xmlns:ns24": "http://integration.digitalriver.com/Common/1.0",
+					"_xmlns:ns24": "https://integration.digitalriver.com/Common/1.0",
 					"_xsi:type": "ns24:MoneyInfo"
 				},
 				"returnLineItemQuantity": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:int",
 					"__text": "1"
 				},
 				"satisfaction": {
-					"_xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+					"_xmlns:xsd": "https://www.w3.org/2001/XMLSchema",
 					"_xsi:type": "xsd:boolean",
 					"__text": "false"
 				},
 				"_xsi:type": "ns1:ReturnRevocationInfo"
 			},
-			"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+			"_xmlns:xsi": "https://www.w3.org/2001/XMLSchema-instance",
 			"_xsi:type": "ns1:RevocationInfo"
 		},
-		"_xmlns:ns1": "http://integration.digitalriver.com/RevocationService",
+		"_xmlns:ns1": "https://integration.digitalriver.com/RevocationService",
 		"__prefix": "ns1"
 	}
 }

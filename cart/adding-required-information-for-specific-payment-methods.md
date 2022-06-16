@@ -6,7 +6,7 @@ description: >-
 
 # Adding required information for specific payment methods
 
-Specific payment methods such as [TreviPay ](../payment-integrations-1/digitalriver.js/payment-methods/trevipay.md)require the organization identifier (client\_reference\_id).  The following instructions show you how to add or remove the organization identifier.
+Specific payment methods such as [TreviPay ](../payments/payments-solutions/digitalriver.js/payment-methods/trevipay.md)require the organization identifier (client\_reference\_id).  The following instructions show you how to add or remove the organization identifier.
 
 ## Adding an organization identifier to a cart
 

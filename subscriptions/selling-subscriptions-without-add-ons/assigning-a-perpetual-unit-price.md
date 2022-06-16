@@ -13,7 +13,7 @@ Use the `POST /v1/subscriptions/{subscriptionId}/perpetual-price` resource to as
 {% tabs %}
 {% tab title="cURL" %}
 ```javascript
-curl --location --request POST 'http://{host}/v1/subscriptions/{subscriptionId}/perpetual-price' \
+curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/perpetual-price' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{
@@ -34,7 +34,7 @@ Use the `POST /v1/shoppers/me/carts/active` or the `POST /v1/shoppers/me/carts/a
 {% tabs %}
 {% tab title="/active cURL" %}
 ```javascript
-curl --location --request POST 'http://{host}/v1/shoppers/me/carts/active' \
+curl --location --request POST 'https://{host}/v1/shoppers/me/carts/active' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{
@@ -98,7 +98,7 @@ curl --location --request POST 'http://{host}/v1/shoppers/me/carts/active' \
 
 {% tab title="/line-items cURL" %}
 ```javascript
-curl --location --request POST 'http://<<host>>/v1/shoppers/me/carts/line-items' \
+curl --location --request POST 'https://<<host>>/v1/shoppers/me/carts/line-items' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 --data-raw '{
@@ -132,7 +132,7 @@ Use the `POST /v1/subscriptions/{subscriptionId}/perpetual-price` resource to ap
 {% tab title="cURL" %}
 ```javascript
 curl -X POST \
-  http://{host}/v1/subscriptions/{ubscriptionId}/perpetual-price \
+  https://{host}/v1/subscriptions/{ubscriptionId}/perpetual-price \
   -H 'authorization: Basic ****' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
