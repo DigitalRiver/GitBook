@@ -65,7 +65,7 @@ TreviPay does not require the customer to sign in to the client portal, but they
 ### TreviPay enrollment URL
 
 Digital River will provide the TreviPay enrollment form URL and redirect URL. You can include the enrollment form link on your homepage, product page, checkout page, or via your customer relationship management (CRM). The format for the enrollment form URL is:\
-`https://<progamName><Country>.b2b.credit/<locale>/apply?client_reference_id=<business-UUID>`
+`https://<progamName>.b2b.credit/<locale>/apply?client_reference_id=<business-UUID>`
 
 **Example:** `https://acmeUS.b2b.credit/en-US/apply?client_reference_id=Acme-123456`
 
