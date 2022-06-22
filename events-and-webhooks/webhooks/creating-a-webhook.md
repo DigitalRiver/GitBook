@@ -25,10 +25,10 @@ When creating webhooks, you need to add endpoints from Global Commerce:
    <img src="../../.gitbook/assets/Webhook-Service-Create-webhook.png" alt="" data-size="original"> \
    The Create Webhook page appears.\
    &#x20;<img src="../../.gitbook/assets/Create-Webhook.png" alt="" data-size="original">&#x20;
-4. Enter the URL for the endpoint in the **Endpoint URL** field.&#x20;
-5. Optional. Enter the user credentials for the endpoint in the **Username** and **Password** fields.  These fields are optional. If you do not want to leverage these authentication credentials, you can leave the two fields blank. See [Authentication](https://docs.digitalriver.com/commerce-api/getting-started/best-practices#authentication) for information on how to authenticate the client’s endpoint to add another layer to security.
-6. Optional. Select **Enabled** for **Status**.\
-   **Note**: If you do not select **Enabled**, the system will ask you if you want to enable the webhook when you click **Create**.
+4. Enter the URL for the endpoint in the **Endpoint URL** field. The endpoint URL will receive the webhook payload. The URL must start with either `https://` or `http://`.
+5. Optional. Enter your endpoint credentials in the **Username** and **Password** fields. If you do not want to leverage these authentication credentials, you can leave the two fields blank. See [Authentication](https://docs.digitalriver.com/commerce-api/getting-started/best-practices#authentication) for information on how to authenticate the client’s endpoint to add another layer to security.
+6. Optional. Select **Enabled** for **Status**. \
+   **Note**: If you do not select **Enabled**, no payment will be sent when an event occurs. Also, the system will ask you if you want to enable the webhook when you click **Create**.
 7. Select the check box next to each event you want to associate with the endpoint or select the check box next to **Event** to select all events. You must select at least one [event type](../events/event-types.md).&#x20;
 8. Scroll down and click **Create**.  &#x20;
 
@@ -159,6 +159,6 @@ After reviving the session, you can leverage the following APIs:
 
 ## Step 3: Respond to webhook events
 
-Your endpoint must return a 2xx HTTP status code to acknowledge the receipt of an event. If the endpoint fails to acknowledge events over several days, your endpoint will be disabled.
+Your endpoint must return a `2xx` HTTP status code to acknowledge the receipt of an event. If the endpoint fails to acknowledge events over several days, your endpoint will be disabled.
 
 If Digital River receives **any** [response codes](../../error-codes.md) outside this range, it indicates that you did not receive the event. For example, Digital River treats a URL redirection as a failure.
