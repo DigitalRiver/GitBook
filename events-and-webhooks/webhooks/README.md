@@ -4,13 +4,7 @@ description: Learn about the webhooks.
 
 # Webhooks
 
-Digital River uses webhooks to notify your application when events occur.&#x20;
-
-When an event occurs, Digital River will create a data object and then send a webhook to your application (endpoint URL) through a POST request that contains the event and timestamp for the event. You can set up multiple webhooks endpoints to receive a single event. This allows you to receive real-time updates on the state of your order, line-item, subscriptions, returns, and refunds.
-
-You can use the Webhook Service page in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do) to [search](searching-for-a-webhook.md), [create](creating-a-webhook.md), [edit](editing-a-webhook.md), [enable](enabling-or-disabling-webhooks.md), [disable](enabling-or-disabling-webhooks.md), and [delete ](deleting-a-webhook.md)webhooks. You can also [reveal ](revealing-a-webhooks-secret.md)and [rotate ](rotating-a-webhooks-secret.md)webhook secrets. When you register your webhook URLs with Digital River, Digital River creates a data object and sends webhook events that notify your application any time an event occurs. The data object includes the type of event and the data associated with that event.&#x20;
-
-Digital River uses webhooks to notify your application (endpoint URL) when events occur in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). A webhook contains the event and timestamp for the event. You can use the Webhooks Service in Global Commerce to [search](searching-for-a-webhook.md), [edit](editing-a-webhook.md), [create](creating-a-webhook.md), and [delete webhooks](deleting-a-webhook.md).
+Digital River uses webhooks to notify your application ([endpoint URL](./#endpoint-url)) when events occur. A webhook contains the event and timestamp for the event. You can use the Webhook Service page in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do) to [search](searching-for-a-webhook.md), [create](creating-a-webhook.md), [edit](editing-a-webhook.md), [enable](enabling-or-disabling-webhooks.md), [disable](enabling-or-disabling-webhooks.md), and [delete ](deleting-a-webhook.md)webhooks. You can also [reveal ](revealing-a-webhooks-secret.md)and [rotate ](rotating-a-webhooks-secret.md)webhook secrets. When you register your webhook URLs with Digital River, Digital River creates a Data object and sends webhook events that notify your application any time an event occurs. The Data object includes the type of event and the data associated with that event.&#x20;
 
 ## **Webhook ID**
 
@@ -28,6 +22,6 @@ A secret ensures that the received payload is the same as it is sent. When the p
 
 ## **Status**
 
-The webhook status is disabled by default. The system will prompt you to enable the webhook when you [create a webhook](creating-a-webhook.md). If you chose to disable the webhook, no payload will be sent when an event occurs.&#x20;
+The webhook status is Disabled by default. The system will prompt you to enable the webhook when you [create a webhook](creating-a-webhook.md). If you chose to disable the webhook, no payload would be sent when an event occurs.&#x20;
 
 After you create a webhook, you can choose to [enable or disable the webhook manually](enabling-or-disabling-webhooks.md). Enabling a webhook manually does not require confirmation. However, you are required to provide confirmation when you manually disable a webhook by entering the username (case sensitive).
