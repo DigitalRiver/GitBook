@@ -22,11 +22,11 @@ Create a Credit Card payment method for your app or website in three easy steps:
 
 Build a Credit Card Source Request object. The Credit Card Source Request object requires the following fields.
 
-| Field     | Value                                          |
-| --------- | ---------------------------------------------- |
-| type      | creditCard                                     |
-| sessionId | The payment session identifier.                |
-| owner     |  An [Owner object](common-payment-objects.md). |
+| Field     | Value                                                       |
+| --------- | ----------------------------------------------------------- |
+| type      | creditCard                                                  |
+| sessionId | The payment session identifier.                             |
+| owner     |  An [Owner object](common-payment-objects.md#owner-object). |
 
 ### Step 2: Create a Credit Card source using DigitalRiver.js
 
