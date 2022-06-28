@@ -6,6 +6,11 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2022/6/28
+
+* We expanded our Klarna Pay Later offering with the addition of payment options in Canada, France, Ireland, Poland, and Portugal. Learn more [here](../payments/payments-solutions/digitalriver.js/payment-methods/klarna.md).
+* We expanded our TreviPay B2B payment offering to include locales in Denmark and New Zealand! Learn more [here](../payments/payments-solutions/digitalriver.js/payment-methods/trevipay.md).
+
 ## 2022/6/16
 
 * We added support for [applying store credit](../consumer-browsing-experience-1/common-use-cases/applying-store-credit.md) to non-recurring transactions. Store credit allows merchants to offer customers a store credit as a payment type at checkout.
