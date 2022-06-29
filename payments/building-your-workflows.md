@@ -108,7 +108,7 @@ let dropin = digitalriver.createDropin(configuration);
 
 Drop-in Payments renders in the specified container.
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (2) (1).png>)
 
 Customers **** enter their credit card information and click the [configurable ](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button)**Pay Now** button**.**&#x20;
 
@@ -203,7 +203,7 @@ let dropin = digitalriver.createDropIn(configuration);
 
 Drop-in renders in the specified container.
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (3).png>)
 
 Customers enter their credit card information, select the save account and payment information option and click the [configurable ](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button)**Pay Now** button**.**&#x20;
 
@@ -352,7 +352,7 @@ let dropin = digitalriverpayments.createDropIn(configuration);
 
 Drop-in renders in the specified container.
 
-![](<../.gitbook/assets/Drop In Save Payment.PNG>)
+![](<../.gitbook/assets/drop-in-save-payment (1) (1) (1).png>)
 
 Shoppers **** must enter their credit card information, select the save account and payment information option and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-drop-in-button-text) **Pay Now** button**.**
 
@@ -548,7 +548,7 @@ let dropin = digitalriverpayments.createDropIn(configuration);
 
 Drop-in renders in the specified container.
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (4).png>)
 
 Shoppers **** enter their credit card information, select the save account and payment information option and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button) **Add Payment Method** button.&#x20;
 

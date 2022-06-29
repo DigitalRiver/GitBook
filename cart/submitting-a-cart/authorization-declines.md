@@ -6,17 +6,35 @@ description: >-
 
 # Authorization declines
 
+When the shopper [submits a cart](./), Digital River must request authorization from the payment provider to create a [charge ](initiating-a-charge.md)for the amount indicated. Sometimes, however, this authorization request is declined.
+
 When you [submit the cart to create an order](./), Digital River submits a request to authorize a charge on the transaction's [payment source](../../payments/sources/). Sometimes, however, the request is declined.&#x20;
 
 Digital River works with multiple credit card processors using a proprietary solution that maximizes billing success. If an authorization attempt fails with the first credit card processor, we may try billing against a different processor.
 
+Digital River works with multiple credit card processors using a proprietary solution that maximizes billing success. If an authorization attempt fails with the first credit card processor, we may try billing against a different processor.
+
+When Digital River cannot obtain a successful authorization, we return an error that indicates the reason for the decline.&#x20;
+
 When Digital River cannot obtain a successful authorization, we return the error that indicates the reason for the decline. &#x20;
+
+{% hint style="danger" %}
+Do not share the error code with the customer. Doing so may aid parties that are attempting to care out fraudulent activities.
+{% endhint %}
+
+Some common reasons for authorization declines are incorrectly entered credit card numbers, invalid security codes, and insufficient funds. In the event of a [hard or soft](authorization-declines.md#hard-declines-vs.-soft-declines) authorization decline, you maintain responsibility for communicating with the customer, as well as following Digital River's [retry policies](authorization-declines.md#retry-policies).
 
 {% hint style="danger" %}
 Do not share the error code with the customer. Doing so may aid parties that are attempting to carry out fraudulent activities.
 {% endhint %}
 
+There are two major types of authorization declines: hard and soft.\
+\
+Hard declines are permanent authorization failures.  In other words, retrying the payment source won't be successful. They are usually due to irreversible events, such as a payment method no longer being valid because the account was closed or the card was stolen. In these cases, you'll need to inform customers that they must either use a different payment method or fix any payment data that was incorrectly entered.  &#x20;
+
 Some common reasons for authorization declines are incorrectly entered credit card numbers, invalid security codes, and insufficient funds. In the event of a [hard or soft](authorization-declines.md#hard-declines-vs.-soft-declines) authorization decline, you maintain responsibility for communicating with the customer, as well as following the Digital River [retry policies](authorization-declines.md#retry-policies).&#x20;
+
+Soft declines, on the other hand, typically occur when the reason for the decline is temporary.  They are often due to insufficient funds or an exceeded daily limit. After a soft decline occurs, retrying the payment source may be successful. But, there are certain [retry policies](authorization-declines.md#retry-policies) you must observe when conducting these retries.
 
 ## Hard declines vs. soft declines
 

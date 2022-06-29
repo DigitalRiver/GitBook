@@ -240,7 +240,7 @@ paypal.Button.render({
 {% endtab %}
 {% endtabs %}
 
-![PayPal login](../../../../.gitbook/assets/PayPal-login.png)
+![PayPal login](../../../../.gitbook/assets/paypal-login.png)
 
 ### Step 4: Use the authorized source
 
@@ -439,7 +439,7 @@ paypal.Button.render({
 {% endtab %}
 {% endtabs %}
 
-![PayPal login](../../../../.gitbook/assets/PayPal-login.png)
+![PayPal login](../../../../.gitbook/assets/paypal-login.png)
 
 #### Step 4: Use the authorized source
 
