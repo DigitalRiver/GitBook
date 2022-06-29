@@ -246,4 +246,4 @@
 ## General resources
 
 * [API reference](https://www.digitalriver.com/docs/commerce-api-reference/)
-* [Release notes](general-resources/release-notes.md)
+* [Release notes](resources/release-notes.md)

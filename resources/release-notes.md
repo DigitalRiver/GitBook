@@ -6,6 +6,14 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2022/6/29
+
+* We added `precondition-failure` error codes to [409 Conflict](../error-codes.md#409-conflict) in the [Error codes](../error-codes.md) section.
+* We updated the following APIs:
+  * Renamed "API Trigger Offer" to "[Trigger offer by cart](https://www.digitalriver.com/docs/commerce-api-reference/#tag/API-Trigger-Offer/paths/\~1v1\~1shoppers\~1me\~1carts\~1active%20\(API%20Trigger%20Offer\)/post)".
+  * Added the [Trigger offer by line item](https://www.digitalriver.com/docs/commerce-api-reference/#tag/API-Trigger-Offer/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items%20\(API%20Trigger%20Offer\)/post). Use this API to trigger a product-level offer.
+  * Updated the descriptions for the [Order Lookup](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Order-Lookup/paths/\~1v1\~1shoppers\~1order-lookup/post) API.
+
 ## 2022/6/16
 
 * We added support for [applying store credit](../consumer-browsing-experience-1/common-use-cases/applying-store-credit.md) to non-recurring transactions. Store credit allows merchants to offer customers a store credit as a payment type at checkout.
@@ -149,7 +157,7 @@ We added [Site Management](https://www.digitalriver.com/docs/commerce-api-refere
 
 ## 2021/5/6
 
-You can now programmatically retrieve a list of your site's [authorized billing](../sites/getting-a-sites-authorized-billing-countries.md) or [shipping countries](../sites/getting-a-sites-authorized-shipping-countries.md) using your [Global Commerce user credentials](../resources/API-structure.md#sending-api-calls-using-auth).
+You can now programmatically retrieve a list of your site's [authorized billing](../sites/getting-a-sites-authorized-billing-countries.md) or [shipping countries](../sites/getting-a-sites-authorized-shipping-countries.md) using your [Global Commerce user credentials](API-structure.md#sending-api-calls-using-auth).
 
 ## 2021/4/29
 
@@ -161,7 +169,7 @@ We replaced Supported geographies for each [payment method](../payments/payments
 ## 2021/4/27
 
 * We made the following to the [Commerce API Reference](https://www.digitalriver.com/docs/commerce-api-reference/):
-  * Removed `x-siteid` and `x-companyId` headers for [Subscription ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Manage-Subscription)APIs. You only need to [provide a token](../resources/API-structure.md#creating-session-aware-access-tokens) now.\
+  * Removed `x-siteid` and `x-companyId` headers for [Subscription ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Manage-Subscription)APIs. You only need to [provide a token](API-structure.md#creating-session-aware-access-tokens) now.\
     &#x20; <img src="../.gitbook/assets/Header-Parameters.png" alt="" data-size="original">&#x20;
   * Removed `sku` and `displayName` from the `product` object in the response for [`preview`](https://www.digitalriver.com/docs/commerce-api-reference/#operation/previewSubscription), [`preview-cart`](https://www.digitalriver.com/docs/commerce-api-reference/#operation/previewCartSubscription), and [`reduce`](https://www.digitalriver.com/docs/commerce-api-reference/#operation/reduceSubscription) resources.
   * Removed `proratedUnitPrice` from the [`reduce`](https://www.digitalriver.com/docs/commerce-api-reference/#operation/reduceSubscription) resource.
@@ -200,7 +208,7 @@ We updated the information on [landed cost](../orders-1/landed-costs.md).
 ## 2021/2/1
 
 * We improved the [error format](https://www.digitalriver.com/docs/commerce-api-reference/#section/Errors/Error-format) for transactional errors using a credit card saved in the payment source and added a declined message (`declinedMessage`) to provide more information.
-* We moved the description of [API keys](../resources/API-structure.md#api-keys) from the Commerce API Reference to [Best practices](../resources/API-structure.md).
+* We moved the description of [API keys](API-structure.md#api-keys) from the Commerce API Reference to [Best practices](API-structure.md).
 
 ## 2021/1/15
 
@@ -236,7 +244,7 @@ A note to [Apply shopper to cart](https://www.digitalriver.com/docs/commerce-api
 
 ## 2021/1/5
 
-We added the [best practices](../resources/API-structure.md) for using the Commerce API that includes [Authentication](../resources/API-structure.md#authentication), [Creating authenticated shopper tokens](../resources/API-structure.md#creating-session-aware-access-tokens), [Caching responses](../resources/API-structure.md#caching-responses), [Capturing the customer's IP address](../resources/API-structure.md#capturing-the-customers-ip-address), and [Elements](../resources/API-structure.md#elements).&#x20;
+We added the [best practices](API-structure.md) for using the Commerce API that includes [Authentication](API-structure.md#authentication), [Creating authenticated shopper tokens](API-structure.md#creating-session-aware-access-tokens), [Caching responses](API-structure.md#caching-responses), [Capturing the customer's IP address](API-structure.md#capturing-the-customers-ip-address), and [Elements](API-structure.md#elements).&#x20;
 
 ## 2020/12/30
 

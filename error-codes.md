@@ -481,13 +481,19 @@ The following topics contain a list of API error codes.
   * `Purchase history restrictions in place; allowed quantity is [{maximum quantity}].`The requested quantity is greater than the maximum purchasable quantity of the product.
   * `Exception occurred while checking ShippingMethod by ShippingMethodSetter`An exception occurred while checking the shipping method.
 * `over-private-store-shopper-restriction`–Cannot add the product to the cart. The shopper requested more than the maximum purchasable quantity \[x], or the remaining purchasable quantity \[y] is less than the quantity they requested. The possible error descriptions are as follows:
-  * `Maximum purchasable quantity[{maximum quantity}]; Remaining purchasable quantity[{remaining purchasable quantity}]; The product cannot be added to the cart.`The sum of this request quantity and the quantity already purchased in the cart is over the maximum purchasable quantity when the product in a private store has a maximum purchasable quantity and the purchase history restriction setting is true.
+  * `Maximum purchasable quantity[{maximum quantity}]; Remaining purchasable quantity[{remaining purchasable quantity}]; The product cannot be added to the cart.` The sum of this request quantity and the quantity already purchased in the cart is over the maximum purchasable quantity when the product in a private store has a maximum purchasable quantity and the purchase history restriction setting is true.
 * `payment-post-auth-failure`–The order could not be submitted due to payment processing failure.
 * `paypal-failure`–Cannot process the cart because PayPal returned a failure or declined status.
 * `paypal-lookup-failure`–Cannot process the cart due to a PayPal lookup processing failure. The possible error descriptions are as follows:
   * `The cart could not be processed due to paypal lookup processing failure`\
     Cannot process the cart due to a PayPal lookup processing failure.
 * `pin_try_exceeded`–The bank's allowable number of PIN tries has been exceeded.
+* `precondition-failure`–The request failed on some precondition validations. The possible error descriptions are as follows:
+  * `Invalid offer level for applied offer with offer ID: {offerId}. Provide a valid offer level and try again.` The offer level for the applied offer with `offerId` is invalid.
+  * `Invalid offer type for applied offer with offer ID: {offerId}. Provide a valid offer type and try again.` The offer type for the applied offer with `offerId` is invalid.
+  * `Applied the wrong offer ID: {offerId} with the offer. Enter the correct offer ID and try again.` The trigger point for the applied offer with `offerId` is invalid.
+  * `Applied the wrong offer ID: {offerId} for this site. Enter the correct offer ID and try again.` The offer with `offerId` is unavailable.
+  * `The applied offer with offer ID: {offerId} is unavailable. Ensure the active offer is within the total usage limit and that the supported locale matches the user's locale and try again.` The applied offer with the provided `offerId` is unavailable.
 * `private-store-remaining-quantity-under-line-item-restriction`–Cannot add the product to the cart. The shopper requested more than the Remaining purchasable quantity \[x] or less than the Minimum purchasable quantity \[y].
 * `rate-limit-quota-exceeded`–Exceeded the quota for the allowed number of API requests.
 * `restricted-bill-to-country`–The billing address country for the request is restricted. The possible error descriptions are as follows:
@@ -537,13 +543,6 @@ The following topics contain a list of API error codes.
   * `The product ID or product external reference ID is invalid. Provide the correct product ID or product external reference ID and try again.`The product ID or product for external reference ID is invalid.
 * `no-discount-or-type`–The validation failed for `discount` or `discountType`. The possible error descriptions are as follows:
   * `Either the discount or discount type or both are missing. Include both the discount and discount type in the payload and try again.`Need to provide `discount` and `discountType`.
-  * `precondition-failure`–The request failed on some precondition validations.  The possible error descriptions are as follows:
-    * `Invalid offer level for applied offer with offer ID: {offerId}. Provide a valid offer level and try again.`The offer lever for applied offer with `offerId` is invalid.
-    * `Invalid offer type for applied offer with offer ID: {offerId}. Provide a valid offer type and try again.`\
-      The offer type for the applied offer with `offerId` is invalid.
-    * `Applied the wrong offer ID with the offer. Enter the correct offer ID and try again.`The trigger point for the applied offer with `offerId` is invalid.
-    * `Applied the wrong offer ID for this site. Enter the correct offer ID and try again.`The offer with the specified `offerId` is unavailable.
-    * `The applied offer with offer ID: {offerId} is unavailable. Ensure the active offer is within the total usage limit and that the supported locale matches with user's locale and try again.`The applied offer with provided ID is unavailable.
 
 ### 413 Request Entity Too Large
 
