@@ -8,25 +8,15 @@ description: >-
 
 When the shopper [submits a cart](./), Digital River must request authorization from the payment provider to create a [charge ](initiating-a-charge.md)for the amount indicated. Sometimes, however, this authorization request is declined.
 
-When you [submit the cart to create an order](./), Digital River submits a request to authorize a charge on the transaction's [payment source](../../payments/sources/). Sometimes, however, the request is declined.&#x20;
-
-Digital River works with multiple credit card processors using a proprietary solution that maximizes billing success. If an authorization attempt fails with the first credit card processor, we may try billing against a different processor.
-
 Digital River works with multiple credit card processors using a proprietary solution that maximizes billing success. If an authorization attempt fails with the first credit card processor, we may try billing against a different processor.
 
 When Digital River cannot obtain a successful authorization, we return an error that indicates the reason for the decline.&#x20;
-
-When Digital River cannot obtain a successful authorization, we return the error that indicates the reason for the decline. &#x20;
 
 {% hint style="danger" %}
 Do not share the error code with the customer. Doing so may aid parties that are attempting to care out fraudulent activities.
 {% endhint %}
 
 Some common reasons for authorization declines are incorrectly entered credit card numbers, invalid security codes, and insufficient funds. In the event of a [hard or soft](authorization-declines.md#hard-declines-vs.-soft-declines) authorization decline, you maintain responsibility for communicating with the customer, as well as following Digital River's [retry policies](authorization-declines.md#retry-policies).
-
-{% hint style="danger" %}
-Do not share the error code with the customer. Doing so may aid parties that are attempting to carry out fraudulent activities.
-{% endhint %}
 
 There are two major types of authorization declines: hard and soft.\
 \
