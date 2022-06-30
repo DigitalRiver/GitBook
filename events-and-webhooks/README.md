@@ -1,11 +1,16 @@
 ---
-description: Learn how to manage your events and webhooks.
+description: Learn how to create and manage events and webhooks.
 ---
 
-# Events and webhooks
+# Responding to events
 
-Digital River uses webhooks to notify your application (endpoint URL) when events occur in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). A webhook contains the event and timestamp for the event. You can use the Webhooks Service in Global Commerce to [search](webhooks/searching-for-a-webhook.md), [edit](webhooks/editing-a-webhook.md), [create](webhooks/creating-a-webhook.md), and [delete webhooks](webhooks/deleting-a-webhook.md).
+The Commerce API allows you to create and manage events and webhooks. You can use webhooks to subscribe your application to these events and receive notifications when they occur.
 
-When you register your webhook URLs with Digital River, Digital River creates a Data object and sends webhook events that notify your application any time an event occurs.&#x20;
+| Resource              | Description                               |
+| --------------------- | ----------------------------------------- |
+| [Events](events/)     | Represents an event in your online store. |
+| [Webhooks](webhooks/) | Represents a specific webhook.            |
 
-The Data object includes the type of event and the data associated with that event. Digital River sends the Data object to the endpoint URLs you define in the [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do)'s Webhook Service settings for your account. You can set up multiple webhook endpoints to receive a single event.
+## Getting started
+
+To enable the Webhook Service for Commerce API, send a request to your Digital River Account Manager and include your site ID and company ID. Your Account Manager will notify you when the Webhook Service is enabled in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).

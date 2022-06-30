@@ -109,7 +109,7 @@ konbiniElement .mount('konbini-selector');
 
 DigitalRiver.js will create and render a select element that populates with the store logo and localized store name of the available stores where the customer can pay using this payment method.
 
-![](../../../../.gitbook/assets/konbini\_drjs\_render.png)
+![](../../../../.gitbook/assets/Konbini\_DRJS\_render.PNG)
 
 The same [events and structures](../reference/elements/#element-on) appear in the Konbini element, and you should listen to the [Change event](../reference/elements/konbini-elements.md#change) to determine when the user has made a selection. When the change event response contains `"complete": true`, the shopper has selected a store.
 
