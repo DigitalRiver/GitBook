@@ -8,7 +8,7 @@ To edit a webhook:
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 2. Select **Administration**, and then click **Webhook Service**. The Webhook Service page appears.\
-   &#x20;<img src="../../.gitbook/assets/Webhook Service.png" alt="" data-size="original">
+   &#x20;<img src="../../.gitbook/assets/Webhook-Service (1).png" alt="" data-size="original">
 3. Select the **Webhook ID** you want to disable or enable from the list and click **Edit**. The Edit Webhook page appears.\
    &#x20;<img src="../../.gitbook/assets/Edit Webhook Event.png" alt="" data-size="original">&#x20;
 4. Enter the URL for the endpoint in the **Endpoint URL** field.
