@@ -26,7 +26,7 @@ Build the Online Banking Source Request Details objects. The Online Banking Sour
 | --------------- | --------------------------------------------------------------------------------------------------- |
 | `type`          | onlineBanking                                                                                       |
 | `sessionId`     | The payment session identifier.                                                                     |
-| `owner`         | An [Owner object](../common-payment-objects.md#owner-object).                                       |
+| `owner`         | An [Owner object](common-payment-objects.md#owner-object).                                          |
 | `onlineBanking` |  An [Online Banking Source Details object](online-banking.md#online-banking-source-request-object). |
 
 #### Online Banking source details object
@@ -113,7 +113,7 @@ var onlineBankingElement = digitalriver.createElement('onlinebanking', onlineBan
 onlineBankingElement.mount('online-banking');
 ```
 
-To create an online banking source, you must reference the created element and the supplemental data in your [createSource ](../../reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
+To create an online banking source, you must reference the created element and the supplemental data in your [createSource ](../reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
 
 ```javascript
 var data = {
@@ -348,7 +348,7 @@ Once authorized, the source state will change to chargeable.
 
 ### Step 4: Use the authorized source
 
-Once authorized, you can use the source by [attaching it to a cart](../../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
+Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
