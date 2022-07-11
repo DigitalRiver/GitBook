@@ -23,7 +23,7 @@ Get familiar with our commerce connectors:
 
 * [Adobe Commerce Extension ](https://docs.digitalriver.com/magento/)
 * [BigCommerce App](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/-MYQsO02eKz9DuHs39Wm-887967055/)
-* [commercetools](https://docs.digitalriver.com/commercetools-1/)
+* [commercetools](https://docs.digitalriver.com/commercetools/)
 * [Salesforce B2B Commerce App ](https://docs.digitalriver.com/salesforce-b2b/)
 * [Salesforce B2C LINK Cartridge](https://docs.digitalriver.com/salesforce-b2c/v/master-3/)
 * [Salesforce Lightning B2B Commerce App](https://docs.digitalriver.com/salesforce-lightning/v/master/)
