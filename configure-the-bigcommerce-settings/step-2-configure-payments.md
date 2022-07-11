@@ -10,7 +10,7 @@ For the [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payme
 
 To configure payments:
 
-1. Click **Store Setup** in the app menu on the left and then click **Payments**.
+1. Click **Settings** in the app menu on the left and then click **Payments**.
 2. From the **Checkout Payment Settings** tab, select the supported currency from the dropdown list under **Show payment methods**. \
    ![](../.gitbook/assets/Show-payment-methods.png)
 3. Disable all non-Digital River payment methods, if applicable.

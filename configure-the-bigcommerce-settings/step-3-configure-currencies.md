@@ -10,7 +10,7 @@ You must [configure payments](step-2-configure-payments.md) before you configure
 
 To configure currencies within the BigCommerce:
 
-1. Click **Store Setup** in the app menu on the left and then click **Currencies**.
+1. Click **Settings** in the app menu on the left and then click **Currencies**.
 2.  Click the **Add new currency** button. The Add Currency dialog box appears.
 
     ![](../.gitbook/assets/Addcurrency.PNG)\

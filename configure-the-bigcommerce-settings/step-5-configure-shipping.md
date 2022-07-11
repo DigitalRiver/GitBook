@@ -8,7 +8,7 @@ description: Learn how to configure shipping for your store.
 
 To configure the shipping address:
 
-1. Click **Store Setup** in the app menu on the left and then click **Shipping**. The Shipping Manager page appears.
+1. Click **Settings** in the app menu on the left and then click **Shipping**. The Shipping Manager page appears.
 2.  Under **Shipping Origin**, click **Edit**. The **Configure Shipping Address** dialog appears.
 
     **Note**: You must select the same country for both [Default country](step-1-configure-the-store-profile.md) and Shipping Origin (ship-from address). If this is not set correctly, the totals displayed to the shopper during checkout and order submission will be different.&#x20;
@@ -29,7 +29,7 @@ To configure the shipping address:
     2. To configure shipping quotes for a country, click **Configure** next to the country you added.
     3. Choose one of the following options:
        * To enable static shipping quotes, toggle one of the options to enable under **Static shipping quotes**, complete the fields, and click **Submit**. Repeat this step for each additional option.\
-         ![](../.gitbook/assets/Static-shipping-quotes.png)
+         ![](<../.gitbook/assets/Static-shipping-quotes (1).png>)
        * To configure real-time shipping quotes, click **Connect** next to the real-time shipping option you want to use under **Real-time shipping quotes**, complete the fields under each tab, and click **Submit**. Repeat this step for each additional option.\
          .![](../.gitbook/assets/Real-time-shipping-quotes.png)
     4. Click **Done**.
@@ -47,7 +47,7 @@ To add a custom zone:&#x20;
 3. Click **Configure** next to the zone you added.
 4. Choose one of the following options:
    * To enable static shipping quotes, toggle one of the options to enable under **Static shipping quotes**, complete the fields, and click **Submit**. Repeat this step for each additional option.\
-     ![](../.gitbook/assets/Static-shipping-quotes.png)
+     ![](<../.gitbook/assets/Static-shipping-quotes (1).png>)
    * To configure real-time shipping quotes, click **Connect** next to the real-time shipping option you want to use under **Real-time shipping quotes**, complete the fields under each tab, and click **Submit**. Repeat this step for each additional option.\
      .![](../.gitbook/assets/Real-time-shipping-quotes.png)
 5. Click **Done**.

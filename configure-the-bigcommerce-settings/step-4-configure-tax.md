@@ -8,14 +8,14 @@ description: Learn how to configure tax for your store.
 
 To configure tax settings:
 
-1. Click **Store Setup** in the menu on the left and then click **Tax**.
+1. Click **Settings** in the menu on the left and then click **Tax**.
 2.  Click **Enable** to enable Digital River as a tax service. A green ENABLED text box will appear next to Digital River.&#x20;
 
     ![](<../.gitbook/assets/Digitalriverenabled (1).PNG>)
 3. Click **Edit** under **Tax Settings**.
 4.  In the **Tax Label** field, type the label you want to use to describe this tax option.
 
-    ![](<../.gitbook/assets/Tax-Label (1).png>)
+    <img src="../.gitbook/assets/Tax-Label.png" alt="" data-size="original">
 5.  Under **Prices Entered With Tax**, and choose **No, I will enter prices exclusive of tax**.&#x20;
 
     **Note**: You must set **** the **Prices Entered with Tax** dropdown to **No, I will enter prices exclusive of tax.**&#x20;
@@ -30,7 +30,7 @@ To configure tax settings:
    *   **Gift Wrapping Tax Class**: Gift Wrapping\
 
 
-       ****![](<../.gitbook/assets/Calculatetaxbasedon (1).PNG>)****
+       ****![](../.gitbook/assets/Calculatetaxbasedon.PNG)****
 8. Under **Configure Tax Display Settings**, select the specified option from each of the following dropdown menus:
    * **Show Prices Within Control Panel**: Excluding Tax
    * **Show Prices on Invoices**: Excluding Tax
@@ -64,7 +64,7 @@ To configure the tax rates and zones:
     ![](../.gitbook/assets/Countries-list.png)
 7.  Choose the  **All customers in my store option** for **Tax Zone Applies to**.
 
-    ****![](../.gitbook/assets/Tax-Zone-Applies-to.png)****
+    ****![](<../.gitbook/assets/Tax-Zone-Applies-to (1).png>)****
 8.  Select the **Enable this tax zone** check box.
 
     ![](../.gitbook/assets/Enable-this-tax-zone.png)

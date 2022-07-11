@@ -8,7 +8,7 @@ Work with your Digital River project manager to configure your store. Digital Ri
 
 To configure your store profile:
 
-1. Click **Store Setup** in the app menu on the left and then click **Store Profile**.
+1. Click **Settings** in the app menu on the left and then click **Store Profile**.
 2.  Enter your store contact information.&#x20;
 
     ![](<../.gitbook/assets/Contactinformation (1).PNG>)
