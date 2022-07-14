@@ -4,7 +4,7 @@ description: Determine your approach to implementing SCA.
 
 # How to ensure SCA compliance
 
-For your integration to access our [Strong Customer Authentication (SCA)](https://info.digitalriver.com/rs/348-QUY-258/images/Digital\_River\_Guide\_to\_PSD2\_Compliance\_2020.pdf) solution, you must be using [payment sessions](../../cart/payment-sessions.md). These are embedded in both [Drop-in](../payments-solutions/drop-in/) and [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/reference/elements/).&#x20;
+For your integration to access our [Strong Customer Authentication (SCA)](https://info.digitalriver.com/rs/348-QUY-258/images/Digital\_River\_Guide\_to\_PSD2\_Compliance\_2020.pdf) solution, you must be using [payment sessions](../../cart/payment-sessions.md). These are embedded in both [Drop-in](../payments-solutions/drop-in/) and [DigitalRiver.js with Elements](../../general-resources/reference/elements/).&#x20;
 
 Use the following flowchart to find your appropriate SCA integration scenario:
 

@@ -39,11 +39,11 @@ To offer Apple Pay on your website, you need to validate your domain with Apple 
 
 ### Step 2: Create an Apple Pay source using Digital River.js
 
-‌To create an Apple Pay payment source, please follow the [DigitalRiver.js reference guide](../reference/).‌
+‌To create an Apple Pay payment source, please follow the [DigitalRiver.js reference guide](../../../../general-resources/reference/).‌
 
 #### Create an Apple Pay element
 
-After setting up your library per the [DigitalRiver.js reference guide](../reference/), create an Apple Pay element with any customizations you would like to apply.
+After setting up your library per the [DigitalRiver.js reference guide](../../../../general-resources/reference/), create an Apple Pay element with any customizations you would like to apply.
 
 ```javascript
 var paymentRequestData = digitalriver.paymentRequest({
@@ -73,14 +73,14 @@ The Apple Pay element will surface events, which will give you more information 
 
 These events include:
 
-| Event                                                                                          | Triggered When                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  [ready](../reference/elements/apple-pay-elements.md#ready)​                                   | The created element is loaded and ready to accept an update request.                                                                                      |
-| ​[click​](../reference/elements/apple-pay-elements.md#click)                                   | A shopper clicked the element's button.                                                                                                                   |
-| ​[cancel](../reference/elements/apple-pay-elements.md#cancel)​                                 | The customer has canceled the experience.                                                                                                                 |
-| ​[shippingoptionchange](../reference/elements/apple-pay-elements.md#shipping-option-change)​   | The customer has chosen a different shipping option than was previously selected. You should use this data to re-price your order totals (if applicable). |
-| ​[shippingaddresschange](../reference/elements/apple-pay-elements.md#shipping-address-change)​ | The customer has chosen a different address than was previously selected. You should use this data to re-price your order totals (if applicable).         |
-| ​[source](../reference/elements/apple-pay-elements.md#source)​                                 | The customer has authorized the payment and a source, and DigitalRiver.js returned associated data.                                                       |
+| Event                                                                                                                     | Triggered When                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  [ready](../../../../general-resources/reference/elements/apple-pay-elements.md#ready)​                                   | The created element is loaded and ready to accept an update request.                                                                                      |
+| ​[click​](../../../../general-resources/reference/elements/apple-pay-elements.md#click)                                   | A shopper clicked the element's button.                                                                                                                   |
+| ​[cancel](../../../../general-resources/reference/elements/apple-pay-elements.md#cancel)​                                 | The customer has canceled the experience.                                                                                                                 |
+| ​[shippingoptionchange](../../../../general-resources/reference/elements/apple-pay-elements.md#shipping-option-change)​   | The customer has chosen a different shipping option than was previously selected. You should use this data to re-price your order totals (if applicable). |
+| ​[shippingaddresschange](../../../../general-resources/reference/elements/apple-pay-elements.md#shipping-address-change)​ | The customer has chosen a different address than was previously selected. You should use this data to re-price your order totals (if applicable).         |
+| ​[source](../../../../general-resources/reference/elements/apple-pay-elements.md#source)​                                 | The customer has authorized the payment and a source, and DigitalRiver.js returned associated data.                                                       |
 
 {% hint style="info" %}
 **Note**: To use Apple Pay, you must listen to, at minimum, the Shipping Address Changed and Source events.
@@ -109,7 +109,7 @@ applepay.on('shippingaddresschange', function(event) {
 });
 ```
 
-The Shipping Address Changed and Shipping Method Changed events require a response of updated details to present to the Shopper. This system expects the response to be in the format of a [Payment Request Details Update object](../reference/digital-river-payment-objects.md#payment-request-details-update-error-object).‌
+The Shipping Address Changed and Shipping Method Changed events require a response of updated details to present to the Shopper. This system expects the response to be in the format of a [Payment Request Details Update object](../../../../general-resources/reference/digital-river-payment-objects.md#payment-request-details-update-error-object).‌
 
 #### Place the elements on the page
 
@@ -255,7 +255,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 ### Apple Pay example
 
-The following example shows how to place an Apple Pay element on your page. Use this in conjunction with the [DigitalRiver.js reference guide](../reference/) to build your solution.HTML
+The following example shows how to place an Apple Pay element on your page. Use this in conjunction with the [DigitalRiver.js reference guide](../../../../general-resources/reference/) to build your solution.HTML
 
 {% tabs %}
 {% tab title="HTML" %}

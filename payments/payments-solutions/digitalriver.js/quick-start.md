@@ -59,7 +59,7 @@ DigitalRiver.js provides and hosts HTML elements that you can place in your paym
 
 ## Step 3. Create and embed elements
 
-Use the DigitalRiver.js library to [create ](reference/digitalriver-object.md#creating-elements)and [mount ](reference/elements/#element.mount)an element to the container created in [step 2](quick-start.md#step-2.-create-your-payment-form).
+Use the DigitalRiver.js library to [create ](../../../general-resources/reference/digitalriver-object.md#creating-elements)and [mount ](../../../general-resources/reference/elements/#element.mount)an element to the container created in [step 2](quick-start.md#step-2.-create-your-payment-form).
 
 {% code title="HTML" %}
 ```markup
@@ -107,7 +107,7 @@ cardSecurityCode.mount('card-security-code');
 
 Digital River securely transmits credit card details captured by the DigitalRiver.js for tokenization. You can use these payment sources in downstream API calls to place orders or save credit cards for later purchasing.
 
-Create an event handler that will interact with the DigitalRiver.js library on submit and then create a payment source. Use the [`createSource()`](reference/digitalriver-object.md#creating-sources) method to tokenize the customer's details and payment information.
+Create an event handler that will interact with the DigitalRiver.js library on submit and then create a payment source. Use the [`createSource()`](../../../general-resources/reference/digitalriver-object.md#creating-sources) method to tokenize the customer's details and payment information.
 
 {% hint style="info" %}
 **Prerequisite**:  To create a Payment Source for a credit card, you must either know or capture the billing address information for the entered credit card. The `createSource()` method submits this information and uses it to create a payment source.

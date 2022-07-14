@@ -11,7 +11,7 @@ You capture when a customer accepts the TOS. The following requests allow a cust
 
 ## Creating the TOS
 
-You can use a [DigitalRiver object](../payments/payments-solutions/digitalriver.js/reference/digitalriver-object.md) provided by [DigitalRiver.js](../payments/payments-solutions/digitalriver.js/) to create the TOS required by Digital River.
+You can use a [DigitalRiver object](../general-resources/reference/digitalriver-object.md) provided by [DigitalRiver.js](../payments/payments-solutions/digitalriver.js/) to create the TOS required by Digital River.
 
 ## Setting the TOS acceptance parameter
 

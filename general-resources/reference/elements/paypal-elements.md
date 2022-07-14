@@ -40,10 +40,10 @@ paypalElement.mount('drjs-paypal');
 
 #### PayPal element data object
 
-| Key        | Required | Description                                                                                                                                        |
-| ---------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| style      | Optional | A [PayPal element style option objec](paypal-elements.md#paypal-element-style-options)t.                                                           |
-| sourceData | Required | A [PayPal Source Details object](../../payment-methods/paypal.md#paypal-source-details-object). See the PayPal documentation for more information. |
+| Key        | Required | Description                                                                                                                                                                                       |
+| ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| style      | Optional | A [PayPal element style option objec](paypal-elements.md#paypal-element-style-options)t.                                                                                                          |
+| sourceData | Required | A [PayPal Source Details object](../../../payments/payments-solutions/digitalriver.js/payment-methods/paypal.md#paypal-source-details-object). See the PayPal documentation for more information. |
 
 #### PayPal element style options
 

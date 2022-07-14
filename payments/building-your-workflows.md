@@ -57,7 +57,7 @@ Once you've completed these steps, you can move on to the steps specific to your
 
 ## Elements prerequisites
 
-When using [DigitalRiver.js with elements](payments-solutions/digitalriver.js/quick-start.md) to support SCA, you'll need to be using [payment sessions](../cart/payment-sessions.md), so ensure you've [completed the necessary migration](../cart/payment-sessions.md#migrating-to-payment-sessions). We also assume you are familiar with [creating and styling elements](payments-solutions/digitalriver.js/quick-start.md) as well as the [basics of capturing payment details](payments-solutions/digitalriver.js/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata).
+When using [DigitalRiver.js with elements](payments-solutions/digitalriver.js/quick-start.md) to support SCA, you'll need to be using [payment sessions](../cart/payment-sessions.md), so ensure you've [completed the necessary migration](../cart/payment-sessions.md#migrating-to-payment-sessions). We also assume you are familiar with [creating and styling elements](payments-solutions/digitalriver.js/quick-start.md) as well as the [basics of capturing payment details](../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata).
 
 Once you've completed these prerequisites, you can perform the steps specific to your desired [purchase ](building-your-workflows.md#purchase-flows)or [account management](building-your-workflows.md#account-management-flows) scenario.
 
@@ -227,7 +227,7 @@ onSuccess: function (data) { doSometingWithTheSource(data) },
 
 **Step one:** Create a cart with all tax, shipping, duty and fee amounts in a final state.
 
-**Step two:** Retrieve the [payment session identifier](broken-reference) and use it to configure the [`createSource()`](payments-solutions/digitalriver.js/reference/digitalriver-object.md#creating-sources) method. The configuration object should also set `futureUse` to `true` and [`usage` ](payments-solutions/digitalriver.js/reference/digitalriver-object.md#specifying-a-sources-future-use)to `convenience`. Use `mandate.terms` to pass the save payment agreement that the customer accepts.
+**Step two:** Retrieve the [payment session identifier](broken-reference) and use it to configure the [`createSource()`](../general-resources/reference/digitalriver-object.md#creating-sources) method. The configuration object should also set `futureUse` to `true` and [`usage` ](../general-resources/reference/digitalriver-object.md#specifying-a-sources-future-use)to `convenience`. Use `mandate.terms` to pass the save payment agreement that the customer accepts.
 
 ```javascript
 var payload = {
@@ -282,7 +282,7 @@ In this one-off purchase flow, the customers select a credit card that they prev
 
 **Step two:** [Retrieve the customer's payment sources](sources/retrieving-sources.md#obtain-a-shoppers-sources) and display them to the shopper during the checkout process.
 
-**Step three**: If the shopper selects a saved payment method, you'll need to determine whether SCA is required. To do this, call the [`authenticateSource()`](payments-solutions/digitalriver.js/reference/digitalriver-object.md#authenticating-sources) method.
+**Step three**: If the shopper selects a saved payment method, you'll need to determine whether SCA is required. To do this, call the [`authenticateSource()`](../general-resources/reference/digitalriver-object.md#authenticating-sources) method.
 
 ```javascript
 ...
@@ -425,7 +425,7 @@ In this flow, during the checkout process, shoppers select a credit card they pr
 | ------------- | ------------------ | ------------------- |
 | Yes           | No                 | Yes                 |
 
-‌The following demonstrates how to build a workflow for this scenario using Elements. When building this workflow, the key step is to call the [`authenticateSource` method](payments-solutions/digitalriver.js/reference/digitalriver-object.md#authenticating-sources).
+‌The following demonstrates how to build a workflow for this scenario using Elements. When building this workflow, the key step is to call the [`authenticateSource` method](../general-resources/reference/digitalriver-object.md#authenticating-sources).
 
 {% tabs %}
 {% tab title="Drop-in Payments" %}
@@ -439,7 +439,7 @@ Drop-in Payments does not currently support retrieving stored payment methods. I
 
 **Step two:** Retrieve the shopper's payment sources and display them to the shopper during the checkout process.
 
-**Step three**: If the shopper selects a saved payment method, you'll need to determine whether SCA is required. To do this, call the [`authenticateSource` method](payments-solutions/digitalriver.js/reference/digitalriver-object.md#authenticating-sources).&#x20;
+**Step three**: If the shopper selects a saved payment method, you'll need to determine whether SCA is required. To do this, call the [`authenticateSource` method](../general-resources/reference/digitalriver-object.md#authenticating-sources).&#x20;
 
 ```javascript
 ...
@@ -512,7 +512,7 @@ In this flow, you're saving a shopper's credit card details for use in a future 
 
 For Drop-in PaymentsDrop-in Payments, the key step is to build the configuration object so that `flow` is set to `managePaymentMethods` and the`usage` parameter properly [configures the source for future use](payments-solutions/drop-in/drop-in-integration-guide.md#specifying-a-sources-future-use).&#x20;
 
-When using Elements, your `payload`  should set `futureUse` to `true`, ensure `usage` [specifies a future use for the source](payments-solutions/digitalriver.js/reference/digitalriver-object.md#specifying-a-sources-future-use), and provide the `mandate.terms` that the customer agreed to.
+When using Elements, your `payload`  should set `futureUse` to `true`, ensure `usage` [specifies a future use for the source](../general-resources/reference/digitalriver-object.md#specifying-a-sources-future-use), and provide the `mandate.terms` that the customer agreed to.
 
 | SCA required? | Drop-in Payments supported? | Elements supported? |   |
 | ------------- | --------------------------- | ------------------- | - |
@@ -568,7 +568,7 @@ A chargeable source is returned that is [ready for storage](payments-solutions/d
 {% tab title="DigitalRiver.js with  elements" %}
 **Prerequisites**: Refer to the [Elements prerequisites](building-your-workflows.md#elements-prerequisites) section. Your flow also needs to display the storage terms and provide shoppers the option of saving their payment information.
 
-**Step one**: If a customer selects the option to save a payment method and agrees to the displayed terms, the `payload` should set `futureUse` to `true`,  configure  `usage` to identify the [future use of the payment source](payments-solutions/digitalriver.js/reference/digitalriver-object.md#specifying-a-sources-future-use), and provide the `mandate.terms` that the customer agreed to on your storefront.&#x20;
+**Step one**: If a customer selects the option to save a payment method and agrees to the displayed terms, the `payload` should set `futureUse` to `true`,  configure  `usage` to identify the [future use of the payment source](../general-resources/reference/digitalriver-object.md#specifying-a-sources-future-use), and provide the `mandate.terms` that the customer agreed to on your storefront.&#x20;
 
 ```javascript
 var payload = {
@@ -620,7 +620,7 @@ Drop-in Payments does not support interacting directly with saved payment method
 \
 The shopper selects the payment method to update.&#x20;
 
-**Step two:** Capture the updated expiration date from the shopper and pass it to the [update source](payments-solutions/digitalriver.js/reference/digitalriver-object.md#digitalriver-updatesource-element-sourcedata) method.
+**Step two:** Capture the updated expiration date from the shopper and pass it to the [update source](../general-resources/reference/digitalriver-object.md#digitalriver-updatesource-element-sourcedata) method.
 {% endtab %}
 {% endtabs %}
 
@@ -646,7 +646,7 @@ Drop-in Payments does not support interacting directly with saved payment method
 \
 The shopper selects the payment method to update.&#x20;
 
-**Step two:** Capture the updated billing address from the shopper and pass it to the [update source](payments-solutions/digitalriver.js/reference/digitalriver-object.md#digitalriver-updatesource-element-sourcedata) method.
+**Step two:** Capture the updated billing address from the shopper and pass it to the [update source](../general-resources/reference/digitalriver-object.md#digitalriver-updatesource-element-sourcedata) method.
 {% endtab %}
 {% endtabs %}
 

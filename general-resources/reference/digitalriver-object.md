@@ -8,7 +8,7 @@ description: Learn how to use the DigitalRiver object.
 
 ### digitalriver.createDropin(configurationObject);
 
-Use `createDropin` to create an instance of our Drop-in solution. This solution provides an all-in-one solution for accepting payments and ensuring compliance. Use this solution for a quick way to start accepting payments with little to no customization. For more information, see our page on [Drop-in](../../drop-in/).
+Use `createDropin` to create an instance of our Drop-in solution. This solution provides an all-in-one solution for accepting payments and ensuring compliance. Use this solution for a quick way to start accepting payments with little to no customization. For more information, see our page on [Drop-in](../../payments/payments-solutions/drop-in/).
 
 ## Creating Elements
 
@@ -208,7 +208,7 @@ For both versions, the `createSource()` method returns a promise that contains a
 
 ### createSource(sourceData);
 
-Use the `createSource(sourceData)` method to create a payment source that contains information you can safely use with other Digital River APIs. This includes immediate sources (if PCI compliant), redirect sources, or delayed sources. See [Payment methods](../payment-methods/) for more information on the structure of these requests.‌
+Use the `createSource(sourceData)` method to create a payment source that contains information you can safely use with other Digital River APIs. This includes immediate sources (if PCI compliant), redirect sources, or delayed sources. See [Payment methods](../../payments/payments-solutions/digitalriver.js/payment-methods/) for more information on the structure of these requests.‌
 
 In the following example, the method takes a single argument. The `sourceData` contains the data that you want Digital River to tokenize.
 
@@ -322,7 +322,7 @@ An unsuccessful response returns an `error` with information on what needs to be
 Use the `createSource(element, sourceData)` method to create a tokenized source that you can safely transmit to the backend for use in downstream API calls. This method requests two parameters:‌
 
 * **element** — A `Element` object created using the [Elements](elements/) portion of this library.
-* **sourceData** — The source data that you want Digital River to tokenize. See [Common payment sources](../payment-methods/common-payment-sources.md) for more information on the required source data.
+* **sourceData** — The source data that you want Digital River to tokenize. See [Common payment sources](../../payments/payments-solutions/digitalriver.js/payment-methods/common-payment-sources.md) for more information on the required source data.
 
 In the following example, the method takes both a source data and element argument.
 
@@ -513,15 +513,15 @@ digitalriver.retrieveSource("ee90c07c-5549-4a6b-aa5f-aabe29b1e97a","ee90c07c-554
 
 ## Authenticating sources
 
-The authenticate source method determines whether the saved payment source selected by a customer during the checkout process requires [Strong Customer Authentication](../../../psd2-and-sca/) (SCA).
+The authenticate source method determines whether the saved payment source selected by a customer during the checkout process requires [Strong Customer Authentication](../../payments/psd2-and-sca/) (SCA).
 
-You can use this method when [building workflows](../../../building-your-workflows.md) that allow customers to retrieve saved payment information during [one-off purchases](../../../building-your-workflows.md#customer-selects-saved-credit-card-during-checkout) and [subscription acquisitions](../../../building-your-workflows.md#customer-saves-credit-card-details-during-subscription-acquisition-checkout). &#x20;
+You can use this method when [building workflows](../../payments/building-your-workflows.md) that allow customers to retrieve saved payment information during [one-off purchases](../../payments/building-your-workflows.md#customer-selects-saved-credit-card-during-checkout) and [subscription acquisitions](../../payments/building-your-workflows.md#customer-saves-credit-card-details-during-subscription-acquisition-checkout). &#x20;
 
 The [standard version of the method](digitalriver-object.md#DigitalRiverJS-digitalriver.authenticateSource\(data\);) accepts a configuration object that contains the data we need to authenticate the source.&#x20;
 
 | Parameter            | Required/Optional | Description                                                                                                                                 |
 | -------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sessionId`          | Required          | The [payment session](../../../../cart/payment-sessions.md) identifier of this transaction.                                                 |
+| `sessionId`          | Required          | The [payment session](../../cart/payment-sessions.md) identifier of this transaction.                                                       |
 | `sourceId`           | Required          | The identifier of the payment source used in this transaction.                                                                              |
 | `sourceClientSecret` | Required          | The source client secret for this transaction.                                                                                              |
 | `returnUrl`          | Required          | The return URL where the customer is directed when 3D Secure 1 is required. If the value is not provided, we use the current page location. |
@@ -1260,19 +1260,19 @@ If you want to display the credit card payment logo on your website, you can use
 **Best Practices**: To ensure you're always using the latest logo, link to the URL instead of downloading the image to your website.
 {% endhint %}
 
-* **Visa** <img src="../../../../.gitbook/assets/visa (1).png" alt="" data-size="original"> \
+* **Visa** <img src="../../.gitbook/assets/visa (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/visa.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/visa.png)
-* **Mastercard** <img src="../../../../.gitbook/assets/mastercard (1) (1).png" alt="" data-size="original"> \
+* **Mastercard** <img src="../../.gitbook/assets/mastercard (1) (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/mastercard.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/mastercard.png)
-* **American Express** <img src="../../../../.gitbook/assets/amex (1) (1).png" alt="" data-size="original"> \
+* **American Express** <img src="../../.gitbook/assets/amex (1) (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/amex.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/amex.png)
-* **Discover** <img src="../../../../.gitbook/assets/discover (1).png" alt="" data-size="original">  \
+* **Discover** <img src="../../.gitbook/assets/discover (1).png" alt="" data-size="original">  \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/discover.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/discover.png)
-* **JCB** <img src="../../../../.gitbook/assets/jcb (1) (1).png" alt="" data-size="original"> \
+* **JCB** <img src="../../.gitbook/assets/jcb (1) (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/jcb.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/jcb.png)
-* **Maestro** <img src="../../../../.gitbook/assets/maestro (1).png" alt="" data-size="original"> \
+* **Maestro** <img src="../../.gitbook/assets/maestro (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/maestro.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/maestro.png)
-* **UnionPay** <img src="../../../../.gitbook/assets/unionpay (1).png" alt="" data-size="original"> \
+* **UnionPay** <img src="../../.gitbook/assets/unionpay (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/unionpay.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/unionpay.png)
 
 ## Retrieving available banks for Online Banking

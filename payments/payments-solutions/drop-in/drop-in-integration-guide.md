@@ -34,7 +34,7 @@ Include the following link to the Drop-in CSS file on the pages where you want i
 
 ### Step 3: Initialize DigitalRiver.js with your public key <a href="#step-3-initialize-digitalriver-js-with-your-public-key" id="step-3-initialize-digitalriver-js-with-your-public-key"></a>
 
-Initialize the DigitalRiver.js library with your public API key and any [optional parameters](../digitalriver.js/reference/digital-river-publishable-api-key.md#localizing-digitalriver-js). If you provide a locale, Drop-in Payments will localize the experience accordingly.
+Initialize the DigitalRiver.js library with your public API key and any [optional parameters](../../../general-resources/reference/digital-river-publishable-api-key.md#localizing-digitalriver-js). If you provide a locale, Drop-in Payments will localize the experience accordingly.
 
 ```javascript
 let digitalriver = new DigitalRiver("YOUR_PUBLIC_API_KEY", {
@@ -398,7 +398,7 @@ Set `usage` to `unscheduled` when you create sources for unscheduled merchant in
 
 ## Configuring payment methods within Drop-in Payments
 
-Drop-in Payments uses DigitalRiver.js elements to capture secure payment details. Drop-in Payments comes with a predefined style that should meet most use cases. In the event you would like to customize the look and feel, you should familiarize yourself with the [Styling an element container](../digitalriver.js/reference/elements/#styling-an-element-container) in the [DigitalRiver.js](../digitalriver.js/) documentation.
+Drop-in Payments uses DigitalRiver.js elements to capture secure payment details. Drop-in Payments comes with a predefined style that should meet most use cases. In the event you would like to customize the look and feel, you should familiarize yourself with the [Styling an element container](../../../general-resources/reference/elements/#styling-an-element-container) in the [DigitalRiver.js](../digitalriver.js/) documentation.
 
 Here is an example of customizing several payment methods:
 
@@ -528,18 +528,18 @@ digitalriver.createDropin(configuration).mount('dropin');
 
 Use the following fields to configure payment methods.
 
-| creditCard    | `cardNumberPlaceholderText`     | The placeholder that appears in the card number field. If you specify a different value for `cardNumberPlaceholderText`, localization will not be applied.                                                  |
-| ------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|               | `cardExpirationPlaceholderText` | The placeholder that appears in the card expiration field. If you specify a different value for `cardExpirationPlaceholderText`, localization will not be applied.                                          |
-|               | `cardCvvPlacholderText`         | The placeholder that appears in the card expiration field. If you specify a different value for `cardCvvPlacholderText`, localization will not be applied.                                                  |
-|               | `style`                         | A Style object created following the [Styling an element container](../digitalriver.js/reference/elements/#styling-an-element-container) instructions.                                                      |
-|               | `mask`                          | Indicates whether the card number and card security code fields will automatically mask the input details after successful validation.                                                                      |
-| onlineBanking | `style`                         | A Style object created following the [Styling an element container](../digitalriver.js/reference/elements/#styling-an-element-container) instructions.                                                      |
-|               | `placeholderText`               | The placeholder text appears in the online banking selector.                                                                                                                                                |
-| googlePay     | `style`                         | A Style object created following the [Google Pay element styles and customization](../digitalriver.js/reference/elements/google-pay-elements.md#google-pay-element-styles-and-customization) instructions.  |
-| applePay      | `style`                         | A Style object created following the [Apple Pay styles and customization](../digitalriver.js/reference/elements/apple-pay-elements.md#apply-pay-element-styles-and-customization) instructions.             |
-| payPal        | `style`                         | A Style object created following the [PayPal element style option](../digitalriver.js/reference/elements/paypal-elements.md#paypal-element-style-options) instructions.                                     |
-| `msts`        | `enrollment`                    | An enrollment URL created following the [TreviPay enrollment URL](../digitalriver.js/payment-methods/trevipay.md#trevipay-enrollment-form) instructions.                                                    |
+| creditCard    | `cardNumberPlaceholderText`     | The placeholder that appears in the card number field. If you specify a different value for `cardNumberPlaceholderText`, localization will not be applied.                                                          |
+| ------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|               | `cardExpirationPlaceholderText` | The placeholder that appears in the card expiration field. If you specify a different value for `cardExpirationPlaceholderText`, localization will not be applied.                                                  |
+|               | `cardCvvPlacholderText`         | The placeholder that appears in the card expiration field. If you specify a different value for `cardCvvPlacholderText`, localization will not be applied.                                                          |
+|               | `style`                         | A Style object created following the [Styling an element container](../../../general-resources/reference/elements/#styling-an-element-container) instructions.                                                      |
+|               | `mask`                          | Indicates whether the card number and card security code fields will automatically mask the input details after successful validation.                                                                              |
+| onlineBanking | `style`                         | A Style object created following the [Styling an element container](../../../general-resources/reference/elements/#styling-an-element-container) instructions.                                                      |
+|               | `placeholderText`               | The placeholder text appears in the online banking selector.                                                                                                                                                        |
+| googlePay     | `style`                         | A Style object created following the [Google Pay element styles and customization](../../../general-resources/reference/elements/google-pay-elements.md#google-pay-element-styles-and-customization) instructions.  |
+| applePay      | `style`                         | A Style object created following the [Apple Pay styles and customization](../../../general-resources/reference/elements/apple-pay-elements.md#apply-pay-element-styles-and-customization) instructions.             |
+| payPal        | `style`                         | A Style object created following the [PayPal element style option](../../../general-resources/reference/elements/paypal-elements.md#paypal-element-style-options) instructions.                                     |
+| `msts`        | `enrollment`                    | An enrollment URL created following the [TreviPay enrollment URL](../digitalriver.js/payment-methods/trevipay.md#trevipay-enrollment-form) instructions.                                                            |
 
 ### Filtering payment methods shown in Drop-in Payments
 

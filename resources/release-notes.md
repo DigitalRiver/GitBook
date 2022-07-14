@@ -51,7 +51,7 @@ We restructured the API tags and descriptions for the Shopper API as follows:
 
 ## 2022/4/1
 
-We upgraded Google Pay to offer the up-to-date Google Pay wallet experience. You can now [configure the dynamic Google Pay button](../payments/payments-solutions/digitalriver.js/reference/elements/google-pay-elements.md#google-pay-element-styles-and-customization) by applying your preferred button styles.
+We upgraded Google Pay to offer the up-to-date Google Pay wallet experience. You can now [configure the dynamic Google Pay button](../general-resources/reference/elements/google-pay-elements.md#google-pay-element-styles-and-customization) by applying your preferred button styles.
 
 ## 2022/3/28
 
@@ -110,7 +110,7 @@ We added instructions on how to [get the inventory for a specific product](../co
 
 ## 2021/8/6
 
-We added `supportsStorage` to indicate whether a payment method supports storage to [Retrieving available payment methods](../payments/payments-solutions/digitalriver.js/reference/digitalriver-object.md#retrieving-available-payment-methods).
+We added `supportsStorage` to indicate whether a payment method supports storage to [Retrieving available payment methods](../general-resources/reference/digitalriver-object.md#retrieving-available-payment-methods).
 
 ## 2021/7/29
 
@@ -118,7 +118,7 @@ We expanded the pay later options that are now available in the [PayPal Wallet](
 
 ## 2021/7/27
 
-You can now use the [Delayed Payment Instructions element](../payments/payments-solutions/digitalriver.js/reference/elements/delayed-payment-instructions-element.md) to generate a template that contains the instructions that explain how to complete payment for delayed payment types such as Konbini and Wire Transfer.
+You can now use the [Delayed Payment Instructions element](../general-resources/reference/elements/delayed-payment-instructions-element.md) to generate a template that contains the instructions that explain how to complete payment for delayed payment types such as Konbini and Wire Transfer.
 
 ## 2021/7/26
 
@@ -216,11 +216,11 @@ We updated the information on [landed cost](../orders-1/landed-costs.md).
 
 ## 2021/1/15
 
-You can now use the [`authenticateSource` method](../payments/payments-solutions/digitalriver.js/reference/digitalriver-object.md#authenticating-sources) to determine whether the saved payment source selected by a customer during the checkout process requires [Strong Customer Authentication](../payments/psd2-and-sca/) (SCA).
+You can now use the [`authenticateSource` method](../general-resources/reference/digitalriver-object.md#authenticating-sources) to determine whether the saved payment source selected by a customer during the checkout process requires [Strong Customer Authentication](../payments/psd2-and-sca/) (SCA).
 
 ## 2021/1/12
 
-* When creating a source, you can now configure the `usage` parameter. It allows you to specify the type of transaction the source will likely be used for in the future. The parameter is available in both [Drop-in](../payments/payments-solutions/drop-in/drop-in-integration-guide.md#specifying-a-sources-future-use) and [DigitalRiver.js](../payments/payments-solutions/digitalriver.js/reference/digitalriver-object.md#specifying-a-sources-future-use). We recommend you use it when building [purchase](../payments/building-your-workflows.md#credit-card-details-saved-by-customer-during-checkout) and [account management](../payments/building-your-workflows.md#saving-a-credit-card-for-future-use) workflows that allow customers to save their credit card information.&#x20;
+* When creating a source, you can now configure the `usage` parameter. It allows you to specify the type of transaction the source will likely be used for in the future. The parameter is available in both [Drop-in](../payments/payments-solutions/drop-in/drop-in-integration-guide.md#specifying-a-sources-future-use) and [DigitalRiver.js](../general-resources/reference/digitalriver-object.md#specifying-a-sources-future-use). We recommend you use it when building [purchase](../payments/building-your-workflows.md#credit-card-details-saved-by-customer-during-checkout) and [account management](../payments/building-your-workflows.md#saving-a-credit-card-for-future-use) workflows that allow customers to save their credit card information.&#x20;
 * When [creating an instance of Drop-in](../payments/payments-solutions/drop-in/drop-in-integration-guide.md#step-6-allow-the-shopper-to-interact-with-hydrate), you can now [customize the text of the button](../payments/payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-drop-in-button-text). Additionally, we created new [Drop-in options](../payments/payments-solutions/drop-in/drop-in-integration-guide.md#drop-in-options) that allow you to set the `showTermsOfSaleDisclosure` and `disableAutomaticRedirects` parameters.
 
 ## 2021/1/8
@@ -264,11 +264,11 @@ We updated the examples and added information on how to create a merchant-initia
 
 ## 2020/12/10
 
-We added more [custom styles](../payments/payments-solutions/digitalriver.js/reference/elements/#available-custom-styles) for [styling an element container](../payments/payments-solutions/digitalriver.js/reference/elements/#styling-an-element-container) in [DigitalRiver.js](../payments/payments-solutions/digitalriver.js/).
+We added more [custom styles](../general-resources/reference/elements/#available-custom-styles) for [styling an element container](../general-resources/reference/elements/#styling-an-element-container) in [DigitalRiver.js](../payments/payments-solutions/digitalriver.js/).
 
 ## 2020/11/30
 
-We added [error types](../payments/payments-solutions/digitalriver.js/reference/error-types-codes-and-objects.md#error-types) to [Error types, codes, and objects](../payments/payments-solutions/digitalriver.js/reference/error-types-codes-and-objects.md).
+We added [error types](../general-resources/reference/error-types-codes-and-objects.md#error-types) to [Error types, codes, and objects](../general-resources/reference/error-types-codes-and-objects.md).
 
 ## 2020/11/19
 
@@ -281,7 +281,7 @@ We added support for [Pay in 4](../payments/payments-solutions/digitalriver.js/p
 
 ## 2020/11/10
 
-We added a list of [error codes](../payments/payments-solutions/digitalriver.js/reference/error-types-codes-and-objects.md#error-codes) for DigitalRiver.js.
+We added a list of [error codes](../general-resources/reference/error-types-codes-and-objects.md#error-codes) for DigitalRiver.js.
 
 ## 2020/11/6
 
@@ -303,7 +303,7 @@ You can now apply a [shipping discount](../cart/providing-a-shipping-discount.md
 
 ## 2020/10/12
 
-We added information on the [tax identifier element](../payments/payments-solutions/digitalriver.js/reference/elements/tax-identifier-element.md) to [DigitalRiver.js](../payments/payments-solutions/digitalriver.js/).
+We added information on the [tax identifier element](../general-resources/reference/elements/tax-identifier-element.md) to [DigitalRiver.js](../payments/payments-solutions/digitalriver.js/).
 
 ## 2020/10/1
 

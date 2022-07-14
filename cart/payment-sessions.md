@@ -12,7 +12,7 @@ A payment session tracks a customer's payment throughout the checkout process. A
 
 Payment sessions allow you to comply with [PSD2 and SCA](../payments/psd2-and-sca/) regulations. When using payment sessions to [create credit card sources](payment-sessions.md#credit-card), Digital River automatically collects the required authentication data from the customer PSD2 transactions.
 
-Payment sessions also simplify source creation by reducing the data you're required to provide. If you don't use payment sessions, you'll need to copy numerous data points returned in the cart and ensure it is properly formatted before passing them to the [create source method](../payments/payments-solutions/digitalriver.js/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata). &#x20;
+Payment sessions also simplify source creation by reducing the data you're required to provide. If you don't use payment sessions, you'll need to copy numerous data points returned in the cart and ensure it is properly formatted before passing them to the [create source method](../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata). &#x20;
 
 When [creating a source with payment sessions](payment-sessions.md#creating-a-source-with-payment-sessions), however, you can provide the unique identifier of the session, thereby minimizing the data you must transfer.&#x20;
 
@@ -20,7 +20,7 @@ Payment sessions also allow you to [gain access to Drop-in Payments](../payments
 
 ## Creating a source with payment sessions
 
-When [creating a payment source,](../payments/sources/using-the-source-identifier.md#creating-payment-sources) specify the `sessionId` in the payload that you pass to the DigitalRiver.js [create source method](../payments/payments-solutions/digitalriver.js/reference/digitalriver-object.md#creating-sources). The data needed by our payment services to create the source is then retrieved from that session.
+When [creating a payment source,](../payments/sources/using-the-source-identifier.md#creating-payment-sources) specify the `sessionId` in the payload that you pass to the DigitalRiver.js [create source method](../general-resources/reference/digitalriver-object.md#creating-sources). The data needed by our payment services to create the source is then retrieved from that session.
 
 {% tabs %}
 {% tab title="Drop-in payments" %}
@@ -145,9 +145,9 @@ But if the `amountContributed` is less than the checkout's `totalAmount` or the 
 
 ## Retrieving available payment methods
 
-In DigitalRiver.js, you can use the payment session identifier to [return the payment methods available for each transaction](../payments/payments-solutions/digitalriver.js/reference/digitalriver-object.md#retrieving-available-payment-methods) and present them to the customer during the checkout process.
+In DigitalRiver.js, you can use the payment session identifier to [return the payment methods available for each transaction](../general-resources/reference/digitalriver-object.md#retrieving-available-payment-methods) and present them to the customer during the checkout process.
 
-The method also returns the data required to use one-click payment methods like Apple Pay and Google Pay, as well as the data needed to retrieve compliance information via the DigitalRiver.js [compliance methods](../payments/payments-solutions/digitalriver.js/reference/digitalriver-object.md#digitalriver-compliance-getdetails-businessentitycode-locale).&#x20;
+The method also returns the data required to use one-click payment methods like Apple Pay and Google Pay, as well as the data needed to retrieve compliance information via the DigitalRiver.js [compliance methods](../general-resources/reference/digitalriver-object.md#digitalriver-compliance-getdetails-businessentitycode-locale).&#x20;
 
 {% tabs %}
 {% tab title="JavaScript" %}

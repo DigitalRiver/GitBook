@@ -113,7 +113,7 @@ var onlineBankingElement = digitalriver.createElement('onlinebanking', onlineBan
 onlineBankingElement.mount('online-banking');
 ```
 
-To create an online banking source, you must reference the created element and the supplemental data in your [createSource ](../reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
+To create an online banking source, you must reference the created element and the supplemental data in your [createSource ](../../../../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
 
 ```javascript
 var data = {

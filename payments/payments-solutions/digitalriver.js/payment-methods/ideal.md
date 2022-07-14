@@ -131,7 +131,7 @@ When you create an iDEAL source, the customer must authorize the charge through 
 
 #### Redirecting the customer for iDEAL authorization
 
-To redirect the customer to the payment provider for authorization, use the `redirectUrl` parameter in your [`createSource` response](../reference/digitalriver-object.md#createsource-sourcedata).
+To redirect the customer to the payment provider for authorization, use the `redirectUrl` parameter in your [`createSource` response](../../../../general-resources/reference/digitalriver-object.md#createsource-sourcedata).
 
 ```javascript
 window.location.href = sourceResponse.redirect.redirectUrl;

@@ -54,7 +54,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 
 #### Option 1: Create a Konbini element using DigitalRiver.js functionality
 
-The pattern for creating the Konbini element follows the same pattern as other elements and exposes the same c[ustomization and events](../reference/elements/). You can customize the look and feel through [options ](../reference/elements/#custom-classes)and then place it on the page.
+The pattern for creating the Konbini element follows the same pattern as other elements and exposes the same c[ustomization and events](../../../../general-resources/reference/elements/). You can customize the look and feel through [options ](../../../../general-resources/reference/elements/#custom-classes)and then place it on the page.
 
 {% tabs %}
 {% tab title="Example" %}
@@ -111,7 +111,7 @@ DigitalRiver.js will create and render a select element that populates with the 
 
 ![](../../../../.gitbook/assets/Konbini\_DRJS\_render.PNG)
 
-The same [events and structures](../reference/elements/#element-on) appear in the Konbini element, and you should listen to the [Change event](../reference/elements/konbini-elements.md#change) to determine when the user has made a selection. When the change event response contains `"complete": true`, the shopper has selected a store.
+The same [events and structures](../../../../general-resources/reference/elements/#element-on) appear in the Konbini element, and you should listen to the [Change event](../../../../general-resources/reference/elements/konbini-elements.md#change) to determine when the user has made a selection. When the change event response contains `"complete": true`, the shopper has selected a store.
 
 {% tabs %}
 {% tab title="Example" %}
@@ -141,7 +141,7 @@ konbiniElement.on('change', function (event) {
 {% endtab %}
 {% endtabs %}
 
-To create a Konbini source, reference the created element and the supplemental data in your [createSource ](../reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
+To create a Konbini source, reference the created element and the supplemental data in your [createSource ](../../../../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
 
 {% tabs %}
 {% tab title="Example" %}

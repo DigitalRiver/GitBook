@@ -21,11 +21,11 @@ Create a Google Pay payment method for your app or website in two easy steps:
 
 ### Step 1: Create a Google Pay source using Digital River.js
 
-To create a Google Pay payment source, follow the instructions for [DigitalRiver.js reference guide](../reference/).
+To create a Google Pay payment source, follow the instructions for [DigitalRiver.js reference guide](../../../../general-resources/reference/).
 
 #### Create a Google Pay element
 
-After setting up your library per the [DigitalRiver.js reference guide](../reference/), create a Google Pay element with any customizations you would like to apply.
+After setting up your library per the [DigitalRiver.js reference guide](../../../../general-resources/reference/), create a Google Pay element with any customizations you would like to apply.
 
 ```javascript
 var paymentRequestData = digitalriver.paymentRequest({
@@ -55,14 +55,14 @@ The Google Pay element will surface events, which will give you more information
 
 These events include:
 
-| Event                                                                                         | Triggered When                                                                                                                                            |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [ready](../reference/elements/google-pay-elements.md#ready)                                   | The created element is loaded and ready to accept an update request.                                                                                      |
-| [click](../reference/elements/google-pay-elements.md#click)                                   | A shopper clicked the element's button.                                                                                                                   |
-| [cancel](../reference/elements/google-pay-elements.md#cancel)                                 | The customer has canceled the experience.                                                                                                                 |
-| [shippingoptionchange](../reference/elements/google-pay-elements.md#shipping-option-change)   | The customer has chosen a different shipping option than was previously selected. You should use this data to re-price your order totals (if applicable). |
-| [shippingaddresschange](../reference/elements/google-pay-elements.md#shipping-address-change) | The customer has chosen a different address than was previously selected. You should use this data to re-price your order totals (if applicable).         |
-| [source](../reference/elements/google-pay-elements.md#source)                                 | The customer has authorized the payment and a source, and DigitalRiver.js returned associated data.                                                       |
+| Event                                                                                                                    | Triggered When                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [ready](../../../../general-resources/reference/elements/google-pay-elements.md#ready)                                   | The created element is loaded and ready to accept an update request.                                                                                      |
+| [click](../../../../general-resources/reference/elements/google-pay-elements.md#click)                                   | A shopper clicked the element's button.                                                                                                                   |
+| [cancel](../../../../general-resources/reference/elements/google-pay-elements.md#cancel)                                 | The customer has canceled the experience.                                                                                                                 |
+| [shippingoptionchange](../../../../general-resources/reference/elements/google-pay-elements.md#shipping-option-change)   | The customer has chosen a different shipping option than was previously selected. You should use this data to re-price your order totals (if applicable). |
+| [shippingaddresschange](../../../../general-resources/reference/elements/google-pay-elements.md#shipping-address-change) | The customer has chosen a different address than was previously selected. You should use this data to re-price your order totals (if applicable).         |
+| [source](../../../../general-resources/reference/elements/google-pay-elements.md#source)                                 | The customer has authorized the payment and a source, and DigitalRiver.js returned associated data.                                                       |
 
 {% hint style="info" %}
 **Note**: To use Google Pay, you must listen to, at minimum, the Source event.
@@ -91,7 +91,7 @@ googlepay.on('shippingaddresschange', function(event) {
 });
 ```
 
-The Shipping Address Changed and Shipping Method Changed events require a response of updated details to present to the Shopper. This system expects the response to be in the format of a [Payment Request Details Update object](../reference/digital-river-payment-objects.md#payment-request-details-update-error-object).
+The Shipping Address Changed and Shipping Method Changed events require a response of updated details to present to the Shopper. This system expects the response to be in the format of a [Payment Request Details Update object](../../../../general-resources/reference/digital-river-payment-objects.md#payment-request-details-update-error-object).
 
 #### Place the elements on the page
 
@@ -280,7 +280,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 #### Google Pay example
 
-The following example shows how to place a Google Pay element on your page. Use this in conjunction with the [DigitalRiver.js reference guide](../reference/) to build your solution.
+The following example shows how to place a Google Pay element on your page. Use this in conjunction with the [DigitalRiver.js reference guide](../../../../general-resources/reference/) to build your solution.
 
 {% tabs %}
 {% tab title="HTML" %}

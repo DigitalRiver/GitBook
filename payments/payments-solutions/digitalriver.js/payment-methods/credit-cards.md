@@ -58,7 +58,7 @@ cardCVV.mount('card-cvv');
 
 #### Create the source
 
-&#x20;To create a credit card payment source, you must reference the created element and the supplemental data in your [createSource ](../reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
+&#x20;To create a credit card payment source, you must reference the created element and the supplemental data in your [createSource ](../../../../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
 
 ```javascript
 var payload = {

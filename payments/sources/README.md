@@ -105,7 +105,7 @@ The following example shows how to attach a payment option to a customer.
 
 #### Attaching a source to a payment option
 
-The Commerce API gives you the ability to save payment sources associated with a customer for later reuse. After you [submit a customer's payment details](../payments-solutions/digitalriver.js/reference/digitalriver-object.md#creating-an-instance-of-drop-in), DigitalRiver.js will create a Source and return a `sourceId`.  You can then use that `sourceId` to [attach the Source to a payment option](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Payment-Options/paths/\~1v1\~1shoppers\~1me\~1payment-options/post).
+The Commerce API gives you the ability to save payment sources associated with a customer for later reuse. After you [submit a customer's payment details](../../general-resources/reference/digitalriver-object.md#creating-an-instance-of-drop-in), DigitalRiver.js will create a Source and return a `sourceId`.  You can then use that `sourceId` to [attach the Source to a payment option](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Payment-Options/paths/\~1v1\~1shoppers\~1me\~1payment-options/post).
 
 {% hint style="warning" %}
 You can only attach payment methods that [support recurring payments](../supported-payment-methods.md). Note that `storeCredit` does not support recurring payments and therefore, you cannot attach it as a payment option.

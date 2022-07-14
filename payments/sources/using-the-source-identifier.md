@@ -269,7 +269,7 @@ For example, a customer purchased a line item quantity of 10 for a total of $100
 
 ## Charging a single-use payment source
 
-Your storefront may be configured so that customers are not required to create an account or sign-in to make a purchase. In this case, after you submit the guest customer's payment details, [DigitalRiver.js with elements](../payments-solutions/digitalriver.js/) will [create a Source](../payments-solutions/digitalriver.js/reference/digitalriver-object.md#createsource-sourcedata) and return the `sourceId` .  You can then use a [`POST /apply-payment-method`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Payment-Method/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/post) request to set the `sourceId` attribute.&#x20;
+Your storefront may be configured so that customers are not required to create an account or sign-in to make a purchase. In this case, after you submit the guest customer's payment details, [DigitalRiver.js with elements](../payments-solutions/digitalriver.js/) will [create a Source](../../general-resources/reference/digitalriver-object.md#createsource-sourcedata) and return the `sourceId` .  You can then use a [`POST /apply-payment-method`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Payment-Method/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/post) request to set the `sourceId` attribute.&#x20;
 
 {% tabs %}
 {% tab title="cURL" %}
