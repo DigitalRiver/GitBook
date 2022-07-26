@@ -69,7 +69,7 @@ digitalriver.createSource(payload).then(function(result) {
 
 A cart's `payment.session` can be used to determine when to create an order. Specifically, we provide you information on the [payment session's state](payment-sessions.md#session-state) as well as the [amount contributed and amount remaining to be contributed](payment-sessions.md#amount-contributed-and-amount-remaining-to-be-contributed).
 
-{% code title="Checkout" %}
+{% code title="Cart" %}
 ```javascript
 {
     "id": "8f349290-a6ec-438a-8623-ca0c6e6f65fa",
