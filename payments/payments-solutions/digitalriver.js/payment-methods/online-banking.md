@@ -362,7 +362,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endtab %}
 {% endtabs %}
 
-## Online banking options supported
+## Supported online banking options
 
 {% hint style="info" %}
 The following banks are subject to availability from our provider.
