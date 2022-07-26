@@ -72,17 +72,18 @@ A cart's `payment.session` can be used to determine when to create an order. Spe
 {% code title="Cart" %}
 ```javascript
 {
-    "id": "8f349290-a6ec-438a-8623-ca0c6e6f65fa",
-    ...
-    "payment": {
-        ...
-        "session": {
-            "id": "1403a59f-37a8-4d9e-8e13-838cf6f2a0cc",
-            "amountContributed": 27.01,
-            "amountRemainingToBeContributed": 0.0,
-            "state": "requires_confirmation",
-            "clientSecret": "1403a59f-37a8-4d9e-8e13-838cf6f2a0cc_a2a14087-2aa7-4876-b4f9-d16b5ae6817b"
-        }
+"    id": "47278010023",
+.    ..
+    "paymentSession": 
+    {
+        "id": "string",
+        "status": "string",
+        "clientSecret": "string",
+        "redirectUrl": "https://api.digitalriver.com:80/payments/redirects/12759bb0-xxxx-4bdb-bfeb-9095ba8059fc?apiKey=a88fxxxx1eef47eb95bc609c22e593c8",
+        "amountContributed": 
+        {},
+        "amountRemainingToBeContributed": 
+        {}
     }
 }
 ```
