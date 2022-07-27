@@ -6,6 +6,11 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2022/7/27
+
+* We expanded our Klarna Pay Later offering with the addition of payment options in Canada, France, Ireland, Poland, and Portugal. You can learn more [here](../payments/payments-solutions/digitalriver.js/payment-methods/klarna.md).
+* We expanded our TreviPay B2B payment offering to include locales in Denmark and New Zealand! You can find more details [here](../payments/payments-solutions/digitalriver.js/payment-methods/trevipay.md). ****&#x20;
+
 ## 2022/6/30
 
 We released the [Webhook service](https://help.digitalriver.com/help/gc/Administration/Webhook-Service/Webhook-service.htm) for Commerce API. The Webhook service now supports events covering the entire [subscription cycle](../subscriptions/subscription-lifecycle.md). You can choose to manage the service through the [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do) interface or the [Webhooks API](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Webhook-Event-Management). You can now integrate the Webhook service for Commerce API with endpoints to get an instant update on events throughout the entire [subscription cycle](../subscriptions/subscription-lifecycle.md). We also updated the list of [webhook events](../events-and-webhooks/events/event-types.md) in the Webhook service. You can now choose from more subscription events.

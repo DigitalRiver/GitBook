@@ -8,13 +8,13 @@ description: >-
 
 Klarna offers the following payment options:
 
-* **Invoice**–Choose one of the following options to make shopping easier for customers by letting them try before they buy:
-  * **Pay later in 30 days**–Once the order is shipped, you are paid upfront while the customer has 30 days to pay. Available in the US and UK.
-  * **Pay later in 14 days**–Once the order is shipped, you are paid upfront while the customer has 14 days to pay. Available in Austria, Denmark, Finland, Germany, Norway, Netherlands, and Sweden.
+* **Pay In 30 (Invoice)**–Once the order is shipped, you are paid upfront while the customer has 30 days to pay. Available in Austria, Belgium, Denmark, Finland, Germany, Netherlands, Norway, Poland, Sweden, Switzerland, and the United Kingdom.
 * **Installments**–Allows a partial payment at approval and the balance to be collected later at specific times at 0%.
-* **Financing**–Allows the shopper to finance the order at an interest-bearing installment plan.
+  * **Pay in 3**: This payment option allows shoppers to pay for their purchases over 3 months in 3 equal parts. Available in France, Ireland, Italy, Portugal, Spain, and the United Kingdom.
+  * **Pay in 4**: This payment option allows shoppers to pay for their purchases over 4 months in 4 equal parts. Available in Canada and the United States.
+* **Financing**–This payment option can allow your shoppers up to 36 months to pay for their purchases with interest, while you are paid upfront. Available in Austria, Finland, Germany, Norway, Sweden, and the United States.
 
-Financing orders reduce cart abandonment and improve conversions at a higher average order value. There are unique display and entry requirements for each country. Please contact your Digital River Representative for more details.
+Offering a short-term loan reduces cart abandonment and improves conversions and average order values. There are unique display and entry requirements for each country. Contact your Digital River Representative for more details.
 
 ## Configuring Klarna for DigitalRiver.js
 
