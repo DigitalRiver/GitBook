@@ -10,7 +10,7 @@ The following table lists the supported payment methods in [Drop-in payments](pa
 
 The table also lists each [payment method's flow](sources/#payment-flow) and indicates whether that payment method is supported in our [test environment](broken-reference).
 
-For a complete list of payment methods that can be paired with [store credit](../consumer-browsing-experience-1/common-use-cases/applying-store-credit.md), refer to [combining primary and secondary sources](sources/using-the-source-identifier.md#combining-primary-and-secondary-payment-sources) on the [Managing sources](sources/using-the-source-identifier.md) page
+For a complete list of payment methods that can be paired with [store credit](../consumer-browsing-experience-1/common-use-cases/applying-store-credit.md), refer to [combining primary and secondary sources](sources/using-the-source-identifier.md#combining-primary-and-secondary-payment-sources) on the [Managing sources](sources/using-the-source-identifier.md) page.
 
 | Payment method                                                                                                    | Drop-in Payments | DigitalRiver.js with elements | One-off purchases | Recurring payments | Authentication flow |
 | ----------------------------------------------------------------------------------------------------------------- | :--------------: | :---------------------------: | :---------------: | :----------------: | :-----------------: |
