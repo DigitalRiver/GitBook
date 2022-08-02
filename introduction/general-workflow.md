@@ -6,12 +6,18 @@ description: Learn more about installing the connector cartridges and secure pay
 
 ## Install the connector cartridges <a href="#install-the-connector-cartridges" id="install-the-connector-cartridges"></a>
 
-The Salesforce B2C LINK Cartridge package contains three cartridges with the [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) functionality for Storefront Reference Architecture (SFRA):
+The Salesforce B2C LINK Cartridge package contains five cartridges.&#x20;
+
+These cartridges provide the [Drop-in functionality](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/drop-in) for Storefront Reference Architecture (SFRA):
 
 * [bm\_digitalriver](https://app.gitbook.com/@digital-river/s/salesforce-b2c-draft/\~/drafts/-MPjXhMIoSRjoBcAnaPW/v/2.0.0/general-workflow#bm\_digitalriver)
 * [int\_digitalriver](https://app.gitbook.com/@digital-river/s/salesforce-b2c-draft/\~/drafts/-MPjXhMIoSRjoBcAnaPW/v/2.0.0/general-workflow#int\_digitalriver)
 * [int\_digitalriver\_sfra](https://app.gitbook.com/@digital-river/s/salesforce-b2c-draft/\~/drafts/-MPjXhMIoSRjoBcAnaPW/v/2.0.0/general-workflow#int\_digitalriver\_sfra)
+
+These cartridges provide webhooks and customer credit functionality:
+
 * [int\_digitalriver\_webhooks](general-workflow.md#int\_digitalriver\_webhooks)
+* [int\_digitalriver\_customercredit](general-workflow.md#int\_digitalriver\_customercredit)
 
 ### bm\_digitalriver <a href="#bm_digitalriver" id="bm_digitalriver"></a>
 
@@ -28,17 +34,21 @@ This integration cartridge contains API integrations that form requests, parse r
 
 This integration cartridge delivers adjustments and extensions to existing storefront functionality.&#x20;
 
-![](<../.gitbook/assets/CARTRI\_1 (1).png>)
+![](../.gitbook/assets/CARTRI\_1.png)
 
 ### int\_digitalriver\_webhooks
 
-This integration cartridge process Digital River webhook requests and optionally sends email notifications.
+This integration cartridge processes Digital River API webhook requests and optionally sends email notifications.
+
+### int\_digitalriver\_customercredit
+
+This integration cartridge processes Digital River API customer credit requests.
 
 ## Checkout flow
 
 The following sequence diagram shows the checkout interaction between the Shopper, Salesforce B2C Commerce, the Salesforce B2C Commerce App, and Digital River.
 
-{% file src="../.gitbook/assets/salesforceB2C_sequencediagram-v2.1.png" %}
+{% file src="../.gitbook/assets/salesforceB2C_chkout_sequencediagram-v2.1_v2.2.png" %}
 SalesforceB2C\_sequencediagram-V2.1.png
 {% endfile %}
 
@@ -46,7 +56,7 @@ SalesforceB2C\_sequencediagram-V2.1.png
 
 The following sequence diagram shows the US tax exemption interaction between the Shopper, Salesforce B2C Commerce, the Salesforce B2C Commerce App, and Digital River.
 
-{% file src="../.gitbook/assets/SalesforceB2C_USTaxExemptionFlow-2.1 (1).png" %}
+{% file src="../.gitbook/assets/SalesforceB2C_USTaxExemptionFlow-2.1.png" %}
 SalesforceB2CUSTaxExemptionFlow-2.1.png
 {% endfile %}
 
@@ -57,6 +67,12 @@ The following sequence diagram shows the tax identifier interaction between the 
 {% file src="../.gitbook/assets/salesforceB2C_TaxIdentifierFlow-2.1.png" %}
 SalesforceB2C\_TaxIdentifierFlow-2.1.png
 {% endfile %}
+
+## Customer credit flow
+
+The following sequence diagram shows the interaction of the customer credit functionality with the Shopper, Salesforce B2C Commerce, the Salesforce B2C Commerce App, and Digital River.
+
+{% file src="../.gitbook/assets/salesforceB2C_CustomerCreditFlow-2.2 (1).png" %}
 
 ## Privacy and payments <a href="#privacy-and-payments" id="privacy-and-payments"></a>
 

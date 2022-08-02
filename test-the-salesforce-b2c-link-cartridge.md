@@ -17,21 +17,21 @@ Create an account in the Storefront. Open **Business Manager**.
 
 Select **Merchant Tools**, select **Customers**, and click **Customers**. Find the customer by number or name.
 
-![](.gitbook/assets/p26CustFrCustList.png)
+![](.gitbook/assets/p26custfrcustlist.png)
 
 Scroll down to the **Digital River** section with the **Global Commerce Customer ID** attribute. It should not be empty.
 
-![](.gitbook/assets/p26GCCustID.png)
+![](.gitbook/assets/p26gccustid.png)
 
 ## Placing an order
 
 Place an order on the storefront with any account or as a guest. Once you place an order, open **Business Manager** and select **Merchant Tools**, select **Ordering**, and then click **Orders**. You can find your order by number or click **Find** with an empty order number field and select the last-placed order from the list.
 
-![](.gitbook/assets/p27Orders.png)
+![](.gitbook/assets/p27orders.png)
 
 On the **Attributes** tab, you’ll see the **Digital River Attributes** section with attributes. **Attributes** should not be blank.
 
-![](.gitbook/assets/p27OrderAttributes.png)
+![](.gitbook/assets/p27orderattributes.png)
 
 ## Test scenarios or test cases <a href="#test-scenarios-or-test-cases" id="test-scenarios-or-test-cases"></a>
 

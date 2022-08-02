@@ -14,32 +14,36 @@ You can install the Salesforce B2C LINK Cartridge in two easy steps:
 ### Importing cartridges
 
 {% hint style="info" %}
-**Note**: The following steps detail how to deploy the cartridges using Salesforce UX Studio for Eclipse. Alternatively, you can use Visual Studio Code with the Prophet Debugger extension.
+**Note**: The following steps detail how to deploy the [cartridges ](introduction/general-workflow.md#install-the-connector-cartridges)using Salesforce UX Studio for Eclipse or Visual Studio. Alternatively, you can use Visual Studio Code with the Prophet Debugger extension or the command line interface.
 {% endhint %}
 
 1. Establish a new digital server connection with your SFCC Instance.
 2. Import cartridges to a workspace in Salesforce UX Studio. \
-   ![](.gitbook/assets/ImportDialog.png)
-3. Add cartridges to the Project Reference of Server Connection.\
-   &#x20;![](.gitbook/assets/IMPORT\_2.PNG)
+   ![](.gitbook/assets/importdialog.png)
+3. Add the cartridges to the Project Reference of Server Connection.\
+   &#x20;![](<.gitbook/assets/Import Projects.png>)
 4. Wait until Studio completes the workspace build and uploads source codes to the sandbox.
 
 ### Assigning cartridges to the site
 
-1. Select **Administration**, select **Sites**, and then click **Manage Sites**. Click the **Business Manager** link.\
-   ![](.gitbook/assets/StorefrontSites.png)
-2. At the beginning of the cartridge path, add the following: `bm_digitalriver:` and `:int_digitalriver`. Click **Apply**. \
-   ![](<.gitbook/assets/BusMgrSettings (1).png>)
-3. Select **Administration**, select **Sites**, and then click **Manage Sites**. Select your site from the list named **Storefront Sites**. \
-   ![](.gitbook/assets/StorefrontSites2.png)
-4. Click the **Settings** tab. At the beginning of the cartridge path, add the following: `int_digitalriver_sfra:int_digitalriver:int_digitalriverwebhooks`. Click **Apply**. \
+1. Sign in to the Salesforce Commerce Cloud.
+2. Select **Administration**, select **Sites**, and then **Manage Sites.**&#x20;
+3. On the **Manage Sites** page, click the **Business Manager** link in the **Business Manager** section of the page.\
+   ![](.gitbook/assets/storefrontsites.png)
+4. At the beginning of the cartridge path, add the following: `bm_digitalriver:` and`:int_digitalriver`. Click **Apply**.\
+   ![](.gitbook/assets/BusMgrSettings\_restore\_2\_1.png)
+5. Return to the top level **Administration** page.&#x20;
+6. Select **Sites**, and then click **Manage Sites**. Select your site from the list named **Storefront Sites**. \
+   ![](.gitbook/assets/storefrontsites2.png)
+7. Click the **Settings** tab. At the beginning of the **Cartridges** field, add the following: `int_digitalriver_customercredit:int_digitalriver_sfra:int_digitalriver:int_digitalriver_webhooks:`.&#x20;
+8. Click **Apply**. This updates the path in the **Effective Cartridge Path** field. The complete path will now have the new entries at the beginning.\
    ![](.gitbook/assets/RefArchSettings.png)
 
 ## Step 2: Import metadata
 
 Select **Administration**, select **Site Development**, and then click **Site Import & Export**. Upload the **digitalriver.zip** file from the metadata folder.
 
-![](.gitbook/assets/SiteImportExport.png)
+![](.gitbook/assets/siteimportexport.png)
 
 Select **digitalriver.zip** and finish the import process.
 

@@ -7,7 +7,7 @@ description: Learn what features are provided with the Salesforce B2C LINK Cartr
 The Salesforce B2C LINK Cartridge provides the following features:
 
 * [Payment gateway](features.md#drop-in-payment-methods)
-* PCI compliance
+* [PCI compliance](general-workflow.md#privacy-and-payments-1)
 * Tokenization
 * Acquirer redundancy
 * Billing optimization
@@ -22,6 +22,11 @@ The Salesforce B2C LINK Cartridge provides the following features:
 * Global regulatory compliance (for example, GDPR and PSD2)
 * Landed cost
 * Promotion handling
+* Header identifiers
+* Invoice and credit note handling
+* Bill-to address handling
+* API support for integrations using webhook processing
+* API support for integrations using customer credit functionality
 
 ## Drop-in payment methods
 

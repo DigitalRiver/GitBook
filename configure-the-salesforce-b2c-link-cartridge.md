@@ -8,7 +8,7 @@ description: Set up the Salesforce B2C LINK Cartridge and Business Manager.
 
 After successfully importing the metadata, select **BM Merchant Tools**, select **Site Preferences**, and then select **Custom Preferences** to see **Custom Site Preferences Groups**.
 
-![](.gitbook/assets/CustomSitePref.png)
+![](.gitbook/assets/customsitepref.png)
 
 Click **Digital River** to see the cartridge setup fields.&#x20;
 
@@ -40,11 +40,11 @@ To enable the Digital River Business Manager extensions, add the **Write** permi
 
 In Business Manager, select **Administration**, and then select **Roles and Permissions**. To add the Digital River modules to a role, click the role you want to modify (or create a new one). Then click one or more checkboxes to select the **Business Manager** modules for that role.
 
-![](.gitbook/assets/BusMgrContext.png)
+![](.gitbook/assets/busmgrcontext.png)
 
 In the next menu, add the **Write** permission to the Digital River group as indicated below.
 
-![](.gitbook/assets/BusMgrModule.png)
+![](.gitbook/assets/busmgrmodule.png)
 
 See [Business Manager](configure-the-salesforce-b2c-link-cartridge.md#business-manager) for more information about Digital River modules.
 
@@ -54,7 +54,7 @@ Lastly, the order status update job must be able to access the order to update t
 2. Set **Limit Storefront Order Access** to **No**.
 3. Set **Storefront Order Filter by Customer Session** to **No**.&#x20;
 
-![](.gitbook/assets/ORDERA\~1.PNG)
+![](.gitbook/assets/ordera-1.png)
 
 ## Updating shipping methods to support digital products
 
@@ -67,10 +67,4 @@ Ensure that if the basket contains the products without the custom attribute`drD
 {% hint style="info" %}
 **Note**: All other existing shipping methods should be also configured so that they are not shown when there are only digital products in the basket. &#x20;
 {% endhint %}
-
-
-
-
-
-
 

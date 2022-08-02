@@ -16,7 +16,7 @@ Digital River needs the optional Harmonized System (HS) Code property for duty c
 **Note**: If your Digital River account is configured for [Landed Costs](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/creating-checkouts/landed-costs), you will need to configure the Harmonized System (HS) Code on applicable products. This cartridge code processes duty and appears to customers as a separate total price component without any additional site configuration. To avoid duty inclusion, leave HS Code attributes blank or contact your Digital River representative.
 {% endhint %}
 
-![](.gitbook/assets/CatalogTaxclass.png)
+![](.gitbook/assets/catalogtaxclass.png)
 
 ![](<.gitbook/assets/Product mgmt\_DR attributes.png>)
 
@@ -48,7 +48,7 @@ After you configure the products, you need to sync the data to Digital River. Th
 
 We added new Business Manager menu options under Merchant Tools.&#x20;
 
-![](.gitbook/assets/p33BusinessMgr.png)
+![](.gitbook/assets/p33businessmgr.png)
 
 * **Request SKUs update**—Click the **Request SKUs update** link under **Digital River**. You'll see the following options:
   * **Request delta SKUs update**—Click this button to launch the Digital River SKUs update with the next run of `DigitalRiver_DeltaSkuUpdateOnButton` job. The button will show the corresponding text indicating that you can launch the job or that the job is running.
@@ -60,7 +60,7 @@ We added new Business Manager menu options under Merchant Tools.&#x20;
 
 * **Digital River Service Tester**—Click the **Digital River Service Tester** link under **Digital River** and then click **Test Services** to test Digital River service availability. Test Services will make calls to the indicated web services and evaluate the response codes.
 
-![](.gitbook/assets/p34Sandbox2.png)
+![](.gitbook/assets/p34sandbox2.png)
 
 ## Checkout information
 
@@ -73,6 +73,10 @@ The Order Summary on the Checkout page displays the subtotal, shipping fee, sale
 If landed cost is enabled, the Order Summary will also include the duty and Importer of Record (IOR) tax if applicable to the order.&#x20;
 
 ![](.gitbook/assets/Order-Summary-for-landed-cost.png)
+
+{% hint style="info" %}
+**Note:** When a Tax Identifier is applied causing a Tax Discount, the “Price includes VAT” message in the Order Summary is removed and replaced with the message “X.XX VAT exempted from order.” The former "Total Tax" text in the summary has been replaced by "Price includes VAT" underneath the total price.
+{% endhint %}
 
 #### Regulatory fees
 
@@ -150,11 +154,11 @@ The Digital\_River\_Dropin payment processor provides the following order inform
   * Payment type (creditCard, PayPal, and so on) is mentioned.
   * Hyperlink to order on Digital River [Dashboard](https://dashboard.digitalriver.com/login).
 
-![](.gitbook/assets/P34ORD\~1.PNG)
+![](.gitbook/assets/p34ord-1.png)
 
 * Select **Merchant Tools**, select **Orders**, choose an order, and click **Notes**. A Digital River “create order” response is being saved in order notes.
 
-![](.gitbook/assets/p34NotesForOrder.png)
+![](.gitbook/assets/p34notesfororder.png)
 
 ## Order state management
 
@@ -177,7 +181,7 @@ Digital River fraud status doesn’t have a direct impact on order processing an
 
 To see Digital River order and fraud states, select **Merchant Tools**, then select **Ordering**, and click **Orders**. Select the **order number** and choose the **Attributes** tab.
 
-![](.gitbook/assets/p31OrderAttributes.png)
+![](.gitbook/assets/p31orderattributes.png)
 
 Initial Digital River status values are set after order placement and they define order processing scenarios.
 
@@ -202,7 +206,7 @@ After the order is placed, the status update is handled through jobs that can be
 
 In the following table, you can see all the statuses that you can expect to receive from Digital River and their impact on orders in SFCC for each respective state:
 
-![](.gitbook/assets/p32PendingOrders.png)
+![](.gitbook/assets/p32pendingorders.png)
 
 ## Storefront functionality <a href="#storefront-functionality" id="storefront-functionality"></a>
 
@@ -219,7 +223,7 @@ The following image shows how payment methods will appear on the billing page:\
 
 When the customer clicks the **Add New** link in the **My Account** section, the Drop-in form with the specific configuration will appear. The form allows the customer to add a new payment method within Drop-in and create a new source.
 
-![](.gitbook/assets/p36PymtNewSource.png)
+![](.gitbook/assets/p36pymtnewsource.png)
 
 The saved cards will be available in the list of saved cards on the billing page. You can choose any card from the list to pay for purchases in the future.&#x20;
 
@@ -231,9 +235,9 @@ Though order and line-level fulfillment or cancellation within SFCC or an order 
 
 1. Use the [**DigitalRiver\_fulfillOrders**](user-guide.md#order-status-management-jobs) job. This job is available out of the box. This job provides order-level fulfillment and cancellation. It will choose orders with **Shipped** or **Cancelled** statuses and provide respective fulfillment to Digital River. Line level fulfillment and cancellation are not included in this job. It is recommended that this job is scheduled to run on a regular basis.\
    In the Business Manager, change the **Shipping Status** to **Shipped** to fulfill the order. \
-   <img src=".gitbook/assets/OrderDetails.png" alt="" data-size="original"> \
+   <img src=".gitbook/assets/orderdetails.png" alt="" data-size="original"> \
    To cancel the order, change the **Order Status** to **Cancelled**.\
-   &#x20;<img src=".gitbook/assets/OrderCancelled.png" alt="" data-size="original"> \
+   &#x20;<img src=".gitbook/assets/ordercancelled.png" alt="" data-size="original"> \
    The next time the **DigitalRiver\_fulfillOrders** job runs, the fulfillment or cancellation request will be sent to Digital River.
 2. If URL endpoints or third-party integration perform order fulfillment/cancellation, you can inject the `drOrderHelper` module in the code to send fulfillments to Digital River. To do so, import the module:
 
@@ -265,12 +269,12 @@ Functions return the [Result](https://documentation.b2c.commercecloud.salesforce
 
 Refunds are handled through the Digital River dashboard. From Salesforce, you can get to the order record in the Digital River dashboard by navigating to the Order record and clicking the Payment tab. A link to the dashboard is provided in the Payment Method section.
 
-![](.gitbook/assets/PaymentInfoforOrder.png)
+![](.gitbook/assets/paymentinfofororder.png)
 
 Before you can refund an order, the order must be fulfilled and shipped.
 
 1. Sign in to Salesforce.
-2. Click **Merchant Tools** and then click **Orders**. The Orders page appears.<img src="broken-reference" alt="" data-size="original">
+2. Click **Merchant Tools** and then click **Orders**. The Orders page appears.
 3. Click **Find**.
 4. On the **Orders** page, click the order number link under the **Number** column. The Details for order page appears.
 5. Click the **Attributes** tab and scroll down to **Digital River Attributes** where the webhook displays the retrieved information. The **Digital River Order Status** should be **fulfilled**.
@@ -279,3 +283,36 @@ Before you can refund an order, the order must be fulfilled and shipped.
 7. Click the **Payment** tab and click the Digital River logo under **Payment Method** to go to the Order details **** page for this order on the Digital River Dashboard. Note that you may need to enter your user credentials to access the Order details page.&#x20;
 8. From the Order details page, scroll down to **Refunds**, click [**Create refund**](https://docs.digitalriver.com/digital-river-api/administration/dashboard/order-management/orders/creating-a-refund), complete the fields, and then click **Review and submit**.
 9. Click **Submit** to complete the task.
+
+## Tax inclusive sites, promotions, and tax identifiers
+
+This section focuses on setting up a workaround for a promotions issue involving tax identifiers resulting in a tax exemption.&#x20;
+
+A tax identifier that is applied during a checkout can sometimes result in a tax exemption for the shopper. If this is the case, the gross price needs to be reduced by the value of the tax (known as a Tax Discount) in order to synchronize the position price on both platforms (that is, SFCC and Digital River).&#x20;
+
+On the Salesforce Commerce Cloud (SFCC) platform for the gross taxation sites (tax inclusive sites), the following approach is implemented to calculate this price. The formula is `Net Price = Gross price - Tax`. When the tax changes, the Net price is recalculated, but the Gross price remains constant.&#x20;
+
+Sometimes this situation can lead to incorrect promotional prices calculations. This topic describes the approach used in the cartridge to fix this issue so that it correctly exempts tax when applicable while not changing the value of applied promotions.
+
+To synchronize prices on both platforms, the following general approach is used:&#x20;
+
+* The total tax discount is handled by the cartridge code and stored as a non-basket item.
+* Whenever you need to display the total to a customer, the tax discount is subtracted from the order total.
+* On the last step of the checkout, just before order creation, the following occurs:&#x20;
+  * Absolute discount values are calculated on the last step of the checkout, just before the order is created from the basket
+  * All price adjustments that were added by the SFCC Promotion Engine are removed and replaced with one custom `priceAdjustment` with type `amountOff` on both the Order and Line Item level.
+  * The line item level price adjustment, with the tax discount amount, is added to each line item.
+
+### Make code changes to process the price/tax calculation
+
+Code modifications have already been incorporated into the cartridge to address this issue. These modifications are added to the customer credit cartridge to further improve the OOTB (out-of-the-box) order creation and checkout experience.
+
+The following specific code changes have been made to handle the price/tax calculation process:
+
+1. Replaced the product line item price adjustments and shipment line item price adjustments with one `amountOff` adjustment.&#x20;
+2. Created an `amountOff` price adjustment and set the amount to the sum of all discounts that were applied to the item during checkout.&#x20;
+3. Removed all system price adjustments generated by the Promotion engine during the checkout (Applied promotion information is stored in the order notes).
+4. Created a custom tax discount adjustment for each product line item and for shipping line items, with the amount of the line item tax discount.
+5. Added to the order notes descriptions of all removed discounts. The description includes the product ID, the name of the promotion, and the amount of the promotion discount.
+6. Kept the Tax Discount as a non-basket item during checkout.It is subtracted from the SFCC basket total to display the correct value to the customer and also send the correct value to the DropIn.
+

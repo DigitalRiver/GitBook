@@ -32,7 +32,7 @@ Salesforce provides detailed [log information](https://documentation.b2c.commerc
 
 You can access logs through the [Log center](https://documentation.b2c.commercecloud.salesforce.com/DOC4/index.jsp?topic=%2Fcom.demandware.dochelp%2Fcontent%2Fb2c\_commerce%2Ftopics%2Fsite\_development%2Fb2c\_log\_center.html\&resultof=%22%4c%6f%67%22%20%22%6c%6f%67%22%20%22%63%65%6e%74%65%72%22%20) or Business Manager Route Administration; Select **Site Development**, and then select **Development Setup**. Scroll down to the **WebDAV Access** section.
 
-![](.gitbook/assets/P28STO\~1.PNG)
+![](.gitbook/assets/p28sto-1.png)
 
 When a customer submits an order, the following required parameters are sent to Digital River:
 
