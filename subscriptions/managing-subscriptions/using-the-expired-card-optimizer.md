@@ -6,7 +6,7 @@ description: >-
 
 # Using the Expired Card Optimizer
 
-The Expired Card Optimizer (ECO) is a Billing Optimization feature used to optimize the subscription renewal for credit cards only. It is designed to renew orders for the Digital River subscription engine as described in [Providing subscription information](../../cart/providing-subscription-information.md). However, you can use the ECO to renew subscriptions for a third-party subscription engine (that is, a non-Digital River subscription engine) as described below.
+The Expired Card Optimizer (ECO) is a Billing Optimization feature used to optimize the subscription renewal for credit cards only. It is designed to renew orders for the Digital River subscription engine as described in [Providing subscription information](../../cart/creating-or-updating-a-cart/providing-subscription-information.md). However, you can use the ECO to renew subscriptions for a third-party subscription engine (that is, a non-Digital River subscription engine) as described below.
 
 ## Renewing subscriptions that do not use the Digital River subscription engine
 

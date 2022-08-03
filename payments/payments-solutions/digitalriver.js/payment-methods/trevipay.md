@@ -20,7 +20,7 @@ Offering net terms online for business buyers streamlines the legacy accounts re
 
 ## How it works
 
-Buyers select the TreviPay option at checkout, then they either log in to the Merchant's profile to complete their purchase or apply for their line of credit. Upon approval, the buyer can complete their transaction, manage purchases, statements, and vendor forms through the buyer portal.
+Buyers select the TreviPay option at checkout, then they either log in to the Merchant's profile to complete their purchase or apply for their line of credit. Upon approval, the buyer can complete their transaction, and manage purchases, statements, and vendor forms through the buyer portal.
 
 ### Promote the TreviPay credit solution
 
@@ -54,7 +54,7 @@ TreviPay will call the customer up to three times to gather information such as 
 
 ### Email notification
 
-The customer will later receive two emails. The first email will state the application has been submitted. The second email will state either the application for their account has been approved or declined. The validated customer can complete the purchase using two-factor authentication (2FA).
+The customer will later receive two emails. The first email will state the application has been submitted. The second email will state whether the application for their account has been approved or declined. The validated customer can complete the purchase using two-factor authentication (2FA).
 
 {% hint style="info" %}
 TreviPay does not require the customer to sign in to the client portal, but they do recommend it.
@@ -69,11 +69,11 @@ Digital River will provide the TreviPay enrollment form URL and redirect URL. Yo
 
 **Example:** `https://acmeUS.b2b.credit/en-US/apply?client_reference_id=Acme-123456`
 
-| Attribute             | Description                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `<programName>`       | The name of the program. TreviPay URLs are static and mapped to the specific program.                                                                                                                                                                                                                                                                                                                                                |
-| `client_reference_id` | <p>The identifier used to identify the business. This is a string without the restriction of character types and can be up to 50 characters in length. Each ecosystem (Commerce API) will be responsible for sending TreviPay a unique <code>client_reference_ID</code> for a shopper enrollment.</p><p>The value for the string is the business's universally unique identifier (UUID) (for example: <code>Acme-123456</code>).</p> |
-| `<locale>`            | A designator that combines the two-letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO\_639-1) language code with the [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2) country code (for example, `en-US`).                                                                                                                                                                                                 |
+| Attribute             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<programName>`       | The name of the program. TreviPay URLs are static and mapped to the specific program.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `client_reference_id` | <p>The business identifier. This is a string without the restriction of character types and can be up to 50 characters in length. Each ecosystem (Commerce API) will be responsible for sending TreviPay a unique <code>client_reference_id</code> for shopper enrollment.</p><p>See <a href="trevipay.md#applying-the-value-for-client_reference_id-to-organizationid">Applying the value for <code>client_reference_id</code> to <code>organizationId</code></a> <code>for instructions on on how to use the value for the organizationId as the client_reference_id.</code></p> |
+| `<locale>`            | A designator that combines the two-letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO\_639-1) language code with the [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2) country code (for example, `en-US`).                                                                                                                                                                                                                                                                                                                                               |
 
 #### Including the ecommerce URL in the enrollment URL
 
@@ -91,6 +91,21 @@ Include an `ecommerce_url` in the enrollment form URL when redirecting the custo
 
 You must include a `client_reference_id` with the return URL when redirecting to the TreviPay enrollment form.
 
+#### Applying the value for `client_reference_id` to `organizationId`&#x20;
+
+The value for the `client_reference_id` is the business's universally unique identifier (UUID) (for example, `Acme-123456`). In this instance, Digital River uses the `organizationId` as the UUID.
+
+There are two ways to apply the value for the `client_reference_id` to the `organizationId` . We recommend as best practice that you apply the `organizationId` as follows:
+
+1. [Create a cart](../../../../cart/creating-or-updating-a-cart/#creating-a-cart) and insert the `organizationId` in the payload.
+2. Provide the payment session identifier (`sessionId`) when [creating the source](trevipay.md#step-2-create-a-trevipay-agreement-source-using-digitalriver.js).
+3. [Apply the source to the cart](trevipay.md#step-4-use-the-authorized-source).
+
+Alternatively, you can:&#x20;
+
+1. [Create a source](../../../sources/using-the-source-identifier.md#creating-payment-sources) or a [source with payment sessions](../../../../cart/payment-sessions.md#creating-a-source-with-payment-sessions) and provide the `client_reference_id`.
+2. [Apply the source to the cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).  The `client_reference_id` value now appears as the value for the [`organizationId`](https://dispatch-dashboard.digitalriverws.net/re-docs/shopper#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post).&#x20;
+
 ## Configuring TreviPay for DigitalRiver.js
 
 Create a TreviPay payment method for your app or website in four easy steps:
@@ -101,7 +116,7 @@ Create a TreviPay payment method for your app or website in four easy steps:
 * [Step 4: Use the authorized source](trevipay.md#step-4-use-the-authorized-source)
 
 {% hint style="warning" %}
-After you configureTreviPay for DigitalRiver.js, you must [add the organization identifier (client\_reference\_id) to the cart](../../../../cart/adding-required-information-for-specific-payment-methods.md#adding-an-organization-identifier-to-a-cart) to make the TreviPay payment method available to the shopper.
+After you configure TreviPay for DigitalRiver.js, you must [add the organization identifier (`organizationId`) to the payload in the cart](../../../../cart/creating-or-updating-a-cart/adding-required-information-for-specific-payment-methods.md#adding-an-organization-identifier-to-a-cart) to make the TreviPay payment method available to the shopper. The `organizationId` uses the same value as the  `client_reference_id` specified in [TreviPay enrollment URL](trevipay.md#trevipay-enrollment-url).
 {% endhint %}
 
 ### Step 1:  Build the TreviPay object
@@ -133,6 +148,10 @@ The TreviPay source details object requires the following fields.
 ### Step 2:  Create a TreviPay agreement source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
+
+{% hint style="info" %}
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+{% endhint %}
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -234,6 +253,8 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 ```
 {% endtab %}
 {% endtabs %}
+
+<mark style="background-color:orange;"></mark>
 
 ## Support matrix
 

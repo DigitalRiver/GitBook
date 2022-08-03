@@ -24,16 +24,16 @@ On pre-cart pages, ensure that the expected products, currency, pricing, and dis
     * Confirm an [anonymous shopper token](https://docs.digitalriver.com/commerce-api/getting-started/best-practices#creating-session-aware-access-tokens) or [authenticated shopper token](https://docs.digitalriver.com/commerce-api/getting-started/best-practices#creating-authenticated-shopper-tokens) was generated, and the Checkout pages and API requests use HTTPS.
     * Confirm the [products were added to the cart](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post).
 
-    See [Creating or updating a cart](../cart/creating-or-updating-a-cart.md) for more information.
+    See [Creating or updating a cart](../cart/creating-or-updating-a-cart/) for more information.
 2. Verify that the expected products, currency, pricing, and discounts [appear in the cart](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers/paths/\~1v1\~1shoppers\~1me/post) as expected. See [Local and currency](https://docs.digitalriver.com/commerce-api/consumer-browsing-experience-1/basic-information/locale-and-currency) for more information.
 3. Adjust the product quantities and delete one line item from the cart.
    * Confirm the [line item updates](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items\~1{lineItemsId}/post) worked as expected.
    * Confirm the [deletion of a line item](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items\~1%7BlineItemsId%7D/delete) worked as expected.
-4. **\[Required if you are using coupons.]** Submit a promo code (`promoCode`) that is either valid or invalid) and confirm the [application of the coupon](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post) worked as expected. If the store supports promo codes that trigger order, line item, and shipping discounts, we recommend testing all promo code types from checkout to order completion. See [Applying a coupon code](../consumer-browsing-experience-1/common-use-cases/applying-a-coupon-code.md) for more information.
+4. **\[Required if you are using coupons.]** Submit a promo code (`promoCode`) that is either valid or invalid) and confirm the [application of the coupon](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post) worked as expected. If the store supports promo codes that trigger order, line item, and shipping discounts, we recommend testing all promo code types from checkout to order completion. See [Applying a coupon code](../cart/creating-or-updating-a-cart/applying-a-coupon-code.md) for more information.
 5. **\[Required for account creation.]** Create a new shopper and sign in as the shopper.
    * Confirm the [shopper was created](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers/paths/\~1v1\~1shoppers/post) as expected.
    * Confirm the [authentication or full access token](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Token) was generated as expected.
-6. **\[Required for physical products.]**  Submit a shipping address from the Shipping Address page and confirm the [shipping address change](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shipping-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shipping-address/post) works as expected. We recommend that you manually enter the address without using the Form Filler. For more information, see [Providing address information](../cart/providing-address-information.md).
+6. **\[Required for physical products.]**  Submit a shipping address from the Shipping Address page and confirm the [shipping address change](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shipping-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shipping-address/post) works as expected. We recommend that you manually enter the address without using the Form Filler. For more information, see [Providing address information](../cart/creating-or-updating-a-cart/providing-address-information.md).
 7. **\[Required for physical products.]** Confirm the available [shipping methods appear](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shipping-Options/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1shipping-options/get) as expected and [change the shipping method](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Shipping-Option) on the Shipping Method page.
 8.  From the Payment or Billing Address page, submit the payment information and billing address. We recommend that you manually enter the address without using the Form Filler and verify all required payment methods are available for the locale.
 
@@ -44,7 +44,7 @@ On pre-cart pages, ensure that the expected products, currency, pricing, and dis
 
     * [Sources](../payments/sources/)
     * [Testing scenarios](../resources/testing-scenarios.md)
-    * [Providing address information](../cart/providing-address-information.md)
+    * [Providing address information](../cart/creating-or-updating-a-cart/providing-address-information.md)
 9. From the Review page, review the order details and confirm the previously submitted data is present and accurate, including:
    * The required legal text and disclosures (Terms of Sale, privacy policy, and so on) appear as expected and links to the accompanying legal pages are functioning.
    * The products (including pricing, discounts, and quantities)

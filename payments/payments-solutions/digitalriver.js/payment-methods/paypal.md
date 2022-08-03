@@ -80,6 +80,10 @@ digitalriver.createSource(data).then(function(result) {
 
 #### PayPal source response example
 
+{% hint style="info" %}
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+{% endhint %}
+
 {% tabs %}
 {% tab title="Source response" %}
 ```javascript
@@ -173,12 +177,12 @@ At PayPal, the customer can authorize or cancel the transaction when presented w
 Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. This will allow you to control things like the appearance of the PayPal button and embed the entire experience into your workflow.
 
 * The PayPal SDK guide is located here: [https://developer.paypal.com/docs/archive/checkout/](https://developer.paypal.com/docs/archive/checkout/)
-* More details on how you can customize the PayPal button is located here: [https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/#](https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/)
+* More details on how you can customize the PayPal button are located here: [https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/#](https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/)
 
 **Example:**
 
 1. Include the PayPal Checkout SDK on your page and specify a location where the button will appear.
-2. &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching to an order or cart](broken-reference).
+2. &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching it to an order or cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
 {% tabs %}
 {% tab title="HTML" %}
@@ -314,6 +318,10 @@ digitalriver.createSource(data).then(function(result) {
 
 #### PayPal Billing source example
 
+{% hint style="info" %}
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+{% endhint %}
+
 {% tabs %}
 {% tab title="PayPal Billing source response" %}
 ```javascript
@@ -381,12 +389,12 @@ PayPal will present the customer with the transaction details where they can aut
 Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. This will allow you to control things like the appearance of the PayPal button and embed the entire experience into your workflow.
 
 * The PayPal SDK guide is located here: [https://developer.paypal.com/docs/archive/checkout/](https://developer.paypal.com/docs/archive/checkout/)
-* More details on how you can customize the PayPal button is located here: [https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/#](https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/)
+* More details on how you can customize the PayPal button are located here: [https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/#](https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/)
 
 **Example:**
 
 1. Include the PayPal Checkout SDK on your page and specify a location where the button will appear.
-2. Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by attaching to a shopper or customer.
+2. Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by attaching it to a shopper or customer.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -522,7 +530,7 @@ PayPal RatenZahlung allows shoppers to pay for physical good purchases as follow
 #### PayPal Credit
 
 {% hint style="warning" %}
-**Additional Setup Required**: If you are interested in using PayPal Credit, contact your Account Manager. The Account Manager will send set up instructions for PayPal Credit banners after you sign the client addendum.
+**Additional Setup Required**: If you are interested in using PayPal Credit, contact your Account Manager. The Account Manager will send setup instructions for PayPal Credit banners after you sign the client addendum.
 {% endhint %}
 
 PayPal Credit allows consumers to buy online and pay later for their products. This payment method is accepted in thousands of online stores and is available everywhere PayPal is accepted (as long as the PayPal Credit and PayPal accounts are linked). PayPal Credit uses the date of birth and last 4 digits of SSN to approve or deny a consumer for a line of credit, and the applicant will be notified within seconds whether they have been approved or not.
@@ -574,6 +582,10 @@ digitalriver.createSource(data).then(function(result) {
 {% endtabs %}
 
 #### PayPal Credit source response example
+
+{% hint style="info" %}
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+{% endhint %}
 
 {% tabs %}
 {% tab title="Source response" %}
@@ -652,7 +664,7 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <div id="paypal-button"></div>
     ```
-2.  &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching to an order or cart](broken-reference).
+2.  &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching it to an order or cart](broken-reference).
 
     ```javascript
     var paypalSourceData = {
@@ -706,7 +718,7 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <div id="paypal-button"></div>
     ```
-4.  &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching to an order or cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
+4.  &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching it to an order or cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
     ```javascript
     z   var paypalSourceData = {

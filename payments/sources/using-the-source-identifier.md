@@ -111,7 +111,7 @@ A `201 OK` response returns a unique [source](https://www.digitalriver.com/docs/
 {% endtab %}
 {% endtabs %}
 
-## Using multiple payment methods in a cart
+## Combining primary and secondary payment sources
 
 You can associate a [primary payment source](using-the-source-identifier.md#primary-payment-sources) with only one [secondary payment source](using-the-source-identifier.md#secondary-payment-sources).
 

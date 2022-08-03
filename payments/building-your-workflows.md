@@ -83,7 +83,7 @@ For almost all [one-off](building-your-workflows.md#one-off), [subscription](bui
 {% tab title="Drop-in Payments" %}
 **Prerequisites**: Perform the [common Drop-in Payments steps](building-your-workflows.md#common-drop-in-steps).
 
-**Step one**: [Create a cart](../cart/creating-or-updating-a-cart.md) with all tax, shipping, duty, and fee amounts in a final state.
+**Step one**: [Create a cart](../cart/creating-or-updating-a-cart/) with all tax, shipping, duty, and fee amounts in a final state.
 
 **Step two**: Retrieve the [payment session identifier](../cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to create an [instance of a configuration object](payments-solutions/drop-in/drop-in-integration-guide.md#step-5-configure-hydrate).  In the configuration [`options`](payments-solutions/drop-in/drop-in-integration-guide.md#drop-in-options), set `flow` to `checkout` and [`usage`](broken-reference) to `convenience`.
 

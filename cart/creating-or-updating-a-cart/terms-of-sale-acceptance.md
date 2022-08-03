@@ -2,7 +2,7 @@
 description: Learn how to add a TOS acceptance.
 ---
 
-# Terms of Sale (TOS) acceptance
+# Capturing the Terms of Sale (TOS) acceptance
 
 You capture when a customer accepts the TOS. The following requests allow a customer to accept the TOS from the cart:
 
@@ -11,7 +11,7 @@ You capture when a customer accepts the TOS. The following requests allow a cust
 
 ## Creating the TOS
 
-You can use a [DigitalRiver object](../general-resources/reference/digitalriver-object.md) provided by [DigitalRiver.js](../payments/payments-solutions/digitalriver.js/) to create the TOS required by Digital River.
+You can use a [DigitalRiver object](../../general-resources/reference/digitalriver-object.md) provided by [DigitalRiver.js](../../payments/payments-solutions/digitalriver.js/) to create the TOS required by Digital River.
 
 ## Setting the TOS acceptance parameter
 
@@ -72,13 +72,13 @@ How a user accepts the TOS depends on which option you selected when you configu
 
 If you chose **Shopper passively accepts terms through order submission**, the customer accepts the TOS when they submit the order. Digital River requires this setting when we are the Reseller of Record.
 
-![](../.gitbook/assets/Passive-Sales-Terms-of-Acceptance-checkbox.png)
+![](../../.gitbook/assets/Passive-Sales-Terms-of-Acceptance-checkbox.png)
 
 ### Customer actively accepts the TOS
 
 If you chose **Shopper actively accepts terms before completing the purchase**, the customer must click the checkbox to accept the TOS. Sites based in the EU require this setting.
 
-![](<../.gitbook/assets/Sales-Terms-of-Acceptance-checkbox (3).png>)
+![](<../../.gitbook/assets/Sales-Terms-of-Acceptance-checkbox (3).png>)
 
 ### No acceptance required
 

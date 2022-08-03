@@ -20,8 +20,10 @@ The request in the following example applies a promotional code value of `wb32xj
 
 {% tabs %}
 {% tab title="Request sample" %}
-```http
-POST https://api.digitalriver.com/v1/shoppers/me/carts/active?promoCode=wb32xjtam 
+```json
+curl --location --request POST https://api.digitalriver.com/v1/shoppers/me/carts/active?promoCode=wb32xjtam
+--header 'Content-Type:  application/json' \
+--header 'authorization: bearer ***\ 
 ```
 {% endtab %}
 

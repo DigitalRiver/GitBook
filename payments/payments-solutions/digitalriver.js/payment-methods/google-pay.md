@@ -120,7 +120,11 @@ googlepay.on('source', function(event) {
 
 #### Google Pay example
 
-The source event will surface a Source plus other details provided from Google Pay like the shopper's billing address, shipping address, and the contact information in the response.
+The source event will surface a Source plus other details provided from Google Pay like the shopper's billing address, shipping address, and contact information in the response.
+
+{% hint style="info" %}
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+{% endhint %}
 
 {% tabs %}
 {% tab title="Source example" %}

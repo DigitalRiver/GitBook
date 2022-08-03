@@ -14,7 +14,7 @@ Use the `customerType` parameter to differentiate between business and individua
 
 You must attach the tax identifier to the cart before you can use the source.&#x20;
 
-To attach a tax identifier, [create a cart](creating-or-updating-a-cart.md#creating-a-cart).
+To attach a tax identifier, [create a cart](creating-or-updating-a-cart/#creating-a-cart).
 
 Optional. Send a [`GET /v1/shopper/me/carts/active/tax-registrations/schema`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Tax-Registration/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1tax-registrations\~1schema/get) request to get the tax-registrations JSON schema. You can use this schema when attaching the tax identifier to the cart.&#x20;
 

@@ -10,7 +10,7 @@ To support store credit, Commerce API requires [more than one source](../../paym
 
 ## Store credit flow
 
-1. [Create a cart](../../cart/creating-or-updating-a-cart.md#creating-a-cart).
+1. [Create a cart](../../cart/creating-or-updating-a-cart/#creating-a-cart).
 2. Create a [store credit source](../../payments/sources/using-the-source-identifier.md#creating-secondary-sources).
 3. [Attach the secondary source to the cart](../../payments/sources/using-the-source-identifier.md#attaching-multiple-payment-sources-to-the-cart) (for example, the store credit source).
 4. Attach the primary source to the cart (for example, the credit card source).\

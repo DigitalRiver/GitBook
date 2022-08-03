@@ -4,9 +4,9 @@ description: >-
   River uses this IP address to identify and prevent fraudulent activities.
 ---
 
-# Customer IP address
+# Capturing the customer's IP address
 
-## Customer IP format and inclusion
+## Capturing the customer's IP format&#x20;
 
 The Commerce API validates the format of the IP address and supports both IPv4 and IPv6 address schemes.
 
@@ -96,7 +96,7 @@ POST /v1/shoppers/me/carts/active/submit-cart
 {% endtab %}
 {% endtabs %}
 
-## Validation using the GET /shoppers/me request
+## Validating the Customer's IP address
 
 You can validate the customer's IP address was successfully captured by using the [`GET /shoppers/me`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers/paths/\~1v1\~1shoppers\~1me/get) request. In the Response body, search for `ipAddress`. If the value of the `ipAddress` field is null, the client did not send an IP address for the customer. If the ipAddress is not null, run an IP search to verify the IP address, city, and state matches the customer address in the Global Commerce order. The IP address needs to be the customer's IP address and not the client server's IP address.
 
@@ -158,8 +158,8 @@ GET /v1shoppers/me
 {% endtab %}
 {% endtabs %}
 
-## Validation errors
+### Validation errors
 
 If the IP address format is incorrect (that is, not in a valid IPv4 and IPv6 format), the API response will send a 409 Conflict error:
 
-![409 Conflict error](<../.gitbook/assets/409-conflict-error-invalid-ip-address (2).png>)
+![409 Conflict error](<../../.gitbook/assets/409-conflict-error-invalid-ip-address (2).png>)

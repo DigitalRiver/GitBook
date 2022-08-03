@@ -15,7 +15,7 @@ A billing agreement consists of the [terms](providing-subscription-information.m
 If you sell your product or service as part of a subscription and you want to use an external subscription engine to manage your subscriptions, you _must_ :
 
 * [Create a product](https://help.digitalriver.com/help/gc/Products/All-Products/Creating-a-product.htm) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do) without selecting the Subscription option and [deploy the product](https://help.digitalriver.com/help/gc/Products/All-Products/Deploying-products.htm).
-* Include the `subscriptionInfo` hash table.  As [reseller of record](../#working-with-digital-river), Digital River is required to collect the basic information contained in this data structure.&#x20;
+* Include the `subscriptionInfo` hash table.  As [reseller of record](../../#working-with-digital-river), Digital River is required to collect the basic information contained in this data structure.&#x20;
 
 To add a subscription to a product for a customer, include `subscriptionInfo`  in  the `LineItem` array. You can add `subsciptionInfo` to the [`POST/carts`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post), [`POST /line-items`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items/post), or [`POST /line-items/{lineItemsId}`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items\~1{lineItemsId}/post) requests. The following [`POST/carts`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post) request includes the subscription parameters related to [auto renewals](providing-subscription-information.md#auto-renewal), [free trials](providing-subscription-information.md#subscription-lifecycle), and the [terms](providing-subscription-information.md#terms) displayed to the customer. You can also provide the [subscription](providing-subscription-information.md#subscription-identifier) and the [billing agreement](providing-subscription-information.md#billing-agreement-identifier) identifiers.&#x20;
 
@@ -158,9 +158,9 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/cart
 {% endtab %}
 {% endtabs %}
 
-Use the `autoRenewal` parameter to tell us whether the subscription is automatically or manually renewed.  If `true`, customers must have agreed to have their card information stored on file and charged at the start of every billing cycle. To do this, you must, at a minimum, [attach a Source to the payment option](../payments/sources/using-the-source-identifier.md#attaching-a-source-to-a-payment-option) associated with the subscription and make sure the [Source is reusable](../payments/sources/#reusable-or-single-use).&#x20;
+Use the `autoRenewal` parameter to tell us whether the subscription is automatically or manually renewed.  If `true`, customers must have agreed to have their card information stored on file and charged at the start of every billing cycle. To do this, you must, at a minimum, [attach a Source to the payment option](../../payments/sources/using-the-source-identifier.md#attaching-a-source-to-a-payment-option) associated with the subscription and make sure the [Source is reusable](../../payments/sources/#reusable-or-single-use).&#x20;
 
-If `false`, then the customer needs to manually renew the subscription by resupplying payment date. You can facilitate this by [creating a new instance of Drop-in](../payments/payments-solutions/drop-in/) to collect the payment source.&#x20;
+If `false`, then the customer needs to manually renew the subscription by resupplying payment date. You can facilitate this by [creating a new instance of Drop-in](../../payments/payments-solutions/drop-in/) to collect the payment source.&#x20;
 
 ## Free trial
 
@@ -182,11 +182,11 @@ In the next version of the Digital River API, the `subscriptionId` attribute wil
 
 ## Creating a billing agreement
 
-You'll first need to ensure that you've [attached a source to the payment option](../payments/sources/using-the-source-identifier.md#attaching-a-source-to-a-payment-option) associated with the subscription and that the [source is reusable](../payments/sources/#reusable-or-single-use).
+You'll first need to ensure that you've [attached a source to the payment option](../../payments/sources/using-the-source-identifier.md#attaching-a-source-to-a-payment-option) associated with the subscription and that the [source is reusable](../../payments/sources/#reusable-or-single-use).
 
 You'll then apply the shopper to a cart that includes `subscriptionInfo` hash table in a [`POST/apply-shopper`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post) request and include `billingAgreementId`.&#x20;
 
-After you [submit the cart](submitting-a-cart/), Digital River generates a billing agreement and returns the `billingAgreementId` in the [`POST /submit-cart`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Submit-Cart/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1submit-cart/post) response.
+After you [submit the cart](../submitting-a-cart/), Digital River generates a billing agreement and returns the `billingAgreementId` in the [`POST /submit-cart`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Submit-Cart/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1submit-cart/post) response.
 
 {% hint style="info" %}
 A one-to-one relationship exists between a subscription item and a billing agreement. For example, if your `POST/submit-cart` request contains two line items and both have a `subscriptionInfo` hash table, then Digital River creates two separate billing agreements and returns two billing agreement identifiers.

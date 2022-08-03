@@ -140,9 +140,13 @@ But when only [secondary payment sources](broken-reference) are attached, you ne
 
 By comparing values in the cart's `payment.session`, you can determine how much additional funding, if any, is still required. The `amountContributed` represents the aggregated amount of all the cart's `payment.sources[]`. The `amountRemainingToBeContributed` is how much is needed to fully fund the transaction.
 
-If the `amountContributed` is equal to the checkout's `totalAmount` or the `amountRemainingToBeContributed` is zero, then you don't need to request any more payment methods from the customer. This means that once the [payment session is in the correct state](payment-sessions.md#session-state), and all [address requirements](providing-address-information.md) are met, you can convert the cart to an order.
+If the `amountContributed` is equal to the checkout's `totalAmount` or the `amountRemainingToBeContributed` is zero, then you don't need to request any more payment methods from the customer. This means that once the [payment session is in the correct state](payment-sessions.md#session-state), and all [address requirements](creating-or-updating-a-cart/providing-address-information.md) are met, you can convert the cart to an order.
 
 But if the `amountContributed` is less than the checkout's `totalAmount` or the `amountRemainingToBeContributed` is greater than zero, then the customer needs to supply additional payment methods before an order can be successfully created. However, this will only be the case when a [primary payment source](../payments/sources/using-the-source-identifier.md#primary-payment-sources) is not yet attached to the checkout. Once that's done, we use it to fully fund the transaction and `amountRemainingToBeContributed` drops to zero.
+
+## Attaching a source
+
+You can [attach a source to a customer](../payments/sources/#attaching-a-payment-method-to-a-customer), [an order or cart](../payments/sources/#attaching-a-payment-method-to-an-order-or-cart), or [a payment option](../payments/sources/#attaching-a-source-to-a-payment-option). See [Source basics](../payments/sources/) for more information.
 
 ## Retrieving available payment methods
 
@@ -167,6 +171,4 @@ digitalriver.retrieveAvailablePaymentMethods({
 Although we generally recommend that you use [Drop-in Payments](../payments/payments-solutions/drop-in/) to handle payments, you can also migrate your existing integration directly to payment sessions. For the Commerce API, [payment sessions must be enabled](payment-sessions.md#enable-payment-sessions).
 
 Once you have completed this migration process, you'll need to [build your SCA workflows](../payments/building-your-workflows.md) using [Drop-in Payments](../payments/payments-solutions/drop-in/) or [DigitalRiver.js with elements](../payments/payments-solutions/digitalriver.js/).&#x20;
-
-### Enable payment sessions
 
