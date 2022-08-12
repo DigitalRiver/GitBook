@@ -1,8 +1,8 @@
 ---
-description: Accept payment from consumers using PayPal to transfer funds online.
+description: Learn how to configure PayPal for DigitalRiver.js with Elements.
 ---
 
-# PayPal
+# Configuring PayPal
 
 PayPal offers the following payment methods: [PayPal Express Checkout](paypal.md#paypal), [PayPal Billing Agreement](paypal.md#paypal-billing-agreement), [PayPal Pay in 3](paypal.md#paypal-pay-in-3), [PayPal Pay in 4](paypal.md#paypal-pay-in-4), [PayPal RatenZahlung](paypal.md#paypal-ratenzahlung), and [PayPal Credit](paypal.md#paypal-credit).
 
@@ -16,7 +16,7 @@ You can find an example of integration [here](https://drh.img.digitalriver.com/D
 Use the [PayPay Billing Agreement](paypal.md#paypal-billing-agreement) for subscriptions. That includes any instance where the cart contains both subscription and non-subscription products.
 {% endhint %}
 
-Create a PayPal payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create an [PayPal](../../../supported-payment-methods/paypal.md) payment method for your app or website in four easy steps:
 
 * [Step 1: Build the PayPal objects](paypal.md#step-1-build-the-paypal-objects)
 * [Step 2: Create a PayPal source using DigitalRiver.js](paypal.md#step-2-create-a-paypal-source-using-digitalriver-js)
@@ -37,12 +37,14 @@ A PayPal Source Request object requires the following fields.
 | `sessionId` | The payment session identifier.                                                                                        |
 | `payPal`    | A [PayPal Source Details object](paypal.md#paypal-source-details-object) that includes the details of the transaction. |
 
+{% code overflow="wrap" %}
 ```javascript
 {
 	"returnUrl": "http://mypage.com",
 	"cancelUrl": "https://mypage.com/cancel",
 }
 ```
+{% endcode %}
 
 | Field       | Required/Optional | Description                                                                                                                                       |
 | ----------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,6 +57,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 var data = {
     "type": "payPal",
@@ -75,6 +78,7 @@ digitalriver.createSource(data).then(function(result) {
     }
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -86,6 +90,7 @@ The `address` object must contain postal code and state/province data that **** 
 
 {% tabs %}
 {% tab title="Source response" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -155,6 +160,7 @@ The `address` object must contain postal code and state/province data that **** 
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -166,9 +172,11 @@ When you create a PayPal source, the customer is required to authorize the charg
 
 To redirect your customer to PayPal for authorization, use the `redirectUrl` parameter in your createSource response.
 
+{% code overflow="wrap" %}
 ```javascript
 window.location.href = sourceResponse.redirect.redirectUrl;
 ```
+{% endcode %}
 
 At PayPal, the customer can authorize or cancel the transaction when presented with the transaction details. If the authorization is successful, the customer will be redirected to the PayPal Return URL parameter you specified when you created the source. If the customer cancels, they will be returned to the PayPal Cancel URL parameter you specified.
 
@@ -186,15 +194,18 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
 
 {% tabs %}
 {% tab title="HTML" %}
+{% code overflow="wrap" %}
 ```markup
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 <div id="paypal-button"></div>
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 var paypalSourceData = {
     "type": "payPal",
@@ -241,6 +252,7 @@ paypal.Button.render({
     }
 }, '#paypal-button');
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -252,6 +264,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -259,6 +272,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -293,6 +307,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 var data = {
     "type": "payPalBilling",
@@ -313,6 +328,7 @@ digitalriver.createSource(data).then(function(result) {
     }
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -324,6 +340,7 @@ The `address` object must contain postal code and state/province data that **** 
 
 {% tabs %}
 {% tab title="PayPal Billing source response" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -363,6 +380,7 @@ The `address` object must contain postal code and state/province data that **** 
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -376,9 +394,11 @@ To redirect your customer to PayPal for authorization, use the `redirectUrl` par
 
 {% tabs %}
 {% tab title="HTML" %}
+{% code overflow="wrap" %}
 ```markup
 window.location.href = sourceResponse.redirect.redirectUrl;
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -398,6 +418,7 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 var paypalSourceData = {
     "type": "payPalBilling",
@@ -444,6 +465,7 @@ paypal.Button.render({
     }
 }, '#paypal-button');
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -457,6 +479,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -464,6 +487,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -471,6 +495,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/payment-options" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentOption": {
@@ -480,6 +505,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -558,6 +584,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 var data = {
     "type": "payPalCredit",
@@ -578,6 +605,7 @@ digitalriver.createSource(data).then(function(result) {
     }
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -589,6 +617,7 @@ The `address` object must contain postal code and state/province data that **** 
 
 {% tabs %}
 {% tab title="Source response" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -628,6 +657,7 @@ The `address` object must contain postal code and state/province data that **** 
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -641,9 +671,11 @@ To redirect your customer to PayPal for authorization, use the `redirectUrl` par
 
 {% tabs %}
 {% tab title="Redirect example" %}
+{% code overflow="wrap" %}
 ```javascript
 window.location.href = sourceResponse.redirect.redirectUrl;
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -660,12 +692,11 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
 
 1.  Include the PayPal Checkout SDK on your page and specify a location where the button will appear.
 
-    ```markup
-    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-    <div id="paypal-button"></div>
-    ```
+    <pre class="language-markup" data-overflow="wrap"><code class="lang-markup"><strong>&#x3C;script src="https://www.paypalobjects.com/api/checkout.js">&#x3C;/script>
+    </strong>&#x3C;div id="paypal-button">&#x3C;/div></code></pre>
 2.  &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching it to an order or cart](broken-reference).
 
+    {% code overflow="wrap" %}
     ```javascript
     var paypalSourceData = {
         "type": "payPal",
@@ -712,14 +743,18 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
         }
     }, '#paypal-button');
     ```
+    {% endcode %}
 3.  Include the PayPal Checkout SDK on your page and specify a location where the button will appear.
 
+    {% code overflow="wrap" %}
     ```markup
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <div id="paypal-button"></div>
     ```
+    {% endcode %}
 4.  &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching it to an order or cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
+    {% code overflow="wrap" %}
     ```javascript
     z   var paypalSourceData = {
            "type": "payPal",
@@ -800,6 +835,7 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
         }
     }, '#paypal-button');
     ```
+    {% endcode %}
 
 **Step 4: Use the Authorized source**
 
@@ -809,6 +845,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -816,23 +853,6 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-## Supported markets
-
-{% hint style="warning" %}
-**Additional setup optional**: If you are interested in promoting Pay in 4, contact your Customer Success Representative. The Representative will provide the set-up instructions for PayPal in 4 banners.
-{% endhint %}
-
-Pay in 4 is a short-term card installment payment option automatically provided by PayPal when a customer signs in to PayPal Checkout. Pay in 4 allows United States shoppers to pay for physical good purchases ranging from $30 - $600 in four interest-free payments every two weeks over six weeks, with the first payment due at checkout. This option is currently only available in the United States.
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)
-
-{% hint style="info" %}
-When a customer selects this payment method, a "soft hit" will appear in their credit report.
-{% endhint %}
-

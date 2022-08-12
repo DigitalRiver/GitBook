@@ -1,18 +1,10 @@
 ---
-description: >-
-  The Credit Cards payment method is a fast and secure shopping experience where
-  the consumer can purchase goods or services on credit.
+description: Learn how to configure Credit Cards for DigitalRiver.js with Elements.
 ---
 
-# Credit Cards
+# Configuring Credit Cards
 
-The Credit Card payment method supports the following credit cards: American Express, Diners, Discover, JCB, Maestro, MasterCard, Union Pay, and Visa
-
-You can find an example of integration [here](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/creditcard.html).
-
-## Configuring Credit Card payments for DigitalRiver.js
-
-Create a Credit Card payment method for your app or website in three easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a Credit Card payment method for your app or website in three easy steps:
 
 * [Step 1: Build a Credit Card source request object](credit-cards.md#step-1-build-a-credit-card-source-request-object)
 * [Step 2: Create a Credit Card source using DigitalRiver.js](credit-cards.md#step-2-create-a-credit-card-source-using-digitalriver-js)
@@ -34,6 +26,7 @@ Build a Credit Card Source Request object. The Credit Card Source Request object
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
+{% code overflow="wrap" %}
 ```javascript
 var options = {
     style: {
@@ -55,6 +48,7 @@ cardNumber.mount('card-number');
 cardExpiration.mount('card-expiration');
 cardCVV.mount('card-cvv');
 ```
+{% endcode %}
 
 #### Create the source
 
@@ -64,6 +58,7 @@ To create a credit card payment source, you must reference the created element a
 The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```javascript
 var payload = {
     "type": "creditCard",
@@ -94,9 +89,11 @@ var payload = {
             }
     });
 ```
+{% endcode %}
 
 #### Credit Card source example
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -135,6 +132,7 @@ var payload = {
     }
 }
 ```
+{% endcode %}
 
 ### Step 3: Use the authorized source
 
@@ -144,6 +142,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -151,6 +150,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -158,6 +158,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/payment-options" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentOption": {
@@ -167,12 +168,6 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

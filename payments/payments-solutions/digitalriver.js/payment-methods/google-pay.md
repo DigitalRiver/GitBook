@@ -1,20 +1,10 @@
 ---
-description: >-
-  The Google Pay payment method allows a merchant to request any credit or debit
-  card stored in their customer’s Google Pay account.
+description: Learn how to configure Google Pay for DigitalRiver.js with Elements.
 ---
 
-# Google Pay
+# Configuring Google Pay
 
-This payment method adds another layer of ease-of-purchase for consumers to quickly complete transactions from their Google Wallet. All currencies are available in supported countries.&#x20;
-
-This guide describes how to create and customize a Google Pay element for your shoppers.
-
-You can find an example of integration [here](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/googlepay.html).
-
-## Configuring Google Pay for DigitalRiver.js
-
-Create a Google Pay payment method for your app or website in two easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a [Google Pay](../../../supported-payment-methods/google-pay.md) payment method for your app or website in two easy steps:
 
 * [Step 1: Create a Google Pay source using DigitalRiver.js](google-pay.md#step-1-create-a-google-pay-source-using-digital-river-js)
 * [Step 2: Use the authorized source](google-pay.md#step-2-use-the-authorized-source)
@@ -27,6 +17,7 @@ To create a Google Pay payment source, follow the instructions for [DigitalRiver
 
 After setting up your library per the [DigitalRiver.js reference guide](../../../../general-resources/reference/), create a Google Pay element with any customizations you would like to apply.
 
+{% code overflow="wrap" %}
 ```javascript
 var paymentRequestData = digitalriver.paymentRequest({
         country: "US",
@@ -48,6 +39,7 @@ var paymentRequestData = digitalriver.paymentRequest({
    
 var googlepay = digitalriver.createElement('googlepay', paymentRequestData);
 ```
+{% endcode %}
 
 #### Configure the Google Pay element to handle events
 
@@ -68,6 +60,7 @@ These events include:
 **Note**: To use Google Pay, you must listen to, at minimum, the Source event.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('source', function(event) {
     var source = result.source;
@@ -90,6 +83,7 @@ googlepay.on('shippingaddresschange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 
 The Shipping Address Changed and Shipping Method Changed events require a response of updated details to present to the Shopper. This system expects the response to be in the format of a [Payment Request Details Update object](../../../../general-resources/reference/digital-river-payment-objects.md#payment-request-details-update-error-object).
 
@@ -97,15 +91,18 @@ The Shipping Address Changed and Shipping Method Changed events require a respon
 
 The following example shows how to place the elements on the page. For more information on placing elements on a page, see Google Pay example.
 
+{% code overflow="wrap" %}
 ```javascript
 if (googlepay.canMakePayment()) {
     googlepay.mount("googlepay-element");
     document.getElementById('googlepay-element').style.display = 'block';
 }
 ```
+{% endcode %}
 
 #### Receive the source event and use the source
 
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('source', function(event) {
     var source = result.source;
@@ -117,6 +114,7 @@ googlepay.on('source', function(event) {
     event.complete('success');
 });
 ```
+{% endcode %}
 
 #### Google Pay example
 
@@ -128,6 +126,7 @@ The `address` object must contain postal code and state/province data that **** 
 
 {% tabs %}
 {% tab title="Source example" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -164,11 +163,13 @@ The `address` object must contain postal code and state/province data that **** 
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response example" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "error": null,
@@ -245,6 +246,7 @@ The `address` object must contain postal code and state/province data that **** 
     "elementType": "googlepay"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -256,6 +258,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -263,6 +266,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -270,6 +274,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/payment-options" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentOption": {
@@ -279,6 +284,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -288,13 +294,16 @@ The following example shows how to place a Google Pay element on your page. Use 
 
 {% tabs %}
 {% tab title="HTML" %}
+{% code overflow="wrap" %}
 ```markup
 <script src="https://js.digitalriverws.com/v1/DigitalRiver.js"></script>
 <div id="googlepay-element"></div>
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
+{% code overflow="wrap" %}
 ```javascript
 var digitalriver = new DigitalRiver('YOUR_API_KEY');
  
@@ -412,10 +421,4 @@ function getPrUpdateObject() {
     }
 }
 ```
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)
+{% endcode %}

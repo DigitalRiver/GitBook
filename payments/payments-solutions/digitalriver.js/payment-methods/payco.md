@@ -1,14 +1,10 @@
 ---
-description: >-
-  Accept PayCo in Korea, a digital wallet that currently represents 10% market
-  share and is expected to grow. Recurring payments are supported.
+description: Learn how to configure PayCo for DigitalRiver.js with Elements.
 ---
 
-# PayCo
+# Configuring PayCo
 
-## Configuring PayCo for DigitalRiver.js
-
-Create a PayCo payment method for your app or website in three easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a [PayCo](../../../supported-payment-methods/payco.md) payment method for your app or website in four easy steps:
 
 * [Step 1: Build a PayCo Source Request object](payco.md#step-1-build-a-payco-source-request-and-details-object)
 * [Step 2: Create a PayCo source using DigitalRiver.js](payco.md#step-2-create-a-payco-source-using-digitalriver-js)
@@ -30,11 +26,13 @@ Build the PayCo Source Request and Details objects. The PayCo Source Request obj
 
 The PayCo Source Details object requires the following fields.
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "returnUrl": "https://example.com"
 }
 ```
+{% endcode %}
 
 | Field       | Required/Optional | Description                                                                                                                                               |
 | ----------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -48,6 +46,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```javascript
 var data = {
     "type": "payco",
@@ -80,9 +79,11 @@ digitalriver.createSource(data).then(function(result) {
     }
 });
 ```
+{% endcode %}
 
 #### PayCo source example
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -121,6 +122,7 @@ digitalriver.createSource(data).then(function(result) {
     "payco": {}
 }
 ```
+{% endcode %}
 
 ### Step 3: Authorize the PayCo source
 
@@ -130,14 +132,17 @@ When you create a SEPA Direct Debit source, the customer is required to authoriz
 
 To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
 
+{% code overflow="wrap" %}
 ```javascript
 window.location.href = sourceResponse.redirect.redirectUrl;
 ```
+{% endcode %}
 
 The payment provider will present the customer with the transaction details where they can authorize, or cancel the transaction. A successful authorization redirects the customer to the Payco Return URL parameter you specified when you created the source.
 
 Once authorized, the source state will change to `chargeable`.
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -176,6 +181,7 @@ Once authorized, the source state will change to `chargeable`.
     "payco": {}
 }
 ```
+{% endcode %}
 
 ### Step 4: Use the authorized source
 
@@ -185,6 +191,7 @@ Once authorized, you can use the source by either [attaching it to a cart](../..
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -192,6 +199,7 @@ Once authorized, you can use the source by either [attaching it to a cart](../..
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -199,6 +207,7 @@ Once authorized, you can use the source by either [attaching it to a cart](../..
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/payment-options" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentOption": {
@@ -208,12 +217,6 @@ Once authorized, you can use the source by either [attaching it to a cart](../..
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

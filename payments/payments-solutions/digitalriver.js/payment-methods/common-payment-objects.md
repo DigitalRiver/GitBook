@@ -8,6 +8,7 @@ description: Learn about payment objects that are common to all payment methods.
 
 {% tabs %}
 {% tab title="Owner object example" %}
+{% code overflow="wrap" %}
 ```javascript
 {
 	"lastName": "Doe",
@@ -25,6 +26,7 @@ description: Learn about payment objects that are common to all payment methods.
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -41,6 +43,7 @@ description: Learn about payment objects that are common to all payment methods.
 
 {% tabs %}
 {% tab title="Address object example" %}
+{% code overflow="wrap" %}
 ```javascript
 {
 	"line1": "1-16-24 Minami-gyotoku",
@@ -51,6 +54,7 @@ description: Learn about payment objects that are common to all payment methods.
 	"country": "JP"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -67,6 +71,7 @@ description: Learn about payment objects that are common to all payment methods.
 
 {% tabs %}
 {% tab title="Additional Address Information object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "neighborhood": "Centro",
@@ -75,6 +80,7 @@ description: Learn about payment objects that are common to all payment methods.
 		"division": "Development"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

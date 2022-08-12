@@ -1,19 +1,10 @@
 ---
-description: >-
-  Apple Pay provides a fast and secure shopping experience where the consumer
-  can quickly and seamlessly checkout with their Apple Touch authentication
-  without login details or credentials.
+description: Learn how to configure Apple Pay for DigitalRiver.js with Elements.
 ---
 
-# Apple Pay
+# Configuring Apple Pay
 
-Digital River will support Apple Pay as a payment method on the payment service and DigitalRiver.js. Apple Pay is currently available to consumers in 21 countries and currently is supported only on IOS devices (iPhones, Macs, and so on).‌
-
-You can find an example of integration [here](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/applepay.html) (only viewable on Apple devices).
-
-## Configuring Apple Pay for DigitalRiver.js
-
-Create an Apple Pay payment method for your app or website in three easy steps:‌
+If you're using[ DigitalRiver.js with Elements](../), you can create an[ Apple Pay](../../../supported-payment-methods/apple-pay.md) payment method for your app or website in three easy steps:
 
 * [Step 1: Submit domain for Apple validation](apple-pay.md#step-1-submit-domain-for-apple-validation)
 * [Step 2: Create an Apple Pay source using DigitalRiver.js](apple-pay.md#step-2-create-an-apple-pay-source-using-digital-river-js)
@@ -45,6 +36,7 @@ To offer Apple Pay on your website, you need to validate your domain with Apple 
 
 After setting up your library per the [DigitalRiver.js reference guide](../../../../general-resources/reference/), create an Apple Pay element with any customizations you would like to apply.
 
+{% code overflow="wrap" %}
 ```javascript
 var paymentRequestData = digitalriver.paymentRequest({
         country: "US",
@@ -66,6 +58,7 @@ var paymentRequestData = digitalriver.paymentRequest({
    
 var applepay = digitalriver.createElement('applepay', paymentRequestData);
 ```
+{% endcode %}
 
 #### Configure the Apple Pay element to handle events
 
@@ -86,6 +79,7 @@ These events include:
 **Note**: To use Apple Pay, you must listen to, at minimum, the Shipping Address Changed and Source events.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('source', function(event) {
     var source = result.source;
@@ -108,6 +102,7 @@ applepay.on('shippingaddresschange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 
 The Shipping Address Changed and Shipping Method Changed events require a response of updated details to present to the Shopper. This system expects the response to be in the format of a [Payment Request Details Update object](../../../../general-resources/reference/digital-river-payment-objects.md#payment-request-details-update-error-object).‌
 
@@ -115,12 +110,14 @@ The Shipping Address Changed and Shipping Method Changed events require a respon
 
 The following example shows how to place the elements on the page. For more information on placing elements on a page, see the [Apple Pay example](apple-pay.md#apple-pay-example).
 
+{% code overflow="wrap" %}
 ```javascript
 if (applepay.canMakePayment()) {
     applepay.mount("applepay-element");
     document.getElementById('applepay-element').style.display = 'block';
 }
 ```
+{% endcode %}
 
 #### Apple Pay source and response examples
 
@@ -132,6 +129,7 @@ The `address` object must contain postal code and state/province data that **** 
 
 {% tabs %}
 {% tab title="Source example" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -163,11 +161,13 @@ The `address` object must contain postal code and state/province data that **** 
     "applePay": {}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response example" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "error": null,
@@ -238,6 +238,7 @@ The `address` object must contain postal code and state/province data that **** 
     "elementType": "applePay"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -247,6 +248,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -254,6 +256,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -263,15 +266,18 @@ The following example shows how to place an Apple Pay element on your page. Use 
 
 {% tabs %}
 {% tab title="HTML" %}
+{% code overflow="wrap" %}
 ```markup
 <script src="https://js.digitalriverws.com/v1/DigitalRiver.js"></script>
 <div id="applepay-element"></div>
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Apple Pay example" %}
+{% code overflow="wrap" %}
 ```javascript
 var digitalriver = new DigitalRiver('YOUR_API_KEY');
  
@@ -387,13 +393,6 @@ function getPrUpdateObject() {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-## Supported markets <a href="#supported-geographies" id="supported-geographies"></a>
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)
-

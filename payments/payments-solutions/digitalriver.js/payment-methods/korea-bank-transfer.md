@@ -1,14 +1,10 @@
 ---
-description: >-
-  Korea Bank is a payment method that represents 20% of the local market share.
-  Recurring payments are supported.
+description: Learn how to configure Korea Bank Transfer for DigitalRiver.js with Elements.
 ---
 
-# Online Banking (Korea Bank Transfer)
+# Configuring Online Banking (Korea Bank Transfer)
 
-## Configuring Korea Bank transfer for DigitalRiver.js
-
-Create a Bank Transfer payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a [Bank Transfer](../../../supported-payment-methods/online-banking-korea-bank-transfer.md) payment method for your app or website in four easy steps:
 
 * [Step 1: Build the Bank Transfer source request object](korea-bank-transfer.md#step-1-build-the-bank-transfer-objects)
 * [Step 2: Create the Bank Transfer source using DigitalRiver.js](korea-bank-transfer.md#step-2-create-the-bank-transfer-source-using-digitalriver-js)
@@ -34,11 +30,13 @@ The Bank Transfer Source Request object requires the following fields.
 
 The Bank Transfer Source Details object requires the following fields.
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "returnUrl": "https://example.com"
 }
 ```
+{% endcode %}
 
 | Field       | Required/Optional | Description                                                                                                                                                       |
 | ----------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -52,6 +50,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```javascript
 var data = {
     "type": "bankTransfer",
@@ -84,9 +83,11 @@ digitalriver.createSource(data).then(function(result) {
     }
 });
 ```
+{% endcode %}
 
 #### Bank Transfer source example
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -125,6 +126,7 @@ digitalriver.createSource(data).then(function(result) {
     "bankTransfer": {}
 }
 ```
+{% endcode %}
 
 ### Step 3: Authorize a Bank Transfer source
 
@@ -134,14 +136,17 @@ When you create a Bank Transfer source, the customer is required to authorize th
 
 To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
 
+{% code overflow="wrap" %}
 ```javascript
 window.location.href = sourceResponse.redirect.redirectUrl;
 ```
+{% endcode %}
 
 The payment provider will present the customer with the transaction details where they can authorize, or cancel the transaction. A successful authorization redirects the customer to the Bank Transfer Return URL parameter you specified when you created the source.
 
 Once authorized, the source state will change to `chargeable`.
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -179,6 +184,7 @@ Once authorized, the source state will change to `chargeable`.
     "bankTransfer": {}
 }
 ```
+{% endcode %}
 
 ### Step 4: Use the Authorized source
 
@@ -186,6 +192,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -193,12 +200,6 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

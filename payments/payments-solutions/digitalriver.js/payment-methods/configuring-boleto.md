@@ -1,32 +1,14 @@
 ---
-description: >-
-  Boleto (meaning 'ticket') Bancário is an official Brazilian payment method,
-  which is regulated by the Central Bank of Brazil.
+description: Learn how to configure Boleto for DigitalRiver.js with Elements.
 ---
 
-# Boleto
+# Configuring Boleto
 
-Digital River has partnered with PPRO, a payment aggregator, to provide Boleto Bancário. In Brazil, two-thirds of the 200 million population do not have a credit card, Boleto Bancário is highly popular, generating over 50 million transactions a month. Local and regional merchants often offer discounts for Boleto Bancário payments as there is no chargeback risk, and payments are made upfront. After the shopper selects products or services, they go to the client’s Checkout page to select Boleto Bancário. The client site generates the billing details as a print-optimized voucher. The shopper can then pay at a variety of locations with cash or via bank transfer. Once the payment is received, the client ships the purchase order. Boleto Bancário also facilitates online payments via bank transfer or payment card.&#x20;
+If you're using[ DigitalRiver.js with Elements](../), you can create a [Boleto](../../../supported-payment-methods/boleto.md) payment method for your app or website in three easy steps:
 
-Boleto Bancário provides the following benefits:&#x20;
-
-* Accounting for around 25% of all online payment transactions, offering Boleto Bancário is a must for doing business in Brazil.&#x20;
-* There are literally thousands of ways a shopper can complete their Boleto payment in Brazil: ATMs, bank branches, and online banking, post office, lottery agent, convenience store, or supermarket.&#x20;
-* When it comes to online purchases, Boleto Bancário is especially popular for high-ticket items because many consumers still do not feel secure providing their payment details online.&#x20;
-
-For [refunds](../../../../returns-and-refunds-1/refunds/managing-a-refund-for-a-delayed-payment-method.md), the shopper who paid for the original transaction will receive the refund amount. The bank account details for the refund must match the shopper's CPF/CNPJ tax ID. The bank account owner must be identical to the bank account owner of the original request.
-
-{% hint style="warning" %}
-Before you can use the Boleto payment method, you must attach a tax ID to the cart.  See [Best practices](boleto.md#best-practices) for instructions.
-{% endhint %}
-
-## Configuring Boleto for DigitalRiver.js
-
-Create a Boleto payment method for your app or website in four easy steps:
-
-* [Step 1: Build a Boleto Source Request and Details object](boleto.md#step-2-build-a-boleto-source-request-and-details-object)
-* [Step 2: Create a Boleto source using DigitalRiver.js](boleto.md#step-3-create-a-boleto-source-using-digitalriver.js)
-* [Step 3: Use the authorized source](boleto.md#step-4-use-the-authorized-source)
+* [Step 1: Build a Boleto Source Request and Details object](configuring-boleto.md#step-2-build-a-boleto-source-request-and-details-object)
+* [Step 2: Create a Boleto source using DigitalRiver.js](configuring-boleto.md#step-3-create-a-boleto-source-using-digitalriver.js)
+* [Step 3: Use the authorized source](configuring-boleto.md#step-4-use-the-authorized-source)
 
 ### Step 1: Build a Boleto Source Request and Details object
 
@@ -43,12 +25,14 @@ Build the Boleto Source Request and Details object.  The Boleto Source Request o
 
 Use the Boleto Source Details object code sample.&#x20;
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "returnUrl": "https://example.com",
     "nationalId": "16235836597"
 }
 ```
+{% endcode %}
 
 The Boleto Source Details object requires the following fields:
 
@@ -65,6 +49,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```javascript
 var data = {
    "type":"boletoBancario",
@@ -98,9 +83,11 @@ digitalriver.createSource(data).then(function(result) {
     }
 });
 ```
+{% endcode %}
 
 #### Boleto source response example
 
+{% code overflow="wrap" %}
 ```javascript
 {
    "clientId":"gc",
@@ -138,6 +125,7 @@ digitalriver.createSource(data).then(function(result) {
    }
 }
 ```
+{% endcode %}
 
 ### Step 3: Use the authorized source
 
@@ -166,13 +154,6 @@ To use Boleto as a payment method:
    `--header 'authorization: bearer ***\`
 3. Optional. Set cart address to the BR address.
 4. [Attach the tax ID to the cart](https://docs.digitalriver.com/commerce-api/cart/managing-tax-identifiers#attaching-a-tax-identifier-to-a-cart). This action inserts the tax ID into the payment session.
-5. [Create a Boleto source with a payment session ID](boleto.md#step-2-create-a-boleto-source-using-digitalriver.js). Note that the tax ID is required when creating the Boleto source. The payment session ID provides the tax ID.
+5. [Create a Boleto source with a payment session ID](configuring-boleto.md#step-2-create-a-boleto-source-using-digitalriver.js). Note that the tax ID is required when creating the Boleto source. The payment session ID provides the tax ID.
 6. [Apply the source to the cart](https://docs.digitalriver.com/commerce-api/cart/attaching-a-payment-method-to-a-cart-or-customer#attaching-a-payment-method-to-an-order-or-cart).
 7. [Submit the cart](https://docs.digitalriver.com/commerce-api/cart/submitting-a-cart).
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

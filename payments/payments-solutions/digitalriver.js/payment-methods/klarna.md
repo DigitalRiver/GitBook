@@ -1,24 +1,10 @@
 ---
-description: >-
-  Klarna allows the consumer to purchase a product and then be billed for it
-  afterward.
+description: Learn how to configure Klarna for DigitalRiver.js with Elements.
 ---
 
-# Klarna
+# Configuring Klarna
 
-Klarna offers the following payment options:
-
-* **Pay In 30 (Invoice)**–Once the order is shipped, you are paid upfront while the customer has 30 days to pay. Available in Austria, Belgium, Denmark, Finland, Germany, Netherlands, Norway, Poland, Sweden, Switzerland, and the United Kingdom.
-* **Installments**–Allows a partial payment at approval and the balance to be collected later at specific times at 0%.
-  * **Pay in 3**: This payment option allows shoppers to pay for their purchases over 3 months in 3 equal parts. Available in France, Ireland, Italy, Portugal, Spain, and the United Kingdom.
-  * **Pay in 4**: This payment option allows shoppers to pay for their purchases over 4 months in 4 equal parts. Available in Canada and the United States.
-* **Financing**–This payment option can allow your shoppers up to 36 months to pay for their purchases with interest, while you are paid upfront. Available in Austria, Finland, Germany, Norway, Sweden, and the United States.
-
-Offering a short-term loan reduces cart abandonment and improves conversions and average order values. There are unique display and entry requirements for each country. Contact your Digital River Representative for more details.
-
-## Configuring Klarna for DigitalRiver.js
-
-Create a Klarna payment method for your app or website in five easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a [Klarna](../../../supported-payment-methods/klarna.md) payment method for your app or website in five easy steps:
 
 * [Step 1: Build a Klarna source request object](klarna.md#step-1-build-a-klarna-source-request-object)
 * [Step 2: Create a Klarna source using DigitalRiver.js](klarna.md#step-2-create-a-klarna-source-using-digitalriver-js)
@@ -47,12 +33,14 @@ Build a Klarna Source Request object. A Klarna Source Request object requires th
 
 The Klarna Source Details object requires the following fields.
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "returnUrl": "https://redirectUrl.com",
     "cancelUrl": "https://cancelurl.com",
 }
 ```
+{% endcode %}
 
 | Field       | Required/Optional | Description                                                                                                                                        |
 | ----------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -67,6 +55,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```javascript
  var data = {
   "type" : "klarnaCredit",
@@ -102,9 +91,11 @@ digitalriver.createSource(data).then(function(result) {
     }
 });
 ```
+{% endcode %}
 
 #### Klarna source example
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -158,6 +149,7 @@ digitalriver.createSource(data).then(function(result) {
     }
 }
 ```
+{% endcode %}
 
 ### Step 3: Authorize the Klarna source
 
@@ -169,9 +161,11 @@ To redirect your customer to Klarna for authorization, use the `redirectUrl` par
 
 {% tabs %}
 {% tab title="HTML" %}
+{% code overflow="wrap" %}
 ```markup
 window.location.href = sourceResponse.redirect.redirectUrl;
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -183,6 +177,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -190,6 +185,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -210,6 +206,7 @@ For standard payments, you must use the Klarna payment type.
 
 #### Klarna Recurring source example
 
+{% code overflow="wrap" %}
 ```javascript
 var data = {
   "type" : "klarnaCreditRecurring",
@@ -245,14 +242,8 @@ digitalriver.createSource(data).then(function(result) {
     }
 });
 ```
+{% endcode %}
 
 {% hint style="warning" %}
 **Additional setup required**: If you are interested in using Klarna, contact your Account Manager. The Account Manager will send setup instructions for Klarna Banners after you sign the client addendum.
 {% endhint %}
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

@@ -1,19 +1,15 @@
 ---
-description: >-
-  Bancontact is a Belgian debit card with no chargeback risk (a unique feature
-  for debit cards).
+description: Learn how to configure Bancontact for DigitalRiver.js with Elements.
 ---
 
-# Bancontact
+# Configuring Bancontact
 
-## Configuring Bancontact for DigitalRiver.js
+If you're using[ DigitalRiver.js with Elements](../), you can create a [Bancontact](../../../supported-payment-methods/bancontact.md) payment method for your app or website in four easy steps:
 
-Create a Bancontact payment method for your app or website in four easy steps:
-
-* [Step 1: Build a Bancontact Source Request object](bancontact.md#step-1-build-a-bancontact-source-request-and-details-object)
-* [Step 2: Create a Bancontact source using DigitalRiver.js](bancontact.md#step-2-create-a-bancontact-source-using-digitalriver.js)
-* [Step 3: Authorize the Bancontact source](bancontact.md#step-3-authorize-the-bancontact-source)
-* [Step 4: Use the authorized source](bancontact.md#step-4-use-the-authorized-source)
+* [Step 1: Build a Bancontact Source Request object](configuring-bancontact.md#step-1-build-a-bancontact-source-request-and-details-object)
+* [Step 2: Create a Bancontact source using DigitalRiver.js](configuring-bancontact.md#step-2-create-a-bancontact-source-using-digitalriver.js)
+* [Step 3: Authorize the Bancontact source](configuring-bancontact.md#step-3-authorize-the-bancontact-source)
+* [Step 4: Use the authorized source](configuring-bancontact.md#step-4-use-the-authorized-source)
 
 ### Step 1: Build a Bancontact Source Request and Details object
 
@@ -23,22 +19,24 @@ Build the Bancontact Source Request and Details objects.&#x20;
 
 The Bancontact Source Request object requires the following fields.
 
-| Field        | Value                                                                                 |
-| ------------ | ------------------------------------------------------------------------------------- |
-| `type`       | `bancontact`                                                                          |
-| `sessionId`  | The payment session identifier.                                                       |
-| `owner`      | An [Owner object](common-payment-objects.md#owner-object).                            |
-| `bancontact` | A [Bancontact Source Details object](bancontact.md#bancontact-source-details-object). |
+| Field        | Value                                                                                             |
+| ------------ | ------------------------------------------------------------------------------------------------- |
+| `type`       | `bancontact`                                                                                      |
+| `sessionId`  | The payment session identifier.                                                                   |
+| `owner`      | An [Owner object](common-payment-objects.md#owner-object).                                        |
+| `bancontact` | A [Bancontact Source Details object](configuring-bancontact.md#bancontact-source-details-object). |
 
 #### Bancontact Source Details object
 
 The Bancontact Source Details object requires the following fields.
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "returnUrl": "https://example.com"
 }
 ```
+{% endcode %}
 
 | Field       | Required/Optional | Description                                                                                                                                                    |
 | ----------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -52,6 +50,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```javascript
 let bancontactSourceData = {
     "sessionId": "9f70082c-48ad-4fe2-a280-8e6ef2601076",
@@ -85,9 +84,11 @@ digitalriver.createSource(bancontactSourceData).then(function(result) {
     }
 });
 ```
+{% endcode %}
 
 #### Bancontact source example
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -125,6 +126,7 @@ digitalriver.createSource(bancontactSourceData).then(function(result) {
     "bancontact": {}
 }
 ```
+{% endcode %}
 
 ### Step 3: Authorize the Bancontact source
 
@@ -142,6 +144,7 @@ The payment provider will present the customer with the transaction details and 
 
 Once authorized, the source state will change to `chargeable`.
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -178,6 +181,7 @@ Once authorized, the source state will change to `chargeable`.
     "bancontact": {}
 }
 ```
+{% endcode %}
 
 ### Step 4: Use the authorized source
 
@@ -185,6 +189,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -192,12 +197,6 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

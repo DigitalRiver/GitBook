@@ -1,16 +1,10 @@
 ---
-description: >-
-  Wire Transfer is an offline payment method where a consumer goes to their bank
-  to send the money.
+description: Learn how to configure Wire Transfer for DigitalRiver.js with Elements.
 ---
 
-# Wire Transfer
+# Configuring Wire Transfer
 
-When using this payment method, a customer must provide their bank with transfer information provided by the merchant to complete the payment. The transfer details consist of the account holder, bank name, city, country description, payment reference, bank account number, additional bank information, and the international bank account number (IBAN).
-
-## Configuring Wire Transfer for DigitalRiver.js
-
-Create a Wire Transfer payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create an [Wire Transfer](../../../supported-payment-methods/wire-transfer.md) payment method for your app or website in four easy steps:
 
 * [Step 1: Build a Wire Transfer Source Request object](wire-transfer.md#step-1-build-a-wire-transfer-source-request-object)
 * [Step 2: Create a Wire Transfer source using DigitalRiver.js](wire-transfer.md#step-2-create-a-wire-transfer-source-using-digitalriver-js)
@@ -36,6 +30,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```javascript
 var data = {
     "type": "wireTransfer",
@@ -68,11 +63,13 @@ digitalriver.createSource(data).then(function(result) {
     }
 });
 ```
+{% endcode %}
 
 #### Wire Transfer Source response example
 
 {% tabs %}
 {% tab title="Source response" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -116,6 +113,7 @@ digitalriver.createSource(data).then(function(result) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -125,6 +123,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -132,6 +131,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -141,6 +141,7 @@ Once the customer submits the order, the source remains in the `pending_funds` s
 
 {% tabs %}
 {% tab title="Source response" %}
+{% code overflow="wrap" %}
 ```javascript
 {
 	"source": {
@@ -201,12 +202,6 @@ Once the customer submits the order, the source remains in the `pending_funds` s
 	},
 	"readyForStorage": false
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

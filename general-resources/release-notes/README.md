@@ -60,12 +60,12 @@ We upgraded Google Pay to offer the up-to-date Google Pay wallet experience. You
 
 ## 2022/3/28
 
-We added support for the [iDEAL ](../../payments/payments-solutions/digitalriver.js/payment-methods/ideal.md)payment method.
+We added support for the [iDEAL ](../../payments/payments-solutions/digitalriver.js/payment-methods/configuring-ideal.md)payment method.
 
 ## 2022/3/16
 
-We added support for the [Bancontact ](../../payments/payments-solutions/digitalriver.js/payment-methods/bancontact.md)payment method.
+We added support for the [Bancontact ](../../payments/payments-solutions/digitalriver.js/payment-methods/configuring-bancontact.md)payment method.
 
 ## 2022/1/26
 
-We added support for the [Boleto ](../../payments/payments-solutions/digitalriver.js/payment-methods/boleto.md)payment method.
+We added support for the [Boleto ](../../payments/payments-solutions/digitalriver.js/payment-methods/configuring-boleto.md)payment method.

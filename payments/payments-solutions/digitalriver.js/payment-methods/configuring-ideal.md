@@ -1,42 +1,38 @@
 ---
-description: >-
-  iDEAL allows consumers to authorize payments from their online or mobile
-  banking apps.
+description: Learn how to configure iDEAL for DigitalRiver.js with Elements.
 ---
 
-# iDEAL
+# Configuring iDEAL
 
-iDEAL is a bank transfer payment method where the clients receive real-time confirmation of the transaction. It is restricted for use by shoppers who have been issued an online bank account that is iDEAL compatible and held at a bank based in the Netherlands. When using this payment method, a customer must provide their bank with transfer information provided by the merchant to complete the payment. The transfer details consist of the account holder, bank name, city, country description, payment reference, bank account number, additional bank information, and the international bank account number (IBAN).
+If you're using[ DigitalRiver.js with Elements](../), you can create an [iDEAL ](../../../supported-payment-methods/ideal.md)payment method for your app or website in four easy steps:
 
-## Configuring iDEAL for DigitalRiver.js
-
-Create an iDEAL payment method for your app or website in four easy steps:
-
-* [Step 1: Build an iDEAL Source Request object](ideal.md#step-1-build-an-ideal-source-request-object)
-* [Step 2: Create an iDEAL source using DigitalRiver.js](ideal.md#step-2-create-an-ideal-source-using-digitalriver.js)
-* [Step 3: Authorize an iDEAL source](ideal.md#step-3-authorize-an-ideal-source)
-* [Step 4: Use the authorized source](ideal.md#step-4-use-the-authorized-source)
+* [Step 1: Build an iDEAL Source Request object](configuring-ideal.md#step-1-build-an-ideal-source-request-object)
+* [Step 2: Create an iDEAL source using DigitalRiver.js](configuring-ideal.md#step-2-create-an-ideal-source-using-digitalriver.js)
+* [Step 3: Authorize an iDEAL source](configuring-ideal.md#step-3-authorize-an-ideal-source)
+* [Step 4: Use the authorized source](configuring-ideal.md#step-4-use-the-authorized-source)
 
 ### Step 1: Build an iDEAL source request object
 
 Build an iDEAL Source Request object. An iDEAL Source Request object requires the following fields:
 
-| Field       | Value                                                                                              |
-| ----------- | -------------------------------------------------------------------------------------------------- |
-| `type`      | `ideal`                                                                                            |
-| `sessionID` | The payment session identifier.                                                                    |
-| `owner`     | An [Owner object](common-payment-objects.md#owner-object).                                         |
-| `ideal`     | An [iDEAL source details object](ideal.md#ideal-source-details-object). (This is currently empty.) |
+| Field       | Value                                                                                                          |
+| ----------- | -------------------------------------------------------------------------------------------------------------- |
+| `type`      | `ideal`                                                                                                        |
+| `sessionID` | The payment session identifier.                                                                                |
+| `owner`     | An [Owner object](common-payment-objects.md#owner-object).                                                     |
+| `ideal`     | An [iDEAL source details object](configuring-ideal.md#ideal-source-details-object). (This is currently empty.) |
 
 #### iDEAL source details object
 
 Create an iDEAL source details object.
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "returnUrl": "https://example.com",
 }
 ```
+{% endcode %}
 
 | Field       | Required/Optional | Description                                                                                                                                                           |
 | ----------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -50,6 +46,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```javascript
 var sourceData = {
     "type": "ideal",
@@ -83,11 +80,13 @@ digitalriver.createSource(sourceData).then(function(result) {
     }
 });
 ```
+{% endcode %}
 
 #### iDEAL source response example
 
 {% tabs %}
 {% tab title="Source response" %}
+{% code overflow="wrap" %}
 ```javascript
 {
    "clientId":"gc",
@@ -126,6 +125,7 @@ digitalriver.createSource(sourceData).then(function(result) {
    "ideal":{}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -137,15 +137,17 @@ When you create an iDEAL source, the customer must authorize the charge through 
 
 To redirect the customer to the payment provider for authorization, use the `redirectUrl` parameter in your [`createSource` response](../../../../general-resources/reference/digitalriver-object.md#createsource-sourcedata).
 
+{% code overflow="wrap" %}
 ```javascript
 window.location.href = sourceResponse.redirect.redirectUrl;
 ```
+{% endcode %}
 
 The payment provider will present the customer with the transaction details where they can authorize or cancel the transaction. A successful authorization redirects the customer to the iDEAL Return URL parameter you specified when you created the source.&#x20;
 
 Once authorized, the source `state` will change to `chargeable`.
 
-{% code title="Source response" %}
+{% code title="Source response" overflow="wrap" %}
 ```javascript
 {
    "clientId":"gc",
@@ -192,6 +194,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -199,12 +202,6 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

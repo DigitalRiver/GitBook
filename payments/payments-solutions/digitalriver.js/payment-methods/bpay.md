@@ -1,18 +1,10 @@
 ---
-description: >-
-  bPay is a wire transfer payment method used in Australia, where users can make
-  payments online and over the phone for online purchases or utility bills.
+description: Learn how to configure bPay for DigitalRiver.js with Elements.
 ---
 
-# bPay
+# Configuring bPay
 
-bPay is Australia's most widely used bill pay service, which allows shoppers to make easy and secure online purchases by transferring funds from their bank account.
-
-Fulfillment occurs after authorization and settlement. The customer provides either the transfer information to their bank or completes a payment using bPay.
-
-## Configuring bPay for DigitalRiver.js
-
-Create a bPay payment method for your app or website in three easy steps:‌
+If you're using[ DigitalRiver.js with Elements](../), you can create a[ bPay](../../../supported-payment-methods/bpay.md) payment method for your app or website in three easy steps:
 
 * [Step 1: Build a bPay Source Request object](bpay.md#step-1-build-a-bpay-source-request-object)
 * [Step 2: Create a bPay source using DigitalRiver.js](bpay.md#step-2-create-a-bpay-source-using-digitalriver-js)
@@ -39,6 +31,7 @@ The `address` object must contain postal code and state/province data that **** 
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 var data = {
     "type": "bPay",
@@ -71,6 +64,7 @@ digitalriver.createSource(data).then(function(result) {
     }
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -80,6 +74,7 @@ The source event will surface a Source plus other details provided by bPay, like
 
 {% tabs %}
 {% tab title="Plain Text" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -123,6 +118,7 @@ The source event will surface a Source plus other details provided by bPay, like
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -132,6 +128,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -139,6 +136,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -147,10 +145,3 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 At this point, you should complete your order, and provide the instructions inside the bPay object to the shopper to wire payment.
 
 When you push the funds, the source transitions to the `chargeable` state. The order will then be ready for fulfillment.
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

@@ -1,16 +1,10 @@
 ---
-description: >-
-  Alipay is a delayed fulfillment payment method, meaning fulfillment occurs
-  after authorization and settlement.
+description: Learn how to configure Alipay for DigitalRiver.js with Elements
 ---
 
-# Alipay
+# Configuring Alipay
 
-Alipay works much like PayPal, where the consumer chooses to make a payment and is directed to the external Alipay site, where they enter (or choose existing) payment information.
-
-## Configuring Alipay for DigitalRiver.js
-
-Create an Alipay payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create an [Alipay](../../../supported-payment-methods/alipay.md) payment method for your app or website in four easy steps:
 
 * [Step 1: Alipay Source Details object](alipay.md#step-1-build-an-alipay-source-request-object)
 * [Step 2: Create the Alipay source using DigitalRiver.js](alipay.md#step-2-create-the-alipay-source-using-digitalriver-js)
@@ -30,11 +24,13 @@ Build an Alipay Source Request object. The Alipay Source Request object requires
 
 #### Alipay source details object
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "returnUrl": "https://example.com"
 }
 ```
+{% endcode %}
 
 | Field     | Required/Optional | Description                                                                                                  |
 | --------- | ----------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -48,6 +44,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```javascript
 let alipaySourceData = {
                 "type": "alipay",
@@ -80,9 +77,11 @@ digitalriver.createSource(alipaySourceData ).then(function(result) {
     }
 });
 ```
+{% endcode %}
 
 #### Alipay source example
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -119,6 +118,7 @@ digitalriver.createSource(alipaySourceData ).then(function(result) {
     "alipay": {}
 }
 ```
+{% endcode %}
 
 ### Step 3: Authorize an Alipay source
 
@@ -140,6 +140,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -147,12 +148,6 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

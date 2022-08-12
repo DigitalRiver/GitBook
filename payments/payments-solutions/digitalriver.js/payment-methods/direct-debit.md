@@ -1,16 +1,12 @@
 ---
-description: >-
-  SEPA Direct Debit allows users to authorize transactions directly from their
-  bank account, which is a popular international payment method.
+description: Learn how to configure SEPA Direct Debit for DigitalRiver.js with Elements.
 ---
 
-# SEPA Direct Debit
+# Configuring SEPA Direct Debit
 
 You can find an example of integration [here](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/directdebit.html).
 
-## Configuring SEPA Direct Debit for DigitalRiver.js
-
-Create a SEPA (Single European Payment Area) Direct Debit payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create an [SEPA Direct Debit](../../../supported-payment-methods/sepa-direct-debit.md) payment method for your app or website in four easy steps:
 
 * [Step 1: Build a SEPA Direct Debit Source Request object](direct-debit.md#step-1-build-a-direct-debit-source-request-and-details-objects)
 * [Step 2: Create a SEPA Direct Debit source using DigitalRiver.js](direct-debit.md#step-2-create-a-direct-debit-source-using-digitalriver-js)
@@ -36,11 +32,13 @@ A SEPA Direct Debit Source Request object requires the following fields.
 
 The SEPA Direct Debit Source Details object requires the following fields.
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "returnUrl": "https://example.com"
 }
 ```
+{% endcode %}
 
 | Field       | Required/Optional | Description                                                                                                                                                           |
 | ----------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -54,6 +52,7 @@ Use the DigitalRiver.js library to create and mount elements to the HTML contain
 The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
+{% code overflow="wrap" %}
 ```javascript
 var data = {
     "type": "directDebit",
@@ -86,9 +85,11 @@ digitalriver.createSource(data).then(function(result) {
     }
 });
 ```
+{% endcode %}
 
 #### SEPA Direct Debit source example
 
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -125,6 +126,7 @@ digitalriver.createSource(data).then(function(result) {
     "directDebit": {}
 }
 ```
+{% endcode %}
 
 ### Step 3: Authorize a SEPA Direct Debit source
 
@@ -136,9 +138,11 @@ To redirect your customer for authorization, use the `redirectUrl` parameter in 
 
 {% tabs %}
 {% tab title="HTML" %}
+{% code overflow="wrap" %}
 ```markup
 window.location.href = sourceResponse.redirect.redirectUrl;
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -152,6 +156,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -159,6 +164,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -166,6 +172,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/payment-options" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentOption": {
@@ -175,12 +182,6 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

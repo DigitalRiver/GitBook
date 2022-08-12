@@ -1,20 +1,10 @@
 ---
-description: >-
-  Konbini is a payment method that requires a user to complete an order by
-  making a payment at a store using a receipt number or a bank.
+description: Learn how to configure Konbini for DigitalRiver.js with Elements.
 ---
 
-# Konbini
+# Configuring Konbini
 
-Konbini is a set of small convenience stores from different brands like Seven Eleven, FamilyMart, Lawson, etc. These stores are very popular in Japan because they are nearly on every corner, so everybody can pay for everything very quickly without the need to have a credit card or other electronic-enabled payment options. Konbini is a delayed fulfillment payment method, meaning fulfillment occurs after authorization and settlement.
-
-{% hint style="warning" %}
-**Additional setup required:** If you are interested in using Konbini, contact your Account Manager. The Account Manager will send instructions to file an application form to obtain a client unique ship ID from a local payment gateway and will assist in completing the form in Japanese.
-{% endhint %}
-
-## Configuring Konbini for DigitalRiver.js
-
-Create a Konbini payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a [Konbini](../../../supported-payment-methods/konbini.md) payment method for your app or website in four easy steps:
 
 * [Step 1: Build a Kobini source request object](konbini.md#step-1-build-a-kobini-source-request-object)
 * [Step 2: Create a Konbini source using DigitalRiver.js](konbini.md#step-2-create-a-konbini-source-using-digitalriver-js)
@@ -36,11 +26,13 @@ Build a Kobini source request object. A Konbini Source Request object requires t
 
 {% tabs %}
 {% tab title="Source Details object" %}
+{% code overflow="wrap" %}
 ```
 {
     "storeId": "010"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -58,6 +50,7 @@ The pattern for creating the Konbini element follows the same pattern as other e
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var konbiniOptions = {
     classes: {
@@ -104,6 +97,7 @@ var konbiniElement = digitalriver.createElement('konbini', konbiniOptions);
 //Place it on the page
 konbiniElement .mount('konbini-selector');
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -115,6 +109,7 @@ The same [events and structures](../../../../general-resources/reference/element
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 konbiniElement.on('blur', function (event) {
     console.log('konbini blur', event);
@@ -138,6 +133,7 @@ konbiniElement.on('change', function (event) {
     }
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -149,6 +145,7 @@ The `address` object must contain postal code and state/province data that **** 
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var data = {
     "type": "konbini",
@@ -181,6 +178,7 @@ digitalriver.createSource(data).then(function(result) {
     }
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -194,11 +192,13 @@ DigitalRiver.js exposes a method that allows you to retrieve the available store
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 digitalriver.retrieveKonbiniStores().then(function(response) {
     //use the returned values to create your own display
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -206,6 +206,7 @@ digitalriver.retrieveKonbiniStores().then(function(response) {
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 [{
     "storeId": "010",
@@ -229,6 +230,7 @@ digitalriver.retrieveKonbiniStores().then(function(response) {
     "storeLogoUrl": "https://ui1.img.digitalrivercontent.net/Storefront/images/Konbini/pmt_dailystore4.gif"
 }]
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -236,6 +238,7 @@ You can use the retrieved stores to build an experience suitable for your needs.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 <select>
     <option value="010">セブン‐イレブン</option>
@@ -244,6 +247,7 @@ You can use the retrieved stores to build an experience suitable for your needs.
     <option value="080">デイリーヤマザキ／ヤマザキデイリーストアー</option>
 </select>
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -259,6 +263,7 @@ Once you reached a point in your flow where the customer has selected a store, y
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var sourceData = {
         "type": "konbini",
@@ -289,11 +294,13 @@ var sourceData = {
             }
         });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Source example" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "clientId": "gc",
@@ -334,6 +341,7 @@ var sourceData = {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -345,6 +353,7 @@ The following example shows how to [attach a payment method to an order or cart]
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -352,6 +361,7 @@ The following example shows how to [attach a payment method to an order or cart]
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -366,11 +376,3 @@ Once the order has been submitted, the source remains in a `pending_funds` state
 | `storeName`           | The name of the store where the customer will submit their payment.                      |
 | `localizedStoreName`  | The localized name of the store where the customer will submit their payment.            |
 | `storeLogoUrl`        | The logo of the store where the customer will submit their payment.                      |
-
-## Supported markets
-
-For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
-
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
-* **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)
-
