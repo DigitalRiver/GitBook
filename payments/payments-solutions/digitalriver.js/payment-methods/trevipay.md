@@ -15,7 +15,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create an [TreviPa
 After you configure TreviPay for DigitalRiver.js, you must [add the organization identifier (`organizationId`) to the payload in the cart](../../../../cart/creating-or-updating-a-cart/adding-required-information-for-specific-payment-methods.md#adding-an-organization-identifier-to-a-cart) to make the TreviPay payment method available to the shopper. The `organizationId` uses the same value as the  `client_reference_id` specified in [TreviPay enrollment URL](trevipay.md#trevipay-enrollment-url).
 {% endhint %}
 
-### Step 1:  Build the TreviPay object
+## Step 1:  Build the TreviPay object
 
 A TreviPay source request object requires the following fields.
 
@@ -25,7 +25,7 @@ A TreviPay source request object requires the following fields.
 | `sessionId` | The payment session identifier.                                                                                              |
 | `msts`      | A [TreviPay source details object](trevipay.md#trevipay-source-details-object) that includes the details of the transaction. |
 
-#### TreviPay source details object
+### TreviPay source details object
 
 The TreviPay source details object requires the following fields.
 
@@ -43,7 +43,7 @@ The TreviPay source details object requires the following fields.
 | `returnUrl` | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing within the TreviPay experience. Note that the `returnUrl` must use `https`. |
 | `cancelUrl` | Required          | If you choose to utilize the full redirect flow, this is where you will redirect your customer to after canceling within the TreviPay experience.                                           |
 
-### Step 2:  Create a TreviPay agreement source using DigitalRiver.js
+## Step 2:  Create a TreviPay agreement source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -78,7 +78,7 @@ digitalriver.createSource(data).then(function(result) {
 {% endtab %}
 {% endtabs %}
 
-#### TreviPay source response example
+### TreviPay source response example
 
 {% tabs %}
 {% tab title="Source response" %}
@@ -126,11 +126,11 @@ digitalriver.createSource(data).then(function(result) {
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Authorize a TreviPay source
+## Step 3: Authorize a TreviPay source
 
 When you create a TreviPay source, the customer is required to authorize the charge at TreviPay. You can accomplish this by redirecting the customer to TreviPay to authorize the charge as part of your experience.
 
-#### Redirecting the customer to TreviPay for authorization <a href="#redirecting-the-customer-to-paypal-for-authorization" id="redirecting-the-customer-to-paypal-for-authorization"></a>
+### Redirecting the customer to TreviPay for authorization <a href="#redirecting-the-customer-to-paypal-for-authorization" id="redirecting-the-customer-to-paypal-for-authorization"></a>
 
 To redirect your customer to TreviPay for authorization, use the `redirectUrl` parameter in your createSource response.
 
@@ -142,7 +142,7 @@ window.location.href = sourceResponse.redirect.redirectUrl;
 
 At TreviPay, the customer can authorize or cancel the transaction when presented with the transaction details. If the authorization is successful, the customer will be redirected to the TreviPay Return URL parameter you specified when you created the source. If the customer cancels, they will be returned to the TreviPay Cancel URL parameter you specified.​
 
-### Step 4: Use the authorized source
+## Step 4: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 

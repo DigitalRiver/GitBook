@@ -12,7 +12,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a [Klarna](
 * [Step 4: Use the Authorized source](klarna.md#step-4-use-the-authorized-source)
 * [Step 5: Support recurring payments](klarna.md#step-5-support-recurring-payments)
 
-### Step 1: Build a Klarna Source Request object
+## Step 1: Build a Klarna Source Request object
 
 {% hint style="warning" %}
 **Important**: The Klarna payment type does not support recurring payments. For recurring payments, you must use the `klarnaCreditRecurring` payment type.
@@ -20,7 +20,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a [Klarna](
 
 Build a Klarna Source Request object. A Klarna Source Request object requires the following fields.
 
-#### Klarna Source Request object
+### Klarna Source Request object
 
 | Field          | Value                                                                                                                   |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ Build a Klarna Source Request object. A Klarna Source Request object requires th
 | `owner`        | An [Owner object](common-payment-objects.md#owner-object).                                                              |
 | `klarnaCredit` |  A [Klarna Source Details object](klarna.md#klarna-source-details-object) that includes the details of the transaction. |
 
-#### Klarna Source Details object
+### Klarna Source Details object
 
 The Klarna Source Details object requires the following fields.
 
@@ -47,7 +47,7 @@ The Klarna Source Details object requires the following fields.
 | `returnUrl` | Required          | If you choose to utilize the full redirect flow, this is where your Customer will be redirected to after authorizing within the Klarna experience. |
 | `cancelUrl` | Required          | If you choose to utilize the full redirect flow, this is where your Customer will be redirected to after cancelling within the Klarna experience.  |
 
-### Step 2: Create a Klarna source using DigitalRiver.js
+## Step 2: Create a Klarna source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -93,7 +93,7 @@ digitalriver.createSource(data).then(function(result) {
 ```
 {% endcode %}
 
-#### Klarna source example
+### Klarna source example
 
 {% code overflow="wrap" %}
 ```javascript
@@ -151,11 +151,11 @@ digitalriver.createSource(data).then(function(result) {
 ```
 {% endcode %}
 
-### Step 3: Authorize the Klarna source
+## Step 3: Authorize the Klarna source
 
 When you create a Klarna source, the customer is required to authorize the charge through Klarna. You can accomplish this by redirecting the customer to Klarna, where they will be presented with different payment options.
 
-#### Redirecting the Customer to Klarna for authorization
+### Redirecting the Customer to Klarna for authorization
 
 To redirect your customer to Klarna for authorization, use the `redirectUrl` parameter in your `createSource` response.
 
@@ -171,7 +171,7 @@ window.location.href = sourceResponse.redirect.redirectUrl;
 
 At Klarna, the customer will be presented with the transaction details where they can authorize or cancel the transaction. If the authorization is successful, the customer will be redirected to the `returnUrl` parameter you specified when creating the source. If the customer cancels, they will be returned to the `cancelURL` parameter you specified when creating the source.
 
-### Step 4: Use the Authorized source
+## Step 4: Use the Authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
@@ -189,7 +189,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Support recurring payments
+## Step 5: Support recurring payments
 
 {% hint style="info" %}
 **Note**: To support recurring payments, use a payment type of `klarnaCreditRecurring` in the [createSource request](klarna.md#klarna-source-request-object). Only use the Klarna Recurring payment type for recurring payments. Klarna Recurring uses a different type of agreement with the lender, Klarna, to facilitate the recurring payments.
@@ -204,7 +204,7 @@ For standard payments, you must use the Klarna payment type.
 | `owner`                 | An [Owner object](common-payment-objects.md#owner-object).                                                             |
 | `klarnaCreditRecurring` | A [Klarna Source Details object](klarna.md#klarna-source-details-object) that includes the details of the transaction. |
 
-#### Klarna Recurring source example
+### Klarna Recurring source example
 
 {% code overflow="wrap" %}
 ```javascript

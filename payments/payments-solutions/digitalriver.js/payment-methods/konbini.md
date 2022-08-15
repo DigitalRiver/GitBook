@@ -11,7 +11,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a [Konbini]
 * [Step 3: Use the Konbini source](konbini.md#step-3-use-the-konbini-source)
 * [Step 4: After submitting the order](konbini.md#step-4-after-submitting-the-order)
 
-### Step 1: Build a Kobini source request object
+## Step 1: Build a Kobini source request object
 
 Build a Kobini source request object. A Konbini Source Request object requires the following fields.
 
@@ -22,7 +22,7 @@ Build a Kobini source request object. A Konbini Source Request object requires t
 | `owner`     | <p>An <a href="common-payment-objects.md#owner-object">Owner object</a>. When the <code>storeId</code> is<code>040</code> (Lawson), use double-byte Kanji without <a href="https://developer.mozilla.org/en-US/docs/Glossary/Whitespace">whitespace </a>for the <code>owner.firstName</code> and <code>owner.lastName</code> to ensure successful payment source creation. You also need to ensure that the <code>lastName</code> precedes the <code>firstName</code>.<br><strong>Example</strong>: </p><p><code>{</code> <br>  <code>"lastName": "山田",</code> <br>  <code>"firstName": "太郎", "email":</code>  <br><code>}</code> <br>If you use a single-byte string, the payment source creation will fail.<br>The <code>address</code> object must contain <a href="broken-reference">postal code</a> and <a href="broken-reference">state/province</a> data that <a href="broken-reference">adheres to a standardized format</a>.</p> |
 | `konbini`   | A [Konbini Source Details object](konbini.md#konbini-source-details-object).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-#### Konbini Source Details object
+### Konbini Source Details object
 
 {% tabs %}
 {% tab title="Source Details object" %}
@@ -40,11 +40,11 @@ Build a Kobini source request object. A Konbini Source Request object requires t
 | --------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `storeId` | Required          | The identifier of the store where the Customer chose to pay. **If you use the DigitalRiver.js Konbini Element, Digital River automatically populates the value for you. If you construct the request yourself, this is a required field.** |
 
-### Step 2: Create a Konbini source using DigitalRiver.js
+## Step 2: Create a Konbini source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container. If you are using the DigitalRiver.js element ([option 1](konbini.md#option-1-create-a-konbini-element-using-digitalriver-js-functionality)), the `storeId` value is automatically populated based on the customer's selected store. If you are not using the DigitalRiver.js element ([option 2](konbini.md#option-2-using-digitalriver-js-to-create-your-own-konbini-display)), you must construct the request to include the `storeId` parameter.
 
-#### Option 1: Create a Konbini element using DigitalRiver.js functionality
+### Option 1: Create a Konbini element using DigitalRiver.js functionality
 
 The pattern for creating the Konbini element follows the same pattern as other elements and exposes the same c[ustomization and events](../../../../general-resources/reference/elements/). You can customize the look and feel through [options ](../../../../general-resources/reference/elements/#custom-classes)and then place it on the page.
 
@@ -182,11 +182,11 @@ digitalriver.createSource(data).then(function(result) {
 {% endtab %}
 {% endtabs %}
 
-#### Option 2. Using DigitalRiver.js to create your own Konbini display
+### Option 2. Using DigitalRiver.js to create your own Konbini display
 
 If you decide that you do not want to use the out of the box functionality provided with the Konbini element, you may also use the `digitalriver.retrieveKonbiniStores()` method which will allow you to build your own experience.
 
-#### Retrieving available stores
+### Retrieving available stores
 
 DigitalRiver.js exposes a method that allows you to retrieve the available stores where Konbini is accepted. If stores are available, the response returns an array of objects. If stores are not available, the response returns an empty array.
 
@@ -202,7 +202,7 @@ digitalriver.retrieveKonbiniStores().then(function(response) {
 {% endtab %}
 {% endtabs %}
 
-#### Retrieved stores
+### Retrieved stores
 
 {% tabs %}
 {% tab title="Example" %}
@@ -345,7 +345,7 @@ var sourceData = {
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Use the Konbini source
+## Step 3: Use the Konbini source
 
 Once created, the Konbini source will be in a `pending_funds` state.  Attach the source to a cart.  Once attached, you may submit your order.&#x20;
 
@@ -365,7 +365,7 @@ The following example shows how to [attach a payment method to an order or cart]
 {% endtab %}
 {% endtabs %}
 
-### Step 4: After submitting the order
+## Step 4: After submitting the order
 
 Once the order has been submitted, the source remains in a `pending_funds` state. At this point, direct your customer to go to the store they chose and pay the invoice. These details are reflected in the `konbini` block of the payment source.
 

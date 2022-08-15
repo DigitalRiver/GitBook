@@ -10,7 +10,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a Credit Ca
 * [Step 2: Create a Credit Card source using DigitalRiver.js](credit-cards.md#step-2-create-a-credit-card-source-using-digitalriver-js)
 * [Step 3: Use the authorized source](credit-cards.md#step-3-use-the-authorized-source)
 
-### Step 1: Build a Credit Card source request object
+## Step 1: Build a Credit Card source request object
 
 Build a Credit Card Source Request object. The Credit Card Source Request object requires the following fields.
 
@@ -20,9 +20,9 @@ Build a Credit Card Source Request object. The Credit Card Source Request object
 | sessionId | The payment session identifier.                             |
 | owner     |  An [Owner object](common-payment-objects.md#owner-object). |
 
-### Step 2: Create a Credit Card source using DigitalRiver.js
+## Step 2: Create a Credit Card source using DigitalRiver.js
 
-#### Create the elements
+### Create the elements
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -50,7 +50,7 @@ cardCVV.mount('card-cvv');
 ```
 {% endcode %}
 
-#### Create the source
+### Create the source
 
 To create a credit card payment source, you must reference the created element and the supplemental data in your [createSource ](../../../../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
 
@@ -91,7 +91,7 @@ var payload = {
 ```
 {% endcode %}
 
-#### Credit Card source example
+### Credit Card source example
 
 {% code overflow="wrap" %}
 ```javascript
@@ -134,11 +134,11 @@ var payload = {
 ```
 {% endcode %}
 
-### Step 3: Use the authorized source
+## Step 3: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart) or [attaching it to a shopper](../../../sources/#attaching-a-payment-method-to-a-customer).
 
-#### Option 1: Attach the source to a cart
+### Option 1: Attach the source to a cart
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
@@ -154,7 +154,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endtab %}
 {% endtabs %}
 
-#### Option 2: Attach the source to a shopper
+### Option 2: Attach the source to a shopper
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/payment-options" %}

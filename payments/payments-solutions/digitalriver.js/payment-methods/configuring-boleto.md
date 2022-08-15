@@ -10,7 +10,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a [Boleto](
 * [Step 2: Create a Boleto source using DigitalRiver.js](configuring-boleto.md#step-3-create-a-boleto-source-using-digitalriver.js)
 * [Step 3: Use the authorized source](configuring-boleto.md#step-4-use-the-authorized-source)
 
-### Step 1: Build a Boleto Source Request and Details object
+## Step 1: Build a Boleto Source Request and Details object
 
 Build the Boleto Source Request and Details object.  The Boleto Source Request object requires the following fields:
 
@@ -21,7 +21,7 @@ Build the Boleto Source Request and Details object.  The Boleto Source Request o
 | `owner`          | An [Owner object](common-payment-objects.md#owner-object). |
 | `boletoBancario` | A Boleto Source Details object.                            |
 
-#### Boleto Source Details object
+### Boleto Source Details object
 
 Use the Boleto Source Details object code sample.&#x20;
 
@@ -41,7 +41,7 @@ The Boleto Source Details object requires the following fields:
 | `returnUrl`  | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing or canceling within the Boleto experience.                                                                                                                                                                                                                     |
 | `nationalId` | Required          | If the shopper is an individual buyer, `nationalId` represents their CPF tax ID. If the shopper is a business shopper, `nationalId` represents their CNPJ tax ID. Use the [DigitalRiver.js Tax Identifier element](https://docs.digitalriver.com/digital-river-api/payment-integrations-1/digitalriver.js/reference/tax-identifier-element) to collect these from the shopper. |
 
-### Step 2: Create a Boleto source using DigitalRiver.js
+## Step 2: Create a Boleto source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container. ****&#x20;
 
@@ -85,7 +85,7 @@ digitalriver.createSource(data).then(function(result) {
 ```
 {% endcode %}
 
-#### Boleto source response example
+### Boleto source response example
 
 {% code overflow="wrap" %}
 ```javascript
@@ -127,7 +127,7 @@ digitalriver.createSource(data).then(function(result) {
 ```
 {% endcode %}
 
-### Step 3: Use the authorized source
+## Step 3: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 

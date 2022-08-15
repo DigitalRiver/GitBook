@@ -11,11 +11,11 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a [Bank Tra
 * [Step 3: Authorize a Bank Transfer source](korea-bank-transfer.md#step-3-authorize-a-bank-transfer-source)
 * [Step 4: Use the Authorized source](korea-bank-transfer.md#step-4-use-the-authorized-source)
 
-### Step 1: Build the Bank Transfer objects
+## Step 1: Build the Bank Transfer objects
 
 Build a Bank Transfer Source Request and Details objects.&#x20;
 
-#### Bank Transfer source request object
+### Bank Transfer source request object
 
 The Bank Transfer Source Request object requires the following fields.
 
@@ -26,7 +26,7 @@ The Bank Transfer Source Request object requires the following fields.
 | `owner`        |  An [Owner object](common-payment-objects.md#owner-object).                                           |
 | `bankTransfer` |  A [Bank Transfer Source Details object](korea-bank-transfer.md#bank-transfer-source-request-object). |
 
-#### Bank Transfer source details object
+### Bank Transfer source details object
 
 The Bank Transfer Source Details object requires the following fields.
 
@@ -42,7 +42,7 @@ The Bank Transfer Source Details object requires the following fields.
 | ----------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `returnUrl` | Required          | If you choose to use the full redirect flow, this is where you will redirect your Customer to after authorizing or canceling within the Bank Transfer experience. |
 
-### Step 2: Create the Bank Transfer source using DigitalRiver.js
+## Step 2: Create the Bank Transfer source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -85,7 +85,7 @@ digitalriver.createSource(data).then(function(result) {
 ```
 {% endcode %}
 
-#### Bank Transfer source example
+### Bank Transfer source example
 
 {% code overflow="wrap" %}
 ```javascript
@@ -128,11 +128,11 @@ digitalriver.createSource(data).then(function(result) {
 ```
 {% endcode %}
 
-### Step 3: Authorize a Bank Transfer source
+## Step 3: Authorize a Bank Transfer source
 
 When you create a Bank Transfer source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
 
-#### Redirecting the customer for Bank Transfer authorization
+### Redirecting the customer for Bank Transfer authorization
 
 To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
 
@@ -186,7 +186,7 @@ Once authorized, the source state will change to `chargeable`.
 ```
 {% endcode %}
 
-### Step 4: Use the Authorized source
+## Step 4: Use the Authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 

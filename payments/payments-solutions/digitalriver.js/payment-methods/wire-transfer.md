@@ -11,7 +11,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create an [Wire Tr
 * [Step 3: Use the authorized source](wire-transfer.md#step-3-use-the-authorized-source)
 * [Step 4: Direct your customer to go to their banking institution](wire-transfer.md#step-4-direct-your-customer-to-go-to-their-banking-institution)
 
-### Step 1: Build a Wire Transfer source request object
+## Step 1: Build a Wire Transfer source request object
 
 Build a Wire Transfer Source Request object. A Wire Transfer Source Request object requires the following fields.
 
@@ -22,7 +22,7 @@ Build a Wire Transfer Source Request object. A Wire Transfer Source Request obje
 | `owner`        | An [Owner object](common-payment-objects.md#owner-object). |
 | `wireTransfer` | A Wire Transfer object. (This is currently empty)          |
 
-### Step 2: Create a Wire Transfer source using DigitalRiver.js
+## Step 2: Create a Wire Transfer source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -65,7 +65,7 @@ digitalriver.createSource(data).then(function(result) {
 ```
 {% endcode %}
 
-#### Wire Transfer Source response example
+### Wire Transfer Source response example
 
 {% tabs %}
 {% tab title="Source response" %}
@@ -117,7 +117,7 @@ digitalriver.createSource(data).then(function(result) {
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Use the authorized source
+## Step 3: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
@@ -135,7 +135,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Direct your customer to go to their banking institution
+## Step 4: Direct your customer to go to their banking institution
 
 Once the customer submits the order, the source remains in the `pending_funds` state. Direct your customer to go to their banking institution to wire the money to the account details listed in the `wireTransfer` block of your source.&#x20;
 

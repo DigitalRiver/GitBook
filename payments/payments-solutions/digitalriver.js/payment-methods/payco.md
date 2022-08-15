@@ -11,7 +11,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a [PayCo](.
 * [Step 3: Authorize the PayCo source](payco.md#step-3-authorize-the-payco-source)
 * [Step 4: Use the authorized source](payco.md#step-4-use-the-authorized-source)
 
-### Step 1: Build a PayCo Source Request and Details object
+## Step 1: Build a PayCo Source Request and Details object
 
 Build the PayCo Source Request and Details objects. The PayCo Source Request object requires the following fields.
 
@@ -22,7 +22,7 @@ Build the PayCo Source Request and Details objects. The PayCo Source Request obj
 | `owner`     | An [Owner object](common-payment-objects.md#owner-object).             |
 | `payco`     | A [PayCo Source Details object](payco.md#payco-source-details-object). |
 
-#### PayCo Source Details object
+### PayCo Source Details object
 
 The PayCo Source Details object requires the following fields.
 
@@ -38,7 +38,7 @@ The PayCo Source Details object requires the following fields.
 | ----------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `returnUrl` | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing or canceling within the PayCo experience. |
 
-### Step 2: Create a PayCo source using DigitalRiver.js
+## Step 2: Create a PayCo source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.\\
 
@@ -81,7 +81,7 @@ digitalriver.createSource(data).then(function(result) {
 ```
 {% endcode %}
 
-#### PayCo source example
+### PayCo source example
 
 {% code overflow="wrap" %}
 ```javascript
@@ -124,11 +124,11 @@ digitalriver.createSource(data).then(function(result) {
 ```
 {% endcode %}
 
-### Step 3: Authorize the PayCo source
+## Step 3: Authorize the PayCo source
 
 When you create a SEPA Direct Debit source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
 
-#### Redirecting the customer for PayCo authorization
+### Redirecting the customer for PayCo authorization
 
 To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
 
@@ -183,11 +183,11 @@ Once authorized, the source state will change to `chargeable`.
 ```
 {% endcode %}
 
-### Step 4: Use the authorized source
+## Step 4: Use the authorized source
 
 Once authorized, you can use the source by either [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart) or [attaching it to a shopper](../../../sources/#attaching-a-payment-method-to-a-customer) for multiple uses.
 
-#### Option 1: Attach the source to a cart
+### Option 1: Attach the source to a cart
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
@@ -203,7 +203,7 @@ Once authorized, you can use the source by either [attaching it to a cart](../..
 {% endtab %}
 {% endtabs %}
 
-#### Option 1: Attach the source to a shopper
+### Option 1: Attach the source to a shopper
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/payment-options" %}

@@ -11,11 +11,11 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a [Banconta
 * [Step 3: Authorize the Bancontact source](configuring-bancontact.md#step-3-authorize-the-bancontact-source)
 * [Step 4: Use the authorized source](configuring-bancontact.md#step-4-use-the-authorized-source)
 
-### Step 1: Build a Bancontact Source Request and Details object
+## Step 1: Build a Bancontact Source Request and Details object
 
 Build the Bancontact Source Request and Details objects.&#x20;
 
-#### Bancontact Source Request object
+### Bancontact Source Request object
 
 The Bancontact Source Request object requires the following fields.
 
@@ -26,7 +26,7 @@ The Bancontact Source Request object requires the following fields.
 | `owner`      | An [Owner object](common-payment-objects.md#owner-object).                                        |
 | `bancontact` | A [Bancontact Source Details object](configuring-bancontact.md#bancontact-source-details-object). |
 
-#### Bancontact Source Details object
+### Bancontact Source Details object
 
 The Bancontact Source Details object requires the following fields.
 
@@ -42,7 +42,7 @@ The Bancontact Source Details object requires the following fields.
 | ----------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `returnUrl` | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing or canceling within the Bancontact experience. |
 
-### Step 2: Create a Bancontact source using DigitalRiver.js
+## Step 2: Create a Bancontact source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -86,7 +86,7 @@ digitalriver.createSource(bancontactSourceData).then(function(result) {
 ```
 {% endcode %}
 
-#### Bancontact source example
+### Bancontact source example
 
 {% code overflow="wrap" %}
 ```javascript
@@ -128,11 +128,11 @@ digitalriver.createSource(bancontactSourceData).then(function(result) {
 ```
 {% endcode %}
 
-### Step 3: Authorize the Bancontact source
+#### Step 3: Authorize the Bancontact source
 
 When you create a Bancontact source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
 
-#### Redirecting the customer for Bancontact authorization
+### Redirecting the customer for Bancontact authorization
 
 To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
 
@@ -183,7 +183,7 @@ Once authorized, the source state will change to `chargeable`.
 ```
 {% endcode %}
 
-### Step 4: Use the authorized source
+## Step 4: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 

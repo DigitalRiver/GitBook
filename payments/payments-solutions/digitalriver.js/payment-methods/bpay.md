@@ -10,7 +10,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a[ bPay](..
 * [Step 2: Create a bPay source using DigitalRiver.js](bpay.md#step-2-create-a-bpay-source-using-digitalriver-js)
 * [Step 3: Use the Authorized source](bpay.md#step-3-use-the-authorized-source)
 
-### Step 1: Build a bPay source request object
+## Step 1: Build a bPay source request object
 
 Build a bPay Source Request object. A bPay Source Request object requires the following fields.
 
@@ -21,7 +21,7 @@ Build a bPay Source Request object. A bPay Source Request object requires the fo
 | owner     | An [Owner object](common-payment-objects.md#owner-object). |
 | bPay      | A bPay Object. (This is currently empty)                   |
 
-### Step 2: Create a bPay source using DigitalRiver.js
+## Step 2: Create a bPay source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -68,7 +68,7 @@ digitalriver.createSource(data).then(function(result) {
 {% endtab %}
 {% endtabs %}
 
-#### bPay source example
+### bPay source example
 
 The source event will surface a Source plus other details provided by bPay, like the billing address and the information required to send money to bPay.
 
@@ -122,7 +122,7 @@ The source event will surface a Source plus other details provided by bPay, like
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Use the authorized source
+## Step 3: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
@@ -140,7 +140,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endtab %}
 {% endtabs %}
 
-#### Pushing funds
+## Pushing funds
 
 At this point, you should complete your order, and provide the instructions inside the bPay object to the shopper to wire payment.
 

@@ -13,11 +13,11 @@ If you're using[ DigitalRiver.js with Elements](../), you can create an [SEPA Di
 * [Step 3: Authorize a SEPA Direct Debit source](direct-debit.md#step-3-authorize-a-direct-debit-source)
 * [Step 4: Use the authorized source](direct-debit.md#step-4-use-the-authorized-source)
 
-### Step 1: Build a SEPA Direct Debit source request and details objects
+## Step 1: Build a SEPA Direct Debit source request and details objects
 
 Build the SEPA Direct Debit Source Request and Details objects.&#x20;
 
-#### SEPA Direct Debit source request object
+### SEPA Direct Debit source request object
 
 A SEPA Direct Debit Source Request object requires the following fields.
 
@@ -28,7 +28,7 @@ A SEPA Direct Debit Source Request object requires the following fields.
 | `owner`       | An [Owner object](common-payment-objects.md#owner-object).                                                                                         |
 | `directDebit` | A [SEPA Direct Debit Source Details object](direct-debit.md#sepa-direct-debit-source-details-object) that includes the details of the transaction. |
 
-#### SEPA Direct Debit source details object
+### SEPA Direct Debit source details object
 
 The SEPA Direct Debit Source Details object requires the following fields.
 
@@ -44,7 +44,7 @@ The SEPA Direct Debit Source Details object requires the following fields.
 | ----------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `returnUrl` | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing or canceling within the SEPA Direct Debit experience. |
 
-### Step 2: Create a SEPA Direct Debit source using DigitalRiver.js
+## Step 2: Create a SEPA Direct Debit source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -87,7 +87,7 @@ digitalriver.createSource(data).then(function(result) {
 ```
 {% endcode %}
 
-#### SEPA Direct Debit source example
+### SEPA Direct Debit source example
 
 {% code overflow="wrap" %}
 ```javascript
@@ -128,11 +128,11 @@ digitalriver.createSource(data).then(function(result) {
 ```
 {% endcode %}
 
-### Step 3: Authorize a SEPA Direct Debit source
+## Step 3: Authorize a SEPA Direct Debit source
 
 When you create a SEPA Direct Debit source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
 
-#### Redirecting the customer for SEPA Direct Debit authorization
+### Redirecting the customer for SEPA Direct Debit authorization
 
 To redirect your customer for authorization, use the `redirectUrl` parameter in your `createSource` response.
 
@@ -148,11 +148,11 @@ window.location.href = sourceResponse.redirect.redirectUrl;
 
 The payment provider will present the customer with the transaction details where they can authorize or cancel the transaction. A successful authorization redirects the customer to the SEPA Direct Debit Return URL parameter you specified when you created the source.
 
-### Step 4: Use the authorized source
+## Step 4: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart) or [attaching it to a shopper](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
-#### Option 1: Attach the source to a cart
+### Option 1: Attach the source to a cart
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
@@ -168,7 +168,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endtab %}
 {% endtabs %}
 
-#### Option 2: Attach the source to a shopper
+### Option 2: Attach the source to a shopper
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/payment-options" %}

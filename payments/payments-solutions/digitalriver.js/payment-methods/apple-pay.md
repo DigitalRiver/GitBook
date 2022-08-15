@@ -10,7 +10,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create an[ Apple P
 * [Step 2: Create an Apple Pay source using DigitalRiver.js](apple-pay.md#step-2-create-an-apple-pay-source-using-digital-river-js)
 * [Step 3: ​Use the authorized source](apple-pay.md#step-3-use-the-authorized-source)
 
-### Step 1: Submit domain for Apple validation
+## Step 1: Submit domain for Apple validation
 
 To offer Apple Pay on your website, you need to validate your domain with Apple before you can accept transactions. To complete the validation:
 
@@ -28,11 +28,11 @@ To offer Apple Pay on your website, you need to validate your domain with Apple 
    **Note**: You must serve the `apple-developer-merchantid-domain-association` file over HTTPS.
 3. Contact your Digital River representative with the list of domains you want to register.
 
-### Step 2: Create an Apple Pay source using Digital River.js
+## Step 2: Create an Apple Pay source using Digital River.js
 
 ‌To create an Apple Pay payment source, please follow the [DigitalRiver.js reference guide](../../../../general-resources/reference/).‌
 
-#### Create an Apple Pay element
+### Create an Apple Pay element
 
 After setting up your library per the [DigitalRiver.js reference guide](../../../../general-resources/reference/), create an Apple Pay element with any customizations you would like to apply.
 
@@ -60,7 +60,7 @@ var applepay = digitalriver.createElement('applepay', paymentRequestData);
 ```
 {% endcode %}
 
-#### Configure the Apple Pay element to handle events
+### Configure the Apple Pay element to handle events
 
 The Apple Pay element will surface events, which will give you more information to facilitate what is happening within the Apple Pay experience.‌
 
@@ -106,7 +106,7 @@ applepay.on('shippingaddresschange', function(event) {
 
 The Shipping Address Changed and Shipping Method Changed events require a response of updated details to present to the Shopper. This system expects the response to be in the format of a [Payment Request Details Update object](../../../../general-resources/reference/digital-river-payment-objects.md#payment-request-details-update-error-object).‌
 
-#### Place the elements on the page
+### Place the elements on the page
 
 The following example shows how to place the elements on the page. For more information on placing elements on a page, see the [Apple Pay example](apple-pay.md#apple-pay-example).
 
@@ -119,7 +119,7 @@ if (applepay.canMakePayment()) {
 ```
 {% endcode %}
 
-#### Apple Pay source and response examples
+### Apple Pay source and response examples
 
 The source event will surface a Source plus other details provided by Apple Pay, like the billing address, shipping address, and contact information of the shopper.
 
@@ -242,7 +242,7 @@ The `address` object must contain postal code and state/province data that **** 
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Use the authorized source
+## Step 3: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 

@@ -187,7 +187,7 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
 * The PayPal SDK guide is located here: [https://developer.paypal.com/docs/archive/checkout/](https://developer.paypal.com/docs/archive/checkout/)
 * More details on how you can customize the PayPal button are located here: [https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/#](https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/)
 
-**Example:**
+#### **Example:**
 
 1. Include the PayPal Checkout SDK on your page and specify a location where the button will appear.
 2. &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching it to an order or cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
@@ -276,7 +276,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endtab %}
 {% endtabs %}
 
-### PayPal Billing Agreement
+## PayPal Billing Agreement
 
 The PayPal Billing Agreement allows consumers to use their PayPal account to make recurring payments when they purchase a subscription product by clicking the PayPal button. Consumers have the option to choose to auto-renew or manually renew.
 
@@ -291,7 +291,7 @@ Create a PayPal Billing Agreement payment method for your app or website in four
 * [Step 3: Authorize a PayPal Billing Agreement source](paypal.md#step-3-authorize-a-paypal-billing-agreement-source)
 * [Step 4: Use the authorized source](paypal.md#step-4-use-the-authorized-source-1)
 
-#### Step 1: Build a PayPal Billing Agreement source request object
+### Step 1: Build a PayPal Billing Agreement source request object
 
 Build the PayPal Billing Agreement Source Request object. A PayPal Billing Agreement Source Request object requires the following fields.
 
@@ -301,7 +301,7 @@ Build the PayPal Billing Agreement Source Request object. A PayPal Billing Agree
 | `sessionId`     | The payment session identifier.                                                                                        |
 | `payPalBilling` | A [PayPal Source Details object](paypal.md#paypal-source-details-object) that includes the details of the transaction. |
 
-#### Step 2: Create a PayPal Billing Agreement source using DigitalRiver.js
+### Step 2: Create a PayPal Billing Agreement source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -384,7 +384,7 @@ The `address` object must contain postal code and state/province data that **** 
 {% endtab %}
 {% endtabs %}
 
-#### Step 3: Authorize a PayPal Billing Agreement source
+### Step 3: Authorize a PayPal Billing Agreement source
 
 When you create a PayPal Billing Agreement source, the customer is required to authorize the charge through PayPal. You can accomplish this by either redirecting the customer to PayPal or using the PayPal SDK to authorize the charge as part of your experience.
 
@@ -471,7 +471,7 @@ paypal.Button.render({
 
 ![PayPal login](../../../../.gitbook/assets/PayPal-login.png)
 
-#### Step 4: Use the authorized source
+### Step 4: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart) or [attaching it to a shopper](../../../sources/#attaching-a-payment-method-to-a-customer).
 
@@ -509,9 +509,9 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endtab %}
 {% endtabs %}
 
-### PayPal Pay Later
+## PayPal Pay Later
 
-#### PayPal Pay in 3
+### PayPal Pay in 3
 
 {% hint style="warning" %}
 **Additional setup optional**: If you are interested in promoting Pay in 3, contact your Customer Success Representative. The Representative will provide the set-up instructions for Pay in 3 banners. Click [here ](https://developer.paypal.com/docs/business/pay-later/us/integrate/)to access the upstream promotional banners.
@@ -527,7 +527,7 @@ PayPal Pay in 3 allows shoppers to pay for physical good purchases as follows:
 When a customer selects this payment method, a "soft hit" will appear in their credit report.
 {% endhint %}
 
-#### PayPal Pay in 4
+### PayPal Pay in 4
 
 {% hint style="warning" %}
 **Additional setup optional**: If you are interested in promoting Pay in 4, contact your Customer Success Representative. The Representative will provide the set-up instructions for Pay in 4 banners. Click [here ](https://developer.paypal.com/docs/business/pay-later/us/integrate/)to access the upstream promotional banners.
@@ -545,7 +545,7 @@ PayPal Pay in 4 allows shoppers to pay for physical good purchases as follows:
 When a customer selects this payment method, a "soft hit" will appear in their credit report.
 {% endhint %}
 
-#### PayPal RatenZahlung
+### PayPal RatenZahlung
 
 PayPal RatenZahlung is a pay later option available through PayPal Express Checkout Wallet. Presents within the PayPal wallet on a category known as "Pay Later". Note that PayPal RatenZahlung does not support recurring subscriptions. No additional setup is required to present this payment method in the PayPal Express Checkout Wallet. If the shopper's purchase history along with the items in the checkout qualify, PayPal RatenZahlung will be available as a payment method. \
 \
@@ -553,7 +553,7 @@ PayPal RatenZahlung allows shoppers to pay for physical good purchases as follow
 
 * **Germany**: shopper selects three, six, twelve, or twenty-four monthly payments with an interest rate of 9.99% for purchases between €99 to €5,000 with the first payment due at checkout
 
-#### PayPal Credit
+### PayPal Credit
 
 {% hint style="warning" %}
 **Additional Setup Required**: If you are interested in using PayPal Credit, contact your Account Manager. The Account Manager will send setup instructions for PayPal Credit banners after you sign the client addendum.
@@ -568,7 +568,7 @@ Create a PayPal payment method for your app or website in four easy steps:
 * [Step 3: Authorize a PayPal Credit source](paypal.md#step-3-authorize-a-paypal-credit-source)
 * [Step 4: Use the authorized source](paypal.md#step-4-use-the-authorized-source-2)
 
-**Step 1: Build a Credit source request object**
+### **Step 1: Build a Credit source request object**
 
 Build a Credit Source Request object. A PayPal Billing Credit Source Request object requires the following fields.
 
@@ -578,7 +578,7 @@ Build a Credit Source Request object. A PayPal Billing Credit Source Request obj
 | `sessionId`    | The payment session identifier.                                                                                         |
 | `payPalCredit` |  A [PayPal Source Details object](paypal.md#paypal-source-details-object) that includes the details of the transaction. |
 
-**Step 2: Create a PayPal Credit source using DigitalRiver.js**
+### **Step 2: Create a PayPal Credit source using DigitalRiver.js**
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -661,9 +661,9 @@ The `address` object must contain postal code and state/province data that **** 
 {% endtab %}
 {% endtabs %}
 
-**Step 3: Authorize a PayPal Credit source**
+### **Step 3: Authorize a PayPal Credit source**
 
-When you create a PayPal Credit Source, the customer is required to authorize the charge at PayPal. You can accomplish this by either redirecting the customer to PayPal or use the PayPal SDK to authorize the charge as part of your experience.
+When you create a PayPal Credit Source, the customer is required to authorize the charge at PayPal. You can accomplish this by either redirecting the customer to PayPal or using the PayPal SDK to authorize the charge as part of your experience.
 
 #### Redirecting the customer to PayPal for authorization
 
@@ -837,11 +837,9 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
     ```
     {% endcode %}
 
-**Step 4: Use the Authorized source**
+### **Step 4: Use the Authorized source**
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
-
-#### Attach the source to a cart
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}

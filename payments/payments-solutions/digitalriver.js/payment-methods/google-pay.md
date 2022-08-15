@@ -9,11 +9,11 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a [Google P
 * [Step 1: Create a Google Pay source using DigitalRiver.js](google-pay.md#step-1-create-a-google-pay-source-using-digital-river-js)
 * [Step 2: Use the authorized source](google-pay.md#step-2-use-the-authorized-source)
 
-### Step 1: Create a Google Pay source using Digital River.js
+## Step 1: Create a Google Pay source using Digital River.js
 
 To create a Google Pay payment source, follow the instructions for [DigitalRiver.js reference guide](../../../../general-resources/reference/).
 
-#### Create a Google Pay element
+### Create a Google Pay element
 
 After setting up your library per the [DigitalRiver.js reference guide](../../../../general-resources/reference/), create a Google Pay element with any customizations you would like to apply.
 
@@ -41,7 +41,7 @@ var googlepay = digitalriver.createElement('googlepay', paymentRequestData);
 ```
 {% endcode %}
 
-#### Configure the Google Pay element to handle events
+### Configure the Google Pay element to handle events
 
 The Google Pay element will surface events, which will give you more information to facilitate what is happening within the Google Pay experience.
 
@@ -87,7 +87,7 @@ googlepay.on('shippingaddresschange', function(event) {
 
 The Shipping Address Changed and Shipping Method Changed events require a response of updated details to present to the Shopper. This system expects the response to be in the format of a [Payment Request Details Update object](../../../../general-resources/reference/digital-river-payment-objects.md#payment-request-details-update-error-object).
 
-#### Place the elements on the page
+### Place the elements on the page
 
 The following example shows how to place the elements on the page. For more information on placing elements on a page, see Google Pay example.
 
@@ -100,7 +100,7 @@ if (googlepay.canMakePayment()) {
 ```
 {% endcode %}
 
-#### Receive the source event and use the source
+### Receive the source event and use the source
 
 {% code overflow="wrap" %}
 ```javascript
@@ -116,7 +116,7 @@ googlepay.on('source', function(event) {
 ```
 {% endcode %}
 
-#### Google Pay example
+### Google Pay example
 
 The source event will surface a Source plus other details provided from Google Pay like the shopper's billing address, shipping address, and contact information in the response.
 
@@ -250,11 +250,11 @@ The `address` object must contain postal code and state/province data that **** 
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Use the authorized source
+## Step 2: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart) or [attaching it to a shopper](../../../sources/#attaching-a-payment-method-to-a-customer).
 
-#### Option 1. Attach the source to a cart
+### Option 1. Attach the source to a cart
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
@@ -270,7 +270,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endtab %}
 {% endtabs %}
 
-#### Option 2. Attach the source to a shopper
+### Option 2. Attach the source to a shopper
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/payment-options" %}
@@ -288,7 +288,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endtab %}
 {% endtabs %}
 
-#### Google Pay example
+### Google Pay example
 
 The following example shows how to place a Google Pay element on your page. Use this in conjunction with the [DigitalRiver.js reference guide](../../../../general-resources/reference/) to build your solution.
 

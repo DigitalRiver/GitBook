@@ -11,7 +11,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create an [iDEAL ]
 * [Step 3: Authorize an iDEAL source](configuring-ideal.md#step-3-authorize-an-ideal-source)
 * [Step 4: Use the authorized source](configuring-ideal.md#step-4-use-the-authorized-source)
 
-### Step 1: Build an iDEAL source request object
+## Step 1: Build an iDEAL source request object
 
 Build an iDEAL Source Request object. An iDEAL Source Request object requires the following fields:
 
@@ -22,7 +22,7 @@ Build an iDEAL Source Request object. An iDEAL Source Request object requires th
 | `owner`     | An [Owner object](common-payment-objects.md#owner-object).                                                     |
 | `ideal`     | An [iDEAL source details object](configuring-ideal.md#ideal-source-details-object). (This is currently empty.) |
 
-#### iDEAL source details object
+### iDEAL source details object
 
 Create an iDEAL source details object.
 
@@ -38,7 +38,7 @@ Create an iDEAL source details object.
 | ----------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `returnUrl` | Required          | If you choose the full redirect flow, this is where you will redirect your customer after the customer authorizes or cancels the payment within the iDEAL experience. |
 
-### Step 2: Create an iDEAL source using DigitalRiver.js
+## Step 2: Create an iDEAL source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -82,7 +82,7 @@ digitalriver.createSource(sourceData).then(function(result) {
 ```
 {% endcode %}
 
-#### iDEAL source response example
+### iDEAL source response example
 
 {% tabs %}
 {% tab title="Source response" %}
@@ -129,11 +129,11 @@ digitalriver.createSource(sourceData).then(function(result) {
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Authorize an iDEAL source
+## Step 3: Authorize an iDEAL source
 
 When you create an iDEAL source, the customer must authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.&#x20;
 
-#### Redirecting the customer for iDEAL authorization
+### Redirecting the customer for iDEAL authorization
 
 To redirect the customer to the payment provider for authorization, use the `redirectUrl` parameter in your [`createSource` response](../../../../general-resources/reference/digitalriver-object.md#createsource-sourcedata).
 
@@ -188,7 +188,7 @@ Once authorized, the source `state` will change to `chargeable`.
 ```
 {% endcode %}
 
-### Step 4: Use the authorized source
+## Step 4: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 

@@ -11,7 +11,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create an[ Online 
 * [Step 3: Authorize an Online Banking source](online-banking.md#step-3-authorize-an-online-banking-source)
 * [Step 4: Use the authorized source](online-banking.md#step-4-use-the-authorized-source)
 
-### Step 1: Build Online Banking objects
+## Step 1: Build Online Banking objects
 
 Build the Online Banking Source Request Details objects. The Online Banking Source Request object requires the following fields.
 
@@ -22,7 +22,7 @@ Build the Online Banking Source Request Details objects. The Online Banking Sour
 | `owner`         | An [Owner object](common-payment-objects.md#owner-object).                                          |
 | `onlineBanking` |  An [Online Banking Source Details object](online-banking.md#online-banking-source-request-object). |
 
-#### Online Banking source details object
+### Online Banking source details object
 
 The Online Banking Details object requires the following fields.
 
@@ -41,18 +41,18 @@ The Online Banking Details object requires the following fields.
 | `cancelUrl` | Required          | If you choose to utilize the full redirect flow, this is where your Customer will be redirected to after cancelling within the Online Banking experience.                                                                                          |
 | `bankCode`  | Required          | The identifier of the bank the customer has chosen and will be redirected to when finished. If using the DigitalRiver.js Internet Banking Payment element, this populated for you. If constructing the request yourself, this is a required field. |
 
-### Step 2: Create an Online Banking source or display
+## Step 2: Create an Online Banking source or display
 
 Choose one of the following options:
 
 * [Create an Online Banking source using DigitalRiver.js](online-banking.md#create-an-online-banking-source-using-digitalriver-js)
 * [Create your Online Banking display using DigitalRiver.js](online-banking.md#create-your-online-banking-display-using-digitalriver-js)
 
-#### Create an Online Banking source using DigitalRiver.js
+### Create an Online Banking source using DigitalRiver.js
 
 To create an Online Banking payment source, use the DigitalRiver.js library to create and mount elements to the HTML container, or you can assemble the information and then send it using the standard calls in DigitalRiver.js.
 
-#### Create the Online Banking element using DigitalRiver.js functionality
+### Create the Online Banking element using DigitalRiver.js functionality
 
 The Online Banking element creation follows the same pattern as other elements and exposes the same customizations and events. However, to properly display an accurate list of available banks, you must provide an additional `onlineBanking` object which holds the country and currency appropriate for your Customer.
 
@@ -154,11 +154,11 @@ digitalriver.createSource(data).then(function(result) {
 ```
 {% endcode %}
 
-#### Create your Online Banking display using DigitalRiver.js
+### Create your Online Banking display using DigitalRiver.js
 
 If you decide not to use the out-of-the-box functionality provided with the Online Banking elements, you can use the `digitalriver.retrieveOnlineBankingBanks()` method to build your own experience.
 
-#### Retrieving available banks
+### Retrieving available banks
 
 DigitalRiver.js exposes a method that allows you to retrieve the available banks for a country and currency combination. If banks are available, DigitalRiver.js returns an array of objects. If banks are not available, DigitalRiver.js returns an empty array.
 
@@ -174,7 +174,7 @@ digitalriver.retrieveOnlineBankingBanks("DE","EUR").then(function(response) {
 {% endtab %}
 {% endtabs %}
 
-#### Retrieved banks
+### Retrieved banks
 
 {% tabs %}
 {% tab title="JSON" %}
@@ -253,7 +253,7 @@ var sourceData = {
 {% endtab %}
 {% endtabs %}
 
-#### Example Online Banking source
+### Example Online Banking source
 
 {% tabs %}
 {% tab title="JSON" %}
@@ -302,11 +302,11 @@ var sourceData = {
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Authorize an Online Banking source
+## Step 3: Authorize an Online Banking source
 
 When you create an Online Banking source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
 
-#### Redirecting the customer for Online Banking authorization
+### Redirecting the customer for Online Banking authorization
 
 To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
 
@@ -361,7 +361,7 @@ Once authorized, the source state will change to chargeable.
 ```
 {% endcode %}
 
-### Step 4: Use the authorized source
+## Step 4: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 

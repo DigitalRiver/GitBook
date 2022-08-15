@@ -11,7 +11,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create an [Alipay]
 * [Step 3: Authorize an Alipay source](alipay.md#step-3-authorize-an-alipay-source)
 * [Step 4: Use the Authorized source](alipay.md#step-4-use-the-authorized-source)
 
-### Step 1: Build an Alipay source request object
+## Step 1: Build an Alipay source request object
 
 Build an Alipay Source Request object. The Alipay Source Request object requires the following fields.
 
@@ -22,7 +22,7 @@ Build an Alipay Source Request object. The Alipay Source Request object requires
 | owner     | An [Owner object](common-payment-objects.md#owner-object).                                                              |
 | alipay    | An [Alipay Source Details object](alipay.md#alipay-source-details-object) that includes the details of the transaction. |
 
-#### Alipay source details object
+### Alipay source details object
 
 {% code overflow="wrap" %}
 ```javascript
@@ -36,7 +36,7 @@ Build an Alipay Source Request object. The Alipay Source Request object requires
 | --------- | ----------------- | ------------------------------------------------------------------------------------------------------------ |
 | returnUrl | Required          | Where you will redirect your customer after the customer authorizes or cancels within the Alipay experience. |
 
-### Step 2: Create the Alipay source using DigitalRiver.js
+## Step 2: Create the Alipay source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -79,7 +79,7 @@ digitalriver.createSource(alipaySourceData ).then(function(result) {
 ```
 {% endcode %}
 
-#### Alipay source example
+### Alipay source example
 
 {% code overflow="wrap" %}
 ```javascript
@@ -120,11 +120,11 @@ digitalriver.createSource(alipaySourceData ).then(function(result) {
 ```
 {% endcode %}
 
-### Step 3: Authorize an Alipay source
+## Step 3: Authorize an Alipay source
 
 When you create an Alipay source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
 
-#### Redirecting the customer for authorization
+### Redirecting the customer for authorization
 
 To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
 
@@ -134,7 +134,7 @@ window.location.href = sourceResponse.redirect.redirectUrl;
 
 The payment provider will present the customer with the transaction details to authorize, or cancel the transaction. A successful authorization redirects the customer to the Alipay Return URL parameter you specified when you created the source.
 
-### Step 4: Use the authorized source
+## Step 4: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
