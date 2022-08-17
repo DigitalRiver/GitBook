@@ -11,9 +11,18 @@ V1 is the base version of the Commerce API. The following dates indicate when we
 * We expanded our Klarna Pay Later offering with the addition of payment options in Canada, France, Ireland, Poland, and Portugal. You can learn more [here](../../payments/payments-solutions/digitalriver.js/payment-methods/klarna.md).
 * We expanded our TreviPay B2B payment offering to include locales in Denmark and New Zealand! You can find more details [here](../../payments/payments-solutions/digitalriver.js/payment-methods/trevipay.md). ****&#x20;
 
+## 2022/7/23
+
+We added Flex Term Monthly Billing to our subscription platform. This feature allows you to [set up a subscription product and sell a monthly subscription with an annual commitment](https://help.digitalriver.com/help/gc/Products/All-Products/Creating-a-product.htm#HowToCreateAFlexTermRenewal).
+
+When a shopper uses Flex Term Monthly Billing, they will be billed once a month for their purchase. The shopper can choose any kind of commitment, such as 3, 6, 12, 24, or 36 months. Charges occur automatically every month until the commitment period is complete, at which point the shopper can renew their subscription.
+
 ## 2022/6/30
 
-We released the [Webhook service](https://help.digitalriver.com/help/gc/Administration/Webhook-Service/Webhook-service.htm) for Commerce API. The Webhook service now supports events covering the entire [subscription cycle](../../subscriptions/subscription-lifecycle.md). You can choose to manage the service through the [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do) interface or the [Webhooks API](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Webhook-Event-Management). You can now integrate the Webhook service for Commerce API with endpoints to get an instant update on events throughout the entire [subscription cycle](../../subscriptions/subscription-lifecycle.md). We also updated the list of [webhook events](../../events-and-webhooks/events/event-types.md) in the Webhook service. You can now choose from more subscription events.
+* Fair Consumer Contracts Act (FCCA) enhancement \
+  We add support for the [German Fair Consumer Contracts Act (FCCA)](https://www.lexology.com/library/detail.aspx) by adding a dedicated cancellation page in German and English to the footer on-site "defaults" that allow sending a cancellation request without signing in. Notifications for request confirmation and reminders are available in German and English. [Learn more about FCCA](https://digitalriver.service-now.com/kb?id=kb\_article\_view\&sysparm\_article=KB0010508).&#x20;
+* Webhook service for Commerce API\
+  We released the [Webhook service](https://help.digitalriver.com/help/gc/Administration/Webhook-Service/Webhook-service.htm) for Commerce API. The Webhook service now supports events covering the entire [subscription lifecycle](../../subscriptions/subscription-lifecycle.md). You can choose to manage the service through the [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do) interface or the [Webhooks API](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Webhook-Event-Management). You can now integrate the Webhook service for Commerce API with endpoints to get an instant update on events throughout the entire [subscription lifecycle](../../subscriptions/subscription-lifecycle.md). We also updated the list of [webhook events](../../events-and-webhooks/events/event-types.md) in the Webhook service. You can now choose from more subscription events.
 
 ## 2022/6/29
 
