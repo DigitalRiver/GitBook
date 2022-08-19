@@ -6,6 +6,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2022/8/19
+
+You can now create an [iDEAL element](../reference/elements/ideal-element.md) that will automatically get a user's agreement and [IBAN number ](../reference/elements/iban-element.md#creating-an-iban-element)for single-use and recurring transactions.
+
 ## 2022/7/27
 
 * We expanded our Klarna Pay Later offering with the addition of payment options in Canada, France, Ireland, Poland, and Portugal. You can learn more [here](../../payments/payments-solutions/digitalriver.js/payment-methods/klarna.md).

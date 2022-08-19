@@ -257,6 +257,8 @@
   * [Elements](general-resources/reference/elements/README.md)
     * [Apple Pay elements](general-resources/reference/elements/apple-pay-elements.md)
     * [Google Pay elements](general-resources/reference/elements/google-pay-elements.md)
+    * [IBAN element](general-resources/reference/elements/iban-element.md)
+    * [iDEAL element](general-resources/reference/elements/ideal-element.md)
     * [Konbini elements](general-resources/reference/elements/konbini-elements.md)
     * [Compliance element](general-resources/reference/elements/compliance-element.md)
     * [Offline refund element](general-resources/reference/elements/offline-refund-element.md)
