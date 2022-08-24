@@ -6,6 +6,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2022/8/24
+
+We updated instructions to the [Global Commerce Help](https://help.digitalriver.com/internal-help/gc.htm) that explains how to [test the email notification](https://help.digitalriver.com/internal-help/gc/Administration/Email-Notifications/Email-notifications.htm#HowToTestTheEmailNotification) and [enable or disable email notifications](https://help.digitalriver.com/internal-help/gc/Administration/Email-Notifications/Email-notifications.htm#HowToEnableOrDisableEmailNotifications).
+
 ## 2022/8/19
 
 You can now create an [iDEAL element](../reference/elements/ideal-element.md) that will automatically get a user's agreement and [IBAN number ](../reference/elements/iban-element.md#creating-an-iban-element)for single-use and recurring transactions.
