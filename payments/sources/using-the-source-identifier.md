@@ -129,7 +129,7 @@ You can only associate one primary source with a cart. If there's a primary sour
 When using multiple sources in a cart, always apply the secondary sources first. Apply the primary source last.
 {% endhint %}
 
-For a list of payment methods that support reusability, refer to the [Supported payment methods](../../payment-integrations-1/supported-payment-methods.md).  &#x20;
+For a list of payment methods that support reusability, refer to the [Supported payment methods](../supported-payment-methods.md).  &#x20;
 
 To attach two sources to a cart, choose one of the following best practices.
 

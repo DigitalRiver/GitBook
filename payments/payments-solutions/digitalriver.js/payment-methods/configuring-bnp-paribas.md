@@ -1,34 +1,34 @@
 ---
-description: Learn how to configure Bancontact for DigitalRiver.js with Elements.
+description: Learn how to configure BNP Paribas for DigitalRiver.js with Elements.
 ---
 
-# Configuring Bancontact
+# Configuring BNP Paribas
 
-If you're using[ DigitalRiver.js with Elements](../), you can create a [Bancontact](../../../supported-payment-methods/bancontact.md) payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a [BNP Paribas](../../../supported-payment-methods/bnp-paribas.md) payment method for your app or website in four easy steps:
 
-* [Step 1: Build a Bancontact Source Request object](configuring-bancontact.md#step-1-build-a-bancontact-source-request-and-details-object)
-* [Step 2: Create a Bancontact source using DigitalRiver.js](configuring-bancontact.md#step-2-create-a-bancontact-source-using-digitalriver.js)
-* [Step 3: Authorize the Bancontact source](configuring-bancontact.md#step-3-authorize-the-bancontact-source)
-* [Step 4: Use the authorized source](configuring-bancontact.md#step-4-use-the-authorized-source)
+* [Step 1: Build a BNP Paribas Source Request object](configuring-bnp-paribas.md#step-1-build-a-bnp-paribas-source-request-and-details-object)
+* [Step 2: Create a BNP Paribas source using DigitalRiver.js](configuring-bnp-paribas.md#step-2-create-a-bancontact-source-using-digitalriver.js)
+* [Step 3: Authorize the BNP Paribas source](configuring-bnp-paribas.md#step-3-authorize-the-bancontact-source)
+* [Step 4: Use the authorized source](configuring-bnp-paribas.md#step-4-use-the-authorized-source)
 
-## Step 1: Build a Bancontact Source Request and Details object
+## Step 1: Build a BNP Paribas Source Request and Details object
 
-Build the Bancontact Source Request and Details objects.&#x20;
+Build the BNP Paribas Source Request and Details objects.&#x20;
 
-### Bancontact Source Request object
+### BNP Paribas Source Request object
 
-The Bancontact Source Request object requires the following fields.
+The BNP Paribas Source Request object requires the following fields.
 
-| Field        | Value                                                                                             |
-| ------------ | ------------------------------------------------------------------------------------------------- |
-| `type`       | `bancontact`                                                                                      |
-| `sessionId`  | The payment session identifier.                                                                   |
-| `owner`      | An [Owner object](common-payment-objects.md#owner-object).                                        |
-| `bancontact` | A [Bancontact Source Details object](configuring-bancontact.md#bancontact-source-details-object). |
+| Field         | Value                                                                                              |
+| ------------- | -------------------------------------------------------------------------------------------------- |
+| `type`        | `bnp paribas`                                                                                      |
+| `sessionId`   | The payment session identifier.                                                                    |
+| `owner`       | An [Owner object](common-payment-objects.md#owner-object).                                         |
+| `bnp paribas` | A [Bancontact Source Details object](configuring-bnp-paribas.md#bancontact-source-details-object). |
 
-### Bancontact Source Details object
+### BNP Paribas Source Details object
 
-The Bancontact Source Details object requires the following fields.
+The BNP Paribas Source Details object requires the following fields.
 
 {% code overflow="wrap" %}
 ```javascript
@@ -38,11 +38,11 @@ The Bancontact Source Details object requires the following fields.
 ```
 {% endcode %}
 
-| Field       | Required/Optional | Description                                                                                                                                                    |
-| ----------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `returnUrl` | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing or canceling within the Bancontact experience. |
+| Field       | Required/Optional | Description                                                                                                                                                     |
+| ----------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `returnUrl` | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing or canceling within the BNP Paribas experience. |
 
-## Step 2: Create a Bancontact source using DigitalRiver.js
+## Step 2: Create a BNP Paribas source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -86,7 +86,7 @@ digitalriver.createSource(bancontactSourceData).then(function(result) {
 ```
 {% endcode %}
 
-### Bancontact source example
+### BNP Paribas source example
 
 {% code overflow="wrap" %}
 ```javascript
@@ -128,19 +128,21 @@ digitalriver.createSource(bancontactSourceData).then(function(result) {
 ```
 {% endcode %}
 
-## Step 3: Authorize the Bancontact source
+## Step 3: Authorize the BNP Paribas source
 
-When you create a Bancontact source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
+When you create a BNP Paribas source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
 
-### Redirecting the customer for Bancontact authorization
+### Redirecting the customer for BNP Paribas authorization
 
 To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
 
+{% code overflow="wrap" %}
 ```javascript
 window.location.href = sourceResponse.redirect.redirectUrl;
 ```
+{% endcode %}
 
-The payment provider will present the customer with the transaction details and the customer can authorize, or cancel the transaction. A successful authorization redirects the customer to the Bancontact Return URL parameter you specified when you created the source.
+The payment provider will present the customer with the transaction details and the customer can authorize, or cancel the transaction. A successful authorization redirects the customer to the BNP Paribas Return URL parameter you specified when you created the source.
 
 Once authorized, the source state will change to `chargeable`.
 

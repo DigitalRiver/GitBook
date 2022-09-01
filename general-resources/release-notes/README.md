@@ -85,7 +85,7 @@ We added support for the [iDEAL ](../../payments/payments-solutions/digitalriver
 
 ## 2022/3/16
 
-We added support for the [Bancontact ](../../payments/payments-solutions/digitalriver.js/payment-methods/configuring-bancontact.md)payment method.
+We added support for the [Bancontact ](../../payments/payments-solutions/digitalriver.js/payment-methods/bancontact.md)payment method.
 
 ## 2022/1/26
 
