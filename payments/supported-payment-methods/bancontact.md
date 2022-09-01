@@ -10,9 +10,9 @@ Bancontact is a Belgian debit card with no chargeback risk (a unique feature for
 
 How you configure Bancontact depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).&#x20;
 
-| DigitalRiver.js with Elements                                                                 | Drop-in payments                                                                                 |
-| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| [Configuring Bancontact](../payments-solutions/digitalriver.js/payment-methods/bancontact.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
+| DigitalRiver.js with Elements                                                                             | Drop-in payments                                                                                 |
+| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| [Configuring Bancontact](../payments-solutions/digitalriver.js/payment-methods/configuring-bancontact.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
 ## Supported markets
 

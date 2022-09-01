@@ -20,7 +20,7 @@ When creating webhooks, you need to add endpoints from Global Commerce:
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 2. Select **Administration**, and then click **Webhook Service**. The Webhook Service page appears.\
-   &#x20;<img src="../../.gitbook/assets/Webhook Service.png" alt="" data-size="original">&#x20;
+   &#x20;<img src="../../.gitbook/assets/Webhook-Service (1).png" alt="" data-size="original">&#x20;
 3. From the Webhook Service page, click **Create Webhook**.  \
    <img src="../../.gitbook/assets/Webhook-Service-Create-webhook.png" alt="" data-size="original"> \
    The Create Webhook page appears.\
