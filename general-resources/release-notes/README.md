@@ -6,6 +6,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2022/9/1
+
+We added support for the [Trustly ](../../payments/supported-payment-methods/trustly.md)payment method. Shoppers can use Trustly to make fast, simple, and secure payments directly from their bank accounts without the risk of fraud.
+
 ## 2022/8/24
 
 We updated instructions to the [Global Commerce Help](https://help.digitalriver.com/internal-help/gc.htm) that explains how to [test the email notification](https://help.digitalriver.com/internal-help/gc/Administration/Email-Notifications/Email-notifications.htm#HowToTestTheEmailNotification) and [enable or disable email notifications](https://help.digitalriver.com/internal-help/gc/Administration/Email-Notifications/Email-notifications.htm#HowToEnableOrDisableEmailNotifications).
