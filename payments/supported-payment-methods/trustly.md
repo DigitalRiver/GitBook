@@ -10,7 +10,7 @@ Trustly is a bank transfer payment service. During the online checkout process, 
 
 The following table lists where Trustly is available by currency and country.
 
-| Currency | Currency                                                                                                                                           |
+| Currency | Country                                                                                                                                            |
 | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | EUR      | <p>Austria (AT) </p><p>Estonia (EE) </p><p>Finland (FI) <br>Germany (DE)<br>Latvia (LV) <br>Lithuania (LT) <br>Netherlands (NL)<br>Spain (ES) </p> |
 | DKK      | Denmark (DK)                                                                                                                                       |
