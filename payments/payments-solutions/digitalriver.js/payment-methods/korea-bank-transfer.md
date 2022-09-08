@@ -4,7 +4,7 @@ description: Learn how to configure Korea Bank Transfer for DigitalRiver.js with
 
 # Configuring Online Banking (Korea Bank Transfer)
 
-If you're using[ DigitalRiver.js with Elements](../), you can create a [Bank Transfer](../../../supported-payment-methods/online-banking-korea-bank-transfer.md) payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a [Bank Transfer](../../../supported-payment-methods/korea-bank-transfer.md) payment method for your app or website in four easy steps:
 
 * [Step 1: Build the Bank Transfer source request object](korea-bank-transfer.md#step-1-build-the-bank-transfer-objects)
 * [Step 2: Create the Bank Transfer source using DigitalRiver.js](korea-bank-transfer.md#step-2-create-the-bank-transfer-source-using-digitalriver-js)
