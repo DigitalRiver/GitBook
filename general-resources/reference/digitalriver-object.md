@@ -1268,7 +1268,7 @@ If you want to display the credit card payment logo on your website, you can use
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/amex.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/amex.png)
 * **Discover** <img src="../../.gitbook/assets/discover (1).png" alt="" data-size="original">  \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/discover.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/discover.png)
-* **JCB** <img src="../../.gitbook/assets/jcb (1) (1).png" alt="" data-size="original"> \
+* **JCB** <img src="../../.gitbook/assets/jcb (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/jcb.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/jcb.png)
 * **Maestro** <img src="../../.gitbook/assets/maestro (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/maestro.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/maestro.png)

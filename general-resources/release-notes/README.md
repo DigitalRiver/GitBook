@@ -6,6 +6,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2022/9/9
+
+You can now [update a subscriber's email address](../../subscriptions/managing-subscriptions/updating-the-subscribers-email-address.md) so they can receive [future notifications](https://help.digitalriver.com/help/gc/Administration/Email-Notifications/Email-notifications.htm) using their preferred email address.
+
 ## 2022/9/1
 
 We added support for the [Trustly ](../../payments/supported-payment-methods/trustly.md)payment method. Shoppers can use Trustly to make fast, simple, and secure payments directly from their bank accounts without the risk of fraud.
