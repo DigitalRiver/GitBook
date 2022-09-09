@@ -1262,13 +1262,13 @@ If you want to display the credit card payment logo on your website, you can use
 
 * **Visa** <img src="../../.gitbook/assets/visa (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/visa.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/visa.png)
-* **Mastercard** <img src="../../.gitbook/assets/mastercard (1).png" alt="" data-size="original"> \
+* **Mastercard** <img src="../../.gitbook/assets/mastercard (1) (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/mastercard.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/mastercard.png)
-* **American Express** <img src="../../.gitbook/assets/amex (1).png" alt="" data-size="original"> \
+* **American Express** <img src="../../.gitbook/assets/amex (1) (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/amex.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/amex.png)
 * **Discover** <img src="../../.gitbook/assets/discover (1).png" alt="" data-size="original">  \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/discover.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/discover.png)
-* **JCB** <img src="../../.gitbook/assets/jcb (1).png" alt="" data-size="original"> \
+* **JCB** <img src="../../.gitbook/assets/jcb (1) (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/jcb.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/jcb.png)
 * **Maestro** <img src="../../.gitbook/assets/maestro (1).png" alt="" data-size="original"> \
   **URL**: [https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/maestro.png](https://ui1.img.digitalrivercontent.net/Storefront/images/creditCardLogos/maestro.png)

@@ -16,4 +16,4 @@ Converting a trial subscription changes the `state` from `FreeTrial` to `Subscri
 
 The following diagram shows the subscription states.
 
-![](<../.gitbook/assets/Subscription States - state flow.png>)
+![](../.gitbook/assets/subscription-states-state-flow.png)

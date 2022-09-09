@@ -26,3 +26,5 @@ An SSN is triggered when:
 * The shopper places an order to [manually renew their subscription](modifying-the-subscription-renewal-date.md) and also [creates a new billing option](associating-a-new-billing-option-to-an-existing-subscription.md#payment-option).
 * The shopper goes to your custom page that contains the `displayUpdateAddressPaymentInfoPage` attribute.
 * The shopper goes to your custom page that contains the `updatePaymentInfo` attribute.
+* You use `POST /v1/subscriptions/{subscriptionId}/email` to update the subscriber's email address for a specific subscription.&#x20;
+* You use `POST /v1/shoppers/me?applyEmailToSubscriptions=true`  to update a subscription customer's ship-to and bill-to email addresses for all subscriptions so they can receive notifications.&#x20;

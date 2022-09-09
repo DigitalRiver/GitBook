@@ -42,16 +42,16 @@ Use the following styles and types to create an Apple Pay button that you can mo
 ### **Button type**‌
 
 * Choose one of the following button types:
-* `plain`: <img src="../../../../../.gitbook/assets/ApplePay-Button-Black.png" alt="" data-size="original">&#x20;
-* `buy`: <img src="../../../../../.gitbook/assets/BuyWithApplePay-Button-Black.png" alt="" data-size="original">
+* `plain`: <img src="../../../.gitbook/assets/applepay-button-black.png" alt="" data-size="original">&#x20;
+* `buy`: <img src="../../../.gitbook/assets/buywithapplepay-button-black.png" alt="" data-size="original">
 
 ### **Button color**‌
 
 Choose one of the following button colors:
 
-* ​`light`: <img src="../../../../../.gitbook/assets/ApplePay-Button-White.png" alt="" data-size="original">&#x20;
-* `light-outline`: <img src="../../../../../.gitbook/assets/ApplePay-Button-White-Outline.png" alt="" data-size="original">&#x20;
-* `dark`: <img src="../../../../../.gitbook/assets/ApplePay-Button-Black.png" alt="" data-size="original">&#x20;
+* ​`light`: <img src="../../../.gitbook/assets/applepay-button-white.png" alt="" data-size="original">&#x20;
+* `light-outline`: <img src="../../../.gitbook/assets/applepay-button-white-outline.png" alt="" data-size="original">&#x20;
+* `dark`: <img src="../../../.gitbook/assets/applepay-button-black.png" alt="" data-size="original">&#x20;
 
 ## Apple Pay element functions
 

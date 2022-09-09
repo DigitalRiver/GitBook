@@ -34,7 +34,7 @@ Buyers select the TreviPay option at checkout, then they either log in to the Me
 
 You can set up your storefront to promote the TreviPay credit solution.
 
-![](../../.gitbook/assets/MSTS-store-page.png)
+![](../../.gitbook/assets/msts-store-page.png)
 
 ### TreviPay enrollment form
 
@@ -42,19 +42,19 @@ You can add a link to the enrollment form on your home page, product page, and c
 
 When a customer clicks the **Apply Now** button. The information they provide on the Enrollment Application page creates the Admin user.
 
-![](<../../.gitbook/assets/Enrollment 1.png>)
+![](../../.gitbook/assets/enrollment-1.png)
 
 The information provided on the Billing Contact page creates the Payer user.
 
-![](<../../.gitbook/assets/Enrollment 2.png>)
+![](../../.gitbook/assets/enrollment-2.png)
 
 When the customer completes the fields and clicks **Next**, the Credit Application appears.
 
-![](../../.gitbook/assets/MSTS-credit-applications.png)
+![](../../.gitbook/assets/msts-credit-applications.png)
 
 When the client completes and submits the Credit Application, they will see a Congratulations message stating they successfully submitted their application.
 
-![](../../.gitbook/assets/MSTS-congratulations.png)
+![](../../.gitbook/assets/msts-congratulations.png)
 
 ### Phone call
 
@@ -68,7 +68,7 @@ The customer will later receive two emails. The first email will state the appli
 TreviPay does not require the customer to sign in to the client portal, but they do recommend it.
 {% endhint %}
 
-![](../../.gitbook/assets/MSTS-approval-email.png)
+![](../../.gitbook/assets/msts-approval-email.png)
 
 ### TreviPay enrollment URL
 
