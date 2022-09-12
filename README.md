@@ -9,7 +9,7 @@ description: >-
 
 Available versions:
 
-* [3.1.0](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-3.1.0/)
+* [3.1.1](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-3.1.0/)
 * [3.0.0](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-3.0.0/)
 
 Support only:
