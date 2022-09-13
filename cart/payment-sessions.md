@@ -105,7 +105,7 @@ This `state` indicates that the cart's payment sources\[] are sufficient to fund
 
 #### Requires source
 
-A checkout's `payment.session.state` can be `requires_source` for either of the following reasons:
+A cart's `payment.session.state` can be `requires_source` for either of the following reasons:
 
 * No [primary ](../payments/sources/using-the-source-identifier.md#primary-payment-sources)or [secondary payment sources](../payments/sources/using-the-source-identifier.md#secondary-payment-sources) have yet been applied.
 * No primary payment source is applied and there are not enough [secondary payment sources](../payments/sources/using-the-source-identifier.md#secondary-payment-sources) such as [store credit](../consumer-browsing-experience-1/common-use-cases/applying-store-credit.md) to fully fund the transaction.
@@ -120,7 +120,7 @@ The payment session `state` typically transitions to `complete` once the order i
 
 Once a [primary payment source](../payments/sources/using-the-source-identifier.md#primary-payment-sources) is attached to a cart, we use it to fully fund the transaction.
 
-But when only [secondary payment sources](broken-reference) are attached, you need to confirm sufficient funds exist to cover the [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) `totalAmount`. If this isn't the case, when you convert the cart to an order, you receive the following error:
+But when only [secondary payment sources](broken-reference) are attached, you need to confirm sufficient funds exist to cover the [cart's ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts)`totalAmount`. If this isn't the case, when you convert the cart to an order, you receive the following error:
 
 {% tabs %}
 {% tab title="400 Bad Request" %}
@@ -140,9 +140,9 @@ But when only [secondary payment sources](broken-reference) are attached, you ne
 
 By comparing values in the cart's `payment.session`, you can determine how much additional funding, if any, is still required. The `amountContributed` represents the aggregated amount of all the cart's `payment.sources[]`. The `amountRemainingToBeContributed` is how much is needed to fully fund the transaction.
 
-If the `amountContributed` is equal to the checkout's `totalAmount` or the `amountRemainingToBeContributed` is zero, then you don't need to request any more payment methods from the customer. This means that once the [payment session is in the correct state](payment-sessions.md#session-state), and all [address requirements](creating-or-updating-a-cart/providing-address-information.md) are met, you can convert the cart to an order.
+If the `amountContributed` is equal to the cart's `totalAmount` or the `amountRemainingToBeContributed` is zero, then you don't need to request any more payment methods from the customer. This means that once the [payment session is in the correct state](payment-sessions.md#session-state), and all [address requirements](creating-or-updating-a-cart/providing-address-information.md) are met, you can convert the cart to an order.
 
-But if the `amountContributed` is less than the checkout's `totalAmount` or the `amountRemainingToBeContributed` is greater than zero, then the customer needs to supply additional payment methods before an order can be successfully created. However, this will only be the case when a [primary payment source](../payments/sources/using-the-source-identifier.md#primary-payment-sources) is not yet attached to the checkout. Once that's done, we use it to fully fund the transaction and `amountRemainingToBeContributed` drops to zero.
+But if the `amountContributed` is less than the cart's `totalAmount` or the `amountRemainingToBeContributed` is greater than zero, then the customer needs to supply additional payment methods before an order can be successfully created. However, this will only be the case when a [primary payment source](../payments/sources/using-the-source-identifier.md#primary-payment-sources) is not yet attached to the checkout. Once that's done, we use it to fully fund the transaction and `amountRemainingToBeContributed` drops to zero.
 
 ## Attaching a source
 
