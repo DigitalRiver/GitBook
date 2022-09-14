@@ -146,7 +146,7 @@ But if the `amountContributed` is less than the cart's `totalAmount` or the `amo
 
 ## Attaching a source
 
-You can [attach a source to a customer](../payments/sources/#attaching-a-payment-method-to-a-customer), [an order or cart](../payments/sources/#attaching-a-payment-method-to-an-order-or-cart), or [a payment option](../payments/sources/#attaching-a-source-to-a-payment-option). See [Source basics](../payments/sources/) for more information.
+You can [attach a source to a customer](../payments/sources/#attaching-a-payment-method-to-an-order-or-cart), or [an order or cart](../payments/sources/#attaching-a-payment-method-to-an-order-or-cart). See [Source basics](../payments/sources/) for more information.
 
 ## Retrieving available payment methods
 

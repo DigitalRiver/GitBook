@@ -85,39 +85,39 @@ The following example shows how to attach a payment method to an order or cart.
 {% endtab %}
 {% endtabs %}
 
-#### Attaching a payment method to a customer
-
-The following example shows how to attach a payment option to a customer.
-
-{% tabs %}
-{% tab title="POST /v1/shoppers/me/payment-options" %}
-```javascript
-{
-  "paymentOption": {
-    "nickName": "My Visa Card",
-    "isDefault": "true",
-    "sourceId": "61033d62-c0f4-4a7e-b844-07daf26ba84e"
-  }
-}                                                                                                                                                            
-```
-{% endtab %}
-{% endtabs %}
-
-#### Attaching a source to a payment option
+#### Attaching a payment method to a customer or payment option
 
 The Commerce API gives you the ability to save payment sources associated with a customer for later reuse. After you [submit a customer's payment details](../../general-resources/reference/digitalriver-object.md#creating-an-instance-of-drop-in), DigitalRiver.js will create a Source and return a `sourceId`.  You can then use that `sourceId` to [attach the Source to a payment option](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Payment-Options/paths/\~1v1\~1shoppers\~1me\~1payment-options/post).
+
+The following examples show how to attach a payment method to a customer or payment option.
 
 {% hint style="warning" %}
 You can only attach payment methods that [support recurring payments](../supported-payment-methods.md). Note that `storeCredit` does not support recurring payments and therefore, you cannot attach it as a payment option.
 {% endhint %}
 
 {% tabs %}
-{% tab title="cURL" %}
-```javascript
+{% tab title="Attaching source to a customer" %}
+<pre class="language-javascript" data-overflow="wrap"><code class="lang-javascript"><strong>curl --location --request POST 'https://&#x3C;&#x3C;host>>/v1/shoppers/me/payment-options' \
+</strong><strong>--header 'Content-Type:  application/json' \
+</strong>--header 'authorization: bearer ***\
+--data-raw '
+{
+  "paymentOption": {
+    "nickName": "My Visa Card",
+    "isDefault": "true",
+    "sourceId": "61033d62-c0f4-4a7e-b844-07daf26ba84e"
+  }
+}                                                                                                                                                            </code></pre>
+{% endtab %}
+
+{% tab title="Attaching a source to a payment option" %}
+{% code overflow="wrap" %}
+```json
 curl --location --request POST 'https://<<host>>/v1/shoppers/me/payment-options' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
---data-raw '{
+--data-raw '
+{
   "paymentOption": {
     "nickName": "My Token",
     "isDefault": "true",
@@ -125,6 +125,7 @@ curl --location --request POST 'https://<<host>>/v1/shoppers/me/payment-options'
   }
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
