@@ -4,7 +4,7 @@ description: Learn how to configure Credit Cards for DigitalRiver.js with Elemen
 
 # Configuring Credit Cards
 
-If you're using[ DigitalRiver.js with Elements](../), you can create a Credit Card payment method for your app or website in three easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a [Credit Card](../../../supported-payment-methods/credit-cards.md) payment method for your app or website in three easy steps:
 
 * [Step 1: Build a Credit Card source request object](credit-cards.md#step-1-build-a-credit-card-source-request-object)
 * [Step 2: Create a Credit Card source using DigitalRiver.js](credit-cards.md#step-2-create-a-credit-card-source-using-digitalriver-js)

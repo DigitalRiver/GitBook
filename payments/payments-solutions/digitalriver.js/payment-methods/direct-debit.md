@@ -4,14 +4,14 @@ description: Learn how to configure SEPA Direct Debit for DigitalRiver.js with E
 
 # Configuring SEPA Direct Debit
 
-You can find an example of integration [here](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/directdebit.html).
-
 If you're using[ DigitalRiver.js with Elements](../), you can create an [SEPA Direct Debit](../../../supported-payment-methods/sepa-direct-debit.md) payment method for your app or website in four easy steps:
 
 * [Step 1: Build a SEPA Direct Debit Source Request object](direct-debit.md#step-1-build-a-direct-debit-source-request-and-details-objects)
 * [Step 2: Create a SEPA Direct Debit source using DigitalRiver.js](direct-debit.md#step-2-create-a-direct-debit-source-using-digitalriver-js)
 * [Step 3: Authorize a SEPA Direct Debit source](direct-debit.md#step-3-authorize-a-direct-debit-source)
 * [Step 4: Use the authorized source](direct-debit.md#step-4-use-the-authorized-source)
+
+You can find an example of integration [here](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/directdebit.html).
 
 ## Step 1: Build a SEPA Direct Debit source request and details objects
 

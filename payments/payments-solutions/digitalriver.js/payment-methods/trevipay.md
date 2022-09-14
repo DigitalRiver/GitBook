@@ -4,7 +4,7 @@ description: Learn how to configure TreviPay for DigitalRiver.js with Elements.
 
 # Configuring TreviPay
 
-If you're using[ DigitalRiver.js with Elements](../), you can create a TreviPay payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a [TreviPay ](../../../supported-payment-methods/trevipay.md)payment method for your app or website in four easy steps:
 
 * [Step 1: Build the TreviPay object](trevipay.md#step-1-build-the-trevipay-object)
 * [Step 2: Create a TreviPay agreement source using DigitalRiver.js](trevipay.md#step-2-create-a-trevipay-agreement-source-using-digitalriver-js)
