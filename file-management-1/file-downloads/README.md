@@ -153,7 +153,7 @@ The following table describes the contents of a sales notification.
 
 The Sales Notification Feed contains many `amount` elements.
 
-A Line Item Satisfaction Refund allows you to refund money to the shopper because the shopper is upset or experienced undue hardship to get the product. The shopper is not required to return any product. See [Line-item level satisfaction refund](line-item-level-satisfaction-refund.md) for an example.
+A Line Item Satisfaction Refund allows you to refund money to the shopper because the shopper is upset or experienced undue hardship to get the product. The shopper is not required to return any product. See [Line-item level satisfaction refund](broken-reference) for an example.
 
 An Order Level Satisfaction Refund allows you to return money to the shopper when a shopper is upset or goes through undue hardship to get the product. The shopper is not required to return any product. See [Order-level satisfaction refund](order-level-satisfaction-refund.md) for an example.
 
