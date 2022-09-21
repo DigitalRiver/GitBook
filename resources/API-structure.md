@@ -358,7 +358,7 @@ function sessionToken() {
 ```
 {% endcode %}
 
-**Step 2: POST the dr\_session\_token to the oauth20 rsource, to get an anonymous shopper token.**
+**Step 2: POST the dr\_session\_token to the oauth20 resource, to get an anonymous shopper token.**
 
 {% tabs %}
 {% tab title="Request Sample" %}
