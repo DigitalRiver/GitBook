@@ -30,13 +30,13 @@ Use the information that follows to set up the integration of the customer credi
 
 First, use the following steps to configure the payment method and processor in the Business Manager.
 
-In the Business Manager, go to **Merchant Tools > Ordering > Payment Processors** and make ensure the BASIC\_CUSTOMER\_CREDIT payment processor is present.  If using a different payment processor, complete this step according to the use case.
+In the Business Manager, go to **Merchant Tools > Ordering > Payment Processors** and ensure the BASIC\_CUSTOMER\_CREDIT payment processor is present.  If using a different payment processor, complete this step according to the use case.
 
-![](<../.gitbook/assets/image (13).png>)
+![](<../.gitbook/assets/image (5).png>)
 
 Next, go to **Merchant Tools > Ordering > Payment Methods** in the Business Manager and ensure the GIFT\_CERTIFICATE payment method is present and enabled. If using a different payment method, complete this step according to the use case. The BASIC\_CUSTOMER\_CREDIT payment processor is selected for this payment method. Select the payment processor from the previous step.
 
-![](<../.gitbook/assets/image (27).png>)
+![](<../.gitbook/assets/image (25).png>)
 
 ### Use the controller endpoints
 
@@ -64,7 +64,7 @@ Modify the code as shown in the screenshot below to create a new payment instrum
 customerCreditPI = currentBasket.createGiftCertificatePaymentInstrument('customer_credit_code', new Money(customerCreditAmount, currentBasket.getCurrencyCode()));
 ```
 
-![](<../.gitbook/assets/image (15).png>)
+![](<../.gitbook/assets/image (12).png>)
 
 _Request type:_ **POST**
 
@@ -290,7 +290,7 @@ The following example shows a response if an error occurs removing a Customer Cr
 }
 ```
 
-_Status:_ Error occurred removing a Customer Credit Source created successfully.
+_Status:_ Error occurred removing a Customer Credit Source.
 
 _Response body schema:_ `application/json`
 
@@ -410,7 +410,7 @@ _Status:_ Error occurred retrieving CustomerCredits information.
 
 _Response body schema:_ `application/json`
 
-| Parameter    | Description                                                                                       | Type     |
-| ------------ | ------------------------------------------------------------------------------------------------- | -------- |
-| error        | Attempt to retrieve CustomerCredits informatio and load customer credit sources was unsuccessful. | Boolean. |
-| errorMessage | Error message.                                                                                    | String.  |
+| Parameter    | Description                                                                                        | Type     |
+| ------------ | -------------------------------------------------------------------------------------------------- | -------- |
+| error        | Attempt to retrieve CustomerCredits information and load customer credit sources was unsuccessful. | Boolean. |
+| errorMessage | Error message.                                                                                     | String.  |

@@ -167,28 +167,6 @@ This change extended the payment condition with the `‘DIGITAL_RIVER_DROPIN’`
 **Important**: The `DIGITAL_RIVER_DROPIN` payment integration represents not one but multiple payment types such as credit card, PayPal, Wire Transfer, and so on. The Drop-in integration provides the selection of payment types, and the client-side/backend scripts handle it. We designed this cartridge mainly to handle the credit card payment type, though it will also successfully process any other payment type provided by the Drop-in integration. To add any business logic for a specific payment type or provide shoppers with a better customer experience, you can extend [Drop-in data handlers](./#external-interfaces).
 {% endhint %}
 
-The following examples demonstrate how the Customer Credits section was added to the accordion component on the billing page. It also adds leading lines to this section. Refer to the highlighted changes section in the next screenshot.
-
-```
-<div class="row leading-lines">
-    <isset name="index" value="1" scope="page" />
-    <isloop items="${pdict.order.billing.payment.selectedPaymentInstruments}" var="payment">
-        <!-- @IG: Modify the following condition depending on your implementation of secondary payment -->
-        <isif condition="${payment.paymentMethod === 'GIFT_CERTIFICATE'}" />
-            <div class="col-6 start-lines">
-                <span class="order-receipt-label">${Resource.msg('label.order.sales.customerCredit','digitalriver', null) + ' ' + index++}</span>
-            </div>
-            <div class="col-6 end-lines">
-                <div class="text-right"><span>${payment.formattedAmount}</span></div>
-            </div>
-        </isif>
-    </isloop>
-</div>
-
-```
-
-![](../.gitbook/assets/6\_600\_leading\_lines\_pmntoptions\_temp.jpg)
-
 ### Billing&#x20;
 
 Use the billing (`billing.isml`) template to add accordion components to the Billing page. The following image shows the out-of-the-box (OOTB) Payment section of the Checkout page for Salesforce B2C Link Cartridge.
@@ -207,7 +185,7 @@ Added the accordion components to the billing page. In this example, accordion b
 <div class="accordion" id="accordionBilling" data-digital-cart="${pdict.isDigitalCart}">
 ```
 
-![](<../.gitbook/assets/image (24).png>)
+![](<../.gitbook/assets/image (10).png>)
 
 Introduced a new templated purchase site within the parent template.
 
@@ -300,7 +278,7 @@ Added the Digital River compliance section to the page.
 </div>
 ```
 
-![](<../.gitbook/assets/Replacement 1.1 Confirmation (1).png>)
+![](<../.gitbook/assets/Replacement 1.1 Confirmation.png>)
 
 ![](<../.gitbook/assets/Replacement 1.1.a Confirmation.png>)
 
@@ -310,7 +288,7 @@ Added a Digital River styles file.
 assets.addCss('/css/digitalRiver.css');
 ```
 
-![](<../.gitbook/assets/image (28).png>)
+![](<../.gitbook/assets/image (14).png>)
 
 Added an `include`of `delayedPaymentInstructions` (first highlighted section).
 
@@ -327,7 +305,7 @@ Added an `include` of `delayedPaymentInstructions` (second highlighted section)<
 
 ```
 
-![](<../.gitbook/assets/image (14).png>)
+![](<../.gitbook/assets/image (24).png>)
 
 ### Checkout&#x20;
 
@@ -381,19 +359,6 @@ Added the Digital River compliance section to the checkout page.
 </div>
 ```
 
-Added rows (highlighted section).
-
-```
-<isset name="submitPaymentToggle" value="${pdict.customer.registeredUser && !!pdict.customer.customerPaymentInstruments.length}" scope="page" />
-<isset name="submitPaymentShow" value="${!pdict.digitalRiverUseDropInFeature || (pdict.customer.registeredUser && pdict.customer.customerPaymentInstruments.length && (pdict.amountRemainingToBeContributed !== 0 || pdict.primarySource))  ? '' : 'digitalriver-hide'}" scope="page" />
-```
-
-Extended the `<button>` tag (highlighted section).
-
-```
-<button class="btn btn-primary btn-block submit-payment ${submitPaymentShow}" type="submit" name="submit" value="submit-payment" data-toggle="${submitPaymentToggle}">
-```
-
 ![](<../.gitbook/assets/Replacement 3 checkout.png>)
 
 ### Order total summary
@@ -416,7 +381,7 @@ Added the "Sales Tax" information text as conditional HTML content.
 </isif>
 ```
 
-![](<../.gitbook/assets/image (19).png>)
+![](<../.gitbook/assets/image (13).png>)
 
 Added the **Digital River Taxations** section.
 
@@ -494,9 +459,9 @@ The following scripts and their changes are described in this section:
 
 ### Checkout script
 
-The checkout (`checkout.js`) script is loaded on the Checkout page and includes the page frontend event handler. The script loads the base event handler (`checkout.js`) and additionally loads the Digital River US Tax Certificate handler (`stdrCertificate.js`) on the shipping stage of the checkout and the Global Tax ID handler (`drTaxId.js`) on the billing stage of checkout.
+The checkout (`checkout.js`) script is loaded on the Checkout page and includes the page frontend event handler. The script loads the base event handler (`checkout.js`) and additionally loads the Digital River US Tax Certificate handler (`drCertificate.js`) on the shipping stage of the checkout and the Global Tax ID handler (`drTaxId.js`) on the billing stage of checkout.
 
-**Script path**: `cartridge/client/default/js/checkout/billing.js`
+**Script path**: `cartridge/client/default/js/checkout.js`
 
 Included the additional scripts on the checkout page.
 
@@ -507,6 +472,8 @@ processInclude(require('./checkout/drTaxId'));
 ```
 
 ![](../.gitbook/assets/Checkout-scripts.png)
+
+**Script path:** cartridge/client/default/js/checkout/checkout.js
 
 The checkout script (`checkout.js`) is loaded on the Checkout page and includes a basic page frontend event handler. The changes introduced by this script extend the base functionality to correctly handle Digital River extensions.
 
@@ -599,13 +566,11 @@ drHelper.retrieveStoredCard(drStoredPayment, defer, placeOrder);
 
 ![](../.gitbook/assets/retrieveStoredCard-600.png)
 
-Modified to allow for processing of an AJAX response on the shipping stage processing (highlighted section).&#x20;
-
 ```
 $('body').trigger('digitalRiver:taxCertificate', data.digitalRiverTaxExemptData);
 ```
 
-![](<../.gitbook/assets/image (26).png>)
+![](<../.gitbook/assets/image (2).png>)
 
 ### Billing script
 
@@ -619,7 +584,7 @@ Modified _updatePaymentInformation_ function. Also modified row (see highlighted
 $('[name$=' + element + ']', form).val(attrs[attr]).trigger('change');
 ```
 
-![](<../.gitbook/assets/image (31).png>)
+![](<../.gitbook/assets/image (7).png>)
 
 The default storefront on the Checkout page uses the payment instruments (`paymentInstruments.js`) script. This JavaScript includes the frontend handler for payment cards. This frontend JavaScript must be completed and compiled before used on the site. When this JavaScript  is loaded on the Checkout page, the script loads the base handler (`paymentInstruments.js`) and additionally loads the handler for the Digital River payment cards (`paymentInstrumentsDropIn.js`).
 
@@ -655,6 +620,14 @@ if (order.billing.payment && order.billing.payment.selectedPaymentInstruments
 ```
 
 ![](../.gitbook/assets/seletedPaymentInstruments-600.png)
+
+Modify the _selectBillingAddress_ function. An example is shown in line 267 of the following screenshot:
+
+```
+$('[name$=' + element + ']', form).val(attrs[attr]).trigger('change');
+```
+
+<figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
 Add the `clearCreditCardForm` **** function content and include the following condition:
 
@@ -730,7 +703,7 @@ Add summary info rows (highlighted section).
 }
 ```
 
-![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (8).png>)
 
 Add rows (highlighted section).
 
@@ -757,7 +730,7 @@ if (totals.isImporterOfRecordTax || (totals.duty && totals.duty.value > 0)) {
     }
 ```
 
-![](<../.gitbook/assets/image (29).png>)
+![](<../.gitbook/assets/image (18).png>)
 
 ## Drop-in data handlers <a href="#external-interfaces" id="external-interfaces"></a>
 

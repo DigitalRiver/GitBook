@@ -20,7 +20,7 @@ This section describes changes that have been made to the Customer Credit cartri
 
 Use the Checkout (`checkout.isml`) template to add the Digital River styles, the Drop-in styles, and the checkbox needed to confirm agreement with the Terms of Sale and the Privacy Policy of Digital River to the Checkout page when the customer is ready to place an order. &#x20;
 
-You can also use it with the Customer Credit feature to customize that feature for your specific integration. The rest of this section presents you with some examples of how to customize the Checkout template specifically for use with the customer credit feature.
+The rest of this section presents you with examples that demonstrate how to customize the Checkout template specifically for use with the customer credit feature as implemented in the OOTB cartridge.
 
 #### Checkout template customization example 1
 
@@ -34,13 +34,13 @@ Added the Digital River Customer Credit template Checkout page (see highlighted 
 <isinclude template="digitalriver/credits/customerCreditTotalCheckout" />
 ```
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image (17).png>)
 
 #### Checkout template customization example 2
 
 Follow this example to customize the Checkout template to add the Digital River styles, the Drop-in styles, and the check box to confirm agreement with the Terms of Sale and the Privacy Policy of Digital River to the Checkout page. Make these changes to add important features to your Customer Customer Credit application.
 
-**Template**: `cartridge/templates/default/checkout/checkout.isml`
+**Template**:`int_digitalriver_customercredit/cartridge/templates/default/checkout/checkout.isml`
 
 ![](../.gitbook/assets/Payment-template-terms-of-sale.png)
 
@@ -63,13 +63,6 @@ Added the Digital River confirm disclosure checkbox to the checkout page.
 
 ```markup
 <isinclude template="digitalriver/confirmDisclosure" />
-```
-
-Added a condition that will control the submit payment button display.
-
-```
-<isset name="submitPaymentShow" value="${!pdict.digitalRiverUseDropInFeature || (pdict.customer.registeredUser && pdict.customer.customerPaymentInstruments.length)  ? '' : 'digitalriver-hide'}" scope="page" />
-<button class="btn btn-primary btn-block submit-payment ${submitPaymentShow}" type="submit" name="submit" value="submit-payment">
 ```
 
 Added the Digital River compliance section to the checkout page.
@@ -99,28 +92,6 @@ Extended the `<button>` tag (highlighted section).
 
 ![](<../.gitbook/assets/Replacement 3 checkout.png>)
 
-### Customize the Customer Credit Checkout template
-
-Make changes to the Customer Credit Checkout template to add the Customer Credits section to the accordion area in the billing page.
-
-**Template**: `int_digitalriver_customercredit/cartridge/templates/default/checkout/checkout.isml`
-
-Added rows. (see highlighted area).
-
-```
-<isset name="submitPaymentToggle" value="${pdict.customer.registeredUser && !!pdict.customer.customerPaymentInstruments.length}" scope="page" />
-<isset name="submitPaymentShow" value="${!pdict.digitalRiverUseDropInFeature || (pdict.customer.registeredUser && pdict.customer.customerPaymentInstruments.length && (pdict.amountRemainingToBeContributed !== 0 || pdict.primarySource))  ? '' : 'digitalriver-hide'}" scope="page" />
-
-```
-
-Extended button tag. (see highlighted area).
-
-```
-<button class="btn btn-primary btn-block submit-payment ${submitPaymentShow}" type="submit" name="submit" value="submit-payment" data-toggle="${submitPaymentToggle}">
-```
-
-![](https://lh3.googleusercontent.com/jWdX2MV9effvcdIKaPq7hKxqVpztkym8vkTZjbMZkGTyw0aMC1VB9EEAXejYKMGpa9G\_AOkd2oPvFVxj52TWV\_-zujNHbgMMJVhpzNkXwzzZCmTG7Y90zK3NWkIWaCJIBz9gpvng)
-
 ### Customize the paymentOptionsSummary template
 
 Use the following changes to add the Customer Credits section to the payment info section of the Order Review page in the `paymentOptionsSummary` template.
@@ -147,11 +118,7 @@ Added additional rows (line 2).
 
 ```
 
-![](<../.gitbook/assets/image (20).png>)
-
-Changed the code to support the `GIFT_CERTIFICATE` payment method used for that specific Customer Credit use case (line 6).
-
-![](<../.gitbook/assets/image (6).png>)
+![](<../.gitbook/assets/image (9).png>)
 
 ## Customize customer credit and related scripts
 
@@ -163,7 +130,7 @@ Read this section to understand changes made to the `CustomerCredit` cartridge a
 
 ### Customize the Checkout script
 
-You can customize the cartridge Checkout script (`int_digitalriver_customercredit/cartridge/client/default/js/checkout/billing.js`) to update the customer credit amount in the payment section. Refer to the Checkout script section of [Extend the Salesforce B2C LINK Cartridge](./) for an example.
+You can customize the cartridge Checkout script (`int_digitalriver_customercredit/cartridge/client/default/js/checkout/checkout.js`) to update the customer credit amount in the payment section. Refer to the Checkout script section of [Extend the Salesforce B2C LINK Cartridge](./) for an example.
 
 ### Customize the Billing Script
 
@@ -228,9 +195,9 @@ output.methods.updatePaymentInformation = function (order) {
 }
 ```
 
-![](<../.gitbook/assets/image (9).png>)
+![](<../.gitbook/assets/image (21).png>)
 
-![](<../.gitbook/assets/image (30).png>)
+![](<../.gitbook/assets/image (20).png>)
 
 Modify the `labelCustomerCredit` value to align with the value you want to be displayed in the user interface.
 
@@ -244,7 +211,7 @@ Modify the code as follows depending on the payment method being used for Custom
 if (paymentInstruments[i].paymentMethod === 'GIFT_CERTIFICATE' && paymentInstruments[i].giftCertificateCode === 'customer_credit_code') {
 ```
 
-![](<../.gitbook/assets/image (10).png>)
+![](<../.gitbook/assets/image (27).png>)
 
 ### Customize the Summary script
 
@@ -262,7 +229,7 @@ Add a totals row to the end of the function `updateTotals`.&#x20;
 drHelper.updateCustomerCreditTotal(totals.adjustedGrandTotal);
 ```
 
-![](<../.gitbook/assets/image (21).png>)
+![](<../.gitbook/assets/image (29).png>)
 
 ## Customize server scripts
 
@@ -273,23 +240,22 @@ This section describes changes you can make to customize server script code to w
 Change the Payment server script (`cartridge/models/payment.js`) to implement the customer credit feature.  Modify the code at line 23 depending on the payment method that is used for Customer Credit.
 
 ```
-} else if (paymentInstrument.paymentMethod === 'GIFT_CERTIFICATE'
-   && paymentInstrument.giftCertificateCode === 'customer_credit_code') {
+} else if (paymentInstrument.paymentMethod === 'GIFT_CERTIFICATE' && paymentInstrument.giftCertificateCode === 'customer_credit_code') {
 ```
 
-![](<../.gitbook/assets/image (8).png>)
+![](<../.gitbook/assets/image (11).png>)
 
 #### CheckoutHelper server script
 
 You can also make changes to the `checkoutHelper` server script (`cartridge/scripts/checkout/checkoutHelpers.js`) to implement the customer credit feature. Modify the `calculatePaymentTransaction` function at line 13 depending on your method of supporting multiple payment instruments.
 
-![](<../.gitbook/assets/image (25).png>)
+![](<../.gitbook/assets/image (22).png>)
 
 #### Basic\_customer\_credit script
 
 This script was added for testing purposes only and SHOULD NOT be used as is. Either delete it or modify it based on the payment method that is being used for Customer Credit.
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (23).png>)
 
 #### drTaxHelper script
 
@@ -305,7 +271,7 @@ var paymentInstruments = basket.getGiftCertificatePaymentInstruments();
 return (paymentInstrument.giftCertificateCode === 'customer_credit_code')
 ```
 
-![](<../.gitbook/assets/image (22).png>)
+![](<../.gitbook/assets/image (15).png>)
 
 Modify the `resetBasketCheckoutData` function depending on the payment method used for Customer Credit.
 
@@ -317,4 +283,4 @@ var paymentInstruments = basket.getGiftCertificatePaymentInstruments();
 if (paymentInstrument.giftCertificateCode === 'customer_credit_code') {
 ```
 
-![](<../.gitbook/assets/image (5).png>)
+![](../.gitbook/assets/image.png)

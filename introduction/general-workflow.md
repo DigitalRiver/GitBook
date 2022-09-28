@@ -34,7 +34,7 @@ This integration cartridge contains API integrations that form requests, parse r
 
 This integration cartridge delivers adjustments and extensions to existing storefront functionality.&#x20;
 
-![](../.gitbook/assets/CARTRI\_1.png)
+![](<../.gitbook/assets/CARTRI\_1 (1).png>)
 
 ### int\_digitalriver\_webhooks
 
@@ -48,7 +48,7 @@ This integration cartridge processes Digital River API customer credit requests.
 
 The following sequence diagram shows the checkout interaction between the Shopper, Salesforce B2C Commerce, the Salesforce B2C Commerce App, and Digital River.
 
-{% file src="../.gitbook/assets/salesforceB2C_chkout_sequencediagram-v2.1_v2.2.png" %}
+{% file src="../.gitbook/assets/salesforceB2C_chkout_sequencediagram-v2.1_v2.2 (1).png" %}
 SalesforceB2C\_sequencediagram-V2.1.png
 {% endfile %}
 
@@ -56,7 +56,7 @@ SalesforceB2C\_sequencediagram-V2.1.png
 
 The following sequence diagram shows the US tax exemption interaction between the Shopper, Salesforce B2C Commerce, the Salesforce B2C Commerce App, and Digital River.
 
-{% file src="../.gitbook/assets/SalesforceB2C_USTaxExemptionFlow-2.1.png" %}
+{% file src="../.gitbook/assets/SalesforceB2C_USTaxExemptionFlow-2.1 (2).png" %}
 SalesforceB2CUSTaxExemptionFlow-2.1.png
 {% endfile %}
 
@@ -72,7 +72,7 @@ SalesforceB2C\_TaxIdentifierFlow-2.1.png
 
 The following sequence diagram shows the interaction of the customer credit functionality with the Shopper, Salesforce B2C Commerce, the Salesforce B2C Commerce App, and Digital River.
 
-{% file src="../.gitbook/assets/salesforceB2C_CustomerCreditFlow-2.2 (1).png" %}
+{% file src="../.gitbook/assets/salesforceB2C_CustomerCreditFlow-2.2.png" %}
 
 ## Privacy and payments <a href="#privacy-and-payments" id="privacy-and-payments"></a>
 
