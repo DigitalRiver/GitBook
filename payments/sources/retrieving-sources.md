@@ -16,13 +16,11 @@ This identifier was returned when you used the [DigitalRiver.js](../payments-sol
 
 {% tabs %}
 {% tab title="cURL" %}
-{% code overflow="wrap" %}
 ```
 curl --location --request GET 'https://api.digitalriver.com/sources/e59c8303-139a-4077-bd26-78d20b43d52b' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer '<API_key>' \
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -34,7 +32,6 @@ Only the last four digits of credit card numbers are returned by a `GET` Source 
 
 {% tabs %}
 {% tab title="JSON" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "id": "e59c8303-139a-4077-bd26-78d20b43d52b",
@@ -68,7 +65,6 @@ Only the last four digits of credit card numbers are returned by a `GET` Source 
     "liveMode": false
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -85,7 +81,6 @@ You can retrieve the Sources associated with a Shopper by making a get shopper b
 
 {% tabs %}
 {% tab title="cURL" %}
-{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/payment-options/' \
 --header 'Content-Type: application/json' \
@@ -98,7 +93,6 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/paym
   }
 }'
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -111,7 +105,6 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/paym
 
 {% tabs %}
 {% tab title="Request body" %}
-{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/payment-options/' \
 --header 'Content-Type: application/json' \
@@ -124,7 +117,6 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/paym
   }
 }'
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -134,7 +126,6 @@ Get the shopper's payment options using: `GET https://{{dispatchHost}}/v1/shoppe
 
 {% tabs %}
 {% tab title="Response body" %}
-{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/payment-options/' \
 --header 'Content-Type: application/json' \
@@ -157,7 +148,6 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/paym
     }
 }'
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 

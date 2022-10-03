@@ -6,13 +6,11 @@ description: Learn how to use the Digital River publishable API key.
 
 Use the `DigitalRiver(publishableAPIKey)` object to create an instance of the DigitalRiver object. This is called a Digital River publishable API key.
 
-{% code overflow="wrap" %}
 ```javascript
 let digitalriver = new DigitalRiver("YOUR_PUBLIC_API_KEY", {
      "locale": "en-us"
 });
 ```
-{% endcode %}
 
 This function accepts an optional `options` object using the following format: `DigitalRiver(publishableApiKey[, options])`
 
@@ -26,10 +24,8 @@ You may specify the following options within this object.
 
 ‌The following example localizes the various display and error strings to English (United States).
 
-{% code overflow="wrap" %}
 ```
 let digitalriver = new DigitalRiver("YOUR_PUBLIC_API_KEY", {     "locale": "en-us"});
 ```
-{% endcode %}
 
 ‌

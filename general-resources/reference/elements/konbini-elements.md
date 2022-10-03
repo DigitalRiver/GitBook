@@ -12,7 +12,6 @@ To create a Konbini element, you should use the createElement function exposed t
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 var konbiniOptions = {
     classes: {
@@ -56,7 +55,6 @@ var konbiniOptions = {
  
 let konbini = digitalriverpayments.createElement('konbini', konbiniOptions);
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -106,7 +104,6 @@ Call this function to update the Konbini element's data.
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 let konbiniOptions = {
     classes: {
@@ -150,7 +147,6 @@ let konbiniOptions = {
  
 konbini.update(konbiniOptions);
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -171,13 +167,11 @@ The Ready event triggers when the Konbini Element has loaded and is available to
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 konbini.on('ready', function(event) {
     //konbini element is ready and can accept an update call
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 

@@ -12,7 +12,6 @@ To create an Online Banking element, use the `createElement` function exposed th
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 var onlineBankingOptions = {
     classes: {
@@ -60,7 +59,6 @@ var onlineBankingOptions = {
  
 onlineBanking = digitalriverpayments.createElement('onlinebanking', onlineBankingOptions);
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -110,7 +108,6 @@ Call this function to update the Online Banking element's data.
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 let onlineBankingOptions = {
     classes: {
@@ -158,7 +155,6 @@ let onlineBankingOptions = {
  
 onlineBanking.update(onlineBankingOptions);
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 

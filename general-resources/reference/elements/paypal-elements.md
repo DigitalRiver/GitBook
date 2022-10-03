@@ -12,7 +12,6 @@ To create a PayPal element, use the `createElement` function exposed through the
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 var paypal = digitalriverpayments.createElement('paypal', {
     style: {
@@ -36,7 +35,6 @@ var paypal = digitalriverpayments.createElement('paypal', {
  
 paypalElement.mount('drjs-paypal');
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -106,7 +104,6 @@ Call this function to update the PayPal element's data.&#x20;
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 let paypalData = {
     style: {
@@ -130,7 +127,6 @@ let paypalData = {
  
 paypal.update(paypalData);
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -151,13 +147,11 @@ The Ready event triggers when the PayPal Element has loaded and is available to 
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 paypal.on('ready', function(event) {
     //paypal element is ready and can accept an update call
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -225,7 +219,6 @@ The Source event triggers when the Customer completes their interaction with the
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 paypal.on('source', function(event) {
     var source = event.source;
@@ -233,7 +226,6 @@ paypal.on('source', function(event) {
     //pass the source to your back end for further processing.
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 

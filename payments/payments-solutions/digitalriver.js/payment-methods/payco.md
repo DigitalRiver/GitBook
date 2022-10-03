@@ -43,7 +43,7 @@ The PayCo Source Details object requires the following fields.
 Use the DigitalRiver.js library to create and mount elements to the HTML container.\\
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../master/cart/removing-a-specific-applied-offer/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% code overflow="wrap" %}

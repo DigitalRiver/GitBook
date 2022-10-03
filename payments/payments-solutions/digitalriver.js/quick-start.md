@@ -21,7 +21,7 @@ Integrate the DigitalRiver.js into your app or website in four easy steps:
 
 To use DigitalRiver.js as part of your experience, you must include the library and your API key. The key shown in the following example is your public API key. The DigitalRiver.js `digitalriver.createSource()` or `digitalriver.createElement()` methods use the `var` that you assigned.
 
-{% code title="HTML" overflow="wrap" %}
+{% code title="HTML" %}
 ```markup
 <script src="https://js.digitalriverws.com/v1/DigitalRiver.js"></script>
  
@@ -35,7 +35,7 @@ var digitalriver = new DigitalRiver('YOUR_PUBLIC_API_KEY');
 
 DigitalRiver.js provides and hosts HTML elements that you can place in your payments form to securely collect credit card details. You can seamlessly integrate these elements into an outside-hosted experience.
 
-{% code title="HTML" overflow="wrap" %}
+{% code title="HTML" %}
 ```markup
 <form id="payment-form">
     <div class="row">
@@ -61,7 +61,7 @@ DigitalRiver.js provides and hosts HTML elements that you can place in your paym
 
 Use the DigitalRiver.js library to [create ](../../../general-resources/reference/digitalriver-object.md#creating-elements)and [mount ](../../../general-resources/reference/elements/#element.mount)an element to the container created in [step 2](quick-start.md#step-2.-create-your-payment-form).
 
-{% code title="HTML" overflow="wrap" %}
+{% code title="HTML" %}
 ```markup
 var options = {
     style: {
@@ -85,7 +85,7 @@ cardNumber.mount('card-number');
 
 Follow the same pattern for additional credit card fields.
 
-{% code title="HTML" overflow="wrap" %}
+{% code title="HTML" %}
 ```markup
 //Create your Card Expiration element
 var cardExpiration = digitalriver.createElement('cardexpiration', options);
@@ -113,7 +113,7 @@ Create an event handler that will interact with the DigitalRiver.js library on s
 **Prerequisite**:  To create a Payment Source for a credit card, you must either know or capture the billing address information for the entered credit card. The `createSource()` method submits this information and uses it to create a payment source.
 {% endhint %}
 
-{% code title="HTML" overflow="wrap" %}
+{% code title="HTML" %}
 ```markup
 // Create a token or display an error when the form is submitted.
     var paymentForm = document.getElementById('payment-form');
