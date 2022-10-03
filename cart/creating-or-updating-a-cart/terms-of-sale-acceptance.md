@@ -27,7 +27,8 @@ Create a Cart object with a `POST` request:
 
 {% tabs %}
 {% tab title="Request body" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "cart": {
     "ipAddress": "10.24.2.28"
@@ -35,6 +36,7 @@ Create a Cart object with a `POST` request:
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -42,7 +44,8 @@ A `201 Created` response returns a Cart object:
 
 {% tabs %}
 {% tab title="Response body" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "uri": "https://api.digitalriver.com/v1/shoppers/me/carts/active",
     "paymentMethods": {},
@@ -61,6 +64,7 @@ A `201 Created` response returns a Cart object:
     "pricing": {}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -74,7 +78,7 @@ If you chose **Shopper passively accepts terms through order submission**, the c
 
 ![](../../.gitbook/assets/passive-sales-terms-of-acceptance-checkbox.png)
 
-### Customer actively accepts the TOS
+### The customer actively accepts the TOS
 
 If you chose **Shopper actively accepts terms before completing the purchase**, the customer must click the checkbox to accept the TOS. Sites based in the EU require this setting.
 

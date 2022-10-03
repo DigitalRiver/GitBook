@@ -60,7 +60,8 @@ You can retrieve the [shipping options for a cart](https://www.digitalriver.com/
 
 {% tabs %}
 {% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "shippingOption": {
         "uri": "http://dispatch-test.digitalriver.com/v1/shoppers/me/carts/active/shipping-options/167400",
@@ -82,5 +83,6 @@ You can retrieve the [shipping options for a cart](https://www.digitalriver.com/
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

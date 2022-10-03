@@ -31,7 +31,7 @@ To integrate HGOP2 with PGP encryption:
 
 When you create a store credit source using [`POST /sources`](https://www.digitalriver.com/docs/commerce-api-reference/#operation/createSources), the sources array will contain a source with a `type` of `customerCredit`.
 
-{% code title="JSON" %}
+{% code title="JSON" overflow="wrap" %}
 ```json
 {
     "type": "customerCredit",
@@ -53,7 +53,7 @@ When you create a store credit source using [`POST /sources`](https://www.digita
 
 Accept the store credit source in the HGOP2 request body and create the payment information with the source.
 
-{% code title="XML" %}
+{% code title="XML" overflow="wrap" %}
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <CreateCartRequest xmlns="http://integration.digitalriver.com/HGOP2">

@@ -20,7 +20,8 @@ Optional. Send a [`GET /v1/shopper/me/carts/active/tax-registrations/schema`](ht
 
 {% tabs %}
 {% tab title="Schema response body" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "$schema": http://json-schema.org/draft-04/schema#,
     "id": https://dispatch-test.digitalriver.com:443/cart-api/active/tax-registrations/schema,
@@ -171,14 +172,16 @@ Optional. Send a [`GET /v1/shopper/me/carts/active/tax-registrations/schema`](ht
     "liveMode": false
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
-Send a [`POST /v1/shopper/me/carts/active/tax-registrations`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Tax-Registration/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1tax-registrations/post) request to attach the tax identifier to the cart.  The following examples show the request body or response for `customerType` with the value of `B` for business shopper and `I` for individual shopper. You determine the  value for the `customerType` enumerations in the schema when you attach it to the cart. ****&#x20;
+Send a [`POST /v1/shopper/me/carts/active/tax-registrations`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Tax-Registration/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1tax-registrations/post) request to attach the tax identifier to the cart.  The following examples show the request body or response for `customerType` with the value of `B` for the business shopper and `I` for the individual shopper. You determine the value for the `customerType` enumerations in the schema when you attach it to the cart. ****&#x20;
 
 {% tabs %}
 {% tab title="Tax-registrations response body for Business shopper" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "customerType": "B",
     "taxRegistrations": [
@@ -193,10 +196,12 @@ Send a [`POST /v1/shopper/me/carts/active/tax-registrations`](https://www.digita
     ]
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Tax registrations response body for Individual shopper" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "customerType": "I",
     "taxRegistrations": [
@@ -208,6 +213,7 @@ Send a [`POST /v1/shopper/me/carts/active/tax-registrations`](https://www.digita
 }
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -215,7 +221,8 @@ If [Global Tax ID Management is not enabled](https://help.digitalriver.com/help/
 
 {% tabs %}
 {% tab title="409 Not Found" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "errors": [
         {
@@ -226,15 +233,17 @@ If [Global Tax ID Management is not enabled](https://help.digitalriver.com/help/
     ]
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 Optional. Send a `GET /v1/shopper/me/carts/active` request to confirm the tax information is present. The following examples show the response for `customerType` with the value of `B` for a business shopper and `I` for an individual shopper.&#x20;
 
 {% tabs %}
-{% tab title="Active response body for Business shopper" %}
-```javascript
-{
+{% tab title="Active response body for a Business shopper" %}
+{% code overflow="wrap" %}
+```json
+JSO{
     "cart": {
     ...
         "pricing": {
@@ -290,10 +299,12 @@ Optional. Send a `GET /v1/shopper/me/carts/active` request to confirm the tax in
 }
 
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Active response body for Individual shopper" %}
-```javascript
+{% tab title="Active response body for an Individual shopper" %}
+{% code overflow="wrap" %}
+```json
 {
     "cart": {
     ...
@@ -347,6 +358,7 @@ Optional. Send a `GET /v1/shopper/me/carts/active` request to confirm the tax in
 }
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -360,7 +372,8 @@ The following example shows the response body for the cart.
 
 {% tabs %}
 {% tab title="Submit cart response body" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "submitCart": {
         "order": {
@@ -571,6 +584,7 @@ The following example shows the response body for the cart.
 }
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -594,7 +608,8 @@ If [Global Tax ID Management is not enabled](https://help.digitalriver.com/help/
 
 {% tabs %}
 {% tab title="409 Not Found" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "errors": [
         {
@@ -604,5 +619,6 @@ If [Global Tax ID Management is not enabled](https://help.digitalriver.com/help/
     ]
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

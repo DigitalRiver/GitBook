@@ -10,11 +10,13 @@ Use the `GET /shoppers/token` resource to create an anonymous (limited access) o
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request GET 'https://api.digitalriver.com/shoppers/me/carts/active' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -22,7 +24,8 @@ A successful request returns a `200 OK` response.
 
 {% tabs %}
 {% tab title="200 OK response" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "uri": "https://api.digitalriver.com/v1/shoppers/me/carts/active",
   "paymentMethods": {
@@ -150,6 +153,7 @@ A successful request returns a `200 OK` response.
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -163,12 +167,12 @@ All of the resources contained in the Cart can be leveraged to modify specific c
 **Required**: A level 3 API key, a legal/contract amendment, and PCI documentation are required to pass customer credit card information through the [Cart ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Shopper)resource. Please reach out to your Account Manager if you are interested in this capability.
 {% endhint %}
 
-<mark style="background-color:orange;">For additional information on updating a cart, see the following topics:</mark>
+For additional information on updating a cart, see the following topics:
 
-* <mark style="background-color:orange;"></mark>[<mark style="background-color:orange;">Adding a product to a cart</mark>](adding-a-product-to-a-cart.md)<mark style="background-color:orange;"></mark>
-* <mark style="background-color:orange;"></mark>[<mark style="background-color:orange;">Applying an offer</mark>](./#applying-an-offer)<mark style="background-color:orange;"></mark>
-* <mark style="background-color:orange;"></mark>[<mark style="background-color:orange;">Applying a coupon code</mark>](./#applying-a-coupon-code)<mark style="background-color:orange;"></mark>
-* <mark style="background-color:orange;"></mark>[<mark style="background-color:orange;">Capturing the customer's IP address</mark>](shopper-ip-address.md)<mark style="background-color:orange;"></mark>
-* <mark style="background-color:orange;"></mark>[<mark style="background-color:orange;">Providing address information</mark>](providing-address-information.md)<mark style="background-color:orange;"></mark>
-* [<mark style="background-color:orange;">Adding required information for specific payment methods</mark>](adding-required-information-for-specific-payment-methods.md)<mark style="background-color:orange;"></mark>
-* <mark style="background-color:orange;"></mark>[<mark style="background-color:orange;">Capturing the Terms of Sale (TOS) acceptance</mark>](terms-of-sale-acceptance.md)<mark style="background-color:orange;"></mark>
+* [Adding a product to a cart](adding-a-product-to-a-cart.md)
+* [Applying an offer](./#applying-an-offer)
+* [Applying a coupon code](./#applying-a-coupon-code)
+* [Capturing the customer's IP address](shopper-ip-address.md)
+* [Providing address information](providing-address-information.md)
+* [Adding required information for specific payment methods](adding-required-information-for-specific-payment-methods.md)
+* [Capturing the Terms of Sale (TOS) acceptance](terms-of-sale-acceptance.md)

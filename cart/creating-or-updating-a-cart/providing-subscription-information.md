@@ -21,7 +21,8 @@ To add a subscription to a product for a customer, include `subscriptionInfo`  i
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/carts/active' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{Token}}' \
@@ -47,6 +48,7 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/cart
     }
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -56,7 +58,8 @@ The following `POST /submit-cart` response includes the [`billingAgreementId`](b
 
 {% tabs %}
 {% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 ...
   "lineItems": {
     "lineItem": [
@@ -93,6 +96,7 @@ The following `POST /submit-cart` response includes the [`billingAgreementId`](b
   },
 ...
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -100,7 +104,8 @@ To create a merchant-initiated transaction (MIT) that charges on renewal of the 
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/carts/active' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{Token}}' \
@@ -124,6 +129,7 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/cart
     }
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -131,7 +137,8 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/cart
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/carts/active' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{Token}}' \
@@ -155,6 +162,7 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/cart
     }
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -210,7 +218,8 @@ The `commitmentPrice` hash table appears when you [get a product by identifier](
 
 {% tabs %}
 {% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 ...
     "pricing": {
       "uri": "https://api.digitalriver.com/v1/shoppers/me/products/64578500/pricing",
@@ -238,6 +247,7 @@ The `commitmentPrice` hash table appears when you [get a product by identifier](
     },
 ...
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -245,7 +255,8 @@ A customer must provide a recurring payment method to pay for a commitment-based
 
 {% tabs %}
 {% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "errors": {
         "error": [
@@ -258,6 +269,7 @@ A customer must provide a recurring payment method to pay for a commitment-based
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

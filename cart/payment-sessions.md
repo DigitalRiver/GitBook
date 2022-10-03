@@ -24,7 +24,8 @@ When [creating a payment source,](../payments/sources/using-the-source-identifie
 
 {% tabs %}
 {% tab title="Drop-in payments" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 let configuration = {
     "sessionId": "172deb0f-de6f-4d2c-9555-53f3894b6318",
     "options": {
@@ -40,10 +41,12 @@ let configuration = {
 let dropin = digitalriverpayments.createDropin(configuration);
 dropin.mount("drop-in");
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="DigitalRiver.js with elements" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 let payload = {
     "sessionId": "ea03bf6f-84ef-4993-b1e7-b7d5ecf71d1f",
     "type": "payPal",
@@ -62,6 +65,7 @@ digitalriver.createSource(payload).then(function(result) {
     }
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -69,8 +73,8 @@ digitalriver.createSource(payload).then(function(result) {
 
 A cart's `payment.session` can be used to determine when to create an order. Specifically, we provide you information on the [payment session's state](payment-sessions.md#session-state) as well as the [amount contributed and amount remaining to be contributed](payment-sessions.md#amount-contributed-and-amount-remaining-to-be-contributed).
 
-{% code title="Cart" %}
-```javascript
+{% code title="Cart" overflow="wrap" %}
+```json
 {
 "    id": "47278010023",
 .    ..
@@ -124,7 +128,8 @@ But when only [secondary payment sources](broken-reference) are attached, you ne
 
 {% tabs %}
 {% tab title="400 Bad Request" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "type": "bad_request",
     "errors": [
@@ -135,6 +140,7 @@ But when only [secondary payment sources](broken-reference) are attached, you ne
     ]
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -156,13 +162,15 @@ The method also returns the data required to use one-click payment methods like 
 
 {% tabs %}
 {% tab title="JavaScript" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 digitalriver.retrieveAvailablePaymentMethods({
     "sessionId": "ea03bf6f-84ef-4993-b1e7-b7d5ecf71d1f"
 }).then(function(result) {
     //do something with the data
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

@@ -8,11 +8,13 @@ To add a product to a cart, provide the product identifier ([`productId`](https:
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://api.digitalriver.com/shoppers/me/carts/active?productId={pid}&termId={termId}' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -20,7 +22,8 @@ A successful request returns a `200 OK` response.
 
 {% tabs %}
 {% tab title="200 OK response" %}
-```javascript
+{% code title="" %}
+```json
 {
 	"cart": {
 		"id": "13871346482",
@@ -105,6 +108,7 @@ A successful request returns a `200 OK` response.
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

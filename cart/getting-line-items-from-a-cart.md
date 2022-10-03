@@ -10,34 +10,43 @@ You can use the [Line Items](https://www.digitalriver.com/docs/commerce-api-refe
 
 {% tabs %}
 {% tab title="URI" %}
+{% code overflow="wrap" %}
 ```http
 GET /v1/shoppers/me/carts/active/line-items
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Request header" %}
+{% code overflow="wrap" %}
 ```http
 Host: api.digitalriver.com
 Accept: application/json
 Authorization: bearer your_access_token
 User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_102)
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Request body" %}
+{% code overflow="wrap" %}
 ```
 The request body should be empty.
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response header" %}
+{% code overflow="wrap" %}
 ```http
 HTTP/1.1 200 OK
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response body" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "uri": "https://api.digitalriver.com/v1/shoppers/me/carts/active",
   "paymentMethods": {
@@ -165,6 +174,7 @@ HTTP/1.1 200 OK
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -186,13 +196,15 @@ Digital River automatically calculates the tax rate. The `taxRate` requires a de
 
 {% tabs %}
 {% tab title="Example" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 "tax": {
 	"currency": "EUR",
 	"value": 6.93
 },
 "taxRate": 0.19
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

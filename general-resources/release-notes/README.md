@@ -6,6 +6,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2022/10/3
+
+You can now [get all applied offers](../../cart/creating-or-updating-a-cart/getting-all-applied-offers.md), [remove a specific applied offer](../../cart/creating-or-updating-a-cart/removing-a-specific-applied-offer.md) at the user level, or [remove all eligible offers](../../cart/creating-or-updating-a-cart/removing-eligible-offers.md), including site level and user level, from a customer's cart. We also added information on [reconciling conflicting offers](../../cart/creating-or-updating-a-cart/reconciling-conflicting-offers.md).
+
 ## 2022/9/9
 
 You can now [update a subscriber's email address](../../subscriptions/managing-subscriptions/updating-the-subscribers-email-address.md) so they can receive [future notifications](https://help.digitalriver.com/help/gc/Administration/Email-Notifications/Email-notifications.htm) using their preferred email address.

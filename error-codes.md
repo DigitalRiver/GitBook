@@ -157,6 +157,7 @@ The following topics contain a list of API error codes.
     * The specified quantity to return is invalid. The number must be greater than zero and less than or equal to the number of items eligible for return. Specify a valid quantity to return and try again.
     * The system cannot parse the request because the request is not valid. Provide a valid request and try again.
     * The line-item ID is missing. Provide the line-item ID and try again.
+    * The value in the input field contains sensitive data (for example, a credit card number). The subcode for this error is `sensitive-data-detected`. Remove the sensitive data and try again.
 
     The possible error descriptions are as follows:
 
@@ -200,6 +201,8 @@ The following topics contain a list of API error codes.
       The expiration date of the subscription should be later than the activation date of the subscription.
     * `Attribute name or the value is missing.`\
       Some attribute names or values are missing. Provide the missing attributes or values and try again.
+    * `Invalid input value for (field name).`\
+      The input value for the specified field is invalid because it contains sensitive data.
 * `INVALID_RETURN_REASON`–The Return reason is invalid. Provide a valid return reason and try again.
 * `LINE_ITEM_CANNOT_BE_RESOLVED`–
   * Cannot resolve line item for the specified line-item ID. Verify the specified line item ID is correct and try again.
@@ -295,15 +298,17 @@ The following topics contain a list of API error codes.
 * `no-product-identifier`–The system cannot get the product identifier (product ID or product external reference ID) from the request. The possible error descriptions are as follows:
   * `The product ID or product external reference ID is missing. Provide the product ID or external reference ID and try again.`Provide the product ID or product external reference ID.
 * `resource-not-found`–Could not find a \[resourceName] resource with an internal ID \[resourceId]. The possible error descriptions are as follows:
-  * `Invalid site for specified company`\
-    The company of the site with the provided header `siteId` and the one with the provided header `companyId` are different, but they should be the same one.
+  * `A Cart identifier for the provided value of \"298407701971\" is not valid.` The cart identifier (`cartId`) is not valid. Provide the correct value for the `cartId` and try again.
   *   `Could not find a Line Item with an id of {line item id}`
 
       Could not find the line item for the provided ID.
   *   `Could not find an Order with an id of {orderId}`
 
       Could not find the order for the provided ID.
-  * `A Cart identifier for the provided value of \"298407701971\" is not valid.` The cart identifier (`cartId`) is not valid. Provide the correct value for the `cartId` and try again.
+  * `Invalid site for specified company`\
+    The company of the site with the provided header `siteId` and the one with the provided header `companyId` are different, but they should be the same.
+  * `offer-not-found`\
+    The specified offer identifier (`offerId`) was not applied to the cart.
 
 ### 405 Method Not Allowed
 
@@ -400,7 +405,9 @@ The following topics contain a list of API error codes.
   * `Requested ip address is not valid`—The format of the IP address is invalid. Provide a valid IP address and try again.
 * `invalid-keyword-expression`–Invalid keyword expression: \[expression entered]
 * `invalid-locale`–The requested locale is not valid.
-* `id-offer-id`–The offer ID for the request is invalid.
+* `invalid-offer-id`–The offer ID for the request is invalid.
+  * `offer-not applicable`\
+    The always-triggered offer is not supported.
 * `invalid-payment-failure`–Cannot process the cart because the payment methods were not set. The possible error descriptions are as follows:
   *   `The cart could not be processed due to no available payment methods set`
 

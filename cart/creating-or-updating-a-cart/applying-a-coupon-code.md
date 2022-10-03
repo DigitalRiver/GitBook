@@ -20,15 +20,18 @@ The request in the following example applies a promotional code value of `wb32xj
 
 {% tabs %}
 {% tab title="Request sample" %}
+{% code overflow="wrap" %}
 ```json
 curl --location --request POST https://api.digitalriver.com/v1/shoppers/me/carts/active?promoCode=wb32xjtam
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\ 
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response sample" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
    "cart": {
       "id": "1234567890",
@@ -192,6 +195,7 @@ curl --location --request POST https://api.digitalriver.com/v1/shoppers/me/carts
    }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

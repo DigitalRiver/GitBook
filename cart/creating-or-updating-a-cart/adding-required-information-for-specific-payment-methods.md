@@ -16,7 +16,8 @@ Use the [`POST /shoppers/me/carts/active`](https://drapi.io/commerce/#tag/Carts/
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 curl --location --request POST 'https://api.digitalriver.com/shoppers/me/carts/active' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
@@ -35,6 +36,7 @@ curl --location --request POST 'https://api.digitalriver.com/shoppers/me/carts/a
 			}
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -42,7 +44,8 @@ A successful request returns a `200 OK` response.
 
 {% tabs %}
 {% tab title="200 OK response" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "cart": {
     ...
@@ -50,6 +53,7 @@ A successful request returns a `200 OK` response.
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -59,7 +63,8 @@ Use the [`POST /shoppers/me/carts/active`](https://drapi.io/commerce/#tag/Carts/
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 curl --location --request POST 'https://api.digitalriver.com/shoppers/me/carts/active' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
@@ -78,6 +83,7 @@ curl --location --request POST 'https://api.digitalriver.com/shoppers/me/carts/a
 			}
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -85,13 +91,15 @@ A successful request returns a `200 OK` response.
 
 {% tabs %}
 {% tab title="200 OK response" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "cart": {
     ...
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

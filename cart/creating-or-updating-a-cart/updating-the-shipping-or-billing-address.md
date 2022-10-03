@@ -6,7 +6,7 @@ description: Learn how to update the shipping or billing address.
 
 You can update a customer's billing or shipping address by incuding the billing address (`billingAddress`) or shipping address (`shippingAddress`) object in the payload..
 
-{% code title="Request example" %}
+{% code title="Request example" overflow="wrap" %}
 ```html
 curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/carts/active?expand=all' \
 --header 'Accept: application/json' \
@@ -15,7 +15,7 @@ curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/
 ```
 {% endcode %}
 
-{% code title="Payload example" %}
+{% code title="Payload example" overflow="wrap" %}
 ```json
 {
     "cart": {

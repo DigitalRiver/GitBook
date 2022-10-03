@@ -16,11 +16,13 @@ Submitting a cart creates the order. You can use the information in the response
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```http
 curl --location --request POST 'http://<<host>>/v1/shoppers/me/carts/active/submit-cart' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -28,7 +30,8 @@ You will receive a `200 OK` response.
 
 {% tabs %}
 {% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "order": {
     "uri": "https://api.digitalriver.com/v1/shoppers/me/orders/47278080023",
@@ -224,6 +227,7 @@ You will receive a `200 OK` response.
   "payment": {}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

@@ -14,19 +14,23 @@ The following example uses IPv4:
 
 {% tabs %}
 {% tab title="URI" %}
+{% code overflow="wrap" %}
 ```http
 POST /v1/shoppers/me/carts/active
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Request body" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
    “cart”:{
       “ipAddress”:“192.16.1.1”
    }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -34,19 +38,23 @@ The following example used IPv6:
 
 {% tabs %}
 {% tab title="URI" %}
+{% code overflow="wrap" %}
 ```http
 POST /v1/shoppers/me/carts/active
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Request body" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
    “cart”:{
       “ipAddress”:“2001:0000:3238:DFE1:63::FEFB”
    }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -60,19 +68,23 @@ The following example uses IPv4:
 
 {% tabs %}
 {% tab title="URI" %}
+{% code overflow="wrap" %}
 ```http
 POST /v1/shoppers/me/carts/active/submit-cart
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Request body" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
  "cart": {
  "ipAddress":"192.179.12.1"
  }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -80,19 +92,23 @@ The following example uses IPv6:
 
 {% tabs %}
 {% tab title="URI" %}
+{% code overflow="wrap" %}
 ```http
 POST /v1/shoppers/me/carts/active/submit-cart
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Request body" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
  "cart": {
  "ipAddress":"2001:0000:3238:DFE1:63::FEFB"
  }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -102,13 +118,16 @@ You can validate the customer's IP address was successfully captured by using th
 
 {% tabs %}
 {% tab title="URI" %}
+{% code overflow="wrap" %}
 ```http
 GET /v1shoppers/me 
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Request body" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "shopper": {
         "uri": "http://dispatch-test.digitalriver.com/v1/shoppers/me",
@@ -155,6 +174,7 @@ GET /v1shoppers/me
             "uri": "http://dispatch-test.digitalriver.com/v1/shoppers/me/subscriptions"
         }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

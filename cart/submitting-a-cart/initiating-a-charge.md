@@ -8,7 +8,8 @@ When [creating ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/C
 
 {% tabs %}
 {% tab title="cURL" %}
-```http
+{% code overflow="wrap" %}
+```json
 curl --location --request POST 'http://<<host>>/v1/shoppers/me/carts/active' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
@@ -26,6 +27,7 @@ curl --location --request POST 'http://<<host>>/v1/shoppers/me/carts/active' \
   }
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -33,7 +35,8 @@ You will receive a `200 OK` response. The response shows the `chargeType` in the
 
 {% tabs %}
 {% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "order": {
     "uri": "https://api.digitalriver.com/v1/shoppers/me/orders/47278080023",
@@ -69,6 +72,7 @@ You will receive a `200 OK` response. The response shows the `chargeType` in the
     }
   },
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

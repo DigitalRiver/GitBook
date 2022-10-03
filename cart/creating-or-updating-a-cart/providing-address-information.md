@@ -35,7 +35,8 @@ The following table describes each parameter in a `billingAddress`, and `shippin
 
 {% tabs %}
 {% tab title="Billing address example" %}
-```javascript
+{% code overflow="wrap" %}
+```json
  {
   "cart": {
         "billingAddress": {
@@ -82,6 +83,7 @@ The following table describes each parameter in a `billingAddress`, and `shippin
         },
     }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -115,7 +117,8 @@ After you implement phonetic names, you will see the new fields under the billin
 
 {% tabs %}
 {% tab title="Phonetics and division example" %}
-```javascript
+{% code overflow="wrap" %}
+```json
  {
   "cart": {
     "billingAddress": {
@@ -160,6 +163,7 @@ After you implement phonetic names, you will see the new fields under the billin
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
