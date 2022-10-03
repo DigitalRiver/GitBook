@@ -38,19 +38,19 @@ var googlepay = digitalriver.createElement('googlepay', paymentRequestData);
 
 All Google Payment buttons on your site must adhere to the Google Pay [Brand Guidelines](https://developers.google.com/pay/api/web/guides/brand-guidelines), which include, but aren't limited to, the following requirements. Digital River provides the following Google Pay button options for clients to add to the product page/checkout page (express checkout) or payment options page.
 
-| Configure Button Type                              | HTML Code                                                                                          |
-| -------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| ![](<../../../.gitbook/assets/G Pay.png>)          | `buttonType: "plain"`                                                                              |
-| ![](<../../../.gitbook/assets/Buy with G Pay.png>) | <p><code>buttonType: "long"</code><br><code></code>The shopper hasn't logged in to Google Pay.</p> |
-| ![](<../../../.gitbook/assets/G Pay long (1).png>) | <p><code>buttonType: "long"</code><br><code></code>The shopper has logged in to Google Pay</p>     |
-| Configure Button Color                             | HTML Code                                                                                          |
-| ![](<../../../.gitbook/assets/G Pay black.png>)    | `buttonColor: "dark"`                                                                              |
-| ![](<../../../.gitbook/assets/G Pay white.png>)    | `buttonColor: "light"`                                                                             |
+| Configure Button Type                                    | HTML Code                                                                                          |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| ![](<../../../../../.gitbook/assets/G Pay.png>)          | `buttonType: "plain"`                                                                              |
+| ![](<../../../../../.gitbook/assets/Buy with G Pay.png>) | <p><code>buttonType: "long"</code><br><code></code>The shopper hasn't logged in to Google Pay.</p> |
+| ![](<../../../../../.gitbook/assets/G Pay long (1).png>) | <p><code>buttonType: "long"</code><br><code></code>The shopper has logged in to Google Pay</p>     |
+| Configure Button Color                                   | HTML Code                                                                                          |
+| ![](<../../../../../.gitbook/assets/G Pay black.png>)    | `buttonColor: "dark"`                                                                              |
+| ![](<../../../../../.gitbook/assets/G Pay white.png>)    | `buttonColor: "light"`                                                                             |
 
 When configuring a button, note the following:
 
 * The button color must contrast with the background color of the area that surrounds it.
-* Always maintain the minimum clear space of 8 density-independent pixels (dp) on all sides of the payment button. Ensure the clear space is never broken with graphics or text. ![](<../../../.gitbook/assets/G-Pay button.png>)
+* Always maintain the minimum clear space of 8 density-independent pixels (dp) on all sides of the payment button. Ensure the clear space is never broken with graphics or text. ![](<../../../../../.gitbook/assets/G-Pay button.png>)
 * Observe the [Google Pay Dos and Don'ts](https://developers.google.com/pay/api/web/guides/brand-guidelines#dos-and-donts).
 
 ## Google Pay element functions

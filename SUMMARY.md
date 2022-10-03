@@ -185,7 +185,6 @@
     * [Managing a refund for a delayed payment method](returns-and-refunds-1/refunds/managing-a-refund-for-a-delayed-payment-method.md)
     * [Refund error scenarios](returns-and-refunds-1/refunds/refund-error-scenarios.md)
 * [Error codes](error-codes.md)
-* [Connectors](https://docs.digitalriver.com/partner-integrations/)
 
 ## Payments
 
