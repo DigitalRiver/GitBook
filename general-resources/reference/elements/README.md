@@ -14,6 +14,7 @@ Use this function to place the created elements on your page. The function accep
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 <form id="payment-form">
     <div id="card-number"></div>
@@ -27,6 +28,7 @@ cardNumber.mount('card-number');
 cardExpiration.mount('card-expiration');
 cardCVV.mount('card-cvv');
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -53,17 +55,19 @@ A Blur event triggers when an element loses focus.
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.on('blur', function(event) {
     console.log('card number blur', event);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
-{% code title="Response object" %}
+{% code title="Response object" overflow="wrap" %}
 ```javascript
 {
     elementType: "cardnumber"
@@ -82,21 +86,25 @@ A Cancel event occurs when the customer closes the Apple Pay Element Payment Req
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('cancel', function(event) {
     //do stuff
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "applepay"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -481,6 +489,7 @@ This function updates the element with any included options. This can include cu
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var options = {
     classes: {
@@ -515,6 +524,7 @@ var options = {
  
 cardNumber.update(options);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

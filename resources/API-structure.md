@@ -4,11 +4,11 @@ description: Understand the Commerce API structure.
 
 # API structure
 
-The Commerce API is a [RESTful API](https://restfulapi.net/). That means we designed the API to allow you to create, read, update, and delete objects with the`POST`, `GET`, `PUT` and `DELETE` [HTTP methods](https://www.restapitutorial.com/lessons/httpmethods.html).
+The Commerce API and the Product Admin API is a [RESTful API](https://restfulapi.net/). We designed the API to allow you to create, read, update, and delete objects with the`POST`, `GET`, `PUT` and `DELETE` [HTTP methods](https://www.restapitutorial.com/lessons/httpmethods.html).
 
-The Commerce API speaks exclusively in [JSON](https://www.json.org/json-en.html). So in order to ensure the API accepts and processes your requests, always set the `Content-Type` header to `application/json` .
+The Commerce API and the Product Admin API speak exclusively in [JSON](https://www.json.org/json-en.html). To ensure the API accepts and processes your requests, always set the `Content-Type` header to `application/json` .
 
-All Commerce API requests are sent to `https://api.digitalriver.com`.
+All Commerce API and Product Admin API requests are sent to `https://api.digitalriver.com`.
 
 For more information on how Digital River ensures high availability and performance, see our [Service Level Agreement](https://www.digitalriver.com/legal-information/).
 
@@ -17,6 +17,10 @@ For more information on how Digital River ensures high availability and performa
 Digital River uses your account's API keys to authenticate your API requests. If you do not include your key when you send an API request or use an incorrect or outdated key, Digital River returns an error.
 
 Your account provides separate keys for testing and for running live transactions. You can use these keys when sending API requests in either test or live mode. Resources in one mode cannot change resources in another mode.
+
+{% hint style="success" %}
+We recommend a separate set of API keys for the Commerce API and Product Admin API.
+{% endhint %}
 
 ### Public keys
 
@@ -28,15 +32,15 @@ The private (secret) API keys allow you to send an API request to Digital River 
 
 ## Authentication
 
-The Commerce API authenticates requests using API keys. Contact your Account Manager to obtain your API keys.
+The Commerce API authenticates and Product Admin API requests using API keys. Contact your Account Manager to obtain your API keys.
 
-The Commerce API uses OAuth for authentication. OAuth is an open protocol that provides secure authorization for web, mobile, and desktop applications. A third-party application can use the OAuth 2.0 authorization framework to obtain limited access to an HTTP service.
+The Commerce API and Product Admin API use OAuth for authentication. OAuth is an open protocol that provides secure authorization for web, mobile, and desktop applications. A third-party application can use the OAuth 2.0 authorization framework to obtain limited access to an HTTP service.
 
-{% hint style="info" %}
-**Note**: Use the OAuth 2.0 authentication exclusively with the Commerce APIs.
+{% hint style="success" %}
+Use the OAuth 2.0 authentication exclusively with the Commerce APIs. For Product Admin API, you can use either a [secret key](API-structure.md#private-keys) or a [Global Commerce access token](../product-admin-api/administrator-browser-experience/product-basics/global-commerce-access-token.md). We recommend using the [secret key](API-structure.md#private-keys) with the Product Admin API because the Global Commerce access token will expire in one day by default. The `expires_in` value determines when the access token will expire. You will have to request a new access token when the current access token expires.
 {% endhint %}
 
-The Commerce API uses the OAuth 2.0 W3C (World Wide Web Consortium) standard to authenticate and authorize shoppers and their data. OAuth 2.0 allows you, the developer, to access a shopper's account without requiring shopper's to share their account credentials (username and password).
+The Commerce API and Product Admin API use the OAuth 2.0 W3C (World Wide Web Consortium) standard to authenticate and authorize shoppers and their data. OAuth 2.0 allows you, the developer, to access a shopper's account without requiring shoppers to share their account credentials (username and password).
 
 **Consumer-facing applications**—Use OAuth to publish and interact with protected data when you are building:
 
@@ -61,24 +65,30 @@ The workflow that an application should implement depends on the type of client,
 
 {% tabs %}
 {% tab title="URI" %}
+{% code overflow="wrap" %}
 ```http
 GET /oauth20/authorize?redirect_uri=http%253A%252F%252Fexample.com&client_id=a78b756bd47e258841d7f007f3f62a&response_type=token&dr_limited_token=6c6bfd0fb07be35c608a2b8e5f5ae72e
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="HTTP" %}
+{% code overflow="wrap" %}
 ```http
 Host: api.digitalriver.com
 User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_102)
 Accept: application/json (Default)
 
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="HTML" %}
+{% code overflow="wrap" %}
 ```typescript
 The request body should be empty. 
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="HTTP" %}
@@ -98,7 +108,7 @@ The response body should be empty.
 
 ### Token
 
-Use the `/oauth20/token` resource to generate either an [anonymous or authenticated shopper token](API-structure.md#about-oauth-access-tokens). You can also use it to refresh an access token. The requirements for the API depend on the type of application that invokes a request.
+Use the `/oauth20/token` resource to generate either an [anonymous or authenticated shopper token](API-structure.md#about-oauth-access-tokens). You can also use it to refresh an access token. The API requirements depend on the type of application that invokes a request.
 
 The `/oauth20/token` resource generates an access token that you can use to access resources. A shopper can use an anonymous shopper token to anonymously shop for a product. You need an authenticated shopper token to retrieve authenticated shopper-specific details, such as address or payment details. This token only supports a public workflow.
 
@@ -106,36 +116,45 @@ See [Create a Token](https://commerceapi.digitalriver.com/reference#oauth20token
 
 {% tabs %}
 {% tab title="URI" %}
+{% code overflow="wrap" %}
 ```
 POST /oauth20/token
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Request Headers" %}
+{% code overflow="wrap" %}
 ```
 Host: api.digitalriver.com
 User-Agent: API Client/1.0
 Accept: application/json (Default)
 Authorization: Basic username: client id password: client secret
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Request Body" %}
+{% code overflow="wrap" %}
 ```
 grant_type=client_credentials&dr_external_reference_id=partner-shopper-id
 
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response Headers" %}
+{% code overflow="wrap" %}
 ```
 HTTP/1.1 200 OK
 Content-Length: 161
 Access-Control-Allow-Origin: *
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response Body" %}
+{% code overflow="wrap" %}
 ```
 				
 {
@@ -145,6 +164,7 @@ Access-Control-Allow-Origin: *
 }
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -152,7 +172,7 @@ Access-Control-Allow-Origin: *
 
 Send the following request to create an anonymous shopper token to identify the shopper session:
 
-{% code title="Request Sample" %}
+{% code title="Request Sample" overflow="wrap" %}
 ```http
 POST https://api.digitalriver.com/oauth20/token.json
 ```
@@ -245,7 +265,7 @@ See [Public vs. confidential application flows](API-structure.md#public-versus-c
 
 ### Creating session-aware access tokens
 
-The session-aware access token links a Global Commerce shopper session to an access token as well as provides the ability to continue a shopper workflow with a previously established shopper session.
+The session-aware access token links a Global Commerce shopper session to an access token as well as provide the ability to continue a shopper workflow with a previously established shopper session.
 
 To create a session-aware access token, use the `sessionToken` query parameter or `dr_session_token` form parameter, depending on the workflow.
 
@@ -270,13 +290,16 @@ Establish an anonymous shopper (limited access) token in a single call by passin
 
 {% tabs %}
 {% tab title="Request Sample" %}
+{% code overflow="wrap" %}
 ```
 GET https://{store domain}/store/{SiteID}/SessionToken?apiKey={PublicAPIKey}
 &format=json
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response Sample (session aware access token)" %}
+{% code overflow="wrap" %}
 ```
 {
   "token": {
@@ -289,14 +312,15 @@ GET https://{store domain}/store/{SiteID}/SessionToken?apiKey={PublicAPIKey}
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% hint style="warning" %}
-You must include the `sessionToken` site action. The `sessionToken` site action **MUST** come from the client-side (the shopper's browser). You can do this via ajax and as shown in the following example.
+You must include the `sessionToken` site action. The `sessionToken` site action **MUST** come from the client side (the shopper's browser). You can do this via ajax and as shown in the following example.
 {% endhint %}
 
-{% code title="Example" %}
+{% code title="Example" overflow="wrap" %}
 ```
 function sessionToken() {
        $.ajax({
@@ -322,17 +346,21 @@ This example requires two calls; one to get the session token, and another to cr
 
 {% tabs %}
 {% tab title="Request Sample" %}
+{% code overflow="wrap" %}
 ```
 GET https://{store domain}/store/{SiteID}/SessionToken?format=json
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response Sample" %}
+{% code overflow="wrap" %}
 ```
 {
   "session_token": "1A9C61A6B8B54BD7087A5AD8986A17FA"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -340,7 +368,7 @@ GET https://{store domain}/store/{SiteID}/SessionToken?format=json
 You must include the `sessionToken` site action and it **MUST** come from the client-side (the shopper's browser). You can do this via ajax, as shown in the following example.
 {% endhint %}
 
-{% code title="Example" %}
+{% code title="Example" overflow="wrap" %}
 ```
 function sessionToken() {
        $.ajax({
@@ -362,27 +390,34 @@ function sessionToken() {
 
 {% tabs %}
 {% tab title="Request Sample" %}
+{% code overflow="wrap" %}
 ```
 POST http://api.digitalriver.com/oauth20/token
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Headers Sample" %}
+{% code overflow="wrap" %}
 ```
 Content-Type: application/x-www-form-urlencoded
 Authorization: Basic NTcwZjg0YTg3OTM5NDI1ZThlMTFlZTEyMGRlMDc1ZGI6YmRhNjg5ODViZjI3NDJlOGFiYmVmNjhiYWU3YjRiNzU=
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Body (url encoded) Sample" %}
+{% code overflow="wrap" %}
 ```
 dr_session_token: [from step #1)
 grant_type: password
 format:json
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response Sample" %}
+{% code overflow="wrap" %}
 ```
 {
   "token": {
@@ -393,6 +428,7 @@ format:json
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -428,11 +464,12 @@ When a Global Commerce user sends a call:
 2. Global Commerce authenticates the credentials.
 
 {% hint style="info" %}
-**Example**: An external Global Commerce user with the Site Manager role can access the `/auth` service to get the `access_token` and then use that `access_token` to [get the authorized billing countries](../sites/getting-a-sites-authorized-billing-countries.md) and [authorized shipping countries](../sites/getting-a-sites-authorized-shipping-countries.md) from the Configure Site Setting page in Global Commerce.
+**Example**: An external Global Commerce user with the Site Manager role can access the `/auth` service to get the `access_token` and then use that `access_token` to [get the authorized billing countries](../master/sites/getting-a-sites-authorized-billing-countries.md) and [authorized shipping countries](../master/sites/getting-a-sites-authorized-shipping-countries.md) from the Configure Site Setting page in Global Commerce.
 {% endhint %}
 
 {% tabs %}
 {% tab title="POST /auth" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "access_token": "your_access_token",
@@ -440,6 +477,7 @@ When a Global Commerce user sends a call:
     "expires_in": "3599"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

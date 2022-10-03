@@ -12,6 +12,7 @@ This object contains the customer's billing address.
 
 {% tabs %}
 {% tab title="Billing address object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "name": "John Smith",
@@ -29,6 +30,7 @@ This object contains the customer's billing address.
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -38,6 +40,7 @@ This object contains the customer's shipping address.
 
 {% tabs %}
 {% tab title="Shipping Address object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "name": "John Smith",
@@ -55,6 +58,7 @@ This object contains the customer's shipping address.
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -64,6 +68,7 @@ This object contains the customer's contact information.
 
 {% tabs %}
 {% tab title="Contact Information object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "name": "John Smith",
@@ -71,6 +76,7 @@ This object contains the customer's contact information.
     "email": "jsmith@digitalriver.com"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -80,6 +86,7 @@ This object contains the payment request.
 
 {% tabs %}
 {% tab title="Payment Request object" %}
+{% code overflow="wrap" %}
 ```javascript
 var paymentRequestData = digitalriver.paymentRequest({
     country: "US",
@@ -114,6 +121,7 @@ var paymentRequestData = digitalriver.paymentRequest({
     }
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -231,6 +239,7 @@ Use this object to respond to a shipping address change or a shipping option cha
 
 {% tabs %}
 {% tab title="Successful Payment Request Details Update object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     status: 'success',
@@ -269,11 +278,13 @@ Use this object to respond to a shipping address change or a shipping option cha
     ]
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Unsuccessful Payment Request Details Update object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     status: 'failure',
@@ -282,11 +293,13 @@ Use this object to respond to a shipping address change or a shipping option cha
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Unsucessful Payment Request Details Update Error object with errors" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     status: 'failure',
@@ -304,6 +317,7 @@ Use this object to respond to a shipping address change or a shipping option cha
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -317,6 +331,7 @@ The Payment request details update error object is only available for Apple Pay.
 
 {% tabs %}
 {% tab title="Payment Request Details Update Error object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     message: "An Error has occurred. Please try again.",
@@ -331,6 +346,7 @@ The Payment request details update error object is only available for Apple Pay.
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -371,6 +387,7 @@ This object contains the source object for the payment request.
 
 {% tabs %}
 {% tab title="Payment Request Source object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "error": false,
@@ -453,6 +470,7 @@ This object contains the source object for the payment request.
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -462,6 +480,7 @@ Digital River returns this Error object returns with the change event when Digit
 
 {% tabs %}
 {% tab title="Change Event Error object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "type": "validation_error",
@@ -469,6 +488,7 @@ Digital River returns this Error object returns with the change event when Digit
     "message": "Your card number is invalid."
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -478,6 +498,7 @@ Digital River returns this Error object within the `createSource` method if Digi
 
 {% tabs %}
 {% tab title="Create Source Error object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "type": "bad_request",
@@ -493,5 +514,6 @@ Digital River returns this Error object within the `createSource` method if Digi
     }]
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

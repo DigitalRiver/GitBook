@@ -20,9 +20,9 @@ Note the following limitations and constraints when building your payments workf
 
 * Do not change the currency when there is a secondary source in the cart. Specify the correct currency when creating a [secondary payment source](sources/using-the-source-identifier.md#secondary-payment-sources). After you [apply the secondary source](sources/using-the-source-identifier.md#creating-secondary-sources) to the cart, do not change the currency.\
   \
-  If you change the currency when calling /v1/shoppers, a [`409 Conflict`](../error-codes.md#409-conflict) response contains specific information about what triggered the failure. In this instance, one of the currencies in the cart is not supported.
+  If you change the currency when calling /v1/shoppers, a [`409 Conflict`](broken-reference) response contains specific information about what triggered the failure. In this instance, one of the currencies in the cart is not supported.
 
-{% code title="Error" %}
+{% code title="Error" overflow="wrap" %}
 ```json
 {
     "errors": {
@@ -57,13 +57,13 @@ Once you've completed these steps, you can move on to the steps specific to your
 
 ## Elements prerequisites
 
-When using [DigitalRiver.js with elements](payments-solutions/digitalriver.js/quick-start.md) to support SCA, you'll need to be using [payment sessions](../cart/payment-sessions.md), so ensure you've [completed the necessary migration](../cart/payment-sessions.md#migrating-to-payment-sessions). We also assume you are familiar with [creating and styling elements](payments-solutions/digitalriver.js/quick-start.md) as well as the [basics of capturing payment details](../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata).
+When using [DigitalRiver.js with elements](payments-solutions/digitalriver.js/quick-start.md) to support SCA, you'll need to be using [payment sessions](../master/cart/payment-sessions.md), so ensure you've [completed the necessary migration](../master/cart/payment-sessions.md#migrating-to-payment-sessions). We also assume you are familiar with [creating and styling elements](payments-solutions/digitalriver.js/quick-start.md) as well as the [basics of capturing payment details](../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata).
 
 Once you've completed these prerequisites, you can perform the steps specific to your desired [purchase ](building-your-workflows.md#purchase-flows)or [account management](building-your-workflows.md#account-management-flows) scenario.
 
 ## Purchase Flows <a href="#purchase-flows" id="purchase-flows"></a>
 
-For almost all [one-off](building-your-workflows.md#one-off), [subscription](building-your-workflows.md#subscription), and [mail-order/telephone-order (MOTO)](../cart/submitting-a-cart/initiating-a-charge.md#mail-order-telephone-order) transaction scenarios, Digital River supports [SCA-compliant](psd2-and-sca/) workflows that use either [Drop-in Payments](payments-solutions/drop-in/) or [DigitalRiver.js elements](payments-solutions/digitalriver.js/).‌
+For almost all [one-off](building-your-workflows.md#one-off), [subscription](building-your-workflows.md#subscription), and [mail-order/telephone-order (MOTO)](../master/cart/submitting-a-cart/initiating-a-charge.md#mail-order-telephone-order) transaction scenarios, Digital River supports [SCA-compliant](psd2-and-sca/) workflows that use either [Drop-in Payments](payments-solutions/drop-in/) or [DigitalRiver.js elements](payments-solutions/digitalriver.js/).‌
 
 ### One-off  <a href="#one-off" id="one-off"></a>
 
@@ -83,10 +83,11 @@ For almost all [one-off](building-your-workflows.md#one-off), [subscription](bui
 {% tab title="Drop-in Payments" %}
 **Prerequisites**: Perform the [common Drop-in Payments steps](building-your-workflows.md#common-drop-in-steps).
 
-**Step one**: [Create a cart](../cart/creating-or-updating-a-cart/) with all tax, shipping, duty, and fee amounts in a final state.
+**Step one**: [Create a cart](../master/cart/creating-or-updating-a-cart/) with all tax, shipping, duty, and fee amounts in a final state.
 
-**Step two**: Retrieve the [payment session identifier](../cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to create an [instance of a configuration object](payments-solutions/drop-in/drop-in-integration-guide.md#step-5-configure-hydrate).  In the configuration [`options`](payments-solutions/drop-in/drop-in-integration-guide.md#drop-in-options), set `flow` to `checkout` and [`usage`](broken-reference) to `convenience`.
+**Step two**: Retrieve the [payment session identifier](../master/cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to create an [instance of a configuration object](payments-solutions/drop-in/drop-in-integration-guide.md#step-5-configure-hydrate).  In the configuration [`options`](payments-solutions/drop-in/drop-in-integration-guide.md#drop-in-options), set `flow` to `checkout` and [`usage`](broken-reference) to `convenience`.
 
+{% code overflow="wrap" %}
 ```javascript
 let configuration = {
     sessionId: "d3941a36-6821-4d93-be23-6190226ae5f7",
@@ -97,6 +98,7 @@ let configuration = {
     ...
 }
 ```
+{% endcode %}
 
 **Step three**: Use the configuration object to [initialize Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-6-allow-the-shopper-to-interact-with-hydrate).  &#x20;
 
@@ -108,7 +110,7 @@ let dropin = digitalriver.createDropin(configuration);
 
 Drop-in Payments renders in the specified container.
 
-![](<../.gitbook/assets/image (2) (1).png>)
+![](<../.gitbook/assets/image (2).png>)
 
 Customers **** enter their credit card information and click the [configurable ](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button)**Pay Now** button**.**&#x20;
 
@@ -132,12 +134,11 @@ A chargeable source is returned.
 
 **Step one:** Create a cart with all tax, shipping, duty, and fee amounts in a final state.
 
-**Step two:** Retrieve the [payment session identifier](../cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to [create a source](../cart/payment-sessions.md#creating-a-source-with-payment-sessions).
+**Step two:** Retrieve the [payment session identifier](../master/cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to [create a source](../master/cart/payment-sessions.md#creating-a-source-with-payment-sessions).
 
-```javascript
-let payload = {
-    "sessionId": "ea03bf6f-84ef-4993-b1e7-b7d5ecf71d1f",
-    "futureUse": false,
+<pre class="language-javascript" data-overflow="wrap"><code class="lang-javascript">let payload = {
+<strong>    "sessionId": "ea03bf6f-84ef-4993-b1e7-b7d5ecf71d1f",
+</strong>    "futureUse": false,
     "usage": "convenience",
     ...
 }
@@ -148,8 +149,7 @@ digitalriver.createSource(payload).then(function(result) {
     } else {
         doErrorScenario();
     }
-});
-```
+});</code></pre>
 
 \
 Once the shopper provides the required SCA, a chargeable source is returned.&#x20;
@@ -176,10 +176,11 @@ The following demonstrates how to build workflows for this scenario using both D
 
 **Step one**: Create a cart with all tax, shipping, duty, and fee amounts in a final state.
 
-**Step two**: Retrieve the [payment session identifier](../cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to create [an instance of a configuration object](payments-solutions/drop-in/drop-in-integration-guide.md#step-5-configure-hydrate). In the configuration [`options`](payments-solutions/drop-in/drop-in-integration-guide.md#drop-in-options), set `flow` to `checkout` and [`usage` ](payments-solutions/drop-in/drop-in-integration-guide.md#specifying-a-sources-future-use)to `convenience.` To prompt Drop-in payments to display the save payment option, set `showSavePaymentAgreement` to `true`.
+**Step two**: Retrieve the [payment session identifier](../master/cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to create [an instance of a configuration object](payments-solutions/drop-in/drop-in-integration-guide.md#step-5-configure-hydrate). In the configuration [`options`](payments-solutions/drop-in/drop-in-integration-guide.md#drop-in-options), set `flow` to `checkout` and [`usage` ](payments-solutions/drop-in/drop-in-integration-guide.md#specifying-a-sources-future-use)to `convenience.` To prompt Drop-in payments to display the save payment option, set `showSavePaymentAgreement` to `true`.
 
 You should also configure the `usage` parameter. Doing so identifies the [future use of the payment source](payments-solutions/drop-in/drop-in-integration-guide.md#specifying-a-sources-future-use).&#x20;
 
+{% code overflow="wrap" %}
 ```javascript
 let configuration = {
     sessionId: "d3941a36-6821-4d93-be23-6190226ae5f7",
@@ -192,6 +193,7 @@ let configuration = {
 
 let dropin = digitalriver.createDropIn(configuration);
 ```
+{% endcode %}
 
 **Step three**: Use the configuration object to [initialize Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-6-allow-the-shopper-to-interact-with-hydrate).&#x20;
 
@@ -203,7 +205,7 @@ let dropin = digitalriver.createDropIn(configuration);
 
 Drop-in renders in the specified container.
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (4).png>)
 
 Customers enter their credit card information, select the save account and payment information option and click the [configurable ](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button)**Pay Now** button**.**&#x20;
 
@@ -284,6 +286,7 @@ In this one-off purchase flow, the customers select a credit card that they prev
 
 **Step three**: If the shopper selects a saved payment method, you'll need to determine whether SCA is required. To do this, call the [`authenticateSource()`](../general-resources/reference/digitalriver-object.md#authenticating-sources) method.
 
+{% code overflow="wrap" %}
 ```javascript
 ...
 digitalriver.authenticateSource({
@@ -296,6 +299,7 @@ digitalriver.authenticateSource({
 });
 ...
 ```
+{% endcode %}
 
 After invoking this method, Digital River automatically handles any required SCA. Once authentication is complete or is determined not to be necessary, the method resolves, allowing the checkout flow to continue.
 
@@ -331,10 +335,11 @@ The following demonstrates how to build a workflow for this scenario using both 
 
 **Step one**: Create a cart that contains an auto-renewing subscription and all tax, shipping, duty, and fee amounts are in a final state.
 
-**Step two**: Retrieve the [payment session identifier](../cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to [create an instance of a configuration object](payments-solutions/drop-in/drop-in-integration-guide.md#step-5-configure-hydrate).  When specifying `options`, set `flow` to `checkout` , `showSavePaymenAgreement` to `true`, and `usage` to `subscription`.
+**Step two**: Retrieve the [payment session identifier](../master/cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to [create an instance of a configuration object](payments-solutions/drop-in/drop-in-integration-guide.md#step-5-configure-hydrate).  When specifying `options`, set `flow` to `checkout` , `showSavePaymenAgreement` to `true`, and `usage` to `subscription`.
 
 **Step three**: Use the configuration object to [initialize Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-6-allow-the-shopper-to-interact-with-hydrate).
 
+{% code overflow="wrap" %}
 ```javascript
 let configuration = {
     sessionId: "d3941a36-6821-4d93-be23-6190226ae5f7",
@@ -347,22 +352,25 @@ let configuration = {
   
 let dropin = digitalriverpayments.createDropIn(configuration);
 ```
+{% endcode %}
 
 **Step four**: On your cart page, [specify a container to place Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-7-place-drop-in-payments-on-your-cart-or-shopper-page).
 
 Drop-in renders in the specified container.
 
-![](<../.gitbook/assets/drop-in-save-payment (1) (1) (1).png>)
+![](<../.gitbook/assets/Drop In Save Payment.PNG>)
 
 Shoppers **** must enter their credit card information, select the save account and payment information option and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-drop-in-button-text) **Pay Now** button**.**
 
 **Step five**: If the shopper completes the SCA steps necessary to make the source chargeable, then [call the `onSucess` method](payments-solutions/drop-in/drop-in-integration-guide.md#the-onsuccess-event-returns-the-source).
 
+{% code overflow="wrap" %}
 ```javascript
 ...
 onSuccess: function (data) { doSometingWithTheSource(data) },
 ...
 ```
+{% endcode %}
 
 A chargeable source is returned that is ready for storage.
 
@@ -380,10 +388,11 @@ Your flow also needs to display the storage terms and provide customers the opti
 
 **Step one**: Create a cart that contains an auto-renewing subscription and all tax, shipping, duty and fee amounts are in a final state.
 
-**Step two:** If a shopper selects the option to save the payment method and agrees to the displayed terms, retrieve the [payment session identifier](../cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to [create a source](../cart/payment-sessions.md#creating-a-source-with-payment-sessions).&#x20;
+**Step two:** If a shopper selects the option to save the payment method and agrees to the displayed terms, retrieve the [payment session identifier](../master/cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to [create a source](../master/cart/payment-sessions.md#creating-a-source-with-payment-sessions).&#x20;
 
 The `payload` should set `futureUse` to `true`,  configure  `usage` to `subscription`, and provide the `mandate.terms` that the shopper agreed to on your storefront.&#x20;
 
+{% code overflow="wrap" %}
 ```javascript
 var payload = {
     "type": "creditCard",
@@ -406,6 +415,7 @@ digitalriver.createSource(payload).then(function(result) {
     }
 });
 ```
+{% endcode %}
 
 Once the shopper provides the required SCA, a Source in a `chargeable` state is returned.
 
@@ -441,6 +451,7 @@ Drop-in Payments does not currently support retrieving stored payment methods. I
 
 **Step three**: If the shopper selects a saved payment method, you'll need to determine whether SCA is required. To do this, call the [`authenticateSource` method](../general-resources/reference/digitalriver-object.md#authenticating-sources).&#x20;
 
+{% code overflow="wrap" %}
 ```javascript
 ...
 digitalriver.authenticateSource({
@@ -453,6 +464,7 @@ digitalriver.authenticateSource({
 });
 ...
 ```
+{% endcode %}
 
 After invoking this method, Digital River automatically handles any required SCA. Once authentication is complete or is determined not to be necessary, the method resolves, allowing the checkout flow to continue.
 
@@ -492,7 +504,7 @@ For this flow type, you should use Element to capture credit card details.&#x20;
 
 **Step one**: Create a cart with all tax, shipping, duty, and fee amounts final state.
 
-**Step two:** Retrieve the [payment session identifier](../cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to [create a source](../cart/payment-sessions.md#creating-a-source-with-payment-sessions).
+**Step two:** Retrieve the [payment session identifier](../master/cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to [create a source](../master/cart/payment-sessions.md#creating-a-source-with-payment-sessions).
 
 Once the shopper provides the required SCA, a chargeable source is returned.
 
@@ -512,7 +524,7 @@ In this flow, you're saving a shopper's credit card details for use in a future 
 
 For Drop-in PaymentsDrop-in Payments, the key step is to build the configuration object so that `flow` is set to `managePaymentMethods` and the`usage` parameter properly [configures the source for future use](payments-solutions/drop-in/drop-in-integration-guide.md#specifying-a-sources-future-use).&#x20;
 
-When using Elements, your `payload`  should set `futureUse` to `true`, ensure `usage` [specifies a future use for the source](../general-resources/reference/digitalriver-object.md#specifying-a-sources-future-use), and provide the `mandate.terms` that the customer agreed to.
+When using Elements, your `payload`  should set `futureUse` to `true`, ensure `usage` [specifies a future use for the source](../general-resources/reference/digitalriver-object.md#specifying-a-sources-future-use), and provides the `mandate.terms` that the customer agreed to.
 
 | SCA required? | Drop-in Payments supported? | Elements supported? |   |
 | ------------- | --------------------------- | ------------------- | - |
@@ -532,6 +544,7 @@ You should configure the `flow` parameter to allow customers to [manage their pa
 
 **Step three**: Use the configuration object to [initialize Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-6-allow-the-shopper-to-interact-with-hydrate).
 
+{% code overflow="wrap" %}
 ```javascript
 let configuration = {
     options: {
@@ -543,12 +556,13 @@ let configuration = {
   
 let dropin = digitalriverpayments.createDropIn(configuration);
 ```
+{% endcode %}
 
 **Step four**: On the account management page, [specify a container to place Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-7-place-drop-in-payments-on-your-cart-or-shopper-page).
 
 Drop-in renders in the specified container.
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image (1) (1).png>)
 
 Shoppers **** enter their credit card information, select the save account and payment information option and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button) **Add Payment Method** button.&#x20;
 
@@ -566,10 +580,11 @@ A chargeable source is returned that is [ready for storage](payments-solutions/d
 {% endtab %}
 
 {% tab title="DigitalRiver.js with  elements" %}
-**Prerequisites**: Refer to the [Elements prerequisites](building-your-workflows.md#elements-prerequisites) section. Your flow also needs to display the storage terms and provide shoppers the option of saving their payment information.
+**Prerequisites**: Refer to the [Elements prerequisites](building-your-workflows.md#elements-prerequisites) section. Your flow also needs to display the storage terms and provide shoppers with the option of saving their payment information.
 
 **Step one**: If a customer selects the option to save a payment method and agrees to the displayed terms, the `payload` should set `futureUse` to `true`,  configure  `usage` to identify the [future use of the payment source](../general-resources/reference/digitalriver-object.md#specifying-a-sources-future-use), and provide the `mandate.terms` that the customer agreed to on your storefront.&#x20;
 
+{% code overflow="wrap" %}
 ```javascript
 var payload = {
     "type": "creditCard",
@@ -591,6 +606,7 @@ digitalriver.createSource(payload).then(function(result) {
     }
 });
 ```
+{% endcode %}
 
 Once the shopper provides the required SCA, a chargeable source is returned.
 

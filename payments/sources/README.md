@@ -20,6 +20,7 @@ A source also contains a hash table with a name that corresponds to its `type`. 
 
 {% tabs %}
 {% tab title="Source" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     ...
@@ -34,6 +35,7 @@ A source also contains a hash table with a name that corresponds to its `type`. 
     ...
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -75,6 +77,7 @@ The following example shows how to attach a payment method to an order or cart.
 
 {% tabs %}
 {% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
 ```javascript
 {
   "paymentMethod": {
@@ -82,6 +85,7 @@ The following example shows how to attach a payment method to an order or cart.
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

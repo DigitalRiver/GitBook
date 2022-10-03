@@ -18,7 +18,7 @@ Boleto Bancário provides the following benefits:&#x20;
 * There are literally thousands of ways a shopper can complete their Boleto payment in Brazil: ATMs, bank branches, and online banking, post office, lottery agent, convenience store, or supermarket.&#x20;
 * When it comes to online purchases, Boleto Bancário is especially popular for high-ticket items because many consumers still do not feel secure providing their payment details online.&#x20;
 
-For [refunds](../../returns-and-refunds-1/refunds/managing-a-refund-for-a-delayed-payment-method.md), the shopper who paid for the original transaction will receive the refund amount. The bank account details for the refund must match the shopper's CPF/CNPJ tax ID. The bank account owner must be identical to the bank account owner of the original request.
+For [refunds](../../master/returns-and-refunds-1/refunds/managing-a-refund-for-a-delayed-payment-method.md), the shopper who paid for the original transaction will receive the refund amount. The bank account details for the refund must match the shopper's CPF/CNPJ tax ID. The bank account owner must be identical to the bank account owner of the original request.
 
 ## How to configure&#x20;
 

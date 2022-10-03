@@ -28,6 +28,7 @@ The Delayed Payment Instructions element also requires an `options` object. The 
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 let options = {
     "sourceId": "fc8b2df1-2a57-4b2d-82bb-dc62081d76c4",
@@ -36,6 +37,7 @@ let options = {
  
 let delayedPaymentInstructions = digitalriver.createElement('delayedpaymentinstructions', options);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -47,11 +49,13 @@ Call this function to place the created Delayed Payment Instructions element on 
 
 {% tabs %}
 {% tab title="Explain" %}
+{% code overflow="wrap" %}
 ```javascript
 <div id="delayed-payment-container"></div>
  
 delayedPaymentInstructions.mount("delayed-payment-container");
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -71,11 +75,13 @@ A Ready event triggers when the Delayed Payment Instructions element has loaded.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 delayedPaymentInstructions.on('ready', function(event) {
     //delayed payment instructions element is ready
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

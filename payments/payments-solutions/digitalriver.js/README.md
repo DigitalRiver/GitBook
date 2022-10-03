@@ -4,7 +4,7 @@ description: Learn about DigitalRiver.js with Elements.
 
 # DigitalRiver.js with Elements
 
-You can use DigitalRiver.js with Elements to create custom payment flows that power your checkout experience. The [DigitalRiver.js library](../../../general-resources/reference/) allows you to capture sensitive customer data in a PCI-compliant manner, which is then returned to your service for interaction with the [cart ](../../../cart/creating-or-updating-a-cart/)in the [Commerce API](https://www.digitalriver.com/docs/commerce-api-reference/).
+You can use DigitalRiver.js with Elements to create custom payment flows that power your checkout experience. The [DigitalRiver.js library](../../../general-resources/reference/) allows you to capture sensitive customer data in a PCI-compliant manner, which is then returned to your service for interaction with the [cart ](../../../master/cart/creating-or-updating-a-cart/)in the [Commerce API](https://www.digitalriver.com/docs/commerce-api-reference/).
 
 ## Getting started
 

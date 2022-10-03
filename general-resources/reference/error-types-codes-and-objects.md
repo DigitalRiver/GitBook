@@ -10,6 +10,7 @@ When a DigitalRiver.js detects an error with an element, it returns an error obj
 
 {% tabs %}
 {% tab title="Change Event Error object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "type": "validation_error",
@@ -17,6 +18,7 @@ When a DigitalRiver.js detects an error with an element, it returns an error obj
     "message": "Your card number is invalid."
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -26,6 +28,7 @@ DigitalRiver.js returns this error object within the [createSource ](digitalrive
 
 {% tabs %}
 {% tab title="Create Source Error object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "type": "bad_request",
@@ -41,6 +44,7 @@ DigitalRiver.js returns this error object within the [createSource ](digitalrive
     }]
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

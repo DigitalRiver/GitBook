@@ -14,6 +14,7 @@ With this element, you must provide a `refundToken`, which is provided in the re
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var offlineOptions = {
     classes: {
@@ -57,6 +58,7 @@ var offlineOptions = {
  
 let offlineRefund = digitalriverpayments.createElement('offlinerefund', offlineOptions);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -115,12 +117,14 @@ The Ready event triggers when the element loads and is available to take user in
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 
 offlineRefund.on('ready', function(event) {
     //offline refund element is ready and can accept user input
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -140,12 +144,14 @@ A change event triggers when the offline refund element's state has changed. If 
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 
 offlineRefund.on('change', function(event) {
     console.log('offline refund change', event);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
