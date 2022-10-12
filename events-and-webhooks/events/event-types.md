@@ -1786,8 +1786,6 @@ When there is a change to the subscribed product. For example:&#x20;
 * Adding an addon to a base subscription or removing an addon from a base subscription.
 * Product change at the end of the subscription cycle.
 
-<mark style="color:red;">??? Is this example correct? It's not like the other examples on the Confluence page. ???</mark>
-
 {% code title="Webhook request" %}
 ```json
 "previousAttributes": {
