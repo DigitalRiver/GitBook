@@ -1,14 +1,12 @@
 ---
-description: >-
-  Learn about the source object and the payment methods supported in the
-  Commerce API.
+description: Learn the basics of sources.
 ---
 
 # Source basics
 
-A [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) is associated with a payment method that a customer selects to fund a transaction. Digital River retrieves data from the [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) when generating a charge.
+A [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) is associated with a [payment method](../supported-payment-methods.md) that a customer selects to fund a transaction. Digital River retrieves data from the [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) when generating a charge.
 
-Each [supported payment method](./#supported-payment-methods) supported in the Commerce API has certain features that determine how a source is created and eventually processed. These features revolve around the concepts of [pull or push](./#pull-or-push), [synchronous or asynchronous](./#synchronous-or-asynchronous), [reusable or single-use](./#reusable-or-single-use), primary or secondary, and [authentication flow](./#authentication-flow).
+In Commerce APIs, each type of source has certain characteristics that determine how it is created and eventually processed.&#x20;
 
 ## Supported payment methods
 
@@ -59,13 +57,13 @@ With asynchronous payment methods, the source may first return with a `state` of
 
 Some payment methods can be used to create source objects that are reusable, meaning the customer doesn't need to provide payment details before every transaction.  Other payment methods can only create single-use sources.
 
-With certain exceptions, [payment methods](../payments-solutions/digitalriver.js/payment-methods/) such as [credit cards](../payments-solutions/digitalriver.js/payment-methods/credit-cards.md), [Google Pay](../payments-solutions/digitalriver.js/payment-methods/google-pay.md), [direct debit](../payments-solutions/digitalriver.js/payment-methods/direct-debit.md), and [PayPal ](../payments-solutions/digitalriver.js/payment-methods/paypal.md)are reusable. Non-card-based payment methods, such as [wire transfer](../payments-solutions/digitalriver.js/payment-methods/wire-transfer.md), [bPay](../payments-solutions/digitalriver.js/payment-methods/bpay.md), [Konbini](../payments-solutions/digitalriver.js/payment-methods/konbini.md), [Alipay](../payments-solutions/digitalriver.js/payment-methods/alipay.md), [online banking](broken-reference), and [PayCo](../payments-solutions/digitalriver.js/payment-methods/payco.md), are typically single-use only. As part of the enablement process, certain payment methods that are typically reusable can be restricted to single-use.
+With certain exceptions, [payment methods](../payments-solutions/digitalriver.js/payment-methods/) such as `creditCard`, `googlePay`, `directDebit`, and `payPal` are reusable. Non-card-based payment methods, such as `wireTransfer`, `bPay`, `konbini`, `alipay`, and `onlineBanking` are typically single-use only. As part of the enablement process, certain payment methods that are typically reusable can be restricted to single-use.
 
 {% hint style="info" %}
-For a list of payment methods that support reusability, refer to the [Supported payment methods](./#supported-payment-methods) page.
+For a list of payment methods that support reusability, refer to the [Supported payment methods](./#supported-payment-methods) page. Additionally, as part of the enablement process, certain payment methods that are typically reusable can be restricted to single-use only.
 {% endhint %}
 
-Sources must have a `reusable` value of `true` before they can be used to make multiple charges.  Reusable sources however can't be created using a [public API key](../../resources/API-structure.md#public-keys). So both [Drop-in](../payments-solutions/drop-in/) and [DigitalRiver.js](../payments-solutions/digitalriver.js/) only generate single-use sources. To make them reusable once they're created (assuming the source `type` supports re-usability), you must [save the source to a customer](./#attaching-a-payment-method-to-a-customer). This flips `reusable` to `true` and prevents the source's `state` from becoming `consumed` once it's associated with a transaction.
+Sources must have a `reusable` value of `true` before they can be used to make multiple charges.  Reusable sources however can't be created using a [public API key](../../resources/API-structure.md#public-keys). So both [Drop-in payments](../payments-solutions/drop-in/) and [DigitalRiver.js with elements](../payments-solutions/digitalriver.js/) only generate single-use sources. To make them reusable once they're created (assuming the source `type` supports re-usability), you must [save the source to a customer](./#attaching-a-payment-method-to-a-customer). This flips `reusable` to `true` and prevents the source's `state` from becoming `consumed` once it's associated with a transaction.
 
 If a source's underlying payment method doesn't support re-usability, we [block the source from being saved to a customer](using-the-source-identifier.md#restrictions-on-saving-sources). So, with a non-reusable source, you should only [attach the source to a cart](./#attaching-a-payment-method-to-an-order-or-cart). This will generate a one-time charge authorization when you convert the cart to an order.&#x20;
 

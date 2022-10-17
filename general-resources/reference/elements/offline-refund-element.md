@@ -4,7 +4,7 @@ description: Learn how to use the offline refund element.
 
 # Offline refund element
 
-With certain payment flows such as [Boleto](../../../payments/payments-solutions/digitalriver.js/payment-methods/configuring-boleto.md), [bPay](../../../payments/payments-solutions/digitalriver.js/payment-methods/bpay.md), [Konbini](../../../payments/payments-solutions/digitalriver.js/payment-methods/konbini.md), [Online Banking](../../../payments/payments-solutions/digitalriver.js/payment-methods/online-banking.md), or [Wire Transfer](../../../payments/payments-solutions/digitalriver.js/payment-methods/wire-transfer.md), it may be necessary to collect details from your customer to facilitate a refund.&#x20;
+With certain payment flows such as [Boleto](../../../payments/payments-solutions/digitalriver.js/payment-methods/configuring-boleto.md), [Konbini](../../../payments/payments-solutions/digitalriver.js/payment-methods/konbini.md), [Online Banking](../../../payments/payments-solutions/digitalriver.js/payment-methods/online-banking.md), or [Wire Transfer](../../../payments/payments-solutions/digitalriver.js/payment-methods/wire-transfer.md), it may be necessary to collect details from your customer to facilitate a refund.&#x20;
 
 ## Creating an offline refund element
 

@@ -23,7 +23,6 @@ description: Learn about payment sources that are common to all payment methods.
 | Apple Pay                            | applePay       |
 | Bancontact                           | bancontact     |
 | Boleto                               | boletoBancario |
-| bPay                                 | bPay           |
 | Credit Card                          | creditCard     |
 | Google Pay                           | googlepay      |
 | Klarna                               | klarnaCredit   |

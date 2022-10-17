@@ -9,7 +9,6 @@ description: >-
 You can use the Delayed Payment Instructions element to generate a template that contains the instructions that explain how to complete payment for delayed payment types such as: &#x20;
 
 * ****[**Boleto**](../../../payments/payments-solutions/digitalriver.js/payment-methods/configuring-boleto.md)–where the shopper can go to a variety of locations with cash or via bank transfer to make a payment.
-* ****[**bPay**](../../../payments/payments-solutions/digitalriver.js/payment-methods/bpay.md)–where the shopper can transfer funds from their bank account to make a payment.
 * ****[**Konbini**](../../../payments/payments-solutions/digitalriver.js/payment-methods/konbini.md)–where the shopper has to go to a convenience store to make their payment.
 * ****[**Wire Transfer**](../../../payments/payments-solutions/digitalriver.js/payment-methods/wire-transfer.md)–where the shopper has to go to their bank to wire money to the payment partner's bank.
 
@@ -28,6 +27,7 @@ The Delayed Payment Instructions element also requires an `options` object. The 
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 let options = {
     "sourceId": "fc8b2df1-2a57-4b2d-82bb-dc62081d76c4",
@@ -36,6 +36,7 @@ let options = {
  
 let delayedPaymentInstructions = digitalriver.createElement('delayedpaymentinstructions', options);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
