@@ -10,7 +10,7 @@ Most of the [Shoppers ](https://www.digitalriver.com/docs/commerce-api-reference
 
 Use the `fields` query parameter to filter the fields that appear in a response to just the fields you specifically request. Filtering the fields returned in the response can conserve bandwidth and accelerate response time.
 
-The following example gets the fields are available by default to an authenticated customer. Line numbers `8` to `21` display links that are only available for an authenticated customer.
+The following response gets the fields that are available by default for an authenticated customer. Line numbers `8` to `21` display links that are only available for an authenticated customer.
 
 {% tabs %}
 {% tab title="URI" %}
@@ -19,8 +19,9 @@ GET /v1/shoppers/me
 ```
 {% endtab %}
 
-{% tab title="JSON" %}
-```
+{% tab title="Response" %}
+{% code overflow="wrap" lineNumbers="true" %}
+```json
 {
  	"shopper": {
    	"id": "161784673509",
@@ -44,6 +45,7 @@ GET /v1/shoppers/me
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -56,8 +58,9 @@ GET /v1/shoppers/me?fields=firstName,lastName
 ```
 {% endtab %}
 
-{% tab title="JSON" %}
-```
+{% tab title="Response" %}
+{% code overflow="wrap" %}
+```json
 {
 	"shopper": {
 		"firstname": "John",
@@ -66,6 +69,7 @@ GET /v1/shoppers/me?fields=firstName,lastName
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -73,7 +77,7 @@ GET /v1/shoppers/me?fields=firstName,lastName
 
 Use the `expand` query parameter when you need additional information. The `expand` query parameter increases the set of fields that appear in the response in addition to the default fields. Expanding resources reduces the number of API calls required to accomplish a task.
 
-The following example gets the same customer and requests specific resource fields: locale and currency. Line numbers `8` and `9` show the `locale` and `currency` for the customer in the response.
+The following example gets the same customer and requests specific resource fields: `locale` and currency. Line numbers `8` and `9` show the `locale` and `currency` for the customer in the response.
 
 {% tabs %}
 {% tab title="Plain Text" %}
@@ -82,8 +86,9 @@ GET /v1/shoppers/me?expand=locale,currency
 ```
 {% endtab %}
 
-{% tab title="" %}
-```
+{% tab title="Response" %}
+{% code overflow="wrap" %}
+```json
 1.  {
 2.  	"shopper": {
 3.  		"id": "161784673509",
@@ -109,6 +114,7 @@ GET /v1/shoppers/me?expand=locale,currency
 23. 	}
 24. }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -127,8 +133,9 @@ GET /v1/shoppers/me?expand=all
 ```
 {% endtab %}
 
-{% tab title="JSON" %}
-```
+{% tab title="Response" %}
+{% code overflow="wrap" %}
+```json
 1. {
 2. 	"shopper": {
 3. 		"id": "161784673509",
@@ -194,6 +201,7 @@ GET /v1/shoppers/me?expand=all
 63.		}
 64. }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
