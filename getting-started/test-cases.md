@@ -6,7 +6,7 @@ description: >-
 
 # Test and use cases
 
-Before and after any production deployment, we recommend that you run a series of regression tests similar to those outlined below on your site. These tests are a suggested baseline, and you can customize the test cases based on your implementation. Include additional tests such as reviewing the logged API response codes, browser compatibility, domain or TLS security, JavaScript errors, and so on, as required.&#x20;
+Before and after any production deployment, we recommend that you run a series of regression tests similar to those outlined below on your site. We suggest using these tests as a baseline. You can customize the test cases based on your implementation. Include additional tests such as reviewing the logged API response codes, browser compatibility, domain or TLS security, JavaScript errors, and so on, as required.&#x20;
 
 Since "live changes" do not allow for testing in a DESIGN or TEST mode, we also recommended that you integrate your Stage or Test systems with Digital River’s Client Test Environment (CTE) whenever possible. This will help facilitate safe end-to-end testing of all changes before you deploy to production.
 

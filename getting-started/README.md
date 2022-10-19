@@ -10,9 +10,9 @@ This guide shows you how to start making Commerce API requests. By the end, you'
 
 ## Step 1: Obtain API credentials
 
-Before you can start making Commerce API requests, you'll need to either contact your account manager or use the [Request Demo](https://www.digitalriver.com/request-demo/) form to request your [API keys](https://www.digitalriver.com/docs/commerce-api-reference/#section/API-Keys).&#x20;
+Before you start sending Commerce API requests, use the [Request Demo](https://www.digitalriver.com/request-demo/) form to request your [API keys](https://www.digitalriver.com/docs/commerce-api-reference/#section/API-Keys) or contact your account manager.
 
-Digital River uses these keys to [authenticate](https://www.digitalriver.com/docs/commerce-api-reference/#section/Authentication) your API requests. The API key you use to authenticate the request determines whether the request is in live mode or test mode.  If you forget to provide your key or use one that is incorrect or outdated, the API returns an error.
+Digital River uses these keys to [authenticate](https://www.digitalriver.com/docs/commerce-api-reference/#section/Authentication) your API requests. The API key you use to authenticate the request determines whether the request is in live mode or test mode.  If you forget to provide your key or use an incorrect or outdated key, the API returns an error.
 
 ## Step 2: Perform a test request
 
