@@ -15,11 +15,15 @@ When you [delete all eligible offers from a customer's cart](https://www.digital
 * Coupon codes (user level)
 * Bundle offers, all product bundle offers, cross-sell offers, and custom bundle offers
 
-{% code title="Request example" overflow="wrap" %}
-```html
+{% tabs %}
+{% tab title="cURL" %}
+{% code overflow="wrap" %}
+```http
 curl --location -g --request DELETE ' https://api.digitalriver.com/v1/shoppers/me/carts/active/eligible-offers' \
 --header 'Accept: application/json' \
 --header 'Authorization: bearer {{access_token}}' \
 --header 'Content-Type: applicati0n/json'
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
