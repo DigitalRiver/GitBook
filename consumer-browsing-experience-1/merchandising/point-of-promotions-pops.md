@@ -15,34 +15,33 @@ Offers use a POP to display the offer. A POP determines where an offer appears i
 
 {% tabs %}
 {% tab title="URI" %}
+{% code overflow="wrap" %}
 ```http
 GET /shoppers/me/point-of-promotions/Home_topSeller/offers
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Request header" %}
+{% code overflow="wrap" %}
 ```http
 Host: api.digitalriver.com
 User-Agent: API Client/1.0
 Accept: */*
 Authorization: bearer your_access_token
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Request body" %}
+{% tab title="Payload" %}
 ```
 The request body should be empty.
 ```
 {% endtab %}
 
-{% tab title="Response headers" %}
-```http
-HTTP/1.1 200 OK
-```
-{% endtab %}
-
-{% tab title="Response body" %}
-```javascript
+{% tab title="200 OK response" %}
+{% code overflow="wrap" %}
+```json
 {
 	"offers": {
 		"offer": [
@@ -79,6 +78,7 @@ HTTP/1.1 200 OK
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
