@@ -8,7 +8,7 @@ Use a single-click checkout to purchase a product on behalf of a customer during
 
 The product-direct purchase API performs the following actions with one Shopper API call:
 
-#### Prerequisite
+## Prerequisite
 
 The request requires a valid authenticated customer token.
 
@@ -24,12 +24,15 @@ The response header contains a `Location` header, as shown on line 4, to the ord
 
 {% tabs %}
 {% tab title="Request sample" %}
+{% code overflow="wrap" %}
 ```http
 POST https://api.digitalriver.com/v1/shoppers/me/products/291233200/purchase 
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response sample" %}
+{% code overflow="wrap" %}
 ```http
 HTTP/1.1 201 Created
 Server: Apache
@@ -50,6 +53,7 @@ Date: Fri, 17 Jan 2014 16:46:30 GMT
 Age: 0
 Access-Control-Allow-Origin: *
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
