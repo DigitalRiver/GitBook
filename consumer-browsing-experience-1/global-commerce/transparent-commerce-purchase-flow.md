@@ -24,12 +24,15 @@ The following example purchases a product with a product ID of `291233200`. The 
 
 {% tabs %}
 {% tab title="URI" %}
+{% code overflow="wrap" %}
 ```http
 POST https://api.digitalriver.com/v1/shoppers/me/products/291233200/purchase HTTP/1.1
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response header" %}
+{% code overflow="wrap" %}
 ```
  HTTP/1.1 201 Created
  Server: Apache
@@ -50,6 +53,7 @@ POST https://api.digitalriver.com/v1/shoppers/me/products/291233200/purchase HTT
  Age: 0
  Access-Control-Allow-Origin: *
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
