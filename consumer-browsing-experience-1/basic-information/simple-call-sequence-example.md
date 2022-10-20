@@ -21,7 +21,8 @@ client_id=a78b756bd47e258841d7f007f3f62a&grant_type=password
 {% endtab %}
 
 {% tab title="Response Body" %}
-```
+{% code overflow="wrap" %}
+```json
 {
 
     "access_token": "your_access_token",
@@ -34,6 +35,7 @@ client_id=a78b756bd47e258841d7f007f3f62a&grant_type=password
 
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -59,60 +61,62 @@ Authorization: bearer your_access_token
 {% endtab %}
 
 {% tab title="Response Sample" %}
+{% code overflow="wrap" lineNumbers="true" %}
 ```
-1.  {"categories": {
-2.     "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
-3.     "uri": "http://api.digitalriver.com/v1/shoppers/me/categories",
-4.     "category":    [
-5.              {
-6.           "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
-7.           "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/38366200",
-8.           "displayName": "Books",
-9.           "thumbnailImage": null,
-10.          "products":          {
-11.             "relation": "http://developers.digitalriver.com/v1/shoppers/ProductsResource",
-12.             "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/38366200/products"
-13.          }
-14.       },{
-15.          "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
-16.          "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/38366400",
-17.          "displayName": "Accessories",
-18.          "thumbnailImage": null,
-19.          "products":          {
-20.             "relation": "http://developers.digitalriver.com/v1/shoppers/ProductsResource",
-21.             "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/38366400/products"
-22.          }
-23.       }, {
-24.          "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
-25.          "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/38366700",
-26.          "displayName": "Flyleaf Folio",
-27.          "thumbnailImage": null,
-28.          "products":          {
-29.            "relation": "http://developers.digitalriver.com/v1/shoppers/ProductsResource",
-30.             "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/38366700/products"
-31.          }
-32.       },{
-33.          "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
-34.          "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/40436400",
-35.          "displayName": "Newspapers",
-36.          "thumbnailImage": "http://drh1.img.digitalriver.com/DRHM/Storefront/Company/.../thumbnail/blog2_thumb_image.jpg",
-37.          "products":          {
-38.             "relation": "http://developers.digitalriver.com/v1/shoppers/ProductsResource",
-39.             "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/40436400/products"
-40.          }
-41.       },{
-42.          "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
-43.          "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/40436500",
-44.          "displayName": "Blogs",
-45.          "thumbnailImage": null,
-46.          "products":          {
-47.             "relation": "http://developers.digitalriver.com/v1/shoppers/ProductsResource",
-48.             "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/40436500/products"
-49.          }
-50.       }
-51.    ]
-52. }}
+    {"categories": {
+       "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
+       "uri": "http://api.digitalriver.com/v1/shoppers/me/categories",
+       "category":    [
+                {
+             "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
+             "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/38366200",
+             "displayName": "Books",
+             "thumbnailImage": null,
+            "products":          {
+                "relation": "http://developers.digitalriver.com/v1/shoppers/ProductsResource",
+                "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/38366200/products"
+             }
+          },{
+             "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
+             "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/38366400",
+             "displayName": "Accessories",
+             "thumbnailImage": null,
+             "products":          {
+                "relation": "http://developers.digitalriver.com/v1/shoppers/ProductsResource",
+                "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/38366400/products"
+             }
+          }, {
+             "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
+             "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/38366700",
+             "displayName": "Flyleaf Folio",
+             "thumbnailImage": null,
+             "products":          {
+               "relation": "http://developers.digitalriver.com/v1/shoppers/ProductsResource",
+                "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/38366700/products"
+             }
+          },{
+             "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
+             "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/40436400",
+             "displayName": "Newspapers",
+             "thumbnailImage": "http://drh1.img.digitalriver.com/DRHM/Storefront/Company/.../thumbnail/blog2_thumb_image.jpg",
+             "products":          {
+                "relation": "http://developers.digitalriver.com/v1/shoppers/ProductsResource",
+                "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/40436400/products"
+             }
+          },{
+             "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
+             "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/40436500",
+             "displayName": "Blogs",
+             "thumbnailImage": null,
+             "products":          {
+                "relation": "http://developers.digitalriver.com/v1/shoppers/ProductsResource",
+                "uri": "http://api.digitalriver.com/v1/shoppers/me/categories/40436500/products"
+             }
+          }
+       ]
+    }}
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
