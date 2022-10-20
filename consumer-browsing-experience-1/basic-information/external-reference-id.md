@@ -6,8 +6,6 @@ description: Learn how to use the external reference identifier.
 
 You can use an external reference ID (`externalReferenceID`) to reference either a customer or a product owned by a Digital River client.&#x20;
 
-## Custome identifier
-
 The Remote User Management (also known as SSO) service requires an `externalReferenceID`. You must specify a unique `externalReferenceID` for each user because several objects use it. Failure to do so may violate your contract with Digital River and will cause users to get cross-linked. You must specify a unique inbound `userKey` (in response to `LoginRequest`, `GetUserRequest`) for each user in the clients' database.
 
 ## Using an external reference identifier for a customer
@@ -19,9 +17,8 @@ When you create a customer, you can specify the external reference ID. You can a
 The Shopper object in the request body for a [`POST /shoppers` ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers/paths/\~1v1\~1shoppers/post)request (where the client maintains the login credentials) includes an `externalReferenceId` as shown in line 5:
 
 {% tabs %}
-{% tab title="Payload example" %}
-{% code overflow="wrap" lineNumbers="true" %}
-```json
+{% tab title="JSON" %}
+```javascript
 {
  		"shopper": {
  			"firstname": "John",
@@ -33,7 +30,6 @@ The Shopper object in the request body for a [`POST /shoppers` ](https://www.dig
 	 	}
  }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -44,12 +40,10 @@ When you use the [`GET /shoppers/me`](https://www.digitalriver.com/docs/commerce
 For the Client Credentials confidential flow only, you can create a full access token on behalf of a customer by passing in the `external_reference_id` form parameter in the request body (payload):
 
 {% tabs %}
-{% tab title="Payload example" %}
-{% code overflow="wrap" %}
+{% tab title="HTTP" %}
 ```
 grant_type=client_credentials&amp;dr_external_reference_id=partner-shopper-id
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -57,7 +51,7 @@ For more information, see [`POST oauth20/token`](https://www.digitalriver.com/do
 
 ## Using an external reference identifier for a product
 
-When you create a product programmatically or through [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), Digital River automatically assigns a product identifier to the product. Some companies have internal identifiers for their products. We call them external reference identifiers to distinguish them from our product identifiers. These external reference identifiers may or may not match the product identifier in Global Commerce. You can use either the product identifier or the external reference identifier to search for a product or add a product to a cart. The following examples demonstrate how you can use the external reference ID with the product-related [Shopper ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers)resource.
+A product identifier is assigned when someone creates a product in Global Commerce. Some companies have their internal identifiers for their products, and that external reference ID may or may not match the product identifier in Global Commerce. You can search for and add products to a cart based on either the external reference identifier or product ID as you prefer. The following examples demonstrate various ways you can use the external reference ID with the product-related [Shopper ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers)resource.
 
 ### Retrieve products from the default catalog, limited by specific external reference identifiers
 
@@ -92,7 +86,7 @@ If you do not provide a company identifier, The API uses the company identifier 
 In a typical anonymous customer workflow, you can add products to a cart by external reference identifier, making a single POST call with a payload to the [Web Checkout](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Web-Checkout) resource. The following payload (request entity) adds a product with the `externalReferenceId` of `123456789`, with a `quantity` of `2`, to a cart.
 
 {% tabs %}
-{% tab title="Payload example" %}
+{% tab title="Payload sample" %}
 ```javascript
  {
    "webCheckout": {

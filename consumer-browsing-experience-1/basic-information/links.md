@@ -8,6 +8,7 @@ Most responses from the [Shoppers ](https://www.digitalriver.com/docs/commerce-a
 
 {% tabs %}
 {% tab title="JSON" %}
+{% code overflow="wrap" %}
 ```javascript
 {
 	"addproducttocart": {
@@ -15,5 +16,6 @@ Most responses from the [Shoppers ](https://www.digitalriver.com/docs/commerce-a
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
