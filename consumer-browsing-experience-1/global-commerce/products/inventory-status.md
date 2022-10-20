@@ -7,7 +7,7 @@ description: Learn how to retrieve a product's inventory status.
 The following [`GET /v1/shoppers/me/products/{productId}/inventory-status`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Inventory-Status/paths/\~1v1\~1shoppers\~1me\~1products\~1{productId}\~1inventory-status/get) request gets the inventory for a specific product. You must provide the product `id`.
 
 {% tabs %}
-{% tab title="cURL" %}
+{% tab title="cURL request" %}
 ```javascript
 
 curl --location --request GET 'http://{host}/v1/shoppers/me/products/{productId}/inventory-status' \
@@ -15,13 +15,12 @@ curl --location --request GET 'http://{host}/v1/shoppers/me/products/{productId}
 --header 'Authorization: Basic ***' \
 ```
 {% endtab %}
-{% endtabs %}
 
+{% tab title="200 OK response" %}
 You will receive a `200 OK` response.
 
-{% tabs %}
-{% tab title="JSON" %}
-```
+{% code overflow="wrap" %}
+```json
 {
    "inventoryStatus": {
       "product": {
@@ -44,5 +43,6 @@ You will receive a `200 OK` response.
    }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
