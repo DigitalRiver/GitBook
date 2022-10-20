@@ -21,7 +21,7 @@ POST /v1/shoppers/me/carts/active
 {% endcode %}
 {% endtab %}
 
-{% tab title="Request body" %}
+{% tab title="Payload" %}
 {% code overflow="wrap" %}
 ```json
 {
@@ -45,7 +45,7 @@ POST /v1/shoppers/me/carts/active
 {% endcode %}
 {% endtab %}
 
-{% tab title="Request body" %}
+{% tab title="Payload" %}
 {% code overflow="wrap" %}
 ```json
 {
@@ -75,7 +75,7 @@ POST /v1/shoppers/me/carts/active/submit-cart
 {% endcode %}
 {% endtab %}
 
-{% tab title="Request body" %}
+{% tab title="Payload" %}
 {% code overflow="wrap" %}
 ```json
 {
@@ -99,7 +99,7 @@ POST /v1/shoppers/me/carts/active/submit-cart
 {% endcode %}
 {% endtab %}
 
-{% tab title="Request body" %}
+{% tab title="Payload" %}
 {% code overflow="wrap" %}
 ```json
 {
@@ -114,7 +114,7 @@ POST /v1/shoppers/me/carts/active/submit-cart
 
 ## Validating the Customer's IP address
 
-You can validate the customer's IP address was successfully captured by using the [`GET /shoppers/me`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers/paths/\~1v1\~1shoppers\~1me/get) request. In the Response body, search for `ipAddress`. If the value of the `ipAddress` field is null, the client did not send an IP address for the customer. If the ipAddress is not null, run an IP search to verify the IP address, city, and state matches the customer address in the Global Commerce order. The IP address needs to be the customer's IP address and not the client server's IP address.
+You can validate the customer's IP address was successfully captured by using the [`GET /shoppers/me`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers/paths/\~1v1\~1shoppers\~1me/get) request. In the Response body, search for `ipAddress`. If the value of the `ipAddress` field is null, the client did not send an IP address for the customer. If the `ipAddress` is not null, run an IP search to verify the IP address, city, and state matches the customer address in the Global Commerce order. The IP address needs to be the customer's IP address and not the client server's IP address.
 
 {% tabs %}
 {% tab title="URI" %}
@@ -125,7 +125,7 @@ GET /v1shoppers/me
 {% endcode %}
 {% endtab %}
 
-{% tab title="Request body" %}
+{% tab title="Payload" %}
 {% code overflow="wrap" %}
 ```json
 {
@@ -180,6 +180,6 @@ GET /v1shoppers/me
 
 ### Validation errors
 
-If the IP address format is incorrect (that is, not in a valid IPv4 and IPv6 format), the API response will send a 409 Conflict error:
+If the IP address format is incorrect (that is, not in a valid IPv4 and IPv6 format), the API response will send a `409 Conflict` error:
 
 ![409 Conflict error](<../../.gitbook/assets/409-conflict-error-invalid-ip-address (2) (1) (1).png>)
