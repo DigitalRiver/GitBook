@@ -15,6 +15,7 @@ To get the [OAuth access token](https://www.digitalriver.com/docs/commerce-api-r
 
 {% tabs %}
 {% tab title="Request body sample" %}
+{% code overflow="wrap" %}
 ```http
 POST /oauth20/token/ 
 
@@ -24,10 +25,12 @@ client_id=a78b756bd47e258841d7f007f3f62a&grant_type=password
 
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response body sample" %}
-```
+{% code overflow="wrap" %}
+```json
 {
 
     "access_token": "your_access_token",
@@ -40,6 +43,7 @@ client_id=a78b756bd47e258841d7f007f3f62a&grant_type=password
 
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -49,6 +53,7 @@ To get the top-level categories, use the [Categories ](https://www.digitalriver.
 
 {% tabs %}
 {% tab title="Request body example" %}
+{% code overflow="wrap" %}
 ```http
 GET https://api.digitalriver.com/v1/shoppers/me/categories HTTP/1.1
 
@@ -58,10 +63,12 @@ Accept: application/json
 
 Authorization: bearer your_access_token
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response body example" %}
-```javascript
+{% code overflow="wrap" %}
+```json
  {"categories": {
     "relation": "http://developers.digitalriver.com/v1/shoppers/CategoriesResource",
     "uri": "http://api.digitalriver.com/v1/shoppers/me/categories",
@@ -115,5 +122,6 @@ Authorization: bearer your_access_token
     ]
  }}
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
