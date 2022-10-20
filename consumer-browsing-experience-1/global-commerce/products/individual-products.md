@@ -34,15 +34,9 @@ Authorization: bearer your_access_token
 ```
 {% endtab %}
 
-{% tab title="Request Body" %}
+{% tab title="Payload" %}
 ```
 The request body should be empty.
-```
-{% endtab %}
-
-{% tab title="Response Header" %}
-```
-HTTP/1.1 200 OK
 ```
 {% endtab %}
 
