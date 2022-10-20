@@ -18,12 +18,10 @@ curl --location --request GET 'https://api.digitalriver.com/shoppers/me/carts/ac
 ```
 {% endcode %}
 {% endtab %}
-{% endtabs %}
 
+{% tab title="200 OK response" %}
 A successful request returns a `200 OK` response.
 
-{% tabs %}
-{% tab title="200 OK response" %}
 {% code overflow="wrap" %}
 ```json
 {
