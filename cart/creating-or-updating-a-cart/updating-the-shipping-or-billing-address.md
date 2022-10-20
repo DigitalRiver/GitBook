@@ -4,18 +4,22 @@ description: Learn how to update the shipping or billing address.
 
 # Updating the shipping or billing address
 
-You can update a customer's billing or shipping address by incuding the billing address (`billingAddress`) or shipping address (`shippingAddress`) object in the payload..
+You can update a customer's billing or shipping address by including the billing address (`billingAddress`) or shipping address (`shippingAddress`) object in the payload.
 
-{% code title="Request example" overflow="wrap" %}
-```html
+{% tabs %}
+{% tab title="cURL" %}
+{% code overflow="wrap" %}
+```http
 curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/carts/active?expand=all' \
 --header 'Accept: application/json' \
 --header 'Authorization: bearer {{access_token}}' \
 --header 'Content-Type: application/json' \
 ```
 {% endcode %}
+{% endtab %}
 
-{% code title="Payload example" overflow="wrap" %}
+{% tab title="Payload" %}
+{% code overflow="wrap" %}
 ```json
 {
     "cart": {
@@ -70,5 +74,5 @@ curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/
 }
 ```
 {% endcode %}
-
-&#x20;
+{% endtab %}
+{% endtabs %}
