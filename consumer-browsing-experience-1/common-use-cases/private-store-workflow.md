@@ -27,14 +27,17 @@ Send a GET request with the access rules search criteria for the private store t
 
 {% tabs %}
 {% tab title="Request sample" %}
+{% code overflow="wrap" %}
 ```http
 GET https://api.digitalriver.com/v1/shoppers/me/purchase-plan/search?
 emailDomain=university.edu&apiKey=apiKey
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response sample" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
    "purchaseplans": {
       "purchaseplan": {
@@ -64,6 +67,7 @@ emailDomain=university.edu&apiKey=apiKey
    }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -73,9 +77,11 @@ Send a GET request to the Shoppers Token resource. The following request sends a
 
 {% tabs %}
 {% tab title="Request sample" %}
+{% code overflow="wrap" %}
 ```http
 GET https://api.digitalriver.com/v1/shoppers/token?apiKey=yourAPIkey&format=json
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response sample" %}
@@ -111,8 +117,9 @@ POST https://api.digitalriver.com/v1/shoppers/me/purchase-plan/authorize
 ```
 {% endtab %}
 
-{% tab title="Request body sample" %}
-```javascript
+{% tab title="Payload sample" %}
+{% code overflow="wrap" %}
+```json
 {
    "purchasePlanAuthorize": {
       "id": "11858700",
@@ -128,12 +135,15 @@ POST https://api.digitalriver.com/v1/shoppers/me/purchase-plan/authorize
    }
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Response sample" %}
+{% code overflow="wrap" %}
 ```
 HTTP/1.1 204 No Content
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
