@@ -8,19 +8,20 @@ Retrieve the refunds available for a specific order like this where you provide 
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```http
 curl --location --request POST 'http://{host}/orders/active/refunds-available?token={the customer's token}' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 ```
+{% endcode %}
 {% endtab %}
-{% endtabs %}
 
-A successful request returns a 200 response code:
+{% tab title="200 OK response" %}
+A successful request returns a `200 OK` response.
 
-{% tabs %}
-{% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
 	"currency": "USD",
 	"lineItems": [
@@ -173,5 +174,6 @@ A successful request returns a 200 response code:
 					"status": null
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
