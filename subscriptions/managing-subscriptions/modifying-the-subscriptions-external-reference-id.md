@@ -8,6 +8,7 @@ The following [`POST /v1/subscriptions/{subscriptionId}/reference-id`](https://w
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/reference-id' \
 --header 'Content-Type: application/json' \
@@ -16,6 +17,7 @@ curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}
   "externalReferenceId": "123232exteranl"
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
