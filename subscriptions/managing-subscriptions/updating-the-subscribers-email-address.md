@@ -133,13 +133,24 @@ If the email address parameter is missing, you will see a [`400 Bad Request`](..
 {% endtab %}
 {% endtabs %}
 
-
-
 ### Email address is more than 255 characters
 
 An email address cannot exceed 255 characters. If the email address is more than 255 characters, you will see a [`400 Bad Request`](../../error-codes.md#400-bad-request) error message with an `invalid-request` code.&#x20;
 
 {% tabs %}
+{% tab title="cURL" %}
+{% code overflow="wrap" %}
+```json
+curl --location --request POST 'http://{host}/v1/shoppers/me?applyEmailToSubscriptions=true' \
+--header 'Content-Type:  application/json' \
+--header 'authorization: bearer ***\
+--data-raw '{
+ "emailAddress" : "jdoe@acme.com"
+}'
+```
+{% endcode %}
+{% endtab %}
+
 {% tab title="Error example" %}
 {% code overflow="wrap" %}
 ```json
