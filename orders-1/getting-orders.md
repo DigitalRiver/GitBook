@@ -10,19 +10,20 @@ Use this method to retrieve the history of orders for a customer.
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```http
 curl --location --request POST 'http://{host}/v1/shoppers/me/orders?expand=all&pageSize=1' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 ```
+{% endcode %}
 {% endtab %}
-{% endtabs %}
 
+{% tab title="200 OK response" %}
 You will receive a `200 OK` response.
 
-{% tabs %}
-{% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "uri": "https://api.digitalriver.com/v1/shoppers/me/orders",
   "order": [
@@ -237,6 +238,7 @@ You will receive a `200 OK` response.
   "totalResultPages": "1"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -254,19 +256,20 @@ To retrieve an order, you must specify the order identifier (`orderId`). You can
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```http
 curl --location --request POST 'http://{host}/v1/shoppers/me/orders/9999999999' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 ```
+{% endcode %}
 {% endtab %}
-{% endtabs %}
 
+{% tab title="200 OK response" %}
 You will receive a `200 OK` response.
 
-{% tabs %}
-{% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "uri": "https://api.digitalriver.com/v1/shoppers/me/orders/47276010023",
   "id": "47276010023",
@@ -479,5 +482,6 @@ You will receive a `200 OK` response.
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
