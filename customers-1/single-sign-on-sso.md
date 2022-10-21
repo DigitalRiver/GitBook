@@ -82,8 +82,9 @@ The following image shows the Remote login (on check out) flow diagram.
 ![Remote login (on check out)](https://files.readme.io/2435a55-Remote\_User\_Management\_3.png)
 
 {% tabs %}
-{% tab title="Request sample" %}
-```javascript
+{% tab title="Payload" %}
+{% code overflow="wrap" %}
+```json
 {
 	"LoginRequest": {
 		"userKey": {
@@ -133,10 +134,12 @@ The following image shows the Remote login (on check out) flow diagram.
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Successful response sample" %}
-```javascript
+{% tab title="Successful response" %}
+{% code overflow="wrap" %}
+```json
 {
 	"LoginResponse": {
 		"successful": {
@@ -158,10 +161,12 @@ The following image shows the Remote login (on check out) flow diagram.
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Unsuccessful response sample" %}
-```javascript
+{% tab title="Unsuccessful response" %}
+{% code overflow="wrap" %}
+```json
 {
 	"LoginResponse": {
 		"successful": {
@@ -212,6 +217,7 @@ The following image shows the Remote login (on check out) flow diagram.
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -227,7 +233,8 @@ The extended `attributes` element under the Remote User Fetch Request/Response c
 
 {% tabs %}
 {% tab title="Request sample" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
 	"GetUserProfileRequest": {
 		"userKey": {
@@ -294,11 +301,13 @@ The extended `attributes` element under the Remote User Fetch Request/Response c
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Successful response sample" %}
-```javascript
-{
+{% tab title="Successful response" %}
+{% code overflow="wrap" %}
+```json
+JSON{
 	"GetUserProfileResponse": {
 		"userInfo": {
 			"userKey": {
@@ -456,10 +465,12 @@ The extended `attributes` element under the Remote User Fetch Request/Response c
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Unsuccessful response sample" %}
-```javascript
+{% tab title="Unsuccessful response" %}
+{% code overflow="wrap" %}
+```json
 {
 	"GetUserProfileResponse": {
 		"userInfo": {
@@ -479,6 +490,7 @@ The extended `attributes` element under the Remote User Fetch Request/Response c
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -498,10 +510,12 @@ demo@digitalriver.com D05B4D68-F49D-11DA-8019-88F835DA4C6C
 {% endtab %}
 
 {% tab title="Successful response sample (xsi:type is optional)" %}
-```
+{% code overflow="wrap" %}
+```json
 true demo@digitalriver.com D05B4D68-F49D-11DA-8019-88F835DA4C6C headwtr crmSession 
 F3CB68D6-1643-11DD-8402-E6326E64542C/8443 string
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -514,7 +528,7 @@ All SSO communication occurs using an HTTPS endpoint. For added security, Digita
 The extended `attributes` element under the Create User Profile Request/Response complex type allows you to pass custom information as a key/value pair. Passing custom information requires extra work.
 
 {% tabs %}
-{% tab title="Request sample" %}
+{% tab title="Payload" %}
 ```
 demo@digitalriver.com DR Demo demo@digitalriver.com en_US 95888914269 
 Minnetonka MN United States 10380 Bren Road W DR 
@@ -522,7 +536,7 @@ Demo 9522251234 55343 MN demo@digitalriver.com DR 123123
 ```
 {% endtab %}
 
-{% tab title="Successful response sample" %}
+{% tab title="" %}
 ```
 true D05B4D68-F49D-11DA-8019-88F835DA4C6C demo@digitalriver.com 
 D05B4D68-F49D-11DA-8019-88F835DA4C6C crmSession 
@@ -530,7 +544,7 @@ F3CB68D6-1643-11DD-8402-E6326E64542C/8443 string
 ```
 {% endtab %}
 
-{% tab title="Unsuccessful response sample" %}
+{% tab title="Unsuccessful response" %}
 ```
 false 5 Email already used
 ```
@@ -539,7 +553,7 @@ false 5 Email already used
 
 **Schemas**
 
-| **Version** | Schema Components Table                                                                      | Raw Schema                                                                       | Sample XML                                                                               |
+| Version     | Schema Components Table                                                                      | Raw Schema                                                                       | Sample XML                                                                               |
 | ----------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | 6 (Current) | [View](https://drhadmin.digitalriver.com/integration/isg/schematable/RemoteUserManagement/6) | [View](https://drhadmin.digitalriver.com/integration/xsd/RemoteUserManagement/6) | [View](https://drhadmin.digitalriver.com/integration/isg/example/RemoteUserManagement/6) |
 | 5           | [View](https://drhadmin.digitalriver.com/integration/isg/schematable/RemoteUserManagement/5) | [View](https://drhadmin.digitalriver.com/integration/xsd/RemoteUserManagement/5) | [View](https://drhadmin.digitalriver.com/integration/isg/example/RemoteUserManagement/5) |
