@@ -8,7 +8,6 @@ The following [`POST /v1/subscriptions/{subscriptionId}/ship-to-address`](https:
 
 {% tabs %}
 {% tab title="cURL" %}
-{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/ship-to-address' \
 --header 'Content-Type: application/json' \
@@ -29,7 +28,6 @@ curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}
     "emailAddress": "jdoe@acme.com" 
 }'
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
