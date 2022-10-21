@@ -8,11 +8,13 @@ The following [`GET /v1/subscriptions/{subscriptionId}/pending-actions`](https:/
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request GET 'https://{host}//v1/subscriptions/{subscriptionId}/pending-actions' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic ***' \
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
