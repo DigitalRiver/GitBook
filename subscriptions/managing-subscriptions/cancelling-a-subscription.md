@@ -8,7 +8,6 @@ The following [`POST /v1/subscriptions/{subscriptionId}/cancel`](https://www.dig
 
 {% tabs %}
 {% tab title="cURL" %}
-{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://{host}>/v1/subscriptions/{subscriptionId}/cancel' \
 --header 'Content-Type:  application/json' \
@@ -17,7 +16,6 @@ curl --location --request POST 'https://{host}>/v1/subscriptions/{subscriptionId
  "suppressCancelNotification": true
 }'
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
