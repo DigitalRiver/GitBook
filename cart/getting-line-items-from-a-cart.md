@@ -28,7 +28,7 @@ User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_102)
 {% endcode %}
 {% endtab %}
 
-{% tab title="Request body" %}
+{% tab title="Payload" %}
 {% code overflow="wrap" %}
 ```
 The request body should be empty.
@@ -36,15 +36,7 @@ The request body should be empty.
 {% endcode %}
 {% endtab %}
 
-{% tab title="Response header" %}
-{% code overflow="wrap" %}
-```http
-HTTP/1.1 200 OK
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="Response body" %}
+{% tab title="200 OK response" %}
 {% code overflow="wrap" %}
 ```json
 {
