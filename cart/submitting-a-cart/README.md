@@ -24,12 +24,10 @@ curl --location --request POST 'http://<<host>>/v1/shoppers/me/carts/active/subm
 ```
 {% endcode %}
 {% endtab %}
-{% endtabs %}
 
+{% tab title="200 OK response" %}
 You will receive a `200 OK` response.
 
-{% tabs %}
-{% tab title="JSON" %}
 {% code overflow="wrap" %}
 ```json
 {
