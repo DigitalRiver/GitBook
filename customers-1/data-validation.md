@@ -17,8 +17,9 @@ A successful Data Validation request results in a response that contains a non-n
 A third-party client must define the `responseCode.`
 
 {% tabs %}
-{% tab title="Request sample" %}
-```java
+{% tab title="Payload" %}
+{% code overflow="wrap" %}
+```json
 {
 	"DataValidationRequest": {
 		"dataPoints": {
@@ -74,10 +75,12 @@ A third-party client must define the `responseCode.`
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Successful response sample" %}
-```javascript
+{% tab title="Successful response" %}
+{% code overflow="wrap" %}
+```json
 {
 	"DataValidationResponse": {
 		"dataPointResponses": {
@@ -140,10 +143,12 @@ A third-party client must define the `responseCode.`
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Unsuccessful response sample" %}
-```javascript
+{% tab title="Unsuccessful response" %}
+{% code overflow="wrap" %}
+```json
 {
 	"DataValidationResponse": {
 		"dataPointResponses": {
@@ -211,6 +216,7 @@ A third-party client must define the `responseCode.`
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
