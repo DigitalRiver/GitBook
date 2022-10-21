@@ -10,6 +10,7 @@ Use the [`POST /v1/subscriptons/{subscriptionId}/reduce`](https://www.digitalriv
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/reduce' \
 --header 'Content-Type:  application/json' \
@@ -32,6 +33,7 @@ curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}
   } ]
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

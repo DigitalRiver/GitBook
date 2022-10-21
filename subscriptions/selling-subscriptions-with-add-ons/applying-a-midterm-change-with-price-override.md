@@ -14,7 +14,6 @@ Use the [`POST /v1/subscriptions/{subscriptionId}/preview-cart`](https://www.dig
 
 {% tabs %}
 {% tab title="cURL" %}
-{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://<<host>>/v1/subscriptions/{subscriptionId}/preview-cart' \
 --header 'Content-Type:  application/json' \
@@ -34,14 +33,14 @@ curl --location --request POST 'https://<<host>>/v1/subscriptions/{subscriptionI
   "proratedUnitPrice" : 20.5
 }'
 ```
-{% endcode %}
 {% endtab %}
+{% endtabs %}
 
-{% tab title="200 OK response" %}
 You will receive a `200 OK` response.
 
-{% code overflow="wrap" %}
-```json
+{% tabs %}
+{% tab title="JSON" %}
+```javascript
 {
   "subscriptionId" : "15682787789",
   "subTotal" : 20.5,
@@ -78,7 +77,6 @@ You will receive a `200 OK` response.
   "isPaymentOnFile" : true
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -90,8 +88,7 @@ Use the [`POST /v1/subscriptions/{subscriptionId}/preview`](https://www.digitalr
 
 {% tabs %}
 {% tab title="cURL" %}
-{% code overflow="wrap" %}
-```json
+```javascript
 curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/preview' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
@@ -117,14 +114,14 @@ curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}
 }
 
 ```
-{% endcode %}
 {% endtab %}
+{% endtabs %}
 
-{% tab title="200 OK response" %}
 You will receive a `200 OK` response.
 
-{% code overflow="wrap" %}
-```json
+{% tabs %}
+{% tab title="JSON" %}
+```javascript
 {
   "subscriptionId" : "15684493989",
   "subTotal" : 20.5,
@@ -156,7 +153,7 @@ You will receive a `200 OK` response.
   "isCartNeeded" : true,
   "isPaymentOnFile" : true
 }
+
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
