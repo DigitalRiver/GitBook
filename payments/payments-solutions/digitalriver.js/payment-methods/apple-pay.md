@@ -14,7 +14,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create an[ Apple P
 
 To offer Apple Pay on your website, you need to validate your domain with Apple before you can accept transactions. To complete the validation:
 
-1. [Click to Download](http://drapi.io/docs/apple-pay/apple-developer-merchantid-domain-association) the `apple-developer-merchantid-domain-association` file.
+1. [Click to Download](https://drapi.io/docs/apple-pay/apple-developer-merchantid-domain-association) the `apple-developer-merchantid-domain-association` file.
 2. Save the file to the following location on the domain where you want to offer Apple Pay:\
    \
    `/.well-known/apple-developer-merchantid-domain-association`\
