@@ -20,9 +20,8 @@ You can create a custom integration to revoke a key when:
 * **Required response to notification**—Your endpoint must synchronously respond with a Revocation Service Response.
 
 {% tabs %}
-{% tab title="Payload" %}
-{% code overflow="wrap" %}
-```json
+{% tab title="Sample request" %}
+```javascript
 {
 	"RevocationServiceRequest": {
 		"orderInfo": {
@@ -575,11 +574,10 @@ You can create a custom integration to revoke a key when:
 	}
 }
 ```
-{% endcode %}
 {% endtab %}
 
 {% tab title="Successful response" %}
-```json
+```javascript
 {
 	"RevocationServiceResponse": {
 		"successful": "success",
@@ -593,8 +591,7 @@ You can create a custom integration to revoke a key when:
 {% endtab %}
 
 {% tab title="Unsuccessful response" %}
-{% code overflow="wrap" %}
-```json
+```javascript
 {
 	"RevocationServiceResponse": {
 		"successful": "success",
@@ -605,7 +602,6 @@ You can create a custom integration to revoke a key when:
 	}
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
