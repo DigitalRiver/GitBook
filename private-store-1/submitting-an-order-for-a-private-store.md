@@ -22,10 +22,12 @@ To submit an order for a Private Store:
 
 {% tabs %}
 {% tab title="Request" %}
+{% code overflow="wrap" %}
 ```http
 POST /oauth20/token?grant_type=password&sessionToken={{session_token}}
 Authorization: {{apikey_secret_authr}}
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -129,10 +131,12 @@ Once you've added a product to a cart, notice the discounts under `pricing` and 
 
 {% tabs %}
 {% tab title="Request" %}
+{% code overflow="wrap" %}
 ```http
 POST /shoppers/me/carts/active?productId=107845474&quantity=2
 Authorization: bearer {{access_token}}
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -146,8 +150,9 @@ Authorization: bearer {{access_token}}
 ```
 {% endtab %}
 
-{% tab title="Request body" %}
-```javascript
+{% tab title="Payload" %}
+{% code overflow="wrap" %}
+```json
 {
     "cart": {
         "billingAddress": {
@@ -179,6 +184,7 @@ Authorization: bearer {{access_token}}
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
