@@ -46,9 +46,8 @@ When you receive an unsuccessful response or experience communication issues (su
 * The consumer is charged until the Digital Right is fulfilled.
 
 {% tabs %}
-{% tab title="Payload" %}
-{% code overflow="wrap" %}
-```json
+{% tab title="Sample request" %}
+```javascript
 {
 	"GetKeyRequest": {
 		"orderID": {
@@ -732,12 +731,10 @@ When you receive an unsuccessful response or experience communication issues (su
 	}
 }
 ```
-{% endcode %}
 {% endtab %}
 
 {% tab title="Successful response" %}
-{% code overflow="wrap" %}
-```json
+```javascript
 {
 	"getKeyResponse": {
 		"key": {
@@ -749,12 +746,10 @@ When you receive an unsuccessful response or experience communication issues (su
 	}
 }
 ```
-{% endcode %}
 {% endtab %}
 
 {% tab title="Unsuccessful response" %}
-{% code overflow="wrap" %}
-```json
+```javascript
 {
 	"getKeyResponse": {
 		"returnCode": "1",
@@ -763,7 +758,6 @@ When you receive an unsuccessful response or experience communication issues (su
 	}
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
