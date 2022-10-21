@@ -28,20 +28,15 @@ User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_102)
 ```
 {% endtab %}
 
-{% tab title="Request body" %}
+{% tab title="Payload" %}
 ```javascript
 orderId=your_order_ID&&username=userName&password=orderPassword
 ```
 {% endtab %}
 
-{% tab title="Response header" %}
-```javascript
-HTTP/1.1 200 OK
-```
-{% endtab %}
-
-{% tab title="Response body" %}
-```javascript
+{% tab title="200 OK response" %}
+{% code overflow="wrap" %}
+```json
 {
   "orders": {
     "order": [
@@ -100,6 +95,7 @@ HTTP/1.1 200 OK
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -124,18 +120,14 @@ User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_102)
 {% endtab %}
 
 {% tab title="Request body" %}
+{% code overflow="wrap" %}
 ```javascript
 creditCardLastDigits=last_4_digits_of_their_payment_card&emailAddress=shopper's_email_address
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Response header" %}
-```http
-HTTP/1.1 200 OK
-```
-{% endtab %}
-
-{% tab title="Response body" %}
+{% tab title="200 OK response" %}
 ```javascript
 {"orders": {
    "order": [   {
@@ -185,5 +177,3 @@ HTTP/1.1 200 OK
 ```
 {% endtab %}
 {% endtabs %}
-
-##
