@@ -12,7 +12,6 @@ Use the [`POST /v1/subscriptions/{subscriptionId}/perpetual-price`](https://www.
 
 {% tabs %}
 {% tab title="cURL" %}
-{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/perpetual-price' \
 --header 'Content-Type:  application/json' \
@@ -35,7 +34,6 @@ curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}
     ]
 }'
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -47,11 +45,8 @@ In this scenario, you create a cart and assign a perpetual unit price to a custo
 
 Use the [`POST /v1/shoppers/me/carts/active`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post) or the [`POST /v1/shoppers/me/carts/active/line-items`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items/post) resource to create a cart request. You need to include the perpetual unit price (`perpetualUnitPrice`) in the subscription override info (`subscriptionOverrideInfo`).&#x20;
 
-
-
 {% tabs %}
 {% tab title="/active cURL" %}
-{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://{host}/v1/shoppers/me/carts/active' \
 --header 'Content-Type:  application/json' \
@@ -109,11 +104,9 @@ curl --location --request POST 'https://{host}/v1/shoppers/me/carts/active' \
     }
 }'
 ```
-{% endcode %}
 {% endtab %}
 
 {% tab title="/line-items cURL" %}
-{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://<<host>>/v1/shoppers/me/carts/line-items' \
 --header 'Content-Type:  application/json' \
@@ -171,14 +164,14 @@ curl --location --request POST 'https://<<host>>/v1/shoppers/me/carts/line-items
     }
 }'
 ```
-{% endcode %}
 {% endtab %}
+{% endtabs %}
 
-{% tab title="200 OK response" %}
 You will receive a `200 OK` response. The response to this request creates a shopping cart and returns an access token to be included in all other cart interactions.
 
-{% code overflow="wrap" %}
-```json
+{% tabs %}
+{% tab title="JSON" %}
+```javascript
 {
   "cart" : {
     "uri" : "https://dispatch-test.digitalriver.com/shop/sites/sub2test/shoppers/me/carts/active",
@@ -347,7 +340,6 @@ You will receive a `200 OK` response. The response to this request creates a sho
   }
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
