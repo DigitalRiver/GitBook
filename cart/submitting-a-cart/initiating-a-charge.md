@@ -29,12 +29,10 @@ curl --location --request POST 'http://<<host>>/v1/shoppers/me/carts/active' \
 ```
 {% endcode %}
 {% endtab %}
-{% endtabs %}
 
+{% tab title="200 OK response" %}
 You will receive a `200 OK` response. The response shows the `chargeType` in the order level.&#x20;
 
-{% tabs %}
-{% tab title="JSON" %}
 {% code overflow="wrap" %}
 ```json
 {
