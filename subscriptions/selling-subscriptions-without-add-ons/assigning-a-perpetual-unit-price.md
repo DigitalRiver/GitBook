@@ -12,6 +12,7 @@ Use the `POST /v1/subscriptions/{subscriptionId}/perpetual-price` resource to as
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/perpetual-price' \
 --header 'Content-Type:  application/json' \
@@ -20,6 +21,7 @@ curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}
     "perpetualUnitPrice": 120,
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -33,7 +35,8 @@ Use the `POST /v1/shoppers/me/carts/active` or the `POST /v1/shoppers/me/carts/a
 
 {% tabs %}
 {% tab title="/active cURL" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 curl --location --request POST 'https://{host}/v1/shoppers/me/carts/active' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
@@ -94,10 +97,12 @@ curl --location --request POST 'https://{host}/v1/shoppers/me/carts/active' \
       }
 }'
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="/line-items cURL" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 curl --location --request POST 'https://<<host>>/v1/shoppers/me/carts/line-items' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
@@ -117,6 +122,7 @@ curl --location --request POST 'https://<<host>>/v1/shoppers/me/carts/line-items
   }]
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -130,7 +136,8 @@ Use the `POST /v1/subscriptions/{subscriptionId}/perpetual-price` resource to ap
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 curl -X POST \
   https://{host}/v1/subscriptions/{ubscriptionId}/perpetual-price \
   -H 'authorization: Basic ****' \
@@ -141,6 +148,7 @@ curl -X POST \
         "perpetualUnitPrice" : 59.99
       }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
