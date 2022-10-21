@@ -178,19 +178,23 @@ You can use Reporting to see if a report is available for downloading and downlo
 The following example shows the Reporting call you need to send to get a list of all available reports. The response contains the list of available reports.
 
 {% tabs %}
-{% tab title="Request body" %}
-```http
+{% tab title="URI" %}
+{% code overflow="wrap" %}
+```xml
 GET https://api.digitalriver.com/reporting/files/all
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Response body" %}
-```javascript
+{% tab title="Response" %}
+{% code overflow="wrap" %}
+```json
 [
   {"filename": "TransactionCustomerDetail.zip","size": "249.333 KB","link": "/lenovo/files/TransactionCustomerDetail.zip","modification_ts": 1540996235000,"modification_date": "2018-10-31"
   }
 ]
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -199,9 +203,11 @@ GET https://api.digitalriver.com/reporting/files/all
 The following example shows the Reporting call that you need to send to download a specific report, where \<File Name> is the name of the zip file that contains the report.
 
 {% tabs %}
-{% tab title="Request body" %}
+{% tab title="URI" %}
+{% code overflow="wrap" %}
 ```http
 GET https://api.digitalriver.com/reporting/files/<File Name>.zip
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
