@@ -14,19 +14,20 @@ Retrieve all returns for a specified order where 999999999 is the `orderId`.
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```http
 curl --location --request POST 'http://{host}/v1/shoppers/me/orders/{orderId}/returns' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 ```
+{% endcode %}
 {% endtab %}
-{% endtabs %}
 
-A successful request returns a 200 response code:
+{% tab title="200 OK response" %}
+A successful request returns a `200 OK` response code:
 
-{% tabs %}
-{% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
 	"returns": {
 	"return": [
@@ -103,6 +104,7 @@ A successful request returns a 200 response code:
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -112,30 +114,18 @@ Request the return of one or more line items in a specified order where 99999999
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```http
-curl --location --request POST 'http://{host}/v1/orders/{orderid}/returns' \
+curl --location --request POST 'http://{host}/v1/shoppers/me/orders/{orderid}/returns' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 ```
-{% endtab %}
-{% endtabs %}
-
-{% tabs %}
-{% tab title="URI" %}
-```http
-POST /v1/shoppers/me/orders/9999999999/returns
-```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Request header" %}
-```http
-Accept: application/json Authorization: bearer your_
-access_token
-```
-{% endtab %}
-
-{% tab title="Request body" %}
-```
+{% tab title="Payload" %}
+{% code overflow="wrap" %}
+```json
 {
   "return": {
     "reason": "DUPLICATE_ORDER",
@@ -157,20 +147,14 @@ access_token
   }
 }
 ```
+{% endcode %}
 {% endtab %}
-{% endtabs %}
 
+{% tab title="200 OK response" %}
 A successful request returns a 200 response code:
 
-{% tabs %}
-{% tab title="Response header" %}
-```http
-HTTP/1.1 200 OK
-```
-{% endtab %}
-
-{% tab title="Response body" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "returns": [
     {
@@ -228,6 +212,7 @@ HTTP/1.1 200 OK
   ]
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
