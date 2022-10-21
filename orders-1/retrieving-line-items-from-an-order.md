@@ -26,20 +26,15 @@ User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_102)
 ```
 {% endtab %}
 
-{% tab title="Request body" %}
+{% tab title="Payload" %}
 ```
 The request body should be empty.
 ```
 {% endtab %}
 
-{% tab title="Response header" %}
-```http
-HTTP/1.1 200 OK
-```
-{% endtab %}
-
-{% tab title="Response body" %}
-```javascript
+{% tab title="200 OK response" %}
+{% code overflow="wrap" %}
+```json
 {"lineItem": {
    "uri": "https://api.digitalriver.com/v1/shoppers/me/orders/9999999999/line-items/1111111111",
    "id": 1111111111,
@@ -288,6 +283,7 @@ HTTP/1.1 200 OK
    "digitalRights": {"serialNumber": serial_number}
 }}
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -311,20 +307,15 @@ User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_102)
 ```
 {% endtab %}
 
-{% tab title="Request body" %}
+{% tab title="Payload" %}
 ```
 The request body should be empty.
 ```
 {% endtab %}
 
-{% tab title="Response header" %}
-```http
-HTTP/1.1 200 OK
-```
-{% endtab %}
-
-{% tab title="Response body" %}
-```javascript
+{% tab title="200 OK response" %}
+{% code overflow="wrap" %}
+```json
 {"lineItem": {
    "uri": "https://api.digitalriver.com/v1/shoppers/me/orders/9999999999/line-items/1111111111",
    "id": 1111111111,
@@ -449,5 +440,6 @@ HTTP/1.1 200 OK
    "digitalRights": {"serialNumber": serial_number}
 }}
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
