@@ -69,8 +69,9 @@ When the `isAutoRetriable` flag is set to false, there is a missing required fie
 The fulfillment company can cancel the whole order or part of the line item.
 
 {% tabs %}
-{% tab title="Request sample" %}
-```javascript
+{% tab title="Payload" %}
+{% code overflow="wrap" %}
+```json
 {
 	"ElectronicFulfillmentRequest": {
 		"lineItemID": {
@@ -845,10 +846,12 @@ The fulfillment company can cancel the whole order or part of the line item.
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Successful response sample" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
 	"ElectronicFulfillmentResponse": {
 		"successful": "true",
@@ -873,10 +876,12 @@ The fulfillment company can cancel the whole order or part of the line item.
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Successful electronic fulfillment notice" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
 	"ElectronicFulfillmentNotice": {
 		"requisitionID": "7351151490",
@@ -896,10 +901,12 @@ The fulfillment company can cancel the whole order or part of the line item.
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="(Error) Unsuccessful response sample" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
 	"ElectronicFulfillmentResponse": {
 		"successful": "false",
@@ -926,11 +933,13 @@ The fulfillment company can cancel the whole order or part of the line item.
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="(Error) Unsuccessful electronic fulfillment notice" %}
-```javascript
-{
+{% code overflow="wrap" %}
+```json
+J{
 	"ElectronicFulfillmentNotice": {
 		"requisitionID": "7351151490",
 		"lineItemID": "8410539790",
@@ -949,10 +958,12 @@ The fulfillment company can cancel the whole order or part of the line item.
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="(Cancelled) Unsuccessful electronic fulfillment response" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
 	"ElectronicFulfillmentResponse": {
 		"successful": "false",
@@ -979,6 +990,7 @@ The fulfillment company can cancel the whole order or part of the line item.
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -987,8 +999,9 @@ The fulfillment company can cancel the whole order or part of the line item.
 An order-level request is sent to the fulfiller and the fulfiller sends a response.
 
 {% tabs %}
-{% tab title="Sample request" %}
-```javascript
+{% tab title="Payload" %}
+{% code overflow="wrap" %}
+```json
 {
 	"OrderLevelElectronicFulfillmentRequest": {
 		"requisitionID": {
@@ -1756,10 +1769,12 @@ An order-level request is sent to the fulfiller and the fulfiller sends a respon
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Sample response" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
 	"ElectronicFulfillmentResponse": {
 		"successful": "true",
@@ -1775,6 +1790,7 @@ An order-level request is sent to the fulfiller and the fulfiller sends a respon
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -1793,8 +1809,9 @@ When a revocation request is successful, the fulfiller sends a response that ind
 When a revocation request is unsuccessful, the fulfiller sends a response that indicates there was a problem handling the revocation request.
 
 {% tabs %}
-{% tab title="Sample request" %}
-```javascript
+{% tab title="Payload" %}
+{% code overflow="wrap" %}
+```json
 {
 	"ElectronicFulfillmentRevocationRequest": {
 		"revokedElectronicFulfillmentNotice": {
@@ -1942,10 +1959,12 @@ When a revocation request is unsuccessful, the fulfiller sends a response that i
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Successful response" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
 	"ElectronicFulfillmentResponse": {
 		"successful": "true",
@@ -1970,10 +1989,12 @@ When a revocation request is unsuccessful, the fulfiller sends a response that i
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Unsuccessful response" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
 	"ElectronicFulfillmentRevocationResponse": {
 		"successful": "false",
@@ -1982,6 +2003,7 @@ When a revocation request is unsuccessful, the fulfiller sends a response that i
 	}
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
