@@ -8,19 +8,20 @@ You can use the `GET /sites/{siteId}/authorized-shipping-countries` resource to 
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request GET 'https://{host}/sites/{siteId}/authorized-shipping-countries' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 ```
+{% endcode %}
 {% endtab %}
-{% endtabs %}
 
-You will receive a `200 OK` response. The response returns data by locale and countries.
+{% tab title="200 OK response" %}
+You will receive a `200 OK` response. The response returns data by locale and county.
 
-{% tabs %}
-{% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {  
    "authorizedShippingCountries": [        
       {          
@@ -52,9 +53,20 @@ You will receive a `200 OK` response. The response returns data by locale and co
    ]
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 To get the list of authorized shipping countries by locale, add `?locale` at the end of the request. For example:
 
-`GET 'https://{host}/sites/{siteId}/authorized-shipping-countries?locale=en_US'`
+{% tabs %}
+{% tab title="cURL" %}
+{% code overflow="wrap" %}
+```http
+curl --location --request GET 'https://{host}/sites/{siteId}/authorized-shipping-countries?locale=en_US' \
+--header 'Content-Type:  application/json' \
+--header 'authorization: bearer ***\
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
