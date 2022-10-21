@@ -8,23 +8,20 @@ You can use the `GET /sites/{siteId}/authorized-billing-countries` resource to r
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request GET 'https://{host}/sites/{siteId}/authorized-billing-countries' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 ```
+{% endcode %}
 {% endtab %}
-{% endtabs %}
 
-You will receive a `200 OK` response. The response returns data by locale and countries.
+{% tab title="200 OK response" %}
+You will receive a `200 OK` response. The response returns data by locale and country.
 
-To get the list of authorized billing countries by locale, add `?locale` at the end of the request. For example:
-
-`GET 'https://{host}/sites/{siteId}/authorized-billing-countries?locale=en_US'`
-
-{% tabs %}
-{% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {  
    "authorizedBillingCountries": [        
       {          
@@ -43,5 +40,46 @@ To get the list of authorized billing countries by locale, add `?locale` at the 
    ]
 }
 ```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+To get the list of authorized billing countries by locale, add `?locale` at the end of the request. For example:
+
+{% tabs %}
+{% tab title="cURL" %}
+{% code overflow="wrap" %}
+```http
+curl --location --request GET 'https://{host}/sites/{siteId}/authorized-billing-countries?locale=en_US' \
+--header 'Content-Type:  application/json' \
+--header 'authorization: bearer ***\
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="200 OK response" %}
+You will receive a `200 OK` response.
+
+{% code overflow="wrap" %}
+```json
+{  
+   "authorizedBillingCountries": [        
+      {          
+         "locale": "en_US",          
+         "countries": [            
+            {              
+               "displayName": "Taiwan",              
+               "countryCode": "TW"            
+            },            
+            {              
+               "displayName": "Japan",              
+               "countryCode": "JP"            
+            }          
+         ]        
+      },           
+   ]
+}
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
