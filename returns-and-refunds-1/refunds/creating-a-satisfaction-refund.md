@@ -12,6 +12,7 @@ The following [`POST /orders/{orderid}/refunds`](https://www.digitalriver.com/do
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'http://{host}/orders/{orderid}/refunds?token={the customer's token}' \
 --header 'Content-Type:  application/json' \
@@ -34,14 +35,14 @@ curl --location --request POST 'http://{host}/orders/{orderid}/refunds?token={th
 
 }'
 ```
+{% endcode %}
 {% endtab %}
-{% endtabs %}
 
-A successful request returns a 200 response code:
+{% tab title="200 OK response" %}
+A successful request returns a `200 OK` response.
 
-{% tabs %}
-{% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "refunds": [
         {
@@ -88,7 +89,7 @@ A successful request returns a 200 response code:
         }
     ]
 }
-
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
