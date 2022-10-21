@@ -38,12 +38,10 @@ Create a Cart object with a `POST` request:
 ```
 {% endcode %}
 {% endtab %}
-{% endtabs %}
 
+{% tab title="201 Created response" %}
 A `201 Created` response returns a Cart object:
 
-{% tabs %}
-{% tab title="Response body" %}
 {% code overflow="wrap" %}
 ```json
 {
