@@ -8,7 +8,6 @@ The following [`POST /v1/subscriptions/{subscriptionId}/renewal-product`](https:
 
 {% tabs %}
 {% tab title="cURL" %}
-{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/renewal-product' \
 --header 'Content-Type: application/json' \
@@ -17,7 +16,6 @@ curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}
   "renewalProductId" :"5329012900"
 }'
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
