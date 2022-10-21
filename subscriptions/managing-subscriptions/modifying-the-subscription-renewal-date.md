@@ -8,6 +8,7 @@ The following [`POST /v1/subscriptions/{subscriptionId}/expiration-date`](https:
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/expiration-date' \
 --header 'Content-Type: application/json' \
@@ -16,6 +17,7 @@ curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}
   "expirationDate":"2020-10-19T01:23:48.000-0500"
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
