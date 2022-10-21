@@ -94,6 +94,7 @@ A long-term subscriber sometimes needs to change their subscription email addres
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'http://{host}/v1/subscriptions/{subscriptionId}/email' \
 --header 'Content-Type:  application/json' \
@@ -102,6 +103,7 @@ curl --location --request POST 'http://{host}/v1/subscriptions/{subscriptionId}/
  "emailAddress" : "jdoe@acme.com"
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -113,7 +115,8 @@ If the email address parameter is missing, you will see a [`400 Bad Request`](..
 
 {% tabs %}
 {% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "errors": {
     "error": [
@@ -126,14 +129,20 @@ If the email address parameter is missing, you will see a [`400 Bad Request`](..
   }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
+
+
 
 ### Email address is more than 255 characters
 
 An email address cannot exceed 255 characters. If the email address is more than 255 characters, you will see a [`400 Bad Request`](../../error-codes.md#400-bad-request) error message with an `invalid-request` code.&#x20;
 
-```javascript
+{% tabs %}
+{% tab title="Error example" %}
+{% code overflow="wrap" %}
+```json
 {
   "errors": {
     "error": [
@@ -146,6 +155,9 @@ An email address cannot exceed 255 characters. If the email address is more than
   }
 }
 ```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ## Updating the subscriber's email address for all subscriptions
 
@@ -153,7 +165,8 @@ A long-term subscriber sometimes needs to change their subscription email addres
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 curl --location --request POST 'http://{host}/v1/shoppers/me?applyEmailToSubscriptions=true' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
@@ -161,6 +174,7 @@ curl --location --request POST 'http://{host}/v1/shoppers/me?applyEmailToSubscri
  "emailAddress" : "jdoe@acme.com"
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
