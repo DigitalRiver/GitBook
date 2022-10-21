@@ -31,15 +31,13 @@ The Sales Catalog integration loads the fulfillment partner’s catalog of produ
 For clients and fulfillers using a Distribution Model, Digital River also requires the unit cost of the product. This detail is included in the unit cost segment. Please note that the unit cost is the amount the fulfiller/distributor is selling the product for to Digital River (that is, not the amount they charge the shopper).
 
 {% tabs %}
-{% tab title="XML" %}
-{% code overflow="wrap" %}
-```xml
+{% tab title="JSON" %}
+```javascript
 <unitCost>
   <c:amount>5.00</c:amount>
   <c:currencyCode>USD</c:curencyCode>
 </unitCost>
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
