@@ -6,9 +6,9 @@ description: Learn about supported OAuth and Commerce API formats
 
 The Commerce API and OAuth support requests and responses in XML and JSON formats. XML is the default for the Commerce API; JSON is the default for the OAuth API. You can override the default in the Accept header for both the OAuth and Commerce API. In the Commerce API, you can also override the default format using the format query parameter.
 
-### Accept header format for OAuth
+## Accept header format for OAuth
 
-The following list shows the supported accept header formats for the [OAuth ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Token)resource.
+The following example shows the supported accept header format for the [OAuth ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Token)resource.
 
 {% tabs %}
 {% tab title="Request Header" %}
@@ -21,7 +21,7 @@ Accept: application/xml
 
 ### Accept header format for Commerce API
 
-The following list shows the supported accept header formats for [Shopper ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers)resource.
+The following example shows the supported accept header format for [Shopper ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers)resource.
 
 {% tabs %}
 {% tab title="Request Header" %}
@@ -34,7 +34,7 @@ Accept: application/json
 
 ### Query parameter format
 
-The following GET request sets the format parameter format to json:
+The following GET request sets the parameter format to JSON:
 
 {% tabs %}
 {% tab title="Request Header" %}
