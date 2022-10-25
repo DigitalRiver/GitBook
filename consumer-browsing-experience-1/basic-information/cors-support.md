@@ -8,19 +8,13 @@ description: Understand how CORS defines how a browser and server communicate.
 
 Both the Commerce API and OAuth API suites provide support for CORS.
 
-## CORS request terms
+### CORS request terms
 
-### Preflight request
-
-A request that determines if an actual request is safe to send. A preflight request sends the OPTIONS method to a resource on another domain, querying the server for supported headers and methods. As part of a preflight request, a resource indicates whether it supports credentials. The user agent can cache preflight requests for several seconds if the Access-Control-Max-Age response header is configured. The Commerce API does not configure a preflight result cache value.
-
-### Simple request
-
-A request that uses simple methods (GET, POST, HEAD_)_, text/plain content type for the request body, and does not use custom headers. A simple request is a singular request to a server. Commerce API does not currently support the HEAD method.
-
-### Non-simple request
-
-A request that uses non-simple methods (such as PUT or DELETE), custom headers, or request bodies other than text/plain. For requests other than simple requests, a browser makes two requests to the server: one for the preflight request, and another for the actual request after server approval of the preflight.
+| Term               | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Preflight request  | A request that determines if an actual request is safe to send. A preflight request sends the OPTIONS method to a resource on another domain, querying the server for supported headers and methods. As part of a preflight request, a resource indicates whether it supports credentials. The user agent can cache preflight requests for several seconds if the Access-Control-Max-Age response header is configured. The Commerce API does not configure a preflight result cache value. |
+| Simple request     | A request that uses simple methods (GET, POST, HEAD_), text/plain content type for the request body, and does not use custom headers. A simple request is a singular request to a server._ Commerce API does not currently support the HEAD method.                                                                                                                                                                                                                                         |
+| Non-simple request | A request that uses non-simple methods (such as PUT or DELETE), custom headers, or request bodies other than text/plain. For requests other than simple requests, a browser makes two requests to the server: one for the preflight request, and another for the actual request after server approval of the preflight.                                                                                                                                                                     |
 
 ### OPTIONS command example
 
