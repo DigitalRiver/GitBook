@@ -4,7 +4,7 @@ description: Learn how to get a list of categories.
 
 # Simple call sequence example
 
-## Step 1: (Optional). Get an OAuth access token
+### Step 1: (Optional). Get an OAuth access token
 
 To get the OAuth access token, use the [POST oauth20/token](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Token/paths/\~1oauth20\~1token%20\(Client%20credentials\)/post) under the OAuth [Token ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Token)resource.
 
@@ -39,7 +39,7 @@ client_id=a78b756bd47e258841d7f007f3f62a&grant_type=password
 {% endtab %}
 {% endtabs %}
 
-## Step 2: Get the categories
+### Step 2: Get the categories
 
 To get the top-level categories, use the [GET shoppers/me/categories](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Categories/paths/\~1v1\~1shoppers\~1me\~1categories/get) resource.
 
