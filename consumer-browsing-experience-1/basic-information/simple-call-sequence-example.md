@@ -48,7 +48,7 @@ Use the access token acquired in step 1 as the [bearer token](https://tools.ietf
 The response returns the top-level categories available in the [Categories ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Categories)resource (see Response sample below). The response returns the default resource fields available for a resource and the `displayName`, `thumbnailImage`, and `products` resource fields. You can expand or filter the response using the [fields or expand query parameters](fields-and-expand-query-parameters.md). The links provided in the response indicate the next possible step you could take in a call sequence.
 
 {% tabs %}
-{% tab title="Request Sample" %}
+{% tab title="Request " %}
 ```
 GET https://api.digitalriver.com/v1/shoppers/me/categories HTTP/1.1
 
@@ -60,7 +60,9 @@ Authorization: bearer your_access_token
 ```
 {% endtab %}
 
-{% tab title="Response Sample" %}
+{% tab title="Response body" %}
+A JSON response object is an unordered set of name-value pairs. The {curly brackets} describe objects. The \[square brackets] describe lists. The Response sample below a list starts on line `4` and ends on line `51`. Text strings must be enclosed by double quotation marks. JSON directly supports number values, so numbers are not treated as strings and are not enclosed by double quotation marks. JSON does not support date-time values; therefore, dates and timestamps are typically formatted as strings.
+
 {% code overflow="wrap" lineNumbers="true" %}
 ```
     {"categories": {
@@ -119,7 +121,3 @@ Authorization: bearer your_access_token
 {% endcode %}
 {% endtab %}
 {% endtabs %}
-
-### Reading a JSON response
-
-A JSON response object is an unordered set of name-value pairs. the {curly brackets} describe objects. The \[square brackets] describe lists. The Response sample above starts a list on line `4` and ends it on line `51`. Text strings must be enclosed by double-quotes. JSON directly supports number values, so numbers are not treated as strings and are not enclosed by double-quotes. JSON does not support date-time values; therefore, dates and timestamps are typically formatted as strings.
