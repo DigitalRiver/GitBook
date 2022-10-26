@@ -17,10 +17,10 @@ This feature allows you to trigger the Promotional URL Offer type using a Commer
 
 ## High-level workflow use case
 
-1. The user applies an offer ID or O-ERID to a cart to trigger the Global Commerce's preconfigured offer behavior.
+1. The user applies an offer ID or O-ERID to a cart to trigger Global Commerce's preconfigured offer behavior.
 2. The client sets up a Promotional URL triggered offer in Global Commerce. A call to the [Cart ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts)resource triggers the offer and applies the discount offer with the offer ID or ERID included in the call.
 3. The system triggers this offer, then applies the new override discount to it. The term "Override or Overriden" specified here indicates the replacement of Global Commerce's Offer Discount setting.
-4. The shopper can see the correct discount applied in the cart.
+4. The shopper can see the correct discount applied to the cart.
 5. The shopper successfully submits the order.
 6. The user triggers the Get Order resource (`GET /v1/shoppers/me/orders/[orderId]`).
 7. The user can see the override description.
