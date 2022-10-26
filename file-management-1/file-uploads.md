@@ -205,7 +205,7 @@ You can give the Product Association Group a localized Group Name. When you crea
 
 You can add additional Group Names for other locales. A Client may ask for the name of a Group by Locale. If a localized name matches the Locale in the request, that name is provided; otherwise, the default name is provided. Group Name may be optional for some Product Association Types.
 
-The Parent Product is the Key Product in an Association Group. It drives the maintenance and display of Product Associations. You cannot remove Parent Product from a Group.
+The Parent Product is the Key Product in an Association Group. It drives the maintenance and display of Product Associations. You cannot remove a Parent Product from a Group.
 
 A Group contains a collection of Associated Products with relative sort order. You can add or remove Associated Products from a Group if the group's state allows it.
 
@@ -909,7 +909,7 @@ The following table shows the values for status return codes. There are two type
 For unsuccessful orders with multiple products, the line item order status allows the client to pinpoint the product in the order that caused the failure. Line items in pending status will be resubmitted every hour for up to 30 days.
 
 {% hint style="warning" %}
-**Requirement**: The client is responsible for resubmitting any 202/503 status code combinations to verify order fulfillment status.
+**Requirement**: The client is responsible for resubmitting any 202/503 status code combinations to verify the order fulfillment status.
 {% endhint %}
 
 | Code Types             | Codes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
