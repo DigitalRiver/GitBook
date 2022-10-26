@@ -1,6 +1,6 @@
 # HGOP2
 
-The HGOP2 (Half GUI Order Processing version 2) service allows clients to host their cart and then post the information in their cart to Digital River at checkout time. A successful HGOP2 call consumes the information, creates a cart on the Digital River-side, and then redirects the user to the cart on the Digital River-side.
+The HGOP2 (Half GUI Order Processing version 2) service allows clients to host their cart and then post the information in their cart to Digital River at checkout time. A successful HGOP2 call consumes the information, creates a cart on the Digital River side, and then redirects the user to the cart on the Digital River side.
 
 | Class             | Description                                                                                                  |
 | ----------------- | ------------------------------------------------------------------------------------------------------------ |
