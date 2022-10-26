@@ -6,7 +6,7 @@ description: Learn how to create a customer.
 
 You can make this request without an access token by passing in your API key as a query parameter. You can also send this request with either an anonymous customer or an authenticated customer token.
 
-## POSTS requests
+## POST requests
 
 Send a POST shoppers request to the [Shopper ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers)resource with the customer's information in the request payload.
 
@@ -32,7 +32,7 @@ POST https://api.digitalriver.com/v1/shoppers/me?apiKey=your_api_key HTTP/1.1
 
 ## Request body
 
-The contents required for the payload depends on who maintains the master record for the customer's username and password information. The base customer account information includes the customer's name and email address. The following list displays the minimum [Shopper ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers)resource fields required to create a customer record:
+The content required for the payload depends on who maintains the master record for the customer's username and password information. The base customer account information includes the customer's name and email address. The following list displays the minimum [Shopper ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers)resource fields required to create a customer record:
 
 * `username`
 * `password` (base64 encoded)
