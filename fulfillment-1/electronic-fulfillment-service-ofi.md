@@ -26,7 +26,7 @@ The Electronic Fulfillment service supports the following fulfillment scenarios:
 
 ## Asynchronous
 
-When a customer purchases a product, Digital River sends an Electronic Fulfillment Request and expects a fulfillment response at a later point because the client-side requires further processing.
+When a customer purchases a product, Digital River sends an Electronic Fulfillment Request and expects a fulfillment response at a later point because the client side requires further processing.
 
 {% hint style="info" %}
 **Example**:
@@ -44,7 +44,7 @@ When a customer purchases a product, Digital River sends an Electronic Fulfillme
 
 ## Synchronous
 
-When a customer purchases a product, the Digital River sends an Electronic Fulfillment Request and expects an Electronic Fulfillment Response from the client in real-time.
+When a customer purchases a product, Digital River sends an Electronic Fulfillment Request and expects an Electronic Fulfillment Response from the client in real-time.
 
 {% hint style="info" %}
 **Example**:
@@ -52,7 +52,7 @@ When a customer purchases a product, the Digital River sends an Electronic Fulfi
 1. A customer buys a product
 2. Digital River generates an Electronic Fulfillment Request and sends it to the client's endpoint.
 3. The client sends the Electronic Fulfillment Response to Digital River containing the fulfillment details. The client's endpoint must respond with an Electronic Fulfillment Response in real-time.
-4. Digital River presents the access credentials to the customer in the Thank you page and in the notification email.
+4. Digital River presents the access credentials to the customer on the Thank you page and in the notification email.
 5. The settlement is executed.
 {% endhint %}
 
