@@ -55,11 +55,9 @@ With asynchronous payment methods, the source may first return with a `state` of
 
 ### Reusable or single-use
 
-Some payment methods can be used to create source objects that are reusable, meaning the customer doesn't need to provide payment details before every transaction.  Other payment methods can only create single-use sources.
+Some [payment methods](./#supported-payment-methods) can be used to create sources that are reusable (recurring payments). This means the customer doesn't need to re-supply the payment details before every transaction.  Other [payment methods](./#supported-payment-methods) can only create single-use sources.
 
-With certain exceptions, [payment methods](../payments-solutions/digitalriver.js/payment-methods/) such as `creditCard`, `googlePay`, `directDebit`, and `payPal` are reusable. Non-card-based payment methods, such as `wireTransfer`, `konbini`, `alipay`, and `onlineBanking` are typically single-use only. As part of the enablement process, certain payment methods that are typically reusable can be restricted to single-use.
-
-{% hint style="info" %}
+{% hint style="success" %}
 For a list of payment methods that support reusability, refer to the [Supported payment methods](./#supported-payment-methods) page. Additionally, as part of the enablement process, certain payment methods that are typically reusable can be restricted to single-use only.
 {% endhint %}
 
