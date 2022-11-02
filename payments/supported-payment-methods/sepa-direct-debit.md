@@ -8,6 +8,8 @@ description: >-
 
 Allow users to authorize transactions directly from their bank account, which is a popular international payment method.&#x20;
 
+Due to the risk of chargebacks, we don't recommend using SEPA for the sale of physical goods. Contact your Digital River Representative for more information.
+
 ## How to configure&#x20;
 
 How you configure SEPA Direct Debit depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/). &#x20;
