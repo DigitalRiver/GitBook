@@ -28,7 +28,6 @@ The following table lists the selling entities associated with Commerce API.
 
 | Selling Entity Legal Name         | Buying Entity Legal Name          |
 | --------------------------------- | --------------------------------- |
-| Selling Entity Legal Name         | Buying Entity Legal Name          |
 | Digital River, Inc.               | Digital River, Inc.               |
 | Digital River globalTech, Inc.    | Digital River globalTech, Inc.    |
 | Digital River Ireland Ltd.        | Digital River Ireland Ltd.        |

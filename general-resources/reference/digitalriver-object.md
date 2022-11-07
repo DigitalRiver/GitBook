@@ -16,18 +16,18 @@ Use `createDropin` to create an instance of our Drop-in solution. This solution 
 
 Use this method to create an instance of an element that you can use to capture payment details. You can use the following elements in conjunction with `createSource` to create a payment source.
 
-| Element Type   | Description                               |
-| -------------- | ----------------------------------------- |
-| applepay       | Apple Pay                                 |
-| cardCVV        | A card security code field                |
-| cardExpiration | A credit card expiration field            |
-| cardNumber     | A credit card number field                |
-| googlepay      | Google Pay                                |
-| iban           | An IBAN element                           |
-| konbini        | A Konbini select                          |
-| onlineBanking  | An online banking select                  |
-| offlineRefund  | An offline refund data collection element |
-| paypal         | A PayPal element                          |
+| Element Type   | Description                                                                     |
+| -------------- | ------------------------------------------------------------------------------- |
+| applepay       | Apple Pay                                                                       |
+| cardCVV        | A card security code field                                                      |
+| cardExpiration | A credit card expiration field                                                  |
+| cardNumber     | A credit card number field                                                      |
+| googlepay      | Google Pay                                                                      |
+| iban           | An IBAN element                                                                 |
+| konbini        | [A Konbini element](elements/konbini-elements.md)                               |
+| onlineBanking  | [An online banking element](elements/online-banking-elements.md)                |
+| offlineRefund  | [An offline refund data collection element](elements/offline-refund-element.md) |
+| paypal         | [A PayPal element](elements/paypal-elements.md)                                 |
 
 {% tabs %}
 {% tab title="Example" %}
