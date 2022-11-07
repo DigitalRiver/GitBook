@@ -15,5 +15,3 @@ Support only:
 * [2.0](https://docs.digitalriver.com/wordpress/v/2.0-1/)
 * [1.0](https://docs.digitalriver.com/wordpress/v/1.0-3/)
 
-{% embed url="https://vimeo.com/357901801" %}
-
