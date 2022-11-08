@@ -10,4 +10,4 @@ A return flow begins after the shopper signs in to an API client page. By signin
 
 The following diagram shows how returns are processed.
 
-![Returns process diagram](../../.gitbook/assets/Returns-API-Process-Flow.png)
+![Returns process diagram](../../.gitbook/assets/returns-api-process-flow.png)

@@ -2,7 +2,7 @@
 description: Learn about Korea Bank Transfer.
 ---
 
-# Online Banking (Korea Bank Transfer)
+# Korea Bank Transfer (Online Banking)
 
 Accept online bank transfers in Korea, a payment method that represents 20% of the local market share. Recurring payments are supported. &#x20;
 

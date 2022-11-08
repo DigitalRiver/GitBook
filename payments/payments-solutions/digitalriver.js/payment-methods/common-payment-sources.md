@@ -17,24 +17,25 @@ description: Learn about payment sources that are common to all payment methods.
 
 ## Payment source types <a href="#payment-source-types" id="payment-source-types"></a>
 
-| Type                                 | Identifier     |
-| ------------------------------------ | -------------- |
-| Alipay                               | alipay         |
-| Apple Pay                            | applePay       |
-| Bancontact                           | bancontact     |
-| BLIK                                 | blik           |
-| Boleto                               | boletoBancario |
-| Credit Card                          | creditCard     |
-| Google Pay                           | googlepay      |
-| Klarna                               | klarnaCredit   |
-| Konbini                              | konbini        |
-| Online Banking (IBP)                 | onlineBanking  |
-| Online Banking (Korea Bank Transfer) | bankTransfer   |
-| PayCo                                | payco          |
-| PayPal                               | payPal         |
-| PayPal Billing Agreement             | payPalBilling  |
-| PayPal Credit                        | payPalCredit   |
-| SEPA Direct Debit                    | directDebit    |
-| TreviPay                             | msts           |
-| Trustly                              | trustly        |
-| Wire Transfer                        | wireTransfer   |
+| Type                                 | Identifier       |
+| ------------------------------------ | ---------------- |
+| Alipay                               | alipay           |
+| Apple Pay                            | applePay         |
+| Bancontact                           | bancontact       |
+| BLIK                                 | blik             |
+| Boleto                               | boletoBancario   |
+| Credit Card                          | creditCard       |
+| Google Pay                           | googlepay        |
+| Klarna                               | klarnaCredit     |
+| Konbini                              | konbini          |
+| Online banking (FXP)                 | fpxOnlineBanking |
+| Online Banking (IBP)                 | onlineBanking    |
+| Online Banking (Korea Bank Transfer) | bankTransfer     |
+| PayCo                                | payco            |
+| PayPal                               | payPal           |
+| PayPal Billing Agreement             | payPalBilling    |
+| PayPal Credit                        | payPalCredit     |
+| SEPA Direct Debit                    | directDebit      |
+| TreviPay                             | msts             |
+| Trustly                              | trustly          |
+| Wire Transfer                        | wireTransfer     |

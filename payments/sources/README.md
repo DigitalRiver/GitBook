@@ -4,7 +4,7 @@ description: Learn the basics of sources.
 
 # Source basics
 
-A [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) is associated with a [payment method](../supported-payment-methods.md) that a customer selects to fund a transaction. Digital River retrieves data from the [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) when generating a charge.
+A [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) is associated with a [payment method](../../payment-integrations-1/supported-payment-methods.md) that a customer selects to fund a transaction. Digital River retrieves data from the [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) when generating a charge.
 
 In Commerce APIs, each type of source has certain characteristics that determine how it is created and eventually processed.&#x20;
 
@@ -88,7 +88,7 @@ The Commerce API gives you the ability to save payment sources associated with a
 The following examples show how to attach a payment method to a customer or payment option.
 
 {% hint style="warning" %}
-You can only attach payment methods that [support recurring payments](../supported-payment-methods.md). Note that `storeCredit` does not support recurring payments and therefore, you cannot attach it as a payment option.
+You can only attach payment methods that [support recurring payments](../../payment-integrations-1/supported-payment-methods.md). Note that `storeCredit` does not support recurring payments and therefore, you cannot attach it as a payment option.
 {% endhint %}
 
 {% tabs %}

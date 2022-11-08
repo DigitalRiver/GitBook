@@ -8,7 +8,8 @@ V1 is the base version of the Commerce API. The following dates indicate when we
 
 ## 2022/11/08
 
-You can now bank on BLIK in Poland. BLIK is the must-have payment method for Polish shoppers. BLIK transactions accounted for 75% of ecommerce volume and a 60% market share of all ecommerce in Poland for 2021. BLIK boasts over 10.1 million active users and is continuing to grow. See [BLIK ](../../payments/supported-payment-methods/blik.md)to add BLIK to your checkout.
+* You can now bank on BLIK in Poland. BLIK is the must-have payment method for Polish shoppers. BLIK transactions accounted for 75% of ecommerce volume and a 60% market share of all ecommerce in Poland for 2021. BLIK boasts over 10.1 million active users and is continuing to grow. See [BLIK ](../../payments/supported-payment-methods/blik.md)to add BLIK to your checkout.
+* We added support for Financial Process Exchange (FPX). FPX enables Malaysian shoppers to pay for their online purchases directly from their bank account. See [FPX Online Banking](../../payments/supported-payment-methods/fpx-online-banking.md) to add FPX to your checkout.
 
 ## 2022/10/3
 

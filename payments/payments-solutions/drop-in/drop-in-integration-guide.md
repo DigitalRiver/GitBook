@@ -20,7 +20,7 @@ You can set up Drop-in Payments in seven steps:‌
 
 ### Step 1: Include DigitalRiver.js <a href="#step-1-include-digitalriver-js-on-your-page" id="step-1-include-digitalriver-js-on-your-page"></a>
 
-Include the following script on the pages where you want it to appear (for example, the cart or My Account page):&#x20;
+Include the following script on the pages where you want Drop-in payments to appear (for example, the cart or My Account page):&#x20;
 
 ```javascript
 <script type="text/javascript" src="https://js.digitalriverws.com/v1/DigitalRiver.js"></script>
@@ -28,7 +28,7 @@ Include the following script on the pages where you want it to appear (for examp
 
 ### Step 2: Include the base CSS file <a href="#step-2-include-the-hydrate-css-file" id="step-2-include-the-hydrate-css-file"></a>
 
-Include the following link to the Drop-in CSS file on the pages where you want it to appear (for example, checkout or my account pages). If you'd like to customize the styles, simply override the CSS file with your own.
+On the same pages, include the following link to the Drop-in Payments CSS file. If you'd like to customize the styles, simply override the CSS file with your own.
 
 ```javascript
  <link rel="stylesheet" href="https://js.digitalriverws.com/v1/css/DigitalRiver.css" type="text/css"/>
@@ -36,7 +36,7 @@ Include the following link to the Drop-in CSS file on the pages where you want i
 
 ### Step 3: Initialize DigitalRiver.js with your public key <a href="#step-3-initialize-digitalriver-js-with-your-public-key" id="step-3-initialize-digitalriver-js-with-your-public-key"></a>
 
-Initialize the DigitalRiver.js library with your public API key and any [optional parameters](../../../general-resources/reference/digital-river-publishable-api-key.md#localizing-digitalriver-js). If you provide a locale, Drop-in Payments will localize the experience accordingly.
+[Initialize the DigitalRiver.js library](../../../general-resources/reference/digital-river-publishable-api-key.md) with your [public API key](../../../resources/API-structure.md#public-keys). If you `provide` a locale, Drop-in Payments is localized based on that value.
 
 ```javascript
 let digitalriver = new DigitalRiver("YOUR_PUBLIC_API_KEY", {
@@ -46,7 +46,7 @@ let digitalriver = new DigitalRiver("YOUR_PUBLIC_API_KEY", {
 
 ### Step 4: Create a Drop-in Payments container
 
-Create a container element for the Drop-in Payments and place it on the page where you want it to appear within your experience.
+Create a container element on the page where you want the Drop-in Payments to appear.
 
 ```javascript
 <div id="drop-in"></div>
@@ -110,7 +110,7 @@ let configuration = {
 
 ### Step 6: Use the configuration object to create an instance of Drop-in Payments <a href="#step-6-allow-the-shopper-to-interact-with-hydrate" id="step-6-allow-the-shopper-to-interact-with-hydrate"></a>
 
-&#x20;Create an instance of Drop-in Payments by passing the configuration object using the `createDropin()` function.
+&#x20;Create an instance of Drop-in Payments by passing the [configuration object](drop-in-integration-guide.md#step-5-configure-hydrate) to `createDropin()`.
 
 ```javascript
 let dropin = digitalriver.createDropin(configuration);
@@ -118,11 +118,13 @@ let dropin = digitalriver.createDropin(configuration);
 
 ### Step 7: Mount Drop-in Payments on your cart or account management page
 
-Add the following statement to your cart or account management page:
+Add the following statement to the appropriate cart or account management page:
 
 ```javascript
 dropin.mount("drop-in");
 ```
+
+Once invoked, `mount()` displays Drop-in payments in the [designated container](drop-in-integration-guide.md#step-4-create-a-drop-in-payments-container).&#x20;
 
 ## Using Drop-in Payments within your cart flow
 
@@ -136,7 +138,7 @@ Follow the instructions in [Getting started](drop-in-integration-guide.md#gettin
 
 From the experience page where you added the Drop-in Payments container, customers select how they want to pay. Drop-in Payments provides what is needed, including redirects to return a payment source that can be used in downstream API calls with the Commerce API.
 
-![](<../../../.gitbook/assets/wideDropin (1).png>)
+![](<../../../.gitbook/assets/widedropin (1).png>)
 
 #### The customer provides payment details <a href="#customer-provides-payment-details" id="customer-provides-payment-details"></a>
 
@@ -335,13 +337,13 @@ When creating your Drop-in Payments instance, you can specify options to trigger
 | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | `flow`                      | `managePaymentMethods`                                                                                                            | Use this option to specify a different Drop-in Payments mode of operation. Enable this flow if you are using Drop-in Payments as part of a My Account page where your customer is managing their stored payment methods.                                                                                                                                                  | False      |
 | `flow`                      | `checkout`                                                                                                                        | Use this option if you are using Drop-in Payments within a standard checkout flow.                                                                                                                                                                                                                                                                                        | True       |
-| `showSavePaymentAgreement`  | `true`                                                                                                                            | <p>When enabled, presents the customer with an option to save their payment details for future use within Drop-in Payments. Enabling this feature will show the appropriate check boxes and localized disclosure statements and facilitate any necessary Strong Customer Authentication.</p><p> <img src="../../../.gitbook/assets/SaveAccountInformtion.png" alt=""></p> | False      |
+| `showSavePaymentAgreement`  | `true`                                                                                                                            | <p>When enabled, presents the customer with an option to save their payment details for future use within Drop-in Payments. Enabling this feature will show the appropriate check boxes and localized disclosure statements and facilitate any necessary Strong Customer Authentication.</p><p> <img src="../../../.gitbook/assets/saveaccountinformtion.png" alt=""></p> | False      |
 | `showSavePaymentAgreement`  | `false`                                                                                                                           | If disabled, Drop-in Payments will not present the customer with an option to save their payment details.                                                                                                                                                                                                                                                                 | True       |
-| `showComplianceSection`     | `true`                                                                                                                            | <p>Will show a localized compliance link section as part of Drop-in Payments. This is an important piece for accessing the Digital River business model.</p><p><img src="../../../.gitbook/assets/ShowComplianceSection.png" alt="" data-size="original"> </p>                                                                                                            | True       |
+| `showComplianceSection`     | `true`                                                                                                                            | <p>Will show a localized compliance link section as part of Drop-in Payments. This is an important piece for accessing the Digital River business model.</p><p><img src="../../../.gitbook/assets/showcompliancesection.png" alt="" data-size="original"> </p>                                                                                                            | True       |
 | `showComplianceSection`     | `false`                                                                                                                           | Disables the compliance section within Drop-in Payments.                                                                                                                                                                                                                                                                                                                  |            |
 | `button`                    | An object which specifies a `type` as well as a custom `buttonText` attribute.                                                    | Use this option to [customize the text of the Drop-in button](drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-button).                                                                                                                                                                                                                                   |            |
 | `usage`                     | <p><code>subscription</code></p><p><code>convenience</code></p><p><code>unscheduled</code></p>                                    | Use this option to [specify the future use of a source](drop-in-integration-guide.md#properly-identifying-future-usage-of-created-sources).                                                                                                                                                                                                                               |            |
-| `showTermsOfSaleDisclosure` | `true`                                                                                                                            | <p>Use this option to show the required terms of sale disclosure. These localized terms automatically update if recurring products are purchased.</p><p><img src="../../../.gitbook/assets/ShowTermsOfDisclosure.png" alt="" data-size="original"> </p>                                                                                                                   |            |
+| `showTermsOfSaleDisclosure` | `true`                                                                                                                            | <p>Use this option to show the required terms of sale disclosure. These localized terms automatically update if recurring products are purchased.</p><p><img src="../../../.gitbook/assets/showtermsofdisclosure.png" alt="" data-size="original"> </p>                                                                                                                   |            |
 | `showTermsOfSaleDisclosure` | `false`                                                                                                                           | Hides the terms of sale disclosure.                                                                                                                                                                                                                                                                                                                                       | True       |
 | `redirect`                  | An object that specifies the options you want to use to disable the automatic redirect functionality built into Drop-in Payments. | Use this option if you would like to handle redirecting the customer yourself to the payment provider. See [Disabling redirects within Drop-in Payments](drop-in-integration-guide.md#dropinviadigitalriver.js-disablingredirectswithindropin).                                                                                                                           |            |
 
@@ -376,11 +378,11 @@ The Drop-in Payments button is customizable. You can either display pre-configur
 | Type                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `continue`_(default)_ | <p>Use the following configuration to create a <strong>Continue</strong> button:<br></p><p><code>"options": {</code>   <br>   <code>"button": {</code>    <br>      <code>"type":    "continue"</code> <br>   <code>}</code> <br><code>}</code></p>                                                                                                                                                                                                                                      |
-| `payNow`              | <p>Use the following configuration to create a <strong>Pay Now</strong> button:<br></p><p><code>"options": {</code>   <br>   <code>"button": {</code>    <br>      <code>"type":    "payNow"</code> <br>   <code>}</code> <br><code>}</code></p><p><code></code></p><p><code></code><img src="../../../.gitbook/assets/Credit-Card-Continue.png" alt="" data-size="original"> <code></code> </p>                                                                                         |
-| `buyNow`              | <p>Use the following configuration to create a <strong>Buy Now</strong> button:</p><p><strong></strong></p><p><code>"options": {</code>   <br>   <code>"button": {</code>    <br>      <code>"type":    "buyNow"</code> <br>   <code>}</code> <br><code>}</code></p><p><code></code></p><p><code></code><img src="../../../.gitbook/assets/BuyNow.png" alt="" data-size="original"> <code></code> </p>                                                                                   |
-| `completeOrder`       | <p>Use the following configuration to create a <strong>Submit and Complete Payment</strong> button:<br></p><p><code>"options": {</code>   <br>   <code>"button": {</code>    <br>      <code>"type":    "completeOrder"</code> <br>   <code>}</code> <br><code>}</code></p><p><code></code><img src="../../../.gitbook/assets/SubmitAndCompletePayment.png" alt="" data-size="original"> <code></code> </p>                                                                              |
-| `submitOrder`         | <p>Use the following configuration to create a <strong>Submit Order</strong> button:</p><p><strong></strong></p><p><code>"options": {</code>   <br>   <code>"button": {</code>    <br>      <code>"type":    "submitOrder"</code> <br>   <code>}</code> <br><code>}</code></p><p><code></code><img src="../../../.gitbook/assets/SubmitOrder.png" alt="" data-size="original"> <code></code> </p>                                                                                        |
-| `custom`              | <p>In the following configuration, use <code>buttonText</code> to create a button with customized text:</p><p><strong></strong></p><p><code>"options": {</code>   <br>   <code>"button": {</code>    <br>      <code>type":    "custom".</code> <br>        <code>"buttonText": "Custom Text For Button"</code><br>   <code>}</code> <br><code>}</code></p><p><code></code><img src="../../../.gitbook/assets/CustomerTextForButton.png" alt="" data-size="original"> <code></code> </p> |
+| `payNow`              | <p>Use the following configuration to create a <strong>Pay Now</strong> button:<br></p><p><code>"options": {</code>   <br>   <code>"button": {</code>    <br>      <code>"type":    "payNow"</code> <br>   <code>}</code> <br><code>}</code></p><p><code></code></p><p><code></code><img src="../../../.gitbook/assets/credit-card-continue.png" alt="" data-size="original"> <code></code> </p>                                                                                         |
+| `buyNow`              | <p>Use the following configuration to create a <strong>Buy Now</strong> button:</p><p><strong></strong></p><p><code>"options": {</code>   <br>   <code>"button": {</code>    <br>      <code>"type":    "buyNow"</code> <br>   <code>}</code> <br><code>}</code></p><p><code></code></p><p><code></code><img src="../../../.gitbook/assets/buynow.png" alt="" data-size="original"> <code></code> </p>                                                                                   |
+| `completeOrder`       | <p>Use the following configuration to create a <strong>Submit and Complete Payment</strong> button:<br></p><p><code>"options": {</code>   <br>   <code>"button": {</code>    <br>      <code>"type":    "completeOrder"</code> <br>   <code>}</code> <br><code>}</code></p><p><code></code><img src="../../../.gitbook/assets/submitandcompletepayment.png" alt="" data-size="original"> <code></code> </p>                                                                              |
+| `submitOrder`         | <p>Use the following configuration to create a <strong>Submit Order</strong> button:</p><p><strong></strong></p><p><code>"options": {</code>   <br>   <code>"button": {</code>    <br>      <code>"type":    "submitOrder"</code> <br>   <code>}</code> <br><code>}</code></p><p><code></code><img src="../../../.gitbook/assets/submitorder.png" alt="" data-size="original"> <code></code> </p>                                                                                        |
+| `custom`              | <p>In the following configuration, use <code>buttonText</code> to create a button with customized text:</p><p><strong></strong></p><p><code>"options": {</code>   <br>   <code>"button": {</code>    <br>      <code>type":    "custom".</code> <br>        <code>"buttonText": "Custom Text For Button"</code><br>   <code>}</code> <br><code>}</code></p><p><code></code><img src="../../../.gitbook/assets/customertextforbutton.png" alt="" data-size="original"> <code></code> </p> |
 
 ### Specifying a source's future use
 
@@ -392,18 +394,19 @@ Set `usage` to `subscription` when you create sources that are used primarily fo
 
 #### **Convenience**
 
-The `convenience` setting applies mainly to saved payment sources that are used for one-off transactions. These are sources where customers are typically present during the checkout flow and want to quickly access their payment information. Select this option if you don't offer [subscriptions](drop-in-integration-guide.md#subscription) or don't have [unscheduled](drop-in-integration-guide.md#unscheduled) merchant initiated transactions
+The `convenience` setting applies mainly to saved payment sources that are used for one-off transactions. These are sources where customers are typically present during the checkout flow and want to quickly access their payment information. Select this option if you don't offer [subscriptions](drop-in-integration-guide.md#subscription) or don't have [unscheduled](drop-in-integration-guide.md#unscheduled) merchant=initiated transactions
 
 #### Unscheduled
 
-Set `usage` to `unscheduled` when you create sources for unscheduled merchant initiated transactions. These are contracts that occur on a non-fixed schedule using saved card information. Automatic top-ups are an example of one such transaction. They occur whenever a customer's balance drops below a pre-defined amount.
+Set `usage` to `unscheduled` when you create sources for unscheduled merchant-initiated transactions. These are contracts that occur on a non-fixed schedule using saved card information. Automatic top-ups are an example of one such transaction. They occur whenever a customer's balance drops below a pre-defined amount.
 
 ## Configuring payment methods within Drop-in Payments
 
-Drop-in Payments uses DigitalRiver.js elements to capture secure payment details. Drop-in Payments comes with a predefined style that should meet most use cases. In the event you would like to customize the look and feel, you should familiarize yourself with the [Styling an element container](../../../general-resources/reference/elements/#styling-an-element-container) in the [DigitalRiver.js](../digitalriver.js/) documentation.
+Drop-in Payments uses DigitalRiver.js elements to capture secure payment details. Drop-in Payments come with a predefined style that should meet most use cases. In the event you would like to customize the look and feel, you should familiarize yourself with the [Styling an element container](../../../general-resources/reference/elements/#styling-an-element-container) in the [DigitalRiver.js](../digitalriver.js/) documentation.
 
 Here is an example of customizing several payment methods:
 
+{% code overflow="wrap" %}
 ```javascript
 const apiKey = 'YOUR_PUBLIC_API_KEY';
  
@@ -525,6 +528,7 @@ const configuration = {
  
 digitalriver.createDropin(configuration).mount('dropin');
 ```
+{% endcode %}
 
 ### Drop-in Payments specific configurations
 
@@ -642,7 +646,7 @@ When your customer chooses to pay with a specific payment method and decides to 
 
 ### onReady
 
-When ready, Drop-in Payments will emit an event that contains a `"paymentMethodTypes"` array of the available payment methods.
+When ready, Drop-in Payments will emit an event that contains a `"paymentMethodTypes"` array of available payment methods.
 
 ```javascript
 {
