@@ -8,7 +8,7 @@ An offer is a discount promotion that entices shoppers to purchase a product fro
 
 The following image shows an example of how you can display a discount on a category list page.
 
-![](../../.gitbook/assets/discount.png)
+![](<../../.gitbook/assets/discount (1).png>)
 
 ## Offer types
 

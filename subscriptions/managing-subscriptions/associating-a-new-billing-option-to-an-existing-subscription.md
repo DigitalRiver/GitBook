@@ -12,6 +12,7 @@ The following [`POST /v1/subscriptions/{subscriptionId}/payment-source`](https:/
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}/payment-source' \
 --header 'Content-Type:  application/json' \
@@ -21,6 +22,7 @@ curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}
   "isShippingSameAsBilling": true
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -40,6 +42,7 @@ The following [`POST /v1/subscriptions/{subscriptionId}/payment-option`](https:/
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://<<host>>/v1/subscriptions/{subscriptionId}/payment-option' \
 --header 'Content-Type: application/json' \
@@ -49,8 +52,8 @@ curl --location --request POST 'https://<<host>>/v1/subscriptions/{subscriptionI
  "isShippingSameAsBilling": true
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 You will receive a `202 Accepted` response.
-

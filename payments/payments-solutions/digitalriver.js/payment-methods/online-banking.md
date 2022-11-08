@@ -1,5 +1,8 @@
 ---
-description: Learn how to configure Online Banking for DigitalRiver.js with Elements
+description: >-
+  Online Banking, also sometimes called Internet Bank Payment (IBP), is a
+  Browser Redirect processing method where customers authorize a debit from
+  their bank account.
 ---
 
 # Configuring Online Banking (IBP)
@@ -13,7 +16,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create an[ Online 
 
 ## Step 1: Build Online Banking objects
 
-Build the Online Banking Source Request Details objects. The Online Banking Source Request object requires the following fields.
+Build the Online Banking Source Request Details object. The Online Banking Source Request object requires the following fields.
 
 | Field           | Value                                                                                               |
 | --------------- | --------------------------------------------------------------------------------------------------- |

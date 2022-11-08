@@ -10,6 +10,7 @@ Use the [`POST /v1/subscriptions/{subscriptionId}/reduce`](https://www.digitalri
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}>/reduce' \
 --header 'Content-Type:  application/json' \
@@ -21,14 +22,14 @@ curl --location --request POST 'https://{host}/v1/subscriptions/{subscriptionId}
   "quantity" : 1
 }'
 ```
+{% endcode %}
 {% endtab %}
-{% endtabs %}
 
+{% tab title="202 OK Accepted response" %}
 You will receive a `202 Accepted` response.
 
-{% tabs %}
-{% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "subscriptionId" : "29123",
   "subTotal" : 20.5,
@@ -54,5 +55,6 @@ You will receive a `202 Accepted` response.
   "isPaymentOnFile" : true
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

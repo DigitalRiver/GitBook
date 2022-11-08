@@ -8,19 +8,20 @@ The following [`GET /v1/subscriptions?shopperId={shopperId}`](https://www.digita
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```javascript
 curl --location --request GET 'https://{host}//v1/subscription?shopperId={shopperId}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic ***' \
 ```
+{% endcode %}
 {% endtab %}
-{% endtabs %}
 
+{% tab title="200 OK response" %}
 You will receive a `200 OK` response.
 
-{% tabs %}
-{% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "subscriptions": [
     {
@@ -117,5 +118,6 @@ You will receive a `200 OK` response.
   ]
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

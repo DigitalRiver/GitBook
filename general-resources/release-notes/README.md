@@ -6,6 +6,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2022/11/08
+
+You can now bank on BLIK in Poland. BLIK is the must-have payment method for Polish shoppers. BLIK transactions accounted for 75% of ecommerce volume and a 60% market share of all ecommerce in Poland for 2021. BLIK boasts over 10.1 million active users and is continuing to grow. See [BLIK ](../../payments/supported-payment-methods/blik.md)to add BLIK to your checkout.
+
 ## 2022/10/3
 
 You can now [get all applied offers](../../cart/creating-or-updating-a-cart/getting-all-applied-offers.md), [remove a specific applied offer](../../cart/creating-or-updating-a-cart/removing-a-specific-applied-offer.md) at the user level, or [remove all eligible offers](../../cart/creating-or-updating-a-cart/removing-eligible-offers.md), including site level and user level, from a customer's cart. We also added information on [reconciling conflicting offers](../../cart/creating-or-updating-a-cart/reconciling-conflicting-offers.md).

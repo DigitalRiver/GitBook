@@ -22,6 +22,7 @@ description: Learn about payment sources that are common to all payment methods.
 | Alipay                               | alipay         |
 | Apple Pay                            | applePay       |
 | Bancontact                           | bancontact     |
+| BLIK                                 | blik           |
 | Boleto                               | boletoBancario |
 | Credit Card                          | creditCard     |
 | Google Pay                           | googlepay      |

@@ -7,7 +7,7 @@ description: >-
 # Boleto
 
 {% hint style="warning" %}
-Before you can use the Boleto payment method, you must attach a tax ID to the cart.  See [Best practices](boleto.md#best-practices) for instructions.
+Before you can use the Boleto payment method, you must attach a tax ID to the cart.  See [Best practices](../payments-solutions/digitalriver.js/payment-methods/configuring-boleto.md#best-practices) for instructions.
 {% endhint %}
 
 Digital River has partnered with PPRO, a payment aggregator, to provide Boleto Bancário. In Brazil, two-thirds of the 200 million population do not have a credit card, Boleto Bancário is highly popular, generating over 50 million transactions a month. Local and regional merchants often offer discounts for Boleto Bancário payments as there is no chargeback risk, and payments are made upfront. After the shopper selects products or services, they go to the client’s Checkout page to select Boleto Bancário. The client site generates the billing details as a print-optimized voucher. The shopper can then pay at a variety of locations with cash or via bank transfer. Once the payment is received, the client ships the purchase order. Boleto Bancário also facilitates online payments via bank transfer or payment card.&#x20;

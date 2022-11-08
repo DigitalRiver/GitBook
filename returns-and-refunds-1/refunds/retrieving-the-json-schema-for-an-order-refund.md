@@ -8,19 +8,20 @@ Retrieve the JSON schema for a refund associated with an order like this where y
 
 {% tabs %}
 {% tab title="cURL" %}
+{% code overflow="wrap" %}
 ```http
 curl --location --request POST 'http://{host}/orders/{orderid}/refunds-available' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
 ```
+{% endcode %}
 {% endtab %}
-{% endtabs %}
 
-A successful request returns a 200 response code:
+{% tab title="200 OK response" %}
+A successful request returns a `200 OK` response.
 
-{% tabs %}
-{% tab title="JSON" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
   "status": "string",
   "reason": "string",
@@ -84,5 +85,6 @@ A successful request returns a 200 response code:
   "siteId": "string"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

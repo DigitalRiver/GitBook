@@ -10,33 +10,34 @@ To retrieve a billing address, use the `G`[`ET /shoppers/me/orders/{orderId}/bil
 
 {% tabs %}
 {% tab title="URI" %}
+{% code overflow="wrap" %}
 ```http
 GET shoppers/me/orders/9999999999/billing-address
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Request header" %}
+{% code overflow="wrap" %}
 ```http
 Host: api.digitalriver.com
 Accept: application/json
 Authorization: bearer your_access_token
 User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_102)
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Request body" %}
+{% tab title="Payload" %}
+{% code overflow="wrap" %}
 ```
 The request body should be empty. 
 ```
+{% endcode %}
 {% endtab %}
 
-{% tab title="Response header" %}
-```http
-HTTP/1.1 200 OK
-```
-{% endtab %}
-
-{% tab title="Response body" %}
+{% tab title="200 OK response" %}
+{% code overflow="wrap" %}
 ```javascript
 {"address": {
    "uri": "https://api.digitalriver.com/v1/shoppers/me/orders/9999999999/billing-address",
@@ -55,6 +56,7 @@ HTTP/1.1 200 OK
    "phoneNumber": "555-555-555"
 }}
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -78,19 +80,14 @@ User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_102)
 ```
 {% endtab %}
 
-{% tab title="Request body" %}
+{% tab title="Payload" %}
 ```
 The request body should be empty. 
 ```
 {% endtab %}
 
-{% tab title="Response header" %}
-```http
-HTTP/1.1 200 OK
-```
-{% endtab %}
-
-{% tab title="Response body" %}
+{% tab title="200 OK response" %}
+{% code overflow="wrap" %}
 ```javascript
 {"address": {
    "uri": "https://api.digitalriver.com/v1/shoppers/me/orders/9999999999/shippingAddress",
@@ -109,5 +106,6 @@ HTTP/1.1 200 OK
    "phoneNumber": "555-555-5555"
 }}
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

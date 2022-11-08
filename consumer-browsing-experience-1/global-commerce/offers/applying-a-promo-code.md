@@ -8,17 +8,18 @@ Send a `POST shoppers/me/carts/active` request to the [Cart ](https://www.digita
 
 {% tabs %}
 {% tab title="URI" %}
+{% code overflow="wrap" %}
 ```http
 POST https://api.digitalriver.com/v1/shoppers/me/carts/active?promoCode=wb32xjtam HTTP/1.1
 ```
+{% endcode %}
 {% endtab %}
-{% endtabs %}
 
+{% tab title="200 OK response" %}
 A successful request returns a status code of 200 in the response header; otherwise, error codes are returned in the response. The ID of the cart is `1234567890`.
 
-{% tabs %}
-{% tab title="The Cart object" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 {
 	"cart": {
 		"id": "1234567890",
@@ -101,6 +102,7 @@ A successful request returns a status code of 200 in the response header; otherw
 	 }
  }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
