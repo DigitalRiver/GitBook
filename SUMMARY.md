@@ -251,7 +251,7 @@
 
 ## Developer Resources <a href="#resources" id="resources"></a>
 
-* [Postman collection](https://github.com/DigitalRiver)
+* [Postman collection](https://github.com/DigitalRiver/commerce-api)
 * [Testing scenarios](resources/testing-scenarios.md)
 * [API structure](resources/API-structure.md)
 * [Rate limiting](resources/rate-limiting.md)
