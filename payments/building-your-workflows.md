@@ -22,7 +22,7 @@ Note the following limitations and constraints when building your payments workf
   \
   If you change the currency when calling /v1/shoppers, a [`409 Conflict`](../error-codes.md#409-conflict) response contains specific information about what triggered the failure. In this instance, one of the currencies in the cart is not supported.
 
-{% code title="Error" %}
+{% code overflow="wrap" %}
 ```json
 {
     "errors": {
@@ -650,7 +650,7 @@ The shopper selects the payment method to update.&#x20;
 {% endtab %}
 {% endtabs %}
 
-xYou can create [Strong Customer Authentication (SCA)](https://info.digitalriver.com/rs/348-QUY-258/images/Digital\_River\_Guide\_to\_PSD2\_Compliance\_2020.pdf) compliant workflows for both [purchase transactions](building-your-workflows.md#purchase-flows) and [customer account management](building-your-workflows.md#account-management-flows).
+You can create [Strong Customer Authentication (SCA)](https://info.digitalriver.com/rs/348-QUY-258/images/Digital\_River\_Guide\_to\_PSD2\_Compliance\_2020.pdf) compliant workflows for both [purchase transactions](building-your-workflows.md#purchase-flows) and [customer account management](building-your-workflows.md#account-management-flows).
 
 For all the workflows that use [Drop-in Payments](payments-solutions/drop-in/), you'll first need to perform some [common, initial steps](building-your-workflows.md#common-drop-in-steps) before proceeding to the workflow's specific steps.‌ For workflows using [DigitalRiver.js with elements](payments-solutions/digitalriver.js/), to complete some [prerequisites](building-your-workflows.md#elements-prerequisites).
 
