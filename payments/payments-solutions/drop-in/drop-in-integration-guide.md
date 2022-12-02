@@ -4,7 +4,7 @@ description: Create a payment form using Drop-in Payments.
 
 # Drop-in Payments integration guide
 
-
+This page explains how to [get started](drop-in-integration-guide.md#getting-started) integrating [Drop-in payments](./) into both [cart flows](drop-in-integration-guide.md#using-drop-in-payments-within-your-cart-flow) and [account management flows](drop-in-integration-guide.md#using-drop-in-payments-to-collect-payment-details-on-a-my-account-page).&#x20;
 
 ## Getting started
 
@@ -22,67 +22,49 @@ You can set up Drop-in Payments in seven steps:‌
 
 Include the following script on the pages where you want Drop-in payments to appear (for example, the cart or My Account page):&#x20;
 
+{% code overflow="wrap" %}
 ```javascript
 <script type="text/javascript" src="https://js.digitalriverws.com/v1/DigitalRiver.js"></script>
 ```
+{% endcode %}
 
 ### Step 2: Include the base CSS file <a href="#step-2-include-the-hydrate-css-file" id="step-2-include-the-hydrate-css-file"></a>
 
 On the same pages, include the following link to the Drop-in Payments CSS file. If you'd like to customize the styles, simply override the CSS file with your own.
 
+{% code overflow="wrap" %}
 ```javascript
  <link rel="stylesheet" href="https://js.digitalriverws.com/v1/css/DigitalRiver.css" type="text/css"/>
 ```
+{% endcode %}
 
 ### Step 3: Initialize DigitalRiver.js with your public key <a href="#step-3-initialize-digitalriver-js-with-your-public-key" id="step-3-initialize-digitalriver-js-with-your-public-key"></a>
 
-[Initialize the DigitalRiver.js library](../../../general-resources/reference/digital-river-publishable-api-key.md) with your [public API key](../../../resources/API-structure.md#public-keys). If you `provide` a locale, Drop-in Payments is localized based on that value.
+[Initialize the DigitalRiver.js library](../../../general-resources/reference/digital-river-publishable-api-key.md) with your [public API key](../../../resources/API-structure.md#public-keys). If you provide a `locale`, Drop-in Payments is localized based on that value.
 
+{% code overflow="wrap" %}
 ```javascript
 let digitalriver = new DigitalRiver("YOUR_PUBLIC_API_KEY", {
      "locale": "en-US"
 });
 ```
+{% endcode %}
 
 ### Step 4: Create a Drop-in Payments container
 
 Create a container element on the page where you want the Drop-in Payments to appear.
 
+{% code overflow="wrap" %}
 ```javascript
 <div id="drop-in"></div>
 ```
+{% endcode %}
 
 ### Step 5: Create a Drop-in Payments configuration object <a href="#step-5-configure-hydrate" id="step-5-configure-hydrate"></a>
 
-Create a `configuration` object. The object contains both required and optional values.
+Create a `configuration` object. For details, refer to [Configuring Drop-in payments](drop-in-integration-guide.md#configuring-drop-in-payments).
 
-The following table lists the parameters for the configuration object.
-
-| Field                                                     | Required                                                                                                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sessionId`                                               | <p>Required for the <code>checkout</code> flow</p><p></p><p>Optional for the <code>managePaymentMethods</code> flow</p> | <p>The  <a href="../../../cart/payment-sessions.md">payment session</a> identifier returned by Digital River. <br></p><p><strong>Important</strong>: The <code>sessionId</code> is required if you are using Drop-in Payments within a <a href="drop-in-integration-guide.md#initialize-and-place-drop-in-within-your-application">cart flow</a>. If you are using Drop-in Paymentsn to capture payment details on a <a href="drop-in-integration-guide.md#using-drop-in-to-collect-payment-details-on-a-my-account-page">customer portal</a>, then the <code>sessionId</code> is not required.</p> |
-| `options`                                                 | Optional                                                                                                                | [Drop-in Payments configuration options](drop-in-integration-guide.md#drop-in-payments-options).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `billingAddress`                                          | Required                                                                                                                | The customer's billing address.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `billingAddress.firstName`                                | Required                                                                                                                | The customer's first name.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `billingAddress.lastName`                                 | Required                                                                                                                | The customer's last name.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `billingAddress.email`                                    | Required                                                                                                                | The customer's email address.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `billingAddress.organization`                             | Optional                                                                                                                | The business customer's organization.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `billingAddress.phoneNumber`                              | Required                                                                                                                | The customer's phone number.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `billingAddress.address.line1`                            | Required                                                                                                                | The first line of the address.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `billingAddress.address.line2`                            | Optional                                                                                                                | The second line of the address                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `billingAddress.address.city`                             | Optional                                                                                                                | City or town.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `billingAddress.address.state`                            | Optional                                                                                                                | The state, county, province, or region.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `billingAddress.address.postalCode`                       | Required                                                                                                                | ZIP or postal code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `billingAddress.address.country`                          | Required                                                                                                                | A two-letter Alpha-2 country code as described in the [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) international standard.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `billingAddress.address.additional AddressInfo`           | Optional                                                                                                                | Additional address information that may be useful or required for some addresses.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `paymentMethodConfiguration`                              | Optional                                                                                                                | Additional configuration details.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ``[`onSuccess`](drop-in-integration-guide.md#onsuccess)`` | ​Content                                                                                                                | The function called when the shopper has authorized payment and a payment source has been successfully created. Returns a `Source` object.                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ``[`onCancel`](drop-in-integration-guide.md#oncancel)``   | ​Content                                                                                                                | The function called when the shopper cancels the payment process before authorizing payment.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ``[`onError`](drop-in-integration-guide.md#onerror)``     | ​Content                                                                                                                | The function called when an error has occurred.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ``[`onReady`](drop-in-integration-guide.md#onready)``     | ​Content                                                                                                                | The function called when Drop-in Payments is ready for user interaction.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-
-In the following example, you have already collected the customer's address information.
-
+{% code overflow="wrap" %}
 ```javascript
 let configuration = {
     sessionId: "YOUR_SESSION_IDENTIFIER",
@@ -107,14 +89,40 @@ let configuration = {
     onReady: function(data) { }
 }
 ```
+{% endcode %}
+
+| Field                                                     | Required                                                                                                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sessionId`                                               | <p>Required for the <code>checkout</code> flow</p><p></p><p>Optional for the <code>managePaymentMethods</code> flow</p> | <p>The  <a href="../../../cart/payment-sessions.md">payment session</a> identifier returned by Digital River. <br></p><p><strong>Important</strong>: The <code>sessionId</code> is required if you are using Drop-in Payments within a <a href="drop-in-integration-guide.md#initialize-and-place-drop-in-within-your-application">cart flow</a>. If you are using Drop-in Paymentsn to capture payment details on a <a href="drop-in-integration-guide.md#using-drop-in-to-collect-payment-details-on-a-my-account-page">customer portal</a>, then the <code>sessionId</code> is not required.</p> |
+| `options`                                                 | Optional                                                                                                                | [Drop-in Payments configuration options](drop-in-integration-guide.md#drop-in-payments-options).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `billingAddress`                                          | Required                                                                                                                | The customer's billing address.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `billingAddress.firstName`                                | Required                                                                                                                | The customer's first name.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `billingAddress.lastName`                                 | Required                                                                                                                | The customer's last name.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `billingAddress.email`                                    | Required                                                                                                                | The customer's email address.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `billingAddress.organization`                             | Optional                                                                                                                | The business customer's organization.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `billingAddress.phoneNumber`                              | Required                                                                                                                | The customer's phone number.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `billingAddress.address.line1`                            | Required                                                                                                                | The first line of the address.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `billingAddress.address.line2`                            | Optional                                                                                                                | The second line of the address                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `billingAddress.address.city`                             | Optional                                                                                                                | City or town.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `billingAddress.address.state`                            | Optional                                                                                                                | The state, county, province, or region.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `billingAddress.address.postalCode`                       | Required                                                                                                                | ZIP or postal code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `billingAddress.address.country`                          | Required                                                                                                                | A two-letter Alpha-2 country code as described in the [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) international standard.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `billingAddress.address.additional AddressInfo`           | Optional                                                                                                                | Additional address information that may be useful or required for some addresses.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `paymentMethodConfiguration`                              | Optional                                                                                                                | Additional configuration details.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ``[`onSuccess`](drop-in-integration-guide.md#onsuccess)`` | ​Content                                                                                                                | The function called when the shopper has authorized payment and a payment source has been successfully created. Returns a `Source` object.                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ``[`onCancel`](drop-in-integration-guide.md#oncancel)``   | ​Content                                                                                                                | The function called when the shopper cancels the payment process before authorizing payment.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ``[`onError`](drop-in-integration-guide.md#onerror)``     | ​Content                                                                                                                | The function called when an error has occurred.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ``[`onReady`](drop-in-integration-guide.md#onready)``     | ​Content                                                                                                                | The function called when Drop-in Payments is ready for user interaction.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 ### Step 6: Use the configuration object to create an instance of Drop-in Payments <a href="#step-6-allow-the-shopper-to-interact-with-hydrate" id="step-6-allow-the-shopper-to-interact-with-hydrate"></a>
 
 &#x20;Create an instance of Drop-in Payments by passing the [configuration object](drop-in-integration-guide.md#step-5-configure-hydrate) to `createDropin()`.
 
+{% code overflow="wrap" %}
 ```javascript
 let dropin = digitalriver.createDropin(configuration);
 ```
+{% endcode %}
 
 ### Step 7: Mount Drop-in Payments on your cart or account management page
 
@@ -126,15 +134,13 @@ dropin.mount("drop-in");
 
 Once invoked, `mount()` displays Drop-in payments in the [designated container](drop-in-integration-guide.md#step-4-create-a-drop-in-payments-container).&#x20;
 
-## Using Drop-in Payments within your cart flow
+## Using Drop-in Payments in a cart
 
-### Finalize your order totals
+### Finalize your cart
 
-Create a checkout and provide the necessary information to have a final total for all amounts including taxes, shipping, duties, and fees.&#x20;
+Create a cart and provide the necessary information to have a final total for all amounts including taxes, shipping, duties, and fees.&#x20;
 
 ### Initialize and place Drop-in Payments within your application
-
-Follow the instructions in [Getting started](drop-in-integration-guide.md#getting-started).
 
 From the experience page where you added the Drop-in Payments container, customers select how they want to pay. Drop-in Payments provides what is needed, including redirects to return a payment source that can be used in downstream API calls with the Commerce API.
 
@@ -148,7 +154,8 @@ The customer may be redirected to authorize their payment.&#x20;
 
 The following source object contains the customer's payment details for a one-time charge.
 
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "source": {
         "clientId": "gc",
@@ -190,12 +197,16 @@ The following source object contains the customer's payment details for a one-ti
     "readyForStorage": false
 }
 ```
+{% endcode %}
 
 ## Optional. Allowing the customer to save their payment details
 
-During the cart flow, you may want to offer the customer the ability to save their payment details to use for future purchases. You can offer this via Drop-in Payments. When using this solution, you must ensure that you collect the details your customer provides in a compliant manner and display the required [SCA ](../../psd2-and-sca/)prompts. You may access this mode by enabling the `showSavePaymentAgreement` option when configuring Drop-in Payments.
+During the [cart flow](drop-in-integration-guide.md#using-drop-in-payments-within-your-cart-flow), you can also give customers the opportunity to save their payment details for use in future transactions by enabling `showSavePaymentAgreement`.&#x20;
 
-```javascript
+This feature ensures that a customer's payment details are collected in a [PSD2 and SCA](../../psd2-and-sca/) compliant manner.&#x20;
+
+{% code overflow="wrap" %}
+```json
 let configuration = {
     sessionId: "YOUR_SESSION_IDENTIFIER",
     options: {
@@ -222,24 +233,28 @@ let configuration = {
     onReady: function(data) { }
 }
 ```
+{% endcode %}
 
-When you enable this mode, the cart displays an optional check box that the customer must select when they agree to save their payment details on their account.&#x20;
+When you enable this feature, each displayed [reusable payment method](../../../payment-integrations-1/supported-payment-methods.md) is accompanied by a box that customers must check if they want that payment information saved to their account.&#x20;
 
 ![](<../../../.gitbook/assets/drop-in-save-payment (1) (1).png>)
 
-If the customer selects the check box and clicks the Add Payment button, Drop-in Payments performs the required authentication and marks the source as ready for storage. When the source is ready for storage, the [`onSuccess` ](drop-in-integration-guide.md#onsuccess)event returns the `readyForStorage` value.
+If the customer selects the check box and clicks the configurable button, Drop-in Payments performs any required authentication and, assuming the process is successful, the `data` object of [`onSuccess`](drop-in-integration-guide.md#onsuccess) contains a [source ](../../sources/)that is `readyForStorage`.
 
-{% hint style="warning" %}
-The `readyForStorage` identifier signifies the creation of the source with the intention of storage, and any necessary authentications have occurred. To reuse the source, attach it to a Shopper by calling the appropriate API with your secret key.
-{% endhint %}
+In this case, handle `onSuccess` by passing `source.id` to your back-end and use your secret [API key](../../../resources/API-structure.md#private-keys) to first [associate the source with the customer](../../sources/#attaching-a-payment-method-to-a-customer-or-payment-option) before you [associate the source with the cart](../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
-## Using Drop-in Payments to collect payment details on a My Account page
+## Using Drop-in Payments in an account management portal
 
-### Initialize and place Drop-in Payments within your application
+If your integration allows customers to save payment methods outside of a [cart flow](drop-in-integration-guide.md#using-drop-in-payments-in-a-cart), you can add Drop-in payments to their account management portal.&#x20;
 
-Follow the instructions in [Getting started](drop-in-integration-guide.md#getting-started). You do not need to provide your `sessionId` in your configuration object. Instead, you should provide a flow variable that tells Drop-in Payments you are collecting details for future use.
+In this flow, the Drop-in payments' configuration object doesn't require a `sessionId`. Instead, you should set `options.flow` to  `managePaymentMethods`. This informs Digital River that you're collecting and saving payment information in an account management setting. <mark style="background-color:orange;">??? Add links. ???</mark>
 
-```javascript
+Since you're not referencing a [payment session](../../../cart/payment-sessions.md), you'll need to use the configuration object's `billingAddress` to pass the billing information you collect from customers.  <mark style="background-color:orange;">??? Add link. ???</mark>
+
+There's no need to enable `showComplianceSection`, [`showTermsOfSaleDisclosure`](drop-in-integration-guide.md#show-terms-of-sale-disclosure), and [`showSavePaymentAgreement`](drop-in-integration-guide.md#show-save-payment-agreement) since those features only need to be turned on in [cart flows](drop-in-integration-guide.md#using-drop-in-payments-in-a-cart)<mark style="color:orange;">.</mark>
+
+{% code overflow="wrap" %}
+```json
 let configuration = {
     options: {
         flow: "managePaymentMethods"
@@ -265,6 +280,17 @@ let configuration = {
     onReady: function(data) { }
 }
 ```
+{% endcode %}
+
+### Configure and mount Drop-in payments <a href="#initialize-and-place-drop-in-within-your-application-1" id="initialize-and-place-drop-in-within-your-application-1"></a>
+
+Once the [create](drop-in-integration-guide.md#step-6-allow-the-shopper-to-interact-with-hydrate) and [mount](drop-in-integration-guide.md#step-7-mount-drop-in-payments-on-a-checkout-or-account-management-page) methods are invoked, Drop-in payments opens on the experience page that holds the container element. For more details on this process, refer to the [Getting started](drop-in-integration-guide.md#getting-started) section.
+
+Customers then select the payment method they want added to their account and agree to specific storage terms. They may also be required to complete [SCA](../../psd2-and-sca/), a process that Drop-in payments handles.&#x20;
+
+### Handle `onSuccess`
+
+If Digital River successfully creates a payment source, the `data` object of [`onSuccess`](drop-in-integration-guide.md#onsuccess) contains a [source](../../sources/) that is `readyForStorage`. Handle the event by sending `source.id` to your back-end and using your [secret API key](../../../resources/API-structure.md#private-keys) to [associate the source with the customer](../../sources/#attaching-a-payment-method-to-a-customer-or-payment-option).&#x20;
 
 #### The Customer provides payment details <a href="#dropinviadigitalriver.js-customerprovidespaymentdetails.1" id="dropinviadigitalriver.js-customerprovidespaymentdetails.1"></a>
 
@@ -280,7 +306,8 @@ This flow presents and collects any required authentications and opt-ins. When t
 The `readyForStorage` identifier signifies the creation of the source with the intention of storage, and any necessary authentications have occurred. To reuse the source, attach it to a Shopper by calling the appropriate API with your secret key.
 {% endhint %}
 
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "source": {
         "clientId": "gc",
@@ -328,6 +355,7 @@ The `readyForStorage` identifier signifies the creation of the source with the i
     "readyForStorage": true
 }
 ```
+{% endcode %}
 
 ## Drop-in options
 
@@ -359,7 +387,8 @@ Enable the `disableAutomaticRedirects` attribute if you do not want Drop-in Paym
 
 {% tabs %}
 {% tab title="Redirect code example" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 "options": {
     "redirect": {
         "disableAutomaticRedirects": true,
@@ -368,6 +397,7 @@ Enable the `disableAutomaticRedirects` attribute if you do not want Drop-in Paym
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -551,13 +581,15 @@ Use the following fields to configure payment methods.
 
 In the Drop-in Payments configuration, you can optionally add a list of enabled payment methods, disabled payment methods, or both. If the list of enabled or disabled payment methods is not present, Drop-in Payments displays all the payment methods available for the payment session. The enabled list will not add any payment methods that are not available for the payment session.
 
-```javascript
+{% code overflow="wrap" %}
+```json
 paymentMethodConfiguration:
     {
         enabledPaymentMethods: ['msts', 'creditCard'],
         disabledPaymentMethods: ['klarna']
     },
 ```
+{% endcode %}
 
 ## Drop-in Payments events
 
@@ -574,7 +606,8 @@ Drop-in Payments supports the following events:
 
 When your customer has provided the necessary details for payment and followed any necessary redirects, you will receive an event.
 
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "source": {
         "clientId": "gc",
@@ -618,6 +651,7 @@ When your customer has provided the necessary details for payment and followed a
     "readyForStorage": false
 }
 ```
+{% endcode %}
 
 | Variable          | Value            | Description                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -628,27 +662,32 @@ When your customer has provided the necessary details for payment and followed a
 
 If an error occurs, Drop-in Payments emits an event that identifies the payment method associated with the error. Instruct your customer to provide a new method of payment.
 
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "paymentMethod":"googlePay"
 }
 ```
+{% endcode %}
 
 ### onCancel
 
 When your customer chooses to pay with a specific payment method and decides to cancel during the redirect phase, Drop-in Payments emits an event that identifies the cancelled payment method.
 
-```javascript
+{% code overflow="wrap" %}
+```json
 {
     "paymentMethod": "googlePay"
 }
 ```
+{% endcode %}
 
 ### onReady
 
 When ready, Drop-in Payments will emit an event that contains a `"paymentMethodTypes"` array of available payment methods.
 
-```javascript
+{% code overflow="wrap" %}
+```json
 {
      "paymentMethodTypes": [
           "applePay",
@@ -659,3 +698,4 @@ When ready, Drop-in Payments will emit an event that contains a `"paymentMethodT
       ]
 }
 ```
+{% endcode %}

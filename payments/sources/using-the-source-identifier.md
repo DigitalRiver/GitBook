@@ -59,7 +59,7 @@ You create [primary sources](using-the-source-identifier.md#primary-payment-sour
 
 #### Creating secondary sources
 
-You create [secondary sources](using-the-source-identifier.md#secondary-payment-sources) through the [Sources API ](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources)by sending your [private API key](../../resources/API-structure.md#private-keys) in a `POST/sources` request.
+You create [secondary sources](using-the-source-identifier.md#secondary-payment-sources) through the [Sources API ](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources)by sending your [confidential API key](broken-reference) in a `POST/sources` request.
 
 When defining the request, you retrieve the [payment session identifier](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/creating-checkouts#payment-session-identifier) from the cart you're building. The `amount` is optional, except when the `type` is `customerCredit`. The `type` is required and we currently only support `customerCredit`. You must also send an empty hash table whose name matches the `type`.
 
@@ -73,6 +73,7 @@ The `upstreamId` parameter is useful for mapping the source to your credit manag
 
 {% tabs %}
 {% tab title="POST/sources request" %}
+{% code overflow="wrap" %}
 ```
 curl --location --request POST 'https://api.digitalriver.com/sources' \
 --header 'Authorization: Bearer <API_key>' \
@@ -85,6 +86,7 @@ curl --location --request POST 'https://api.digitalriver.com/sources' \
     "upstreamId": "7765374748",
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -92,6 +94,7 @@ A `201 OK` response returns a unique [source](https://www.digitalriver.com/docs/
 
 {% tabs %}
 {% tab title="POST/sources response" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "id": "99fe8ad1-999e-4e13-95d5-248e472aa7c8",
@@ -108,6 +111,7 @@ A `201 OK` response returns a unique [source](https://www.digitalriver.com/docs/
     "liveMode": false
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -159,7 +163,7 @@ When you attach a source to a shopper using [`POST /payment-options`](https://ww
 
 After applying the payment source to the cart, the amount contributed by the payment source appears in the `amountContributed` field for the `paymentMethod` object in the /cart, /submit-cart, and /order responses.
 
-{% code title="Single payment example" %}
+{% code title="Single payment example" overflow="wrap" %}
 ```json
 {
     "paymentMethod": {
@@ -184,7 +188,7 @@ After applying the payment source to the cart, the amount contributed by the pay
 ```
 {% endcode %}
 
-{% code title="Two payment methods example" %}
+{% code title="Two payment methods example" overflow="wrap" %}
 ```json
         "paymentMethod": {
             "type": "creditCard",
@@ -232,7 +236,7 @@ The `paymentSession` object shows the following information for an entire order:
 * `amountContributed`: indicates the accumulated contributed amount of the attached payment sources.
 * `amountRemainingToBeContributed`: indicates the gap amount required to fulfill the order. If the value is not zero that means the shopper should apply an additional payment to the cart to cover the order total amount.
 
-{% code title="paymentSession example" %}
+{% code title="paymentSession example" overflow="wrap" %}
 ```json
 {
     "paymentSession": {
@@ -273,7 +277,8 @@ Your storefront may be configured so that customers are not required to create a
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 curl --location --request POST 'https://<<host>>/v1/shoppers/me/carts/active/apply-payment-method' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
@@ -283,12 +288,11 @@ curl --location --request POST 'https://<<host>>/v1/shoppers/me/carts/active/app
   }
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 Since the Source is not attached to a Shopper, this payment method object [cannot be re-used](./#reusable-or-single-use) for future purchases, and once used, its state becomes `consumed`.
-
-
 
 ## Switching the default payment source
 
@@ -298,7 +302,8 @@ The first Source attached to a Customer becomes the default payment method where
 
 {% tabs %}
 {% tab title="cURL" %}
-```javascript
+{% code overflow="wrap" %}
+```json
 curl --location --request POST 'https://<<host>>/v1/shoppers/me/payment-options/{id}' \
 --header 'Content-Type:  application/json' \
 --header 'authorization: bearer ***\
@@ -310,5 +315,6 @@ curl --location --request POST 'https://<<host>>/v1/shoppers/me/payment-options/
   }
 }'
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
