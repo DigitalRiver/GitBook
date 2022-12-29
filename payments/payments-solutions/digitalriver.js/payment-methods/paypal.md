@@ -256,7 +256,7 @@ paypal.Button.render({
 {% endtab %}
 {% endtabs %}
 
-![PayPal login](../../../../.gitbook/assets/paypal-login.png)
+![PayPal login](../../../../.gitbook/assets/PayPal-login.png)
 
 ### Step 4: Use the authorized source
 
@@ -469,7 +469,7 @@ paypal.Button.render({
 {% endtab %}
 {% endtabs %}
 
-![PayPal login](../../../../.gitbook/assets/paypal-login.png)
+![PayPal login](../../../../.gitbook/assets/PayPal-login.png)
 
 ### Step 4: Use the authorized source
 
@@ -693,7 +693,8 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
 1.  Include the PayPal Checkout SDK on your page and specify a location where the button will appear.
 
     <pre class="language-markup" data-overflow="wrap"><code class="lang-markup"><strong>&#x3C;script src="https://www.paypalobjects.com/api/checkout.js">&#x3C;/script>
-    </strong>&#x3C;div id="paypal-button">&#x3C;/div></code></pre>
+    </strong>&#x3C;div id="paypal-button">&#x3C;/div>
+    </code></pre>
 2.  &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching it to an order or cart](broken-reference).
 
     {% code overflow="wrap" %}

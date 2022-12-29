@@ -19,6 +19,7 @@ description: Learn about payment sources that are common to all payment methods.
 
 | Type                                 | Identifier       |
 | ------------------------------------ | ---------------- |
+| Afterpay                             | afterPay         |
 | Alipay                               | alipay           |
 | Apple Pay                            | applePay         |
 | Bancontact                           | bancontact       |
