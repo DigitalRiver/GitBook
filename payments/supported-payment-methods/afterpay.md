@@ -10,7 +10,7 @@ This payment method boasts a strong existing user base providing you direct acce
 
 ## How to configure&#x20;
 
-Afterpay will need the following information to conduct its review: company name, website, and Merchant Classification Code (MCC). The MCC is a code that identifies your sales vertical. Provide this information to your Digital River representative.
+If you are selling digital goods, Afterpay will need the following information to conduct its review: company name, website, and Merchant Classification Code (MCC). The MCC is a code that identifies your sales vertical. Provide this information to your Digital River representative.
 
 How you configure Alipay depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).
 
