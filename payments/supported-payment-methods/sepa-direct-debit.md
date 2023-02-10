@@ -8,7 +8,9 @@ description: >-
 
 Allow users to authorize transactions directly from their bank account, which is a popular international payment method.&#x20;
 
-Due to the risk of chargebacks, we don't recommend using SEPA for the sale of physical goods. Contact your Digital River Representative for more information.
+Due to the risk of chargebacks, we don't recommend using SEPA for the sale of physical goods. Contact your Customer Success Manager for more information.
+
+If you are interested in using SEPA Direct Debit, contact your Customer Success Manager. The Customer Success Manager will send setup instructions for SEPA Direct Debit after you sign the Direct Debit addendum.
 
 ## How to configure&#x20;
 
