@@ -18,6 +18,10 @@ Digital River uses your account's API keys to authenticate your API requests. If
 
 Your account provides separate keys for testing and for running live transactions. You can use these keys when sending API requests in either test or live mode. Resources in one mode cannot change resources in another mode.
 
+{% hint style="warning" %}
+Rotating API keys is a widely accepted best practice recommended by security experts. Rotating API keys makes it easier to track usage and detect any suspicious activity. **By rotating your API keys regularly**, you can ensure the security and protection of your sensitive information and resources. For assistance rotating your API keys, contact your Customer Success Manager.
+{% endhint %}
+
 ### Public keys
 
 The public API keys identify your account with Digital River and allow you to create sources. You can use them with your [DigitalRiver.js](https://docs.digitalriver.com/commerce-api/payment-integrations-1/digitalriver.js) JavaScript code.&#x20;
