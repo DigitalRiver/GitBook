@@ -282,5 +282,6 @@
   * [Digital River payment objects](general-resources/reference/digital-river-payment-objects.md)
   * [Error types, codes, and objects](general-resources/reference/error-types-codes-and-objects.md)
 * [Release notes](general-resources/release-notes/README.md)
+  * [2022](general-resources/release-notes/2022.md)
   * [2021](general-resources/release-notes/2021.md)
   * [2020](general-resources/release-notes/2020.md)
