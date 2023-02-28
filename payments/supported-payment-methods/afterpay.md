@@ -1,7 +1,8 @@
 ---
 description: >-
   Afterpay allows your shoppers to buy what they need and want with the
-  flexibility to pay for their purchases in 4 payments over 6 weeks.
+  flexibility to pay for their purchases in 4 interest-free installments over 6
+  weeks.
 ---
 
 # Afterpay
@@ -12,7 +13,7 @@ This payment method boasts a strong existing user base providing you direct acce
 
 Afterpay is primarily used for purchasing physical goods. It has a review process in place to assess whether your customers can use it to purchase digital goods. If you want to sell digital goods, Afterpay will need the following information to conduct the review: company name, website, and Merchant Classification Code (MCC). The MCC is a code that identifies your sales vertical. Provide this information to your Digital River representative.
 
-How you configure Alipay depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).
+How you configure Afterpay depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).
 
 | DigitalRiver.js with Elements                                                                         | Drop-in payments                                                                                 |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |

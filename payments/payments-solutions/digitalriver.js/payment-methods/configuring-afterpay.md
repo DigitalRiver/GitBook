@@ -6,12 +6,12 @@ description: Learn how to configure Afterpay for DigitalRiver.js with Elements.
 
 If you're using[ DigitalRiver.js with Elements](../), you can create an [Afterpay ](../../../supported-payment-methods/afterpay.md)payment method for your app or website in four easy steps:
 
-* [Step 1: Build an Afterpay Source Request and Source Details objects](configuring-afterpay.md#step-1-build-an-afterpaysource-request-and-details-object)
-* [Step 2: Create an  Afterpay source using DigitalRiver.js](configuring-afterpay.md#step-2-create-an-afterpay-source-using-digitalriver.js)
+* [Step 1: Build an Afterpay Source Request and Source Details objects](configuring-afterpay.md#step-1-build-an-afterpay-source-request-and-source-details-objects)
+* [Step 2: Create an Afterpay source using DigitalRiver.js](configuring-afterpay.md#step-2-create-an-afterpay-source-using-digitalriver.js)
 * [Step 3: Authorize the Afterpay source](configuring-afterpay.md#step-3-authorize-the-afterpay-source)
 * [Step 4: Use the authorized source](configuring-afterpay.md#step-4-use-the-authorized-source)
 
-## Step 1: Build an AfterpaySource Request and Source Details objects
+## Step 1: Build an Afterpay Source Request and Source Details objects
 
 Build the Afterpay Source Request and Source Details objects.&#x20;
 
