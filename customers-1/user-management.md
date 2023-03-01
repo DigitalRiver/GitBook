@@ -133,8 +133,8 @@ The following image shows the process flow for modifying a suspension.
 
 ## User management schemas
 
-| Version      | Scheme Components Table                                                                  | Raw Schema                                                                  | Sample XML    |
-| ------------ | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------- |
-| 24 (Current) | [View ](https://drhadmin.digitalriver.com/integration/isg/schematable/UserManagement/24) | [View](https://drhadmin.digitalriver.com/integration/xsd/UserManagement/24) | Not available |
-| 23           | [View](https://drhadmin.digitalriver.com/integration/isg/schematable/UserManagement/23)  | [View](https://drhadmin.digitalriver.com/integration/xsd/UserManagement/23) | Not available |
-| 22           | [View](https://drhadmin.digitalriver.com/integration/isg/schematable/UserManagement/22)  | [View](https://drhadmin.digitalriver.com/integration/xsd/UserManagement/23) | Not available |
+| Version     | Scheme Components Table                                                                  | Raw Schema                                                                  | Sample XML    |
+| ----------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------- |
+| 26 (Current | [View](https://drhadmin.digitalriver.com/integration/isg/schematable/UserManagement/26)  | [View](https://drhadmin.digitalriver.com/integration/xsd/UserManagement/26) | Not available |
+| 25          | [View](https://drhadmin.digitalriver.com/integration/isg/schematable/UserManagement/25)  | [View](https://drhadmin.digitalriver.com/integration/xsd/UserManagement/25) | Not available |
+| 24          | [View ](https://drhadmin.digitalriver.com/integration/isg/schematable/UserManagement/24) | [View](https://drhadmin.digitalriver.com/integration/xsd/UserManagement/24) | Not available |
