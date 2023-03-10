@@ -10,6 +10,7 @@ Use DigitalRiver.js to create a Google Pay element and interact with Google Pay.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var paymentRequestData = digitalriver.paymentRequest({
         country: "US",
@@ -31,6 +32,7 @@ var paymentRequestData = digitalriver.paymentRequest({
  
 var googlepay = digitalriver.createElement('googlepay', paymentRequestData);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -38,19 +40,19 @@ var googlepay = digitalriver.createElement('googlepay', paymentRequestData);
 
 All Google Payment buttons on your site must adhere to the Google Pay [Brand Guidelines](https://developers.google.com/pay/api/web/guides/brand-guidelines), which include, but aren't limited to, the following requirements. Digital River provides the following Google Pay button options for clients to add to the product page/checkout page (express checkout) or payment options page.
 
-| Configure Button Type                                    | HTML Code                                                                                          |
-| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| ![](<../../../../../.gitbook/assets/G Pay.png>)          | `buttonType: "plain"`                                                                              |
-| ![](<../../../../../.gitbook/assets/Buy with G Pay.png>) | <p><code>buttonType: "long"</code><br><code></code>The shopper hasn't logged in to Google Pay.</p> |
-| ![](<../../../../../.gitbook/assets/G Pay long (1).png>) | <p><code>buttonType: "long"</code><br><code></code>The shopper has logged in to Google Pay</p>     |
-| Configure Button Color                                   | HTML Code                                                                                          |
-| ![](<../../../../../.gitbook/assets/G Pay black.png>)    | `buttonColor: "dark"`                                                                              |
-| ![](<../../../../../.gitbook/assets/G Pay white.png>)    | `buttonColor: "light"`                                                                             |
+| Configure Button Type                              | HTML Code                                                                                          |
+| -------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| ![](<../../../.gitbook/assets/G Pay.png>)          | `buttonType: "plain"`                                                                              |
+| ![](<../../../.gitbook/assets/Buy with G Pay.png>) | <p><code>buttonType: "long"</code><br><code></code>The shopper hasn't logged in to Google Pay.</p> |
+| ![](<../../../.gitbook/assets/G Pay long (1).png>) | <p><code>buttonType: "long"</code><br><code></code>The shopper has logged in to Google Pay</p>     |
+| Configure Button Color                             | HTML Code                                                                                          |
+| ![](<../../../.gitbook/assets/G Pay black.png>)    | `buttonColor: "dark"`                                                                              |
+| ![](<../../../.gitbook/assets/G Pay white.png>)    | `buttonColor: "light"`                                                                             |
 
 When configuring a button, note the following:
 
 * The button color must contrast with the background color of the area that surrounds it.
-* Always maintain the minimum clear space of 8 density-independent pixels (dp) on all sides of the payment button. Ensure the clear space is never broken with graphics or text. ![](<../../../../../.gitbook/assets/G-Pay button.png>)
+* Always maintain the minimum clear space of 8 density-independent pixels (dp) on all sides of the payment button. Ensure the clear space is never broken with graphics or text. ![](<../../../.gitbook/assets/G-Pay button.png>)
 * Observe the [Google Pay Dos and Don'ts](https://developers.google.com/pay/api/web/guides/brand-guidelines#dos-and-donts).
 
 ## Google Pay element functions
@@ -59,12 +61,14 @@ When configuring a button, note the following:
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 if(googlepay.canMakePayment()) {
  
  
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -74,6 +78,7 @@ Call this function to place the created Google Pay element on your page.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 <div id="google-pay"></div>
  
@@ -82,6 +87,7 @@ if(googlepay.canMakePayment()) {
     googlepay.mount('google-pay');
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -91,9 +97,11 @@ Call this function to show the Google Pay Payment Request interface. This will a
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.show();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -103,9 +111,11 @@ Call this function to remove the Google Pay element from your page. The element 
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.unmount();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -115,9 +125,11 @@ Call this function to remove the Google Pay element from your page as well as re
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.destroy();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -127,6 +139,7 @@ Call this function to update the Google Pay element's data.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var paymentRequest = digitalriver.paymentRequest({
         country: "US",
@@ -147,6 +160,7 @@ var paymentRequest = digitalriver.paymentRequest({
  
 googlepay.update(paymentRequest);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -154,14 +168,14 @@ googlepay.update(paymentRequest);
 
 The Google Pay Element can receive the following events by creating an event listener. Use this function to listen to events that can be used to build and enhance your purchase flow.
 
-| Event                  | Triggered When                                                                                                                                            |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  ready                 | The created element is loaded and ready to accept an update request.                                                                                      |
-|  click                 | A shopper clicked the element's button.                                                                                                                   |
-|  cancel                | The customer has canceled the experience.                                                                                                                 |
-|  shippingoptionchange  | The customer has chosen a different shipping option than was previously selected. You should use this data to re-price your order totals (if applicable). |
-|  shippingaddresschange | The customer has chosen a different address than was previously selected. You should use this data to re-price your order totals (if applicable).         |
-|  source                | The customer has authorized the payment and a source, and DigitalRiver.js returned its associated data.                                                   |
+| Event                                                                    | Triggered When                                                                                                                                            |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  [ready](google-pay-elements.md#ready)                                   | The created element is loaded and ready to accept an update request.                                                                                      |
+|  [click](google-pay-elements.md#click)                                   | A shopper clicked the element's button.                                                                                                                   |
+|  [cancel](google-pay-elements.md#cancel)                                 | The customer has canceled the experience.                                                                                                                 |
+|  [shippingoptionchange](google-pay-elements.md#shipping-option-change)   | The customer has chosen a different shipping option than was previously selected. You should use this data to re-price your order totals (if applicable). |
+|  [shippingaddresschange](google-pay-elements.md#shipping-address-change) | The customer has chosen a different address than was previously selected. You should use this data to re-price your order totals (if applicable).         |
+|  [source](google-pay-elements.md#source)                                 | The customer has authorized the payment and a source, and DigitalRiver.js returned its associated data.                                                   |
 
 ### Source
 
@@ -169,6 +183,7 @@ The Source event emits when the Customer completes their interaction with the Pa
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('source', function(result) {
     var source = result.source;
@@ -176,6 +191,7 @@ googlepay.on('source', function(result) {
     //pass the source to your back end for further processing
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -185,21 +201,25 @@ The Ready event emits when the Google Pay Element has loaded and is available to
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('ready', function(event) {
     //google pay can accept an update call
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "googlepay"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -209,21 +229,25 @@ The Click event emits when the customer clicks a Google Pay Element.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('click', function(event) {
     //do stuff
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "googlepay"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -233,6 +257,7 @@ The Cancel event emits when the customer closes the Google Pay Element Payment R
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('shippingoptionchange', function(event) {
     var shippingOption = event.shippingOption;
@@ -244,6 +269,7 @@ googlepay.on('shippingoptionchange', function(event) {
  
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -269,13 +295,14 @@ googlepay.on('shippingoptionchange', function(event) {
 
 The Shipping Option Change event emits when the Customer selects a different Shipping Option within the Payment Request interface. The event will emit the following object structure.
 
-| Key            | Type                                                                                                                        | Description                                                                                                                                                                                                         |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| updateWith     | Function                                                                                                                    |  Calling this function with a [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) merges your updates into the current Payment Request object. |
-| shippingOption | A [Payment Request Details Update object​](../digital-river-payment-objects.md#payment-request-details-update-error-object) | A [Payment Request Shipping Option object](../digital-river-payment-objects.md#payment-request-shipping-option-object) contains the details of the customer's chosen Shipping Option.                               |
+| Key              | Type                                                                                                                        | Description                                                                                                                                                                                                         |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `updateWith`     | Function                                                                                                                    |  Calling this function with a [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) merges your updates into the current Payment Request object. |
+| `shippingOption` | A [Payment Request Details Update object​](../digital-river-payment-objects.md#payment-request-details-update-error-object) | A [Payment Request Shipping Option object](../digital-river-payment-objects.md#payment-request-shipping-option-object) contains the details of the customer's chosen Shipping Option.                               |
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('shippingaddresschange', function(event) {
     var shippingAddress = event.shippingAddress;
@@ -287,6 +314,7 @@ googlepay.on('shippingaddresschange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -323,13 +351,14 @@ googlepay.on('shippingaddresschange', function(event) {
 
 The Shipping Address Change emits when the Customer selects a different Shipping Address within the Payment Request interface. The event will emit the following object structure.
 
-| Key             | Type                                                                                       | Description                                                                                                                                                                                                         |
-| --------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| updateWith      | Function                                                                                   |  Calling this function with a [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) merges your updates into the current Payment Request object. |
-| shippingAddress | A [Shipping Address object ](../digital-river-payment-objects.md#shipping-address-object)​ | A [Shipping Address object](../digital-river-payment-objects.md#shipping-address-object) contains the details of the customer's chosen Shipping Option.                                                             |
+| Key               | Type                                                                                       | Description                                                                                                                                                                                                         |
+| ----------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `updateWith`      | Function                                                                                   |  Calling this function with a [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) merges your updates into the current Payment Request object. |
+| `shippingAddress` | A [Shipping Address object ](../digital-river-payment-objects.md#shipping-address-object)​ | A [Shipping Address object](../digital-river-payment-objects.md#shipping-address-object) contains the details of the customer's chosen Shipping Option.                                                             |
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('shippingaddresschange', function(event) {
     var shippingAddress = event.shippingAddress;
@@ -341,11 +370,13 @@ googlepay.on('shippingaddresschange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     shippingAddress: {
@@ -368,5 +399,6 @@ googlepay.on('shippingaddresschange', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

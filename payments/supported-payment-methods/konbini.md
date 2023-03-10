@@ -20,6 +20,8 @@ How you configure Konbini depends on whether you're using [DigitalRiver.js with 
 | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Konbini](../payments-solutions/digitalriver.js/payment-methods/konbini.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
+When applying Klarna to a cart, use the [redirect and submit payment flow](../sources/using-the-source-identifier.md#redirect-then-submit-payment-flow).
+
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

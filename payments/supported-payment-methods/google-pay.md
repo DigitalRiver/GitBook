@@ -20,6 +20,8 @@ How you configure Google Pay depends on whether you're using [DigitalRiver.js wi
 | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Google Pay](../payments-solutions/digitalriver.js/payment-methods/google-pay.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
+When applying Google Pay to a cart, use the [standard and delayed payment flow](../sources/using-the-source-identifier.md#standard-and-delayed-payments-flow).
+
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

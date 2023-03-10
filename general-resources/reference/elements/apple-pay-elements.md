@@ -12,6 +12,7 @@ To create an Apple Pay element, you should use the `createElement` function expo
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var paymentRequestData = digitalriver.paymentRequest({
         country: "US",
@@ -32,6 +33,7 @@ var paymentRequestData = digitalriver.paymentRequest({
  
 var applepay = digitalriver.createElement('applepay', paymentRequestData);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -42,16 +44,16 @@ Use the following styles and types to create an Apple Pay button that you can mo
 ### **Button type**‌
 
 * Choose one of the following button types:
-* `plain`: <img src="../../../.gitbook/assets/ApplePay-Button-Black.png" alt="" data-size="original">&#x20;
-* `buy`: <img src="../../../.gitbook/assets/BuyWithApplePay-Button-Black.png" alt="" data-size="original">
+* `plain`: <img src="../../../.gitbook/assets/applepay-button-black.png" alt="" data-size="original">&#x20;
+* `buy`: <img src="../../../.gitbook/assets/buywithapplepay-button-black.png" alt="" data-size="original">
 
 ### **Button color**‌
 
 Choose one of the following button colors:
 
-* ​`light`: <img src="../../../.gitbook/assets/ApplePay-Button-White.png" alt="" data-size="original">&#x20;
-* `light-outline`: <img src="../../../.gitbook/assets/ApplePay-Button-White-Outline.png" alt="" data-size="original">&#x20;
-* `dark`: <img src="../../../.gitbook/assets/ApplePay-Button-Black.png" alt="" data-size="original">&#x20;
+* ​`light`: <img src="../../../.gitbook/assets/applepay-button-white.png" alt="" data-size="original">&#x20;
+* `light-outline`: <img src="../../../.gitbook/assets/applepay-button-white-outline.png" alt="" data-size="original">&#x20;
+* `dark`: <img src="../../../.gitbook/assets/applepay-button-black.png" alt="" data-size="original">&#x20;
 
 ## Apple Pay element functions
 
@@ -61,11 +63,13 @@ Call this function to determine whether or not the Customer's browser supports A
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 if(applepay.canMakePayment()) {
     //can make payment with this element
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -75,6 +79,7 @@ Call this function to place the created Apple Pay element on your page.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 <div id="apple-pay"></div>
  
@@ -83,6 +88,7 @@ if(applepay.canMakePayment()) {
     applepay.mount('apple-pay');
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -92,9 +98,11 @@ Call this function to show the Apple Pay Payment Request interface. This will au
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.show();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -104,9 +112,11 @@ Call this function to remove the Apple Pay element from your page. The element m
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.unmount();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -116,9 +126,11 @@ Call this function to remove the Apple Pay element from your page as well as rem
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.destroy();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -128,6 +140,7 @@ Call this function to update the Apple Pay element's data. Calling this will mer
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var paymentRequest = digitalriver.paymentRequest({
         country: "US",
@@ -148,6 +161,7 @@ var paymentRequest = digitalriver.paymentRequest({
  
 applepay.update(paymentRequest);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -170,6 +184,7 @@ The Source event emits when the Customer completes their interaction with the Pa
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('source', function(event) {
     var source = result.source;
@@ -178,6 +193,7 @@ applepay.on('source', function(event) {
     //pass the source to your back end for further processing.  
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -187,21 +203,25 @@ The Ready event emits when the Apple Pay Element has loaded and is available to 
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('ready', function(event) {
     //apple pay element is ready and can accept an update call
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Repsonse object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "applepay"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -211,21 +231,25 @@ The Click event emits when the customer clicks an Apple Pay Element.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('click', function(event) {
     //do stuff
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```
 {
     elementType: "applepay"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -235,21 +259,25 @@ The Cancel event emits when the customer closes the Apple Pay Element Payment Re
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('cancel', function(event) {
     //do stuff
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```
 {
     elementType: "applepay"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -257,13 +285,14 @@ applepay.on('cancel', function(event) {
 
 The Shipping Option Change event emits when the Customer selects a different Shipping Option within the Payment Request interface. The event will emit the following object structure.
 
-| Key             | Type                                                                                                                       | Description                                                                                                                                                                                                        |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| updateWith      | Function                                                                                                                   | Calling this function with a [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) merges your updates into the current Payment Request object. |
-| shippingAddress | A [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) | A [Payment Request Shipping Option object](../digital-river-payment-objects.md#payment-request-shipping-option-object) contains the details of the customer's chosen Shipping Option.                              |
+| Key               | Type                                                                                                                       | Description                                                                                                                                                                                                        |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `updateWith`      | Function                                                                                                                   | Calling this function with a [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) merges your updates into the current Payment Request object. |
+| `shippingAddress` | A [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) | A [Payment Request Shipping Option object](../digital-river-payment-objects.md#payment-request-shipping-option-object) contains the details of the customer's chosen Shipping Option.                              |
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('shippingoptionchange', function(event) {
     var shippingOption = event.shippingOption;
@@ -274,11 +303,13 @@ applepay.on('shippingoptionchange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "shippingOption": {
@@ -292,6 +323,7 @@ applepay.on('shippingoptionchange', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -299,13 +331,14 @@ applepay.on('shippingoptionchange', function(event) {
 
 The Shipping Address Change emits when the Customer selects a different Shipping Address within the Payment Request interface. The event will emit the following object structure.
 
-| Key             | Type                                                                                                                       | Description                                                                                                                                                                                                        |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| updateWith      | Function                                                                                                                   | Calling this function with a [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) merges your updates into the current Payment Request object. |
-| shippingAddress | A [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) | A [Payment Request Shipping Option object](../digital-river-payment-objects.md#payment-request-shipping-option-object) contains the details of the customer's chosen Shipping Option.                              |
+| Key               | Type                                                                                                                       | Description                                                                                                                                                                                                        |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `updateWith`      | Function                                                                                                                   | Calling this function with a [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) merges your updates into the current Payment Request object. |
+| `shippingAddress` | A [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) | A [Payment Request Shipping Option object](../digital-river-payment-objects.md#payment-request-shipping-option-object) contains the details of the customer's chosen Shipping Option.                              |
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('shippingoptionchange', function(event) {
     var shippingOption = event.shippingOption;
@@ -316,11 +349,13 @@ applepay.on('shippingoptionchange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```
 {
     "shippingOption": {
@@ -334,7 +369,6 @@ applepay.on('shippingoptionchange', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-####

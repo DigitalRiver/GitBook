@@ -6,7 +6,7 @@ description: 'When creating a payment method, follow these guidelines:'
 
 ## **Immediate payment method (Credit Card)**
 
-* You may create a credit card source at any point in your checkout flow.
+* You may create a credit card source at any point in your cart flow.
 
 ## **One-Click buttons (Apple Pay, Google Pay, PayPal)**
 
@@ -24,4 +24,3 @@ description: 'When creating a payment method, follow these guidelines:'
 * Before creating a delayed payment source, your order should be in a final state for all amounts, including taxes, shipping, duties, and fees.
 * Once created, you should submit the order and direct the shopper to the Thank You page. You should not allow changes to the order at this point.
 * On the Thank You page, you should display the details included in the source about how to pay. This may include wiring money or going to a physical location to pay.
-

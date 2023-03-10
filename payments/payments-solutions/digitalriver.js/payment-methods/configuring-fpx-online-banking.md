@@ -41,7 +41,7 @@ Build an FPX Online Banking Source Request object. An FPX Online Banking Source 
 Build an FPX Online Baning source request object. Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% code overflow="wrap" %}
@@ -193,7 +193,7 @@ Once authorized, the source state will change to chargeable.
 
 ## Step 4: Use the authorized source
 
-Once authorized, you can use the source by [attaching it to a cart](broken-reference).
+Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
 {% code title="POST /v1/shoppers/me/carts/active/apply-payment-method" overflow="wrap" %}
 ```json

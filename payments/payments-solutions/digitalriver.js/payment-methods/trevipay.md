@@ -12,7 +12,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a [TreviPay
 * [Step 4: Use the authorized source](trevipay.md#step-4-use-the-authorized-source)
 
 {% hint style="warning" %}
-After you configure TreviPay for DigitalRiver.js, you must [add the organization identifier (`organizationId`) to the payload in the cart](../../../../cart/creating-or-updating-a-cart/adding-required-information-for-specific-payment-methods.md#adding-an-organization-identifier-to-a-cart) to make the TreviPay payment method available to the shopper. The `organizationId` uses the same value as the  `client_reference_id` specified in [TreviPay enrollment URL](trevipay.md#trevipay-enrollment-url).
+After you configure TreviPay for DigitalRiver.js, you must [add the organization identifier (`organizationId`) to the payload in the cart](../../../../shopper-apis/cart/creating-or-updating-a-cart/managing-payment-methods/adding-required-information-for-specific-payment-methods.md#adding-an-organization-identifier-to-a-cart) to make the TreviPay payment method available to the shopper. The `organizationId` uses the same value as the  `client_reference_id` specified in [TreviPay enrollment URL](trevipay.md#trevipay-enrollment-url).
 {% endhint %}
 
 ## Step 1:  Build the TreviPay object
@@ -48,7 +48,7 @@ The TreviPay source details object requires the following fields.
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% tabs %}

@@ -12,6 +12,7 @@ To create an Online Banking element, use the `createElement` function exposed th
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var onlineBankingOptions = {
     classes: {
@@ -59,6 +60,7 @@ var onlineBankingOptions = {
  
 onlineBanking = digitalriverpayments.createElement('onlinebanking', onlineBankingOptions);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -108,6 +110,7 @@ Call this function to update the Online Banking element's data.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 let onlineBankingOptions = {
     classes: {
@@ -155,6 +158,7 @@ let onlineBankingOptions = {
  
 onlineBanking.update(onlineBankingOptions);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -175,11 +179,13 @@ The Ready event triggers when the Online Banking Element has loaded and is avail
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 onlineBanking.on('ready', function(event) {
     //online banking element is ready and can accept an update call
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -189,10 +195,10 @@ onlineBanking.on('ready', function(event) {
 
 &#x20;In addition to the type of element returned in the ready function, the online banking element returns `hasAvailableBanks`. This Boolean reflects whether the currency and country combination specified has banks available for payment. If this is false, there are no banks available for payment.
 
-| Value             | Key                                                                                                                                          |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| elementType       | onlinebanking                                                                                                                                |
-| hasAvailableBanks | A true or false value signals whether there are banks available for the currency and country combination provided when creating the element. |
+| Value               | Key                                                                                                                                          |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `elementType`       | onlinebanking                                                                                                                                |
+| `hasAvailableBanks` | A true or false value signals whether there are banks available for the currency and country combination provided when creating the element. |
 
 {% tabs %}
 {% tab title="Response object" %}
@@ -281,12 +287,12 @@ onlineBanking.on('change', function(event) {
 {% endtab %}
 {% endtabs %}
 
-| Key         | Value Description                                     |
-| ----------- | ----------------------------------------------------- |
-| complete    | Indicates whether the element is in a complete state. |
-| empty       | Indicates whether the element is empty.               |
-| elementType | The element type.                                     |
-| error       | An error object (if applicable).                      |
-| value       | The value of the selected option.                     |
+| Key           | Value Description                                     |
+| ------------- | ----------------------------------------------------- |
+| `complete`    | Indicates whether the element is in a complete state. |
+| `empty`       | Indicates whether the element is empty.               |
+| `elementType` | The element type.                                     |
+| `error`       | An error object (if applicable).                      |
+| `value`       | The value of the selected option.                     |
 
 In this flow, you can now use the `createSource` method to create a source using the online banking element.

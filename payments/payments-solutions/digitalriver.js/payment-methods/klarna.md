@@ -52,7 +52,7 @@ The Klarna Source Details object requires the following fields.
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% code overflow="wrap" %}
@@ -188,6 +188,8 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+When applying Klarna to a cart, use the [redirect and submit payment flow](../../../sources/using-the-source-identifier.md#redirect-then-submit-payment-flow).
 
 ## Step 5: Support recurring payments
 

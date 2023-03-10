@@ -121,7 +121,7 @@ googlepay.on('source', function(event) {
 The source event will surface a Source plus other details provided from Google Pay like the shopper's billing address, shipping address, and contact information in the response.
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% tabs %}
@@ -253,6 +253,8 @@ The `address` object must contain postal code and state/province data that **** 
 ## Step 2: Use the authorized source
 
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart) or [attaching it to a shopper](../../../sources/#attaching-a-payment-method-to-a-customer).
+
+When applying Google Pay to a cart, use the [standard and delayed payment flow](../../../sources/using-the-source-identifier.md#standard-and-delayed-payment-flow).
 
 ### Option 1. Attach the source to a cart
 
