@@ -16,8 +16,6 @@ How you configure iDEAL depends on whether you're using [DigitalRiver.js with El
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring iDEAL](../payments-solutions/digitalriver.js/payment-methods/configuring-ideal.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
-When applying iDEAL to a cart, use the [standard and delayed payment flow](../sources/using-the-source-identifier.md#standard-and-delayed-payment-flow).
-
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

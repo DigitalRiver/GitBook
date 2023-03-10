@@ -10,28 +10,27 @@ description: Learn how to use the DigitalRiver object.
 
 Use `createDropin` to create an instance of our Drop-in solution. This solution provides an all-in-one solution for accepting payments and ensuring compliance. Use this solution for a quick way to start accepting payments with little to no customization. For more information, see our page on [Drop-in](../../payments/payments-solutions/drop-in/).
 
-## Creating elements
+## Creating Elements
 
 ### digitalriver.createElement();
 
 Use this method to create an instance of an element that you can use to capture payment details. You can use the following elements in conjunction with `createSource` to create a payment source.
 
-| Element Type     | Description                                                                     |
-| ---------------- | ------------------------------------------------------------------------------- |
-| `applepay`       | Apple Pay                                                                       |
-| `cardCVV`        | A card security code field                                                      |
-| `cardExpiration` | A credit card expiration field                                                  |
-| `cardNumber`     | A credit card number field                                                      |
-| `googlepay`      | Google Pay                                                                      |
-| `iban`           | [An IBAN element](elements/iban-element.md)                                     |
-| `konbini`        | [A Konbini element](elements/konbini-elements.md)                               |
-| `onlineBanking`  | [An online banking element](elements/online-banking-elements.md)                |
-| `offlineRefund`  | [An offline refund data collection element](elements/offline-refund-element.md) |
-| `paypal`         | [A PayPal element](elements/paypal-elements.md)                                 |
+| Element Type   | Description                                                                     |
+| -------------- | ------------------------------------------------------------------------------- |
+| applepay       | Apple Pay                                                                       |
+| cardCVV        | A card security code field                                                      |
+| cardExpiration | A credit card expiration field                                                  |
+| cardNumber     | A credit card number field                                                      |
+| googlepay      | Google Pay                                                                      |
+| iban           | An IBAN element                                                                 |
+| konbini        | [A Konbini element](elements/konbini-elements.md)                               |
+| onlineBanking  | [An online banking element](elements/online-banking-elements.md)                |
+| offlineRefund  | [An offline refund data collection element](elements/offline-refund-element.md) |
+| paypal         | [A PayPal element](elements/paypal-elements.md)                                 |
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 var options = {
     classes: {
@@ -69,13 +68,11 @@ var cardNumber = digitalriver.createElement('cardnumber', options);
 var cardExpiration = digitalriver.createElement('cardexpiration', options);
 var cardCVV = digitalriver.createElement('cardcvv', options);
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="JavaScript" %}
-{% code overflow="wrap" %}
 ```javascript
 <div id="card-number" class="DRElement">
     <!-- The embedded Element iframe -->
@@ -110,7 +107,6 @@ var cardCVV = digitalriver.createElement('cardcvv', options);
     <iframe src="cardnumber.html"></iframe>
 </div>
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -129,16 +125,15 @@ var cardCVV = digitalriver.createElement('cardcvv', options);
 
 Use this method to retrieve localized strings that can be used to create the various disclosures required by Digital River.
 
-| Parameter            | Required/Optional | Description                                                                                                                                                                                                                                                                                   | Accepted Values                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| -------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `businessEntityCode` | Required          | The business entity code of the entity facilitating the transaction.                                                                                                                                                                                                                          | DRES\_INC-ENTITY, DR\_WP-ENTITY, DR\_WPAB-ENTITY, C5\_INC-ENTITY, DR\_BRAZIL-ENTITY, DR\_BRAZIL2-ENTITY, DR\_CHINA-ENTITY, DR\_GMBH-ENTITY, DR\_INC-ENTITY, DR\_INDIA-ENTITY, DR\_IRELAND-ENTITY, DR\_JAPAN-ENTITY, DR\_KOREA-ENTITY, DR\_MEXICO-ENTITY, DR\_RUSSIA-ENTITY, DR\_TAIWAN-ENTITY, DR\_SARL-ENTITY, DR\_UK-ENTITY                                                                                                                                  |
-| `locale`             | Optional          | The language associated with the returned data. If you do not provide a locale and you provided a default locale when you started the DigitalRiver.js library, the strings will be localized to that default value. If you did not provide a default locale, the default language is English. | ar-EG, cs-CZ, da-DK, de-AT, de-CH, de-DE, el-GR, en-AU, en-BE, en-CA, en-CH, en-DK, en-FI, en-GB, en-IE, en-IN, en-MY, en-NL, en-NO, en-NZ, en-PR, en-SE, en-SG, en-US, en-ZA, es-AR, es-CL, es-CO, es-EC, es-ES, es-MX, es-PE, es-VE, et-EE, fi-FI, fr-BE, fr-CA, fr-CH, fr-FR, hu-HU, it-CH, it-IT, iw-IL, ja-JP, ko-KR, lt-LT, lv-LV, nl-BE, nl-NL, no-NO, pl-PL, pt-BR, pt-PT, ro-RO, ru-RU, sk-SK, sl-SI, sr-YU, sv-SE, th-TH, tr-TR, zh-CN, zh-HK, zh-TW |
+| Parameter          | Required/Optional | Description                                                                                                                                                                                                                                                                                   | Accepted Values                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------ | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| businessEntityCode | Required          | The business entity code of the entity facilitating the transaction.                                                                                                                                                                                                                          | DRES\_INC-ENTITY, DR\_WP-ENTITY, DR\_WPAB-ENTITY, C5\_INC-ENTITY, DR\_BRAZIL-ENTITY, DR\_BRAZIL2-ENTITY, DR\_CHINA-ENTITY, DR\_GMBH-ENTITY, DR\_INC-ENTITY, DR\_INDIA-ENTITY, DR\_IRELAND-ENTITY, DR\_JAPAN-ENTITY, DR\_KOREA-ENTITY, DR\_MEXICO-ENTITY, DR\_RUSSIA-ENTITY, DR\_TAIWAN-ENTITY, DR\_SARL-ENTITY, DR\_UK-ENTITY                                                                                                                                  |
+| locale             | Optional          | The language associated with the returned data. If you do not provide a locale and you provided a default locale when you started the DigitalRiver.js library, the strings will be localized to that default value. If you did not provide a default locale, the default language is English. | ar-EG, cs-CZ, da-DK, de-AT, de-CH, de-DE, el-GR, en-AU, en-BE, en-CA, en-CH, en-DK, en-FI, en-GB, en-IE, en-IN, en-MY, en-NL, en-NO, en-NZ, en-PR, en-SE, en-SG, en-US, en-ZA, es-AR, es-CL, es-CO, es-EC, es-ES, es-MX, es-PE, es-VE, et-EE, fi-FI, fr-BE, fr-CA, fr-CH, fr-FR, hu-HU, it-CH, it-IT, iw-IL, ja-JP, ko-KR, lt-LT, lv-LV, nl-BE, nl-NL, no-NO, pl-PL, pt-BR, pt-PT, ro-RO, ru-RU, sk-SK, sl-SI, sr-YU, sv-SE, th-TH, tr-TR, zh-CN, zh-HK, zh-TW |
 
 This method returns an object with various compliance strings and links that can be used to create a legal footer with various resources.
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "disclosure": {
@@ -184,7 +179,6 @@ This method returns an object with various compliance strings and links that can
         }
     }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -209,7 +203,7 @@ When creating sources, you have the option of selecting a [method that accepts a
 
 For both versions, the `createSource()` method returns a promise that contains a `Result` object.  The `Result` object, in turn, contains one of two possible objects:‌
 
-* **source** — A `source` object created by Digital River.
+* **source** — A `Source` object created by Digital River.
 * **error** — An [error object](error-types-codes-and-objects.md#create-source-error-object) that indicates a problem with the tokenization request. It provides the data you must correct before attempting to create a source again.&#x20;
 
 ### createSource(sourceData);
@@ -220,7 +214,6 @@ In the following example, the method takes a single argument. The `sourceData` c
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 var sourceData = {
         "type": "creditCard",
@@ -256,7 +249,6 @@ digitalriver.createSource(sourceData).then(function(result) {
     }
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -264,7 +256,6 @@ A successful response returns a `source` with a unique `id`.
 
 {% tabs %}
 {% tab title="Source response" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "error": undefined,
@@ -298,7 +289,6 @@ A successful response returns a `source` with a unique `id`.
     }
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -306,7 +296,6 @@ An unsuccessful response returns an `error` with information on what needs to be
 
 {% tabs %}
 {% tab title="Error response" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "error": {
@@ -325,7 +314,6 @@ An unsuccessful response returns an `error` with information on what needs to be
     source: undefined
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -336,11 +324,10 @@ Use the `createSource(element, sourceData)` method to create a tokenized source 
 * **element** — A `Element` object created using the [Elements](elements/) portion of this library.
 * **sourceData** — The source data that you want Digital River to tokenize. See [Common payment sources](../../payments/payments-solutions/digitalriver.js/payment-methods/common-payment-sources.md) for more information on the required source data.
 
-In the following example, the method takes both source data and an element argument.
+In the following example, the method takes both a source data and element argument.
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 var sourceData = {
         "type": "creditCard",
@@ -369,7 +356,6 @@ digitalriver.createSource(cardNumber, sourceData).then(function(result) {
     }
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -377,7 +363,6 @@ A successful response returns a `source` with a unique `id`.
 
 {% tabs %}
 {% tab title="Source response" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "error": undefined,
@@ -415,7 +400,6 @@ A successful response returns a `source` with a unique `id`.
     }
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -423,7 +407,6 @@ An unsuccessful response returns an `error` with information on what needs to be
 
 {% tabs %}
 {% tab title="Error response" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "error": {
@@ -436,7 +419,6 @@ An unsuccessful response returns an `error` with information on what needs to be
     source: undefined
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -450,11 +432,11 @@ Set `usage` to `subscription` when you create sources that are used primarily fo
 
 #### **Convenience**
 
-The `convenience` setting applies mainly to saved payment sources that are used for one-off transactions. These are sources where customers are typically present during the checkout flow and want to quickly access their payment information. Select this option if you don't offer [subscriptions](digitalriver-object.md#subscription) or don't have [unscheduled](digitalriver-object.md#unscheduled) merchant-initiated transactions
+The `convenience` setting applies mainly to saved payment sources that are used for one-off transactions. These are sources where customers are typically present during the checkout flow and want to quickly access their payment information. Select this option if you don't offer [subscriptions](digitalriver-object.md#subscription) or don't have [unscheduled](digitalriver-object.md#unscheduled) merchant initiated transactions
 
 #### Unscheduled
 
-Set `usage` to `unscheduled` when you create sources for unscheduled merchant-initiated transactions. These are contracts that occur on a non-fixed schedule using stored card information. Automatic top-ups are an example of one such transaction. They occur whenever a customer's balance drops below a pre-defined amount.
+Set `usage` to `unscheduled` when you create sources for unscheduled merchant initiated transactions. These are contracts that occur on a non-fixed schedule using stored card information. Automatic top-ups are an example of one such transaction. They occur whenever a customer's balance drops below a pre-defined amount.
 
 ## Retrieving sources
 
@@ -462,17 +444,16 @@ Set `usage` to `unscheduled` when you create sources for unscheduled merchant-in
 
 Use this method to retrieve a source with the front-end DigitalRiver.js library. This method takes two parameters:‌
 
-* **`sourceId`**—The unique ID of the source you want to retrieve.
-* **`sourceClientSecret`**—The `clientSecret` value of the source you are trying to retrieve. This is specific to the source.
+* **sourceId**—The unique ID of the source you want to retrieve.
+* **sourceClientSecret**—The `clientSecret` value of the source you are trying to retrieve. This is specific to the source.
 
 The `digitalriver.createSource()` returns a Promise that includes a `Result` object. (See the following source response example.) The Result object will have either:‌
 
-* **`result.source`**—If this object is not null, it will contain the `Source` object you requested.
-* **`result.error`**— If this object is not null, it will contain an `Error` object with details on the specific error.
+* **result.source**—If this object is not null, it will contain the `Source` object you requested.
+* **result.error**— If this object is not null, it will contain an `Error` object with details on the specific error.
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 digitalriver.retrieveSource("ee90c07c-5549-4a6b-aa5f-aabe29b1e97a","ee90c07c-5549-4a6b-aa5f-aabe29b1e97a_51afe818-0e7f-46d7-8257-b209b20f4d8").then(function(result) {
     if(result.error) {
@@ -484,13 +465,11 @@ digitalriver.retrieveSource("ee90c07c-5549-4a6b-aa5f-aabe29b1e97a","ee90c07c-554
     }
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Source response" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "error": undefined,
@@ -529,7 +508,6 @@ digitalriver.retrieveSource("ee90c07c-5549-4a6b-aa5f-aabe29b1e97a","ee90c07c-554
     }
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -543,7 +521,7 @@ The [standard version of the method](digitalriver-object.md#DigitalRiverJS-digit
 
 | Parameter            | Required/Optional | Description                                                                                                                                 |
 | -------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sessionId`          | Required          | The [payment session](../../shopper-apis/cart/payment-sessions.md) identifier of this transaction.                                          |
+| `sessionId`          | Required          | The [payment session](../../cart/payment-sessions.md) identifier of this transaction.                                                       |
 | `sourceId`           | Required          | The identifier of the payment source used in this transaction.                                                                              |
 | `sourceClientSecret` | Required          | The source client secret for this transaction.                                                                                              |
 | `returnUrl`          | Required          | The return URL where the customer is directed when 3D Secure 1 is required. If the value is not provided, we use the current page location. |
@@ -556,7 +534,7 @@ The [other version of the authenticate source method](digitalriver-object.md#Dig
 
 After you call either version of this method, Digital River automatically handles the SCA requirements. Once the customer completes the necessary authentication or we determine that authentication isn't required, the method resolves and the checkout flow can continue.
 
-More specifically, the method returns a promise which is resolved by a source authentication result object. The following table lists the possible results and the recommended actions:
+More specifically, the method returns a promise which is resolved by a source authentication result object. The following are the possible results and the recommended actions:
 
 | status                        | Description                                                                                                                                              |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -568,7 +546,6 @@ More specifically, the method returns a promise which is resolved by a source au
 
 You can use this method to [authenticate a payment source](digitalriver-object.md#authenticating-sources) before it is applied to a transaction.&#x20;
 
-{% code overflow="wrap" %}
 ```javascript
 digitalriver.authenticateSource({
     "sessionId": "65b1e2c2-632c-4240-8897-195ca22ce108",
@@ -577,23 +554,19 @@ digitalriver.authenticateSource({
     "returnUrl": "https://returnurl.com"
 });
 ```
-{% endcode %}
 
 The following is an example response when a source is successfully authenticated:&#x20;
 
-{% code overflow="wrap" %}
 ```javascript
 {
     "status": "complete"
 }
 ```
-{% endcode %}
 
 ### authenticateSource(\[cvvElement], data) <a href="#digitalriverjs-digitalriver.authenticatesource-data" id="digitalriverjs-digitalriver.authenticatesource-data"></a>
 
 In this alternative version of the method to [authenticate sources](digitalriver-object.md#authenticating-sources), you can provide an optional CVV [Element](elements/) type (assuming it is correctly [created](digitalriver-object.md#creating-elements) and [mounted](elements/#element-mount)). By setting this parameter, the value contained in the field of the CVV Element is included in the authentication request.
 
-{% code overflow="wrap" %}
 ```javascript
 digitalriver.authenticateSource(cvvElement, {
     "sessionId": "65b1e2c2-632c-4240-8897-195ca22ce108",
@@ -602,17 +575,14 @@ digitalriver.authenticateSource(cvvElement, {
     "returnUrl": "https://returnurl.com"
 });
 ```
-{% endcode %}
 
 The following is an example response when a source is successfully authenticated:&#x20;
 
-{% code overflow="wrap" %}
 ```javascript
 {
     "status": "complete"
 }
 ```
-{% endcode %}
 
 ## **Updating sources**
 
@@ -621,7 +591,7 @@ The following is an example response when a source is successfully authenticated
 Use this method to update details on a source.&#x20;
 
 {% hint style="warning" %}
-When updating a source, you can update the owner and the expiration details for [Credit Cards](../../payments/supported-payment-methods/credit-cards.md) only.  If you need to update a non-Credit Card (**creditCard**) payment type,  use [createSource](digitalriver-object.md#createsource-sourcedata).
+When updating a source, you can update the owner and the expiration details for [Credit Cards](broken-reference) only.  If you need to update a non-Credit Card (**creditCard**) payment type,  use [createSource](digitalriver-object.md#createsource-sourcedata).
 {% endhint %}
 
 This method takes two parameters:‌
@@ -629,11 +599,11 @@ This method takes two parameters:‌
 * `element`—An optional card expiration element for using the Elements portion of this library.
 * `sourceData`—A required data object which contains additional data that is required to update the payment source.
 
-| Field          | Description                                                                                                                         |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `clientSecret` | <p>Required<br><strong>Type</strong>: String<br><strong>Description</strong>: The Client Secret of the source you are updating.</p> |
-| `id`           | <p>Required<br><strong>Type</strong>: String<br><strong>Description</strong>: The ID of the source you are updating.</p>            |
-| `owner`        | <p>Optional<br><strong>Type</strong>: An Owner Object<br><strong>Description</strong>: An object containing the Owner details.</p>  |
+| Field        | Required | Type            | Description                                       |
+| ------------ | -------- | --------------- | ------------------------------------------------- |
+| clientSecret | Required | String          | The Client Secret of the source you are updating. |
+| id           | Required | String          | The ID of the source you are updating.            |
+| owner        | Optional | An Owner Object | An object containing the Owner details.           |
 
 `digitalriver.updateSource()` returns a Promise that returns a result object. The result object will have either:‌
 
@@ -644,7 +614,6 @@ This method takes two parameters:‌
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 //Create the element using DigitalRiver.js and place it on the page.
 var options = {
@@ -692,13 +661,11 @@ digitalriver.updateSource(cardExpiration, sourceData).then(function(result) {
     }
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Source Response" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "error": undefined,
@@ -733,7 +700,6 @@ digitalriver.updateSource(cardExpiration, sourceData).then(function(result) {
     }
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -741,7 +707,6 @@ digitalriver.updateSource(cardExpiration, sourceData).then(function(result) {
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 var sourceData = {
         "id": "14381d1c-8bff-4350-aeea-82b36f3a196c",
@@ -771,13 +736,11 @@ digitalriver.updateSource(sourceData).then(function(result) {
     }
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Source Response" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "error": undefined,
@@ -812,7 +775,6 @@ digitalriver.updateSource(sourceData).then(function(result) {
     }
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -820,7 +782,6 @@ digitalriver.updateSource(sourceData).then(function(result) {
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 //Create the element using DigitalRiver.js and place it on the page.
 var options = {
@@ -858,13 +819,11 @@ digitalriver.updateSource(cardExpiration, sourceData).then(function(result) {
     }
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Source Response" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "error": undefined,
@@ -899,7 +858,6 @@ digitalriver.updateSource(cardExpiration, sourceData).then(function(result) {
     }
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -909,7 +867,6 @@ If there is a problem with the update request, an error object will be returned 
 
 {% tabs %}
 {% tab title="Source Errors" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "error": {
@@ -920,7 +877,6 @@ If there is a problem with the update request, an error object will be returned 
         }]
     },
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -930,14 +886,14 @@ If there is a problem with the update request, an error object will be returned 
 
 Use this method to retrieve an array of available payment methods. You can use this to filter and determine applicable payment methods while building your checkout flows. The `filters` object is optional.
 
-| Attribute           | Required/Optional | Description                                                                                                    |
-| ------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------- |
-| `currency`          | Optional          | The currency of the transaction.                                                                               |
-| `country`           | Optional          | The country of the billing addresses associated with this transaction.                                         |
-| `supportsStorage`   | Optional          | Whether the payment supports storage.                                                                          |
-| `supportsRecurring` | Optional          | Whether the payment method supports recurring payments.                                                        |
-| `supportsFreeTrial` | Optional          | Whether the payment method supports free trials.                                                               |
-| `sessionId`         | Optional          | The Payment Session ID. If used, the response will return the payment methods which apply to your transaction. |
+| Attribute         | Required/Optional | Description                                                                                                    |
+| ----------------- | ----------------- | -------------------------------------------------------------------------------------------------------------- |
+| currency          | Optional          | The currency of the transaction.                                                                               |
+| country           | Optional          | The country of the billing addresses associated with this transaction.                                         |
+| supportsStorage   | Optional          | Whether the payment supports storage.                                                                          |
+| supportsRecurring | Optional          | Whether the payment method supports recurring payments.                                                        |
+| supportsFreeTrial | Optional          | Whether the payment method supports free trials.                                                               |
+| sessionId         | Optional          | The Payment Session ID. If used, the response will return the payment methods which apply to your transaction. |
 
 &#x20;**Retrieve available payment methods response without using session ID**
 
@@ -945,13 +901,11 @@ The following example shows a request with no filters applied.
 
 {% tabs %}
 {% tab title="Request Example" %}
-{% code overflow="wrap" %}
 ```javascript
 digitalriver.retrieveAvailablePaymentMethods().then(function(result) {
     //do something with the result, this could include showing or hiding specific payment methods that are applicable to the display
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -959,7 +913,6 @@ The following response includes all payment methods that you configured for your
 
 {% tabs %}
 {% tab title="Response Example" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "paymentMethods": [
@@ -1152,7 +1105,6 @@ The following response includes all payment methods that you configured for your
     ]
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -1162,7 +1114,6 @@ The following example shows a request using filters.
 
 {% tabs %}
 {% tab title="Request Example" %}
-{% code overflow="wrap" %}
 ```javascript
 digitalriver.retrieveAvailablePaymentMethods({
     "currency": "USD",
@@ -1172,15 +1123,13 @@ digitalriver.retrieveAvailablePaymentMethods({
     //do something with the result, this could include showing or hiding specific payment methods that are applicable to the display
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
-The following response only returns payment methods that are available in the US, use the USD currency, and support recurring payments. &#x20;
+The following response only returns payment methods that are available in the US, use the USD currency, and supports recurring payment. &#x20;
 
 {% tabs %}
 {% tab title="Response example" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "paymentMethods": [
@@ -1223,7 +1172,6 @@ The following response only returns payment methods that are available in the US
     ]
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -1233,7 +1181,6 @@ If you specify a Payment Session ID, you will only receive the payment methods w
 
 {% tabs %}
 {% tab title="Request Example" %}
-{% code overflow="wrap" %}
 ```javascript
 digitalriver.retrieveAvailablePaymentMethods({
     "sessionId": "d3941a36-6821-4d93-be23-6190226ae5f7"
@@ -1241,13 +1188,11 @@ digitalriver.retrieveAvailablePaymentMethods({
     //do something with the result, this could include showing or hiding specific payment methods that are applicable to the display
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response Example" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "sessionInformation": {
@@ -1304,7 +1249,6 @@ digitalriver.retrieveAvailablePaymentMethods({
     ]
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -1341,19 +1285,16 @@ This method returns an array that will either be empty if no banks are available
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 digitalriver.retrieveOnlineBankingBanks("DE","EUR").then(function(result) {
     //do something with the banks, this could include building a selector or something else
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Source response" %}
-{% code overflow="wrap" %}
 ```javascript
 [{
     "bankCode": "86",
@@ -1363,6 +1304,7 @@ digitalriver.retrieveOnlineBankingBanks("DE","EUR").then(function(result) {
     "bankName": "Giropay"
 }]
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
+
+###

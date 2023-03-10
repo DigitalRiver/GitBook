@@ -12,7 +12,6 @@ To create a PayPal element, use the `createElement` function exposed through the
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 var paypal = digitalriverpayments.createElement('paypal', {
     style: {
@@ -36,7 +35,6 @@ var paypal = digitalriverpayments.createElement('paypal', {
  
 paypalElement.mount('drjs-paypal');
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -49,14 +47,14 @@ paypalElement.mount('drjs-paypal');
 
 #### PayPal element style options
 
-| Option         | Required | Description                                                                        |
-| -------------- | -------- | ---------------------------------------------------------------------------------- |
-| label          | Optional | The label that appears on the PayPal button. The default is `blank`.               |
-| color          | Optional | The color of the PayPal button. The default is `gold`.                             |
-| shape          | Optional | The shape of the PayPal button. The default is `pill`.                             |
-| layout         | Optional | The layout of the PayPal button. The default is `horizontal`.                      |
-| `fundingicons` | Optional | Indicates whether the funding icons appear on the button. The default is `false`.  |
-| `tagline`      | Optional | Indicates whether the tagline appears on the PayPal button. The default is `none`. |
+| Option       | Required | Description                                                                        |
+| ------------ | -------- | ---------------------------------------------------------------------------------- |
+| label        | Optional | The label that appears on the PayPal button. The default is `blank`.               |
+| color        | Optional | The color of the PayPal button. The default is `gold`.                             |
+| shape        | Optional | The shape of the PayPal button. The default is `pill`.                             |
+| layout       | Optional | The layout of the PayPal button. The default is `horizontal`.                      |
+| fundingicons | Optional | Indicates whether the funding icons appear on the button. The default is `false`.  |
+| tagline      | Optional | Indicates whether the tagline appears on the PayPal button. The default is `none`. |
 
 ### PayPal element functions
 
@@ -106,7 +104,6 @@ Call this function to update the PayPal element's data.&#x20;
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 let paypalData = {
     style: {
@@ -130,7 +127,6 @@ let paypalData = {
  
 paypal.update(paypalData);
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -151,13 +147,11 @@ The Ready event triggers when the PayPal Element has loaded and is available to 
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 paypal.on('ready', function(event) {
     //paypal element is ready and can accept an update call
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -225,7 +219,6 @@ The Source event triggers when the Customer completes their interaction with the
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 paypal.on('source', function(event) {
     var source = event.source;
@@ -233,14 +226,13 @@ paypal.on('source', function(event) {
     //pass the source to your back end for further processing.
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 ## Pay in 4
 
 {% hint style="info" %}
-**Additional setup required**: If you are interested in promoting Pay in 4, contact your Account Manager. The Account Manager will send setup instructions for PayPal in 4 banners.
+**Additional setup required**: If you are interested in promoting Pay in 4, contact your Account Manager. The Account Manager will send set up instructions for PayPal in 4 banners.
 {% endhint %}
 
 Pay in 4 is a credit card installment product automatically provided by PayPal when a customer signs in to PayPal Express or PayPal Checkout. This option appears by default when a customer purchases a physical product, and the order value is between $30 and $600. When they complete their purchase, they make a down payment. They pay the rest in 3 payments–one every two weeks. This option is only available in the US.

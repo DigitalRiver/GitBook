@@ -4,7 +4,7 @@ description: Learn how to configure Wire Transfer for DigitalRiver.js with Eleme
 
 # Configuring Wire Transfer
 
-If you're using[ DigitalRiver.js with Elements](../), you can create a [Wire Transfer](../../../supported-payment-methods/wire-transfer.md) payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create an [Wire Transfer](../../../supported-payment-methods/wire-transfer.md) payment method for your app or website in four easy steps:
 
 * [Step 1: Build a Wire Transfer Source Request object](wire-transfer.md#step-1-build-a-wire-transfer-source-request-object)
 * [Step 2: Create a Wire Transfer source using DigitalRiver.js](wire-transfer.md#step-2-create-a-wire-transfer-source-using-digitalriver-js)
@@ -27,7 +27,7 @@ Build a Wire Transfer Source Request object. A Wire Transfer Source Request obje
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% code overflow="wrap" %}

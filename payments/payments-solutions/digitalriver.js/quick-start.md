@@ -4,6 +4,8 @@ description: Create a payment form using DigitalRiver.js.
 
 # Elements integration guide
 
+
+
 Use DigitalRiver.js to create a payment form that securely collects sensitive payment details.
 
 To see an example of a custom payment form, go to [Payment form example](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/quick-start-form.html).
@@ -19,7 +21,7 @@ Integrate the DigitalRiver.js into your app or website in four easy steps:
 
 ## Step 1. Include DigitalRiver.js on your page
 
-To use [DigitalRiver.js](./) as part of your experience, you must include the library and your API key. The key shown in the following example is your public API key. The DigitalRiver.js [`digitalriver.createSource()`](../../../general-resources/reference/digitalriver-object.md#creating-sources) or [`digitalriver.createElement()`](../../../general-resources/reference/digitalriver-object.md#creating-elements) methods use the `var` that you assigned.
+To use DigitalRiver.js as part of your experience, you must include the library and your API key. The key shown in the following example is your public API key. The DigitalRiver.js `digitalriver.createSource()` or `digitalriver.createElement()` methods use the `var` that you assigned.
 
 {% code title="HTML" overflow="wrap" %}
 ```markup

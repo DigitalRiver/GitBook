@@ -1,7 +1,8 @@
 ---
 description: >-
   Afterpay allows your shoppers to buy what they need and want with the
-  flexibility to pay for their purchases in 4 payments over 6 weeks.
+  flexibility to pay for their purchases in 4 interest-free installments over 6
+  weeks.
 ---
 
 # Afterpay

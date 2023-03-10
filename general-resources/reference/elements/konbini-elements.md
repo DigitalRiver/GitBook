@@ -12,7 +12,6 @@ To create a Konbini element, you should use the createElement function exposed t
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 var konbiniOptions = {
     classes: {
@@ -56,7 +55,6 @@ var konbiniOptions = {
  
 let konbini = digitalriverpayments.createElement('konbini', konbiniOptions);
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -106,7 +104,6 @@ Call this function to update the Konbini element's data.
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 let konbiniOptions = {
     classes: {
@@ -150,7 +147,6 @@ let konbiniOptions = {
  
 konbini.update(konbiniOptions);
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -171,22 +167,20 @@ The Ready event triggers when the Konbini Element has loaded and is available to
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 konbini.on('ready', function(event) {
     //konbini element is ready and can accept an update call
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 In addition to the type of element returned in the ready function, the online banking element returns `hasAvailableBanks`. This Boolean reflects whether the currency and country combination specified has banks available for payment. If this is false, there are no banks available for payment.
 
-| Key                  | Value                                                                           |
-| -------------------- | ------------------------------------------------------------------------------- |
-| `elementType`        | onlinebanking                                                                   |
-| `hasAvailableStores` | A true or false value signaling whether there are stores available for payment. |
+| Key                | Value                                                                           |
+| ------------------ | ------------------------------------------------------------------------------- |
+| elementType        | onlinebanking                                                                   |
+| hasAvailableStores | A true or false value signaling whether there are stores available for payment. |
 
 {% tabs %}
 {% tab title="Response object" %}
@@ -261,13 +255,13 @@ konbini.on('change', function(event) {
 {% endtab %}
 {% endtabs %}
 
-| Key           | Value Description                           |
-| ------------- | ------------------------------------------- |
-| `complete`    | Whether the element is in a complete state. |
-| `empty`       | Whether the element is empty.               |
-| `elementType` | The element type.                           |
-| `error`       | An error object (if applicable).            |
-| `value`       | The value of the selected option.           |
+| Key         | Value Description                           |
+| ----------- | ------------------------------------------- |
+| complete    | Whether the element is in a complete state. |
+| empty       | Whether the element is empty.               |
+| elementType | The element type.                           |
+| error       | An error object (if applicable).            |
+| value       | The value of the selected option.           |
 
 {% tabs %}
 {% tab title="Response object" %}

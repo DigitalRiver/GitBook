@@ -117,15 +117,15 @@ var paymentRequestData = digitalriver.paymentRequest({
 {% endtab %}
 {% endtabs %}
 
-| Attribute         | Required | Type                                                                                                                           | Description                                                                                                                                                                                                   |
-| ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `country`         | Required | String                                                                                                                         | The country code for the Payment Request session.                                                                                                                                                             |
-| `currency`        | Required | String                                                                                                                         | The three-digit ISO currency code to supply to the Payment Request session. All amounts contained within the Payment Request will use this currency.                                                          |
-| `total`           | Required | A [Payment Request Total Time object](digital-river-payment-objects.md#payment-request-total-item-object)                      | The Payment Request total amount displayed to the customer as part of the Payment Request interface.                                                                                                          |
-| `displayItems`    | Required | An array of [Payment Request Display Item objects](digital-river-payment-objects.md#payment-request-display-item-object)       | The Payment Request displays items to the customer as part of the Payment Request interface.                                                                                                                  |
-| `shippingOptions` | Optional | An array of [Payment Request Shipping Option objects](digital-river-payment-objects.md#payment-request-shipping-option-object) | The Payment Request interface displays the Shipping Options field to the customer if you set the `requestShipping` parameter to true. The first item in the array is the default or selected shipping option. |
-| `requestShipping` | Required | Boolean                                                                                                                        | If true, you must provide an array of shipping options from which the customer can choose.                                                                                                                    |
-| `style`           | Optional | A [Payment Request Style Option object](digital-river-payment-objects.md#payment-request-style-option-object)                  | This attribute allows you to control the style of the button presented to the customer.                                                                                                                       |
+| Attribute       | Required | Type                                                                                                                           | Description                                                                                                                                                                                                   |
+| --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| country         | Required | String                                                                                                                         | The country code for the Payment Request session.                                                                                                                                                             |
+| currency        | Required | String                                                                                                                         | The three-digit ISO currency code to supply to the Payment Request session. All amounts contained within the Payment Request will use this currency.                                                          |
+| total           | Required | A [Payment Request Total Time object](digital-river-payment-objects.md#payment-request-total-item-object)                      | The Payment Request total amount displayed to the customer as part of the Payment Request interface.                                                                                                          |
+| displayItems    | Required | An array of [Payment Request Display Item objects](digital-river-payment-objects.md#payment-request-display-item-object)       | The Payment Request displays items to the customer as part of the Payment Request interface.                                                                                                                  |
+| shippingOptions | Optional | An array of [Payment Request Shipping Option objects](digital-river-payment-objects.md#payment-request-shipping-option-object) | The Payment Request interface displays the Shipping Options field to the customer if you set the `requestShipping` parameter to true. The first item in the array is the default or selected shipping option. |
+| requestShipping | Required | Boolean                                                                                                                        | If true, you must provide an array of shipping options from which the customer can choose.                                                                                                                    |
+| style           | Optional | A [Payment Request Style Option object](digital-river-payment-objects.md#payment-request-style-option-object)                  | This attribute allows you to control the style of the button presented to the customer.                                                                                                                       |
 
 ## Payment request total item object
 
@@ -143,11 +143,11 @@ This object contains the payment request total.
 {% endtab %}
 {% endtabs %}
 
-| Field       | Required | Description                                                                                                                                                                                        |
-| ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `label`     | Required | The label appears next to the Total Amount of the order on the Payment Sheet.                                                                                                                      |
-| `amount`    | Required | The amount of the Order displayed on the Payment Sheet.                                                                                                                                            |
-| `isPending` | Optional | If the Shipping Total, Tax Amount, or something similar is still pending, you can change this amount in the future. If you don't provide an updated value, the system treats this amount as Final. |
+| Field     | Required | Description                                                                                                                                                                                        |
+| --------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| label     | Required | The label appears next to the Total Amount of the order on the Payment Sheet.                                                                                                                      |
+| amount    | Required | The amount of the Order displayed on the Payment Sheet.                                                                                                                                            |
+| isPending | Optional | If the Shipping Total, Tax Amount, or something similar is still pending, you can change this amount in the future. If you don't provide an updated value, the system treats this amount as Final. |
 
 ## Payment request style option object
 
@@ -165,11 +165,11 @@ This object contains the style information for the payment request.
 {% endtab %}
 {% endtabs %}
 
-| Field            | Required | Description                                                                                                        |
-| ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
-| `buttonType`     | Optional | The type of button. If you don't specify a button type, the system uses the default button type.                   |
-| `buttonColor`    | Optional | The color of the button. If you don't specify a button color, the system uses the default color for the button.    |
-| `buttonLanguage` | Optional | The language for the button's label. If you don't specify a language, the DigitalRiver.js uses English by default. |
+| Field          | Required | Description                                                                                                        |
+| -------------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
+| buttonType     | Optional | The type of button. If you don't specify a button type, the system uses the default button type.                   |
+| buttonColor    | Optional | The color of the button. If you don't specify a button color, the system uses the default color for the button.    |
+| buttonLanguage | Optional | The language for the button's label. If you don't specify a language, the DigitalRiver.js uses English by default. |
 
 ## Payment request display item object
 
@@ -187,11 +187,11 @@ This object contains the payment request information for the item.
 {% endtab %}
 {% endtabs %}
 
-| Field       | Required | Description                                                                                                                                                                                         |
-| ----------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `label`     | Required | This label appears next to the Line Item of the order on the Payment Sheet.                                                                                                                         |
-| `amount`    | Required | This amount appears on the Payment Sheet for this Line Item.                                                                                                                                        |
-| `isPending` | Optional | If the Shipping Total, Tax Amount, or something similar is still pending, you can change this amount in the future. If you do not provide an updated value, the system treats this amount as Final. |
+| Field     | Required | Description                                                                                                                                                                                         |
+| --------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| label     | Required | This label appears next to the Line Item of the order on the Payment Sheet.                                                                                                                         |
+| amount    | Required | This amount appears on the Payment Sheet for this Line Item.                                                                                                                                        |
+| isPending | Optional | If the Shipping Total, Tax Amount, or something similar is still pending, you can change this amount in the future. If you do not provide an updated value, the system treats this amount as Final. |
 
 ## Payment request shipping option object
 
@@ -210,24 +210,24 @@ This object contains the shipping option for the payment request.
 {% endtab %}
 {% endtabs %}
 
-| Field    | Required | Description                                                                                                                                                                                     |
-| -------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`     | Required | Once a customer selects a shipping option from the Payment Sheet, DigitalRiver.js returns the shipping option ID. This ID should correspond to something within your Order Management platform. |
-| `label`  | Required | The label appears as part of the Shipping Option on the Payment Sheet.                                                                                                                          |
-| `amount` | Required | The amount that appears on the Payment Sheet for this Shipping Option.                                                                                                                          |
-| `detail` | Required | A long description of the Shipping Option that appears on the Payment Sheet.                                                                                                                    |
+| Field  | Required | Description                                                                                                                                                                                     |
+| ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id     | Required | Once a customer selects a shipping option from the Payment Sheet, DigitalRiver.js returns the shipping option ID. This ID should correspond to something within your Order Management platform. |
+| label  | Required | The label appears as part of the Shipping Option on the Payment Sheet.                                                                                                                          |
+| amount | Required | The amount that appears on the Payment Sheet for this Shipping Option.                                                                                                                          |
+| detail | Required | A long description of the Shipping Option that appears on the Payment Sheet.                                                                                                                    |
 
 ## Payment request details update object
 
 Use this object to respond to a shipping address change or a shipping option change event sent from the Payment request session.
 
-| Field             | Type                                                                                                                           | Required | Description                                                                                                                                                                                                                                                                                                |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `status`          | String                                                                                                                         | Required | <p></p><p>Use this field to control the flow and error display within the Payment Request session. The values are as follows:</p><ul><li><strong>Success</strong>—Allows the Payment Request to proceed.</li><li><strong>Failure</strong>—Prevents the change requested. Shows an error message.</li></ul> |
-| `error`           | [Payment Request Details Update Error object](digital-river-payment-objects.md#payment-request-details-update-error-object)    | Optional | These items will appears as the updated items in the Payment Request interface.                                                                                                                                                                                                                            |
-| `total`           | [Payment Request Total Item object](digital-river-payment-objects.md#payment-request-total-item-object)                        | Optional | The new total amount, if applicable.                                                                                                                                                                                                                                                                       |
-| `displayItems`    | An array of [Payment Request Display Item objects](digital-river-payment-objects.md#payment-request-display-item-object)       | Optional | These items will appears as the updated items in the Payment Request interface.                                                                                                                                                                                                                            |
-| `shippingOptions` | An array of [Payment Request Shipping Option objects](digital-river-payment-objects.md#payment-request-shipping-option-object) | Optional |  The Payment Request interface displays the Shipping Options field to the customer if you set the `requestShipping` parameter to true. The first item in the array is the default or selected shipping option.                                                                                             |
+| Field           | Type                                                                                                                           | Required | Description                                                                                                                                                                                                                                                                                                |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| status          | String                                                                                                                         | Required | <p></p><p>Use this field to control the flow and error display within the Payment Request session. The values are as follows:</p><ul><li><strong>Success</strong>—Allows the Payment Request to proceed.</li><li><strong>Failure</strong>—Prevents the change requested. Shows an error message.</li></ul> |
+| error           | [Payment Request Details Update Error object](digital-river-payment-objects.md#payment-request-details-update-error-object)    | Optional | These items will appears as the updated items in the Payment Request interface.                                                                                                                                                                                                                            |
+| total           | [Payment Request Total Item object](digital-river-payment-objects.md#payment-request-total-item-object)                        | Optional | The new total amount, if applicable.                                                                                                                                                                                                                                                                       |
+| displayItems    | An array of [Payment Request Display Item objects](digital-river-payment-objects.md#payment-request-display-item-object)       | Optional | These items will appears as the updated items in the Payment Request interface.                                                                                                                                                                                                                            |
+| shippingOptions | An array of [Payment Request Shipping Option objects](digital-river-payment-objects.md#payment-request-shipping-option-object) | Optional |  The Payment Request interface displays the Shipping Options field to the customer if you set the `requestShipping` parameter to true. The first item in the array is the default or selected shipping option.                                                                                             |
 
 {% tabs %}
 {% tab title="Successful Payment Request Details Update object" %}
@@ -287,7 +287,6 @@ Use this object to respond to a shipping address change or a shipping option cha
 
 {% tabs %}
 {% tab title="Unsucessful Payment Request Details Update Error object with errors" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     status: 'failure',
@@ -305,7 +304,6 @@ Use this object to respond to a shipping address change or a shipping option cha
     }
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -319,7 +317,6 @@ The Payment request details update error object is only available for Apple Pay.
 
 {% tabs %}
 {% tab title="Payment Request Details Update Error object" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     message: "An Error has occurred. Please try again.",
@@ -334,7 +331,6 @@ The Payment request details update error object is only available for Apple Pay.
     }
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -359,15 +355,15 @@ Use the following fields to display specific error information to the customer a
 
 This object contains the response to the payment request.
 
-| Field                | Type                                                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| -------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `error`              | Boolean                                                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `source`             | [Payment Request Source object](digital-river-payment-objects.md#payment-request-source-object) | The payment source created using the details provided by the payment session.                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `billingAddress`     | [Billing Address object](digital-river-payment-objects.md#billing-address-object)               | The billing address provided by the customer.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `shippingAddress`    | [Shipping Address object](digital-river-payment-objects.md#shipping-address-object)             | The shipping address provided by the customer.                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `contactInformation` | [Contact Information object](digital-river-payment-objects.md#contact-information-object)       | The contact information provided by the customer.                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `shippingOption`     | String                                                                                          | The customer's chosen shipping option.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `complete`           | Function                                                                                        | <p>Call this function once you have processed the returned data. This function receives a string with the following values:</p><ul><li><strong>Success</strong>—Indicates the payment successfully processed. The user agent may or may not indicate success to the user. Use this value to dismiss the payment interface.</li><li><strong>Failure</strong>—Indicates the payment failed to process. The user agent may or may not indicate the failure to the user.</li></ul> |
+| Field              | Type                                                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ------------------ | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| error              | Boolean                                                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| source             | [Payment Request Source object](digital-river-payment-objects.md#payment-request-source-object) | The payment source created using the details provided by the payment session.                                                                                                                                                                                                                                                                                                                                                                                                  |
+| billingAddress     | [Billing Address object](digital-river-payment-objects.md#billing-address-object)               | The billing address provided by the customer.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| shippingAddress    | [Shipping Address object](digital-river-payment-objects.md#shipping-address-object)             | The shipping address provided by the customer.                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| contactInformation | [Contact Information object](digital-river-payment-objects.md#contact-information-object)       | The contact information provided by the customer.                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| shippingOption     | String                                                                                          | The customer's chosen shipping option.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| complete           | Function                                                                                        | <p>Call this function once you have processed the returned data. This function receives a string with the following values:</p><ul><li><strong>Success</strong>—Indicates the payment successfully processed. The user agent may or may not indicate success to the user. Use this value to dismiss the payment interface.</li><li><strong>Failure</strong>—Indicates the payment failed to process. The user agent may or may not indicate the failure to the user.</li></ul> |
 
 ## Payment request source object
 
@@ -375,7 +371,6 @@ This object contains the source object for the payment request.
 
 {% tabs %}
 {% tab title="Payment Request Source object" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "error": false,
@@ -458,7 +453,6 @@ This object contains the source object for the payment request.
     }
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -484,7 +478,6 @@ Digital River returns this Error object within the `createSource` method if Digi
 
 {% tabs %}
 {% tab title="Create Source Error object" %}
-{% code overflow="wrap" %}
 ```javascript
 {
     "type": "bad_request",
@@ -500,6 +493,5 @@ Digital River returns this Error object within the `createSource` method if Digi
     }]
 }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}

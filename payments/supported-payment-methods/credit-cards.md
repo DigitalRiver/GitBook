@@ -18,8 +18,6 @@ How you configure Credit Cards depends on whether you're using [DigitalRiver.js 
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Credit Cards](../payments-solutions/digitalriver.js/payment-methods/credit-cards.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
-When applying a credit card to a cart, use the [standard and delayed payment flow](../sources/using-the-source-identifier.md#standard-and-delayed-payment-flow).
-
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

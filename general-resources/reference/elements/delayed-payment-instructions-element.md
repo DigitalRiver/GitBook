@@ -20,10 +20,10 @@ To create a Delayed Payment Instructions element, use the `createElement` functi
 
 The Delayed Payment Instructions element also requires an `options` object. The `options` object requires the following attributes:
 
-| Attribute            | Description                       |
-| -------------------- | --------------------------------- |
-| `sourceId`           | The source ID.                    |
-| `sourceClientSecret` | The client secret for the source. |
+| Attribute          | Description                       |
+| ------------------ | --------------------------------- |
+| sourceId           | The source ID.                    |
+| sourceClientSecret | The client secret for the source. |
 
 {% tabs %}
 {% tab title="Example" %}
@@ -48,13 +48,11 @@ Call this function to place the created Delayed Payment Instructions element on 
 
 {% tabs %}
 {% tab title="Explain" %}
-{% code overflow="wrap" %}
 ```javascript
 <div id="delayed-payment-container"></div>
  
 delayedPaymentInstructions.mount("delayed-payment-container");
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -74,17 +72,15 @@ A Ready event triggers when the Delayed Payment Instructions element has loaded.
 
 {% tabs %}
 {% tab title="Example" %}
-{% code overflow="wrap" %}
 ```javascript
 delayedPaymentInstructions.on('ready', function(event) {
     //delayed payment instructions element is ready
 });
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
 
-| Key           | Value                      |
-| ------------- | -------------------------- |
-| `elementType` | delayedPaymentInstructions |
+| Key         | Value                      |
+| ----------- | -------------------------- |
+| elementType | delayedPaymentInstructions |
 

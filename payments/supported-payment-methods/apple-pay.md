@@ -32,8 +32,6 @@ After completing these steps, the remainder of the Apple Pay configuration proce
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Apple Pay](../payments-solutions/digitalriver.js/payment-methods/apple-pay.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
-When applying Apple Pay to a cart, use the [standard and delayed payment flow](../sources/using-the-source-identifier.md#standard-and-delayed-payment-flow).
-
 ## Supported markets <a href="#supported-geographies" id="supported-geographies"></a>
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

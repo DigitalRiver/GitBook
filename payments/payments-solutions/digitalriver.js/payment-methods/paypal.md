@@ -16,7 +16,7 @@ You can find an example of integration [here](https://drh.img.digitalriver.com/D
 Use the [PayPay Billing Agreement](paypal.md#paypal-billing-agreement) for subscriptions. That includes any instance where the cart contains both subscription and non-subscription products.
 {% endhint %}
 
-If you're using[ DigitalRiver.js with Elements](../), you can create a [PayPal](../../../supported-payment-methods/paypal.md) payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create an [PayPal](../../../supported-payment-methods/paypal.md) payment method for your app or website in four easy steps:
 
 * [Step 1: Build the PayPal objects](paypal.md#step-1-build-the-paypal-objects)
 * [Step 2: Create a PayPal source using DigitalRiver.js](paypal.md#step-2-create-a-paypal-source-using-digitalriver-js)
@@ -85,7 +85,7 @@ digitalriver.createSource(data).then(function(result) {
 #### PayPal source response example
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% tabs %}
@@ -256,7 +256,7 @@ paypal.Button.render({
 {% endtab %}
 {% endtabs %}
 
-![PayPal login](../../../../.gitbook/assets/paypal-login.png)
+![PayPal login](../../../../.gitbook/assets/PayPal-login.png)
 
 ### Step 4: Use the authorized source
 
@@ -335,7 +335,7 @@ digitalriver.createSource(data).then(function(result) {
 #### PayPal Billing source example
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% tabs %}
@@ -469,7 +469,7 @@ paypal.Button.render({
 {% endtab %}
 {% endtabs %}
 
-![PayPal login](../../../../.gitbook/assets/paypal-login.png)
+![PayPal login](../../../../.gitbook/assets/PayPal-login.png)
 
 ### Step 4: Use the authorized source
 
@@ -612,7 +612,7 @@ digitalriver.createSource(data).then(function(result) {
 #### PayPal Credit source response example
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% tabs %}
@@ -695,7 +695,7 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
     <pre class="language-markup" data-overflow="wrap"><code class="lang-markup"><strong>&#x3C;script src="https://www.paypalobjects.com/api/checkout.js">&#x3C;/script>
     </strong>&#x3C;div id="paypal-button">&#x3C;/div>
     </code></pre>
-2.  &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching it to an order or cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
+2.  &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching it to an order or cart](broken-reference).
 
     {% code overflow="wrap" %}
     ```javascript
