@@ -24,10 +24,8 @@ You may specify the following options within this object.
 
 ‌The following example localizes the various display and error strings to English (United States).
 
-{% code overflow="wrap" %}
 ```
 let digitalriver = new DigitalRiver("YOUR_PUBLIC_API_KEY", {     "locale": "en-us"});
 ```
-{% endcode %}
 
 ‌

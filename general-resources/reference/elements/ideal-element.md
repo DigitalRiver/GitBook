@@ -16,7 +16,7 @@ The iDEAL element also requires an additional `ideal` object which accepts:
 | ----------- | ---------------------- | ----------------- |
 | `sessionId` | The Payment Session ID | Required          |
 
-{% code title="Example" overflow="wrap" %}
+{% code title="Example" %}
 ```json
 var options = {
 	ideal: {
@@ -179,7 +179,7 @@ ideal.on('change', function(event) {
 
 ### Response object - IBAN error
 
-{% code title=" Example" overflow="wrap" %}
+{% code title=" Example" %}
 ```json
 {
     "elementType": "ideal",

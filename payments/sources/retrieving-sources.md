@@ -8,7 +8,7 @@ description: >-
 
 ## Get a source object by identifier
 
-The following [`GET/sources/{id}`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Source/operation/retrieveSources) request retrieves a source by supplying its unique identifier as a path parameter.
+The following [`GET/sources/{id}`](https://www.digitalriver.com/docs/commerce-api-reference/#operation/retrieveSources) request retrieves a source by supplying its unique identifier as a path parameter.
 
 {% hint style="info" %}
 This identifier was returned when you used the [DigitalRiver.js](../payments-solutions/digitalriver.js/) library to [create the source](../../general-resources/reference/digitalriver-object.md#creating-sources).
@@ -26,10 +26,10 @@ curl --location --request GET 'https://api.digitalriver.com/sources/e59c8303-139
 {% endtab %}
 {% endtabs %}
 
-If a valid identifier and API key are provided, the response returns a [source object](./). This sample response returns a [credit card source type](./#source-types) in a [`chargeable` state](./#source-state).
+If a valid identifier and API key are provided, the response returns a Source object. This sample response returns a Source with a `type` of `creditCard` and a state of `chargeable`.&#x20;
 
 {% hint style="warning" %}
-Only the last four digits of credit card numbers are returned by a `GET /source` request.
+Only the last four digits of credit card numbers are returned by a `GET` Source request.
 {% endhint %}
 
 {% tabs %}
@@ -72,19 +72,16 @@ Only the last four digits of credit card numbers are returned by a `GET /source`
 {% endtab %}
 {% endtabs %}
 
-### Display a customer's sources
-
-The data contained in the `sources` array can be used to display a customer's saved payment methods on your website or app. To do this, parse the response and extract the values in the `creditCard`, `owner`, and `address` hash tables. You can then use these values to present the card's brand name, last four digits, expiration date, and the customer's billing information.
-
 ## Obtain a shopper's sources
 
-You can retrieve the [sources ](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Source)associated with a shopper's payment option by making a [get current shopper](../../shopper-apis/shoppers/shoppers.md#getting-a-current-shopper) request and parsing the `paymentOptions` object contained in the response if the payment source is attached to the shopper's payment option. One payment option can contain one payment source. When the shopper gets their payment options, all payment sources will be listed.
+You can retrieve the Sources associated with a Shopper by making a get shopper by ID request and parsing the `sources` array contained in the response if the payment source is attached to the shopper's payment option.  When the shopper gets their payment options, all payment sources will be listed.
 
 ### Step 1: Create your first payment source and option
 
-1. Create your first payment source using either [DigitalRiver.js](../payments-solutions/digitalriver.js/) or [Drop-in Payments](../payments-solutions/drop-in/).
+1. Create your first payment source using: \
+   `POST https://{{dispatchHost}}/payments/sources/`
 2. Create your first payment option using: \
-   [`POST /v1/shoppers/me/payment-options/`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Payment-Options/paths/\~1v1\~1shoppers\~1me\~1payment-options/post)``
+   `POST https://{{dispatchHost}}/v1/shoppers/me/payment-options/`
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -107,9 +104,10 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/paym
 
 ### Step 2: Create your second payment source and option
 
-1. Create your second payment source using either [DigitalRiver.js](../payments-solutions/digitalriver.js/) or [Drop-in Payments](../payments-solutions/drop-in/).
+1. Create your second payment source using: \
+   `POST https://{{dispatchHost}}/payments/sources/`
 2. Create your second payment option using: \
-   [`POST /v1/shoppers/me/payment-options/`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Payment-Options/paths/\~1v1\~1shoppers\~1me\~1payment-options/post)``
+   `POST https://{{dispatchHost}}/v1/shoppers/me/payment-options/`
 
 {% tabs %}
 {% tab title="Request body" %}
@@ -132,7 +130,7 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/paym
 
 ### Step 3: Get the shopper's payment options
 
-Get the shopper's payment options using: [`GET /v1/shoppers/me/payment-options/`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Payment-Options/paths/\~1v1\~1shoppers\~1me\~1payment-options/get).
+Get the shopper's payment options using: `GET https://{{dispatchHost}}/v1/shoppers/me/payment-options/`
 
 {% tabs %}
 {% tab title="Response body" %}
@@ -148,14 +146,12 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/paym
             {
                 "uri": "https://dispatch-test.digitalriver.com/v1/shoppers/me/payment-options/15578475589",
                 "nickName": "Credit Card",
-                "isDefault": "false",
-                "sourceId": "7e49fddb-9b64-453c-bd22-1231b4cb1819"
+                "isDefault": "false"
             },
             {
                 "uri": "https://dispatch-test.digitalriver.com/v1/shoppers/me/payment-options/15578475689",
                 "nickName": "PayPal",
-                "isDefault": "true",
-                "sourceId": "7e49fddb-9b64-453c-bd22-1231b4cb2316"
+                "isDefault": "true"
             }
         ]
     }
@@ -164,3 +160,7 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/paym
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+### Display a customer's sources
+
+The data contained in the `sources` array can be used to display a customer's saved payment methods on your website or app. To do this, parse the response and extract the values in the `creditCard`, `owner`, and `address` hash tables. You can then use these values to present the card's brand name, last four digits, expiration date, and the customer's billing information.

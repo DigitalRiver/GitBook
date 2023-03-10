@@ -14,12 +14,12 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a [Boleto](
 
 Build the Boleto Source Request and Details object.  The Boleto Source Request object requires the following fields:
 
-| Field            | Value                                                                                  |
-| ---------------- | -------------------------------------------------------------------------------------- |
-| `type`           | `boletoBancario`                                                                       |
-| `sessionId`      | The payment session identifier.                                                        |
-| `owner`          | An [Owner object](common-payment-objects.md#owner-object).                             |
-| `boletoBancario` | A [Boleto Source Details object](configuring-boleto.md#boleto-source-details-object).  |
+| Field            | Value                                                      |
+| ---------------- | ---------------------------------------------------------- |
+| `type`           | `boletoBancario`                                           |
+| `sessionId`      | The payment session identifier.                            |
+| `owner`          | An [Owner object](common-payment-objects.md#owner-object). |
+| `boletoBancario` | A Boleto Source Details object.                            |
 
 ### Boleto Source Details object
 
@@ -46,7 +46,7 @@ The Boleto Source Details object requires the following fields:
 Use the DigitalRiver.js library to create and mount elements to the HTML container. ****&#x20;
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% code overflow="wrap" %}
@@ -143,7 +143,17 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endtab %}
 {% endtabs %}
 
-{% hint style="warning" %}
-Before you can use the Boleto payment method, you must attach a tax ID to the cart.  See [Submit a Boleto payment flow](../../../sources/using-the-source-identifier.md#submit-a-boleto-payment-flow) for instructions.
-{% endhint %}
+## Best practices
 
+To use Boleto as a payment method:
+
+1. [Create a cart](https://docs.digitalriver.com/commerce-api/cart/creating-or-updating-a-cart#creating-a-cart).
+2. Optional. Set the locale and currency.\
+   `curl --location --request GET 'https://{host}/v1/shoppers/me.json?locale=pt_BR&currency=BRL' \`\
+   `--header 'Content-Type: application/json'`\
+   `--header 'authorization: bearer ***\`
+3. Optional. Set cart address to the BR address.
+4. [Attach the tax ID to the cart](https://docs.digitalriver.com/commerce-api/cart/managing-tax-identifiers#attaching-a-tax-identifier-to-a-cart). This action inserts the tax ID into the payment session.
+5. [Create a Boleto source with a payment session ID](configuring-boleto.md#step-2-create-a-boleto-source-using-digitalriver.js). Note that the tax ID is required when creating the Boleto source. The payment session ID provides the tax ID.
+6. [Apply the source to the cart](https://docs.digitalriver.com/commerce-api/cart/attaching-a-payment-method-to-a-cart-or-customer#attaching-a-payment-method-to-an-order-or-cart).
+7. [Submit the cart](https://docs.digitalriver.com/commerce-api/cart/submitting-a-cart).

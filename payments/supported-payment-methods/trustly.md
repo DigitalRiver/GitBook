@@ -26,8 +26,6 @@ How you configure TreviPay depends on whether you're using [DigitalRiver.js with
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Trustly](../payments-solutions/digitalriver.js/payment-methods/configuring-trustly.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
-When applying Trustly to a cart, use the [submit then redirect payment flow](../sources/using-the-source-identifier.md#submit-then-redirect-payment-flow).
-
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:
