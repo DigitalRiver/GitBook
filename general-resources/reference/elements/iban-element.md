@@ -14,6 +14,7 @@ To create an IBAN element, use the `createElement` function exposed through the 
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var ibanOptions = {
     "classes": {
@@ -55,6 +56,7 @@ var ibanOptions = {
 
 var iban = digitalriverpayments.createElement('iban', ibanOptions);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -209,6 +211,7 @@ iban.on('change', function(event) {
 
 {% tabs %}
 {% tab title="Invalid response" %}
+{% code overflow="wrap" %}
 ```javascript
 {
    "empty":false,
@@ -221,6 +224,7 @@ iban.on('change', function(event) {
    "elementType":"iban"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

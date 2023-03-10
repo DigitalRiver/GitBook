@@ -14,6 +14,7 @@ Use this function to place the created elements on your page. The function accep
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 <form id="payment-form">
     <div id="card-number"></div>
@@ -27,6 +28,7 @@ cardNumber.mount('card-number');
 cardExpiration.mount('card-expiration');
 cardCVV.mount('card-cvv');
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -53,17 +55,19 @@ A Blur event triggers when an element loses focus.
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.on('blur', function(event) {
     console.log('card number blur', event);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
-{% code title="Response object" %}
+{% code title="Response object" overflow="wrap" %}
 ```javascript
 {
     elementType: "cardnumber"
@@ -82,21 +86,25 @@ A Cancel event occurs when the customer closes the Apple Pay Element Payment Req
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('cancel', function(event) {
     //do stuff
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "applepay"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -108,16 +116,19 @@ If an error is detected, Digital River will return a [Change Event Error object]
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.on('change', function(event) {
     console.log('card number change', event);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     brand: "unknown",
@@ -127,6 +138,7 @@ cardNumber.on('change', function(event) {
     error: null
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -134,6 +146,7 @@ cardNumber.on('change', function(event) {
 
 {% tabs %}
 {% tab title="Change Response Object Error - Invalid" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     brand: "unknown",
@@ -147,6 +160,7 @@ cardNumber.on('change', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -154,6 +168,7 @@ cardNumber.on('change', function(event) {
 
 {% tabs %}
 {% tab title="Change Response Object Error - Incomplete" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     brand: "unknown",
@@ -167,38 +182,39 @@ cardNumber.on('change', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 #### **Error types, codes, messages**
 
-| Error Scenario                                             | Error Type       | Error Code                   | Error Message                               |
-| ---------------------------------------------------------- | ---------------- | ---------------------------- | ------------------------------------------- |
-| Credit Card Number field is incomplete.                    | validation-error | invalid\_card\_number        | Your card number is invalid.                |
-| Credit Card Number field is complete but invalid.          | validation-error | incomplete\_card\_number     | Your card number is incomplete.             |
-| Card Security Code is incomplete                           | validation-error | invalid\_expiration\_month   | Your card's expiration month is invalid.    |
-| Card Security Code is complete but invalid.                | validation-error | invalid\_expiration\_year    | Your card's expiration year is in the past. |
-| Card Expiration field is incomplete.                       | validation-error | invalid\_expiration\_date    | Your card's expiration date is invalid.     |
-| Card Expiration Date is complete but the date is invalid.  | validation-error | incomplete\_expiration\_date | Your card's expiration date is incomplete.  |
-| Card Expiration Date is complete but has an invalid year.  | validation-error | invalid\_security\_code      | Your card's security code is invalid.       |
-| Card Expiration Date is complete but has an invalid month. | validation-error | incomplete\_security\_code   | Your card's security code is incomplete.    |
+| Error Scenario                                             | Error Type                                                                                                                                                                                    |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Credit Card Number field is incomplete.                    | <p><strong>Error type</strong>: validation-error<br><strong>Error code</strong>: invalid_card_number<br><strong>Error message</strong>: Your card number is invalid.</p>                      |
+| Credit Card Number field is complete but invalid.          | <p><strong>Error type</strong>: validation-error<br><strong>Error code</strong>: incomplete_card_number<br><strong>Error message</strong>: Your card number is incomplete.</p>                |
+| Card Security Code is incomplete                           | <p><strong>Error type</strong>: validation-error<br><strong>Error code</strong>: invalid_expiration_month<br><strong>Error message</strong>: Your card's expiration month is invalid.</p>     |
+| Card Security Code is complete but invalid.                | <p><strong>Error type</strong>: validation-error<br><strong>Error code</strong>: invalid_expiration_year<br><strong>Error message</strong>: Your card's expiration year is in the past.</p>   |
+| Card Expiration field is incomplete.                       | <p><strong>Error type</strong>: validation-error<br><strong>Error code</strong>: invalid_expiration_date<br><strong>Error message</strong>: Your card's expiration date is invalid.</p>       |
+| Card Expiration Date is complete but the date is invalid.  | <p><strong>Error type</strong>: validation-error<br><strong>Error code</strong>: incomplete_expiration_date<br><strong>Error message</strong>: Your card's expiration date is incomplete.</p> |
+| Card Expiration Date is complete but has an invalid year.  | <p><strong>Error type</strong>: validation-error<br><strong>Error code</strong>: invalid_security_code<br><strong>Error message</strong>: Your card's security code is invalid.</p>           |
+| Card Expiration Date is complete but has an invalid month. | <p><strong>Error type</strong>: validation-error<br><strong>Error code</strong>: incomplete_security_code<br><strong>Error message</strong>: Your card's security code is incomplete.</p>     |
 
 #### **Card brands**‌
 
 The following table lists the supported credit card brands.
 
-| Brand              | Key                |
-| ------------------ | ------------------ |
-| Visa               | visa               |
-| MasterCard         | mastercard         |
-| American Express   | amex               |
-| Diners Club        | dinersclub         |
-| Discover           | discover           |
-| UnionPay           | unionpay           |
-| JCB                | jcb                |
-| Maestro            | maestro            |
-| Forbrugsforeningen | forbrugsforeningen |
-| Dankort            | dankort            |
+| Brand              | Key                  |
+| ------------------ | -------------------- |
+| Visa               | `visa`               |
+| MasterCard         | `mastercard`         |
+| American Express   | `amex`               |
+| Diners Club        | `dinersclub`         |
+| Discover           | `discover`           |
+| UnionPay           | `unionpay`           |
+| JCB                | `jcb`                |
+| Maestro            | `maestro`            |
+| Forbrugsforeningen | `forbrugsforeningen` |
+| Dankort            | `dankort`            |
 
 ### Click
 
@@ -206,21 +222,25 @@ A Click event occurs when the customer clicks an Apple Pay Element.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('click', function(event) {
     //do stuff
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "applepay"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -230,21 +250,25 @@ A Focus event triggers when an element gains focus.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.on('ready', function(event) {
     console.log('card number ready', event);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {    
     elementType: "cardnumber"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -254,21 +278,25 @@ cardNumber.on('ready', function(event) {
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.on('focus', function(event) {
     console.log('card number focus', event);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "cardnumber"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -278,21 +306,25 @@ A Return event triggers when a customer presses the Return key while the input f
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.on('return', function(event) {
     console.log('card number return', event);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "cardnumber"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -300,13 +332,14 @@ cardNumber.on('return', function(event) {
 
 A Shipping Address Change event occurs when the Customer has selected a different Shipping Address within the Payment Request interface. The event will create the following object structure.
 
-| Key             | Type                                                                                                                  | Description                                                                                                                                                                                                  |
-| --------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| updateWith      | Function                                                                                                              | Calling this function with a [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-object) merges your updates into the current Payment Request object. |
-| shippingAddress | A [Payment Request Details Update object​](../digital-river-payment-objects.md#payment-request-details-update-object) | <p>​</p><p>A <a href="../digital-river-payment-objects.md#shipping-address-object">Shipping Address object</a> that contains the customer's Shipping Address.</p>                                            |
+| Key               | Type                                                                                                                  | Description                                                                                                                                                                                                  |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `updateWith`      | Function                                                                                                              | Calling this function with a [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-object) merges your updates into the current Payment Request object. |
+| `shippingAddress` | A [Payment Request Details Update object​](../digital-river-payment-objects.md#payment-request-details-update-object) | <p>​</p><p>A <a href="../digital-river-payment-objects.md#shipping-address-object">Shipping Address object</a> that contains the customer's Shipping Address.</p>                                            |
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('shippingaddresschange', function(event) {
     var shippingAddress = event.shippingAddress;
@@ -318,6 +351,7 @@ applepay.on('shippingaddresschange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -325,6 +359,7 @@ applepay.on('shippingaddresschange', function(event) {
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     shippingAddress: {
@@ -347,6 +382,7 @@ applepay.on('shippingaddresschange', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -354,13 +390,14 @@ applepay.on('shippingaddresschange', function(event) {
 
 A Shipping Option Change event occurs when the Customer has selected a different Shipping Option within the Payment Request interface. The event will emit the following object structure.
 
-| Key            | Type                                                                                                                                                                                                                   | Description                                                                                                                                                                                                                                                                      |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| updateWith     | Function                                                                                                                                                                                                               | Calling this function with a [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) merges your updates into the current [Payment Request object](../digital-river-payment-objects.md#payment-request-object). |
-| shippingOption | A [Payment Request Details Update object](https://app.gitbook.com/@digital-river/s/digitalriver-js/\~/drafts/-Lzlc\_RQegDcADvioNcs/digitalriver.js-reference/reference#payment-request-details-update-object/@drafts)​ | <p>​</p><p>​</p><p>A <a href="https://app.gitbook.com/@digital-river/s/digitalriver-js/digitalriver.js-reference/reference#payment-request-shipping-option-object">Payment Request Shipping Option object</a> that contains the customer's chosen Shipping Option.</p>           |
+| Key              | Type                                                                                                                                                                                                                   | Description                                                                                                                                                                                                                                                                      |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `updateWith`     | Function                                                                                                                                                                                                               | Calling this function with a [Payment Request Details Update object](../digital-river-payment-objects.md#payment-request-details-update-error-object) merges your updates into the current [Payment Request object](../digital-river-payment-objects.md#payment-request-object). |
+| `shippingOption` | A [Payment Request Details Update object](https://app.gitbook.com/@digital-river/s/digitalriver-js/\~/drafts/-Lzlc\_RQegDcADvioNcs/digitalriver.js-reference/reference#payment-request-details-update-object/@drafts)​ | <p>​</p><p>​</p><p>A <a href="https://app.gitbook.com/@digital-river/s/digitalriver-js/digitalriver.js-reference/reference#payment-request-shipping-option-object">Payment Request Shipping Option object</a> that contains the customer's chosen Shipping Option.</p>           |
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('shippingaddresschange', function(event) {
     var shippingAddress = event.shippingAddress;
@@ -372,6 +409,7 @@ applepay.on('shippingaddresschange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -379,6 +417,7 @@ applepay.on('shippingaddresschange', function(event) {
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "shippingOption": {
@@ -392,6 +431,7 @@ applepay.on('shippingaddresschange', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -401,6 +441,7 @@ A Source event emits when the Customer completes their interaction with the Paym
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('source', function(result) {
     var source = result.source;
@@ -408,6 +449,7 @@ googlepay.on('source', function(result) {
     //pass the source to your back end for further processing
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -421,9 +463,11 @@ This function triggers the `blur()` event. This will remove the focus from the e
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.blur();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -433,9 +477,11 @@ This function clears the contents of the element.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.clear();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -445,9 +491,11 @@ This function triggers the `focus()` event and places the focus on the element.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.destroy();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -457,9 +505,11 @@ This function destroys the element. Removes the element and all of its associate
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```
 cardNumber.destroy();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -469,9 +519,11 @@ This function removes the element from the Document Object Module (DOM). The ele
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.unmount();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -481,6 +533,7 @@ This function updates the element with any included options. This can include cu
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var options = {
     classes: {
@@ -515,6 +568,7 @@ var options = {
  
 cardNumber.update(options);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -526,6 +580,7 @@ You can specify custom classes as part of a `Class` object included within the `
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var options = {
     classes: {
@@ -540,19 +595,20 @@ var options = {
  
 var cardNumber = elements.create("cardnumber", options);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 #### **Available custom classes**
 
-| Class Type      | ID             | Applies When                                                                                                                  | Default Class Name        |
-| --------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| Base            | base           | The Element is in its base state. The user either has not entered anything into the input field or is currently typing.       | DRElement                 |
-| Complete        | complete       | The Element is in its complete state. The user has input value, and it meets the basic validation requirements of that field. | DRElement--complete       |
-| Empty           | empty          | The Element is empty. The Element once had value but is now empty.                                                            | DRElement--empty          |
-| Focus           | focus          | The Element has focus.                                                                                                        | DRElement--focus          |
-| Invalid         | invalid        | The Element has value, but it does not meet the basic validation requirements of the field.                                   | DRElement--invalid        |
-| WebKit Autofill | webkitAutofill | A saved card stored in a browser automatically fills this element.                                                            | DRElement-webkit-autofill |
+| Class Type       | Description                                                                                                                                                                                                                                                       |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Base`           | <p><strong>ID</strong>: base<br><strong>Applies when</strong>: The Element is in its base state. The user either has not entered anything into the input field or is currently typing.<br><strong>Default class name</strong>: DRElement                </p>      |
+| `Complete`       | <p><strong>ID</strong>: complete<br><strong>Applies when</strong>: The Element is in its complete state. The user has input value, and it meets the basic validation requirements of that field.<br><strong>Default class name</strong>: DRElement--complete </p> |
+| `Empty`          | <p><strong>ID</strong>: empty<br><strong>Applies when</strong>: The Element is empty. The Element once had value but is now empty.<br><strong>Default class name</strong>: DRElement--empty </p>                                                                  |
+| `Focus`          | <p><strong>ID</strong>: focus<br><strong>Applies when</strong>: The Element has focus.<br><strong>Default class name</strong>: DRElement--focus </p>                                                                                                              |
+| `Invalid`        | <p><strong>ID</strong>: invalid<br><strong>Applies when</strong>: The Element has value, but it does not meet the basic validation requirements of the field.<br><strong>Default</strong> class name: DRElement--invalid </p>                                     |
+| `WebKitAutofill` | <p><strong>ID</strong>: webkitAutofill<br><strong>Applies when</strong>: A saved card stored in a browser automatically fills this element.<br><strong>Default class name</strong>: DRElement-webkit-autofill </p>                                                |
 
 ### Custom styles
 
@@ -560,6 +616,7 @@ You can specify custom styles as part of a `Style` object included within the `O
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var options = {
     style: {
@@ -587,40 +644,41 @@ var options = {
  
 var cardNumber = elements.create('cardnumber', options);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 #### **Available custom style classes**
 
-| ID             | Class Name      | Description                                                          |
-| -------------- | --------------- | -------------------------------------------------------------------- |
-| base           | Base            | All other variants inherit from this style.                          |
-| complete       | Complete        | Applied when the Element has valid input.                            |
-| empty          | Empty           | Applied when the Element has no customer input.                      |
-| focus          | Focus           | Applied when the Element has focus.                                  |
-| invalid        | Invalid         | Applied when the Element has invalid input.                          |
-| webKitAutofill | Webkit Autofill | Applied when the Element has been filled automatically by a browser. |
+| ID               | Class Name      | Description                                                          |
+| ---------------- | --------------- | -------------------------------------------------------------------- |
+| `base`           | Base            | All other variants inherit from this style.                          |
+| `complete`       | Complete        | Applied when the Element has valid input.                            |
+| `empty`          | Empty           | Applied when the Element has no customer input.                      |
+| `focus`          | Focus           | Applied when the Element has focus.                                  |
+| `invalid`        | Invalid         | Applied when the Element has invalid input.                          |
+| `webKitAutofill` | Webkit Autofill | Applied when the Element has been filled automatically by a browser. |
 
 #### **Available custom styles**
 
-| Style           | ID             | Type   | Example                         |
-| --------------- | -------------- | ------ | ------------------------------- |
-| Text Color      | color          | string | "#fff"                          |
-| Font Family     | fontFamily     | string | "Arial, Helvetica, sans-serif", |
-| Font Size       | fontSize       | string | "20px"                          |
-| Font Smoothing  | fontSmoothing  | string | "antialiased"                   |
-| Font Style      | fontStyle      | string | "bold"                          |
-| Font Variant    | fontVariant    | string | "normal"                        |
-| Letter Spacing  | letterSpacing  | string | "2px"                           |
-| Text Align      | textAlign      | string | "center"                        |
-| Text Decoration | textDecoration | string | "underline"                     |
-| Text Shadow     | textShadow     | string | "2px 2px #ff0000"               |
-| Font Weight     | fontWeight     | string | "400"                           |
-| Padding         | padding        | string | "2px"                           |
-| Padding Top     | paddingTop     | string | "2px"                           |
-| Padding Right   | paddingRight   | string | "2px"                           |
-| Padding Bottom  | paddingBottom  | string | "2px"                           |
-| Padding Left    | paddingLeft    | string | "2px"                           |
+| Style           | Description                                                                                                                          |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Text Color      | <p><strong>ID</strong>: color<br><strong>Type</strong>: string<br><strong>Example</strong>: "#fff"</p>                               |
+| Font Family     | <p><strong>ID</strong>: fontFamily<br><strong>Type</strong>: string<br><strong>Example</strong>: "Arial, Helvetica, sans-serif",</p> |
+| Font Size       | <p><strong>ID</strong>: fontSize<br><strong>Type</strong>: string<br><strong>Example</strong>: "20px"</p>                            |
+| Font Smoothing  | <p><strong>ID</strong>: fontSmoothing<br><strong>Type</strong>: string<br><strong>Example</strong>: "antialiased"</p>                |
+| Font Style      | <p><strong>ID</strong>: fontStyle<br><strong>Type</strong>: string<br><strong>Example</strong>: "bold"</p>                           |
+| Font Variant    | <p><strong>ID</strong>: fontVariant<br><strong>Type</strong>: string<br><strong>Example</strong>: "normal"</p>                       |
+| Letter Spacing  | <p><strong>ID</strong>: letterSpacing<br><strong>Type</strong>: string<br><strong>Example</strong>: "2px"</p>                        |
+| Text Align      | <p><strong>ID</strong>: textAlign<br><strong>Type</strong>: string<br><strong>Example</strong>: "center"</p>                         |
+| Text Decoration | <p><strong>ID</strong>: textDecoration<br><strong>Type</strong>: string<br><strong>Example</strong>: "underline"</p>                 |
+| Text Shadow     | <p><strong>ID</strong>: textShadow<br><strong>Type</strong>: string<br><strong>Example</strong>: "2px 2px #ff0000"</p>               |
+| Font Weight     | <p><strong>ID</strong>: fontWeight<br><strong>Type</strong>: string<br><strong>Example</strong>: "400"</p>                           |
+| Padding         | <p><strong>ID</strong>: padding<br><strong>Type</strong>: string<br><strong>Example</strong>: "2px"</p>                              |
+| Padding Top     | <p><strong>ID</strong>: paddingTop<br><strong>Type</strong>: string<br><strong>Example</strong>: "2px"</p>                           |
+| Padding Right   | <p><strong>ID</strong>: paddingRight<br><strong>Type</strong>: string<br><strong>Example</strong>: "2px"</p>                         |
+| Padding Bottom  | <p><strong>ID</strong>: paddingBottom<br><strong>Type</strong>: string<br><strong>Example</strong>: "2px"</p>                        |
+| Padding Left    | <p><strong>ID</strong>: paddingLeft<br><strong>Type</strong>: string<br><strong>Example</strong>: "2px"</p>                          |
 
 ### Pseudo-classes
 
@@ -635,8 +693,8 @@ var cardNumber = elements.create('cardnumber', options);
 
 ### Other customizable attributes
 
-| Attribute        | ID              | Type    | Example       | Description                                                                                                                                                                                                              | Example |
-| ---------------- | --------------- | ------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| Placeholder Text | placeholderText | string  | "Card Number" | You may override the placeholder text that appears in `cardnumber`, `cardexpiration`, `cardcvv`, and `onlinebanking` element types. If you specify a `placeholderText` attribute, localization will not be applied.      |         |
-| Mask             | mask            | boolean | true/false    | You may choose to mask the contents of the DigitalRiver.js Element after a proper number and card security code has been implemented. If enabled, only the last 4 digits of the card number will be exposed in the view. |         |
+| Attribute        | Description                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Placeholder Text | <p><strong>ID</strong>: placeholderText<br><strong>Type</strong>: string<br><strong>Example</strong>: "Card Number"<br><strong>Description</strong>: You may override the placeholder text that appears in <code>cardnumber</code>, <code>cardexpiration</code>, <code>cardcvv</code>, and <code>onlinebanking</code> element types. If you specify a <code>placeholderText</code> attribute, localization will not be applied.</p> |
+| Mask             | <p><strong>ID</strong>: mask<br><strong>Type</strong>: boolean<br><strong>Example</strong>: true/false<br><strong>Description</strong>: You may choose to mask the contents of the DigitalRiver.js Element after a proper number and card security code has been implemented. If enabled, only the last 4 digits of the card number will be exposed in the view.</p>                                                                |
 

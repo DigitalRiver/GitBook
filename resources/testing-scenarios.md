@@ -1,16 +1,14 @@
 ---
-description: >-
-  Learn how to use a test order to ensure that your integration is functioning
-  properly.
+description: Learn how to use test payment methods.
 ---
 
 # Testing scenarios
 
-For various payment methods, you'll find test card numbers and information on how to test for success and error scenarios.‌
+This page explains how to get started testing your payment integrations and provides links to the [payment methods currently supported in our test environment](testing-scenarios.md#payment-methods). When testing standard payment methods, such as [credit cards](testing-scenarios.md#credit-cards), we provide data you can use to test against success and error scenarios.
 
-Digital River maintains two primary test environments for clients: Production Test Environment (PTE) and Client Test Environment (CTE). The PTE is used for the [Digital River API](https://docs.digitalriver.com/digital-river-api/) while the CTE is intended for the [Commerce API](https://docs.digitalriver.com/commerce-api/). In both environments, you'll never interact directly with the payments services. Instead, you'll be directed to a generic page that contains accept and reject options.‌
+Digital River maintains the Client Test Environment (CTE) for the [Commerce API](https://docs.digitalriver.com/commerce-api/). In this environment, you'll never interact directly with the payments services. Instead, you'll be directed to a generic page that contains accept and reject options.‌
 
-### Payment methods <a href="#payment-methods" id="payment-methods"></a>
+## Payment methods <a href="#payment-methods" id="payment-methods"></a>
 
 {% tabs %}
 {% tab title="Credit Cards" %}
