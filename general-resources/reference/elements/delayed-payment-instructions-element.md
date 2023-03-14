@@ -48,11 +48,13 @@ Call this function to place the created Delayed Payment Instructions element on 
 
 {% tabs %}
 {% tab title="Explain" %}
+{% code overflow="wrap" %}
 ```javascript
 <div id="delayed-payment-container"></div>
  
 delayedPaymentInstructions.mount("delayed-payment-container");
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -72,11 +74,13 @@ A Ready event triggers when the Delayed Payment Instructions element has loaded.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 delayedPaymentInstructions.on('ready', function(event) {
     //delayed payment instructions element is ready
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

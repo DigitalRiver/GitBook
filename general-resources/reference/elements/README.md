@@ -6,7 +6,7 @@ description: >-
 
 # Elements
 
-An Element is a UI component that DigitalRiver.js creates to collect sensitive customer information without having the data touch your servers. You can customize and stylize these components to seamlessly integrate into your user experience or purchase flow. The library collects and tokenizes the data contained in these elements without exposing you to PCI-compliance liability.‌
+An Element is a UI component that [DigitalRiver.js](../) creates to collect sensitive customer information without having the data touch your servers. You can customize and stylize these components to seamlessly integrate into your user experience or purchase flow. The library collects and tokenizes the data contained in these elements without exposing you to PCI-compliance liability.‌
 
 ## element.mount();
 
@@ -14,6 +14,7 @@ Use this function to place the created elements on your page. The function accep
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 <form id="payment-form">
     <div id="card-number"></div>
@@ -27,6 +28,7 @@ cardNumber.mount('card-number');
 cardExpiration.mount('card-expiration');
 cardCVV.mount('card-cvv');
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -52,18 +54,20 @@ Use this function to listen to events that you can use to build and enhance your
 A Blur event triggers when an element loses focus.
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.on('blur', function(event) {
     console.log('card number blur', event);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
-{% code title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "cardnumber"
@@ -82,21 +86,25 @@ A Cancel event occurs when the customer closes the Apple Pay Element Payment Req
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('cancel', function(event) {
     //do stuff
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "applepay"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -108,16 +116,19 @@ If an error is detected, Digital River will return a [Change Event Error object]
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.on('change', function(event) {
     console.log('card number change', event);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     brand: "unknown",
@@ -127,6 +138,7 @@ cardNumber.on('change', function(event) {
     error: null
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -134,6 +146,7 @@ cardNumber.on('change', function(event) {
 
 {% tabs %}
 {% tab title="Change Response Object Error - Invalid" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     brand: "unknown",
@@ -147,6 +160,7 @@ cardNumber.on('change', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -154,6 +168,7 @@ cardNumber.on('change', function(event) {
 
 {% tabs %}
 {% tab title="Change Response Object Error - Incomplete" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     brand: "unknown",
@@ -167,6 +182,7 @@ cardNumber.on('change', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -206,21 +222,25 @@ A Click event occurs when the customer clicks an Apple Pay Element.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('click', function(event) {
     //do stuff
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "applepay"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -230,21 +250,25 @@ A Focus event triggers when an element gains focus.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.on('ready', function(event) {
     console.log('card number ready', event);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {    
     elementType: "cardnumber"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -254,21 +278,25 @@ cardNumber.on('ready', function(event) {
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.on('focus', function(event) {
     console.log('card number focus', event);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "cardnumber"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -278,21 +306,25 @@ A Return event triggers when a customer presses the Return key while the input f
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.on('return', function(event) {
     console.log('card number return', event);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     elementType: "cardnumber"
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -306,7 +338,8 @@ A Shipping Address Change event occurs when the Customer has selected a differen
 | shippingAddress | A [Payment Request Details Update object​](../digital-river-payment-objects.md#payment-request-details-update-object) | <p>​</p><p>A <a href="../digital-river-payment-objects.md#shipping-address-object">Shipping Address object</a> that contains the customer's Shipping Address.</p>                                            |
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('shippingaddresschange', function(event) {
     var shippingAddress = event.shippingAddress;
@@ -318,6 +351,7 @@ applepay.on('shippingaddresschange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -325,6 +359,7 @@ applepay.on('shippingaddresschange', function(event) {
 
 {% tabs %}
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     shippingAddress: {
@@ -347,6 +382,7 @@ applepay.on('shippingaddresschange', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -361,6 +397,7 @@ A Shipping Option Change event occurs when the Customer has selected a different
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('shippingaddresschange', function(event) {
     var shippingAddress = event.shippingAddress;
@@ -372,6 +409,7 @@ applepay.on('shippingaddresschange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -379,6 +417,7 @@ applepay.on('shippingaddresschange', function(event) {
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "shippingOption": {
@@ -392,6 +431,7 @@ applepay.on('shippingaddresschange', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -401,6 +441,7 @@ A Source event emits when the Customer completes their interaction with the Paym
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('source', function(result) {
     var source = result.source;
@@ -408,6 +449,7 @@ googlepay.on('source', function(result) {
     //pass the source to your back end for further processing
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -421,9 +463,11 @@ This function triggers the `blur()` event. This will remove the focus from the e
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.blur();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -433,9 +477,11 @@ This function clears the contents of the element.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.clear();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -445,9 +491,11 @@ This function triggers the `focus()` event and places the focus on the element.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.destroy();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -457,9 +505,11 @@ This function destroys the element. Removes the element and all of its associate
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```
 cardNumber.destroy();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -469,9 +519,11 @@ This function removes the element from the Document Object Module (DOM). The ele
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 cardNumber.unmount();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -481,6 +533,7 @@ This function updates the element with any included options. This can include cu
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var options = {
     classes: {
@@ -515,6 +568,7 @@ var options = {
  
 cardNumber.update(options);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -526,6 +580,7 @@ You can specify custom classes as part of a `Class` object included within the `
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var options = {
     classes: {
@@ -540,6 +595,7 @@ var options = {
  
 var cardNumber = elements.create("cardnumber", options);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -560,6 +616,7 @@ You can specify custom styles as part of a `Style` object included within the `O
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var options = {
     style: {
@@ -587,6 +644,7 @@ var options = {
  
 var cardNumber = elements.create('cardnumber', options);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

@@ -10,6 +10,7 @@ Use DigitalRiver.js to create a Google Pay element and interact with Google Pay.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var paymentRequestData = digitalriver.paymentRequest({
         country: "US",
@@ -27,10 +28,9 @@ var paymentRequestData = digitalriver.paymentRequest({
         }
     });
  
- 
- 
 var googlepay = digitalriver.createElement('googlepay', paymentRequestData);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -233,6 +233,7 @@ The Cancel event emits when the customer closes the Google Pay Element Payment R
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('shippingoptionchange', function(event) {
     var shippingOption = event.shippingOption;
@@ -244,11 +245,13 @@ googlepay.on('shippingoptionchange', function(event) {
  
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "shippingOption": {
@@ -262,6 +265,7 @@ googlepay.on('shippingoptionchange', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -276,6 +280,7 @@ The Shipping Option Change event emits when the Customer selects a different Shi
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('shippingaddresschange', function(event) {
     var shippingAddress = event.shippingAddress;
@@ -287,12 +292,13 @@ googlepay.on('shippingaddresschange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response oject" %}
-{% code title="Response object" %}
+{% code title="Response object" overflow="wrap" %}
 ```javascript
 {
     shippingAddress: {
@@ -330,6 +336,7 @@ The Shipping Address Change emits when the Customer selects a different Shipping
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 googlepay.on('shippingaddresschange', function(event) {
     var shippingAddress = event.shippingAddress;
@@ -341,11 +348,13 @@ googlepay.on('shippingaddresschange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     shippingAddress: {
@@ -368,5 +377,6 @@ googlepay.on('shippingaddresschange', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

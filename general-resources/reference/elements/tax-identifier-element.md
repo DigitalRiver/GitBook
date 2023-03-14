@@ -23,6 +23,7 @@ The Tax Identifier element also requires an additional `taxIdentifier` object wh
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var options = {
 	taxIdentifier: {
@@ -69,6 +70,7 @@ var options = {
 let taxIdentifier = digtialriver.createElement("taxidentifier", options);
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -88,6 +90,7 @@ The Tax Identifier element also requires an additional `taxIdentifier` object wh
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var options = {
 	taxIdentifier: {
@@ -134,6 +137,7 @@ var options = {
 let taxIdentifier = digtialriver.createElement("taxidentifier", options);
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -158,11 +162,13 @@ A Ready event triggers when a Tax Identifier has loaded and is available to take
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 taxIdentifier.on("ready", function(event) { 
     //tax identifier element is ready and can accept an update call 
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -259,6 +265,7 @@ taxIdentifier.on("change", function(event) {
 
 {% tabs %}
 {% tab title="Change Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
 	complete: true,
@@ -273,6 +280,7 @@ taxIdentifier.on("change", function(event) {
 }
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -280,6 +288,7 @@ If an error is detected, a Change error object is returned.&#x20;
 
 {% tabs %}
 {% tab title="Invalid Change Response Object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
 	complete: true,
@@ -298,6 +307,7 @@ If an error is detected, a Change error object is returned.&#x20;
 }
 
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

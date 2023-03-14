@@ -12,6 +12,7 @@ To create a Compliance element, you should use the createElement function expose
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```
 var complianceOptions = {
   classes: {
@@ -24,6 +25,7 @@ var complianceOptions = {
 }
 var compliance = digitalRiver.createElement('compliance', complianceOptions);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

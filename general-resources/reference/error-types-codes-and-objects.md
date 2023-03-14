@@ -68,15 +68,15 @@ The following table contains a list of DigitalRiver.js error codes.
 It's important that you only indicate that the payment has been declined and do not share the code or descriptions listed below with the customer.
 {% endhint %}
 
-| Code                         | Description                                                                                                                                                           |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `address_mismatch`           | There is a problem with your address.                                                                                                                                 |
-| invalid\_expiration\_date    | The card is expired, or the expiration date is invalid.                                                                                                               |
-| <p></p><p>invalid_format</p> | The format of your request is invalid.                                                                                                                                |
-| invalid\_parameter           | The parameter is invalid. Check the [Commerce API Reference](https://www.digitalriver.com/docs/commerce-api-reference/) to see which values are valid and try again.  |
-| invalid\_string\_empty       | The string value is empty. Provide a valid string value and try again.                                                                                                |
-| method\_not\_allowed         | The method is not allowed. Provide a valid method value and try again.                                                                                                |
-| missing\_parameter           | A parameter is missing. Check the [Commerce API Reference](https://www.digitalriver.com/docs/commerce-api-reference/) to see which values are required and try again. |
-| not\_found                   | The item requested was not found.                                                                                                                                     |
-| source\_not\_found           | The source you have requested was not found.                                                                                                                          |
-| unknown\_error               | An unknown error has occurred.                                                                                                                                        |
+| Code                                      | Description                                                                                                                                                           |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `address_mismatch`                        | There is a problem with your address.                                                                                                                                 |
+| `invalid_expiration_date`                 | The card is expired, or the expiration date is invalid.                                                                                                               |
+| <p></p><p><code>invalid_format</code></p> | The format of your request is invalid.                                                                                                                                |
+| `invalid_parameter`                       | The parameter is invalid. Check the [Commerce API Reference](https://www.digitalriver.com/docs/commerce-api-reference/) to see which values are valid and try again.  |
+| `invalid_string_empty`                    | The string value is empty. Provide a valid string value and try again.                                                                                                |
+| `method_not_allowed`                      | The method is not allowed. Provide a valid method value and try again.                                                                                                |
+| `missing_parameter`                       | A parameter is missing. Check the [Commerce API Reference](https://www.digitalriver.com/docs/commerce-api-reference/) to see which values are required and try again. |
+| `not_found`                               | The item requested was not found.                                                                                                                                     |
+| `source_not_found`                        | The source you have requested was not found.                                                                                                                          |
+| `unknown_error`                           | An unknown error has occurred.                                                                                                                                        |

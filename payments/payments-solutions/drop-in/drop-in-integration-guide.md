@@ -235,11 +235,11 @@ let configuration = {
 ```
 {% endcode %}
 
-When you enable this feature, each displayed [reusable payment method](../../supported-payment-methods/) is accompanied by a box that customers must check if they want that payment information saved to their account.&#x20;
+When you enable this feature, each displayed [reusable payment method](../../supported-payment-methods.md) is accompanied by a box that customers must check if they want that payment information saved to their account.&#x20;
 
 ![](<../../../.gitbook/assets/drop-in-save-payment (1) (1).png>)
 
-If the customer selects the check box and clicks the configurable button, Drop-in Payments performs any required authentication and, assuming the process is successful, the `data` object of [`onSuccess`](drop-in-integration-guide.md#onsuccess) contains a [source ](../../sources/)that is `readyForStorage`.
+If the customers select the check box and click the [configurable button](drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button), Drop-in Payments performs the required authentication and, assuming that process is successful, the `data` object of [onSuccess ](drop-in-integration-guide.md#onsuccess)contains a source that is `readyForStorage`.
 
 In this case, handle `onSuccess` by passing `source.id` to your back-end and use your secret [API key](../../../resources/API-structure.md#private-keys) to first [associate the source with the customer](../../sources/#attaching-a-payment-method-to-a-customer-or-payment-option) before you [associate the source with the cart](../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
@@ -416,9 +416,19 @@ The Drop-in Payments button is customizable. You can either display pre-configur
 
 ### Specifying a source's future use
 
+Set `options.usage` to indicate how the [payment source](../../sources/) is likely to be used in future transactions. Passing this value increases the probability that payment providers will approve future authorization requests. The accepted values are `subscription`, `convenience`, and `unscheduled`.
+
 When creating a source using Drop-in Payments, you should identify the types of transactions the source will likely be used for in the future. This increases the probability that these future transactions will be approved. The `usage` value you select should be the one that most closely corresponds to your business model. The available options are [subscription](drop-in-integration-guide.md#subscription), [convenience](drop-in-integration-guide.md#convenience), and [unscheduled](drop-in-integration-guide.md#unscheduled).
 
+* `subscription`: The source is to be used for [recurring transactions](../../../subscriptions/managing-subscriptions/), made at regular intervals, for a product or a service.
+* `convenience`: Applies mainly to saved payment sources that are used for [one-off transactions](../../building-your-workflows.md#one-off). These are scenarios where customers are typically present during the checkout flow and want to quickly access their payment information. Always select this option if you don't offer subscriptions or don't have unscheduled merchant-initiated transactions.
+* `unscheduled`: The source is to be used in unscheduled merchant-initiated transactions. These are contracts that occur on a non-fixed schedule using saved card information. Automatic top-ups are one such example. They occur whenever a customer's balance drops below a pre-defined amount.
+
+#### Show terms of sale disclosure
+
 #### Subscription
+
+The `options.showTermsOfSaleDisclosure` attribute determines whether Drop-in payments displays the terms of sale to customers.&#x20;
 
 Set `usage` to `subscription` when you create sources that are used primarily for recurring transactions, made at regular intervals for a product or a service.
 
@@ -426,9 +436,106 @@ Set `usage` to `subscription` when you create sources that are used primarily fo
 
 The `convenience` setting applies mainly to saved payment sources that are used for one-off transactions. These are sources where customers are typically present during the checkout flow and want to quickly access their payment information. Select this option if you don't offer [subscriptions](drop-in-integration-guide.md#subscription) or don't have [unscheduled](drop-in-integration-guide.md#unscheduled) merchant=initiated transactions
 
+If set to `true` (_default_), then the terms of sale disclosure are displayed and customers must accept them.&#x20;
+
 #### Unscheduled
 
+Set `usage` to `unscheduled` when you create sources for unscheduled merchant initiated transactions. These are contracts that occur on a non-fixed schedule using saved card information. Automatic top-ups are an example of one such transaction. They occur whenever a customer's balance drops below a pre-defined amount.
+
+{% hint style="warning" %}
+The terms are localized based on how you [initialize DigitalRiver.js](drop-in-integration-guide.md#step-3-initialize-digitalriver-js-with-your-public-key).&#x20;
+{% endhint %}
+
+The actual terms depend on whether customers are making a one-time purchase or [buying a subscription product](../../../subscriptions/managing-subscriptions/activating-a-subscription.md).&#x20;
+
+{% tabs %}
+{% tab title="One-time purchase" %}
+![](<../../../.gitbook/assets/one time purchase terms of sale.png>)
+{% endtab %}
+
+{% tab title="Subscription acqusition" %}
+![](<../../../.gitbook/assets/sub terms of sale.png>)
+{% endtab %}
+{% endtabs %}
+
+If set to `false`, no terms of sale are displayed.&#x20;
+
+#### Add disclosures
+
+You can use `options.consents` to add your end-user license agreement and terms of use to Digital River's disclosures. To make this feature work, [`showTermsOfSaleDisclosure`](drop-in-integration-guide.md#show-terms-of-sale-disclosure) must be `true`.
+
+If you pass `consents`, then `companyName` is required. You're not required to provide either `eula` or `termsOfUse`, but if you do, you must specify a `url` that links to the relevant document.
+
+```javascript
+...
+let configuration = {
+    ...
+    "options": {
+        ...
+        "showTermsOfSaleDisclosure": true,
+        ...
+        "consents": {
+            "companyName": "Cool Company",
+            "eula": {
+                "url": "https: //myecommercesite.com/eula"
+            },
+            "termsOfUse": {
+                "url": "https: //myecommercesite.com/termsOfUse"
+            }
+        }
+    },
+    ...
+}
+...
+```
+
+Once you [create](drop-in-integration-guide.md#step-6-allow-the-shopper-to-interact-with-hydrate) and [mount](drop-in-integration-guide.md#step-7-mount-drop-in-payments-on-a-checkout-or-account-management-page) Drop-in payments, your `consents` are appended to Digital River's disclosures.
+
+![](../../../.gitbook/assets/consents.png)
+
+#### Disabling redirects <a href="#dropinviadigitalriver.js-disablingredirectswithindropin" id="dropinviadigitalriver.js-disablingredirectswithindropin"></a>
+
+The `options.redirect` object specifies the options you want to use to disable the automatic redirect functionality built into Drop-in. Use this option if you would like to handle redirecting the customer yourself to the payment provider.&#x20;
+
+Enable the `disableAutomaticRedirects` attribute if you do not want Drop-in payments to redirect your customer to the payment provider. Use this setting in your checkout flow if you do not want to create the order from Drop-in. In this scenario, you can allow your customer to choose their payment method, review and then authorize later by redirecting the customer to the `redirect.returnUrl` when the customer has reviewed the order totals and is ready to create their order.
+
+| Key                         | Required/Optional                      | Description                                                                                                                                                                                                                                                                                                                                                  |
+| --------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `disableAutomaticRedirects` | Required if using the redirect object. | <p>Choose one of the following options:</p><ul><li>Set to <code>true</code> to disable automatic redirects within Drop-in.</li><li>Set to <code>false</code> to enable automatic redirects within Drop-in and return a redirect URL to follow in the <code>POST /orders</code> response. This option is required for Pay with Installments France.</li></ul> |
+| `returnUrl`                 | Required if using the redirect object. | The URL where the customer should be returned after successfully authorizing payment at the payment provider.                                                                                                                                                                                                                                                |
+| `cancelUrl`                 | Required if using the redirect object. | The URL where the customer should be returned after cancelling at the payment provider.                                                                                                                                                                                                                                                                      |
+
+```javascript
+"options": {
+    "redirect": {
+        "disableAutomaticRedirects": true,
+        "returnUrl": "https://www.yourwebsite.com/return",
+        "cancelUrl": "https://www.yourwebsite.com/cancel"    
+    }
+}
+```
+
+#### Expand first payment method
+
+When Drop-in payments loads `options.expandFirstPaymentMethod` determines whether the first payment method in the accordion control element is expanded or collapsed.
+
+{% tabs %}
+{% tab title="Expanded" %}
+If `expandFirstPaymentMethod` is `true`(_default_) then the first displayed payment method is expanded.
+
+![](<../../../.gitbook/assets/expanded (1).png>)
+{% endtab %}
+
+{% tab title="Collapsed" %}
+If `expandFirstPaymentMethod` is `false`, then the first displayed payment method is collapsed.
+
+![](<../../../.gitbook/assets/image (5).png>)
+{% endtab %}
+{% endtabs %}
+
 Set `usage` to `unscheduled` when you create sources for unscheduled merchant-initiated transactions. These are contracts that occur on a non-fixed schedule using saved card information. Automatic top-ups are an example of one such transaction. They occur whenever a customer's balance drops below a pre-defined amount.
+
+## Configuring Drop-in Payment methods <a href="#configuring-payment-methods-within-drop-in-payments" id="configuring-payment-methods-within-drop-in-payments"></a>
 
 ## Configuring payment methods within Drop-in Payments
 
@@ -605,6 +712,53 @@ Drop-in Payments supports the following events:
 ### onSuccess
 
 When your customer has provided the necessary details for payment and followed any necessary redirects, you will receive an event.
+
+{% code overflow="wrap" %}
+```javascript
+{
+    "source": {
+        "clientId": "gc",
+        "channelId": "paylive",
+        "liveMode": false,
+        "id": "aa388280-a8a6-4fe9-9969-a85a17a89f6d",
+        "sessionId": "cecf3581-e47b-4679-9b51-afbc44a15b91",
+        "clientSecret": "aa388280-a8a6-4fe9-9969-a85a17a89f6d_376f54df-6025-474e-bc7d-4d74ff28de8a",
+        "type": "creditCard",
+        "reusable": false,
+        "owner": {
+            "firstName": "John",
+            "lastName": "Doe",
+            "customerId": "501457412489",
+            "email": "test224234234324@test.com",
+            "organization": "Digital River",              
+            "phoneNumber": "952-253-1234",
+            "address": {
+                "line1": "10380 Bren Road W",
+                "city": "Minnetonka",
+                "state": "MN",
+                "country": "US",
+                "postalCode": "55343"
+            }
+        },
+        "amount": "521.04",
+        "currency": "USD",
+        "state": "chargeable",
+        "upstreamId": "9C981EC0-49DB-41E3-B55C-5702A4D6EBEA",
+        "creationIp": "209.87.180.27",
+        "createdTime": "2021-02-22T20:26:08.196Z",
+        "updatedTime": "2021-02-22T20:26:08.196Z",
+        "flow": "standard",
+        "creditCard": {
+            "brand": "Visa",
+            "expirationMonth": 11,
+            "expirationYear": 2030,
+            "lastFourDigits": "1111"
+        }
+    },
+    "readyForStorage": false
+}
+```
+{% endcode %}
 
 {% code overflow="wrap" %}
 ```json

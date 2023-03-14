@@ -21,6 +21,7 @@ description: Learn about payment sources that are common to all payment methods.
 | ------------------------------------ | ---------------- |
 | Afterpay                             | afterPay         |
 | Alipay                               | alipay           |
+| Amazon Pay                           | amazonPay        |
 | Apple Pay                            | applePay         |
 | Bancontact                           | bancontact       |
 | BLIK                                 | blik             |

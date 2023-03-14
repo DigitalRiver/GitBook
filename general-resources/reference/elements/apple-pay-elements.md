@@ -12,6 +12,7 @@ To create an Apple Pay element, you should use the `createElement` function expo
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var paymentRequestData = digitalriver.paymentRequest({
         country: "US",
@@ -32,6 +33,7 @@ var paymentRequestData = digitalriver.paymentRequest({
  
 var applepay = digitalriver.createElement('applepay', paymentRequestData);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -61,11 +63,13 @@ Call this function to determine whether or not the Customer's browser supports A
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 if(applepay.canMakePayment()) {
     //can make payment with this element
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -75,6 +79,7 @@ Call this function to place the created Apple Pay element on your page.
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 <div id="apple-pay"></div>
  
@@ -83,6 +88,7 @@ if(applepay.canMakePayment()) {
     applepay.mount('apple-pay');
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -128,6 +134,7 @@ Call this function to update the Apple Pay element's data. Calling this will mer
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 var paymentRequest = digitalriver.paymentRequest({
         country: "US",
@@ -148,12 +155,13 @@ var paymentRequest = digitalriver.paymentRequest({
  
 applepay.update(paymentRequest);
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 ## Apple Pay element events — applepay.on('event', handler);
 
-Call this function to listen to events that can be used to build and enhance your purchase flow.
+The Apple Pay element can receive the following events by creating an event listener. Use this function to listen to events that can be used to build and enhance your purchase flow.
 
 | Event                                                                    | Triggered When                                                                                                                                            |
 | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -170,6 +178,7 @@ The Source event emits when the Customer completes their interaction with the Pa
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('source', function(event) {
     var source = result.source;
@@ -178,6 +187,7 @@ applepay.on('source', function(event) {
     //pass the source to your back end for further processing.  
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -187,11 +197,13 @@ The Ready event emits when the Apple Pay Element has loaded and is available to 
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('ready', function(event) {
     //apple pay element is ready and can accept an update call
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -264,6 +276,7 @@ The Shipping Option Change event emits when the Customer selects a different Shi
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('shippingoptionchange', function(event) {
     var shippingOption = event.shippingOption;
@@ -274,11 +287,13 @@ applepay.on('shippingoptionchange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```javascript
 {
     "shippingOption": {
@@ -292,6 +307,7 @@ applepay.on('shippingoptionchange', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -306,6 +322,7 @@ The Shipping Address Change emits when the Customer selects a different Shipping
 
 {% tabs %}
 {% tab title="Example" %}
+{% code overflow="wrap" %}
 ```javascript
 applepay.on('shippingoptionchange', function(event) {
     var shippingOption = event.shippingOption;
@@ -316,11 +333,13 @@ applepay.on('shippingoptionchange', function(event) {
     event.updateWith(newDetails);
 });
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Response object" %}
+{% code overflow="wrap" %}
 ```
 {
     "shippingOption": {
@@ -334,6 +353,7 @@ applepay.on('shippingoptionchange', function(event) {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
