@@ -320,7 +320,7 @@ If authentication is successful, Digital River returns the [Source ](sources/)in
 
 ### Subscription  <a href="#subscription" id="subscription"></a>
 
-You can create [SCA-compliant](psd2-and-sca/) workflows that allow customers to either [save](building-your-workflows.md#customer-enters-credit-card-details-during-subscription-acquisition-checkout) or [retrieve](building-your-workflows.md#customer-saves-credit-card-details-during-subscription-acquisition-checkout) a [recurring payment method](supported-payment-methods.md) during subscription acquisitions. You can also set up workflows for [merchant-initiated autorenewals](building-your-workflows.md#merchant-initiated-auto-renewals).&#x20;
+You can create [SCA-compliant](psd2-and-sca/) workflows that allow customers to either [save](building-your-workflows.md#customer-enters-credit-card-details-during-subscription-acquisition-checkout) or [retrieve](building-your-workflows.md#customer-saves-credit-card-details-during-subscription-acquisition-checkout) a [recurring payment method](supported-payment-methods/) during subscription acquisitions. You can also set up workflows for [merchant-initiated autorenewals](building-your-workflows.md#merchant-initiated-auto-renewals).&#x20;
 
 #### Shopper enter and save their payment information during a subscription acquisition <a href="#customer-enters-credit-card-details-during-subscription-acquisition-checkout" id="customer-enters-credit-card-details-during-subscription-acquisition-checkout"></a>
 
@@ -562,7 +562,7 @@ digitalriver.createSource(payload).then(function(result) {
 
 ## Account management flows
 
-You can create flows that allow customers to manage [recurring payment methods](supported-payment-methods.md) through their account portal.&#x20;
+You can create flows that allow customers to manage [recurring payment methods](supported-payment-methods/) through their account portal.&#x20;
 
 In these account management flows, you only need to adhere to [SCA regulations](psd2-and-sca/) when [saving a customer's credit card for future use](building-your-workflows.md#saving-a-credit-card-for-future-use). While storing a card, make sure you identify the future use of the source. This increases the probability that future transactions will be approved.
 

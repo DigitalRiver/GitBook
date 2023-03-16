@@ -21,11 +21,12 @@ description: Learn about payment sources that are common to all payment methods.
 | ------------------------------------ | ---------------- |
 | Afterpay                             | afterPay         |
 | Alipay                               | alipay           |
-| Amazon Pay                           | amazonPay        |
 | Apple Pay                            | applePay         |
+| Amazon Pay                           | amazonPay        |
 | Bancontact                           | bancontact       |
 | BLIK                                 | blik             |
 | Boleto                               | boletoBancario   |
+| Clearpay                             | clearPay         |
 | Credit Card                          | creditCard       |
 | Google Pay                           | googlepay        |
 | Klarna                               | klarnaCredit     |

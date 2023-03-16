@@ -235,7 +235,7 @@ let configuration = {
 ```
 {% endcode %}
 
-When you enable this feature, each displayed [reusable payment method](../../supported-payment-methods.md) is accompanied by a box that customers must check if they want that payment information saved to their account.&#x20;
+When you enable this feature, each displayed [reusable payment method](../../supported-payment-methods/) is accompanied by a box that customers must check if they want that payment information saved to their account.&#x20;
 
 ![](<../../../.gitbook/assets/drop-in-save-payment (1) (1).png>)
 
