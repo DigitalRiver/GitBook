@@ -10,11 +10,12 @@ Salesforce enables you to craft beautiful B2C purchasing experiences, while Digi
 
 Available versions:
 
+* [2.6](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-2.6/)
 * [2.5](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-2.5/)
-* [2.4](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-2.4/)
 
 Support only:
 
+* [2.4](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-2.4/)
 * [2.3](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-2.3/)
 * [2.2](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-2.2/)
 * [2.1.1](https://docs.digitalriver.com/salesforce-b2c/v/2.1.1-1/)
