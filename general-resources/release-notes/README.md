@@ -8,7 +8,7 @@ V1 is the base version of the Commerce API. The following dates indicate when we
 
 ## 2023/3/16
 
-Digital River adds clear pay to the payment method roster! By leveraging Afterpay, your shoppers have the flexibility to buy now and pay for their purchases in 3 interest-free payments over 60 days. Learn how you can add Clearpay [here](../../payments/supported-payment-methods/clearpay.md).
+Digital River adds Clearpay to the payment method roster! By leveraging Afterpay, your shoppers have the flexibility to buy now and pay for their purchases in 3 interest-free payments over 60 days. Learn how you can add Clearpay [here](../../payments/supported-payment-methods/clearpay.md).
 
 ## 2023/3/14
 
