@@ -602,7 +602,7 @@ let dropin = digitalriverpayments.createDropIn(configuration);
 
 The modal window renders in the specified container.
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (1) (1).png>)
 
 Shoppers **** enter their credit card information, select the save payment agreement option and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button) add payment method button.&#x20;
 

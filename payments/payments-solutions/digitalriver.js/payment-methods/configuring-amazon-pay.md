@@ -65,7 +65,7 @@ amazonpay.mount('amazonpay');
 | `placement`        | <p>The location where you placed the Amazon Pay button on your website. Your options are <code>Home</code>, <code>Cart</code>, <code>Product</code>, <code>Checkout</code>, or <code>Other</code>.<br><strong>Note</strong>: If you place the Amazon Pay button on the <code>Checkout</code> page, it is a standard checkout. If you place it on <code>Home</code>, <code>Cart</code>, <code>Product</code>, or <code>Other</code> page, it is an express checkout.</p>                                                                                                                                                                                |
 | `checkoutLanguage` | The language used on the checkout page. Your options are `en_US`, `en_GB`, `de_DE`, `fr_FR`, `it_IT`, `es_ES`, or `ja_JP`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-<figure><img src="../../../../.gitbook/assets/Amazon-Pay-Flow.png" alt=""><figcaption></figcaption></figure>
+See [How it works](../../../supported-payment-methods/amazon-pay.md#how-it-works) for more information on Amazon Pay's Express Checkout flow.
 
 ## Step 2: Use the authorized source
 
