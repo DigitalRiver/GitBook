@@ -554,7 +554,7 @@ The [standard version of the method](digitalriver-object.md#DigitalRiverJS-digit
 
 | Parameter            | Required/Optional | Description                                                                                                                                 |
 | -------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sessionId`          | Required          | The [payment session](../../cart/payment-sessions.md) identifier of this transaction.                                                       |
+| `sessionId`          | Required          | The [payment session](../../shopper-apis/cart/payment-sessions.md) identifier of this transaction.                                          |
 | `sourceId`           | Required          | The identifier of the payment source used in this transaction.                                                                              |
 | `sourceClientSecret` | Required          | The source client secret for this transaction.                                                                                              |
 | `returnUrl`          | Required          | The return URL where the customer is directed when 3D Secure 1 is required. If the value is not provided, we use the current page location. |

@@ -10,7 +10,7 @@ The following table lists the supported payment methods in [Drop-in payments](..
 
 The table also lists each [payment method's flow](../sources/#payment-flow) and indicates whether that payment method is supported in our [test environment](broken-reference).
 
-For a complete list of payment methods that can be paired with [store credit](../../consumer-browsing-experience-1/common-use-cases/applying-store-credit.md), refer to [combining primary and secondary sources](../sources/using-the-source-identifier.md#combining-primary-and-secondary-payment-sources) on the [Managing sources](../sources/using-the-source-identifier.md) page.
+For a complete list of payment methods that can be paired with [store credit](../../shopper-apis/shopper-basics/common-use-cases/applying-store-credit.md), refer to [combining primary and secondary sources](../sources/using-the-source-identifier.md#combining-primary-and-secondary-payment-sources) on the [Managing sources](../sources/using-the-source-identifier.md) page.
 
 | Payment method                                                                          | Drop-in Payments | DigitalRiver.js with Elements | Non-recurring payments | Recurring payments | Authentication flow |
 | --------------------------------------------------------------------------------------- | :--------------: | :---------------------------: | :--------------------: | :----------------: | :-----------------: |
@@ -24,7 +24,7 @@ For a complete list of payment methods that can be paired with [store credit](..
 | [Clearpay](clearpay.md)                                                                 |         ✔        |               ✔               |            ✔           |          -         |      `redirect`     |
 | [Credit Cards](credit-cards.md)                                                         |         ✔        |               ✔               |            ✔           |          ✔         |      `standard`     |
 | [Google Pay](google-pay.md)                                                             |         ✔        |               ✔               |            ✔           |          ✔         |      `standard`     |
-| [iDEAL](ideal.md)                                                                       |         ✔        |               ✔               |            ✔           |          ✔         |      `standard`     |
+| [iDEAL](ideal.md)                                                                       |         ✔        |               ✔               |            ✔           |        ✔[^1]       |      `standard`     |
 | [Klarna](klarna.md)                                                                     |         ✔        |               ✔               |            ✔           |          ✔         |      `redirect`     |
 | [Konbini](konbini.md)                                                                   |         ✔        |               ✔               |            ✔           |          -         |      `receiver`     |
 | [Online Banking (FPX)](fpx-online-banking.md)                                           |         ✔        |               ✔               |            ✔           |          -         |      `redirect`     |
@@ -41,3 +41,5 @@ For a complete list of payment methods that can be paired with [store credit](..
 | [TreviPay](trevipay.md)                                                                 |         ✔        |               ✔               |            ✔           |          ✔         |      `redirect`     |
 | [Trustly](trustly.md)                                                                   |         ✔        |               ✔               |            ✔           |          -         |      `redirect`     |
 | [Wire Transfer](wire-transfer.md)                                                       |         ✔        |               ✔               |            ✔           |          -         |      `receiver`     |
+
+[^1]: Digital River supports iDEAL for recurring with SEPA direct debit transactions.

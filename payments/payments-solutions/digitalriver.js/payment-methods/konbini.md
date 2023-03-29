@@ -103,7 +103,7 @@ konbiniElement .mount('konbini-selector');
 
 DigitalRiver.js will create and render a select element that populates with the store logo and localized store name of the available stores where the customer can pay using this payment method.
 
-![](../../../../.gitbook/assets/Konbini\_DRJS\_render.PNG)
+![](../../../../.gitbook/assets/konbini\_drjs\_render.png)
 
 The same [events and structures](../../../../general-resources/reference/elements/#element-on) appear in the Konbini element, and you should listen to the [Change event](../../../../general-resources/reference/elements/konbini-elements.md#change) to determine when the user has made a selection. When the change event response contains `"complete": true`, the shopper has selected a store.
 
@@ -140,7 +140,7 @@ konbiniElement.on('change', function (event) {
 To create a Konbini source, reference the created element and the supplemental data in your [createSource ](../../../../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% tabs %}

@@ -34,7 +34,7 @@ Amazon requires that you remove or hide the Edit buttons or links for the billin
 
 The following image shows Amazon Pay's Express Checkout flow for Commerce API.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 The following Amazon Pay flow represents how your shoppers experience the payment process.
 

@@ -13,4 +13,4 @@ More than a global payments and fraud solution, Digital River acts as the author
 
 ## Getting started
 
-Continue to our [Getting started](getting-started/) section to make API requests. After you perform an API test, you can begin creating products, customers, carts, and orders to provide us with the data we need to protect your business from risk.
+Continue to our [Getting started](master/getting-started/) section to make API requests. After you perform an API test, you can begin creating products, customers, carts, and orders to provide us with the data we need to protect your business from risk.

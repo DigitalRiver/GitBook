@@ -13,7 +13,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create an [Amazon 
 
 Amazon Pay is different from other payment methods. The shopper's payment information is pulled into the cart directly from their Amazon Pay account.
 
-To create an Amazon Pay payment source, follow the instructions in the [DigitalRiver.js reference guide](../../../../general-resources/reference/). If the shopper is paying for a subscription, you must [provide the `mandate.terms`](../../../building-your-workflows.md#digitalriver.js-with-elements) that the customer agreed to on your storefront [and set `autoRenewal` to `true`](../../../../cart/creating-or-updating-a-cart/providing-subscription-information.md#auto-renewal), and [`futureUse` to `true`](../../../building-your-workflows.md#saving-a-credit-card-for-future-use).
+To create an Amazon Pay payment source, follow the instructions in the [DigitalRiver.js reference guide](../../../../general-resources/reference/). If the shopper is paying for a subscription, you must [provide the `mandate.terms`](../../../building-your-workflows.md#digitalriver.js-with-elements) that the customer agreed to on your storefront [and set `autoRenewal` to `true`](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-subscription-information.md#auto-renewal), and [`futureUse` to `true`](../../../building-your-workflows.md#saving-a-credit-card-for-future-use).
 
 ### Create an Amazon Pay element
 

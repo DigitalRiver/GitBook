@@ -53,7 +53,7 @@ When using a push payment method, the customer must explicitly send the funds be
 
 With synchronous payment methods, the [`state` ](./#source-state)of the source is returned immediately as either `chargeable` or `failed`.  A credit card is an example of this type of payment method.&#x20;
 
-With asynchronous payment methods, the source may first return with a `state` of `pending_funds`, `pending_redirect`, or `requires_action` before it can transition to `chargeable`. PayPal is an example of an asynchronous payment method because the customer is redirected to the PayPal site and must take additional action to authorize the transaction.&#x20;
+With asynchronous payment methods, the source may first return with a `state` of `pending_funds`, `source_pending_redirect`, or `requires_action` before it can transition to `chargeable`. PayPal is an example of an asynchronous payment method because the customer is redirected to the PayPal site and must take additional action to authorize the transaction.&#x20;
 
 ### Reusable or single-use
 
@@ -63,7 +63,7 @@ Some [payment methods](./#supported-payment-methods) can be used to create sourc
 For a list of payment methods that support reusability, refer to the [Supported payment methods](./#supported-payment-methods) page. Additionally, as part of the enablement process, certain payment methods that are typically reusable can be restricted to single-use only.
 {% endhint %}
 
-Sources must have a `reusable` value of `true` before they can be used to make multiple charges.  Reusable sources however can't be created using a [public API key](../../resources/API-structure.md#public-keys). So both [Drop-in payments](../payments-solutions/drop-in/) and [DigitalRiver.js with elements](../payments-solutions/digitalriver.js/) only generate single-use sources. To make them reusable once they're created (assuming the source `type` supports re-usability), you must [save the source to a customer](./#attaching-a-payment-method-to-a-customer). This flips `reusable` to `true` and prevents the source's `state` from becoming `consumed` once it's associated with a transaction.
+Sources must have a `reusable` value of `true` before they can be used to make multiple charges.  Reusable sources however can't be created using a [public API key](../../resources/API-structure/#public-keys). So both [Drop-in payments](../payments-solutions/drop-in/) and [DigitalRiver.js with elements](../payments-solutions/digitalriver.js/) only generate single-use sources. To make them reusable once they're created (assuming the source `type` supports re-usability), you must [save the source to a customer](./#attaching-a-payment-method-to-a-customer). This flips `reusable` to `true` and prevents the source's `state` from becoming `consumed` once it's associated with a transaction.
 
 If a source's underlying payment method doesn't support re-usability, we [block the source from being saved to a customer](using-the-source-identifier.md#restrictions-on-saving-sources). So, with a non-reusable source, you should only [attach the source to a cart](./#attaching-a-payment-method-to-an-order-or-cart). This will generate a one-time charge authorization when you convert the cart to an order.&#x20;
 
