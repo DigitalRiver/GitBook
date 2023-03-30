@@ -24,7 +24,7 @@ For a complete list of payment methods that can be paired with [store credit](..
 | [Clearpay](clearpay.md)                                                                 |         ✔        |               ✔               |            ✔           |          -         |      `redirect`     |
 | [Credit Cards](credit-cards.md)                                                         |         ✔        |               ✔               |            ✔           |          ✔         |      `standard`     |
 | [Google Pay](google-pay.md)                                                             |         ✔        |               ✔               |            ✔           |          ✔         |      `standard`     |
-| [iDEAL](ideal.md)                                                                       |         ✔        |               ✔               |            ✔           |        ✔[^1]       |      `standard`     |
+| [iDEAL](ideal.md)                                                                       |         ✔        |               ✔               |            ✔           |        ✔[^1]       |      `redirect`     |
 | [Klarna](klarna.md)                                                                     |         ✔        |               ✔               |            ✔           |          ✔         |      `redirect`     |
 | [Konbini](konbini.md)                                                                   |         ✔        |               ✔               |            ✔           |          -         |      `receiver`     |
 | [Online Banking (FPX)](fpx-online-banking.md)                                           |         ✔        |               ✔               |            ✔           |          -         |      `redirect`     |
