@@ -60,7 +60,7 @@ Under circumstances where the **90 days** reminder schedule is the existing sche
 
 ## Accessing the schedule information programmatically
 
-You can find and use the new schedule information by using `v1/shopper/me/subscriptions` API to get subscription information, as well as the User Management call for getting subscription information.
+You can find and use the new schedule information by using `v1/shopper/me/subscriptions/{subId}` API to get subscription information, as well as the User Management call for getting subscription information.
 
 This new reminder schedule information is also revealed under the `customAttribute` through `GET /product`: (`timeIntervalForTrialReminderNotifications`, `timeIntervalForTrialManualReminderNotifications`).
 
