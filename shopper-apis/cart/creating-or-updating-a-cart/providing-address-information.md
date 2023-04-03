@@ -105,14 +105,14 @@ To add phonetics to your billing and shipping addresses, add the following attri
 
 To the following resources:
 
-* [POST /shoppers/me/carts/active](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post) – Update billing address and shipping address in cart.
-* [PUT /shoppers/me/carts/active/billing-address](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Billing-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1billing-address/put) – Update billing address independently.
-* [PUT /shoppers/me/carts/active/shipping-address](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shipping-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1shipping-address/put) – Update shipping address independently.
+* ``[`POST /shoppers/me/carts/active`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post) – Update the billing address and shipping address in the cart.
+* ``[`PUT /shoppers/me/carts/active/billing-address`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Billing-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1billing-address/put) – Update billing address independently.
+* ``[`PUT /shoppers/me/carts/active/shipping-address`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Shipping-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1shipping-address/put) – Update shipping address independently.
 
 After you implement phonetic names, you will see the new fields under the billing or shipping address in the response. For example:
 
-* [GET /shoppers/me/carts/active/billing-address](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Billing-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1billing-address/get) – Get the billing address for a cart.
-* [GET /shoppers/me/carts/active/shipping-address](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shipping-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1shipping-address/get) – Get the shipping address for a cart.
+* ``[`GET /shoppers/me/carts/active/billing-address`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Billing-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1billing-address/get) – Get the billing address for a cart.
+* ``[`GET /shoppers/me/carts/active/shipping-address`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Shipping-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1shipping-address/get) – Get the shipping address for a cart.
 * Submit cart response
 
 {% tabs %}
