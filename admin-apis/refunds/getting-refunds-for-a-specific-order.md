@@ -4,7 +4,7 @@ description: Learn how to get refunds for a specific order.
 
 # Getting refunds for a specific order
 
-Use [`GET /orders/{orderId}/refunds`](https://drapi.io/commerce/test/#tag/Refund/paths/\~1orders\~1%7BorderId%7D\~1refunds/get) request with the order identifier (`orderId`) to get refunds for a specific order.
+Use [`GET /orders/{orderId}/refunds`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Refund/paths/\~1orders\~1%7BorderId%7D\~1refunds/get) request with the order identifier (`orderId`) to get refunds for a specific order.
 
 {% tabs %}
 {% tab title="cURL" %}

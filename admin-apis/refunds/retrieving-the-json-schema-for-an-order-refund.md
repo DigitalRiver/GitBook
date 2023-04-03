@@ -4,7 +4,7 @@ description: Learn how to retrieve the JSON schema for an order refund.
 
 # Getting the JSON schema for an order refund
 
-Use the [`GET /orders/{orderId}/refunds/schema`](https://drapi.io/commerce/test/#tag/Refund/paths/\~1orders\~1%7BorderId%7D\~1refunds\~1schema/get) to retrieve the JSON schema for a refund associated with an order.
+Use the [`GET /orders/{orderId}/refunds/schema`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Refund/paths/\~1orders\~1%7BorderId%7D\~1refunds\~1schema/get) to retrieve the JSON schema for a refund associated with an order.
 
 {% tabs %}
 {% tab title="cURL" %}

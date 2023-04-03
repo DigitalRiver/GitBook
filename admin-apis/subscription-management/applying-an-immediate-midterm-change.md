@@ -8,7 +8,7 @@ description: Learn how to apply an immediate midterm change to a subscription.
 
 In this scenario, the customer has a basic subscription and decided to upgrade the subscription product.&#x20;
 
-Use the [`POST /v1/subscriptions/{subscriptionId}/preview-cart`](applying-an-immediate-midterm-change.md#applying-an-immediate-midterm-change) resource to upgrade the customer's subscription product. You must include the product identifier (`id`), the quantity (`quantity`), and the prorated Unit Price (`proratedUnitPrice`). In the following example, the value for the `proratedUnitPrice` is `20.5`.  See the [preview-cart](../../general-resources/admin-apis-reference/subscriptions/#preview-cart-resource) resource for more information.
+Use the [`POST /v1/subscriptions/{subscriptionId}/preview-cart`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Immediate-Midterm-Change/operation/previewCartSubscription) resource to upgrade the customer's subscription product. You must include the product identifier (`id`), the quantity (`quantity`), and the prorated Unit Price (`proratedUnitPrice`). In the following example, the value for the `proratedUnitPrice` is `20.5`.  See the [preview-cart](../../general-resources/admin-apis-reference/subscriptions/#preview-cart-resource) resource for more information.
 
 {% tabs %}
 {% tab title="cURL" %}

@@ -4,7 +4,7 @@ description: Learn how to get the available refunds for a specific order.
 
 # Getting the available refunds for a specific order
 
-Use the [`GET /orders/{orderId}/refunds-available`](https://drapi.io/commerce/test/#tag/Refund/paths/\~1orders\~1%7BorderId%7D\~1refunds-available/get) request to get the  amount available for a refund (`amountAvailableForRefund`) for the specified order identifier (`orderId`).
+Use the [`GET /orders/{orderId}/refunds-available`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Refund/paths/\~1orders\~1%7BorderId%7D\~1refunds-available/get) request to get the  amount available for a refund (`amountAvailableForRefund`) for the specified order identifier (`orderId`).
 
 {% tabs %}
 {% tab title="cURL" %}
