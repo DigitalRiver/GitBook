@@ -125,7 +125,7 @@ Drop-in Payments renders in the specified container.
 
 ![](<../.gitbook/assets/image (2) (1) (1).png>)
 
-Customers enter their credit card information and click the [configurable ](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button)Pay Now **** button**.**&#x20;
+Customers enter their credit card information and click the [configurable ](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button)Pay Now button**.**&#x20;
 
 If the customers completes the [SCA](psd2-and-sca/), then the [`onSuccess` metho](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess)d is called and Digital River returns a unique source in a [chargeable state](broken-reference).
 
@@ -312,7 +312,7 @@ After invoking this method, Digital River automatically handles any required SCA
 
 If authentication is successful, Digital River returns the [Source ](sources/)in a [`chargeable` stat](sources/#source-state)e.
 
-**Step four:**[ **** Attach the source to the cart](sources/using-the-source-identifier.md).
+**Step four:**[ Attach the source to the cart](sources/using-the-source-identifier.md).
 
 **Step five:** [Create the order by submitting the cart](../shopper-apis/cart/submitting-a-cart/).
 {% endtab %}
@@ -364,7 +364,7 @@ Drop-in renders in the specified container.
 
 <figure><img src="../.gitbook/assets/sub terms.png" alt=""><figcaption></figcaption></figure>
 
-Shoppers **** must enter their credit card information and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-drop-in-button-text) pay now **** button**.**
+Shoppers must enter their credit card information and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-drop-in-button-text) pay now button**.**
 
 If the shopper completes the necessary [SCA](psd2-and-sca/) steps, then the [`onSucess` method](payments-solutions/drop-in/drop-in-integration-guide.md#the-onsuccess-event-returns-the-source) is called and Digital River returns a unique source in a [chargeable state](sources/#source-state) that is [`readyForStorage`](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess).
 
@@ -604,7 +604,7 @@ The modal window renders in the specified container.
 
 ![](<../.gitbook/assets/image (4) (1).png>)
 
-Shoppers **** enter their credit card information, select the save payment agreement option and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button) add payment method button.&#x20;
+Shoppers enter their credit card information, select the save payment agreement option and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button) add payment method button.&#x20;
 
 If the shopper completes the necessary [SCA](psd2-and-sca/) steps, then the [`onSucess` method](payments-solutions/drop-in/drop-in-integration-guide.md#the-onsuccess-event-returns-the-source) is called and Digital River returns a unique source in a [chargeable state](sources/#source-state) that is [`readyForStorage`](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess).
 

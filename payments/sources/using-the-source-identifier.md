@@ -400,8 +400,8 @@ The `paymentSession` object shows the following information for an entire order:
 
 Use one of the following options to remove all attached sources directly from a cart.
 
-* ``[`DELETE v1/shoppers/me/carts/active/apply-payment-method`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/delete) removes a payment source from the cart. Use this option and include the source ID in the payload to remove payment sources one by one.
-* ``[`DELETE v1/shoppers/me/carts/active/payment`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1payment/delete) removes all attached sources directly from the cart
+* [`DELETE v1/shoppers/me/carts/active/apply-payment-method`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/delete) removes a payment source from the cart. Use this option and include the source ID in the payload to remove payment sources one by one.
+* [`DELETE v1/shoppers/me/carts/active/payment`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1payment/delete) removes all attached sources directly from the cart
 
 When finished, you can [attach new sources](using-the-source-identifier.md#attaching-multiple-sources-to-the-cart) to the cart.
 

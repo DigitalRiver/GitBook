@@ -184,7 +184,7 @@ You can only add subscription products to the subscription product group.
 
 #### `REMINDER_FOR_MANUAL_RENEWALS_MUST_BE_THE_SAME_AS_AUTOMATIC_RENEWALS_WHEN_DISTINCT_SCHEDULE_IS_DISABLED`
 
-Ensure  the value for Reminder for Manual Renewals (`timeIntervalForManualReminderNotifications`) is the same as the Reminder for Automatic Renewals (timeIntervalForReminderNotifications) when `` Use a different schedule for manual renewal reminders (`isDistinctScheduleTurnedOn`) is not selected
+Ensure  the value for Reminder for Manual Renewals (`timeIntervalForManualReminderNotifications`) is the same as the Reminder for Automatic Renewals (timeIntervalForReminderNotifications) when Use a different schedule for manual renewal reminders (`isDistinctScheduleTurnedOn`) is not selected
 
 * `Product 1234567800, en_US: Reminder for Manual Renewals (timeIntervalForManualReminderNotifications) must be the same as Reminder for Automatic Renewals (timeIntervalForReminderNotifications) if Use a different schedule for manual renewal reminders (isDistinctScheduleTurnedOn) is not selected.`
 

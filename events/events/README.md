@@ -10,7 +10,7 @@ In the Commerce APIs, there are numerous [event types](./#event-types) that you 
 
 In nearly all cases, an [event's data](./#event-data) contains the resource whose state changed.
 
-To subscribe to an event, you need to set up [webhooks ](../webhooks/)that send designated events directly to an endpoint on your server. In [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), you'll find a complete list of our supported event types. To access this list, sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), select **Administration**, **** and click **Webhook Service**.
+To subscribe to an event, you need to set up [webhooks ](../webhooks/)that send designated events directly to an endpoint on your server. In [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), you'll find a complete list of our supported event types. To access this list, sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), select **Administration**, and click **Webhook Service**.
 
 ## Event types
 

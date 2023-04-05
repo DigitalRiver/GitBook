@@ -16,7 +16,7 @@ Digital River supports the following email types:
 | [Subscription billing email address](updating-the-subscribers-email-address.md#subscription-billing-and-shipping-email-addresses)            | When creating a subscription, subscription-relevant information from the original acquisition, including the billing email address, is copied to the subscription. You can [update a shopper's billing email address for a specific subscription](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-a-specific-subscription) or [all of the shopper's subscriptions](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-all-subscriptions).   |
 | [Subscription shipping email address](updating-the-subscribers-email-address.md#subscription-billing-and-shipping-email-addresses)           | When creating a subscription, subscription-relevant information from the original acquisition, including the shipping email address, is copied to the subscription. You can [update a shopper's shipping email address for a specific subscription](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-a-specific-subscription) or [all of the shopper's subscriptions](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-all-subscriptions). |
 
-You can combine the notifications for a specific shopper by creating an event rule per each notification.  <mark style="color:red;"></mark>  You update email notifications using [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
+You can combine the notifications for a specific shopper by creating an event rule per each notification.  You update email notifications using [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 
 ## Email address update phases
 
@@ -36,9 +36,9 @@ There are three phases when you can update an email address:&#x20;
 
 You can use one of the following calls to change the billing or shipping email address from the cart.&#x20;
 
-* ``[`POST /v1/shoppers/me/carts/active`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post) to [update the billing or shipping email address in the cart](broken-reference).  &#x20;
-* ``[`PUT /v1/shoppers/me/carts/active/billing-address`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Billing-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1billing-address/put) to override the billing email address in the cart.  &#x20;
-* ``[`PUT /v1/shoppers/me/carts/active/shipping-address`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Shipping-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1shipping-address/put) to override the billing email address in the cart.  &#x20;
+* [`POST /v1/shoppers/me/carts/active`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post) to [update the billing or shipping email address in the cart](broken-reference).  &#x20;
+* [`PUT /v1/shoppers/me/carts/active/billing-address`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Billing-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1billing-address/put) to override the billing email address in the cart.  &#x20;
+* [`PUT /v1/shoppers/me/carts/active/shipping-address`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Shipping-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1shipping-address/put) to override the billing email address in the cart.  &#x20;
 
 ### Digital River-hosted storefront page 
 

@@ -62,7 +62,7 @@ To enable landed costs for your site from Global Commerce:
 You need the Pricing Manager role to perform this task.
 {% endhint %}
 
-To use the landed costs feature, you must set the price list to tax exclusive. **** When you set the price list to tax-exclusive, the `shippingAndHandling` value is also tax exclusive.
+To use the landed costs feature, you must set the price list to tax exclusive. When you set the price list to tax-exclusive, the `shippingAndHandling` value is also tax exclusive.
 
 1. From [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), select **Catalog**, select **Pricing & Plans**, and click **Manage Price Lists**. The Price Lists page appears.
 2. Complete the search fields under the **Search and Filters** tab and then click **Search** ![Search](https://help.digitalriver.com/help/Resources/Images/Shared/search.png) to locate the specific price list. The results appear under Price Lists.
@@ -78,9 +78,9 @@ When [creating a product](https://help.digitalriver.com/help/gc/Products/All-Pro
 
 1. Select the [Product Classification Type](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm#ProductClassificationType) under [**Export Controls**](https://help.digitalriver.com/help/gc/Products/All-Products/Creating-a-product.htm#ExportControls).&#x20;
 2. Select the appropriate product classification from the list.
-3. Specify the [Harmonized System code](https://www.trade.gov/harmonized-system-hs-codes) in the **** [**Harmonized Tariff Schedule/Schedule B Number**](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm#Harmonized) field.
+3. Specify the [Harmonized System code](https://www.trade.gov/harmonized-system-hs-codes) in the [**Harmonized Tariff Schedule/Schedule B Number**](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm#Harmonized) field.
 4. Complete the physical settings under [**Physical**](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm#Physical).
-5. Select the **** [**Enable Landed Cost**](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm#EnableLandedCosts) check box.
+5. Select the [**Enable Landed Cost**](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm#EnableLandedCosts) check box.
 6. Complete the fields under [**Product Fulfillers**](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm#ProductFulfillers).
 
 ### Triggering the landed cost feature
@@ -124,12 +124,12 @@ The following tables list the landed cost parameters. Note that you are responsi
 
 ### Cart or order-level attributes
 
-| Attributes                  | Type   | Description                                                                                                 |
-| --------------------------- | ------ | ----------------------------------------------------------------------------------------------------------- |
-| `landedCostState`           |        | The [state of landed cost](landed-costs.md#landed-cost-state).                                              |
-| `importTaxAndDuty`          | object | The sum of import taxes and duties for all line items.                                                      |
-| `formattedImportTaxAndDuty` |        | The sum of import taxes and duties in locale currency format (for example, USD 19.14).                      |
-| `shippingAndHandling`       | object | The shipping and handling fee is tax exclusive and applied against the product and the shipping cost. ****  |
+| Attributes                  | Type   | Description                                                                                            |
+| --------------------------- | ------ | ------------------------------------------------------------------------------------------------------ |
+| `landedCostState`           |        | The [state of landed cost](landed-costs.md#landed-cost-state).                                         |
+| `importTaxAndDuty`          | object | The sum of import taxes and duties for all line items.                                                 |
+| `formattedImportTaxAndDuty` |        | The sum of import taxes and duties in locale currency format (for example, USD 19.14).                 |
+| `shippingAndHandling`       | object | The shipping and handling fee is tax exclusive and applied against the product and the shipping cost.  |
 
 ### Line-item level attributes
 

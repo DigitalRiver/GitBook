@@ -14,7 +14,7 @@ How [taxes should be displayed](./#guidelines-for-displaying-tax-1) to a custome
 
 ## Setting the price list to tax inclusive or exclusive
 
-Use the Prices Include Value Added Tax (VAT) dropdown list in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do) to set a price list to tax inclusive (Yes) or tax exclusive (No).  If you are using the landed costs feature, you must set Prices Include value Added Tax (VAT) **** to No. ****&#x20;
+Use the Prices Include Value Added Tax (VAT) dropdown list in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do) to set a price list to tax inclusive (Yes) or tax exclusive (No).  If you are using the landed costs feature, you must set Prices Include value Added Tax (VAT) to No. &#x20;
 
 You need the Pricing Manager role to perform this task.
 

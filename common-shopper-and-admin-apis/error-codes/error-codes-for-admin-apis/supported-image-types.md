@@ -6,7 +6,7 @@ description: Understand the supported image types.
 
 ## Defining a file&#x20;
 
-To define a file to import, the attribute file must start with `file:` **** and end with file ID. For example:
+To define a file to import, the attribute file must start with `file:` and end with file ID. For example:
 
 * With JSON, "productImage1": "file:00fb210-12345678", Global Commerce imports file 00fb210-12345678 and places it into a default folder of product detail images for the given company.
 
@@ -15,8 +15,8 @@ To define a file to import, the attribute file must start with `file:` **** and 
 To create a subfolder, add the `file:` prefix to the subfolder path and the `fileID`. For example:
 
 * With JSON, `"thumbnailImage2": "file:folderA/folderB/00fb210-12345678"`, Global Commerce creates the subfolders '`folderA`' and '`folderB`' in the product thumbnail image folder for the given company. File `00fb210-12345678` is imported into the folders. &#x20;
-* Subfolders can start with a **/** or not. For example, `file:abc` **** is the equivalent to `file:/abc`.&#x20;
-* More than one **/** will be treated the same as one. For example, `file:////abc////def` **** is equivalent to `file:abc/def`.&#x20;
+* Subfolders can start with a **/** or not. For example, `file:abc` is the equivalent to `file:/abc`.&#x20;
+* More than one **/** will be treated the same as one. For example, `file:////abc////def` is equivalent to `file:abc/def`.&#x20;
 
 Error codes related to file types have the prefix '`attribute_external_file`'. Refer to [Admin API error codes](broken-reference) for more details.
 

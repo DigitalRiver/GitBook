@@ -115,7 +115,7 @@ The credit card used for payment has expired. The possible error descriptions ar
 
 ## `concurrent-cart-modification-failure`
 
-Concurrent cart modification is not allowed. `` The possible error descriptions are as follows:
+Concurrent cart modification is not allowed. The possible error descriptions are as follows:
 
 *   `Request attempted to modify the cart while the cart was being updated by another request.`
 
@@ -156,7 +156,7 @@ Provide a reason for the return and try again.
 The products use the same external reference ID \[erid-1234]: \[12345600, 12345700, 12345800]. Either use the actual product identifier in the request or ensure the external reference ID for each product is unique.
 
 * `unable-to-determine-product-by-ERID`\
-  ``The external reference ID is not unique.
+  The external reference ID is not unique.
 
 ## `field-too-long`
 

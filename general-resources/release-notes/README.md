@@ -8,7 +8,34 @@ V1 is the base version of the Commerce API. The following dates indicate when we
 
 ## 2023/4/5
 
-We added Box Shadow as an [available custom style](../reference/elements/#available-custom-styles) when configuring [custom styles](../reference/elements/#custom-styles) for [DigitalRiver.js with Elements](../../payments/payments-solutions/digitalriver.js/).
+*   We enabled Lens, a semantic search tool, on the Documentation Portal.&#x20;
+
+    To find Lens, click the **Search** bar in the upper right corner.&#x20;
+
+    <figure><img src="../../.gitbook/assets/search-bar.png" alt=""><figcaption></figcaption></figure>
+
+    Type your question in the **Search content** field and click **Lens**. You can ask Lens anything regarding Digital River features. It will give you plain English answers in seconds. For example, you can ask for an overview of a feature and Lens will return a quick and concise answer.\
+    \
+    **Note**: You may need to refresh the page in your browser to see the Lens button. If that fails, clear your browser cache, then close and reopen your browser.
+
+    <figure><img src="../../.gitbook/assets/Search content Commerce API.png" alt=""><figcaption></figcaption></figure>
+
+    Additionally, Lens will provide follow-up questions that you might be interested in.&#x20;
+
+    <figure><img src="../../.gitbook/assets/Follow up questions Commerce API.png" alt=""><figcaption></figcaption></figure>
+
+    You can also see where Lens found the information and click through to read more.
+
+    <figure><img src="../../.gitbook/assets/Information locations Commerce API.png" alt=""><figcaption></figcaption></figure>
+
+    You can ask for a code snippet for an API.
+
+    <figure><img src="../../.gitbook/assets/Code example Commerce API.png" alt=""><figcaption></figcaption></figure>
+
+    You can ask for the steps to perform a specific task.
+
+    <figure><img src="../../.gitbook/assets/Steps for performing a test request Commerce API.png" alt=""><figcaption></figcaption></figure>
+* We added Box Shadow as an [available custom style](../reference/elements/#available-custom-styles) when configuring [custom styles](../reference/elements/#custom-styles) for [DigitalRiver.js with Elements](../../payments/payments-solutions/digitalriver.js/).
 
 ## 2023/3/29
 

@@ -106,8 +106,8 @@ iban.destroy();
 
 | `​`[`ready`](iban-element.md#ready)`​`   | The created element is loaded and ready.     |
 | ---------------------------------------- | -------------------------------------------- |
-| ``[`​focus​`](iban-element.md#focus)``   | A shopper clicked the element's input field. |
-| ``[`​blur​`](iban-element.md#blur)``     | The element has lost focus.                  |
+| [`​focus​`](iban-element.md#focus)       | A shopper clicked the element's input field. |
+| [`​blur​`](iban-element.md#blur)         | The element has lost focus.                  |
 | `​`[`change`](iban-element.md#change)`​` | The element's state has changed.             |
 
 ### ‌Ready

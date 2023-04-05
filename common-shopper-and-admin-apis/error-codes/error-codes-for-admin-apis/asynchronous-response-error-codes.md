@@ -601,7 +601,7 @@ A subfolder in the attribute value is invalid. For example, `a!b` is not a valid
 
 #### `INVALID_FULFILLMENT_TYPE`
 
-The fulfillment type is invalid. Only `Download` and `Physical` **** are allowed.
+The fulfillment type is invalid. Only `Download` and `Physical` are allowed.
 
 * `$Product: The fulfillment type [abc] is invalid. The expected types are [Download, Physical].`
 

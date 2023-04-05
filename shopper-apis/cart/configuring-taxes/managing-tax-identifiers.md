@@ -186,7 +186,7 @@ curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/carts
 {% endtab %}
 {% endtabs %}
 
-Send a [`POST /v1/shopper/me/carts/active/tax-registrations`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Tax-Registration/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1tax-registrations/post) request to attach the tax identifier to the cart.  The following examples show the request body or response for `customerType` with the value of `B` for the business shopper and `I` for the individual shopper. You determine the value for the `customerType` enumerations in the schema when you attach it to the cart. ****&#x20;
+Send a [`POST /v1/shopper/me/carts/active/tax-registrations`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Tax-Registration/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1tax-registrations/post) request to attach the tax identifier to the cart.  The following examples show the request body or response for `customerType` with the value of `B` for the business shopper and `I` for the individual shopper. You determine the value for the `customerType` enumerations in the schema when you attach it to the cart. &#x20;
 
 {% tabs %}
 {% tab title="cURL" %}

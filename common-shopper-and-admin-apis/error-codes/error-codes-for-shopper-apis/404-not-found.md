@@ -60,6 +60,6 @@ Could not find a \[resourceName] resource with an internal ID \[resourceId]. The
 * `Invalid site for specified company`\
   The company of the site with the provided header `siteId` and the one with the provided header `companyId` are different, but they should be the same.
 * `invalid-product-id`\
-  ``Cannot find the product {productId}. The specified product ID could not be found. Provide the correct product ID and try again.
+  Cannot find the product {productId}. The specified product ID could not be found. Provide the correct product ID and try again.
 * `offer-not-found`\
   The specified offer identifier (`offerId`) was not applied to the cart.

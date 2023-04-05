@@ -110,7 +110,7 @@ if (applepay.canMakePayment()) {
 The source event will surface a Source plus other details provided by Apple Pay, like the billing address, shipping address, and contact information of the shopper.
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that **** [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/province data that [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% tabs %}

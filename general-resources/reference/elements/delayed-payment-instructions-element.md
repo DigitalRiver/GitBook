@@ -8,9 +8,9 @@ description: >-
 
 You can use the Delayed Payment Instructions element to generate a template that contains the instructions that explain how to complete payment for delayed payment types such as: &#x20;
 
-* ****[**Boleto**](../../../payments/payments-solutions/digitalriver.js/payment-methods/configuring-boleto.md)–where the shopper can go to a variety of locations with cash or via bank transfer to make a payment.
-* ****[**Konbini**](../../../payments/payments-solutions/digitalriver.js/payment-methods/konbini.md)–where the shopper has to go to a convenience store to make their payment.
-* ****[**Wire Transfer**](../../../payments/payments-solutions/digitalriver.js/payment-methods/wire-transfer.md)–where the shopper has to go to their bank to wire money to the payment partner's bank.
+* [**Boleto**](../../../payments/payments-solutions/digitalriver.js/payment-methods/configuring-boleto.md)–where the shopper can go to a variety of locations with cash or via bank transfer to make a payment.
+* [**Konbini**](../../../payments/payments-solutions/digitalriver.js/payment-methods/konbini.md)–where the shopper has to go to a convenience store to make their payment.
+* [**Wire Transfer**](../../../payments/payments-solutions/digitalriver.js/payment-methods/wire-transfer.md)–where the shopper has to go to their bank to wire money to the payment partner's bank.
 
 You can style and arrange this content using custom CSS. Click [here ](https://tools.drapi.io/cm/delayed-payments/delayed-payment-instructions-builder)to see an example of the output.
 

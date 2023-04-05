@@ -22,10 +22,10 @@ When managing a product or a product's locale, note that:
 
 When creating a product, you need to provide the following objects in the payload:
 
-* ``[`deploymentRequiredChanges`](creating-or-updating-a-product.md#deploymentrequiredchanges): This object is required for [base ](../../../general-resources/admin-apis-reference/products.md#base-product)or [individual products](../../../general-resources/admin-apis-reference/products.md#individual-product).
-* ``[`liveChanges`](creating-or-updating-a-product.md#livechanges): This object is required for [base ](../../../general-resources/admin-apis-reference/products.md#base-product)or [individual products](../../../general-resources/admin-apis-reference/products.md#individual-product).
-* ``[`localization`](creating-or-updating-a-product.md#localizations): This object is required for [base ](../../../general-resources/admin-apis-reference/products.md#base-product)or [individual products](../../../general-resources/admin-apis-reference/products.md#individual-product).
-* ``[`variations`](creating-or-updating-a-product.md#variations): This object is only required for a [base product](../../../general-resources/admin-apis-reference/products.md#base-product) with [product variations](../../../general-resources/admin-apis-reference/products.md#product-variations).
+* [`deploymentRequiredChanges`](creating-or-updating-a-product.md#deploymentrequiredchanges): This object is required for [base ](../../../general-resources/admin-apis-reference/products.md#base-product)or [individual products](../../../general-resources/admin-apis-reference/products.md#individual-product).
+* [`liveChanges`](creating-or-updating-a-product.md#livechanges): This object is required for [base ](../../../general-resources/admin-apis-reference/products.md#base-product)or [individual products](../../../general-resources/admin-apis-reference/products.md#individual-product).
+* [`localization`](creating-or-updating-a-product.md#localizations): This object is required for [base ](../../../general-resources/admin-apis-reference/products.md#base-product)or [individual products](../../../general-resources/admin-apis-reference/products.md#individual-product).
+* [`variations`](creating-or-updating-a-product.md#variations): This object is only required for a [base product](../../../general-resources/admin-apis-reference/products.md#base-product) with [product variations](../../../general-resources/admin-apis-reference/products.md#product-variations).
 
 The following payload example contains data attributes for a base product with variations.
 
@@ -507,12 +507,12 @@ For example: If the current data is:\
 &#x20;  `"currency": "USD",` \
 &#x20;  `"configuredPrice": 10` \
 `}]`\
-``\
-``And you replace it with:\
+\
+And you replace it with:\
 \
 `"prices": []`\
-``\
-``The request replaces the current configures price with the data you provided. If you don't want to change specific data in a request, either do not include the data in the payload or include the data with the same values in the payload.
+\
+The request replaces the current configures price with the data you provided. If you don't want to change specific data in a request, either do not include the data in the payload or include the data with the same values in the payload.
 {% endhint %}
 
 {% code overflow="wrap" %}

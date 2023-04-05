@@ -23,4 +23,3 @@ curl --location --request POST 'https://{host}>/v1/subscriptions/{subscriptionId
 
 You will receive a `202 Accepted` response.
 
-****
