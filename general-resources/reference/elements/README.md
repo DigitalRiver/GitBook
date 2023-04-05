@@ -663,7 +663,7 @@ var cardNumber = elements.create('cardnumber', options);
 
 | Style           | ID             | Type   | Example                         |
 | --------------- | -------------- | ------ | ------------------------------- |
-| Box Shadow      | color          | string | "#fff"                          |
+| Box Shadow      | color          | string | inset 0 0 0px 1000px #fff       |
 | Text Color      | color          | string | "#fff"                          |
 | Font Family     | fontFamily     | string | "Arial, Helvetica, sans-serif", |
 | Font Size       | fontSize       | string | "20px"                          |
