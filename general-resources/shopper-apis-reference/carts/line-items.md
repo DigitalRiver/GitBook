@@ -46,7 +46,7 @@ The `offerId` is the offer's identifier. This query parameter is available when 
 
 ### Line item identifier
 
-A comma-separated list of one or more line item identifiers. This query parameter is available when you [delete line items from a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items/delete).
+A `lineItemsId` is a comma-separated list of one or more line item identifiers. This query parameter is available when you [delete line items from a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items/delete).
 
 ### Parent line item identifier
 
