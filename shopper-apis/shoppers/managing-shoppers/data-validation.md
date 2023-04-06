@@ -10,7 +10,7 @@ The Data Validation service process is a request/response-based process. The Dat
 
 ## Data validation details
 
-A successful Data Validation request results in a response that contains a non-null, non-empty element. An unsuccessful Data Validation request results in an invalid `responseCode`.
+A successful Data Validation request results in a response that contains a non-null, non-empty element. An unsuccessful Data Validation request results in an invalid response code (`responseCode`).
 
 #### Note
 
