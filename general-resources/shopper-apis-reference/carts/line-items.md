@@ -10,7 +10,7 @@ The following describes some of the key attributes of line items.
 
 ### Order identifier
 
-The `orderIdentifier` is the order's identifier. This path parameter is required when you [get the line items for an order](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1orders\~1%7BorderId%7D\~1line-items/get), [get a line item for an order](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1orders\~1%7BorderId%7D\~1line-items\~1%7BlineItemId%7D/get), or [get line items for an order](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1orders\~1%7BorderId%7D\~1line-items/get), or [get a line item for an order](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1orders\~1%7BorderId%7D\~1line-items\~1%7BlineItemId%7D/get).
+The `orderId` is the order's identifier. This path parameter is required when you [get the line items for an order](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1orders\~1%7BorderId%7D\~1line-items/get), [get a line item for an order](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1orders\~1%7BorderId%7D\~1line-items\~1%7BlineItemId%7D/get), or [get line items for an order](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1orders\~1%7BorderId%7D\~1line-items/get), or [get a line item for an order](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1orders\~1%7BorderId%7D\~1line-items\~1%7BlineItemId%7D/get).
 
 ### Line items identifier
 

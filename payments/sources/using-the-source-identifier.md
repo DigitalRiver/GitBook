@@ -6,6 +6,8 @@ description: Learn how to manage sources.
 
 ## Best practice flows by payment type
 
+<mark style="background-color:orange;">??? What is the delayed payment flow for Alipay (domestic) and Alipay+ (cross-border)? ???</mark>
+
 ### Standard payment flow
 
 Use the following flow for standard payments such as [Apple Pay](../supported-payment-methods/apple-pay.md), [credit cards](../supported-payment-methods/credit-cards.md), [Google Pay](../supported-payment-methods/google-pay.md), [PayCo](../supported-payment-methods/payco.md), and [SEPA Direct Debit](../supported-payment-methods/sepa-direct-debit.md).&#x20;
@@ -54,7 +56,9 @@ Use the following flow for delayed payments such as [Wire Transfer](../supported
 
 ### Redirect then submit payment flow
 
-Use the following flow for redirect and submit payment methods such as [Afterpay](../supported-payment-methods/afterpay.md), [Bancontact](../supported-payment-methods/bancontact.md), [BLIK](../supported-payment-methods/blik.md), [iDEAL](../supported-payment-methods/ideal.md), [Klarna Financing](../supported-payment-methods/klarna.md), [Klarna Pay in 3](../supported-payment-methods/klarna.md), [Klarna Pay in 4](../supported-payment-methods/klarna.md), [Klarna Pay in 30 days](../supported-payment-methods/klarna.md), [Online Banking (IBP)](../supported-payment-methods/online-banking-ibp.md), [Online Banking (FPX)](../supported-payment-methods/fpx-online-banking.md), [Online Banking (Korea Bank Transfer)](../supported-payment-methods/korea-bank-transfer-online-banking.md),  [PayPal](../supported-payment-methods/paypal.md), [PayPal Billing Agreement](../supported-payment-methods/paypal-billing-agreement.md), [PayPal Credit](../supported-payment-methods/paypal-credit.md), [PayPal Pay in 3](../supported-payment-methods/paypal-pay-in-3.md), [PayPal Pay in 4](../supported-payment-methods/paypal-pay-in-4.md), [PayPal TatenZahlung (Installment Payment)](../supported-payment-methods/paypal-ratenzahlung-installment-payment.md), and [TreviPay](../supported-payment-methods/trevipay.md).&#x20;
+<mark style="background-color:orange;">??? Is this the correct flow for Alipay (domestic) and Alipay+ (cross-border)? ???</mark>
+
+Use the following flow for redirect and submit payment methods such as [Afterpay](../supported-payment-methods/afterpay.md), [Alipay (domestic)](../supported-payment-methods/alipay-domestic.md), [Alipay+ (cross-border)](../supported-payment-methods/alipay+-cross-border.md), [Bancontact](../supported-payment-methods/bancontact.md), [BLIK](../supported-payment-methods/blik.md), [iDEAL](../supported-payment-methods/ideal.md), [Klarna Financing](../supported-payment-methods/klarna.md), [Klarna Pay in 3](../supported-payment-methods/klarna.md), [Klarna Pay in 4](../supported-payment-methods/klarna.md), [Klarna Pay in 30 days](../supported-payment-methods/klarna.md), [Online Banking (IBP)](../supported-payment-methods/online-banking-ibp.md), [Online Banking (FPX)](../supported-payment-methods/fpx-online-banking.md), [Online Banking (Korea Bank Transfer)](../supported-payment-methods/korea-bank-transfer-online-banking.md),  [PayPal](../supported-payment-methods/paypal.md), [PayPal Billing Agreement](../supported-payment-methods/paypal-billing-agreement.md), [PayPal Credit](../supported-payment-methods/paypal-credit.md), [PayPal Pay in 3](../supported-payment-methods/paypal-pay-in-3.md), [PayPal Pay in 4](../supported-payment-methods/paypal-pay-in-4.md), [PayPal TatenZahlung (Installment Payment)](../supported-payment-methods/paypal-ratenzahlung-installment-payment.md), and [TreviPay](../supported-payment-methods/trevipay.md).&#x20;
 
 1. [Create the shopper token](../../shopper-apis/shopper-basics/common-use-cases/creating-a-customer.md).
 2. [Apply the shopper and their billing address to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post).&#x20;

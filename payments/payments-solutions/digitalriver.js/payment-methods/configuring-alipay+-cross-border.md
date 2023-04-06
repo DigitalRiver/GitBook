@@ -1,28 +1,30 @@
 ---
-description: Learn how to configure Alipay (domestic) for DigitalRiver.js with Elements
+description: >-
+  Learn how to configure Alipay+ (cross-border) for DigitalRiver.js with
+  Elements
 ---
 
-# Configuring Alipay (domestic)
+# Configuring Alipay+ (cross-border)
 
-If you're using[ DigitalRiver.js with Elements](../), you can create an Alipay (domestic) payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create an Alipay+ (cross-border) payment method for your app or website in four easy steps:
 
-* [Step 1: Alipay (domestic) Source Details object](alipay.md#step-1-build-an-alipay-domestic-source-request-object)
-* [Step 2: Create the Alipay (domestic) source using DigitalRiver.js](alipay.md#step-2-create-the-alipay-domestic-source-using-digitalriver.js)
-* [Step 3: Authorize an Alipay (domestic) source](alipay.md#step-3-authorize-an-alipay-domestic-source)
+* [Step 1: Alipay+ (cross-border) Source Details object](configuring-alipay+-cross-border.md#step-1-build-an-alipay+-cross-border-source-request-object)
+* [Step 2: Create the Alipay+ (cross-border) source using DigitalRiver.js](configuring-alipay+-cross-border.md#step-2-create-the-alipay+-cross-border-source-using-digitalriver.js)
+* [Step 3: Authorize an Alipay+ (cross-border) source](configuring-alipay+-cross-border.md#step-3-authorize-an-alipay+-cross-border-source)
 * [Step 4: Use the Authorized source](alipay.md#step-4-use-the-authorized-source)
 
-## Step 1: Build an Alipay (domestic) source request object
+## Step 1: Build an Alipay+ (cross-border) source request object
 
-Build an Alipay (domestic) Source Request object. The Alipay Source Request object requires the following fields.
+Build an Alipay+ (cross-border) Source Request object. The Alipay+ Source Request object requires the following fields.
 
-| Field     | Value                                                                                                                                       |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| type      | alipay                                                                                                                                      |
-| sessionId | The payment session identifier.                                                                                                             |
-| owner     | An [Owner object](common-payment-objects.md#owner-object).                                                                                  |
-| alipay    | An [Alipay (domestic) Source Details](alipay.md#alipay-domestic-source-details-object) object that includes the details of the transaction. |
+| Field       | Value                                                                                                                                                                           |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`      | `alipayCn`                                                                                                                                                                      |
+| `sessionId` | The payment session identifier.                                                                                                                                                 |
+| `owner`     | An [Owner object](common-payment-objects.md#owner-object).                                                                                                                      |
+| `alipayCn`  | An [Alipay+ (cross-border) Source Details object](configuring-alipay+-cross-border.md#alipay+-cross-border-source-details-object) that includes the details of the transaction. |
 
-### Alipay (domestic) source details object
+### Alipay+ (cross-border) source details object
 
 {% code overflow="wrap" %}
 ```javascript
@@ -32,11 +34,11 @@ Build an Alipay (domestic) Source Request object. The Alipay Source Request obje
 ```
 {% endcode %}
 
-| Field     | Required/Optional | Description                                                                                                             |
-| --------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| returnUrl | Required          | Where you will redirect your customer after the customer authorizes or cancels within the Alipay (domestic) experience. |
+| Field     | Required/Optional | Description                                                                                                                  |
+| --------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| returnUrl | Required          | Where you will redirect your customer after the customer authorizes or cancels within the Alipay+ (cross-border) experience. |
 
-## Step 2: Create the Alipay (domestic) source using DigitalRiver.js
+## Step 2: Create the Alipay+ (cross-border) source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -46,8 +48,8 @@ The `address` object must contain postal code and state/province data that [adhe
 
 {% code overflow="wrap" %}
 ```javascript
-let alipaySourceData = {
-                "type": "alipay",
+let alipayCnSourceData = {
+                "type": "alipayCn",
                 "sessionId": "3c9473b0-630d-4f20-af61-63d3aa8acb35",
                 "owner": {
                     "firstName": "Donglei",
@@ -62,12 +64,12 @@ let alipaySourceData = {
                         "postalCode": "528322"
                     }
                 },
-                "alipay": {
+                "alipayCn": {
                     "returnUrl": redirectUrl
                 }
             }
  
-digitalriver.createSource(alipaySourceData ).then(function(result) {
+digitalriver.createSource(alipayCn+SourceData ).then(function(result) {
     if (result.error) {
         //handle errors as something went wrong
     } else {
@@ -79,7 +81,7 @@ digitalriver.createSource(alipaySourceData ).then(function(result) {
 ```
 {% endcode %}
 
-### Alipay (domestic) source example
+### Alipay+ (cross-border) source example
 
 {% code overflow="wrap" %}
 ```javascript
@@ -89,7 +91,7 @@ digitalriver.createSource(alipaySourceData ).then(function(result) {
     "liveMode": false,
     "id": "5ce08114-143b-4bf6-ae0e-6fc501ee0c24",
     "clientSecret": "5ce08114-143b-4bf6-ae0e-6fc501ee0c24_a468b08e-2c47-4531-82af-d48d80ff6dcc",
-    "type": "alipay",
+    "type": "alipayCn",
     "reusable": false,
     "owner": {
         "firstName": "Donglei",
@@ -115,14 +117,14 @@ digitalriver.createSource(alipaySourceData ).then(function(result) {
         "redirectUrl": "https://api.digitalriverws.com:443/payments/redirects/51314834-9bf9-483f-b3a7-4b36a14d3f5c?apiKey=pk_hc_e03ee62c0d964bb3ac75595b1203d13c",
         "returnUrl": "returnUrl.com"
     },
-    "alipay": {}
+    "alipayCn+": {}
 }
 ```
 {% endcode %}
 
-## Step 3: Authorize an Alipay (domestic) source
+## Step 3: Authorize an Alipay+ (cross-border) source
 
-When you create an Alipay (domestic) source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
+When you create an Alipay+ (cross-border) source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
 
 ### Redirecting the customer for authorization
 
