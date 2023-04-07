@@ -4,7 +4,7 @@ description: Underdstand how categories work.
 
 # Categories
 
-A category is a collection of grouped products within your Global Commerce catalog. You can create, manage, delete, and add products to categories within your catalog via the [Global Commerce UI](https://gc.digitalriver.com/gc/ent/login.do).
+A category is a collection of grouped products within your Global Commerce catalog. You can create, manage, delete, and add products to categories within your catalog via the [Global Commerce UI](https://gc.digitalriver.com/gc/ent/login.do). You can also [retrieve categories programmatically](../../../../shopper-apis/product-discovery/categories.md).
 
 ![](../../../../.gitbook/assets/product-categories.png)
 
