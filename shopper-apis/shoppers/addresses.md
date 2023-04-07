@@ -43,7 +43,7 @@ You will receive a `204 No Content` response.
 
 ## Getting an address by identifier
 
-Use [`GET /v1/shoppers/me/addresses/{addressId}`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Addresses/paths/\~1v1\~1shoppers\~1me\~1addresses\~1%7BaddressId%7D/get) to get an address by its identifier (`addressId`).
+Use [`GET /v1/shoppers/me/addresses/{addressId}`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Addresses/paths/\~1v1\~1shoppers\~1me\~1addresses\~1%7BaddressId%7D/get) to get a shopper's address by its identifier (`addressId`).
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -87,7 +87,7 @@ curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/addresse
 
 ## Getting all shopper addresses
 
-Use [`GET /v1/shoppers/me/addresses`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Addresses/paths/\~1v1\~1shoppers\~1me\~1addresses/get) to get an address by its identifier (`addressId`).
+Use [`GET /v1/shoppers/me/addresses`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Addresses/paths/\~1v1\~1shoppers\~1me\~1addresses/get) to get all shopper addresses.
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -122,7 +122,7 @@ curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/addresse
 
 ## Deleting a shopper's address
 
-Use [DELETE /v1/shoppers/me/addresses/{addressId}](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Addresses/paths/\~1v1\~1shoppers\~1me\~1addresses\~1%7BaddressId%7D/delete) to delete a shopper's address.
+Use [DELETE /v1/shoppers/me/addresses/{addressId}](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Addresses/paths/\~1v1\~1shoppers\~1me\~1addresses\~1%7BaddressId%7D/delete) to delete a shopper's address  by its identifier (`addressId`).
 
 {% tabs %}
 {% tab title="cUR." %}

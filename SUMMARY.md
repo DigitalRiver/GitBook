@@ -15,7 +15,6 @@
     * [Applying store credit](shopper-apis/shopper-basics/common-use-cases/applying-store-credit.md)
     * [Private Store workflow](shopper-apis/shopper-basics/common-use-cases/private-store-workflow.md)
     * [Single-click checkout](shopper-apis/shopper-basics/common-use-cases/single-click-checkout.md)
-    * [Disclosures](shopper-apis/shopper-basics/common-use-cases/disclosures.md)
 * [OAuth](shopper-apis/oauth/README.md)
   * [Authentication](shopper-apis/oauth/authentication.md)
   * [OAuth 2.0 APIs](shopper-apis/oauth/oauth-2.0-apis.md)

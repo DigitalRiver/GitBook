@@ -4,7 +4,7 @@ description: Learn how to get a list of categories.
 
 # Simple call sequence example
 
-## Step 1: (Optional). Create a full-access token
+## Step 1: Create a full-access token (optional)
 
 To get a full access token, use the [POST oauth20/token](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Token/paths/\~1oauth20\~1token%20\(ROPC\)/post) request and provide the `client_id` and `grant_type` query parameters.
 

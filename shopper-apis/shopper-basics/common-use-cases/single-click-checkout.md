@@ -20,9 +20,7 @@ The request requires a valid authenticated customer token.
 
 ## Sending a product purchase request
 
-Send a [Product ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Products/paths/\~1v1\~1shoppers\~1me\~1products\~1{productId}/get)request with the specific product ID for the product that the customer wants to purchase. The following request sample purchases a product with a product ID of 291233200.
-
-The response header contains a `Location` header, as shown on line 4, to the order created for the transaction. The ID of the order is `1234567890`. The request and response bodies are empty.
+Send a [Product ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Products/paths/\~1v1\~1shoppers\~1me\~1products\~1{productId}/get)request with the specific product ID for the product that the customer wants to purchase.&#x20;
 
 {% tabs %}
 {% tab title="cURL" %}
