@@ -21,7 +21,6 @@ description: Learn about payment sources that are common to all payment methods.
 | ------------------------------------ | ---------------- |
 | Afterpay                             | afterPay         |
 | Alipay (domestic)                    | alipay           |
-| Alipay+ (cross-border)               | alipayCn         |
 | Apple Pay                            | applePay         |
 | Amazon Pay                           | amazonPay        |
 | Bancontact                           | bancontact       |

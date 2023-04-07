@@ -16,7 +16,6 @@ For a complete list of payment methods that can be paired with [store credit](..
 | --------------------------------------------------------------------------------------- | :--------------: | :---------------------------: | :--------------------: | :----------------: | :-----------------: |
 | [Afterpay](afterpay.md)                                                                 |         ✔        |               ✔               |            ✔           |          -         |      `redirect`     |
 | [Alipay (domestic)](alipay-domestic.md)                                                 |         ✔        |               ✔               |            ✔           |          -         |      `redirect`     |
-| [Alipay+ (cross-border)](alipay+-cross-border.md)                                       |         ✔        |               ✔               |            ✔           |          ✔         |      `redirect`     |
 | [Apple Pay](apple-pay.md)                                                               |         ✔        |               ✔               |            ✔           |          -         |      `standard`     |
 | [Amazon Pay](amazon-pay.md)                                                             |         -        |               ✔               |            ✔           |          ✔         |      `redirect`     |
 | [Bancontact](bancontact.md)                                                             |         ✔        |               ✔               |            ✔           |          -         |      `redirect`     |
