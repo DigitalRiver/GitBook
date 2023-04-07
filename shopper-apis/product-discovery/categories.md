@@ -4,6 +4,8 @@ description: Learn how to retrieve categories.
 
 # Categories
 
+A category is a class of products in a store. They are used to organize products in your catalog to help shoppers locate products and navigate your store or site.
+
 ## Getting all categories and subcategories
 
 The [`GET /v1/shoppers/me/categories`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Categories/paths/\~1v1\~1shoppers\~1me\~1categories/get) request retrieves all categories and subcategories. See [Categories query parameters](../../general-resources/shopper-apis-reference/categories.md#categories-query-parameters) for a description of the query parameters.&#x20;
