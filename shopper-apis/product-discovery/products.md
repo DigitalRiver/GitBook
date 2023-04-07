@@ -4,6 +4,8 @@ description: Learn how to retrieve product information.
 
 # Products
 
+You can retrieve [products](../../general-resources/admin-apis-reference/products.md) programmatically.
+
 ## Getting volume pricing for a specific product
 
 The [`GET /v1/shoppers/me/products/{productId}/pricing/volume-pricing`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Products/paths/\~1v1\~1shoppers\~1me\~1products\~1%7BproductId%7D\~1pricing\~1volume-pricing/get) request retrieves volume pricing for a specific [product ](../../general-resources/admin-apis-reference/products.md)by its [product identifier](broken-reference) (`productId`).

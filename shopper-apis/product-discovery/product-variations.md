@@ -4,6 +4,8 @@ description: Learn how to retrieve product variation information.
 
 # Product variations
 
+You can retrieve [product variations](../../general-resources/admin-apis-reference/products.md#product-variations) programmatically.
+
 ## Getting product variations
 
 The [`GET /v1/shoppers/me/products/{productId}/variations`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Product-Variations) request gets all [product variations](../../general-resources/admin-apis-reference/products.md#product-variations) for a specified [product identifier](broken-reference) (`productId`) (`productId`).

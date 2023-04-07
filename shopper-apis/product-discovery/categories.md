@@ -4,7 +4,7 @@ description: Learn how to retrieve categories.
 
 # Categories
 
-A category is a collection of grouped products within a catalog. They are used to organize products in your catalog to help shoppers locate products and navigate your store or site. You can also [manage categories](../../general-resources/common-shoppers-and-admin-apis-reference/global-commerce/categories/) using [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
+A category is a collection of grouped products within a catalog. They are used to organize products in your catalog to help shoppers locate products and navigate your store or site. This topic explains how to retrieve a category programmatically. You can also [manage categories](../../general-resources/common-shoppers-and-admin-apis-reference/global-commerce/categories/) using [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 
 ## Getting all categories and subcategories
 
