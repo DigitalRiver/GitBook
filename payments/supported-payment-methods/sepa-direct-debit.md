@@ -24,5 +24,5 @@ How you configure SEPA Direct Debit depends on whether you're using [DigitalRive
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
 
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
+* **Payment Method Guide:** d[igitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method/sepa-direct-debit/)
 * **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

@@ -30,5 +30,5 @@ How you configure TreviPay depends on whether you're using [DigitalRiver.js with
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:
 
-* Payment Method Guide: [digitalriver.com/payment-method-guide/](https://www.digitalriver.com/payment-method-guide/)
+* Payment Method Guide: [digitalriver.com/payment-method-guide/](https://www.digitalriver.com/payment-method/trustly/)
 * Country Guide: [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)

@@ -131,5 +131,5 @@ Alternatively, you can:&#x20;
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;
 
-* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method-guide/)
+* **Payment Method Guide:** [digitalriver.com/payment-method-guide](https://www.digitalriver.com/payment-method/trevipay/)
 * **Country Guide:** [digitalriver.com/country-guide/](https://www.digitalriver.com/country-guide/)
