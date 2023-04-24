@@ -80,10 +80,10 @@ The `termsOfSalesAcceptance` indicates whether or not the shopper accepted the [
 When the value for `taxIncludedPrice` is `true`, the listed price information in the response is tax inclusive. When the value is `false`, the listed price information in the response is tax exclusive.
 
 * The following fields display prices based on the `taxIncludedPrice` field's value at the line item level.
-  * [`listPrice`](../orders/pricing.md#list-price)
-  * [`listPriceWithQuantity`](../orders/pricing.md#list-price-with-quantity)
-  * [`salePrice`](../orders/pricing.md#sale-price)
-  *   [`salePriceWithQuantity`](../orders/pricing.md#sales-price-with-quantity): This is the total calculated price for the line item with quantity. The sales price with quantity includes:
+  * [`listPrice`](pricing.md#list-price)
+  * [`listPriceWithQuantity`](pricing.md#list-price-with-quantity)
+  * [`salePrice`](pricing.md#sale-price)
+  *   [`salePriceWithQuantity`](pricing.md#sales-price-with-quantity): This is the total calculated price for the line item with quantity. The sales price with quantity includes:
 
       * The line item level discount.
       * The "Included in Price fee ( an invisible fee) if it is configured for the line item.
@@ -95,20 +95,20 @@ When the value for `taxIncludedPrice` is `true`, the listed price information in
       * The "Excluded from price" fee (a visible fee).
       * If the price is set to tax-exclusive, this price will **not** include tax.
 * At the order level, the following fields display prices based on the value of the `taxIncludedPrice` field.
-  * [`Subtotal`](../orders/pricing.md#subtotal): sum([`salePriceWithQuantity`](../orders/pricing.md#sales-price-with-quantity)) + sum(visible fee)
-  * [`subtotalWithDiscount`](../orders/pricing.md#subtotal-with-discount)
-  * [`discount`](../orders/pricing.md#discount)
-  * [`shippingAndHandling`](../orders/pricing.md#shipping-and-handling)
+  * [`Subtotal`](pricing.md#subtotal): sum([`salePriceWithQuantity`](pricing.md#sales-price-with-quantity)) + sum(visible fee)
+  * [`subtotalWithDiscount`](pricing.md#subtotal-with-discount)
+  * [`discount`](pricing.md#discount)
+  * [`shippingAndHandling`](pricing.md#shipping-and-handling)
 
-The following fields are not `taxinclusive`/`exclusive` related. However, they are taxes or include taxes such as [`orderTotal`:](../orders/pricing.md#order-total)
+The following fields are not `taxinclusive`/`exclusive` related. However, they are taxes or include taxes such as [`orderTotal`:](pricing.md#order-total)
 
 * At the line item level:
-  * [`productTax`](../orders/pricing.md#product-tax)
-  * [`shippingTax`](../orders/pricing.md#shipping-tax)
-  * [`feeTax`](../orders/pricing.md#fee-tax)
-  * [`importTax`](../orders/pricing.md#import-tax)
-  * [`importDuty`](../orders/pricing.md#import-duty)
+  * [`productTax`](pricing.md#product-tax)
+  * [`shippingTax`](pricing.md#shipping-tax)
+  * [`feeTax`](pricing.md#fee-tax)
+  * [`importTax`](pricing.md#import-tax)
+  * [`importDuty`](pricing.md#import-duty)
 * At the order level:
-  * [`tax`](../orders/pricing.md#tax)
-  * [`importTaxAndDuty`](../orders/pricing.md#import-tax-and-duty)
-  * [`orderTotal`](../orders/pricing.md#order-total)
+  * [`tax`](pricing.md#tax)
+  * [`importTaxAndDuty`](pricing.md#import-tax-and-duty)
+  * [`orderTotal`](pricing.md#order-total)

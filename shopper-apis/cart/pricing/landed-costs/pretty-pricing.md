@@ -101,7 +101,7 @@ The callouts in the following list show the API response payloads that correspon
 
 <figure><img src="../../../../.gitbook/assets/Cart with pretty pricing.png" alt=""><figcaption></figcaption></figure>
 
-1. The total calculated price for the line item with quantity ([`listPriceWithQuantity`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#list-price-with-quantity)). You can find it here in the response:\
+1. The total calculated price for the line item with quantity ([`listPriceWithQuantity`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#list-price-with-quantity)). You can find it here in the response:\
    \
    `"lineItems": {`\
    `...`\
@@ -119,7 +119,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20; `}`\
    `...`\
    `}`
-2. The  total calculated price for the line item with quantity ([`salePriceWithQuantity`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#sale-price-with-quantity)). You can find it here in the response:\
+2. The  total calculated price for the line item with quantity ([`salePriceWithQuantity`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#sale-price-with-quantity)). You can find it here in the response:\
    \
    `"lineItems": {`\
    `...`\
@@ -137,7 +137,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20; `}`\
    `...`\
    `}`
-3. The shipping and handling fee of the order ([`shippindAndHandling`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#shipping-and-handling)). You can find it here in the response:\
+3. The shipping and handling fee of the order ([`shippindAndHandling`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#shipping-and-handling)). You can find it here in the response:\
    \
    `"pricing": {` \
    `...` \
@@ -147,7 +147,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20;  `},` \
    `...`\
    `}`
-4. The final price of the order ([`orderTotal`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#order-total)). You can find it here in the response:\
+4. The final price of the order ([`orderTotal`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#order-total)). You can find it here in the response:\
    \
    `"pricing": {` \
    `...` \
@@ -166,7 +166,7 @@ The callouts in the following list show the API response payloads that correspon
 
 <figure><img src="../../../../.gitbook/assets/Order review pretty pricing.png" alt=""><figcaption></figcaption></figure>
 
-1. The final price of the order ([`orderTotal`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#order-total)). You can find it here in the response:\
+1. The final price of the order ([`orderTotal`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#order-total)). You can find it here in the response:\
    \
    `pricing` > `orderTotal`\
    `"pricing": {` \
@@ -177,7 +177,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20;  `},` \
    `...`\
    `}`
-2. The import taxes and duties of the order, which is the sum of import taxes and duties for all the line items ([`importTaxAndDuty`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#import-tax-and-duty)). Make sure the value for [`landedCostState`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#landed-cost-state) is `PREPAID`. You can find it here in the response:\
+2. The import taxes and duties of the order, which is the sum of import taxes and duties for all the line items ([`importTaxAndDuty`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-tax-and-duty)). Make sure the value for [`landedCostState`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#landed-cost-state) is `PREPAID`. You can find it here in the response:\
    \
    `pricing` > `orderTotal`\
    `"pricing": {` \
@@ -197,7 +197,7 @@ The callouts in the following list show the API response payloads that correspon
 
 <figure><img src="../../../../.gitbook/assets/Thank you pretty pricing (1).png" alt=""><figcaption></figcaption></figure>
 
-1. The final price of the order ([`orderTotal`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#order-total)). You can find it here in the response:\
+1. The final price of the order ([`orderTotal`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#order-total)). You can find it here in the response:\
    \
    `"pricing": {` \
    `...` \
@@ -216,7 +216,7 @@ The callouts in the following list show the API response payloads that correspon
 
 <figure><img src="../../../../.gitbook/assets/Invoice pretty pricing (1).png" alt=""><figcaption></figcaption></figure>
 
-1. The  total calculated price for the line item with quantity ([`salePriceWithQuantity`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#sale-price-with-quantity)). You can find it here in the response:\
+1. The  total calculated price for the line item with quantity ([`salePriceWithQuantity`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#sale-price-with-quantity)). You can find it here in the response:\
    \
    `"lineItems": {`\
    `...`\
@@ -234,7 +234,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20; `}`\
    `...`\
    `}`
-2. The shipping and handling fee ([`shippindAndHandling`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#shipping-and-handling)). You can find it here in the response:\
+2. The shipping and handling fee ([`shippindAndHandling`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#shipping-and-handling)). You can find it here in the response:\
    \
    `"pricing": {` \
    `...` \
@@ -244,7 +244,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20;  `},` \
    `...`\
    `}`
-3. The final price of the order ([`orderTotal`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#order-total)). You can find it here in the response:\
+3. The final price of the order ([`orderTotal`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#order-total)). You can find it here in the response:\
    \
    `"pricing": {` \
    `...` \
@@ -254,7 +254,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20;  `},` \
    `...`\
    `}`
-4.  The order-level import taxes and duty ([`importTaxAndDuty`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#import-tax-and-duty)) is the sum of **all** line items' import taxes ([`importTax`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#import-duty)) and import duties ([`importDuty`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#import-duty)). For example:
+4.  The order-level import taxes and duty ([`importTaxAndDuty`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-tax-and-duty)) is the sum of **all** line items' import taxes ([`importTax`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-duty)) and import duties ([`importDuty`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-duty)). For example:
 
     * `importDutyTax`: 75
     * `lineItem`: A
@@ -264,7 +264,7 @@ The callouts in the following list show the API response payloads that correspon
       * `importTax`: 30
       * `importDuty`: 20
 
-    Make sure the value for [`landedCostState`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#landed-cost-state) is `PREPAID`. You can find it here in the response:\
+    Make sure the value for [`landedCostState`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#landed-cost-state) is `PREPAID`. You can find it here in the response:\
     \
     `"pricing": {` \
     `...` \
@@ -301,7 +301,7 @@ The callouts in the following list show the API response payloads that correspon
 
 <figure><img src="../../../../.gitbook/assets/Invoice 2 pretty pricing with additional information.png" alt=""><figcaption></figcaption></figure>
 
-1. The  total calculated price for the line item with quantity ([`salePriceWithQuantity`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#sale-price-with-quantity)). You can find it here in the response:\
+1. The  total calculated price for the line item with quantity ([`salePriceWithQuantity`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#sale-price-with-quantity)). You can find it here in the response:\
    \
    `"lineItems": {`\
    `...`\
@@ -319,7 +319,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20; `}`\
    `...`\
    `}`
-2. The tax amount for the product ([`productTax`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#product-tax)) at the line-item level with quantity. You can find it here in the response:\
+2. The tax amount for the product ([`productTax`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#product-tax)) at the line-item level with quantity. You can find it here in the response:\
    \
    `"lineItems": {`\
    `...`\
@@ -355,7 +355,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20; `}`\
    `...`\
    `}`
-3. The sum of the import tax ([`importTax`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#import-duty)) and import duty ([`importDuty`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#import-duty)). (Make sure the value for [`landedCostState`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#landed-cost-state) is `PREPAID`.) You can find it here in the response:\
+3. The sum of the import tax ([`importTax`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-duty)) and import duty ([`importDuty`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-duty)). (Make sure the value for [`landedCostState`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#landed-cost-state) is `PREPAID`.) You can find it here in the response:\
    \
    `"lineItems": {`\
    `...`\
@@ -395,7 +395,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20; `}`\
    `...`\
    `}`
-4. The sale price with quantity ([`salePriceWithQuantity`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#sale-price-with-quantity)) excluding the import tax ([`importTax`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#import-tax)) and import duty ([`importDuty`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#import-duty)).\
+4. The sale price with quantity ([`salePriceWithQuantity`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#sale-price-with-quantity)) excluding the import tax ([`importTax`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-tax)) and import duty ([`importDuty`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-duty)).\
    \
    `"lineItems": {`\
    `...`\
@@ -426,7 +426,7 @@ The callouts in the following list show the API response payloads that correspon
    `...`\
    `}`\
 
-5. The shipping and handling fee ([`shippindAndHandling`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#shipping-and-handling)). You can find it here in the response:\
+5. The shipping and handling fee ([`shippindAndHandling`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#shipping-and-handling)). You can find it here in the response:\
    \
    `"pricing": {` \
    `...` \
@@ -436,7 +436,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20;  `},` \
    `...`\
    `}`
-6. The sum of import taxes and duties for all the line items ([`importTaxAndDuty`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#import-tax-and-duty)). Make sure the value for [`landedCostState`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#landed-cost-state) is `PREPAID`. You can find it here in the response:\
+6. The sum of import taxes and duties for all the line items ([`importTaxAndDuty`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-tax-and-duty)). Make sure the value for [`landedCostState`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#landed-cost-state) is `PREPAID`. You can find it here in the response:\
    \
    `"pricing": {` \
    `...` \
@@ -446,7 +446,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20;  `},` \
    `...`\
    `}`
-7. The sum of all taxes ([`tax`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#tax)) for the order. You can find it here in the response:\
+7. The sum of all taxes ([`tax`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#tax)) for the order. You can find it here in the response:\
    \
    `"pricing": {` \
    `...` \
@@ -456,7 +456,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20;  `},` \
    `...`\
    `}`
-8. The final price of the order ([`orderTotal`](../../../../general-resources/shopper-apis-reference/orders/pricing.md#order-total)). You can find it here in the response:\
+8. The final price of the order ([`orderTotal`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#order-total)). You can find it here in the response:\
    \
    `"pricing": {` \
    `...` \
