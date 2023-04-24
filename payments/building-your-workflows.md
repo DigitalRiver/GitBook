@@ -123,7 +123,7 @@ let dropin = digitalriver.createDropin(configuration);
 
 Drop-in Payments renders in the specified container.
 
-![](<../.gitbook/assets/image (2) (1) (1).png>)
+![](<../.gitbook/assets/image (2) (3).png>)
 
 Customers enter their credit card information and click the [configurable ](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button)Pay Now button**.**&#x20;
 
@@ -214,7 +214,7 @@ let dropin = digitalriver.createDropIn(configuration);
 
 The modal renders in the specified container.
 
-![](<../.gitbook/assets/image (3) (1).png>)
+![](../.gitbook/assets/image.png)
 
 Customers enter their credit card information, actively accept the save payment agreement, and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button) pay now button.
 
@@ -602,7 +602,7 @@ let dropin = digitalriverpayments.createDropIn(configuration);
 
 The modal window renders in the specified container.
 
-![](<../.gitbook/assets/image (4) (1).png>)
+![](<../.gitbook/assets/image (1).png>)
 
 Shoppers enter their credit card information, select the save payment agreement option and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button) add payment method button.&#x20;
 

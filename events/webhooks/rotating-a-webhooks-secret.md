@@ -12,7 +12,7 @@ To rotate a webhook's secret:
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 2. Select **Administration**, and then click **Webhook Service**. The Webhook Service page appears. \
-   <img src="../../.gitbook/assets/Webhook-Service.png" alt="" data-size="original">&#x20;
+   <img src="../../.gitbook/assets/Webhook Service.png" alt="" data-size="original">&#x20;
 3. Find the webhook with the secret you want to rotate and click the **Rotate Secret** link. The Reveal Secret dialog appears. \
    <img src="../../.gitbook/assets/Rotate-Secret.png" alt="" data-size="original">&#x20;
 4. Choose an expiration option from the **Expiration Time** list. Your options are **Immediately**, **1 Hour**, **3 Hours**, **6 Hours**, **12 Hours**, or **24 Hours**.

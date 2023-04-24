@@ -14,7 +14,7 @@ The [Carts ](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Carts)r
 
 ## Cart resource
 
-The following describes some of the key attributes for a [cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post).
+The following describes some of the key attributes of a [cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post).
 
 ### Billing Address
 
@@ -30,7 +30,7 @@ The `chargeType` specifies the charge type for the transaction. The valid values
 
 ### Custom attributes
 
-The `customAttributes` is an object that list the default custom attributes.
+The `customAttributes` is an object that lists the default custom attributes.
 
 ### IP address
 
@@ -42,7 +42,7 @@ The `lineItems` is an object containing the line items associated with the cart.
 
 #### Line item
 
-The `lineItem` is an array of ofobjects that define the line item.
+The `lineItem` is an array of objects that define the line item.
 
 * **Quantity**: The `quantity` is the number of products added to the cart. The value must be a valid integer. If the quantity is not explicitly specified, the default is 1.
 * **Product**: The `product` object.
@@ -61,7 +61,7 @@ The `lineItem` is an array of ofobjects that define the line item.
 
 ### Organization identifier
 
-The `organizationId` is the identifier used to identify the business. This string allows a maximum of 50 characters. You can use it to supply the shopper's [`companyId`](./#company-identifier) when the shopper chooses [TreviPay](../../../payments/supported-payment-methods/trevipay.md) as the payment method.
+The `organizationId` is the identifier used to identify the business. This string allows a maximum of 50 characters. You can use it to supply the shopper's [`companyId`](./#company-identifier) when they choose [TreviPay](../../../payments/supported-payment-methods/trevipay.md) as the payment method.
 
 ### Shipping address
 
@@ -69,9 +69,46 @@ The `shippingAddress` object contains the shopper's shipping information.
 
 ### Suppress order confirmation email
 
-A real order uses `suppressorderconfirmationemail` to suppress the order confirmation e-mail. If you want to use this feature, contact your Customer Success Manager.
+A real order uses `suppressorderconfirmationemail` to suppress the order confirmation email. If you want to use this feature, contact your Customer Success Manager.
 
 ### Terms of sales acceptance
 
 The `termsOfSalesAcceptance` indicates whether or not the shopper accepted the [Terms of Service](../../../shopper-apis/cart/creating-or-updating-a-cart/terms-of-sale-acceptance.md).
 
+## Pricing fields
+
+When the value for `taxIncludedPrice` is `true`, the listed price information in the response is tax inclusive. When the value is `false`, the listed price information in the response is tax exclusive.
+
+* The following fields display prices based on the `taxIncludedPrice` field's value at the line item level.
+  * [`listPrice`](../orders/pricing.md#list-price)
+  * [`listPriceWithQuantity`](../orders/pricing.md#list-price-with-quantity)
+  * [`salePrice`](../orders/pricing.md#sale-price)
+  *   [`salePriceWithQuantity`](../orders/pricing.md#sales-price-with-quantity): This is the total calculated price for the line item with quantity. The sales price with quantity includes:
+
+      * The line item level discount.
+      * The "Included in Price fee ( an invisible fee) if it is configured for the line item.
+      * If the price list is set to tax-inclusive, this price will include tax.
+
+      It does not include:
+
+      * The order level discount.
+      * The "Excluded from price" fee (a visible fee).
+      * If the price is set to tax-exclusive, this price will **not** include tax.
+* At the order level, the following fields display prices based on the value of the `taxIncludedPrice` field.
+  * [`Subtotal`](../orders/pricing.md#subtotal): sum([`salePriceWithQuantity`](../orders/pricing.md#sales-price-with-quantity)) + sum(visible fee)
+  * [`subtotalWithDiscount`](../orders/pricing.md#subtotal-with-discount)
+  * [`discount`](../orders/pricing.md#discount)
+  * [`shippingAndHandling`](../orders/pricing.md#shipping-and-handling)
+
+The following fields are not `taxinclusive`/`exclusive` related. However, they are taxes or include taxes such as [`orderTotal`:](../orders/pricing.md#order-total)
+
+* At the line item level:
+  * [`productTax`](../orders/pricing.md#product-tax)
+  * [`shippingTax`](../orders/pricing.md#shipping-tax)
+  * [`feeTax`](../orders/pricing.md#fee-tax)
+  * [`importTax`](../orders/pricing.md#import-tax)
+  * [`importDuty`](../orders/pricing.md#import-duty)
+* At the order level:
+  * [`tax`](../orders/pricing.md#tax)
+  * [`importTaxAndDuty`](../orders/pricing.md#import-tax-and-duty)
+  * [`orderTotal`](../orders/pricing.md#order-total)

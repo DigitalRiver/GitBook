@@ -23,7 +23,7 @@ To enable the Enforce Unique Value:
 1. Sign in to Global Commerce.
 2. Select **Administration**, select **Company**, and then click **Configure Company Settings**. The Configure Company Settings page appears.
 3. Scroll down to **Product External Reference Number** and select **Yes** next to **Enforce Unique Value**.\
-   <img src="../../.gitbook/assets/image (1).png" alt="" data-size="original">
+   <img src="../../.gitbook/assets/image (1) (1).png" alt="" data-size="original">
 4. Click **Save**.
 
 ## Admin APIs and ERID

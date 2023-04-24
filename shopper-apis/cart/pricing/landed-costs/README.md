@@ -1,21 +1,21 @@
 ---
-description: Understand how landed costs work and how to apply them to orders.
+description: Understand how landed cost work and how to apply them to orders.
 ---
 
 # Landed costs
 
-Landed costs represent the total amount your customer must pay to purchase a physical product from one country and have it shipped to an address in another country. It includes international shipping, [taxes](../cart/configuring-taxes/), and relevant taxes and duties.
+Landed cost represents the total amount your customer must pay to purchase a physical product from one country and have it shipped to an address in another country. It includes international shipping, [taxes](../../configuring-taxes/), and relevant taxes and duties.
 
-A cross-border transaction often incurs additional duties that are not displayed to the customer at the time of checkout. The customer, however, is still responsible for paying these hidden costs when the order arrives at its destination.
+A cross-border transaction often incurs additional duties that are not displyed to the customer at the time of checkout. The customer, however, is still responsible for paying these hidden costs when the order arrives at its destination.
 
-You can use the Digital River [landed cost feature](landed-costs.md#digital-rivers-landed-cost-feature) to present customers with the full cost of international orders, thereby minimizing both customs delays and unanticipated expenses at the time of delivery.&#x20;
+You can use the Digital River [landed cost feature](./#digital-rivers-landed-cost-feature) to present customers with the full cost of international orders, thereby minimizing both customs delays and unanticipated expenses at the time of delivery.&#x20;
 
-Once [configured](landed-costs.md#configuring-the-landed-cost-feature), the feature is [automatically triggered](landed-costs.md#triggering-the-landed-cost-feature) on applicable orders. For these orders, [cross-border specific costs are calculated](landed-costs.md#calculating-landed-cost) and [built into the order total](landed-costs.md#collecting-landed-cost).&#x20;
+Once [configured](./#configuring-the-landed-cost-feature), the feature is [automatically triggered](./#triggering-the-landed-cost-feature) on applicable orders. For these orders, [cross-border specific cost are calculated](./#calculating-landed-cost) and [built into the order total](./#collecting-landed-cost).&#x20;
 
-Landed cost is represented by several attributes at both the [cart or order level](landed-costs.md#cart-or-order-level-attributes) and the [line-item level](landed-costs.md#line-item-level-attributes). These allow you to determine the total duty paid on the order as well as who remits the various taxes.&#x20;
+Landed cost is represented by several attributes at both the [cart or order level](./#cart-or-order-level-attributes) and the [line-item level](./#line-item-level-attributes). These allow you to determine the total duty paid on the order as well as who remits the various taxes.&#x20;
 
 {% hint style="info" %}
-If you want to use this feature, contact your Customer Success Manager.
+Digital River only supports landed cost mixed cart and landed cost pretty pricing for the API solution. Digital River does not support landed cost mixed cart and landed cost pretty price for the Global Commerce-hosted flow. If you want to use this feature, contact your Customer Success Manager.
 {% endhint %}
 
 ## Considerations
@@ -24,21 +24,21 @@ Shipments from one EU member state to another EU member state are not considered
 
 ## Digital River’s landed cost feature
 
-The Digital River landed cost feature, once [you have it correctly configured](landed-costs.md#configuring-the-landed-cost-feature), automatically [calculates](landed-costs.md#calculating-landed-cost) and [collects](landed-costs.md#collecting-landed-cost) the full landed cost of [every applicable order](landed-costs.md#triggering-the-landed-cost-feature).&#x20;
+Once [you have it correctly configured](./#configuring-the-landed-cost-feature), the Digital River landed cost feature automatically [calculates](./#calculating-landed-cost) and [collects](./#collecting-landed-cost) the total landed cost of [every applicable order](./#triggering-the-landed-cost-feature).&#x20;
 
 The landed cost feature is available to anyone who integrates with the Commerce API. This is true whether you orchestrate your own fulfillment or delegate the responsibility to Digital River.
 
 ### Configuring the landed cost feature
 
-To configure the [landed cost feature](landed-costs.md#digital-rivers-landed-cost-feature), you'll need to complete the following steps:
+To configure the [landed cost feature](./#digital-rivers-landed-cost-feature), you'll need to complete the following steps:
 
 1. Verify your fulfiller ships packages outside their country (not all fulfillers provide this service).
-2. Verify your shipper is willing and able to prepay the landed costs on behalf of the customer and then send the invoice to you.
-3. Sign an addendum in your Digital River contract to enable landed costs.
-4. For each product in your catalog that is eligible for cross-border shipping, specify the [Harmonized System code](https://www.trade.gov/harmonized-system-hs-codes) when [creating ](landed-costs.md#creating-a-product-for-landed-costs)or updating the product.
+2. Verify your shipper is willing and able to prepay the landed cost on behalf of the customer and then send the invoice to you.
+3. Sign an addendum in your Digital River contract to enable landed cost.
+4. For each product in your catalog that is eligible for cross-border shipping, specify the [Harmonized System code](https://www.trade.gov/harmonized-system-hs-codes) when [creating ](./#creating-a-product-for-landed-costs)or updating the product.
 5. Define the cross-border patterns (that is, the ship-to or ship-from countries) where you want to enable the landed cost feature. These ship-to countries must be supported by Digital River and cannot include embargoed nations.
 6. Provide samples of completed customs forms to Digital River's Compliance department for approval.
-7. Provide your account manager with a list of the ship from and ship to countries for which you want to enable the collection of landed costs. Before you use the Landed Costs resource, Digital River must enable landed costs. If the landed cost is not enabled, the [Landed Cost Shipment Method](landed-costs.md#enabling-the-landed-costs-in-global-commerce) won't appear in Global Commerce.&#x20;
+7. Provide your account manager with a list of the ship from and ship to countries for which you want to enable the collection of landed costs. Before you use the Landed Cost resource, Digital River must enable landed costs. If the landed cost is not enabled, the [Landed Cost Shipment Method](./#enabling-the-landed-costs-in-global-commerce) won't appear in Global Commerce.&#x20;
 
 ### Enabling the landed costs in Global Commerce
 
@@ -50,10 +50,10 @@ To enable landed costs for your site from Global Commerce:
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 2. If your company has more than one site, select the site from the **Sites** field. If your company has only one site, Global Commerce automatically populates the **Site** field.\
-   &#x20;<img src="../../.gitbook/assets/sites.png" alt="" data-size="original">&#x20;
+   &#x20;<img src="../../../../.gitbook/assets/Sites.png" alt="" data-size="original">&#x20;
 3. Select **Administration**, select **Site**, and click **Configure Site Settings**.
 4. Click the **Fulfillment** tab and scroll down to **Landed Cost Shipment Methods**.\
-   &#x20;<img src="../../.gitbook/assets/landed-cost-shipment-methods.png" alt="" data-size="original">&#x20;
+   &#x20;<img src="../../../../.gitbook/assets/Landed-Cost-Shipment-Methods.png" alt="" data-size="original">&#x20;
 5. Select **Enabled** and then click **Save**.
 
 ### Setting the price list to tax exclusive
@@ -62,10 +62,10 @@ To enable landed costs for your site from Global Commerce:
 You need the Pricing Manager role to perform this task.
 {% endhint %}
 
-To use the landed costs feature, you must set the price list to tax exclusive. When you set the price list to tax-exclusive, the `shippingAndHandling` value is also tax exclusive.
+You must set the price list to tax exclusive to use the landed costs feature. When you set the price list to tax-exclusive, the `shippingAndHandling` value is also tax exclusive.
 
 1. From [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), select **Catalog**, select **Pricing & Plans**, and click **Manage Price Lists**. The Price Lists page appears.
-2. Complete the search fields under the **Search and Filters** tab and then click **Search** ![Search](https://help.digitalriver.com/help/Resources/Images/Shared/search.png) to locate the specific price list. The results appear under Price Lists.
+2. Complete the search fields under the **Search and Filters** tab and click **Search** ![Search](https://help.digitalriver.com/help/Resources/Images/Shared/search.png) to locate the specific price list. The results appear under Price Lists.
 3. Click the link for the price list under the **Name** column. The Price List Details page appears.
 4. Scroll down to **Currencies** and click **Edit**. The Edit Price List Currency page appears.
 5. Select the currency you want to modify from the **Currency** dropdown list.
@@ -85,38 +85,38 @@ When [creating a product](https://help.digitalriver.com/help/gc/Products/All-Pro
 
 ### Triggering the landed cost feature
 
-Once you have successfully [configured the feature](landed-costs.md#configuring-the-landed-cost-feature), landed cost is calculated on orders where the physical products are shipped across international borders to an approved country. The exception is the European Union, where shipments between countries are exempt from duties.
+Once you have successfully [configured the feature](./#configuring-the-landed-cost-feature), landed cost is calculated on orders where the physical products are shipped across international borders to an approved country. The exception is the European Union, where shipments between countries are exempt from duties.
 
-More precisely, [landed cost is automatically calculated](landed-costs.md#calculating-landed-cost) when you submit a `POST/carts` request and all of the following conditions exist:
+More precisely, [landed cost is automatically calculated](./#calculating-landed-cost) when you submit a `POST/carts` request, and all of the following conditions exist:
 
-* The order contains [physical products](landed-costs.md#creating-a-product-for-landed-costs) and digital products as long as it follows the guidelines for mixed cart scenarios
-* The ship-from country and the ship-to country are specified in the request and the values are different
+* The order contains [physical products](./#creating-a-product-for-landed-costs) and digital products as long as it follows the guidelines for mixed cart scenarios
+* The ship-from country and the ship-to country are different
 * The ship-from country and the ship-to country are _both_ non-EU nations&#x20;
 * The ship-to country is on our approved list&#x20;
-* Product and shipping choice prices are provided in the request and these values are inclusive of any applied discounts
-* Each product in the order contains a [Harmonized System code](landed-costs.md#creating-a-product-for-landed-costs) that is registered in our system
+* Product and shipping choice prices are provided in the request,. and these values are inclusive of any applied discounts
+* Each product in the order contains a [Harmonized System code](./#creating-a-product-for-landed-costs) that is registered in our system
 
 {% hint style="warning" %}
-The landed cost feature does not support mixed cart orders. If some items in the order are eligible for landed cost calculation, but others are not, your integration will need to submit multiple orders.&#x20;
+The landed cost feature does not support mixed cart orders. If some items in the order are eligible for landed cost calculation but others are not, your integration must to calculate landed costs on applicable orders and submit multiple orders.&#x20;
 {% endhint %}
 
 ### Calculating landed cost
 
-To calculate landed cost on [applicable orders](landed-costs.md#triggering-the-landed-cost-feature), Digital River makes an API call to a third-party service. For each call to the service, we assess a fee. This fee is in addition to the other license or transaction fees that you may incur.
+To calculate landed costs on [applicable orders](./#triggering-the-landed-cost-feature), Digital River makes an API call to a third-party service. For each call to the service, we assess a fee. This fee is in addition to the other license or transaction fees that you may incur.
 
 ### Collecting landed cost
 
-In the response, we provide you an [itemized breakdown](landed-costs.md#how-landed-cost-is-represented) of the duties and taxes that comprise the landed cost and build these individual costs into the order total. Since your customers ultimately pay the full landed cost, we recommend you display this cost breakdown to them on your storefront.&#x20;
+In the response, we provide you an [itemized breakdown](./#how-landed-cost-is-represented) of the duties and taxes that comprise the landed cost and build these individual costs into the order total. Since your customers ultimately pay the full landed cost, we recommend you display this cost breakdown to them on your storefront.&#x20;
 
-Once the [cart is submitted](../cart/submitting-a-cart/), your fulfiller relays it to your shipper, who completes the customs paperwork, ships the package to the destination country, and pays the duties and import taxes on behalf of your customer. The shipper then invoices you the shipping costs.
+Once the [cart is submitted](../../submitting-a-cart/), your fulfiller relays it to your shipper, who completes the customs paperwork, ships the package to the destination country, and pays the duties and import taxes on behalf of your customer. The shipper then invoices you the shipping costs.
 
 ### Handling calculation failures
 
-A landed cost calculation may fail for a number of reasons. For example, a customer may attempt to ship a product to an embargoed country or you might have improperly formatted the [Harmonized System codes](landed-costs.md#creating-a-product-for-landed-costs) associated with the product. Additionally, in certain situations, the [third-party landed cost calculation service](landed-costs.md#calculating-landed-cost) may be unavailable.
+A landed cost calculation may fail for a number of reasons. For example, a customer may attempt to ship a product to an embargoed country or you might have improperly formatted the [Harmonized System codes](./#creating-a-product-for-landed-costs) associated with the product. Additionally, in certain situations, the [third-party landed cost calculation service](./#calculating-landed-cost) may be unavailable.
 
 ### Refunding landed cost
 
-For orders with landed cost, if you need to reverse the charges, we support full [refunds](https://docs.digitalriver.com/commerce-api/returns-and-refunds-1/refunds) of the importer tax. If you want to offer partial refunds, contact your account representative.
+For orders with landed costs, if you need to reverse the charges, we support full [refunds](https://docs.digitalriver.com/commerce-api/returns-and-refunds-1/refunds) of the importer tax. If you want to offer partial refunds, contact your account representative.
 
 ## How landed cost is represented
 
@@ -126,7 +126,7 @@ The following tables list the landed cost parameters. Note that you are responsi
 
 | Attributes                  | Type   | Description                                                                                            |
 | --------------------------- | ------ | ------------------------------------------------------------------------------------------------------ |
-| `landedCostState`           |        | The [state of landed cost](landed-costs.md#landed-cost-state).                                         |
+| `landedCostState`           |        | The [state of landed cost](./#landed-cost-state).                                                      |
 | `importTaxAndDuty`          | object | The sum of import taxes and duties for all line items.                                                 |
 | `formattedImportTaxAndDuty` |        | The sum of import taxes and duties in locale currency format (for example, USD 19.14).                 |
 | `shippingAndHandling`       | object | The shipping and handling fee is tax exclusive and applied against the product and the shipping cost.  |
@@ -142,10 +142,10 @@ The following tables list the landed cost parameters. Note that you are responsi
 
 ## Landed cost state
 
-A Cart or an Order has a `landedCostState` attribute, which provides information about the status of landed cost.&#x20;
+A cart or an order has a `landedCostState` attribute that provides information about the status of landed cost.&#x20;
 
 {% hint style="info" %}
-The customer must prepay the landed costs.&#x20;
+The customer must prepay the landed cost.&#x20;
 {% endhint %}
 
 Digital River automatically calculates the landed cost and includes it in the Cart or Order when the landed cost is `PREPAID`.

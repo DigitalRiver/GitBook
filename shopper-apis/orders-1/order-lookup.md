@@ -88,7 +88,7 @@ This call can retrieve information such as the customer's email address, the las
 {% endtab %}
 {% endtabs %}
 
-See the [Order lookup query parameters](../../general-resources/shopper-apis-reference/orders.md#order-lookup-query-parameters) for more information.
+See the [Order lookup query parameters](../../general-resources/shopper-apis-reference/orders/#order-lookup-query-parameters) for more information.
 
 ## Retrieve the current order by email address and the last 4 digits of their payment card
 
@@ -161,4 +161,4 @@ creditCardLastDigits=last_4_digits_of_their_payment_card&emailAddress=shopper's_
 {% endtab %}
 {% endtabs %}
 
-See the [Order lookup query parameters](../../general-resources/shopper-apis-reference/orders.md#order-lookup-query-parameters) for more information.
+See the [Order lookup query parameters](../../general-resources/shopper-apis-reference/orders/#order-lookup-query-parameters) for more information.

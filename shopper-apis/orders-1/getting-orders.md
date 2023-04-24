@@ -242,7 +242,7 @@ You will receive a `200 OK` response.
 {% endtab %}
 {% endtabs %}
 
-See [`Order query parameters`](../../general-resources/shopper-apis-reference/orders.md#orders-query-parameters) for more information.
+See [`Order query parameters`](../../general-resources/shopper-apis-reference/orders/#orders-query-parameters) for more information.
 
 ## Getting an order by ID
 
@@ -480,4 +480,4 @@ You will receive a `200 OK` response.
 {% endtab %}
 {% endtabs %}
 
-See [`Order query parameters`](../../general-resources/shopper-apis-reference/orders.md#orders-query-parameters) for more information.
+See [`Order query parameters`](../../general-resources/shopper-apis-reference/orders/#orders-query-parameters) for more information.

@@ -35,7 +35,7 @@ Make sure you [install Postman](https://www.postman.com/downloads/) before proce
 
 1. Go to the [Commerce API Postman Collection](https://github.com/DigitalRiver/commerce-api) page on GitHub and follow the instructions to install the API demo collection.
 2. Complete the following steps:
-3. Click the View more actions (<img src="../../.gitbook/assets/three-dots.png" alt="" data-size="line">) icon on the Commerce API Quick Start collection you just imported and select **Edit**.
+3. Click the View more actions (<img src="../../.gitbook/assets/three dots.png" alt="" data-size="line">) icon on the Commerce API Quick Start collection you just imported and select **Edit**.
 4. In the **Edit Collection** window, select the **Variables** tab.
 5. Using the **Current Value** fields, enter the appropriate API key for each variable, and click **Update**.
    * **apiDomain**: For the production environment, enter `api.digitalriver.com` in the **Current Value** field. For the client test environment (CTE) enter `api-cteext.digitalriver.com` in the **Current Value** field.

@@ -6,6 +6,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2023/4/24
+
+We now support [pretty pricing](../../shopper-apis/cart/pricing/landed-costs/pretty-pricing.md) with [landed costs](../../shopper-apis/cart/pricing/landed-costs/). Digital River only supports landed cost mixed cart and landed cost pretty pricing for the API solution. Contact your Customer Success Manager for assistance with enabling both landed cost and pretty pricing.
+
 ## 2023/4/5
 
 *   We enabled Lens, a semantic search tool, on the Documentation Portal.&#x20;
@@ -14,7 +18,7 @@ V1 is the base version of the Commerce API. The following dates indicate when we
 
     <figure><img src="../../.gitbook/assets/search-bar.png" alt=""><figcaption></figcaption></figure>
 
-    Type your question in the **Search content** field and click **Lens**. You can ask Lens anything regarding Digital River features. It will give you plain English answers in seconds. For example, you can ask for an overview of a feature and Lens will return a quick and concise answer.\
+    Type your question in the **Search content** field and click **Lens**. You can ask Lens anything regarding Digital River features. It will give you plain English answers in seconds. For example, you can ask for an overview of a feature, and Lens will return a quick and concise answer.\
     \
     **Note**: You may need to refresh the page in your browser to see the Lens button. If that fails, clear your browser cache, then close and reopen your browser.
 
@@ -24,7 +28,7 @@ V1 is the base version of the Commerce API. The following dates indicate when we
 
     <figure><img src="../../.gitbook/assets/Follow up questions Commerce API.png" alt=""><figcaption></figcaption></figure>
 
-    You can also see where Lens found the information and click through to read more.
+    You can also see where Lens found the information and click to read more.
 
     <figure><img src="../../.gitbook/assets/Information locations Commerce API.png" alt=""><figcaption></figcaption></figure>
 
@@ -41,7 +45,7 @@ V1 is the base version of the Commerce API. The following dates indicate when we
 
 *   We made the following enhancements to the Guest Checkout Admin API service:
 
-    * We added [Order Management](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Refund) to the Admin APIs. This API allows you to fetch the complete information for both anonymous and authenticated orders with an admin token.&#x20;
+    * We added [Order Management](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Refund) to the Admin APIs. This API lets you fetch the complete information for anonymous and authenticated orders with an admin token.&#x20;
     * We added the [Retrieve Invoice API](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Retrieve-Invoice) to the Admin APIs. This API allows you to download invoices for both anonymous and authenticated orders with an admin token. Users can subscribe to the `order.invoice.created` event to receive a notification when an invoice is ready for download.
 
     To start using the new Guest Checkout Admin API services, ask your Digital River representatives to add the service to your key. \
@@ -49,13 +53,13 @@ V1 is the base version of the Commerce API. The following dates indicate when we
     To receive notifications from the webhook service, enable the webhook service on your site. Contact your Digital River representatives for assistance with the service enablement and configure all self-service webhooks through [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 * We replaced the Commerce API reference with a Commerce API suite that includes the following API references:&#x20;
   * [Shopper APIs reference](https://www.digitalriver.com/docs/commerce-shopper-api/): This API reference provides the resources for an end-to-end ecommerce experience used when our Global Commerce platform is the system of record. The Shopper APIs allow clients to build a storefront, create shopper workflows, operate their store, and display products. For more information, see [Shopper APIs](broken-reference), [Shopper APIs reference](../shopper-apis-reference/), [Common Shopper and Admin APIs](broken-reference), and [Common Shopper and Admin APIs reference](../common-shoppers-and-admin-apis-reference/).&#x20;
-  * [Admin APIs reference](https://www.digitalriver.com/docs/commerce-admin-api/): This API reference allows administrators to programmatically create, update, deploy, and retire products on your storefront, create and edit products in bulk, manage product data, and manage sites and subscriptions. Use the Admin APIs when you want to host the Cart and Checkout pages and manage your products via API. For more information, see [Admin APIs](broken-reference), [Admin APIs reference](../admin-apis-reference/), [Common Shopper and Admin APIs](broken-reference), and [Common Shopper and Admin APIs reference](../common-shoppers-and-admin-apis-reference/).
+  * [Admin APIs reference](https://www.digitalriver.com/docs/commerce-admin-api/): This API reference allows administrators to programmatically create, update, deploy, and retire products on your storefront, create and edit products in bulk, manage product data, and manage sites and subscriptions. Use the Admin APIs to host the Cart and Checkout pages and manage your products via API. For more information, see [Admin APIs](broken-reference), [Admin APIs reference](../admin-apis-reference/), [Common Shopper and Admin APIs](broken-reference), and [Common Shopper and Admin APIs reference](../common-shoppers-and-admin-apis-reference/).
 * We updated the following topics:&#x20;
   * [Getting started ](../../master/getting-started/)
   * [Error codes](../../common-shopper-and-admin-apis/error-codes/)&#x20;
 * We added the following information:&#x20;
   * [How to resume cart submission](../../shopper-apis/cart/resuming-cart-submission.md)
-  * [Considerations](../../shopper-apis/orders-1/landed-costs.md#considerations) for [landed costs](../../shopper-apis/orders-1/landed-costs.md)
+  * [Considerations](../../shopper-apis/cart/pricing/landed-costs/#considerations) for [landed costs](../../shopper-apis/cart/pricing/landed-costs/)
   * [Best practice flows by payment type](../../payments/sources/using-the-source-identifier.md#best-practice-flows-by-payment-type)
 * We added the following subscription notification enhancements:
   * [Sending an expired credit card notification](../../admin-apis/subscription-management/subscription-notifications/sending-an-expired-credit-card-notification.md)
@@ -64,7 +68,7 @@ V1 is the base version of the Commerce API. The following dates indicate when we
 
 ## 2023/3/16
 
-Digital River adds Clearpay to the payment method roster! By leveraging Afterpay, your shoppers have the flexibility to buy now and pay for their purchases in 3 interest-free payments over 60 days. Learn how you can add Clearpay [here](../../payments/supported-payment-methods/clearpay.md).
+Digital River adds Clearpay to the payment method roster! By leveraging Afterpay, your shoppers can buy now and pay for their purchases in 3 interest-free payments over 60 days. Learn how you can add Clearpay [here](../../payments/supported-payment-methods/clearpay.md).
 
 ## 2023/3/14
 

@@ -193,4 +193,4 @@ You will get a `200 Successful` response.
 
 If the IP address format is incorrect (that is, not in a valid IPv4 and IPv6 format), the API response will send a `409 Conflict` error:
 
-![409 Conflict error](<../../../.gitbook/assets/409-conflict-error-invalid-ip-address (2) (1) (1).png>)
+![409 Conflict error](<../../../.gitbook/assets/409-conflict-error-invalid-ip-address (2).png>)

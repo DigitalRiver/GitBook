@@ -74,13 +74,13 @@ How a user accepts the TOS depends on which option you selected when you configu
 
 If you chose **Shopper passively accepts terms through order submission**, the customer accepts the TOS when they submit the order. Digital River requires this setting when we are the Reseller of Record.
 
-![](../../../.gitbook/assets/passive-sales-terms-of-acceptance-checkbox.png)
+![](../../../.gitbook/assets/Passive-Sales-Terms-of-Acceptance-checkbox.png)
 
 ### The customer actively accepts the TOS
 
 If you chose **Shopper actively accepts terms before completing the purchase**, the customer must click the checkbox to accept the TOS. Sites based in the EU require this setting.
 
-![](<../../../.gitbook/assets/sales-terms-of-acceptance-checkbox (3).png>)
+![](<../../../.gitbook/assets/Sales-Terms-of-Acceptance-checkbox (3).png>)
 
 ### No acceptance required
 
