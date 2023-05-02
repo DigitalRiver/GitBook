@@ -12,7 +12,7 @@ If you're using[ DigitalRiver.js with Elements](../), you can create a [Boleto](
 
 ## Step 1: Build a Boleto Source Request and Details object
 
-Build the Boleto Source Request and Details object.  The Boleto Source Request object requires the following fields:
+Build the Boleto Source Request and Details object. The Boleto Source Request object requires the following fields:
 
 | Field            | Value                                                      |
 | ---------------- | ---------------------------------------------------------- |
@@ -78,7 +78,7 @@ digitalriver.createSource(data).then(function(result) {
         //handle errors    
     } else {        
         var source = result.source;        
-        //send source to back end        
+        //send the source to back end        
         sendToBackend(source);    
     }
 });
@@ -152,7 +152,7 @@ To use Boleto as a payment method:
    `curl --location --request GET 'https://{host}/v1/shoppers/me.json?locale=pt_BR&currency=BRL' \`\
    `--header 'Content-Type: application/json'`\
    `--header 'authorization: bearer ***\`
-3. Optional. Set cart address to the BR address.
+3. Optional. Set the the cart address to the BR address.
 4. [Attach the tax ID to the cart](https://docs.digitalriver.com/commerce-api/cart/managing-tax-identifiers#attaching-a-tax-identifier-to-a-cart). This action inserts the tax ID into the payment session.
 5. [Create a Boleto source with a payment session ID](configuring-boleto.md#step-2-create-a-boleto-source-using-digitalriver.js). Note that the tax ID is required when creating the Boleto source. The payment session ID provides the tax ID.
 6. [Apply the source to the cart](https://docs.digitalriver.com/commerce-api/cart/attaching-a-payment-method-to-a-cart-or-customer#attaching-a-payment-method-to-an-order-or-cart).

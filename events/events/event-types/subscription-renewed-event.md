@@ -8,7 +8,7 @@ When a subscription is renewed, Digital River creates a `subscription.renewed` e
 
 At the end of a subscription period, the shopper must renew the subscription for continued access to the product. A shopper can accomplish a renewal in two ways:
 
-* **Automatic Renewal (Auto Renew)**–The shopper provides a payment method that the system automatically debits a specified number of days before the subscription expiration date. If the renewal fails because the billing information is not correct (for example, an expired credit card) shoppers are notified and given a chance to update their billing information. Digital River will attempt to bill a shopper for automatic renewals several times. After which Digital River will cancel the subscription and list the billing attempt as failed.
+* **Automatic Renewal (Auto Renew)**–The shopper provides a payment method that the system automatically debits a specified number of days before the subscription expiration date. If the renewal fails because the billing information is incorrect (for example, an expired credit card), shoppers are notified and allowed to update their billing information. Digital River will attempt to bill a shopper for automatic renewals several times. After which, Digital River will cancel the subscription and list the billing attempt as failed.
 * **Manual Renewal**–The shopper receives emails at preconfigured time intervals before the expiration date that asks the shopper to complete a renewal transaction. The shopper has to renew the subscription manually. The customer can choose one of the following options to renew their product:
   * Log in to their My Account portal and renew using the features available in the self-service options.
   * Call Customer Service to renew the subscription.

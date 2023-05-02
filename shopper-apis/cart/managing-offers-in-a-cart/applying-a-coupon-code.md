@@ -19,7 +19,7 @@ The request in the following example applies a promotional code value of `wb32xj
 {% code overflow="wrap" %}
 ```json
 curl --location --request POST https://api.digitalriver.com/v1/shoppers/me/carts/active?promoCode=wb32xjtam
---header 'authorization: bearer ***\ 
+--header 'authorization: Basic ***\ 
 ...
 ```
 {% endcode %}

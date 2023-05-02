@@ -4,7 +4,7 @@ description: Learn how to delete locale for a base or individual product program
 
 # Deleting a base or individual product's locale
 
-When deleting a locale from an individual product or base product note that:
+When deleting a locale from an individual product or base product, note that:
 
 * You can only delete a locale from an individual or base product. You cannot delete multiple locales at the same time. When you delete a locale from a base product, you also delete that locale from all of its product variations.
 * You can't delete a default locale. Attempting to do so will result in an error. To delete a default locale, you must change the default locale by [updating the product](creating-or-updating-a-product.md#adding-or-updating-a-products-locale) before you can delete the original default locale.
@@ -28,7 +28,7 @@ The following example deletes a locale with a specific base or individual produc
 {% code overflow="wrap" %}
 ```http
 curl --location --request DELETE 'https://api.digitalriver.com/products/v1/{productId}/locales/{locale}' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 ...
 ```
 {% endcode %}
@@ -38,7 +38,7 @@ An ERID request requires the `x-erid-as-pid=true` header.
 {% code overflow="wrap" %}
 ```
 curl --location --request DELETE 'https://api.digitalriver.com/v1/products/{ERID}/locales/{locale}' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 --header 'header x-erid-as-pid=true' \
 ...
 ```
@@ -65,10 +65,10 @@ Use the `taskId` in the response to [verify the successful completion of the req
 
 ## Verifying the deletion of a product's locale in Global Commerce
 
-When you delete a locale associated with an individual or base product, that locale will no longer appear associated with the product in Global Commerce.
+Deleting a locale associated with an individual or base product will no longer appear associated with the product in Global Commerce.
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 2. Select **Catalog**, select **Products**, and then click **Manage Products**. The Products page appears.
-3. Click the **Search** tab, select **Product** from the **Search In** dropdown list, and select **ID** from the **Search By** dropdown list. Enter the product identifier or ERID in the **Search For** field, and then click **Search**.
+3. Click the **Search** tab, select **Product** from the **Search In** dropdown list, and choose **ID** from the **Search By** dropdown list. Enter the product identifier or ERID in the **Search For** field, then click **Search**.
 4. Click the link for the product under the **Internal Product Name column**. The Edit Product page appears.
 5. Click the **Details** tab and verify the deleted locale no longer appears under the **Choose a Locale** column.

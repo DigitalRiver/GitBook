@@ -4,7 +4,7 @@ description: Learn how to create or update a cart.
 
 # Creating or updating a cart
 
-## Creating a cart
+## Basic Creating a cart
 
 Use the POST `/oauth20/token` resource to [create an anonymous (limited access)](../../oauth/tokens.md#getting-an-anonymous-shopper-token) or [authenticated (full access) token](../../oauth/tokens.md#getting-authenticated-shopper-tokens). The response to this request creates a shopping cart and returns an access token to be included in all other cart interactions. To verify you created the cart successfully, send a [`GET /v1/shoppers/me/carts/active/request`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/get).
 
@@ -14,7 +14,7 @@ Use the POST `/oauth20/token` resource to [create an anonymous (limited access)]
 ```javascript
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/carts/active' \
 --header 'Content-Type:  application/json' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ```
 {% endcode %}
 {% endtab %}

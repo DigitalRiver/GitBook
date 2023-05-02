@@ -49,7 +49,7 @@ You will receive a `200 OK` response.
       },
       "product": {
         "id": "SubProd1234561",
-        "name": "this is sub product",
+        "name": "This is sub product",
         "externalReferenceID": "32323323"
       },
       "shipToAddress": {
@@ -100,7 +100,7 @@ You will receive a `200 OK` response.
         {
           "product": {
             "id": "SubProd1234561",
-            "name": "this is sub product addon1",
+            "name": "This is sub-product addon1",
             "externalReferenceID": "32323377"
           },
           "quantity": 2
@@ -108,7 +108,7 @@ You will receive a `200 OK` response.
         {
           "product": {
             "id": "B123",
-            "name": "this is another sub product",
+            "name": "This is another sub product",
             "externalReferenceID": "32323555"
           },
           "quantity": 1

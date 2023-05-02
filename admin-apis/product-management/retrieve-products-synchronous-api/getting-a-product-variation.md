@@ -15,7 +15,7 @@ The following example gets a specific product variation with a `productId`.
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET https://api.digitalriver.com/v1/products/{baseProductId}/variations/{variationProductId}' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 ...
 ```
 {% endcode %}
@@ -25,7 +25,7 @@ An ERID request requires the `x-erid-as-pid=true` header.
 {% code overflow="wrap" %}
 ```http
 request GET 'https://api.digitalriver.com/v1/products/{baserERID}/variations/{variationERID}' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 --header 'header x-erid-as-pid=true' \
 ...
 ```

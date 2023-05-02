@@ -6,11 +6,11 @@ description: >-
 
 # SEPA Direct Debit
 
-Allow users to authorize transactions directly from their bank account, which is a popular international payment method.&#x20;
+Allow users to authorize transactions directly from their bank account, a popular international payment method.&#x20;
 
-Due to the risk of chargebacks, we don't recommend using SEPA for the sale of physical goods. Contact your Customer Success Manager for more information.
+Due to the risk of chargebacks, we don't recommend using SEPA to sell physical goods. Contact your Customer Success Manager for more information.
 
-If you are interested in using SEPA Direct Debit, contact your Customer Success Manager. The Customer Success Manager will send setup instructions for SEPA Direct Debit after you sign the Direct Debit addendum.
+Contact your Customer Success Manager if you want to use SEPA Direct Debit. After you sign the Direct Debit addendum, the Customer Success Manager will send setup instructions for SEPA Direct Debit.
 
 ## How to configure&#x20;
 

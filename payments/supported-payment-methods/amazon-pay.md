@@ -27,7 +27,7 @@ The shopper clicks the Amazon Pay Checkout button at checkout, and then they sig
 Digital River accepts the shopper's billing and shipping addresses from the shopper's Amazon account and populates the checkout or order confirmation page with that information.&#x20;
 
 {% hint style="success" %}
-Amazon requires that you remove or hide the Edit buttons or links for the billing and shipping addresses on the order confirmation page because Amazon maintains that information. Digital River cannot update the billing and shipping information for an Amazon shopper. If needed, the shopper can also update the shipping and billing addresses from their Amazon account before completing actions on Amazon Pay.
+Amazon requires that you remove or hide the Edit buttons or links for the billing and shipping addresses on the order confirmation page because Amazon maintains that information. Digital River cannot update an Amazon shopper's billing and shipping information. If needed, the shopper can also update the shipping and billing addresses from their Amazon account before completing actions on Amazon Pay.
 {% endhint %}
 
 ### Amazon Pay Express Checkout flow
@@ -43,7 +43,7 @@ The following Amazon Pay flow represents how your shoppers experience the paymen
 3. The shopper clicks the Amazon Pay button.
 4. The shopper is redirected to Amazon Pay to sign in and select the shipping address (if required), and the payment method.
 5. The shopper clicks the Submit button to place the order.&#x20;
-6. The shopper gets a second redirect to Amazon Pay - Spinning page or Multi-factor Authentication (MFA) page. (Amazon Pay determines if the transaction requires MFA).
+6. The shopper gets a second redirect to the Amazon Pay - Spinning page or Multi-factor Authentication (MFA) page. (Amazon Pay determines if the transaction requires MFA).
 
 ## Supported markets
 

@@ -11,7 +11,7 @@ Use [`GET /orders/{orderId}refunds?token={the shopper's token}`](https://www.dig
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/orders/active/refunds-available?token={the shopper's token}' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}

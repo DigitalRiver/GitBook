@@ -20,7 +20,7 @@ When you [delete all eligible offers from a customer's cart](https://www.digital
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request DELETE ' https://api.digitalriver.com/v1/shoppers/me/carts/active/eligible-offers' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 ```
 {% endcode %}

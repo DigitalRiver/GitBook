@@ -8,7 +8,7 @@ description: Learn how to get the information for a base or individual product.
 
 The following [`GET /v1/products/{productId, ERID, baseProductId, or baseProductERID}`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Retrieve-Product-\(Synchronous-API\)/paths/\~1v1\~1products\~1%7BproductId%7D/get) request retrieves data for an individual or base product. All product variations (if any) for a base product will appear as a URL in the response.&#x20;
 
-To get a specific product, you must provide either a [`productId`](../../../general-resources/common-shoppers-and-admin-apis-reference/product-identifier.md) or [`ERID`](../../../general-resources/common-shoppers-and-admin-apis-reference/external-reference-identifier-erid.md).  If the request finds multiple products associated with the `ERID`, the response will return all of them.
+To get a specific product, you must provide either a [`productId`](../../../general-resources/common-shoppers-and-admin-apis-reference/product-identifier.md) or [`ERID`](../../../general-resources/common-shoppers-and-admin-apis-reference/external-reference-identifier-erid.md). If the request finds multiple products associated with the `ERID`, the response will return all of them.
 
 {% hint style="info" %}
 Duplicate ERIDs are not allowed. To prevent duplicate ERIDs, [enable the Enforce Unique Value](broken-reference) when [configuring company settings](https://help.digitalriver.com/internal-help/gc/Administration/Company/Configuring-company-settings.htm) in Global Commerce. This ensures that you won't accidentally provide an ERID that would result in duplicate products in the response if you searched for a product by ERID.
@@ -21,7 +21,7 @@ The following example gets a specific base or individual product with a `product
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/products/{productId or baseProductId}' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 ...
 ```
 {% endcode %}
@@ -31,7 +31,7 @@ An ERID request requires the `x-erid-as-pid=true` header.
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/products/{ERID or baseProductERID}' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 --header 'header x-erid-as-pid=true' \
 ...
 ```
@@ -447,7 +447,7 @@ The request returns the product information for the specified `externalReference
 
 ## Getting the deployed or retired versions of a product
 
-To [retrieve a filtered list of deployed or retired products](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Retrieve-Product-\(Synchronous-API\)/paths/\~1v1\~1products\~1%7BproductId%7D/get), specify the [`version` ](../../../general-resources/admin-apis-reference/products.md#version)query parameter.  The `version` values are `DEPLOYED` and `RETIRED`. The request returns products with the specified values. See the [`version` ](../../../general-resources/admin-apis-reference/products.md#version)query parameter for more information.
+To [retrieve a filtered list of deployed or retired products](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Retrieve-Product-\(Synchronous-API\)/paths/\~1v1\~1products\~1%7BproductId%7D/get), specify the [`version` ](../../../general-resources/admin-apis-reference/products.md#version)query parameter. The `version` values are `DEPLOYED` and `RETIRED`. The request returns products with the specified values. See the [`version` ](../../../general-resources/admin-apis-reference/products.md#version)query parameter for more information.
 
 {% tabs %}
 {% tab title="cURL with RETIRED query parameter" %}
@@ -456,7 +456,7 @@ The following example gets retired versions of a specific product with a `produc
 {% code overflow="wrap" %}
 ```json
 curl --location --request GET 'https://api.digitalriver.com/v1/products/{productId}?version=RETIRED' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 ...
 ```
 {% endcode %}
@@ -464,7 +464,7 @@ curl --location --request GET 'https://api.digitalriver.com/v1/products/{product
 An ERID request requires the `x-erid-as-pid=true` header.
 
 <pre class="language-json" data-overflow="wrap"><code class="lang-json"><strong>curl --location --request GET 'https://api.digitalriver.com/v1/products/{ERID}?version=RETIRED' \
-</strong>--header 'Authorization: Bearer &#x3C;API_key>' \
+</strong>--header 'Authorization: Basic &#x3C;API_key>' \
 --header 'header x-erid-as-pid=true' \
 ...
 </code></pre>
@@ -799,7 +799,7 @@ The following example gets deployed versions of a specified product with a `prod
 ```http
 curl --location --request GET 
 'https://api.digitalriver.com/v1/products/[productId}?version=DEPLOYED' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 ...
 ```
 {% endcode %}
@@ -809,7 +809,7 @@ An ERID request requires the `x-erid-as-pid=true` header.
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/v1/products/{ERID}?version=DEPLOYED' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 --header 'header x-erid-as-pid=true' \
 ...
 ```

@@ -89,7 +89,7 @@ When the value for `taxIncludedPrice` is `true`, the listed price information in
       * The "Included in Price fee ( an invisible fee) if it is configured for the line item.
       * If the price list is set to tax-inclusive, this price will include tax.
 
-      It does not include:
+      It does not include the following:
 
       * The order level discount.
       * The "Excluded from price" fee (a visible fee).

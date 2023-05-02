@@ -13,7 +13,7 @@ You can apply a unit price override to one product with an encrypted request bod
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/carts/active' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 --data-raw '{
   "cart": {
@@ -294,7 +294,7 @@ The `TaxInclusiveOverride` flag only works with a price override. Use [`POST v1/
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/carts/active' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 --data-raw '{
   "cart": {
@@ -564,7 +564,7 @@ Override the aggregate price of one product with an encrypted request body. The 
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com./v1/shoppers/me/carts/active' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 --data-raw '{
   "cart": {

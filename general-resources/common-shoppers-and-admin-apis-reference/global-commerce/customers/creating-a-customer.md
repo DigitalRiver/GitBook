@@ -4,7 +4,7 @@ description: Learn how to create a customer.
 
 # Creating a customer
 
-You can make this request without an access token by passing in your API key as a query parameter. You can also send this request with either an anonymous customer or an authenticated customer token.
+You can make this request without an access token by passing in your API key as a query parameter. You can also send this request with an anonymous or authenticated customer token.
 
 ## POST requests
 

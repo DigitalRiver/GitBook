@@ -16,4 +16,4 @@ You can deploy products with warnings. However, we recommend that you fix all de
 
 ## Live change warnings
 
-You may see an error message when you [apply a live change to a base product](../../../admin-apis/product-management/manage-products-asynchronous-api/applying-live-changes.md#applying-a-live-change-to-a-base-product-or-individual-product) or [product variation](../../../admin-apis/product-management/manage-products-asynchronous-api/applying-live-changes.md#applying-a-live-change-to-a-product-variation) programmatically.
+You may see an error message when you programmatically [apply a live change to a base product](../../../admin-apis/product-management/manage-products-asynchronous-api/applying-live-changes.md#applying-a-live-change-to-a-base-product-or-individual-product) or [product variation](../../../admin-apis/product-management/manage-products-asynchronous-api/applying-live-changes.md#applying-a-live-change-to-a-product-variation).

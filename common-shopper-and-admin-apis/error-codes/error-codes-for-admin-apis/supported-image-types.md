@@ -6,9 +6,9 @@ description: Understand the supported image types.
 
 ## Defining a file&#x20;
 
-To define a file to import, the attribute file must start with `file:` and end with file ID. For example:
+To define a file to import, the attribute file must start with `file:` and end with the file ID. For example:
 
-* With JSON, "productImage1": "file:00fb210-12345678", Global Commerce imports file 00fb210-12345678 and places it into a default folder of product detail images for the given company.
+* With JSON, "productImage1": "file:00fb210-12345678", Global Commerce imports file 00fb210-12345678 and place it into a default folder of product detail images for the given company.
 
 ## Creating subfolders
 
@@ -32,16 +32,16 @@ Global Commerce requires images to be of certain image types. The only supported
   * The file extension must match the image type.
   * The file content must match the file extension.
 
-Both the file name (excluding the file extension) and folder do not support special characters. The special characters are:&#x20;
+The file name (excluding the file extension) and folder do not support special characters. The special characters are:&#x20;
 
 * &#x20;**! \ < > / | ? \* : ' " . ( ) & ^ \~  #  % { } , @ + = \` ; \[ ]**, as well as spaces, tab \t, breakline \r \n \f.&#x20;
 
 ## File type attributes
 
-* padFile of software family&#x20;
-* custom attributes with file types&#x20;
-* cannot have subfolders at the product level &#x20;
+* The padFile of the software family&#x20;
+* Custom attributes with file types&#x20;
+* Cannot have subfolders at the product level &#x20;
 * Any file type is supported&#x20;
 * If the file type is .zip, Global Commerce checks all the files zipped within.&#x20;
-* .File names do not support special characters. The special characters are:
+* File names do not support special characters. The special characters are:
   * &#x20;**| ; , ! @ $ ( ) < > " ' \` \~ { } \[ ] = + &  ^ %** and spaces.&#x20;

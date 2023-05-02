@@ -12,11 +12,11 @@ The `apiKey` is your [API key](../../resources/API-structure/api-keys.md).
 
 ### Currency
 
-Use the `currency` query parameter when you want to see the currency associated with the category.. The currency query parameter takes precedence over the locale.&#x20;
+Use the `currency` query parameter when you want to see the currency associated with the category. The currency query parameter takes precedence over the locale.&#x20;
 
 ### Expand
 
-Use the `expand` query parameter when you want additional fields to appear in the response. The `expand` query parameter provides additional fields in the response. Expanding resources reduces the number of API calls required to accomplish a task. See [Expand query parameter](../common-shoppers-and-admin-apis-reference/fields-and-expand-query-parameters.md#expand-query-parameter) for more information.
+Use the `expand` query parameter when you want related information to appear in the response. The `expand` query parameter provides additional fields in the response. Expanding resources reduces the number of API calls required to accomplish a task. See [Expand query parameter](../common-shoppers-and-admin-apis-reference/fields-and-expand-query-parameters.md#expand-query-parameter) for more information.
 
 ### Fields
 
@@ -28,7 +28,7 @@ Use the `locale` query parameter when you want to see the locale associated with
 
 ### Product page size
 
-The productsPageSize query parameter specifies the maximum number of products to include for each category returned in a paginated response. The value must be a positive number greater than zero and less than 100000. The default is 10. This query parameter is only available when [getting a category by identifier](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Categories/paths/\~1v1\~1shoppers\~1me\~1categories\~1%7BcategoryId%7D/get) and [getting all categories for a specific product](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Categories/paths/\~1v1\~1shoppers\~1me\~1products\~1%7BproductId%7D\~1categories/get).
+The `productsPageSize` query parameter specifies the maximum number of products to include for each category returned in a paginated response. The value must be a positive number greater than zero and less than 100000. The default is 10. This query parameter is only available when [getting a category by identifier](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Categories/paths/\~1v1\~1shoppers\~1me\~1categories\~1%7BcategoryId%7D/get) and [all categories for a specific product](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Categories/paths/\~1v1\~1shoppers\~1me\~1products\~1%7BproductId%7D\~1categories/get).
 
 ### Token
 

@@ -74,7 +74,7 @@ digitalriver.createSource(data).then(function(result) {
         //handle errors
     } else {
         var source = result.source;
-        //send source to back end
+        //send the source to the back end
         sendToBackend(source);
     }
 });
@@ -130,7 +130,7 @@ When you create a SEPA Direct Debit source, the customer is required to authoriz
 
 ### Redirecting the customer for PayCo authorization
 
-To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
+Use the `redirectUrl` parameter in your `createSource` response to redirect your customer to the payment provider for authorization.
 
 {% code overflow="wrap" %}
 ```javascript
@@ -138,7 +138,7 @@ window.location.href = sourceResponse.redirect.redirectUrl;
 ```
 {% endcode %}
 
-The payment provider will present the customer with the transaction details where they can authorize, or cancel the transaction. A successful authorization redirects the customer to the Payco Return URL parameter you specified when you created the source.
+The payment provider will present the customer with the transaction details where they can authorize or cancel the transaction. A successful authorization redirects the customer to the Payco Return URL parameter you specified when you created the source.
 
 Once authorized, the source state will change to `chargeable`.
 
@@ -183,9 +183,7 @@ Once authorized, the source state will change to `chargeable`.
 ```
 {% endcode %}
 
-## Step 4: Use the authorized source
-
-Once authorized, you can use the source by either [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart) or [attaching it to a shopper](../../../sources/#attaching-a-payment-method-to-a-customer) for multiple uses.
+Once authorized, you can use the source by&#x20;
 
 ### Option 1: Attach the source to a cart
 

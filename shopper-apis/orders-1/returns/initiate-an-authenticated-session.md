@@ -11,7 +11,7 @@ Use the `GET /oauth20/authorize` to send the following request to [create an aut
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/oauth20/token.json' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}

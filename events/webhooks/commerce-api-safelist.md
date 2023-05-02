@@ -4,7 +4,7 @@ description: Understand the purpose of a safelist.
 
 # Commerce API safelist
 
-The safelist is a list of IP addresses that Digital River uses to send webhook notifications. To receive webhook notifications from Digital River, you'll need to open your firewall to these IP addresses.
+The safelist is a list of IP addresses Digital River uses to send webhook notifications. To receive webhook notifications from Digital River, you must open your firewall to these IP addresses.
 
 * 54.204.214.106/32&#x20;
 * 100.25.55.35/32&#x20;

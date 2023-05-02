@@ -6,7 +6,7 @@ description: >-
 
 # Wire Transfer
 
-When using this payment method, a customer must provide their bank with transfer information provided by the merchant to complete the payment. The transfer details consist of the account holder, bank name, city, country description, payment reference, bank account number, additional bank information, and the international bank account number (IBAN).&#x20;
+When using this payment method, a customer must provide their bank with transfer information provided by the merchant to complete the payment. The transfer details include the account holder, bank name, city, country description, payment reference, bank account number, additional bank information, and the international bank account number (IBAN).&#x20;
 
 ## How to configure&#x20;
 

@@ -16,14 +16,14 @@ To identify the product or product variation, the error message will contain eit
 
 Product errors related to existing products or product variations combine the `Product` or `Variation` prefix, external reference identifier (`ERID`), and the product identifier (`productId`). For example:
 
-* `Product [ERID]abc-1234 [productId]1912344500, en_US:` The error belongs to a specific product (`productId`) with a specific ERID, and locale.
+* `Product [ERID]abc-1234 [productId]1912344500, en_US:` The error belongs to a specific product (`productId`) with a specific ERID and locale.
 * `Product [ERID]abc-1234 [productId]1912344500:` The error belongs to a specific product (`productId`) with a specific ERID.
 * `Product [productId]1912344500, en_US:` The error belongs to a specific product (`productId`) and locale.
 * `Product [ProductId]1912344500`: The error belongs to a specific product (`productId`) and has no ERID.
 
 ## Update existing product variation
 
-* `Variation [ERID]abc-1234 [productId]1912344500, en_US`: The error belongs to a specific product variation (`productId`) with a specific ERID, and locale.
+* `Variation [ERID]abc-1234 [productId]1912344500, en_US`: The error belongs to a specific product variation (`productId`) with a specific ERID and locale.
 * `Variation [ERID]abc-1234 [productId]1912344500`: The error belongs to a specific product variation (`productId`) with a specific ERID.
 * `Variation [productId]1912344500, en_US`: The error belongs to a specific product variation (`productId`) and locale.
 * `Variation [productId]1912344500`: The error belongs to a specific product variation (`productId`) and has no ERID.
@@ -45,7 +45,7 @@ If you don't specify the `ERID` when creating a product, the prefix uses 1st, 2n
 
 * `Variation, en_US`:  The error belongs to a specific locale. There is no ERID in the product payload.
 * `Variation`:  The error belongs to a specific product variation. There is no ERID in the product payload.
-* `Variation abc-1234, en_US`:  The error belongs to a specific locale.  There is no ERID in the product payload.
+* `Variation abc-1234, en_US`:  The error belongs to a specific locale. There is no ERID in the product payload.
 * `Variation abc-1234`:  The error belongs to a specific base product or product variation. There is no ERID in the product payload.
 
 ## Deployment errors and warnings
@@ -54,5 +54,5 @@ If you don't specify the `ERID` when creating a product, the prefix uses 1st, 2n
 Deployment errors and warnings do not include the `ERID` or `Variation` pattern to remain consistent with Global Commerce errors and warnings.
 {% endhint %}
 
-* `Product 12345678, en_US`: The error belongs to a specific locale for a base product or product variation.&#x20;
+* `Product 12345678, en_US`: The error belongs to a specific base product or product variation locale.&#x20;
 * `Product 12345678`: The error belongs to a specific base product or product variation.&#x20;

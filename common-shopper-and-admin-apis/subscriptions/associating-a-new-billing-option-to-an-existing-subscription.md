@@ -31,7 +31,7 @@ You will receive a `202 Accepted` response.
 When associating a new billing option with an existing subscription by payment source, note the following:
 
 * If the system found a valid billing option by the given `sourceId`, it associates that `sourceId` to the subscription. It does not update any other data for that billing option.
-* If it is a valid source and there is no existing billing option associated with this source in Global Commerce, the system creates a new billing option for this given source. Here are the rules in creating a billing option:
+* If it is a valid source and no existing billing option is associated with it in Global Commerce, the system creates a new billing option for this given source. Here are the rules for creating a billing option:
   * The system generates a unique nickname for this billing option.
   * If this shopper doesn’t have an existing default billing option, the system sets the default flag to `true` on this new billing option.
   * If this shopper has an existing default billing option, the system sets the default flag to `false` on this new billing option.|

@@ -8,7 +8,7 @@ description: >-
 
 Digital River offers the TreviPay payment method from Multi Service Technology Solutions, Inc.
 
-TreviPay enables Merchants to extend a line of credit for business buyers at checkout. This is a white-labeled solution facilitating online B2B payments by offering flexible net terms, digital statement handling, collections, credit approval management, and improving the overall B2B online buying experience. Digital River supports the following features: create user, payment capabilities, dispute and chargeback, subscription, reporting, API support, fraud, Drop-in, term code service support, and tax.
+TreviPay enables Merchants to extend a line of credit for business buyers at checkout. This white-labeled solution facilitates online B2B payments by offering flexible net terms, digital statement handling, collections, credit approval management, and improving the overall B2B online buying experience. Digital River supports the following features: create user, payment capabilities, dispute and chargeback, subscription, reporting, API support, fraud, Drop-in, term code service support, and tax.
 
 TreviPay assesses creditworthiness, absorbs non-payment risk, including the localized dunning process (collections) if required, and provides online Merchant and Buyer statement management tools. TreviPay supports the following features: application processing, account administration, account self-service, thresholds, commerce experience, alerts, and dunning (collections).
 
@@ -16,7 +16,7 @@ TreviPay processes online ecommerce orders for the following product types: phys
 
 ## Benefits
 
-Offering net terms online for business buyers streamlines the legacy accounts receivable and payable processes, alleviates cash flow constraints for buyers, and leads to increased buyer loyalty and higher average order values. With this payment method, Merchants remove their credit risk, offload collection responsibilities, and get paid upfront while their buyers pay over time.&#x20;
+Offering net terms online for business buyers streamlines the legacy accounts receivable and payable processes, alleviates buyer cash flow constraints, and leads to increased buyer loyalty and higher average order values. With this payment method, Merchants remove their credit risk, offload collection responsibilities, and get paid upfront while their buyers pay over time.&#x20;
 
 ## How to configure&#x20;
 
@@ -34,27 +34,27 @@ Buyers select the TreviPay option at checkout, then they either log in to the Me
 
 You can set up your storefront to promote the TreviPay credit solution.
 
-![](../../.gitbook/assets/MSTS-store-page.png)
+![](../../.gitbook/assets/msts-store-page.png)
 
 ### TreviPay enrollment form
 
 You can add a link to the enrollment form on your home page, product page, and checkout page. You can also add a link to the enrollment form from your customer relationship manager (CRM).
 
-When a customer clicks the **Apply Now** button. The information they provide on the Enrollment Application page creates the Admin user.
+When a customer clicks the **Apply Now** button, the information they provide on the Enrollment Application page creates the Admin user.
 
-![](<../../.gitbook/assets/Enrollment 1.png>)
+![](../../.gitbook/assets/enrollment-1.png)
 
 The information provided on the Billing Contact page creates the Payer user.
 
-![](<../../.gitbook/assets/Enrollment 2.png>)
+![](../../.gitbook/assets/enrollment-2.png)
 
-When the customer completes the fields and clicks **Next**, the Credit Application appears.
+The Credit Application appears when the customer completes the fields and clicks **Next**.
 
-![](../../.gitbook/assets/MSTS-credit-applications.png)
+![](../../.gitbook/assets/msts-credit-applications.png)
 
 When the client completes and submits the Credit Application, they will see a Congratulations message stating they successfully submitted their application.
 
-![](../../.gitbook/assets/MSTS-congratulations.png)
+![](../../.gitbook/assets/msts-congratulations.png)
 
 ### Phone call
 
@@ -68,7 +68,7 @@ The customer will later receive two emails. The first email will state the appli
 TreviPay does not require the customer to sign in to the client portal, but they do recommend it.
 {% endhint %}
 
-![](../../.gitbook/assets/MSTS-approval-email.png)
+![](../../.gitbook/assets/msts-approval-email.png)
 
 ### TreviPay enrollment URL
 

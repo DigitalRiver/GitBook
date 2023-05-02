@@ -20,7 +20,7 @@ Submitting a cart creates the order. You can use the information in the response
 ```http
 curl --location --request POST 'http://<<host>>/v1/shoppers/me/carts/active/submit-cart' \
 --header 'Content-Type:  application/json' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ```
 {% endcode %}
 {% endtab %}

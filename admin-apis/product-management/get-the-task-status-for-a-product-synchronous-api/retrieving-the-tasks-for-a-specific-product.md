@@ -13,7 +13,7 @@ The following example verifies the completion of  a product for a specific [`pro
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/products/tasks?productId={productId}'
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 ...
 ```
 {% endcode %}
@@ -24,7 +24,7 @@ An [ERID](../../../general-resources/common-shoppers-and-admin-apis-reference/ex
 ```http
 curl --location --request 
 POST 'https://api.digitalriver.com/v1/products/tasks?productId={ERID}'
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 --header 'header x-erid-as-pid=true' \
 ...
 ```

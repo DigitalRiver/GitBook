@@ -4,7 +4,7 @@ description: Offer Malaysia's second-most popular way to pay with FPX.
 
 # FPX Online Banking
 
-Financial Process Exchange (FPX) enables Malaysian shoppers to pay for their online purchases directly from their bank account.
+Financial Process Exchange (FPX) enables Malaysian shoppers to pay for online purchases directly from their bank accounts.
 
 ## How to configure&#x20;
 

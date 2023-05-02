@@ -77,7 +77,7 @@ digitalriver.createSource(sourceData).then(function(result) {
         //handle error message
         var errorMessage = result.error.errors[0].message;
     } else {
-        //send source to back end for processing
+        //send the source to the back end for processing
         var source = result.source;
     }
 });

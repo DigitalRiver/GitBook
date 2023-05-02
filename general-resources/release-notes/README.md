@@ -6,6 +6,13 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2023/5/2
+
+The following features allow you to query the anonymous shopper's order, download the invoice for an order, and download a refund credit memo for an order.
+
+* [Order management](../../admin-apis/order-management/) explains how to [get the order's details](../../admin-apis/order-management/getting-the-orders-details.md) and [download an invoice](../../admin-apis/order-management/downloading-the-invoice.md) for the Admin API service. We also added [Guest checkout](../../shopper-apis/shopper-basics/common-use-cases/guest-checkout.md) to [Common use cases](../../shopper-apis/shopper-basics/common-use-cases/).
+* We added information on the [`order.credit_memo.created`](../../events/events/event-types/refund-credit-memo-event.md) event and the [`order.invoice.created`](../../events/events/event-types/invoice-created-event.md) event.
+
 ## 2023/4/24
 
 We now support [pretty pricing](../../shopper-apis/cart/pricing/landed-costs/pretty-pricing.md) with [landed costs](../../shopper-apis/cart/pricing/landed-costs/). Digital River only supports landed cost mixed cart and landed cost pretty pricing for the API solution. Contact your Customer Success Manager for assistance with enabling both landed cost and pretty pricing.
@@ -43,17 +50,17 @@ We now support [pretty pricing](../../shopper-apis/cart/pricing/landed-costs/pre
 
 ## 2023/3/29
 
-*   We made the following enhancements to the Guest Checkout Admin API service:
+*   We made the following enhancements to the Admin APIs service:
 
     * We added [Order Management](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Refund) to the Admin APIs. This API lets you fetch the complete information for anonymous and authenticated orders with an admin token.&#x20;
     * We added the [Retrieve Invoice API](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Retrieve-Invoice) to the Admin APIs. This API allows you to download invoices for both anonymous and authenticated orders with an admin token. Users can subscribe to the `order.invoice.created` event to receive a notification when an invoice is ready for download.
 
-    To start using the new Guest Checkout Admin API services, ask your Digital River representatives to add the service to your key. \
+    To start using the new Admin API services, ask your Digital River representatives to add the service to your key. \
     \
     To receive notifications from the webhook service, enable the webhook service on your site. Contact your Digital River representatives for assistance with the service enablement and configure all self-service webhooks through [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 * We replaced the Commerce API reference with a Commerce API suite that includes the following API references:&#x20;
   * [Shopper APIs reference](https://www.digitalriver.com/docs/commerce-shopper-api/): This API reference provides the resources for an end-to-end ecommerce experience used when our Global Commerce platform is the system of record. The Shopper APIs allow clients to build a storefront, create shopper workflows, operate their store, and display products. For more information, see [Shopper APIs](broken-reference), [Shopper APIs reference](../shopper-apis-reference/), [Common Shopper and Admin APIs](broken-reference), and [Common Shopper and Admin APIs reference](../common-shoppers-and-admin-apis-reference/).&#x20;
-  * [Admin APIs reference](https://www.digitalriver.com/docs/commerce-admin-api/): This API reference allows administrators to programmatically create, update, deploy, and retire products on your storefront, create and edit products in bulk, manage product data, and manage sites and subscriptions. Use the Admin APIs to host the Cart and Checkout pages and manage your products via API. For more information, see [Admin APIs](broken-reference), [Admin APIs reference](../admin-apis-reference/), [Common Shopper and Admin APIs](broken-reference), and [Common Shopper and Admin APIs reference](../common-shoppers-and-admin-apis-reference/).
+  * [Admin APIs reference](https://www.digitalriver.com/docs/commerce-admin-api/): This API allows administrators to programmatically create, update, deploy, and retire products on your storefront, create and edit products in bulk, manage product data, and manage sites and subscriptions. Use the Admin APIs to host the Cart and Checkout pages and manage your products via API. For more information, see [Admin APIs](broken-reference), [Admin APIs reference](../admin-apis-reference/), [Common Shopper and Admin APIs](broken-reference), and [Common Shopper and Admin APIs reference](../common-shoppers-and-admin-apis-reference/).
 * We updated the following topics:&#x20;
   * [Getting started ](../../master/getting-started/)
   * [Error codes](../../common-shopper-and-admin-apis/error-codes/)&#x20;

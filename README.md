@@ -1,16 +1,15 @@
 ---
 description: >-
-  Learn how to implement an end-to-end solution leveraging Digital River’s
-  commerce platform to manage your storefront, accept payments, and fulfill
-  orders.
+  Learn how to use Digital River's commerce platform to run your online store,
+  receive payments, and ship orders.
 ---
 
 # Commerce API
 
 ## Working with Digital River
 
-More than a global payments and fraud solution, Digital River acts as the authorized reseller of your products. That means we assume the risk of the sale, managing taxes, and regulations on your behalf. To perform these valuable services, we need to first collect some basic data. This data allows us to apply the right tax, process payments, perform fraud screening and comply with local regulations using our legal entities.&#x20;
+Digital River offers more than just a worldwide payment and fraud solution; we also act as the authorized reseller of your products. This means that we assume the risk of the sale, managing taxes and regulations on your behalf. To provide these valuable services, we need to gather some basic data. This data enables us to apply the appropriate taxes, process payments, conduct fraud screenings, and comply with local regulations using our legal entities.
 
 ## Getting started
 
-Continue to our [Getting started](master/getting-started/) section to make API requests. After you perform an API test, you can begin creating products, customers, carts, and orders to provide us with the data we need to protect your business from risk.
+To begin making API requests, refer to our [Getting started](master/getting-started/) section. Once you have performed an API test, you may create products, customers, carts, and orders. Providing us with this data will help ensure the safety and security of your business against potential risks.

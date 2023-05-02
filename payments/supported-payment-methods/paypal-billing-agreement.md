@@ -4,11 +4,11 @@ description: Learn about PayPal Billing Agreement.
 
 # PayPal Billing Agreement
 
-Consumers can use their PayPal account to make recurring subscription payments. Consumers have the option to choose to auto renew or manually renew. &#x20;
+Consumers can use their PayPal accounts to make recurring subscription payments. Consumers have the option to choose to auto-renew or manually renew. &#x20;
 
 ## How to configure&#x20;
 
-How you configure PayPal Billing Agreement depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/). &#x20;
+Configuring the PayPal Billing Agreement depends on whether you use [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/). &#x20;
 
 | DigitalRiver.js with Elements                                                                                                    | Drop-in payments                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |

@@ -11,7 +11,7 @@ When Admin API detects an asynchronous error, it returns the `errors` object in 
 "errors": [
     {
         "code": "PRODUCT_NOT_FOUND",
-        "description": "Cannot find the product, produtId1, productId2. The specified product IDs could not be found. provide the correct product ID and try again."
+        "description": "Cannot find the product, produtId1, productId2. The specified product IDs could not be found. Provide the correct product ID and try again."
     },
     {
         "code": "LOCALE_NOT_PROVIDED",

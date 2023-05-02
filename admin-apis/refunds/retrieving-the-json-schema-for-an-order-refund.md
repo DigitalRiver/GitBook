@@ -11,7 +11,7 @@ Use the [`GET /orders/{orderId}/refunds/schema`](https://www.digitalriver.com/do
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/orders/{orderid}/refunds/schema' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}

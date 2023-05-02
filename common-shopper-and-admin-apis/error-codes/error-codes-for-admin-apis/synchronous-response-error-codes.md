@@ -10,7 +10,7 @@ Cannot update or change a product state for one of the following reasons:
 
 ### `cannot_change_product_concurrently`
 
-Digital River does not allow multiple users to change the same product concurrently. For example, two Global Commerce users cannot apply and save changes to the same product at the same time.
+Digital River does not allow multiple users to change the same product concurrently. For example, two Global Commerce users cannot simultaneously apply and save changes to the same product.
 
 * `Cannot change product [$baseProductId] concurrently.`
 
@@ -32,17 +32,17 @@ An internal server error has occurred.
 
 ## `invalid-request`
 
-Cannot validate the request for one of the following reasons:
+The system cannot validate the request for one of the following reasons:
 
 ### `duration-begin-later-than-end`
 
-The specified date and time value for the `beginReceivedTime` attribute was later than date and time value for the `endReceivedTime` attribute. Provide a date and time value for `endReceivedTime` attribute that is later than the `beginReceivedTime` value.
+The `beginReceivedTime` attribute's specified date and time values are later than the date and time value. Provide a date and time value for the `endReceivedTime` attribute later than the `beginReceivedTime` value.
 
 * `The date and time for the [endReceivedTime] value [2023-04-01T00:00:00.000Z] must be later than the [beginReceivedTime] value [2023-06-01T00:00:00.000Z].`
 
 ### `duration-exceeds-max-value`
 
-The  specified duration between `beginReceivedTime`  and `endReceivedTime`  exceeded the maximum value. Provide a value that is equal to or less than 30 days and try again.
+The  specified duration between `beginReceivedTime`  and `endReceivedTime`  exceeded the maximum value. Provide a value equal to or less than 30 days and try again.
 
 * `The duration between [beginReceivedTime] [2023-04-01T00:00:00.000Z] and [endReceivedTime] [2023-06-01T00:00:00.000Z] must be equal to or less than [30] days.`
 

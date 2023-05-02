@@ -69,7 +69,7 @@ digitalriver.createSource(data).then(function(result) {
         //handle errors
     } else {
         var source = result.source;
-        //send source to back end
+        //send the source to the back end
         sendToBackend(source);
     }
 });
@@ -132,7 +132,7 @@ When you create a TreviPay source, the customer is required to authorize the cha
 
 ### Redirecting the customer to TreviPay for authorization <a href="#redirecting-the-customer-to-paypal-for-authorization" id="redirecting-the-customer-to-paypal-for-authorization"></a>
 
-To redirect your customer to TreviPay for authorization, use the `redirectUrl` parameter in your createSource response.
+To redirect your customer to TreviPay for authorization, use the `redirectUrl` parameter in your `createSource` response.
 
 {% code overflow="wrap" %}
 ```

@@ -4,7 +4,7 @@ description: Learn about supported OAuth and Commerce API formats
 
 # Supported OAuth and Commerce API formats
 
-The Commerce API and OAuth support requests and responses in XML and JSON formats. XML is the default for the Commerce API; JSON is the default for the OAuth API. You can override the default in the Accept header for both the OAuth and Commerce API. In the Commerce API, you can also override the default format using the format query parameter.
+The Commerce API and OAuth support requests and responses in XML and JSON formats. XML is the default for the Commerce API; JSON is the default for the OAuth API. You can override the default in the Accept header for both the OAuth and Commerce API. You can also override the default format using the format query parameter in the Commerce API.
 
 ## Accept header format for OAuth
 

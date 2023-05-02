@@ -62,8 +62,8 @@ The `token` is the authorized or anonymous token for the shopper. This query par
 
 ### Quantity
 
-The `quantity` is the number of products added to the cart. The value must be a valid integer. If the quantity is not explicitly specified, the default is 1. This query parameter is available when you [add line items to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items/post), or [update a line item for a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items\~1%7BlineItemsId%7D/post).
+The `quantity` is the number of products added to the cart. The value must be a valid integer. If the quantity is not explicitly specified, the default is 1. This query parameter is available when you [add line items to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items/post) or [update a line item for a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items\~1%7BlineItemsId%7D/post).
 
 ### Suppress order confirmation email
 
-A real order uses `suppressorderconfirmationemail` to suppress the order confirmation e-mail. If you want to use this feature, contact your Customer Success Manager. This query parameter is available when you [add line items to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items/post)&#x20;
+A real order uses `suppressorderconfirmationemail` to suppress the order confirmation email. If you want to use this feature, contact your Customer Success Manager. This query parameter is available when you [add line items to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Line-Items/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1line-items/post).&#x20;

@@ -1,8 +1,8 @@
 ---
 description: >-
-  Online Banking, also sometimes called Internet Bank Payment (IBP), is a
-  Browser Redirect processing method where customers authorize a debit from
-  their bank account.
+  Online Banking, sometimes called Internet Bank Payment (IBP), is a Browser
+  Redirect processing method where customers authorize a debit from their bank
+  account.
 ---
 
 # Online Banking (IBP)

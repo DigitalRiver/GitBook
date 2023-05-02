@@ -4,7 +4,7 @@ description: Learn how to get the information for a product by locale.
 
 # Getting a product by locale
 
-The following [`GET /v1/products/{productid or ERID}/locales/{locale}`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Retrieve-Product-\(Synchronous-API\)/paths/\~1v1\~1products\~1%7BproductId%7D\~1locales\~1%7Blocale%7D/get) request retrieves data associated with a specific locale for an individual or base product. All product variations (if any) for a base product will appear as a URL in the response.
+Basic The following [`GET /v1/products/{productid or ERID}/locales/{locale}`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Retrieve-Product-\(Synchronous-API\)/paths/\~1v1\~1products\~1%7BproductId%7D\~1locales\~1%7Blocale%7D/get) request retrieves data associated with a specific locale for an individual or base product. All product variations (if any) for a base product will appear as a URL in the response.
 
 To get a specific product by locale, you must provide either a [`productId` ](../../../general-resources/common-shoppers-and-admin-apis-reference/product-identifier.md)or [`ERID`](../../../general-resources/common-shoppers-and-admin-apis-reference/external-reference-identifier-erid.md)  and the locale (for example, `en_us`). If the request finds multiple products associated with the `ERID`, the response will return all of them.
 
@@ -15,7 +15,7 @@ The following example uses `productId` to get the locale for a specific product.
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/products/{productId}/locales/en_US' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 ...
 ```
 {% endcode %}
@@ -25,7 +25,7 @@ An ERID request requires the `x-erid-as-pid=true` header.
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/products/{ERID}/locales/en_US' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic  <API_key>' \
 --header 'header x-erid-as-pid=true' \
 ...
 ```

@@ -4,7 +4,7 @@ description: Learn how to update the subscriber's email address.
 
 # Updating the subscriber's email address
 
-You can update a subscriber's email address so they can receive [future notifications](https://help.digitalriver.com/help/gc/Administration/Email-Notifications/Email-notifications.htm) using their preferred email address.
+You can update a subscriber's il address so they can receive [future notifications](https://help.digitalriver.com/help/gc/Administration/Email-Notifications/Email-notifications.htm) using their preferred email address.
 
 Digital River supports the following email types:
 
@@ -16,7 +16,7 @@ Digital River supports the following email types:
 | [Subscription billing email address](updating-the-subscribers-email-address.md#subscription-billing-and-shipping-email-addresses)            | When creating a subscription, subscription-relevant information from the original acquisition, including the billing email address, is copied to the subscription. You can [update a shopper's billing email address for a specific subscription](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-a-specific-subscription) or [all of the shopper's subscriptions](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-all-subscriptions).   |
 | [Subscription shipping email address](updating-the-subscribers-email-address.md#subscription-billing-and-shipping-email-addresses)           | When creating a subscription, subscription-relevant information from the original acquisition, including the shipping email address, is copied to the subscription. You can [update a shopper's shipping email address for a specific subscription](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-a-specific-subscription) or [all of the shopper's subscriptions](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-all-subscriptions). |
 
-You can combine the notifications for a specific shopper by creating an event rule per each notification.  You update email notifications using [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
+You can combine the notifications for a specific shopper by creating an event rule per each notification. You update email notifications using [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 
 ## Email address update phases
 
@@ -42,7 +42,7 @@ You can use one of the following calls to change the billing or shipping email a
 
 ### Digital River-hosted storefront page 
 
-It depends on how your cart is customized.  Contact your account representative for more information.
+It depends on how your cart is customized. Contact your account representative for more information.
 
 ## Email addresses created after submitting an order
 
@@ -53,17 +53,17 @@ When a shopper submits an order, the system creates two email addresses for the 
 * Requisition billing email address
 * Requisition shipping email address&#x20;
 
-The requisition billing email address and requisition shipping email address are snapshots belonging to the order. The requisition billing email address is the shopper’s billing address associated with their chosen payment method. When the shopper places the order, the action disconnects the requisition billing email address from the payment method.  
+The requisition billing email address and requisition shipping email address are snapshots belonging to the order. The requisition billing email address is the shopper’s billing address ’associated with their chosen payment method. When the shopper places the order, the action disconnects the requisition billing email address from the payment method.  
 
 #### Orders placed by Commerce API
 
-For a physical product order, the requisition billing email address comes from the billing address associated with the shopper's payment method/payment option used to place the order. (The billing address includes the email address.) The shopper provides the requisition shipping email address, if the shopper does not specify the shipping email address, then the system copies the requisition billing email address to the requisition shipping email address. &#x20;
+The requisition billing email address for; if a physical product order comes from the billing address associated with the payment method/payment option used to place the order. (The billing address includes the email address.) The shopper provides the requisition shipping email address; if the shopper does not specify the shipping email address, the system copies the requisition billing email address to the requisition shipping email address. &#x20;
 
-For a non-physical product order, the requisition shipping email address comes from the requisition billing address. (The billing address includes the email address.)  The system copies the requisition billing email address to the requisition shipping email address.  &#x20;
+The requisition shipping email address for a non-physical product order comes from the requisition billing address. (The billing address includes the email address.)  The system copies the requisition billing email address to the shipping email address.  &#x20;
 
 #### Orders placed by Digital River-hosted solution with legacy payments
 
-When an authenticated shopper signs into your storefront and your Digital River-hosted storefront billing address page provides an Email field, the system copies the shopper’s owner email address to the requisition billing email address.  
+When an authenticated shopper signs into your storefront and your Digital River-hosted storefront billing address page provides an Email field, the system copies the owner email address to the requisition billing email address.  
 
 {% hint style="success" %}
 An anonymous shopper flow should provide an Email field on the storefront page where the shopper can provide their email address. &#x20;
@@ -80,27 +80,26 @@ If the shopper submits a subscription order, the system creates two more email a
 * Subscription billing email address&#x20;
 * Subscription shipping email address&#x20;
 
-The subscription billing address is associated with the shopper's subscription and recurring payment method. You can update the [subscription email address for a shopper's specific subscription](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-a-specific-subscription) or [all of the shopper's subscriptions](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-all-subscriptions).
+The subscription billing address is associated with the shopper’s subscription and recurring payment method. You can update the [subscription email address for a shopper’s specific subscription](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-a-specific-subscription) or [all of the shopper’s subscriptions](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-all-subscriptions).
 
-### Owner's email address
+### Owner’s email address
 
-If the shopper is an authenticated shopper and has an account they can use to sign in, the system also associates an owner's email address with the shopper. The owner's email address applies only to the authenticated shopper and is not associated with the shopper's order or subscription.
+If the shopper is authenticated and has an account they can use to sign in, the system also associates an owner’s email address with the shopper. The owner’s email address applies only to the authenticated shopper and is not associated with the shopper’s order or subscription.
 
-When the authenticated user signs in to their account, they can manage their email addresses from their account and add several often-used payment methods to their account. Each payment method is associated with a billing address persisted in the shopper's address book. The billing address includes an email address, that we call the billing email address.&#x20;
+When the authenticated user signs in to their account, they can manage their email addresses from their account and add several often-used payment methods to their account. Each payment method is associated with a billing address in the shopper’s address book. The billing address includes a billing email address.&#x20;
 
-## Updating the subscriber's email address for a specific subscription
+## Updating the subscriber’s email address for a specific subscription
 
-A long-term subscriber sometimes needs to change their subscription email address for a specific subscription. Use the [`POST /v1/subscriptions/{subscriptionId}/email`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Email-Updater/operation/emailUpdater) request to update a subscription customer's ship-to and bill-to email address so they can receive notifications. You need to include the email address (`emailAddress`) in the payload. The email address should use a [valid email format](https://deliverbility.com/valid-email-address-format/) and not exceed 255 characters. In the following example, the value of the `emailAddress` is `jdoe@acme.com`.&#x20;
+A long-term subscriber sometimes needs to change their subscription email address for a particular authenticated subscription. Use the [`POST /v1/subscriptions/{subscriptionId}/email`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Email-Updater/operation/emailUpdater) request to update a subscription customer’s ship-to and bill-to email address so they can receive notifications. You need to include the email address (`emailAddress`) in the payload. The email address should use a [valid email format](https://deliverbility.com/valid-email-address-format/) and not exceed 255 characters. In the following example, the value of the `emailAddress` is `jdoe@acme.com`.&#x20;
 
 {% tabs %}
 {% tab title="cURL" %}
 {% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://api.digitalriver.com/v1/subscriptions/{subscriptionId}/email' \
---header 'authorization: bearer ***\
+--heade‘ 'authorization: Basic ***\
 ...
---data-raw '{
- "emailAddress" : "jdoe@acme.com"
+--data-raw '{“ "emailAddre”" “ "jdoe@acme.com"
 }'
 ```
 {% endcode %}
@@ -142,7 +141,7 @@ An email address cannot exceed 255 characters. If the email address is more than
 {% code overflow="wrap" %}
 ```json
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me?applyEmailToSubscriptions=true' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 --data-raw '{
  "emailAddress" : "jdoe@acme.com"
@@ -179,7 +178,7 @@ A long-term subscriber sometimes needs to change their subscription email addres
 {% code overflow="wrap" %}
 ```json
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me?applyEmailToSubscriptions=true' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 --data-raw '{
  "emailAddress" : "jdoe@acme.com"

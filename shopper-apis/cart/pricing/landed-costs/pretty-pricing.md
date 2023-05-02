@@ -27,7 +27,7 @@ Price lists allow you to define how to convert product prices from the default c
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 2. If your company has more than one site, select the site from the **Sites** field. Global Commerce automatically populates the **Site** field if your company has only one site.\
-   &#x20;<img src="../../../../.gitbook/assets/Sites.png" alt="" data-size="original">&#x20;
+   &#x20;<img src="../../../../.gitbook/assets/sites.png" alt="" data-size="original">&#x20;
 3.  Select **Catalog**, select **Pricing & Plans**, and then choose one of the following options:
 
     * Click **Create Price List**.

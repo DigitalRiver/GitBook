@@ -11,7 +11,7 @@ You can find a retired product by sending a [`GET /v1/products/{productId or ERI
 {% hint style="info" %}
 Here are a few notes regarding retired products:
 
-* The retired product remains in your catalog where you can [get the product's attributes](../retrieve-products-synchronous-api/getting-a-base-or-individual-product.md). You can use the attributes in the response to [create](creating-or-updating-a-product.md) and [deploy a new product](deploying-a-product.md) with similar details. If you edit a retired product, it goes into a design state where you can apply changes, and then deploy the updated product.&#x20;
+* The retired product remains in your catalog, where you can [get the product's attributes](../retrieve-products-synchronous-api/getting-a-base-or-individual-product.md). You can use the attributes in the response to [create](creating-or-updating-a-product.md) and [deploy a new product](deploying-a-product.md) with similar details. If you edit a retired product, it goes into a design state where you can apply the change and then deploy the updated product.&#x20;
 * [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do) does not maintain the stock status for a retired product. Therefore, it does not display the current inventory number for the retired product.
 {% endhint %}
 
@@ -28,7 +28,7 @@ The following example retires a specific product with a `productId`.
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/v1/products/{productID}/retire' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 ...
 ```
 {% endcode %}
@@ -38,7 +38,7 @@ An ERID request requires the `x-erid-as-pid=true` header.
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/v1/products/{ERID}/retire' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 --header 'header x-erid-as-pid=true' \
 ...
 ```
@@ -69,5 +69,5 @@ When you retire an individual or base product, that product will be marked as re
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 2. Select **Catalog**, select **Products**, and then click **Manage Products**. The Products page appears.
-3. Click the **Search** tab, select **Product** from the **Search In** dropdown list, and select **ID** from the **Search By** dropdown list. Enter the product identifier or ERID in the **Search For** field, and then click **Search**.
-4. Click the link for the product under the **Internal Product Name column**. The Edit Product page appears and **(Retired)** will appear after the product name at the top of the page.
+3. Click the **Search** tab, select **Product** from the **Search In** dropdown list, and choose **ID** from the **Search By** dropdown list. Enter the product identifier or ERID in the **Search For** field, then click **Search**.
+4. Click the link for the product under the **Internal Product Name column**. The Edit Product page appears, and **(Retired)** will appear after the product name at the top of the page.

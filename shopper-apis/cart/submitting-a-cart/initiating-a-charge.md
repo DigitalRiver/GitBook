@@ -12,7 +12,7 @@ When [creating ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/C
 ```json
 curl --location --request POST 'http://<<host>>/v1/shoppers/me/carts/active' \
 --header 'Content-Type:  application/json' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 --data-raw '{
   "cart": {
     "lineItems": {

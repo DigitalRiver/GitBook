@@ -14,4 +14,4 @@ To receive the refund, the shopper must click the link (highlighted in yellow ab
 
 ![](../../.gitbook/assets/Offline-refund.png)
 
-When the shopper completes the fields and submits the information, the information is returned to DigitalRiver.js and the Payment service, and the system processes the refund.
+When the shopper completes the fields and submits the information, the information is returned to DigitalRiver.js and the Payment service. The system processes the refund.

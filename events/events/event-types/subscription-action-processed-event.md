@@ -12,11 +12,11 @@ When you [activate a shopper's subscription](../../../admin-apis/subscription-ma
 
 ## `cancel`
 
-When you [activate a shopper's subscription](../../../admin-apis/subscription-management/activating-a-subscription.md), the subscription state changes from `pendingActivation` to `Subscribed`. It also updates the subscription expiration date and all subscription-related data columns.
+When you start[ a shopper's subscription](../../../admin-apis/subscription-management/activating-a-subscription.md), the subscription state changes from `pendingActivation` to `Subscribed`. It also updates the subscription expiration date and all subscription-related data columns.
 
 ## `email`
 
-When you [update a shopper's subscription billing or shipping email address](../../../admin-apis/subscription-management/updating-a-subscriptions-billing-and-shipping-email-address.md), you will get a notification.
+You will be notified when you [update a shopper's subscription billing or shipping email address](../../../admin-apis/subscription-management/updating-a-subscriptions-billing-and-shipping-email-address.md).
 
 Billing email address: `subscription.billingOption.billAddress.emailAddress`\
 Shipping email address: `subscription.shipToAddress.emailAddress`
@@ -31,19 +31,19 @@ When you [update a shopper's subscription payment option](../../../common-shoppe
 
 ## `payment_source`
 
-When you [update a shopper's subscription payment source](../../../common-shopper-and-admin-apis/subscriptions/updating-the-subscriptions-payment-source.md), the system associates the new payment source with the subscription.  If there is a billing option associated with the payment source, the system will create a new billing option for the payment source. The request payload contains the `sourceId` and `isShippingSameAsBilling` flag.
+When you [update a shopper's subscription payment source](../../../common-shopper-and-admin-apis/subscriptions/updating-the-subscriptions-payment-source.md), the system associates the new payment source with the subscription. If there is a billing option associated with the payment source, the system will create a new billing option for the payment source. The request payload contains the `sourceId` and `isShippingSameAsBilling` flag.
 
 ## `perpetual_price`
 
-When you [modify the subscription's perpetual price](../../../admin-apis/subscription-management/assigning-a-perpetual-unit-price.md#creating-or-changing-a-perpetual-unit-price) for a shopper, the system modifies the [price of the subscription for the remaining subscription cycle](../../../general-resources/admin-apis-reference/subscriptions/midterm-change.md#perpetual-unit-price). The system updates the perpetual price or the hold price.
+When you [modify the subscription's perpetual price](../../../admin-apis/subscription-management/assigning-a-perpetual-unit-price.md#creating-or-changing-a-perpetual-unit-price) for a shopper, the system changes the subscription price[ for the remaining subscription cycle](../../../general-resources/admin-apis-reference/subscriptions/midterm-change.md#perpetual-unit-price). The system updates the perpetual price or the hold price.
 
 ## `reduce`
 
-When you [modify the subscription's perpetual price](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Perpetual-price/operation/changePerpetualPrice) for a shopper, the system modifies the [price of the subscription for the remaining subscription cycle](../../../general-resources/admin-apis-reference/subscriptions/midterm-change.md#perpetual-unit-price). The system updates the perpetual price or the hold price.
+When you [modify the subscription's perpetual price](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Perpetual-price/operation/changePerpetualPrice) for a shopper, the system changes the [subscription price](../../../general-resources/admin-apis-reference/subscriptions/midterm-change.md#perpetual-unit-price)[ for the remaining subscription cycle](../../../general-resources/admin-apis-reference/subscriptions/midterm-change.md#perpetual-unit-price). The system updates the perpetual price or the hold price.
 
 ## `reference_id`
 
-When you [modify the subscription's external reference ID](broken-reference), you will receive a notification.
+You will be notified when you [modify the subscription's external reference ID](broken-reference).
 
 ## `renewal_price`
 

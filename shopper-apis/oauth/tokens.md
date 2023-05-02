@@ -4,7 +4,7 @@ description: Learn how to create authenticated shopper tokens.
 
 # Token
 
-Use the `/oauth20/token` resource with client credentials (`grant_type=password`) to generate either an [anonymous ](tokens.md#creating-an-anonymous-shopper-token)or [authenticated shopper token](tokens.md#initiating-an-authenticated-session-returning-shopper-or-login-shopper). The API requirements depend on the type of application that invokes a request. A shopper can use an anonymous shopper token to anonymously shop for a product. You need an authenticated shopper token to retrieve authenticated shopper-specific details, such as address or payment details. This token only supports a public workflow.
+Use the `/oauth20/token` resource with client credentials (`grant_type=password`) to generate either an anonymous or [authenticated shopper token](tokens.md#initiating-an-authenticated-session-returning-shopper-or-login-shopper). The API requirements depend on the type of application that invokes a request. A shopper can use a guest checkout token to anonymously shop for a product. You need an authenticated shopper token to retrieve authenticated shopper-specific details, such as address or payment details. This token only supports a public workflow.
 
 The `/oauth20/token` resource generates an access token that you can use to access resources. You can also use it to refresh an access token.&#x20;
 

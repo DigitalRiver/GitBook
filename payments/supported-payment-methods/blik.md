@@ -6,7 +6,7 @@ description: BLIK is the must-have payment method for Polish shoppers.
 
 BLIK transactions accounted for 75% of ecommerce volume and a 60% market share of all ecommerce in Poland for 2021. BLIK boasts over 10.1 million active users and is continuing to grow.
 
-BLIK enables shoppers to seamlessly pay for online purchases directly from their preferred bank account. After choosing BLIK at checkout, shoppers are directed to BLIK’s system to provide their BLIK code that authenticates and confirms payment directly from their banking app.
+BLIK lets shoppers pay for online purchases directly from their preferred bank account. After choosing BLIK at checkout, shoppers are directed to BLIK's system to provide their BLIK code that authenticates and confirms payment directly from their banking app.
 
 ## How to configure
 

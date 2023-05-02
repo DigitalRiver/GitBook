@@ -15,7 +15,7 @@ You can [get the billing address for an order](https://www.digitalriver.com/docs
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request GET ' https://api.digitalriver.com/v1/shoppers/me/orders/{orderId}/billing-address' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic Basic {{access_token}}' \
 ...
 ```
 {% endcode %}
@@ -65,7 +65,7 @@ You can [get the billing address for a cart](https://www.digitalriver.com/docs/c
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request GET 'https://api.digitalriver.com/v1/shoppers/me/carts/active/billing-address' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 ```
 {% endcode %}
@@ -112,7 +112,7 @@ You can [update a customer's billing address](https://www.digitalriver.com/docs/
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request PUT 'https://api.digitalriver.com/v1/shoppers/me/carts/active/billing-address' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 --data-raw '{
   "address": {
@@ -152,7 +152,7 @@ You can a[pply a customer's billing address to a cart](https://www.digitalriver.
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/carts/active/apply-billing-address' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 ```
 {% endcode %}
@@ -415,7 +415,7 @@ You can  [get the shipping address for an order](https://www.digitalriver.com/do
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request GET ' https://api.digitalriver.com/v1/shoppers/me/orders/{orderId}/shipping-address' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 ```
 {% endcode %}
@@ -464,7 +464,7 @@ You can [get the shipping address for a cart](https://www.digitalriver.com/docs/
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request GET ' https://api.digitalriver.com/v1/shoppers/me/carts/active/shipping-address' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 ```
 {% endcode %}
@@ -515,7 +515,7 @@ You will get a `200 Successful` response.
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request PUT ' https://api.digitalriver.com/v1/shoppers/me/carts/active/shipping-address' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 --data-raw '{
   "address": {
@@ -554,7 +554,7 @@ You can [apply a customer's shipping address to a cart](https://www.digitalriver
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/carts/active/apply-shipping-address' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 ```
 {% endcode %}
@@ -815,7 +815,7 @@ You can [update a customer's billing or shipping address](https://www.digitalriv
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/carts/active?expand=all' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 ```
 {% endcode %}

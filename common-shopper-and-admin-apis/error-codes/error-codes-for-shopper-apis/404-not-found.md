@@ -6,14 +6,14 @@ description: 404 Not Found Understand the 404 Not Found error codes.
 
 ## `duplicate_offer_identifier`
 
-The system gets duplicated offer identifier (offer ID or offer external reference ID) from the request. The possible error descriptions are as follows:
+The system gets duplicated offer identifiers (offer ID or offer external reference ID) from the request. The possible error descriptions are as follows:
 
 * `Use either offer ID or offer external reference ID in the Applied Offers payload and try again.`\
   Provide either the offer ID or the offer external reference ID. You cannot provide both.
 
 ## `duplicate_product_identifier`
 
-The system gets duplicated product identifier (product ID or product external reference ID) from the request. The possible error descriptions are as follows:
+The system gets duplicated product identifiers (product ID or product external reference ID) from the request. The possible error descriptions are as follows:
 
 *   `Use either product ID or product external reference ID in the Applied Offers payload and try again.`
 
@@ -31,18 +31,11 @@ The offer ID for the request is invalid. The possible error descriptions are as 
 The system cannot get an offer identifier (offer ID or offer external reference Id) from the request. The possible error descriptions are as follows:
 
 * `The offer ID or offer external reference ID is missing. Provide the offer ID or external reference ID and try again.`Provide the offer ID or external reference ID.
-* `Use either offer ID or offer external reference ID in the Applied Offers payload and try again.`Provide either the offer ID or offer external reference ID. You cannot provide both.
-
-## `no-offer-identifier`
-
-The system cannot get an offer identifier (offer ID or offer external reference Id) from the request. The possible error descriptions are as follows:
-
-* `The offer ID or offer external reference ID is missing. Provide the offer ID or external reference ID and try again.`Provide the offer ID or external reference ID.
-* `Use either offer ID or offer external reference ID in the Applied Offers payload and try again.`Provide either the offer ID or the offer external reference ID. You cannot provide both.
+* `Use either offer ID or offer external reference ID in the Applied Offers payload and try again.`Provide either the offer ID or the external reference ID. You cannot provide both.
 
 ## `no-product-identifier`
 
-The system cannot get the product identifier (product ID or product external reference ID) from the request. The possible error descriptions are as follows:
+The system cannot get the product identifier (product ID or external reference ID) from the request. The possible error descriptions are as follows:
 
 * `The product ID or product external reference ID is missing. Provide the product ID or external reference ID and try again.`Provide the product ID or product external reference ID.
 
@@ -53,13 +46,12 @@ Could not find a \[resourceName] resource with an internal ID \[resourceId]. The
 * `A Cart identifier for the provided value of \"298407701971\" is not valid.` The cart identifier (`cartId`) is not valid. Provide the correct value for the `cartId` and try again.
 *   `Could not find a Line Item with an id of {line item id}`
 
-    Could not find the line item for the provided ID.
+    The system could not find the line item for the provided ID.
 *   `Could not find an Order with an id of {orderId}`
 
-    Could not find the order for the provided ID.
+    The system could not find the order for the provided ID.
 * `Invalid site for specified company`\
   The company of the site with the provided header `siteId` and the one with the provided header `companyId` are different, but they should be the same.
-* `invalid-product-id`\
-  Cannot find the product {productId}. The specified product ID could not be found. Provide the correct product ID and try again.
 * `offer-not-found`\
   The specified offer identifier (`offerId`) was not applied to the cart.
+

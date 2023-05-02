@@ -8,15 +8,15 @@ When something noteworthy happens in your account, we create a data object. More
 
 In the Commerce APIs, there are numerous [event types](./#event-types) that you can subscribe to when you [create ](../webhooks/creating-a-webhook.md)or [edit a webhook](../webhooks/editing-a-webhook.md). You can choose what you want to monitor from the list of [event types](./#event-types).
 
-In nearly all cases, an [event's data](./#event-data) contains the resource whose state changed.
+Nearly all cases, an [event's data](./#event-data) contains the resource whose state changed.
 
-To subscribe to an event, you need to set up [webhooks ](../webhooks/)that send designated events directly to an endpoint on your server. In [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), you'll find a complete list of our supported event types. To access this list, sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), select **Administration**, and click **Webhook Service**.
+To subscribe to an event, you must set up [webhooks ](../webhooks/)that send designated events directly to an endpoint on your server. You'll find a complete list of our supported event types in Global Commerce. To access this list, sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), select **Administration**, and click **Webhook Service**.
 
 ## Event types
 
 [Event types](event-types/) use the following naming conventions: `subscription.created`
 
-The name of the event usually reflects the current state of the resource. For example, when a subscription moves into the created state, we create a `subscription.created` event, and when a subscription moves into a `renewed` state, we create a `subscription.renewed` event.
+The name of the event usually reflects the current state of the resource. For example, when a subscription moves into the created state, we create a `subscription.created` event; when a subscription moves into a `renewed` state, we create a `subscription.renewed` event.
 
 ## Event data
 

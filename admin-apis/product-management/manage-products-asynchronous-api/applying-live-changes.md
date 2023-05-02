@@ -19,8 +19,8 @@ The following [`POST /v1/products/{productId or ERID}/live-changes`](https://www
 {% tab title="cURL" %}
 The following example applies live changes to a product with a `productId`. See the [live-changes](../../../general-resources/admin-apis-reference/live-changes.md#live-changes-resource) resource for a description of the attributes.
 
-<pre class="language-http" data-overflow="wrap"><code class="lang-http">curl --location --request POST 'https://api.digitalriver.com/v1/products/{productId}/live-chhanges' \
---header 'Authorization: Bearer &#x3C;API_key>' \
+<pre class="language-http" data-overflow="wrap"><code class="lang-http">curl --location --request POST 'https://api.digitalriver.com/v1/products/{productId}/live-changes' \
+--header 'Authorization: Basic &#x3C;API_key>' \
 --data-raw '{
 <strong>{
 </strong>  "externalReferenceId": "sku-1234-5678-xyz",
@@ -55,7 +55,7 @@ An ERID request requires the `x-erid-as-pid=true` header.
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/v1/products/{ERID}/live-changes' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 --header 'header x-erid-as-pid=true' \
 --data-raw '{
 {
@@ -117,7 +117,7 @@ The following example applies live changes to a product variation with a `produc
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/v1/products/product/variations/{variationProductId}/live-changes' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 ...
 --data-raw '{
     "externalReferenceId": "{newVariationProductERID}"
@@ -130,7 +130,7 @@ An ERID request requires the `x-erid-as-pid=true` header.
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/v1/products/product/variations/{variationERID}/live-changes' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic Basic <API_key>' \
 --header 'header x-erid-as-pid=true' \
 ...
 --data-raw '{

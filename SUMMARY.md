@@ -9,12 +9,11 @@
 ## Shopper APIs
 
 * [Shopper basics](shopper-apis/shopper-basics/README.md)
-  * [Simple call sequence example](shopper-apis/shopper-basics/simple-call-sequence-example.md)
   * [Common use cases](shopper-apis/shopper-basics/common-use-cases/README.md)
     * [Creating a customer](shopper-apis/shopper-basics/common-use-cases/creating-a-customer.md)
     * [Applying store credit](shopper-apis/shopper-basics/common-use-cases/applying-store-credit.md)
     * [Private Store workflow](shopper-apis/shopper-basics/common-use-cases/private-store-workflow.md)
-    * [Single-click checkout](shopper-apis/shopper-basics/common-use-cases/single-click-checkout.md)
+    * [Guest checkout](shopper-apis/shopper-basics/common-use-cases/guest-checkout.md)
 * [OAuth](shopper-apis/oauth/README.md)
   * [Authentication](shopper-apis/oauth/authentication.md)
   * [OAuth 2.0 APIs](shopper-apis/oauth/oauth-2.0-apis.md)
@@ -129,6 +128,9 @@
 
 * [Admin basics](admin-apis/admin-basics/README.md)
   * [Available Admin API calls](admin-apis/admin-basics/available-admin-api-calls.md)
+* [Order management](admin-apis/order-management/README.md)
+  * [Getting the order's details](admin-apis/order-management/getting-the-orders-details.md)
+  * [Downloading the invoice](admin-apis/order-management/downloading-the-invoice.md)
 * [Refund management](admin-apis/refunds/README.md)
   * [Authorization](admin-apis/refunds/authorization.md)
   * [Refund reason codes](admin-apis/refunds/refund-reason-codes.md)
@@ -182,6 +184,8 @@
     * [Getting the latest information on a product task](admin-apis/product-management/get-the-task-status-for-a-product-synchronous-api/getting-the-latest-information-on-a-product-task.md)
     * [Retrieving the tasks for a specific product](admin-apis/product-management/get-the-task-status-for-a-product-synchronous-api/retrieving-the-tasks-for-a-specific-product.md)
     * [Retrieving the tasks for products](admin-apis/product-management/get-the-task-status-for-a-product-synchronous-api/retrieving-the-tasks-for-products.md)
+* [File management](admin-apis/file-management/README.md)
+  * [Downloading a file](admin-apis/file-management/downloading-a-file.md)
 
 ## Common Shopper and Admin APIs
 
@@ -300,6 +304,8 @@
 * [Events](events/events/README.md)
   * [Event types](events/events/event-types/README.md)
     * [Delayed payment expired and reminder events](events/events/event-types/delayed-payment-expired-and-reminder-events.md)
+    * [Refund credit memo event](events/events/event-types/refund-credit-memo-event.md)
+    * [Invoice created event](events/events/event-types/invoice-created-event.md)
     * [Subscription action processed event](events/events/event-types/subscription-action-processed-event.md)
     * [Retrying a subscription update event](events/events/event-types/retrying-a-subscription-update-event.md)
     * [Subscription automatic renewal reminder event](events/events/event-types/subscription-automatic-renewal-reminder-event.md)

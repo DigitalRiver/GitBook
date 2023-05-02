@@ -4,7 +4,7 @@ description: Learn how to configure Klarna for DigitalRiver.js with Elements.
 
 # Configuring Klarna
 
-If you're using[ DigitalRiver.js with Elements](../), you can create a [Klarna](../../../supported-payment-methods/klarna.md) payment method for your app or website in five easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a [Klarna](../../../supported-payment-methods/klarna.md) preceiveayment method for your app or website in five easy steps:
 
 * [Step 1: Build a Klarna source request object](klarna.md#step-1-build-a-klarna-source-request-object)
 * [Step 2: Create a Klarna source using DigitalRiver.js](klarna.md#step-2-create-a-klarna-source-using-digitalriver-js)
@@ -192,7 +192,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 ## Step 5: Support recurring payments
 
 {% hint style="info" %}
-**Note**: To support recurring payments, use a payment type of `klarnaCreditRecurring` in the [createSource request](klarna.md#klarna-source-request-object). Only use the Klarna Recurring payment type for recurring payments. Klarna Recurring uses a different type of agreement with the lender, Klarna, to facilitate the recurring payments.
+**Note**: To support recurring payments, use a`klarnaCreditRecurring` payment type in the [createSource request](klarna.md#klarna-source-request-object). Only use the Klarna Recurring payment type for recurring payments. Klarna Recurring uses a different type of agreement with the lender, Klarna, to facilitate the recurring payments.
 
 For standard payments, you must use the Klarna payment type.
 {% endhint %}
@@ -237,7 +237,7 @@ digitalriver.createSource(data).then(function(result) {
         //handle errors
     } else {
         var source = result.source;
-        //send source to back end
+        //send the source to the back end
         sendToBackend(source);
     }
 });
@@ -245,5 +245,5 @@ digitalriver.createSource(data).then(function(result) {
 {% endcode %}
 
 {% hint style="warning" %}
-**Additional setup required**: If you are interested in using Klarna, contact your Account Manager. The Account Manager will send setup instructions for Klarna Banners after you sign the client addendum.
+**Additional setup required**: If you want to use Klarna, contact your Account Manager. The Account Manager will send setup instructions for Klarna Banners after you sign the client addendum.
 {% endhint %}

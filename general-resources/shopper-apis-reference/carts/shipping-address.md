@@ -28,7 +28,7 @@ Use the `fields` query parameter to specify the fields that appear in the respon
 
 ### Postal code
 
-The `postalCode` is the postal code. For United States addresses, Digital River supports ZIP+4 codes. They consist of the last four digits of a full nine-digit ZIP code. A nine-digit ZIP Code has two parts: the initial five digits of the zip code indicating the destination post office or delivery area and the last four digits representing a specific delivery route within that overall delivery area. This query parameter is available when you
+The `postalCode` is the postal code. For United States addresses, Digital River supports ZIP+4 codes. They consist of the last four digits of a full nine-digit ZIP code. A nine-digit ZIP Code has two parts: the initial five digits of the zip code indicating the destination post office or delivery area, and the last four digits representing a specific delivery route within that overall delivery area. This query parameter is available when you [apply a billing address to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Billing-Address/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-billing-address/post).
 
 ### The `suggestionId`
 

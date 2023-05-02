@@ -38,7 +38,7 @@ The `quantity` is the number of products added to the cart. The value must be a 
 
 ### Suppress order confirmation email
 
-A real order uses `suppressorderconfirmationemail` to suppress the order confirmation e-mail. If you want to use this feature, contact your Customer Success Manager.
+A real order uses `suppressorderconfirmationemail` to suppress the order confirmation email. If you want to use this feature, contact your Customer Success Manager.
 
 ### Term identifier
 

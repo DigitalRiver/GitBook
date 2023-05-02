@@ -113,10 +113,10 @@ onlineBankingElement.mount('online-banking');
 ```
 {% endcode %}
 
-To create an online banking source, you must reference the created element and the supplemental data in your [createSource ](../../../../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
+To create an online banking source, you must reference the created element and supplemental data in your [createSource ](../../../../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata)request to create an online banking source. DigitalRiver.js will retrieve and assemble the request on your behalf.
 
 {% hint style="info" %}
-The `address` object must contain postal code and state/province data that [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
+The `address` object must contain postal code and state/You[dized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
 {% endhint %}
 
 {% code overflow="wrap" %}
@@ -150,7 +150,7 @@ digitalriver.createSource(data).then(function(result) {
         //handle errors
     } else {
         var source = result.source;
-        //send source to back end
+        //send the source to the back end
         sendToBackend(source);
     }
 });
@@ -159,7 +159,7 @@ digitalriver.createSource(data).then(function(result) {
 
 ### Create your Online Banking display using DigitalRiver.js
 
-If you decide not to use the out-of-the-box functionality provided with the Online Banking elements, you can use the `digitalriver.retrieveOnlineBankingBanks()` method to build your own experience.
+If you decide not to use the out-of-the-box functionality provided by the Online Banking elements, you can use the `digitalriver.retrieveOnlineBankingBanks()` method to build your own experience.
 
 ### Retrieving available banks
 
@@ -170,7 +170,7 @@ DigitalRiver.js exposes a method that allows you to retrieve the available banks
 {% code overflow="wrap" %}
 ```javascript
 digitalriver.retrieveOnlineBankingBanks("DE","EUR").then(function(response) {
-    //use the returned values to create your own display
+    //use the returned values to create your display
 });
 ```
 {% endcode %}
@@ -195,7 +195,7 @@ digitalriver.retrieveOnlineBankingBanks("DE","EUR").then(function(response) {
 {% endtab %}
 {% endtabs %}
 
-With the retrieved banks, you can build an experience suitable for your needs.
+You can build an experience suitable for your needs with the retrieved banks.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -247,7 +247,7 @@ var sourceData = {
                 //handle errors
             } else {
                 var source = result.source;
-                //send source to back end
+                //send the source to the back end
                 sendToBackend(source);
             }
         });
@@ -311,7 +311,7 @@ When you create an Online Banking source, the customer is required to authorize 
 
 ### Redirecting the customer for Online Banking authorization
 
-To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
+Use the `redirectUrl` parameter in your `createSource` response to redirect your customer to the payment provider for authorization.
 
 ```javascript
 window.location.href = sourceResponse.redirect.redirectUrl;

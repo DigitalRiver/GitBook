@@ -4,6 +4,8 @@ description: Understand the error code format for the Shopper APIs.
 
 # Error format for Shopper APIs
 
+When encountering an error, a basic error message should contain the following details: a category parameter that distinguishes different types of failures that lead to the same issue, an optional parameter that provides additional system information, and a concise description of the error.
+
 The Shopper APIs use the following format for errors:
 
 {% code overflow="wrap" %}
@@ -20,9 +22,3 @@ The Shopper APIs use the following format for errors:
 }
 ```
 {% endcode %}
-
-A basic error message (`error`) includes the following information:
-
-* `code`–This parameter categorizes the failure reasons that look different but point to the same issue.
-* `subcode`–This optional parameter appears when the system has more information about the error.
-* `description`–A brief description of the error.

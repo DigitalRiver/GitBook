@@ -136,7 +136,7 @@ var payload = {
 
 ## Step 3: Use the authorized source
 
-Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart) or [attaching it to a shopper](../../../sources/#attaching-a-payment-method-to-a-customer).
+Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart) or [a shopper](../../../sources/#attaching-a-payment-method-to-a-customer).
 
 ### Option 1: Attach the source to a cart
 
@@ -160,7 +160,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% tab title="POST /v1/shoppers/me/payment-options" %}
 {% code overflow="wrap" %}
 ```javascript
-{
+the {
   "paymentOption": {
     "nickName": "My Token",
     "isDefault": "true",

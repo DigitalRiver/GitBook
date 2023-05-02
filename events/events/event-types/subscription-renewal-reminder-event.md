@@ -4,25 +4,25 @@ description: Understand the subscription renewal reminder event.
 
 # Subscription renewal reminder event
 
-When a subscription reaches the [renewal notification date](../../../general-resources/common-shoppers-and-admin-apis-reference/subscriptions/subscription-lifecycle.md), Digital River creates a `subscription.renewal_reminder` event. You can use this event to remind your customer to renew their subscription.
+Digital River creates an event when a subscription reaches the [renewal notification date](../../../general-resources/common-shoppers-and-admin-apis-reference/subscriptions/subscription-lifecycle.md). You can use this event to remind your customer to renew their subscription.
 
 {% hint style="info" %}
-When you create a webhook using this event, it combines the auto-renewal reminder, manual renewal reminder, and SEPA auto-renewal reminder into one event. As a result, we renamed the `subscription.auto_reminder` to `subscription.renewal_reminder`.
+Creating a webhook using this event combines the reminders for auto-renewal, manual renewal, and SEPA auto-renewal into one event. As a result, we renamed the `subscription.auto_reminder` to `subscription.renewal_reminder`.
 {% endhint %}
 
 {% code title="Webhook request" overflow="wrap" %}
 ```json
 {
-   "type":"subscription.renewal_reminder",
+   "type": "subscription.renewal_reminder",
    "data":{
       "object":{
-         "id":"6310199",
+         "id": "6310199",
          "creationDate":"2022-03-28T16:51:10.000Z",
          "activationDate":"2022-03-28T05:00:00.000Z",
          "nextRenewalDate":"2022-05-28T05:00:00.000Z",
          "nextBillingDate":"2022-05-28T05:00:00.000Z",
          "expirationDate":"2022-05-28T05:00:00.000Z",
-         "graceDate":"2022-06-04T05:00:00.000Z",
+         "graceDate": "2022-06-04T05:00:00.000Z",
          "currentQuantity":1,
          "renewalQuantity":1,
          "autoRenewal":false,

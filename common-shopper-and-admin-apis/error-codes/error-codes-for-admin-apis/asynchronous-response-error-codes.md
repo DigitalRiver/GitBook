@@ -6,7 +6,7 @@ description: Understand the asynchronous response error codes for the Admin API.
 
 #### `ANOTHER_REQUEST_IS_UPDATING_ERID`
 
-Another API request is trying to update the same product. This can occur when the Enforce Unique Value is enabled for a product's external reference ID (ERID).
+Another API request is trying to update the same product. This can occur when the Enforce Unique Value is enabled for a product's [external reference ID (ERID)](../../../general-resources/common-shoppers-and-admin-apis-reference/external-reference-identifier-erid.md).
 
 * `Product: The external reference ID [987654321] was requested by another API request : [abcd-1234-5678-agfe-defg]. Enter a different value and try again.`
 
@@ -904,7 +904,7 @@ The same attribute appears more than once in a single variation (for example, `c
 
 #### `VARYING_ATTRIBUTE_NAME_NOT_ELIGIBLE`
 
-The attribute name for the varying attribute was found in Global Commerce, but cannot be used as a varying attribute.
+The attribute name for the varying attribute was found in Global Commerce but cannot be used as a varying attribute.
 
 `Variation: attribute: ABC cannot be used to define variations.`
 
@@ -934,7 +934,7 @@ A user tried to add a new product variation to an existing product, but there wa
 
 #### `VARYING_ATTRIBUTE_NOT_SUFFICIENT`
 
-The user did not provide all of the required varying attributes when adding a product variation. For example, the user only provided color when both color and size are required.
+The user did not provide all of the required varying attributes when adding a product variation. For example, the user only provided color when color and size were required.
 
 `Variation: varying attributes are insufficient. The required attributes are [color, size], and the provided attribute) are [color, size, material].`
 
@@ -945,7 +945,7 @@ The user did not provide all of the required varying attributes when adding a pr
 
 #### `VARYING_ATTRIBUTE_NOT_USABLE_BY_COMPANY`
 
-The attribute name for the varying attribute was found in Global Commerce, but cannot be used by the given company.
+The attribute name for the varying attribute was found in Global Commerce but cannot be used by the given company.
 
 `Variation: varying attribute: TUV is not applicable at the current company`
 

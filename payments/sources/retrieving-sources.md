@@ -26,7 +26,7 @@ curl --location --request GET 'https://api.digitalriver.com/sources/e59c8303-139
 {% endtab %}
 {% endtabs %}
 
-If a valid identifier and API key are provided, the response returns a Source object. This sample response returns a Source with a `type` of `creditCard` and a state of `chargeable`.&#x20;
+The response returns a Source object if a valid identifier and API key are provided. This sample response returns a Source with a `type` of `creditCard` and a state of `chargeable`.&#x20;
 
 {% hint style="warning" %}
 Only the last four digits of credit card numbers are returned by a `GET` Source request.
@@ -74,13 +74,13 @@ Only the last four digits of credit card numbers are returned by a `GET` Source 
 
 ## Obtain a shopper's sources
 
-You can retrieve the Sources associated with a Shopper by making a get shopper by ID request and parsing the `sources` array contained in the response if the payment source is attached to the shopper's payment option.  When the shopper gets their payment options, all payment sources will be listed.
+You can retrieve the Sources associated with a Shopper by making a get shopper by ID request and parsing the `sources` array contained in the response if the payment source is attached to the shopper's payment option. All payment sources will be listed when the shopper gets their payment options.
 
 ### Step 1: Create your first payment source and option
 
-1. Create your first payment source using: \
+1. Create your first payment source using the following: \
    `POST https://{{dispatchHost}}/payments/sources/`
-2. Create your first payment option using: \
+2. Create your first payment option using the following: \
    `POST https://{{dispatchHost}}/v1/shoppers/me/payment-options/`
 
 {% tabs %}
@@ -104,9 +104,9 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/paym
 
 ### Step 2: Create your second payment source and option
 
-1. Create your second payment source using: \
+1. Create your second payment source using the following: \
    `POST https://{{dispatchHost}}/payments/sources/`
-2. Create your second payment option using: \
+2. Create your second payment option using the following: \
    `POST https://{{dispatchHost}}/v1/shoppers/me/payment-options/`
 
 {% tabs %}
@@ -163,4 +163,4 @@ curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/paym
 
 ### Display a customer's sources
 
-The data contained in the `sources` array can be used to display a customer's saved payment methods on your website or app. To do this, parse the response and extract the values in the `creditCard`, `owner`, and `address` hash tables. You can then use these values to present the card's brand name, last four digits, expiration date, and the customer's billing information.
+You can use the data contained in the `sources` array to display a customer's saved payment methods on your website or app. To do this, parse the response and extract the values in the `creditCard`, `owner`, and `address` hash tables. You can then use these values to present the card's brand name, last four digits, expiration date, and the customer's billing information.

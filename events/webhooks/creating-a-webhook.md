@@ -20,16 +20,16 @@ When creating webhooks, you need to add endpoints from Global Commerce:
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 2. Select **Administration**, and then click **Webhook Service**. The Webhook Service page appears.\
-   &#x20;<img src="../../.gitbook/assets/Webhook Service.png" alt="" data-size="original">&#x20;
+   &#x20;<img src="../../.gitbook/assets/Webhook-Service.png" alt="" data-size="original">&#x20;
 3. From the Webhook Service page, click **Create Webhook**.  \
    <img src="../../.gitbook/assets/Webhook-Service-Create-webhook.png" alt="" data-size="original"> \
    The Create Webhook page appears.\
    ![](<../../.gitbook/assets/Create Webhook Event (1).jpg>)&#x20;
 4. Enter the URL for the endpoint in the **Endpoint URL** field. The endpoint URL will receive the webhook payload. The URL must start with either `https://` or `http://`.
-5. Optional. Enter your endpoint credentials in the **Username** and **Password** fields. If you do not want to leverage these authentication credentials, you can leave the two fields blank. See [Authentication](https://docs.digitalriver.com/commerce-api/getting-started/best-practices#authentication) for information on how to authenticate the client’s endpoint to add another layer to security.
+5. Optional. Enter your endpoint credentials in the **Username** and **Password** fields. If you do not want to leverage these authentication credentials, you can leave the two fields blank. See [Authentication](https://docs.digitalriver.com/commerce-api/getting-started/best-practices#authentication) for information on how to authenticate the client's endpoint to add another layer to security.
 6. Optional. Select **Enabled** for **Status**. \
    **Note**: If you do not select **Enabled**, no payment will be sent when an event occurs. Also, the system will ask you if you want to enable the webhook when you click **Create**.
-7. Select the check box next to each event you want to associate with the endpoint or select the check box next to **Event** to select all events. You must select at least one [event type](../events/event-types/).&#x20;
+7. Select the checkbox, next to each event you want to associate with the endpoint, or select the checkbox next to **Event** to select all events. You must select at least one [event type](../events/event-types/).&#x20;
 8. Scroll down and click **Create**.  &#x20;
 
 ### Create a subscription response
@@ -82,7 +82,7 @@ A webhook with a unique identifier is returned in a `201 Created` response. You 
                 "id" : "364164170199",
                 "firstName" : "Subscription",
                 "lastName" : "Automation",
-                "companyName" : "DR",
+                "companyName" : "Digital River",
                 "line1" : "10380 Bren Rd W",
                 "line2" : "Conjunto 304",
                 "line3" : "Conjunto 304",

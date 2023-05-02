@@ -4,10 +4,10 @@ description: Understand the subscription payment failed event.
 
 # Subscription payment failed event
 
-When the subscription payment attempt fails, Digital River creates a `subscription.payment_failed` event. You will receive a notification that includes the reason why the customer's transaction failed. Note that this event is only applicable to auto-renewal.
+When the subscription payment attempt fails, Digital River creates a `subscription.payment_failed` event. You will receive a notification that includes why the customer's transaction failed. Note that this event is only applicable to auto-renewal.
 
 {% hint style="info" %}
-PayPal and other payment methods share the same events. However, the contents of the email notification for each payment method will be different.
+PayPal and other payment methods share the same events. However, the contents of the email notification for each payment method will differ.
 {% endhint %}
 
 We include the payment method in the webhook payload for each notification.
@@ -57,7 +57,7 @@ We include the payment method in the webhook payload for each notification.
             "id":"405361290199",
             "firstName":"Jane",
             "lastName":"Doe",
-            "companyName":"DR",
+            "companyName":"Digital River",
             "line1":"10380 Bren Rd W",
             "line2":"Conjunto 304",
             "line3":"Conjunto 304",
@@ -85,7 +85,7 @@ We include the payment method in the webhook payload for each notification.
                "id":"405360070199",
                "firstName":"Jane",
                "lastName":"Doe",
-               "companyName":"DR",
+               "companyName":"Digital River",
                "line1":"10380 Bren Rd W",
                "line2":"Conjunto 304",
                "line3":"Conjunto 304",

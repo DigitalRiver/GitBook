@@ -4,11 +4,11 @@ description: Understand the subscription lifecycle.
 
 # Subscription lifecycle
 
-Subscriptions allow customers to make recurring payments to access a product such as a video game or streaming service.&#x20;
+Subscriptions allow customers to make recurring payments to access a product like a video game or streaming service.&#x20;
 
-The following image shows the lifecycle of a subscription from beginning to end when a customer purchases a new subscription to a product. You receive the notification when the customer creates a new subscription. After the trial period expires, the system bills the customer and you receive a trial to active conversion notification. As the customer continues to use the product, you receive renewal notifications at the start of every new subscription period. Finally, when the customer no longer needs the product and their subscription lapses, you receive a cancellation notice.
+The following image shows the lifecycle of a subscription from beginning to end when a customer purchases a new subscription to a product. You receive a notification when the customer creates a new subscription. After the trial period expires, the system bills the customer, and you receive a trial to active conversion notification. As the customer continues to use the product, you receive renewal notifications at the start of every new subscription period. Finally, you receive a cancellation notice when the customer no longer needs the product and their subscription lapses.
 
-![](<../../../.gitbook/assets/Subscription timeline example.png>)
+![](../../../.gitbook/assets/subscription-timeline-example.png)
 
 The following image shows the lifecycle from the beginning of a free trial subscription to the end.&#x20;
 
@@ -40,12 +40,12 @@ The following table defines the terms used in the subscription lifecycle.
 
 Digital River uses these invariants to define the subscription lifecycle.
 
-* Activation Date < Purchased Duration Date <= Expiration date <= Grace Date
+* Activation Date < Purchased Duration Date <= Expiration Date <= Grace Date
 * Activation Date < Renewal Date <= Expiration Date <= Grace Date
 * Activation Date < Renewal Notification Date < Renewal Date
-* Renewal Notification Date must be 1 or more days before the Renewal date
+* Renewal Notification Date must be one or more days before the Renewal date
 * Free Trial Conversion Notification Date = Free Trial Conversion Confirmation                                                                                                                              Date − Notification Days
-* Free Trial Conversion Date or Trial Term End Date (for example, June 20th) = Free Trial Start Date (for example, June 10th) + Free Trial Product Term (for example, 10 days)
+* Free Trial Conversion Date or Trial Term End Date (for example, June 20th) = Free Trial Start Date (for example, June 10th) + Free Trial Product Term (for example, ten days)
 * Purchase Duration = Purchase Duration Date − Activation Date
 * Purchase Duration Date  = Activation Date Purchase Duration
 * Extension Period = Activation Date + Purchased Duration + Extension Period

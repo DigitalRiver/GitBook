@@ -4,14 +4,14 @@ description: Learn how to configure Clearpay for DigitalRiver.js with Elements.
 
 # Configuring Clearpay
 
-If you're using[ DigitalRiver.js with Elements](../), you can create an [Clearpay ](../../../supported-payment-methods/clearpay.md)payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a [Clearpay ](../../../supported-payment-methods/clearpay.md)payment method for your app or website in four easy steps:
 
-* [Step 1: Build an Clearpay Source Request and Source Details objects](configuring-clearpay.md#step-1-build-an-clearpay-source-request-and-source-details-objects)
-* [Step 2: Create an  Clearpay source using DigitalRiver.js](configuring-clearpay.md#step-2-create-an-clearpay-source-using-digitalriver.js)
+* [Step 1: Build a Clearpay Source Request and Source Details object](configuring-clearpay.md#step-1-build-a-clearpay-source-request-and-source-details-objects)
+* [Step 2: Create a Clearpay source using DigitalRiver.js](configuring-clearpay.md#step-2-create-a-clearpay-source-using-digitalriver.js)
 * [Step 3: Authorize the Clearpay source](configuring-clearpay.md#step-3-authorize-the-clearpay-source)
 * [Step 4: Use the authorized source](configuring-clearpay.md#step-4-use-the-authorized-source)
 
-## Step 1: Build an Clearpay Source Request and Source Details objects
+## Step 1: Build a Clearpay Source Request and Source Details objects
 
 Build the Clearpay Source Request and Source Details objects.&#x20;
 
@@ -58,7 +58,7 @@ The Clearpay Source Details object requires the following fields.
 | `returnUrl` | Required          | If you choose to use the full redirect flow, this is where you will redirect your customer to after authorizing within the Clearpay experience. |
 | `shipping`  | Optional          | if the order contains a physical product that requires a shipping address, include it here.JSON                                                 |
 
-## Step 2: Create an Clearpay source using DigitalRiver.js
+## Step 2: Create a Clearpay source using DigitalRiver.js
 
 Use the DigitalRiver.js library to create and mount elements to the HTML container.
 
@@ -110,7 +110,7 @@ digitalriver.createSource(sourceData).then(function(result) {
         //handle error message
         var errorMessage = result.error.errors[0].message;
     } else {
-        //send source to back end for processing
+        //send the source to the back end for processing
         var source = result.source;
     }
 });
@@ -181,17 +181,17 @@ digitalriver.createSource(sourceData).then(function(result) {
 
 ## Step 3: Authorize the Clearpay source
 
-When you create an Clearpay source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
+When you create a Clearpay source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
 
 ### Redirecting the customer for Clearpay authorization
 
-To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
+Use the `redirectUr`l parameter in your `createSource` response to redirect your customer to the payment provider for authorization.
 
 ```javascript
 window.location.href = sourceResponse.redirect.redirectUrl;
 ```
 
-The payment provider will present the customer with the transaction details and the customer can authorize, or cancel the transaction. A successful authorization redirects the customer to the Clearpay Return URL parameter you specified when you created the source.
+The payment provider will present the customer with the transaction details and the customer can authorize or cancel the transaction. A successful authorization redirects the customer to the Clearpay Return URL parameter you specified when you created the source.
 
 Once authorized, the source state will change to `chargeable`.
 

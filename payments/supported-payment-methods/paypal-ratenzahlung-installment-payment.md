@@ -4,7 +4,7 @@ description: Learn about PayPal RatenZahlung.
 
 # PayPal RatenZahlung (Installment Payment)
 
-PayPal RatenZahlung is a pay later option available through PayPal Express Checkout Wallet. Presents within the PayPal wallet on a category known as "Pay Later". Note that PayPal RatenZahlung does not support recurring subscriptions. No additional setup is required to present this payment method in the PayPal Express Checkout Wallet. If the shopper's purchase history along with the items in the checkout qualify, PayPal RatenZahlung will be available as a payment method. &#x20;
+PayPal RatenZahlung is a pay-later option available through PayPal Express Checkout Wallet. Presents within the PayPal wallet in a "Pay Later" category. Note that PayPal RatenZahlung does not support recurring subscriptions. No additional setup is required to present this payment method in the PayPal Express Checkout Wallet requires no additional setup. If the shopper's purchase history and the items in the checkout qualify, PayPal RatenZahlung will be available as a payment method. &#x20;
 
 ## How to configure&#x20;
 

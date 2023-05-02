@@ -23,7 +23,7 @@ The following [`POST /v1/shoppers/me/carts/active`](https://www.digitalriver.com
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request POST 'https://api.digitalriver.com/v1/shoppers/me/carts/active' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 --data-raw '{
    “cart”:{
@@ -46,7 +46,7 @@ The following [`POST /v1/shoppers/me/carts/active`](https://www.digitalriver.com
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/carts/active' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 --data-raw '{
    “cart”:{
@@ -74,7 +74,7 @@ The following [`POST /v1/shoppers/me/carts/active/submit-cart`](https://www.digi
 ```http
 
 curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/carts/active/submit-cart' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 --data-raw '{
  "cart": {
@@ -97,7 +97,7 @@ The following the [`POST /v1/shoppers/me/carts/active/submit-cart`](https://www.
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/carts/active/submit-cart' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 --header 'Content-Type: applicati0n/json'
 ...
 --data-raw '{
@@ -133,7 +133,7 @@ You can validate the successful capture of a customer's IP address by using the 
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request GET' https://api.digitalriver.com/v1/shoppers/me ' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 --header 'Content-Type: applicati0n/json'
 ...
 --data-raw '{
@@ -193,4 +193,4 @@ You will get a `200 Successful` response.
 
 If the IP address format is incorrect (that is, not in a valid IPv4 and IPv6 format), the API response will send a `409 Conflict` error:
 
-![409 Conflict error](<../../../.gitbook/assets/409-conflict-error-invalid-ip-address (2).png>)
+![409 Conflict error](<../../../.gitbook/assets/409-conflict-error-invalid-ip-address (2) (1) (1).png>)

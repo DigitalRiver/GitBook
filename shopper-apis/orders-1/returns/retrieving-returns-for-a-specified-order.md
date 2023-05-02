@@ -17,7 +17,7 @@ Use the [`GET /v1/shoppers/me/orders/(orderId)/returns`](https://www.digitalrive
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/orders/{orderId}/returns' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}
@@ -119,7 +119,7 @@ Request the return of one or more line items in a specified order. You must prov
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/orders/{orderid}/returns' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 --data-raw '{
   "return": {

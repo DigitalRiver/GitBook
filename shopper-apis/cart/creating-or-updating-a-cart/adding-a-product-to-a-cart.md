@@ -11,7 +11,7 @@ Send a [`POST /v1/shoppers/me/carts/active`](https://www.digitalriver.com/docs/c
 {% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/carts/active?productId={pid}' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}
@@ -112,4 +112,3 @@ A successful request returns a `200 OK` response.
 
 See [Update current cart query parameters](../../../general-resources/shopper-apis-reference/carts/update-current-cart.md#update-current-cart-query-parameters) for more information.
 
-<mark style="background-color:orange;"></mark>

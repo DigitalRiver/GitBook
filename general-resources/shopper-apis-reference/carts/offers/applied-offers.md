@@ -6,7 +6,7 @@ description: Learn more about applied offers.
 
 ## Applied offers resource
 
-The following describes some of the key attributes for [applied-offers](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Cart-Offers/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1applied-offers\~1%7BofferId%7D/delete).
+The following describes some of the key attributes of [applied-offers](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Cart-Offers/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1applied-offers\~1%7BofferId%7D/delete).
 
 ### Offer identifier
 
@@ -14,7 +14,7 @@ The `offerId` is the offer's identifier. This path parameter is only available w
 
 ## Applied offers query parameters
 
-You can specify one or more query parameters separated by an ampersand (&) to return a filtered list of applied offers. The following topics describe the query parameters available for [applied-offers](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Cart-Offers/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1applied-offers/get). For more information on how to use query parameters, see [Fields and query parameters](../../../common-shoppers-and-admin-apis-reference/fields-and-expand-query-parameters.md).
+You can specify one or more query parameters separated by an ampersand (&) to return a filtered list of applied offers. The following topics describe the query parameters available for applied offers. For more information on how to use query parameters, see [Fields and query parameters](../../../common-shoppers-and-admin-apis-reference/fields-and-expand-query-parameters.md).
 
 ### API key
 

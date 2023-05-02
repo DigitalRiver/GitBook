@@ -11,7 +11,7 @@ You can [get the available payment methods for a cart](https://www.digitalriver.
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request GET ' https://api.digitalriver.com/v1/shoppers/me/carts/active/payment-methods' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 ```
 {% endcode %}

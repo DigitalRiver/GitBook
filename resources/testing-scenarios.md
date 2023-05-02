@@ -1,12 +1,10 @@
 ---
-description: >-
-  Learn how to use a test order to ensure that your integration is functioning
-  properly.
+description: Learn how to use a test order to ensure your integration functions properly.
 ---
 
 # Testing scenarios
 
-This page explains how to get started testing your payment integrations and provides links to the [payment methods currently supported in our test environment](testing-scenarios.md#payment-methods). When testing standard payment methods, such as [credit cards](testing-scenarios.md#credit-cards), we provide data you can use to test against success and error scenarios.
+This page explains how to start testing your payment integrations and provides links to the [payment methods currently supported in our test environment](testing-scenarios.md#payment-methods). When testing standard payment methods, such as [credit cards](testing-scenarios.md#credit-cards), we provide data you can use to test against success and error scenarios.
 
 Digital River maintains the Client Test Environment (CTE) for the [Commerce API](https://docs.digitalriver.com/commerce-api/). In this environment, you'll never interact directly with the payments services. Instead, you'll be directed to a generic page that contains accept and reject options.‌
 
@@ -18,11 +16,11 @@ Digital River maintains the Client Test Environment (CTE) for the [Commerce API]
 
 If the card numbers in this section fail to produce a success scenario, try entering a different purchase amount, currency, or quantity.&#x20;
 
-The [Get Credit Card Numbers](https://www.getcreditcardnumbers.com/) website is a useful resource for generating valid test card numbers. The site provides numbers that are a possible combination of characters that validate when passed through the MOD 10 algorithm.&#x20;
+The [Get Credit Card Numbers](https://www.getcreditcardnumbers.com/) website is useful for generating valid test card numbers. The site provides numbers that validate when passed through the MOD 10 algorithm.&#x20;
 
 #### Basic Card Numbers&#x20;
 
-To test a successful payment, use the following credit card numbers. The expiration date must be at least one day in the future. With the exception of Visa, the security code can be any random three or four-digit number.
+To test a successful payment, use the following credit card numbers. The expiration date must be one day in the future. Except for Visa, the security code is any random three or four-digit number.
 
 | Card Number          | Brand            | Expiration Date | Security Code    |
 | -------------------- | ---------------- | --------------- | ---------------- |

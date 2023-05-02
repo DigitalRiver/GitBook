@@ -20,7 +20,7 @@ Use the [`POST /shoppers/me/carts/active`](https://drapi.io/commerce/#tag/Carts/
 ```json
 curl --location --request POST 'https://api.digitalriver.com/shoppers/me/carts/active' \
 --header 'Content-Type:  application/json' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic  ***\
 --data-raw '{
 		"cart": {
 				"organizationId": "Acme_Inc",
@@ -65,7 +65,7 @@ Use the [`POST /shoppers/me/carts/active`](https://drapi.io/commerce/#tag/Carts/
 ```json
 curl --location --request POST 'https://api.digitalriver.com/shoppers/me/carts/active' \
 --header 'Content-Type:  application/json' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 --data-raw '{
 		"cart": {
 				"organizationId": "",

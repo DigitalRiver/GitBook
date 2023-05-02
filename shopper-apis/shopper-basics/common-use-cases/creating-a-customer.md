@@ -4,9 +4,9 @@ description: Learn how to create a customer.
 
 # Creating a customer
 
-This topic describes how to create a customer account record. Creating a customer account is necessary for an anonymous customer that does not yet have an account created for a site, and a site does not provide a guest checkout. In this instance, the site requires a customer to have an account to purchase a product. Creating a customer is not necessary for an anonymous customer who is only browsing products.
+This topic describes how to create a customer account record. Creating a customer account is necessary for an anonymous customer when a site does not provide a guest checkout. In this instance, the site requires a customer to have an account before purchasing a product. Creating a customer is unnecessary for an anonymous customer only browsing products.
 
-You can make this request without an access token by passing in your API key as a query parameter. You can also send this request with either a valid anonymous or authenticated customer token.
+You can make this request without an access token by passing in your API key as a query parameter. You can also send this request with a valid anonymous or authenticated customer token.
 
 Send a [POST /v1/shoppers](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Shoppers/paths/\~1v1\~1shoppers/post) request with the customer's information in the request payload.
 
@@ -37,7 +37,7 @@ curl --location -g --request POST 'https://api.digitalriver.com/v1/shoppers? api
 {% endtab %}
 {% endtabs %}
 
-The contents required for the payload depends on who maintains the master record for the customer's username and password information. The base customer account information includes the customer's name and email address. The following list displays the minimum resource fields required for the Shoppers resource to create a customer record:
+The required payload contents depend on who maintains the master record for the customer's username and password information. The base customer account information includes the customer's name and email address. The following list displays the minimum resource fields required for the Shoppers resource to create a customer record:
 
 * `username`
 * `password` (base64 encoded)

@@ -16,7 +16,7 @@ Digital River supports the following email types:
 | [Subscription billing email address](updating-the-subscribers-email-address.md#subscription-billing-and-shipping-email-addresses)            | When creating a subscription, subscription-relevant information from the original acquisition, including the billing email address, is copied to the subscription. You can [update a shopper's billing email address for a specific subscription](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-a-specific-subscription) or [all of the shopper's subscriptions](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-all-subscriptions).   |
 | [Subscription shipping email address](updating-the-subscribers-email-address.md#subscription-billing-and-shipping-email-addresses)           | When creating a subscription, subscription-relevant information from the original acquisition, including the shipping email address, is copied to the subscription. You can [update a shopper's shipping email address for a specific subscription](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-a-specific-subscription) or [all of the shopper's subscriptions](updating-the-subscribers-email-address.md#updating-the-subscribers-email-address-for-all-subscriptions). |
 
-You can combine the notifications for a specific shopper by creating an event rule per each notification.  <mark style="color:red;"></mark>  You update email notifications using [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
+You can combine the notifications for a specific shopper by creating an event rule per each notification.  You update email notifications using [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 
 ## Email address update phases
 
@@ -42,7 +42,7 @@ You can use one of the following calls to change the billing or shipping email a
 
 ### Digital River-hosted storefront page 
 
-It depends on how your cart is customized.  Contact your account representative for more information.
+It depends on how your cart is customized. Contact your account representative for more information.
 
 ## Email addresses created after submitting an order
 
@@ -53,17 +53,17 @@ When a shopper submits an order, the system creates two email addresses for the 
 * Requisition billing email address
 * Requisition shipping email address&#x20;
 
-The requisition billing email address and requisition shipping email address are snapshots belonging to the order. The requisition billing email address is the shopper’s billing address associated with their chosen payment method. When the shopper places the order, the action disconnects the requisition billing email address from the payment method.  
+The requisition billing email address and requisition shipping email address are snapshots belonging to the order. The requisition billing email address is the shopper's billing address associated with their chosen payment method. When the shopper places the order, the action disconnects the requisition billing email address from the payment method.  
 
 #### Orders placed by Commerce API
 
-For a physical product order, the requisition billing email address comes from the billing address associated with the shopper's payment method/payment option used to place the order. (The billing address includes the email address.) The shopper provides the requisition shipping email address, if the shopper does not specify the shipping email address, then the system copies the requisition billing email address to the requisition shipping email address. &#x20;
+The requisition billing email address for a physical product order comes from the billing address associated with the shopper's payment method/payment option used to place the order. (The billing address includes the email address.) The shopper provides the requisition shipping email address; if the shopper does not specify the shipping email address, the shopper's system copies the requisition billing email address to the requisition shipping email address. &#x20;
 
-For a non-physical product order, the requisition shipping email address comes from the requisition billing address. (The billing address includes the email address.)  The system copies the requisition billing email address to the requisition shipping email address.  &#x20;
+The requisition shipping email address for a non-physical product order comes from the requisition billing address. (The billing address includes the email address.)  The system copies the requisition billing email address to the requisition shipping email address.  &#x20;
 
 #### Orders placed by Digital River-hosted solution with legacy payments
 
-When an authenticated shopper signs into your storefront and your Digital River-hosted storefront billing address page provides an Email field, the system copies the shopper’s owner email address to the requisition billing email address.  
+When an authenticated shopper signs into your storefront and your Digital River-hosted storefront billing address page provides an Email field, the system copies the shopper's owner email address to the requisition billing email address.  
 
 {% hint style="success" %}
 An anonymous shopper flow should provide an Email field on the storefront page where the shopper can provide their email address. &#x20;
@@ -71,7 +71,7 @@ An anonymous shopper flow should provide an Email field on the storefront page w
 
 #### Orders placed by Digital River-hosted solution with CloudPay (Checkout.js) 
 
-A Digital River-hosted solution leverages Checkout.js to support the payment source, and Checkout.js leverages the Commerce API/apply-payment-method API to attach the source to the cart for both authenticated and anonymous shoppers. So, the system uses the requisition billing email address as the source’s billing email address in the cart.&#x20;
+A Digital River-hosted solution leverages Checkout.js to support the payment source, and Checkout.js leverages the Commerce API/apply-payment-method API to attach the source to the cart for both authenticated and anonymous shoppers. So, the system uses the requisition billing email address as the source's billing email address in the cart.&#x20;
 
 ### Subscription billing and shipping email addresses
 
@@ -84,9 +84,9 @@ The subscription billing address is associated with the shopper's subscription a
 
 ### Owner's email address
 
-If the shopper is an authenticated shopper and has an account they can use to sign in, the system also associates an owner's email address with the shopper. The owner's email address applies only to the authenticated shopper and is not associated with the shopper's order or subscription.
+If the shopper is authenticated and has an account they can use to sign in, the system also associates an owner's email address with the shopper. The owner's email address applies only to the authenticated shopper and is not associated with the shopper's order or subscription.
 
-When the authenticated user signs in to their account, they can manage their email addresses from their account and add several often-used payment methods to their account. Each payment method is associated with a billing address persisted in the shopper's address book. The billing address includes an email address, that we call the billing email address.&#x20;
+When the authenticated user signs in to their account, they can manage their email addresses from their account and add several often-used payment methods to their account. Each payment method is associated with bills in the shopper's address book. The billing address includes an email address we call the billing email address.&#x20;
 
 ## Updating the subscriber's email address for a specific subscription
 
@@ -109,7 +109,7 @@ curl --location --request POST 'http://{host}/v1/subscriptions/{subscriptionId}/
 
 You will receive a `202 Accepted` response.
 
-### Missing email address parameter
+### The missing email address parameter
 
 If the email address parameter is missing, you will see a [`400 Bad Request`](../../../common-shopper-and-admin-apis/error-codes/#400-bad-request) error message with a `validation-error` code.
 

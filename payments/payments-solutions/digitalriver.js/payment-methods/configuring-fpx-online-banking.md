@@ -74,7 +74,7 @@ digitalriver.createSource(sourceData).then(function(result) {
         //handle error message
         var errorMessage = result.error.errors[0].message;
     } else {
-        //send source to back end for processing
+        //send the source to the back end for processing
         var source = result.source;
     }
 });
@@ -130,7 +130,7 @@ digitalriver.createSource(sourceData).then(function(result) {
 
 ## Step 3: Authorize the FPX Online Banking source
 
-When you create an FPX Online Banking source, the customer is redirected to a bank selector age and chooses their preferred bank. They are then redirected to their online bank, where they sign in and review their transaction. The shopper will then complete the transaction by authorizing it with an SMS code. You can accomplish this by redirecting the customer to FPX Online Banking.
+When you create an FPX Online Banking source, the customer is redirected to a bank selector age and chooses their preferred bank. They are then redirected to their online bank, where they sign in and review their transaction. The shopper will complete the transaction by authorizing it with an SMS code. You can accomplish this by redirecting the customer to FPX Online Banking.
 
 ### **Redirecting the customer for FPX Online Banking authorization**
 

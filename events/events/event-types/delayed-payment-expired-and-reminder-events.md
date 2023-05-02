@@ -69,7 +69,7 @@ The Boleto numeric identifier. The shopper can use this identifier to pay Boleto
         "postalCode": "09320-070",
         "state": "SP",
         "country": "BR",
-        "countryName": "Brasil",
+        "countryName": "Brazil",
         "phoneNumber": "5552253720",
         "emailAddress": "subs_test@digitalriver.com"
       },
@@ -403,7 +403,7 @@ The country where the bank branch is located.
 The unique reference identifier for the transaction. The shopper should include this reference identifier when wiring funds.&#x20;
 
 {% hint style="info" %}
-**Note**: If the shopper doesn't provide this unique reference identifier, the payment must be manually reconciled.
+**Note**: The payment must be manually reconciled if the shopper doesn't provide this unique reference identifier.
 {% endhint %}
 
 ### `accountNumber`

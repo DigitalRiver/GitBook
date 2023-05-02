@@ -14,8 +14,8 @@ You can [retrieve all offers applied to a customer's cart](https://www.digitalri
 ```http
 curl --location -g --request GET ' https://api.digitalriver.com/v1/shoppers/me/carts/active/applied-offers' \
 --header 'Accept: application/json' \
---header 'Authorization: bearer {{access_token}}' \
---header 'Content-Type: applicati0n/json'
+--header 'Authorization: Basic {{access_token}}' \
+...
 ```
 {% endcode %}
 {% endtab %}

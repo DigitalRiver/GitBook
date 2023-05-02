@@ -10,10 +10,13 @@ To retrieve a billing address, use the [`GET /shoppers/me/orders/{orderId}/billi
 
 {% tabs %}
 {% tab title="cURL" %}
-<pre class="language-http" data-overflow="wrap"><code class="lang-http">curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/orders/9999999999/billing-address' \
---header 'authorization: <a data-footnote-ref href="#user-content-fn-1">bearer </a>***\
+{% code overflow="wrap" %}
+```http
+curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/orders/9999999999/billing-address' \
+--header 'authorization: Basic ***\
 ...
-</code></pre>
+```
+{% endcode %}
 {% endtab %}
 
 {% tab title="200 OK response" %}
@@ -49,7 +52,7 @@ To retrieve a shipping address, use the [`GET /shoppers/me/orders/{orderId}/ship
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/orders/9999999999/shipping-address' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}
@@ -78,5 +81,3 @@ curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/order
 {% endcode %}
 {% endtab %}
 {% endtabs %}
-
-[^1]: 

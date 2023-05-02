@@ -4,18 +4,18 @@ description: Learn how to assign a perpetual unit price to a subscription with a
 
 # Assigning a perpetual unit price
 
-## Assigning a perpetual unit price to a subscription
+## currentAssigning a perpetual unit price to a subscription
 
 In this scenario, you assign a perpetual unit price to a customer's subscription.
 
-Use the [`POST /v1/subscriptions/{subscriptionId}/perpetual-price`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Perpetual-price/operation/changePerpetualPrice) resource to assign a perpetual unit price to a customer's subscription. You need to include the subscription identifier (`subscriptionId`) and the perpetual unit price (`perpetUnitPrice`). In the following example, the value for the product's `perpetualUnitPrice` is `120` and the value for the add-on's `perpetualUnitPrice` is `50`. See the [perpetual-price](../../general-resources/admin-apis-reference/subscriptions/#perpetual-price-resource) resource for more information
+Use the [`POST /v1/subscriptions/{subscriptionId}/perpetual-price`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Perpetual-price/operation/changePerpetualPrice) resource to assign a perpetual unit price to a customer's subscription. You need to include the subscription identifier (`subscriptionId`) and the perpetual unit price (`perpetUnitPrice`). In the following example, the value of the product's `perpetualUnitPrice` is `120` and the value for the add-on's `perpetualUnitPrice` is `50`. See the [perpetual-price](../../general-resources/admin-apis-reference/subscriptions/#perpetual-price-resource) resource for more information
 
 {% tabs %}
 {% tab title="cURL" %}
 {% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://api.digitalriver.com/v1/subscriptions/{subscriptionId}/perpetual-price' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 --data-raw '{
     "perpetualUnitPrice": 120,
@@ -54,7 +54,7 @@ Use the [`POST /v1/shoppers/me/carts/active`](https://www.digitalriver.com/docs/
 {% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://{host}/v1/shoppers/me/carts/active' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 --data-raw '{
     "cart": {

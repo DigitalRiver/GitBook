@@ -23,7 +23,7 @@ Optional. Send a [`GET /v1/shopper/me/carts/active/tax-registrations/schema`](ht
 {% code overflow="wrap" %}
 ```json
 curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/carts/active/tax-registrations/schema' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic  ***\
 ...
 ```
 {% endcode %}
@@ -193,7 +193,7 @@ Send a [`POST /v1/shopper/me/carts/active/tax-registrations`](https://www.digita
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/carts/active/tax-registrations' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}
@@ -264,7 +264,7 @@ Optional. Send a `GET /v1/shopper/me/carts/active` request to confirm the tax in
 ```
 curl --location --request GET 
 'https://api.digitalriver.com/v1/shoppers/me/carts/active' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endtab %}

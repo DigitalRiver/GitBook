@@ -39,7 +39,7 @@ The shopper object in the payload for a [`POST /shoppers`](https://www.digitalri
 {% endtab %}
 {% endtabs %}
 
-When you use the [`GET /shoppers/me`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Shoppers/paths/\~1v1\~1shoppers\~1me/get) resource to get a customer, you can use the `expand` query parameter to get the customer's external reference identifier. Note that the GET does not return the external reference identifier field by default. For more information about getting and creating customers, refer to the [Shopper ](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Shoppers)resource.
+When you use the [`GET /shoppers/me`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Shoppers/paths/\~1v1\~1shoppers\~1me/get) resource to get a customer, you can use the `expand` query parameter to get the customer's external reference identifier. The GET does not return the external reference identifier field by default. Refer to the Shopper resource for more information about getting and creating customers.
 
 ### Create a full access token using the external reference identifier
 

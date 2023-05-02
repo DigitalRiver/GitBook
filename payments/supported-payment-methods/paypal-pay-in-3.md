@@ -4,7 +4,7 @@ description: Learn about PayPal Pay in 3.
 
 # PayPal Pay in 3
 
-PayPal Pay in 3 is a short-term card installment payment option automatically provided by PayPal when a customer signs in to PayPal Checkout. PayPal Pay in 3 allows United Kingdom shoppers to pay for physical good purchases in three interest-free monthly payments for purchases between £45 - £2,000 with the first payment due at checkout. Presents within the PayPal wallet on a category known as "Pay Later".&#x20;
+PayPal Pay in 3 is a short-term card installment payment option automatically provided by PayPal when a customer signs in to PayPal Checkout. PayPal Pay in 3 allows United Kingdom shoppers to pay for physical goods purchases in three interest-free monthly payments for purchases between £45 - £2,000, with the first payment due at checkout. Presents within the PayPal wallet in a "Pay Later" category.&#x20;
 
 ## How to configure&#x20;
 

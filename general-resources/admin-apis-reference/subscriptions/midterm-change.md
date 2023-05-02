@@ -6,7 +6,7 @@ description: Understand how a midterm change works.
 
 A midterm change occurs when a customer requests a change to their subscription before their next renewal. A Call Center agent can use this opportunity to dissuade the customer from cancelling their subscription, encourage their customer to increase the quantity of their subscription, upgrade their subscription, purchase an add-on to their subscription, or sell another promotion.&#x20;
 
-The Call Center agent must identify the type of midterm change. The Call Center agent can offer a [perpetual unit price](selling-subscriptions-without-add-ons.md#perpetual-unit-price) or a [one-time price override](selling-subscriptions-without-add-ons.md#prorated-subscription-price) to persuade the customer not to cancel their subscription. They can also offer to [reduce the subscription quantity](selling-subscriptions-without-add-ons.md#reduced-subscription-quantity).
+The Call Center agent must identify the type of midterm change. The Call Center agent can offer a [perpetual unit price](selling-subscriptions-without-add-ons.md#perpetual-unit-price) or a [one-time price override](selling-subscriptions-without-add-ons.md#prorated-subscription-price) to persuade customers not to cancel their subscription. They can also offer to [reduce the subscription quantity](selling-subscriptions-without-add-ons.md#reduced-subscription-quantity).
 
 ## Perpetual unit price
 
@@ -28,6 +28,6 @@ For example, a customer currently has a subscription quantity of four and wants 
 
 ## Reduced subscription quantity
 
-You can also use the [Reduce](../../../common-shopper-and-admin-apis/subscriptions/reducing-the-quantity-of-a-subscription.md) resource to [decrease the base product quantity](../../../common-shopper-and-admin-apis/subscriptions/reducing-the-quantity-of-a-subscription.md), decrease the product add-on quantity (`quantity`), or remove a product add-on from a subscription. Use the [Reduce](broken-reference) resource if a [Preview](broken-reference) resource call does not create a cart that decreases a product quantity or removes a product add-on. Invoking the [Reduce](../../../common-shopper-and-admin-apis/subscriptions/reducing-the-quantity-of-a-subscription.md) resource will update the desired configuration in the database tables.‌
+You can also use the [Reduce](../../../common-shopper-and-admin-apis/subscriptions/reducing-the-quantity-of-a-subscription.md) resource to [decrease the base product quantity](../../../common-shopper-and-admin-apis/subscriptions/reducing-the-quantity-of-a-subscription.md), decrease the product add-on quantity (`quantity`), or remove a product add-on from a subscription. Use the [Reduce](broken-reference) resource if a [Preview](broken-reference) resource call does not create a cart that decreases a product quantity or removes a product add-on. Invoking the [Reduce](../../../common-shopper-and-admin-apis/subscriptions/reducing-the-quantity-of-a-subscription.md) resource will update the customer's configuration in the database tables.‌
 
 For example, an agent can reduce a quantity of 10 subscriptions to 6 subscriptions at the customer's request.

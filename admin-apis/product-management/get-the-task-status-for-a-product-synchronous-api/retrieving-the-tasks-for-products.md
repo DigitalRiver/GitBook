@@ -15,7 +15,7 @@ The following example retrieves the tasks for all products.&#x20;
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/products/tasks' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic Basic <API_key>' \
 ...
 ```
 {% endcode %}

@@ -4,7 +4,7 @@ description: Learn how to get a subscription by using the subscription identifie
 
 # Getting a subscription by identifier
 
-The following [`GET /v1/subscriptions/{subscriptionId}`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Retrieve-Subscription/operation/getSubscriptionInfo) request changes the subscription renewal price. You need to provide the subscription identifer (`subscriptionId`) and the renewal unit price (`renewalUnitPrice`). Note that the renewal unit price (`renewalUnitPrice`) cannot be higher than the existing price.
+The following [`GET /v1/subscriptions/{subscriptionId}`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Retrieve-Subscription/operation/getSubscriptionInfo) request changes the subscription renewal price. You need to provide the subscription identifier (`subscriptionId`) and the renewal unit price (`renewalUnitPrice`). Note that the renewal unit price (`renewalUnitPrice`) cannot be higher than the current price.
 
 {% tabs %}
 {% tab title="cURL" %}
@@ -90,7 +90,7 @@ You will receive a `200 OK` response.
         {
           "product": {
             "id": "SubProd1234561",
-            "name": "this is sub product addon1",
+            "name": "Thissub-product is sub product addon1",
             "externalReferenceID": "32323377"
           },
           "quantity": 2

@@ -6,7 +6,7 @@ description: Learn more about the account resource.
 
 ## Account query parameters
 
-The following describes the query parameters for [account](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Account).
+The following describes the query parameters for the [account](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Account).
 
 ### Token
 

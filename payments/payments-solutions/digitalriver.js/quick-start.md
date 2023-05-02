@@ -107,7 +107,7 @@ cardSecurityCode.mount('card-security-code');
 
 ## Step 4. Use DigitalRiver.js to create a payment source
 
-Digital River securely transmits credit card details captured by the DigitalRiver.js for tokenization. You can use these payment sources in downstream API calls to place orders or save credit cards for later purchases.
+Digital River securely transmits credit card details captured by DigitalRiver.js for tokenization. You can use these payment sources in downstream API calls to place orders or save credit cards for later purchases.
 
 Create an event handler that will interact with the DigitalRiver.js library on submit and then create a payment source. Use the [`createSource()`](../../../general-resources/reference/digitalriver-object.md#creating-sources) method to tokenize the customer's details and payment information.
 
@@ -117,7 +117,7 @@ Create an event handler that will interact with the DigitalRiver.js library on s
 
 {% code title="HTML" overflow="wrap" %}
 ```markup
-// Create a token or display an error when the form is submitted.
+// Create a token or display an error when submitting the form.
     var paymentForm = document.getElementById('payment-form');
  
     paymentForm.addEventListener('submit', function(event) {
@@ -146,7 +146,7 @@ Create an event handler that will interact with the DigitalRiver.js library on s
                 //Something went wrong, display the error message to the customer
                 handleErrors(result.error.message);
             } else {
-                //Success!  You can now send the token to your server for use in downstream API calls.
+                //Success! You can now send the token to your server for use in downstream API calls.
                 sendToMyServer(result.source);
             }
         });

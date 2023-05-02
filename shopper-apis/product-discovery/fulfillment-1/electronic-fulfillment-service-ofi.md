@@ -58,7 +58,7 @@ When a customer purchases a product, Digital River sends an Electronic Fulfillme
 7. The settlement is executed.
 {% endhint %}
 
-![Asynchronous](../../../.gitbook/assets/Asynchronous.png)
+![Asynchronous](../../../.gitbook/assets/asynchronous.png)
 
 ## Synchronous
 
@@ -74,7 +74,7 @@ When a customer purchases a product, Digital River sends an Electronic Fulfillme
 5. The settlement is executed.
 {% endhint %}
 
-![Synchronous](../../../.gitbook/assets/Synchonous.png)
+![Synchronous](../../../.gitbook/assets/synchonous.png)
 
 ## Electronic fulfillment service request/response
 

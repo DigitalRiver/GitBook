@@ -10,7 +10,7 @@ You can specify one or more query parameters separated by an ampersand (&) to re
 
 ### Billing address identifier
 
-The `billingAddressId` identifies the shopper's address resource. If no value is provided, Digital River uses the shopper's default address.
+The `billingAddressId` identifies the shopper's address resource. Digital River uses the shopper's default address if no value is provided.
 
 ### Expand
 

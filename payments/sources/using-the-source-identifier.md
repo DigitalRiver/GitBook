@@ -400,20 +400,20 @@ The `paymentSession` object shows the following information for an entire order:
 
 Use one of the following options to remove all attached sources directly from a cart.
 
-* [`DELETE v1/shoppers/me/carts/active/apply-payment-method`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/delete) removes a payment source from the cart. Use this option and include the source ID in the payload to remove payment sources one by one.
+* [`DELETE v1/shoppers/me/carts/active/apply-payment-method`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/delete) removes a payment source from the cart. Use this option and include the source ID in the payload to remove payment sources individually.
 * [`DELETE v1/shoppers/me/carts/active/payment`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1payment/delete) removes all attached sources directly from the cart
 
 When finished, you can [attach new sources](using-the-source-identifier.md#attaching-multiple-sources-to-the-cart) to the cart.
 
 ### Refunds
 
-If a customer requests a refund, the system will refund the [primary payment source](using-the-source-identifier.md#primary-payment-sources) first. Once the system fully refunds the primary source, the system will use the [secondary payment source](using-the-source-identifier.md#secondary-payment-sources) to refund the remaining value.&#x20;
+If a customer requests a refund, the system will first refund the [primary payment source](using-the-source-identifier.md#primary-payment-sources). Once the system fully refunds the primary source, the system will use the [secondary payment source](using-the-source-identifier.md#secondary-payment-sources) to refund the remaining value.&#x20;
 
-For example, a customer purchased a line item quantity of 10 for a total of $1000. They used $600 from their primary payment source (for example, a credit card) and $400 from their secondary payment source (for example, store credit) to pay for the order. If the customer requests a refund of $400, the system refunds $400 to their credit card. If the customer requests a refund of $700, the system refunds $600 to their credit card and $100 to their store credit.
+For example, a customer purchased a line item quantity of 10 for $1000. They used $600 from their primary payment source (a credit card) and $400 from their secondary payment source (for example, store credit) to pay for the order. If the customer requests a refund of $400, the system refunds $400 to their credit card. If the customer requests a refund of $700, the system refunds $600 to their credit card and $100 to their store credit.
 
 ## Charging a single-use payment source
 
-Your storefront may be configured so that customers are not required to create an account or sign in to make a purchase. In this case, after you submit the guest customer's payment details, [DigitalRiver.js with elements](../payments-solutions/digitalriver.js/) will [create a Source](../../general-resources/reference/digitalriver-object.md#createsource-sourcedata) and return the `sourceId` .  You can then use a [`POST /apply-payment-method`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Payment-Method/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/post) request to set the `sourceId` attribute.&#x20;
+Your storefront may be configured so that customers are not required to create an account or sign in to make a purchase. In this case, after you submit the guest customer's payment details, [DigitalRiver.js with elements](../payments-solutions/digitalriver.js/) will [create a Source](../../general-resources/reference/digitalriver-object.md#createsource-sourcedata) and return the `sourceId` .You can then use a [`POST /apply-payment-method`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Payment-Method/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/post) request to set the `sourceId` attribute.&#x20;
 
 {% tabs %}
 {% tab title="cURL" %}

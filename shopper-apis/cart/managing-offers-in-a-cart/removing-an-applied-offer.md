@@ -11,7 +11,7 @@ You can [remove a specific offer applied to a customer's cart](https://www.digit
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request DELETE ' https://api.digitalriver.com/v1/shoppers/me/carts/active/applied-offers/{offerId}' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 ```
 {% endcode %}

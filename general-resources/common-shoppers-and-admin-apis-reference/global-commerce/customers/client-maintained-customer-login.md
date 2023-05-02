@@ -27,4 +27,4 @@ If you maintain the master record for the customer login credentials, the payloa
 
 The response returns an HTTP Status 201 Created from the server.
 
-After you create a base customer record, you can get an authenticated customer token and call the `GET shoppers/me/account` resource to allow the customer to log in and configure his or her account information. The account information associated with a customer includes the shipping address, billing address, and payment options.
+After you create a base customer record, you can get an authenticated customer token and call the `GET shoppers/me/account` resource to allow the customer to log in and configure their account information. The account information associated with a customer includes the shipping address, billing address, and payment options.

@@ -6,7 +6,7 @@ description: >-
 
 # iDEAL
 
-iDEAL is a bank transfer payment method where the clients receive real-time confirmation of the transaction. It is restricted for use by shoppers who have been issued an online bank account that is iDEAL compatible and held at a bank based in the Netherlands. When using this payment method, a customer must provide their bank with transfer information provided by the merchant to complete the payment. The transfer details consist of the account holder, bank name, city, country description, payment reference, bank account number, additional bank information, and the international bank account number (IBAN).
+iDEAL is a bank transfer payment method where the clients receive real-time transaction confirmation. It is restricted for shoppers who have been issued an online bank account that is iDEAL compatible and held at a bank based in the Netherlands. When using this payment method, a customer must provide their bank with transfer information provided by the merchant to complete the payment. The transfer details include the account holder, bank name, city, country description, payment reference, bank account number, additional bank information, and the international bank account number (IBAN).
 
 Digital River supports iDEAL for standalone and recurring with SEPA direct debit transactions.
 

@@ -14,7 +14,7 @@ The [`GET /web-checkout`](https://www.digitalriver.com/docs/commerce-shopper-api
 ```
 curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/carts/active/web-checkout' \
 --header 'Content-Type:  application/json' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ```
 {% endcode %}
 {% endtab %}

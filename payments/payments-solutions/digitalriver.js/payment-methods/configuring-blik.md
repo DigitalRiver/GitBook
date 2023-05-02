@@ -93,7 +93,7 @@ digitalriver.createSource(sourceData).then(function(result) {
         //handle error message
         var errorMessage = result.error.errors[0].message;
     } else {
-        //send source to back end for processing
+        //send the source to the back end for processing
         var source = result.source;
     }
 });
@@ -157,7 +157,7 @@ When you create a BLIK source, the customer is required to authorize the charge 
 
 ### Redirecting the customer for BLIK authorization
 
-To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
+Use the `redirectUrl` parameter in your `createSource` response to redirect your customer to the payment provider for authorization.
 
 {% code overflow="wrap" %}
 ```javascript
@@ -165,7 +165,7 @@ window.location.href = sourceResponse.redirect.redirectUrl;
 ```
 {% endcode %}
 
-The payment provider will present the customer with the transaction details and the customer can authorize, or cancel the transaction. A successful authorization redirects the customer to the BLIK Return URL parameter you specified when you created the source.
+The payment provider will present the customer with the transaction details, and the customer can authorize or cancel the transaction. A successful authorization redirects the customer to the BLIK Return URL parameter you specified when you created the source.
 
 Once authorized, the source state will change to `chargeable`.
 

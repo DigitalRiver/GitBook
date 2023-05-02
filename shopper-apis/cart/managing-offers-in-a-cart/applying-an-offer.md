@@ -13,7 +13,7 @@ Use the [`POST /v1/shoppers/me/carts/active?expand=all`](https://www.digitalrive
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/carts/active?expand=all' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 --data-raw '{
   "cart": {
@@ -73,7 +73,7 @@ The offer type must be "Promotional URL / External Triggered Offer".
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request POST 'https://api.digitalriver.com/v1/shoppers/me/carts/active' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 --data-raw '{
   "lineItems": {
@@ -211,7 +211,7 @@ The offer type must be "Promotional URL / External Triggered Offer".
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request POST 'https://api.digitalriver.com/v1/shoppers/me/carts/active/line-items' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 --data-raw '{
   "cart": {

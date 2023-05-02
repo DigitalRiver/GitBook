@@ -15,7 +15,7 @@ You cannot [change or modify a product](getting-the-latest-information-on-a-prod
 {% code overflow="wrap" %}
 ```
 curl --location --request GET 'https://api.digitalriver.com/v1/products/tasks/{taskId}' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 ...
 ```
 {% endcode %}

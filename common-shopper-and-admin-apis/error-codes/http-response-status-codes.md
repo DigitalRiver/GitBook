@@ -4,10 +4,4 @@ description: Understand HTTP response status codes.
 
 # HTTP response status codes
 
-The Commerce API uses HTTP response status codes. These codes indicate whether an API request succeeded or failed. HTTP status codes group responses into the following classes:
-
-* The `2xx` range indicates success.
-* The `4xx` range indicates an error that failed based on the provided information provided (for example, you omitted a parameter, or a charge failed).
-* The `5xx` range indicates an error with Digital River's servers.
-
-Some errors `4xx` errors include an [error code](./#error-codes). The error code is a short string with a brief explanation.
+The Commerce API uses HTTP response status codes to signify whether an API request was successful. The responses are grouped into different classes based on the HTTP status codes. The 2xx range indicates that the request was successful, while the 4xx range indicates an error on the client side (for instance, due to an omitted parameter or a failed charge). The 5xx range indicates an error on Digital River's servers. Sometimes, errors may include an [error code](./), which is a brief explanation in the form of a short string.

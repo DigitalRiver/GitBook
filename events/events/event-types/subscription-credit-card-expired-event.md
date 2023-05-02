@@ -41,7 +41,7 @@ When the credit card is about to expire, Digital River creates a `subscription.c
          "product":{
             "id":"5619730199",
             "externalReferenceId":"",
-            "displayName":"3 Month auto renew Sub - Copy",
+            "displayName":"3 Month auto-renew Sub - Copy",
             "sku":"SUB_ADDONS"
          },
          "shipToAddress":{

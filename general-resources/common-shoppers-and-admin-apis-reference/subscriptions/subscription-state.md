@@ -4,7 +4,7 @@ description: Learn about the subscription state.
 
 # Subscription state
 
-A subscription has a `state` attribute that describes the current status of the subscription. The `state` of a Subscription is enumerated by the following values: `Subscribed`, `PendingActivation`, `Cancelled`, `PendingRenewal`, and `FreeTrial`.
+A subscription has a `state` attribute that describes the current status of the subscription. The following values enumerate the `state` of a Subscription: `Subscribed`, `PendingActivation`, `Cancelled`, `PendingRenewal`, and `FreeTrial`.
 
 [Activating a subscription](../../../admin-apis/subscription-management/activating-a-subscription.md) changes the `state` from `PendingActivation` to `Subscribed`.
 
@@ -16,4 +16,4 @@ Converting a trial subscription changes the `state` from `FreeTrial` to `Subscri
 
 The following diagram shows the subscription states.
 
-![](<../../../.gitbook/assets/Subscription States - state flow.png>)
+![](../../../.gitbook/assets/subscription-states-state-flow.png)

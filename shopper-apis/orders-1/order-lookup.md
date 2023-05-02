@@ -15,7 +15,7 @@ This call can retrieve information such as the customer's email address, the las
 {% tabs %}
 {% tab title="cURL" %}
 <pre class="language-http" data-overflow="wrap"><code class="lang-http"><strong>curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/order-lookup' \
-</strong>--header 'authorization: bearer ***\
+</strong>--header 'authorization: Basic ***\
 ...
 --data-raw '{
      orderId=your_order_ID&#x26;&#x26;username=userName&#x26;password=orderPassword
@@ -99,7 +99,7 @@ Use the [`POST /shoppers/order-lookup`](https://www.digitalriver.com/docs/commer
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://{host}/v1/shoppers/order-lookup?expand=all' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 --data-raw '{
 creditCardLastDigits=last_4_digits_of_their_payment_card&emailAddress=shopper's_email_address

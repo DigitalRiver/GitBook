@@ -103,7 +103,7 @@ konbiniElement .mount('konbini-selector');
 
 DigitalRiver.js will create and render a select element that populates with the store logo and localized store name of the available stores where the customer can pay using this payment method.
 
-![](../../../../.gitbook/assets/Konbini\_DRJS\_render.PNG)
+![](../../../../.gitbook/assets/konbini\_drjs\_render.png)
 
 The same [events and structures](../../../../general-resources/reference/elements/#element-on) appear in the Konbini element, and you should listen to the [Change event](../../../../general-resources/reference/elements/konbini-elements.md#change) to determine when the user has made a selection. When the change event response contains `"complete": true`, the shopper has selected a store.
 
@@ -127,7 +127,7 @@ konbiniElement.on('change', function (event) {
     console.log('konbini change', event);
  
     if (event.complete) {
-        //the user has selected a store, you may create the source
+        //the user has selected a store, and you may create the source
     } else if(event.error) {
         //do something with the error message
     }
@@ -173,7 +173,7 @@ digitalriver.createSource(data).then(function(result) {
         //handle errors
     } else {
         var source = result.source;
-        //send source to back end
+        //send the source to back end
         sendToBackend(source);
     }
 });
@@ -184,7 +184,7 @@ digitalriver.createSource(data).then(function(result) {
 
 ### Option 2. Using DigitalRiver.js to create your own Konbini display
 
-If you decide that you do not want to use the out of the box functionality provided with the Konbini element, you may also use the `digitalriver.retrieveKonbiniStores()` method which will allow you to build your own experience.
+If you decide that you do not want to use the out-of-the-box functionality provided with the Konbini element, you may also use the `digitalriver.retrieveKonbiniStores()` method, which will allow you to build your own experience.
 
 ### Retrieving available stores
 
@@ -195,7 +195,7 @@ DigitalRiver.js exposes a method that allows you to retrieve the available store
 {% code overflow="wrap" %}
 ```javascript
 digitalriver.retrieveKonbiniStores().then(function(response) {
-    //use the returned values to create your own display
+    //use the returned values to create your display
 });
 ```
 {% endcode %}
@@ -251,7 +251,7 @@ You can use the retrieved stores to build an experience suitable for your needs.
 {% endtab %}
 {% endtabs %}
 
-Once you reached a point in your flow where the customer has selected a store, you can use the `createSource` function to assemble and pass the data to Digital River to create your payment.
+Once you reach a point in your flow where the customer has selected a store, you can use the `createSource` function to assemble and pass the data to Digital River to create your payment.
 
 {% hint style="info" %}
 **Additional Fields Required**: If you are creating a Konbini source without using the DigitalRiver.js Konbini element, you are required to pass an additional field `storeId`.
@@ -289,7 +289,7 @@ var sourceData = {
                 //handle errors
             } else {
                 var source = result.source;
-                //send source to back end
+                //send the source to the back end
                 sendToBackend(source);
             }
         });
@@ -347,7 +347,7 @@ var sourceData = {
 
 ## Step 3: Use the Konbini source
 
-Once created, the Konbini source will be in a `pending_funds` state.  Attach the source to a cart.  Once attached, you may submit your order.&#x20;
+Once created, the Konbini source will be in a `pending_funds` state. Attach the source to a cart. Once attached, you may submit your order.&#x20;
 
 The following example shows how to [attach a payment method to an order or cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 

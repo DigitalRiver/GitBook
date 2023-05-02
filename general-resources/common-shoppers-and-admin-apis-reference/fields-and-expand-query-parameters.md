@@ -4,13 +4,13 @@ description: Learn how to use field and expand query parameters.
 
 # Fields and expand query parameters
 
-Most of the [Shoppers ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers)resources support query parameters. When you add parameters to a request, you modify the results in ways such as changing the resource representation, refining your query, and paginating the results. Some query parameters modify the resource by changing the locale or pricing information. The API returns a default set of fields for each resource you request. You can override the default fields returned by using the `fields` and `expand` query parameters when the default fields do not meet your specific needs.
+Most of the [Shoppers ](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Shoppers)resources support query parameters. When you add parameters to a request, you modify the results in the response to changing the resource representation, refining your query, and paginating the results. Some query parameters modify the resource by changing the locale or pricing information. The API returns a default set of fields for each resource you request. You can override the default fields returned by using the `fields` and `expand` query parameters when the default fields do not meet your specific needs.
 
 ### Fields query parameter
 
 Use the `fields` query parameter to filter the fields that appear in a response to just the fields you specifically request. Filtering the fields returned in the response can conserve bandwidth and accelerate response time.
 
-The following response gets the fields that are available by default for an authenticated customer. Line numbers `8` to `21` display links that are only available for an authenticated customer.
+The following response gets the fields available by default for an authenticated customer. Line numbers `8` to `21` display links that are only available for an authenticated customer.
 
 {% tabs %}
 {% tab title="URI" %}
@@ -124,7 +124,7 @@ The next example gets the same customer and requests all the fields with `expand
 **Tip**: Avoid using the `expand=all` parameter if you want to reduce the information returned and ensure optimal performance.
 {% endhint %}
 
-As you can see in this example, there are more fields available with full expansion of a resource. Notice that an authenticated customer session also provides links (non-expandable) to orders and subscriptions. You can expand addresses and payment options; however, for orders and subscriptions, you must make follow-up calls.
+As you can see in this example, more fields are available with full resource expansion. Notice that an authenticated customer session also provides links (non-expandable) to orders and subscriptions. You can expand addresses and payment options; however, you must make follow-up calls for orders and subscriptions.
 
 {% tabs %}
 {% tab title="URI" %}

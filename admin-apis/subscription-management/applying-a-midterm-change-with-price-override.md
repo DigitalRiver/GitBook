@@ -8,14 +8,14 @@ description: >-
 
 ## Applying a midterm change with price override using the Preview cart resource <a href="#apply-a-unit-prorated-price-using-the-preview-cart-resource" id="apply-a-unit-prorated-price-using-the-preview-cart-resource"></a>
 
-In this scenario, the customer has a basic subscription and decided to upgrade the subscription product with an add-on. Use the [`POST /v1/subscriptions/{subscriptionId}/preview-cart`](https://www.digitalriver.com/docs/commerce-api-reference/#operation/previewCartSubscription) resource to upgrade the customer's subscription product. You need to include the product identifier (`id`), the quantity (`quantity`), and the prorated Unit Price (`proratedUnitPrice`). In the following example, the value for the `proratedUnitPrice` is `20.5`.&#x20;
+In this scenario, the customer has a basic subscription and decides to upgrade the subscription product with an add-on. Use the [`POST /v1/subscriptions/{subscriptionId}/preview-cart`](https://www.digitalriver.com/docs/commerce-api-reference/#operation/previewCartSubscription) resource to upgrade the customer's subscription product. You need to include the product identifier (`id`), the quantity (`quantity`), and the prorated Unit Price (`proratedUnitPrice`). In the following example, the value for the `proratedUnitPrice` is `20.5`.&#x20;
 
 {% tabs %}
 {% tab title="cURL" %}
 {% code overflow="wrap" %}
 ```javascript
 curl --location --request POST 'https://api.digitalriver.com/v1/subscriptions/{subscriptionId}/preview-cart' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 --data-raw '{
   "product" : {
@@ -82,14 +82,14 @@ You will receive a `200 OK` response.
 
 ## Applying a midterm change with price override using the Preview resource <a href="#apply-a-unit-prorated-price-using-the-preview-resource" id="apply-a-unit-prorated-price-using-the-preview-resource"></a>
 
-In this scenario, the customer has a basic subscription and decided to upgrade the subscription product with add-ons. Use the [`POST /v1/subscriptions/{subscriptionId}/preview`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Immediate-Midterm-Change/operation/previewSubscription) resource to upgrade the customer's subscription product. You need to include the product identifier (`id`), the quantity (`quantity`), the prorated Unit Price (`proratedUnitPrice`). In the following example, the value for the `proratedUnitPrice` is `20.5`.&#x20;
+In this scenario, the customer has a basic subscription and upgrades the subscription product with add-ons. Use the [`POST /v1/subscriptions/{subscriptionId}/preview`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Immediate-Midterm-Change/operation/previewSubscription) resource to upgrade the customer's subscription product. You need to include the product identifier (`id`), the quantity (`quantity`), the prorated Unit Price (`proratedUnitPrice`). In the following example, the value for the `proratedUnitPrice` is `20.5`.&#x20;
 
 {% tabs %}
 {% tab title="cURL" %}
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/v1/subscriptions/{subscriptionId}/preview' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 --data-raw '{    
   "product" : {

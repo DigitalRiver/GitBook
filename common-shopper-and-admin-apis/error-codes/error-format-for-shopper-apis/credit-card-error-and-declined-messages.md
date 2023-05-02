@@ -46,12 +46,12 @@ The `declined` error code has the following subcodes:
 * `declined_can_retry`–The card has been declined for an unknown reason.
 * `do_not_honor`–The card issuing bank has declined this payment.
 * `duplicate_transaction`–The transaction is a duplicate.
-* `fraud`–The transaction has been identified by the issuing bank as fraudulent.
+* `fraud`–The issuing bank has identified the transaction as fraudulent.
 * `fraud`–The transaction has been identified as fraudulent.
-* `fraud_block`–The transaction has been identified by Digital River as fraudulent.
+* `fraud_block`–Digital River has identified the transaction as fraudulent.
 * `illegal_action`–The transaction has been identified as illegal.
 * `insufficient_funds`–The card has insufficient funds to complete the purchase
-* `invalid_amount`–The amount is not accepted by the card network.
+* `invalid_amount`–The card network does not accept the amount.
 * `invalid_currency`–The currency is not supported.
 * `invalid_field_data`–The transaction contains invalid data.
 * `invalid_merchant`–The merchant is invalid for this type of transaction.
@@ -65,7 +65,7 @@ The `declined` error code has the following subcodes:
 * `new_card_issued`–New account information is available.
 * `no_response`–The payment processor did not respond.
 * `pin_try_exceeded`–The bank's allowable number of PIN tries has been exceeded.
-* `restricted_card`–The use of this card has been restricted by the card network.
+* `restricted_card`–The card network has restricted the use of this card.
 * `sca_not_completed`–The payment authorization was not initiated as the shopper did not successfully complete the authentication process.
 * `stop_recurring`–Stop all billing as this account is closed.
 * `suspected_fraud`–The issuer has identified this transaction potentially as fraudulent.
@@ -75,7 +75,7 @@ The `declined` error code has the following subcodes:
 
 The `declined - contact bank` error code has the following subcodes:
 
-* `voice_authorization_required`–Voice authorization is required by the issuer.
+* `voice_authorization_required`–The issuer requires voice authorization.
 
 ### `invalid`
 
@@ -91,7 +91,7 @@ The `invalid card` error code has the following subcodes:
 * `invalid_address`–The address does not match the card network's records.
 * `invalid_card_number`–The card number entered is invalid.
 * `invalid_card_bin`–The card bin is invalid.
-* `invalid_expiration_date`–The card is expired or the expiration date is invalid.
+* `invalid_expiration_date`–The card is expired, or the expiration date is invalid.
 * `invalid_pin`–The PIN provided is invalid or incorrect.
 * `invalid_security_code`–The security code provided is invalid or incorrect.
 * `issuer_not_found`–The card issuer does not exist.

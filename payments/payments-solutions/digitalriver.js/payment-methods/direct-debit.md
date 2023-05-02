@@ -4,7 +4,7 @@ description: Learn how to configure SEPA Direct Debit for DigitalRiver.js with E
 
 # Configuring SEPA Direct Debit
 
-If you're using[ DigitalRiver.js with Elements](../), you can create an [SEPA Direct Debit](../../../supported-payment-methods/sepa-direct-debit.md) payment method for your app or website in four easy steps:
+If you're using[ DigitalRiver.js with Elements](../), you can create a [SEPA Direct Debit](../../../supported-payment-methods/sepa-direct-debit.md) payment method for your app or website in four easy steps:
 
 * [Step 1: Build a SEPA Direct Debit Source Request object](direct-debit.md#step-1-build-a-direct-debit-source-request-and-details-objects)
 * [Step 2: Create a SEPA Direct Debit source using DigitalRiver.js](direct-debit.md#step-2-create-a-direct-debit-source-using-digitalriver-js)
@@ -80,7 +80,7 @@ digitalriver.createSource(data).then(function(result) {
         //handle errors
     } else {
         var source = result.source;
-        //send source to back end
+        //send the source to the back end
         sendToBackend(source);
     }
 });
@@ -123,7 +123,7 @@ digitalriver.createSource(data).then(function(result) {
         "redirectUrl": "https://api.digitalriver.com:443/payments/redirects/4e478578-843a-48a5-beef-66c0dae99f5d?apiKey=pk_test_6cb0fe9ce3124093a9ad906f6c589e2d",
         "returnUrl": "https://example.com?action=paymentSuccess"
     },
-    "directDebit": {}
+    "direct-debit": {}
 }
 ```
 {% endcode %}
@@ -150,7 +150,7 @@ The payment provider will present the customer with the transaction details wher
 
 ## Step 4: Use the authorized source
 
-Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart) or [attaching it to a shopper](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
+Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart) or [a shopper](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
 ### Option 1: Attach the source to a cart
 

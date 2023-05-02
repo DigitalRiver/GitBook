@@ -13,7 +13,7 @@ To [get a shipping option by identifier](https://www.digitalriver.com/docs/comme
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/carts/active/shipping-options/{shippingOptionsId}' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}
@@ -53,7 +53,7 @@ You can also [get all shipping options](https://www.digitalriver.com/docs/commer
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/carts/active/shipping-options' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}

@@ -13,7 +13,7 @@ When a customer selects a [redirect payment method](../../general-resources/refe
 {% code overflow="wrap" %}
 ```http
 curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/carts/active/resume-cart' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 ...
 ```
 {% endcode %}

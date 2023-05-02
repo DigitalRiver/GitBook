@@ -4,7 +4,7 @@ description: A brief overview of Digital River's guide to PSD2 and SCA.
 
 # PSD2 and SCA
 
-The European Union's Strong Customer Authentication (SCA) requirements became effective on September 14, 2019. These new requirements, which are part of the [second Payment Services Directive](https://ec.europa.eu/info/law/payment-services-psd-2-directive-eu-2015-2366\_en) (PSD2) regulations, mandate that two-factor authentication be conducted on certain types of online transactions.
+The European Union's Strong Customer Authentication (SCA) requirements became effective on September 14, 2019. These new requirements, part of the [second Payment Services Directive](https://ec.europa.eu/info/law/payment-services-psd-2-directive-eu-2015-2366\_en) (PSD2) regulations, mandate that two-factor authentication be conducted on certain online transactions.
 
 In this guide, you can find answers to your [basic questions on PSD2 and SCA](https://info.digitalriver.com/rs/348-QUY-258/images/Digital\_River\_Guide\_to\_PSD2\_Compliance\_2020.pdf) and how these regulations affect you as a merchant.
 

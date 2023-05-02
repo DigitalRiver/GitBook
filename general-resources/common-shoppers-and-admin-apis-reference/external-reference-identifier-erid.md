@@ -22,8 +22,8 @@ To enable the Enforce Unique Value:
 
 1. Sign in to Global Commerce.
 2. Select **Administration**, select **Company**, and then click **Configure Company Settings**. The Configure Company Settings page appears.
-3. Scroll down to **Product External Reference Number** and select **Yes** next to **Enforce Unique Value**.\
-   <img src="../../.gitbook/assets/image (1) (1).png" alt="" data-size="original">
+3. Scroll to **Product External Reference Number** and select **Yes** next to **Enforce Unique Value**.\
+   <img src="../../.gitbook/assets/image (1).png" alt="" data-size="original">
 4. Click **Save**.
 
 ## Admin APIs and ERID
@@ -97,7 +97,7 @@ curl --location --request POST 'https://api.digitalriver.com/v1/products/{ERID}'
 
 ## Shopper APIs and ERID
 
-You can use an ERID to search for a product or add a product to a cart. The following examples demonstrate how you can use the `externalReferenceId` with the product-related resource.
+You can use an ERID to search for or add a product to a cart. The following examples demonstrate how you can use the `externalReferenceId` with the product-related resource.
 
 ### Retrieve specific products from the default catalog
 
@@ -118,7 +118,7 @@ curl --location --request GET
 
 ### Add a product to a shopping cart using the external reference identifier
 
-The following request example adds a product to a cart using the `externalReferenceId` query parameter.
+Using the `externalReferenceId` query parameter, the following request example adds a product to a cart.
 
 {% tabs %}
 {% tab title="cURL" %}

@@ -629,13 +629,13 @@ The following is an example response when a source is successfully authenticated
 Use this method to update details on a source.&#x20;
 
 {% hint style="warning" %}
-When updating a source, you can update the owner and the expiration details for [Credit Cards](broken-reference) only.  If you need to update a non-Credit Card (**creditCard**) payment type,  use [createSource](digitalriver-object.md#createsource-sourcedata).
+When updating a source, you can only update the owner and the expiration details for [Credit Cards](broken-reference).  If you need to update a non-Credit Card (**creditCard**) payment type,  use [createSource](digitalriver-object.md#createsource-sourcedata).
 {% endhint %}
 
 This method takes two parameters:‌
 
 * `element`—An optional card expiration element for using the Elements portion of this library.
-* `sourceData`—A required data object which contains additional data that is required to update the payment source.
+* `sourceData`—A required data object containing additional data  required to update the payment source.
 
 | Field        | Required | Type            | Description                                                                                                                                       |
 | ------------ | -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -956,7 +956,7 @@ The following example shows a request with no filters applied.
 {% code overflow="wrap" %}
 ```javascript
 digitalriver.retrieveAvailablePaymentMethods().then(function(result) {
-    //do something with the result, this could include showing or hiding specific payment methods that are applicable to the display
+    //do something with the result. This could include showing or hiding specific payment methods that apply to the display
 });
 ```
 {% endcode %}
@@ -1177,14 +1177,14 @@ digitalriver.retrieveAvailablePaymentMethods({
     "country": "US",
     "supportsRecurring": true
 }).then(function(result) {
-    //do something with the result, this could include showing or hiding specific payment methods that are applicable to the display
+    //do something with the result. This could include showing or hiding specific payment methods that apply to the display.
 });
 ```
 {% endcode %}
 {% endtab %}
 {% endtabs %}
 
-The following response only returns payment methods that are available in the US, use the USD currency, and supports recurring payment. &#x20;
+The following response only returns payment methods available in the US, using the USD currency, and supporting recurring payment. &#x20;
 
 {% tabs %}
 {% tab title="Response example" %}
@@ -1246,7 +1246,7 @@ If you specify a Payment Session ID, you will only receive the payment methods w
 digitalriver.retrieveAvailablePaymentMethods({
     "sessionId": "d3941a36-6821-4d93-be23-6190226ae5f7"
 }).then(function(result) {
-    //do something with the result, this could include showing or hiding specific payment methods that are applicable to the display
+    //do something with the result. This could include showing or hiding specific payment methods that apply to the display.
 });
 ```
 {% endcode %}
@@ -1321,7 +1321,7 @@ digitalriver.retrieveAvailablePaymentMethods({
 If you want to display the credit card payment logo on your website, you can use the following URLs to add the appropriate brand logo image to your website:
 
 {% hint style="info" %}
-**Best Practices**: To ensure you're always using the latest logo, link to the URL instead of downloading the image to your website.
+**Best Practices**: To ensure you always use the latest logo, link to the URL instead of downloading the image to your website.
 {% endhint %}
 
 * **Visa** <img src="../../.gitbook/assets/visa (1).png" alt="" data-size="original"> \
@@ -1345,14 +1345,14 @@ If you want to display the credit card payment logo on your website, you can use
 
 Use this method to retrieve an array of available banks for a combination of [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2) country code and [ISO 4217](https://en.wikipedia.org/wiki/ISO\_4217) currency code.‌
 
-This method returns an array that will either be empty if no banks are available or will contain objects with Issuer IDs and Bank Names. DigitalRiver.js uses this data when creating an Online Banking source. This method is useful if you would like to build a bank selector yourself instead of using the Online Banking element.
+This method returns an array that will either be empty if no banks are available or will contain objects with Issuer IDs and Bank Names. DigitalRiver.js uses this data when creating an Online Banking source. This method is useful if you want to build a bank selector instead of using the Online Banking element.
 
 {% tabs %}
 {% tab title="Example" %}
 {% code overflow="wrap" %}
 ```javascript
 digitalriver.retrieveOnlineBankingBanks("DE","EUR").then(function(result) {
-    //do something with the banks, this could include building a selector or something else
+    //do something with the banks; this could include building a selector or something else
 });
 ```
 {% endcode %}

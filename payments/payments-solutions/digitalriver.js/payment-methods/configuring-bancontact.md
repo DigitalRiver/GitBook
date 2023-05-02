@@ -134,13 +134,13 @@ When you create a Bancontact source, the customer is required to authorize the c
 
 ### Redirecting the customer for Bancontact authorization
 
-To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
+Use the `redirectUrl` parameter in your `createSource` response to redirect your customer to the payment provider for authorization.
 
 ```javascript
 window.location.href = sourceResponse.redirect.redirectUrl;
 ```
 
-The payment provider will present the customer with the transaction details and the customer can authorize, or cancel the transaction. A successful authorization redirects the customer to the Bancontact Return URL parameter you specified when you created the source.
+The payment provider will present the customer with the transaction details, and the customer can authorize or cancel the transaction. A successful authorization redirects the customer to the Bancontact Return URL parameter you specified when you created the source.
 
 Once authorized, the source state will change to `chargeable`.
 

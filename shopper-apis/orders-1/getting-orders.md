@@ -13,7 +13,7 @@ You can [get all orders for a shopper](https://www.digitalriver.com/docs/commerc
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/orders?expand=all&pageSize=1' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}
@@ -246,14 +246,14 @@ See [`Order query parameters`](../../general-resources/shopper-apis-reference/or
 
 ## Getting an order by ID
 
-To [retrieve an order](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Orders/paths/\~1v1\~1shoppers\~1me\~1orders\~1%7BorderId%7D/get), you must specify the order identifier (`orderId`). You can optionally include the state of the order. Possible order states are `Open`, `Submitted`, `Cancelled`, `Complete`, `Pending Payment`, `In Review`, and `In Process`.
+To [retrieve an order](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Orders/paths/\~1v1\~1shoppers\~1me\~1orders\~1%7BorderId%7D/get), you must specify the order identifier (`orderId`). You can optionally include the state of the order. Possible order states are `Open`, `Submitted`, `Cancelled`, `Complete`, `Pending Payment`, `In Review`, and `In Process`. This request requires an authorized or anonymous shopper token. See [Getting the order details](../../admin-apis/order-management/downloading-the-invoice.md#getting-the-order-details) for more information on getting order details for an anonymous or authenticated shopper without a shopper token.
 
 {% tabs %}
 {% tab title="cURL" %}
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/me/orders/9999999999' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}

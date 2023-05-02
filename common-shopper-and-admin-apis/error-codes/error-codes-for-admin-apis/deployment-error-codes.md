@@ -370,7 +370,7 @@ You can only add subscription product variations that are in the Design state to
 
 #### `SUBSCRIPTION_PRODUCT_NOT_ORDERABLE`
 
-Cannot add the subscription product to the subscription products group because it is not orderable.
+The system cannot add the subscription product to the subscription products group because it is not orderable.
 
 * For downgrade products:
   * `Product 1234567800: Cannot add product 9876543210 to Subscription Downgrade Products (downgradeProducts) because it is not orderable.`
@@ -401,12 +401,12 @@ You can only specify the Activation Date (`ActivationDate`) or Purchase Date (`P
 The number of days for the subscription's free trial period (`freeTrialPeriod`) is less than 1 or greater than 1095 in the payload. The value cannot be less than 1 or larger than 1095.
 
 * `Product 1234567800, en_US: Trial Days (freeTrialPeriod) cannot be less than 1 or larger than 1095.`
-* `subscription_trial_grace_period_set_for_non_free_trial`–To set the Trial Grace Period, you must enable Free Trial (isFreeTrial).
+* `subscription_trial_grace_period_set_for_non_free_trial`–To set the Trial Grace Period, enable Free Trial (isFreeTrial).
   * `Product 1234567800, en_US: Cannot set the Trial Grace Period (trialGracePeriod) when Free Trail (isFreeTrial) is disabled.`&#x20;
 
 #### `SUBSCRIPTION_TRIAL_POST_EXPIRATION_BILLING_ATTEMPT_INTERVAL_IN_DAYS_SET_FOR_NON_FREE_TRIAL`
 
-`You cannot` configure `trailPostExpirationBillingAttemptIntervalInDays` if the product is not a free trial product.
+You cannot configure `trailPostExpirationBillingAttemptIntervalInDays` if the product is not a free trial product.
 
 * `Product 1234567800, en_US: Cannot set the Retry Interval for Billing Attempt After Trial Expiration (trialPostExpirationBillingAttemptIntervalInDays) when Trial (isFreeTrial) is disabled.`
 

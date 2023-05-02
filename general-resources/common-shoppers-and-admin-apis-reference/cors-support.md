@@ -4,7 +4,7 @@ description: Understand how CORS defines how a browser and server communicate.
 
 # CORS support
 
-[CORS (Cross-Origin Resource Sharing)](https://www.w3.org/TR/cors/) is a W3C recommendation that defines how a browser and server communicate when requesting resources across domains. Browsers have an inherent security restriction known as the same-origin policy. CORS allows servers to relax the same-origin policy, thereby allowing HTTP requests for resources from a different domain. To learn more about CORS, review the HTML5 ROCKS [Using CORS](https://www.w3.org/TR/cors/) tutorial.
+[CORS (Cross-Origin Resource Sharing)](https://www.w3.org/TR/cors/) is a W3C recommendation that defines how a browser and server communicate when requesting resources across domains. Browsers have an inherent security restriction known as the same-origin policy. CORS allows servers to relax the same-origin policy, allowing HTTP requests for resources from a different domain. To learn more about CORS, review the HTML5 ROCKS [Using CORS](https://www.w3.org/TR/cors/) tutorial.
 
 Both the Commerce API and OAuth API suites provide support for CORS.
 
@@ -16,11 +16,11 @@ A request that determines if an actual request is safe to send. A preflight requ
 
 ### Simple request
 
-A request that uses simple methods (GET, POST, HEAD_)_, text/plain content type for the request body, and does not use custom headers. A simple request is a singular request to a server. Commerce API does not currently support the HEAD method.
+A request that uses simple methods (GET, POST, HEAD_)_, text/plain content type for the request body, and does not use custom headers. A simple request is a single request to a server. Commerce API does not currently support the HEAD method.
 
 ### Non-simple request
 
-A request that uses non-simple methods (such as PUT or DELETE), custom headers, or request bodies other than text/plain. For requests other than simple requests, a browser makes two requests to the server: one for the preflight request, and another for the actual request after server approval of the preflight.
+A request that uses non-simple methods (such as PUT or DELETE), custom headers, or request bodies other than text/plain. For requests other than simple requests, a browser makes two requests to the server: one for the preflight request and another for the actual request after server approval of the preflight.
 
 ### OPTIONS command example
 
@@ -74,6 +74,6 @@ The Allow Headers HTTP response header indicates which headers you use in an act
 
 #### Access-Control-Allow-Credentials
 
-Use the Allow Credentials HTTP response header to expose a response to a request when this flag is set to true. Credentials refer to cookies, HTTP authentication, and client-side SSL certificates. Sending cookies and authentication facilitates user-specific cross-origin APIs. When responding to a preflight request, this flag indicates whether the actual request can include user credentials. This header works in conjunction with the `withCredentials` property on the XHR object. For the CORS request to succeed, the value must be set to true in both. The Commerce APIs support credentialed requests.
+Use the Allow Credentials HTTP response header to expose a response to a request when this flag is true. Credentials refer to cookies, HTTP authentication, and client-side SSL certificates. Sending cookies and authentication facilitates user-specific cross-origin APIs. When responding to a preflight request, this flag indicates whether the request can include user credentials. This header works in conjunction with the `withCredentials` property on the XHR object. For the CORS request to succeed, the value must be set to true in both. The Commerce APIs support credentialed requests.
 
 `Access-Control-Allow-Credentials: true`

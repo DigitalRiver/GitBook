@@ -13,7 +13,7 @@ You can use the [Line Items](https://www.digitalriver.com/docs/commerce-shopper-
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/carts/active/line-items' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}
@@ -122,7 +122,7 @@ You can use the Line Items resource to [get all line items](https://www.digitalr
 {% tabs %}
 {% tab title="cURL" %}
 <pre class="language-http" data-overflow="wrap"><code class="lang-http">curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/carts/active/line-items/{lineItesId}' \
---header 'authorization: bearer<a data-footnote-ref href="#user-content-fn-1"> </a>***\
+--header 'authorization: Basic <a data-footnote-ref href="#user-content-fn-1"> </a>***\
 ...
 </code></pre>
 {% endtab %}
@@ -227,7 +227,7 @@ You can [get all line items for an order](https://www.digitalriver.com/docs/comm
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/orders/{orderId}/line-items' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}
@@ -332,7 +332,7 @@ You can [get a specific line item for an order](https://www.digitalriver.com/doc
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/orders/{orderId}/line-items/[lineItemId]' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}
@@ -432,7 +432,7 @@ You can [add one or more line items to a cart](https://www.digitalriver.com/docs
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/shoppers/v1/shoppers/me/carts/active/line-items' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 --data-raw '{
   "lineItems": {
@@ -569,7 +569,7 @@ You can [update one or more line items to a cart](https://www.digitalriver.com/d
 {% code overflow="wrap" %}
 ```http
 curl --location --request POST 'https://api.digitalriver.com/shoppers/v1/shoppers/me/carts/active/line-items/{lineItemId}' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic  ***\
 ...
 ```
 {% endcode %}
@@ -675,7 +675,7 @@ You can [delete all line items from a cart](https://www.digitalriver.com/docs/co
 {% code overflow="wrap" %}
 ```http
 curl --location --request DELETE 'https://api.digitalriver.com/shoppers/v1/shoppers/me/carts/active/line-items' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}
@@ -693,7 +693,7 @@ You can [delete a specific line item from a cart](https://www.digitalriver.com/d
 {% code overflow="wrap" %}
 ```http
 curl --location --request DELETE 'https://api.digitalriver.com/shoppers/v1/shoppers/me/carts/active/line-items/{lineItemId}' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}

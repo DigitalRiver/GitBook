@@ -8,7 +8,7 @@ A product identifier is the client's unique stock keeping unit (SKU) for a produ
 
 ## Admin APIs and the product identifier
 
-When you create a product programmatically or through [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), Digital River automatically assigns a product identifier to the product.&#x20;
+When you create a product programmatically or through [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), Digital River automatically assigns a product identifieDigital River assigns a product identifier when.&#x20;
 
 The `productId` or `PID` variable can be one of the following values: an [individual](../admin-apis-reference/products.md#individual-product), [base](../admin-apis-reference/products.md#base-product), or product variation identifier. If you want to use your company's internal product identifiers, see [External reference identifier (ERID)](external-reference-identifier-erid.md) for instructions.
 
@@ -35,7 +35,7 @@ curl --location --request GET
 
 ### Add a product to a shopping cart using the external reference identifier
 
-The following request example adds a product to a cart using the `id` query parameter.
+Using the `externalReferenceId` query parameter, the following request example adds a product to a cart.
 
 {% tabs %}
 {% tab title="cURL" %}

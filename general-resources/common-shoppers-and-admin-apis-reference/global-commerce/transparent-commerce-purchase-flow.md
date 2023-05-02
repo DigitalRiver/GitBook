@@ -15,12 +15,12 @@ The product direct purchase API performs the following actions with one Shopper 
 5. Creates an order.
 
 {% hint style="info" %}
-**Prerequisite**: The request must be made with a valid full access token.
+**Prerequisite**: The request must be made with a valid full-access token.
 {% endhint %}
 
-Send the `POST shoppers/me/products/{productId}/purchase` request with the specific product ID for the product that the customer wants to purchase.&#x20;
+Send the `POST shoppers/me/products/{productId}/purchase` request with the specific product ID for the product the customer wants to purchase.&#x20;
 
-The following example purchases a product with a product ID of `291233200`. The response header contains a `Location` header, as shown in line 4, to the order that was created for the transaction. The ID of the order is `1234567890`. The request and response bodies are empty.
+The following example purchases a product with a product ID of `291233200`. The response header contains a `Location` header, as shown in line 4, to the order created for the transaction. The ID of the order is `1234567890`. The request and response bodies are empty.
 
 {% tabs %}
 {% tab title="URI" %}

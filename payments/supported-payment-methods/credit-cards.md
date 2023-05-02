@@ -6,7 +6,7 @@ description: >-
 
 # Credit Cards
 
-The Credit Card payment method supports the following credit cards: American Express, Diners, Discover, JCB, Maestro, MasterCard, Union Pay, and Visa
+The Credit Card payment method supports the following credit cards: American Express, Diners, Discover, JCB, Maestro, MasterCard, Union Pay, and Visa.
 
 You can find an example of integration [here](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/creditcard.html).&#x20;
 

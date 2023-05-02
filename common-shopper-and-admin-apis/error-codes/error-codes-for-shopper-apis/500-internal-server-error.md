@@ -10,4 +10,4 @@ An unexpected system error occurred.
 
 ## `internal-payment-error`
 
-An internal server error occurred, try again later.
+An internal server error occurred. Try again later.

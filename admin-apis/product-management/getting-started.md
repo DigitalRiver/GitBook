@@ -14,13 +14,13 @@ The Commerce API suite uses both asynchronous and synchronous calls. The [produc
 
 All other API requests are synchronous and return data immediately.
 
-Asynchronous calls allow you to send multiple requests in a small timeframe without waiting for the completion of a request or worrying about timeouts. These calls are sent to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do) to process product requests. Most products will complete successfully within a few seconds. However, it will take longer to create or update a base product with many variations and locales. For example, creating a base product with 10 variations and 55 locales will take 30 seconds to a minute to complete.&#x20;
+Asynchronous calls allow you to send multiple requests in a small timeframe without waiting for the completion of a request or worrying about timeouts. These calls are sent to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do) to process product requests. Most products will complete successfully within a few seconds. However, creating or updating a base product with many variations and locales will take longer. For example, creating a base product with ten variations and 55 locales will take 30 seconds to a minute to complete.&#x20;
 
 When Global Commerce receives an asynchronous request, it returns a task identifier (`taskId`) in the response and puts the request in a queue. You can use the `taskId` in synchronous requests to [retrieve product information](retrieve-products-synchronous-api/) and [get the current status of a product](get-the-task-status-for-a-product-synchronous-api/).
 
 ## Step 1: Obtain API credentials
 
-When you get your credentials, make sure your API keys have [permission to use the Admin APIs](../../master/getting-started/#step-1-obtain-api-credentials).
+When you get your credentials, ensure your API keys have [permission to use the Admin APIs](../../master/getting-started/#step-1-obtain-api-credentials).
 
 ## Step 2: Manage your products
 
@@ -34,9 +34,9 @@ Steps marked with Async below indicate the request goes to [Global Commerce,](ht
    **Note**: You cannot apply additional changes to the product until the system completes the previous task.
 4. Choose one of the following options:
    * Async (deployment needed). [Update a base product or individual product](manage-products-asynchronous-api/creating-or-updating-a-product.md#creating-an-individual-or-base-product). You can update any supported attribute for a base or individual product. The change is visible to the shopper on the next deployment.
-   * Async (deployment needed). [Add or update a product variation](manage-products-asynchronous-api/adding-or-updating-a-product-variation.md). You can add or update any supported attribute for a product variation. The change is visible to the shopper on the next deployment.
-   * Async (live change). [Apply a live change to an individual product, base product, or product variation](manage-products-asynchronous-api/applying-live-changes.md). Update any supported attribute for an individual product, base product, or product variation. The change is visible to the shopper immediately upon the successful completion of the request.
-   * Async. [Delete a specific locale](manage-products-asynchronous-api/deleting-a-base-or-individual-products-locale.md) or [delete a product variation](manage-products-asynchronous-api/deleting-a-product-variation.md). Update any supported attribute for an individual product or base product or remove a product variation. The change is visible to the shopper immediately upon the successful completion of the request.
+   * Async (deployment needed). [Add or update a product variation](manage-products-asynchronous-api/adding-or-updating-a-product-variation.md). You can add or edit any supported attribute for a product variation. The change is visible to the shopper on the next deployment.
+   * Async (live change). [Apply a live change to an individual product, base product, or product variation](manage-products-asynchronous-api/applying-live-changes.md). Update any supported attribute for an individual product, base product, or product variation. The change is visible to the shopper immediately upon completing the request.
+   * Async. [Delete a specific locale](manage-products-asynchronous-api/deleting-a-base-or-individual-products-locale.md) or [delete a product variation](manage-products-asynchronous-api/deleting-a-product-variation.md). Update any supported attribute for an individual product or base product or remove a product variation. The change is visible to the shopper immediately upon completing the request.
 5. Sync. [Query tasks by task identifier, product identifier, or ERID](get-the-task-status-for-a-product-synchronous-api/#verifying-the-successful-completion-of-multiple-products). If you are using ERID, note that the request searches for tasks currently associated with the ERID.\
    **Note**:  Ensure all create and update requests are completed successfully or failed. You cannot deploy or retire a product before the task completes.
 6. Async. [Deploy the product](manage-products-asynchronous-api/deploying-a-product.md).

@@ -6,7 +6,7 @@ description: >-
 
 # Alipay (domestic)
 
-Established in 2004, Alipay (domestic) is China’s leader in third-party online payments and has an estimated 300 million users. It works much like PayPal, where the consumer chooses to make a payment and is directed to the external Alipay (domestic) site, where they enter (or choose existing) payment information.&#x20;
+Established in 2004, Alipay (domestic) is China's leader in third-party online payments and has an estimated 300 million users. It works much like PayPal, where the consumer chooses to make a payment and is directed to the external Alipay (domestic) site, where they enter (or choose existing) payment information.&#x20;
 
 {% hint style="info" %}
 Alipay (domestic) does not support recurring payments.

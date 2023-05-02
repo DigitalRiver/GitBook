@@ -8,4 +8,4 @@ You can use DigitalRiver.js with Elements to create custom payment flows that po
 
 ## Getting started
 
-Follow the instructions in the Elements integration guide and on the [Configuring payment methods](payment-methods/) page to learn how to integrate [our supported payment methods](../../supported-payment-methods/) into your app or website. You can also consult the [DigitalRiver.js reference](../../../general-resources/reference/) to learn more about the various [Elements ](../../../general-resources/reference/elements/)we offer.
+Follow the instructions in the Elements integration guide and the [Configuring payment methods](payment-methods/) page to learn how to integrate [our supported payment methods](../../supported-payment-methods/) into your app or website. You can also consult the [DigitalRiver.js reference](../../../general-resources/reference/) to learn more about our various elements.

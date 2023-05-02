@@ -8,13 +8,13 @@ An individual product is a single sellable SKU. The following image shows an exa
 
 ![](<../../../../.gitbook/assets/individual\_product (1).png>)
 
-Individual products are very common, but there are times when a product with variants makes more sense for the store, product line, or business.
+Individual products are common, but sometimes a product with variants makes more sense for the store, product line, or business.
 
 {% hint style="info" %}
-**Example**: If a product comes in different colors, sizes, or versions, it is easier and less time consuming to maintain one product with variants than to maintain a handful of individual products that are nearly the same.
+**Example**: If a product comes in different colors, sizes, or versions, it is easier and less time-consuming to maintain one product with variants than to maintain a handful of individual products that are nearly the same.
 {% endhint %}
 
-You can get individual products, products within a category, or all possible products with API calls.
+With API calls, you can get individual products, products within a category, or all possible products.
 
 Get a product by an identifier with the GET request:
 
@@ -41,6 +41,7 @@ The request body should be empty.
 {% endtab %}
 
 {% tab title="Response Body" %}
+{% code overflow="wrap" %}
 ```javascript
 {"product": {
    "uri": "https://api.digitalriver.com/v1/shoppers/me/products/55555555",
@@ -61,7 +62,7 @@ The request body should be empty.
    "name": "Class I",
    "displayName": "Class I",
    "shortDescription": "Class I is the perfect GPS waypoint and route manager for the beginning or occasional GPS user.",
-   "longDescription": "Class I is the fast and easy way to create, edit, and transfer waypoints and routes between your computer and your Garmin, Magellan, or Lowrance GPS. Using Class I, you can manage all of your waypoints and routes, and display them in lists sorted by name, elevation, or distance. Class I connects your GPS to the best mapping and information sites on the Internet, giving you one-click access to street and topo maps, aerial photos, weather forecasts, and nearby attractions.",
+   "longDescription": "Class I is the fast and easy way to create, edit, and transfer waypoints and routes between your computer and your Garmin, Magellan, or Lowrance GPS. Using Class I, you can manage all your waypoints and routes and display them in lists sorted by name, elevation, or distance. Class I connects your GPS to the best mapping and information sites on the Internet, giving you one-click access to street and topo maps, aerial photos, weather forecasts, and nearby attractions.",
    "productType": "DOWNLOAD",
    "sku": "Class I",
    "externalReferenceId": null,
@@ -408,5 +409,6 @@ The request body should be empty.
    }
 }}
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}

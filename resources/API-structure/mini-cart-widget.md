@@ -4,7 +4,7 @@ description: Understand how to use a Mini Cart widget.
 
 # Mini cart widget
 
-You can create a Mini Cart widget using javascript that runs on your website. The widget displays the contents of the cart to the shopper. You can choose to implement the Mini Cart widget with a public API key or a confidential API key. The Mini Cart widget initiates the Shopper APIs requests directly from a web browser using JSONP as the cross-domain solution. The Shopper APIs also support CORS.
+You can create a Mini Cart widget using javascript that runs on your website. The widget displays the contents of the cart to the shopper. You can implement the Mini Cart widget with a public API key or a confidential API key. The Mini Cart widget initiates the Shopper APIs requests directly from a web browser using JSONP as the cross-domain solution. The Shopper APIs also support CORS.
 
 The Mini Cart widget uses the following common Shopper APIs:
 

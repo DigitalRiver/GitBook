@@ -15,7 +15,7 @@ To retrieve all line items, use the [`GET /shoppers/me/orders/{orderId}/line-ite
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/orders/9999999999/line-items' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}
@@ -285,7 +285,7 @@ To retrieve a specific line item, use the [`GET /shoppers/me/orders/{orderId}/li
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/shoppers/me/orders/9999999999/line-items/1111111111?expand=all' \
---header 'authorization: bearer ***\
+--header 'authorization: Basic ***\
 ...
 ```
 {% endcode %}

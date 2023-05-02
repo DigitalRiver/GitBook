@@ -12,7 +12,7 @@ You can get the active current cart for a specified token.
 ```http
 curl --location -g --request GET ' https://api.digitalriver.com/v1/shoppers/me/carts/active' \
 --header 'Accept: application/json' \
---header 'Authorization: bearer {{access_token}}' \
+--header 'Authorization: Basic {{access_token}}' \
 --header 'Content-Type: application/json'
 ```
 {% endcode %}

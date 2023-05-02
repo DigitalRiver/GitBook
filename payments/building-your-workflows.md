@@ -8,11 +8,11 @@ description: >-
 
 You can create [Strong Customer Authentication (SCA)](https://info.digitalriver.com/rs/348-QUY-258/images/Digital\_River\_Guide\_to\_PSD2\_Compliance\_2020.pdf) compliant workflows for both [purchase transactions](building-your-workflows.md#purchase-flows) and [account management](building-your-workflows.md#account-management-flows).
 
-When building workflows that use [Drop-in Payments](payments-solutions/drop-in/), you'll first need to perform some [common, initial steps](building-your-workflows.md#common-drop-in-steps) before proceeding to the workflow's specific steps.‌ For workflows using [DigitalRiver.js with elements](payments-solutions/digitalriver.js/), you also need to complete some [prerequisites](building-your-workflows.md#elements-prerequisites).
+When building workflows that use [Drop-in Payments](payments-solutions/drop-in/), you'll first need to perform some [common, initial steps](building-your-workflows.md#common-drop-in-steps) before proceeding to the workflow's specific steps.‌ For workflows using [DigitalRiver.js with elements](payments-solutions/digitalriver.js/), you must also complete some [prerequisites](building-your-workflows.md#elements-prerequisites).
 
 Each purchase and account management workflow has some [key settings and methods](building-your-workflows.md#common-drop-in-steps).&#x20;
 
-Whether you are using [Drop-in Payments](payments-solutions/drop-in/) or [DigitalRiver.js with elements](payments-solutions/digitalriver.js/), any SCA requirements are automatically managed by Digital River. Two-factor authentication is handled by our [authenticate source method](broken-reference). And our card acquirers use the [3-D Secure](https://en.wikipedia.org/wiki/3-D\_Secure) protocol to communicate with issuing banks. This protocol operates "behind-the-scenes" and requires no developer interaction.&#x20;
+Whether you are using [Drop-in Payments](payments-solutions/drop-in/) or [DigitalRiver.js with elements](payments-solutions/digitalriver.js/), any SCA requirements are automatically managed by Digital River. Two-factor authentication is handled by our [authenticate source method](broken-reference). And our card acquirers use the [3-D Secure](https://en.wikipedia.org/wiki/3-D\_Secure) protocol to communicate with issuing banks. This protocol operates "behind the scene" and requires no developer interaction.&#x20;
 
 ## Limitations and constraints
 
@@ -21,23 +21,6 @@ Note the following limitations and constraints when building your payments workf
 * Do not change the currency when there is a secondary source in the cart. Specify the correct currency when creating a [secondary payment source](sources/using-the-source-identifier.md#secondary-payment-sources). After you [apply the secondary source](sources/using-the-source-identifier.md#creating-secondary-sources) to the cart, do not change the currency.\
   \
   If you change the currency when calling `/v1/shoppers`, a [`409 Conflict`](../common-shopper-and-admin-apis/error-codes/#409-conflict) response contains specific information about what triggered the failure. In this instance, one of the currencies in the cart is not supported.
-
-{% code overflow="wrap" %}
-```json
-{
-    "errors": {
-        "error": [
-            {
-                "relation": "https://developers.digitalriver.com/v1/shoppers/ShoppersResource",
-                "code": "invalid-request",
-                "description": "One or more sources in the cart does not support locale {Locale} and currency {Currency}."
-            }
-        ]
-    }
-
-}
-```
-{% endcode %}
 
 {% code title="Error" overflow="wrap" %}
 ```json
@@ -56,14 +39,11 @@ Note the following limitations and constraints when building your payments workf
 ```
 {% endcode %}
 
-* At this time, you cannot use the store credit to purchase a subscription product.
-* At this time, you cannot use the store credit to pre-order a product.
-* At this time, you cannot use the store credit to purchase a product on backorder.
-* At this time, you cannot attach more than one store credit source to an order. Multiple secondary sources are not supported.
+* Currently, you can't use the store credit to buy subscription products, pre-order products, or products on backorder. Additionally, you can't link more than one store credit source to an order, as multiple secondary sources are not currently supported.
 
 ## Common Drop-in Payment steps <a href="#common-drop-in-steps" id="common-drop-in-steps"></a>
 
-For any workflow that uses [Drop-in Payments](payments-solutions/drop-in/), whether it's built for [purchases ](building-your-workflows.md#purchase-flows)or [account management](building-your-workflows.md#account-management-flows), you first need to perform the following steps.‌
+You must perform the following steps for any workflow that uses [Drop-in Payments](payments-solutions/drop-in/), whether built for [purchases ](building-your-workflows.md#purchase-flows)or [account management](building-your-workflows.md#account-management-flows).‌
 
 1. ​[Include DigitalRiver.js on your page](payments-solutions/drop-in/drop-in-integration-guide.md#step-1-include-digitalriver-js-on-your-page).
 2. ​[Include the Drop-in Payments CSS file](payments-solutions/drop-in/drop-in-integration-guide.md#step-2-include-the-hydrate-css-file).
@@ -74,13 +54,13 @@ Once you've completed these initial steps, you can perform those specific to you
 
 ## Elements prerequisites
 
-When using [DigitalRiver.js with elements](payments-solutions/digitalriver.js/quick-start.md) to build workflows, you need to be using [payment sessions](../shopper-apis/cart/payment-sessions.md). So ensure you've [completed the necessary migration](../shopper-apis/cart/payment-sessions.md#migrating-to-payment-sessions). We also assume you are familiar with [creating and styling elements](payments-solutions/digitalriver.js/quick-start.md) as well as the [basics of capturing payment details](../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata).
+You need to use payment sessions when using [DigitalRiver.js with elements](payments-solutions/digitalriver.js/quick-start.md) to build workflows. So ensure you've [completed the necessary migration](../shopper-apis/cart/payment-sessions.md#migrating-to-payment-sessions). We assume you are familiar with [creating and styling elements](payments-solutions/digitalriver.js/quick-start.md) and [capturing payment details](../general-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata).
 
 Once you've completed these prerequisites, you can perform the steps specific to your desired [purchase ](building-your-workflows.md#purchase-flows)or [account management](building-your-workflows.md#account-management-flows) scenario.
 
 ## Purchase Flows <a href="#purchase-flows" id="purchase-flows"></a>
 
-For almost all [one-off](building-your-workflows.md#one-off), [subscription](building-your-workflows.md#subscription), and [mail-order/telephone-order (MOTO)](../shopper-apis/cart/submitting-a-cart/initiating-a-charge.md#mail-order-telephone-order) transactions, Digital River supports [SCA-compliant](psd2-and-sca/) workflows that use either [Drop-in Payments](payments-solutions/drop-in/) or [DigitalRiver.js elements](payments-solutions/digitalriver.js/).‌
+For almost all [one-off](building-your-workflows.md#one-off), [subscription](building-your-workflows.md#subscription), and [mail-order/telephone-order (MOTO)](../shopper-apis/cart/submitting-a-cart/initiating-a-charge.md#mail-order-telephone-order) transactions, Digital River supports [SCA-compliant](psd2-and-sca/) workflows using [Drop-in Payments](payments-solutions/drop-in/) or [DigitalRiver.js elements](payments-solutions/digitalriver.js/).‌
 
 ### One-off  <a href="#one-off" id="one-off"></a>
 
@@ -88,7 +68,7 @@ For almost all [one-off](building-your-workflows.md#one-off), [subscription](bui
 
 #### Customers enter their credit card information <a href="#credit-card-details-entered-by-customer-during-checkout" id="credit-card-details-entered-by-customer-during-checkout"></a>
 
-‌In this flow, customers supply their credit card information during a one-off transaction but don't save it to their account.
+‌In this flow, customers supply their credit card information during a one-off transaction but don't save it to their accounts.
 
 | SCA required? | Drop-in Payments supported? | Elements supported? |
 | ------------- | --------------------------- | ------------------- |
@@ -100,7 +80,7 @@ For almost all [one-off](building-your-workflows.md#one-off), [subscription](bui
 
 **Step one**: [Create a cart](../shopper-apis/cart/creating-or-updating-a-cart/) with all tax, shipping, duty, and fee amounts in a final state and a [`chargeType` ](../shopper-apis/cart/submitting-a-cart/initiating-a-charge.md)that is `customer_initiated`.
 
-**Step two**: Retrieve the cart's [payment session identifier](../shopper-apis/cart/payment-sessions.md#enable-payment-sessions), and use it to set the sessionId in the Drop-in Payments' [configuration object](payments-solutions/drop-in/drop-in-integration-guide.md#step-5-configure-hydrate).  In [`options`](payments-solutions/drop-in/drop-in-integration-guide.md#drop-in-options), set `flow` to `checkout` and [`usage`](broken-reference) to `convenience`, and (to prompt Drop-in payments to display the save payment option) [`showSavePaymentAgreement` ](payments-solutions/drop-in/drop-in-integration-guide.md#optional.-allowing-the-customer-to-save-their-payment-details)to `true`.
+**Step two**: Retrieve the cart's [payment session identifier](../shopper-apis/cart/payment-sessions.md#enable-payment-sessions), and use it to set the sessionId in the Drop-in Payments' [configuration object](payments-solutions/drop-in/drop-in-integration-guide.md#step-5-configure-hydrate). In [`options`](payments-solutions/drop-in/drop-in-integration-guide.md#drop-in-options), set `flow` to `checkout` and [`usage`](broken-reference) to `convenience`, and (to prompt Drop-in payments to display the save payment option) [`showSavePaymentAgreement` ](payments-solutions/drop-in/drop-in-integration-guide.md#optional.-allowing-the-customer-to-save-their-payment-details)to `true`.
 
 ```javascript
 let configuration = {
@@ -119,15 +99,15 @@ let configuration = {
 let dropin = digitalriver.createDropin(configuration);
 ```
 
-**Step four**: On your cart page, [specify a container to place Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-7-place-drop-in-payments-on-your-cart-or-shopper-page).
+**Step four**: Specify[ a container to place Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-7-place-drop-in-payments-on-your-cart-or-shopper-page) on your cart page.
 
 Drop-in Payments renders in the specified container.
 
-![](<../.gitbook/assets/image (2) (3).png>)
+![](<../.gitbook/assets/image (2) (1) (1).png>)
 
 Customers enter their credit card information and click the [configurable ](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button)Pay Now button**.**&#x20;
 
-If the customers completes the [SCA](psd2-and-sca/), then the [`onSuccess` metho](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess)d is called and Digital River returns a unique source in a [chargeable state](broken-reference).
+If the customer completes the [SCA](psd2-and-sca/), then the [`onSuccess` metho](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess)d is called, and Digital River returns a unique source in a [chargeable state](broken-reference).
 
 ```javascript
 ...
@@ -183,7 +163,7 @@ In this flow, customers enter credit card information and save it to their accou
 
 {% tabs %}
 {% tab title="Drop-in Payments" %}
-**Prerequisites**: Perform the [common Drop-in Payments steps](building-your-workflows.md#common-drop-in-steps).
+**the the Prerequisites**: Perform the [common Drop-in Payments steps](building-your-workflows.md#common-drop-in-steps).
 
 **Step one**: [Create a cart](../shopper-apis/cart/creating-or-updating-a-cart/) with all tax, shipping, duty, and fee amounts in a final state. Set [`chargeType` ](../shopper-apis/cart/submitting-a-cart/initiating-a-charge.md)to `customer_initiated` and `autoRenewal` to `true`.
 
@@ -210,15 +190,15 @@ let dropin = digitalriver.createDropIn(configuration);
 let dropin = digitalriver.createDropIn(configuration);
 ```
 
-**Step four**: On your cart page, [specify a container to place Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-7-place-drop-in-payments-on-your-cart-or-shopper-page).
+**Step four**: [Specify a container to place Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-7-mount-drop-in-payments-on-your-cart-or-account-management-page) on your cart page.
 
 The modal renders in the specified container.
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (3) (1).png>)
 
-Customers enter their credit card information, actively accept the save payment agreement, and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button) pay now button.
+Customers enter their credit card information, actively accept the save payment agreement, and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button) Pay Now button.
 
-If the customer completes the SCA steps necessary to make the source chargeable, then the [`onSuccess` metho](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess)d is called and Digital River returns a unique Source in a [chargeable state](broken-reference).
+If the customer completes the SCA steps necessary to make the source chargeable, then the [`onSuccess` metho](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess)d is called, and Digital River returns a unique Source in a [chargeable state](broken-reference).
 
 ```javascript
 ...
@@ -275,7 +255,7 @@ Once the method is called and the customer provides the required SCA, a unique S
 
 #### Customers retrieve their payment information <a href="#customer-selects-saved-credit-card-during-checkout" id="customer-selects-saved-credit-card-during-checkout"></a>
 
-In this one-off purchase flow, the customers select a credit card that they previously saved to their account. The key step is to call the [authenticate source method](sources/retrieving-sources.md#obtain-a-shoppers-sources).
+In this one-off purchase flow, the customers select a credit card they previously saved to their account. The key step is to call the [authenticate source method](sources/retrieving-sources.md#obtain-a-shoppers-sources).
 
 | SCA required? | Drop-in Payments supported? | Elements supported? |
 | ------------- | --------------------------- | ------------------- |
@@ -283,7 +263,7 @@ In this one-off purchase flow, the customers select a credit card that they prev
 
 {% tabs %}
 {% tab title="Drop-in Payments" %}
-[Drop-in Payments](payments-solutions/drop-in/) do not currently support retrieving stored payment methods. In order to handle this flow, use [Elements](payments-solutions/digitalriver.js/).
+[Drop-in Payments](payments-solutions/drop-in/) do not currently support retrieving stored payment methods. To handle this flow, use [Elements](payments-solutions/digitalriver.js/).
 {% endtab %}
 
 {% tab title="DigitalRiver.js with elements" %}
@@ -334,7 +314,7 @@ In this flow, customers save payment information to their account and use that p
 {% tab title="Drop-in Payments" %}
 **Prerequisites**: Perform the [common Drop-in Payments steps](building-your-workflows.md#common-drop-in-steps).
 
-**Step one**: [Create a cart](../shopper-apis/cart/creating-or-updating-a-cart/#creating-a-cart) with an [authenticated customer](../resources/API-structure/#authentication) and all tax, shipping, duty, and fee amounts are in a final state. Set [`chargeType`](broken-reference) to [`customer_initiate`](../shopper-apis/cart/submitting-a-cart/initiating-a-charge.md) and `autoRenewal` to `true`.
+**Step one**: [Create a cart](../shopper-apis/cart/creating-or-updating-a-cart/#creating-a-cart) with an [authenticated customer](../resources/API-structure/#authentication), and all tax, shipping, duty, and fee amounts are in a final state. Set [`chargeType`](broken-reference) to [`customer_initiate`](../shopper-apis/cart/submitting-a-cart/initiating-a-charge.md) and `autoRenewal` to `true`.
 
 **Step two**: Retrieve the [payment session identifier](../shopper-apis/cart/payment-sessions.md#enable-payment-sessions) from the cart, and use it to set the `sessionId` in the [Drop-in Payments configuration object](payments-solutions/drop-in/drop-in-integration-guide.md#step-5-configure-hydrate).&#x20;
 
@@ -358,15 +338,15 @@ let configuration = {
 let dropin = digitalriver.createDropIn(configuration);
 ```
 
-**Step four**: On your cart page, [specify a container to place Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-7-place-drop-in-payments-on-your-cart-or-shopper-page).
+**Step four**: Specify[ a container to place Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-7-place-drop-in-payments-on-your-cart-or-shopper-page) on your cart page.
 
 Drop-in renders in the specified container.
 
 <figure><img src="../.gitbook/assets/sub terms.png" alt=""><figcaption></figcaption></figure>
 
-Shoppers must enter their credit card information and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-drop-in-button-text) pay now button**.**
+Shoppers must enter their credit card information and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-drop-in-button-text) Pay Now button**.**
 
-If the shopper completes the necessary [SCA](psd2-and-sca/) steps, then the [`onSucess` method](payments-solutions/drop-in/drop-in-integration-guide.md#the-onsuccess-event-returns-the-source) is called and Digital River returns a unique source in a [chargeable state](sources/#source-state) that is [`readyForStorage`](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess).
+If the shopper completes the necessary [SCA](psd2-and-sca/) steps, then the [`onSucess` method](payments-solutions/drop-in/drop-in-integration-guide.md#the-onsuccess-event-returns-the-source) is called an,d Digital River returns a unique source in a [chargeable state](sources/#source-state) that is [`readyForStorage`](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess).
 
 ```javascript
 ...
@@ -397,7 +377,7 @@ var payload = {
     "usage": "subscription",
     ...
     "mandate": {
-        "terms": "Yes, please save this account and payment information for future purchases."
+        "terms": "Yes, save this account and payment information for future purchases."
     }
 }
   
@@ -406,7 +386,7 @@ digitalriver.createSource(payload).then(function(result) {
         //handle errors
     } else {
         var source = result.source;
-        //send source to back end
+        //send the source to back end
         sendToBackend(source);
     }
 });
@@ -423,7 +403,7 @@ digitalriver.createSource(payload).then(function(result) {
 
 #### Shopper retrieves credit card details during subscription acquisition <a href="#customer-saves-credit-card-details-during-subscription-acquisition-checkout" id="customer-saves-credit-card-details-during-subscription-acquisition-checkout"></a>
 
-In this flow, during the checkout process, shoppers select a credit card they previously saved to their account in order to acquire an auto-renewing subscription.
+In this flow, during the checkout process, shoppers select a credit card they previously saved to their account to acquire an auto-renewing subscription.
 
 | SCA required? | Drop-in supported? | Elements supported? |
 | ------------- | ------------------ | ------------------- |
@@ -433,7 +413,7 @@ In this flow, during the checkout process, shoppers select a credit card they pr
 
 {% tabs %}
 {% tab title="Drop-in Payments" %}
-[Drop-in Payments](building-your-workflows.md#drop-in-payments) does not currently support retrieving stored payment methods. In order to handle this flow, use Digital River with elements.
+[Drop-in Payments](building-your-workflows.md#drop-in-payments) does not currently support retrieving stored payment methods. To handle this flow, use Digital River with elements.
 {% endtab %}
 
 {% tab title="DigitalRiver.js with elements" %}
@@ -478,7 +458,7 @@ In this flow, you initiate a subscription auto-renewal for the shopper. Although
 
 ### Mail order/telephone order <a href="#mail-order-telephone-order" id="mail-order-telephone-order"></a>
 
-[SCA ](psd2-and-sca/)is not required for transactions where shoppers provide their payment details by regular mail, fax, or telephone. But both Drop-in Payments and Elements support building workflows for [mail order and telephone order](../shopper-apis/cart/submitting-a-cart/initiating-a-charge.md#mail-order-telephone-order) (MOTO) transactions.
+[SCA ](psd2-and-sca/)is not required for transactions where shoppers provide payment details by mail, fax, or telephone. But both Drop-in Payments and Elements support building workflows for [mail order and telephone order](../shopper-apis/cart/submitting-a-cart/initiating-a-charge.md#mail-order-telephone-order) (MOTO) transactions.
 
 | SCA required? | Drop-in Payments supported? | Elements supported? |
 | ------------- | --------------------------- | ------------------- |
@@ -488,7 +468,7 @@ In this flow, you initiate a subscription auto-renewal for the shopper. Although
 {% tab title="Drop-in Payments" %}
 **Prerequisites**: Perform the [common Drop-in payments steps](building-your-workflows.md#common-drop-in-steps).
 
-**Step one**: [Create a cart](../shopper-apis/cart/creating-or-updating-a-cart/#creating-a-cart) with a [`chargeType` ](../shopper-apis/cart/submitting-a-cart/initiating-a-charge.md)of [`moto` ](../shopper-apis/cart/submitting-a-cart/initiating-a-charge.md#merchant-initiated)and all tax, shipping, duty, and fee amounts in a final state. This configures Drop-in payments to display only payment methods that are supported in MOTO transactions.
+**Step one**: [Create a cart](../shopper-apis/cart/creating-or-updating-a-cart/#creating-a-cart) with a [`chargeType` ](../shopper-apis/cart/submitting-a-cart/initiating-a-charge.md)of [`moto` ](../shopper-apis/cart/submitting-a-cart/initiating-a-charge.md#merchant-initiated)and all tax, shipping, duty, and fee amounts in a final state. This configures Drop-in payments to display only payment methods supported in MOTO transactions.
 
 **Step two**: Retrieve the checkout's payment session identifier, and use it to set `sessionId` in the [Drop-in payments' configuration object](payments-solutions/drop-in/drop-in-integration-guide.md#configuring-payment-methods-within-drop-in-payments). In `options`, set [`flow` ](building-your-workflows.md#purchase-flows)to `checkout` and [`usage` ](payments-solutions/drop-in/drop-in-integration-guide.md#specifying-a-sources-future-use)to `convenience`.
 
@@ -509,13 +489,13 @@ let configuration = {
 let dropin = digitalriver.createDropin(configuration);
 ```
 
-**Step four**: On the checkout page, [specify a container to place Drop-in payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-7-mount-drop-in-payments-on-your-cart-or-account-management-page).
+**Step four**: Specify[ a container to place Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-7-place-drop-in-payments-on-your-cart-or-shopper-page) on your checkout page.
 
 The modal window renders in the specified container.
 
 ![](../.gitbook/assets/MOTO.png)
 
-The merchant's representative enters the customer's credit card information and clicks the [configurable ](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button)pay now button. If the payment is authorized, then the [`onSuccess` method](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess) is called and Digital River returns a unique source in a [`chargeable` state](sources/#source-state).
+The merchant's representative enters the customer's credit card information and clicks the [configurable ](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button)Pay Now button. If the payment is authorized, then the [`onSuccess` method](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess) is called, and Digital River returns a unique source in a [`chargeable` state](sources/#source-state).
 
 ```javascript
 ...
@@ -564,13 +544,11 @@ digitalriver.createSource(payload).then(function(result) {
 
 You can create flows that allow customers to manage [recurring payment methods](supported-payment-methods/) through their account portal.&#x20;
 
-In these account management flows, you only need to adhere to [SCA regulations](psd2-and-sca/) when [saving a customer's credit card for future use](building-your-workflows.md#saving-a-credit-card-for-future-use). While storing a card, make sure you identify the future use of the source. This increases the probability that future transactions will be approved.
+In these account management flows you only need to adhere to [SCA regulations](psd2-and-sca/) when [saving a customer's credit card for future use](building-your-workflows.md#saving-a-credit-card-for-future-use). While storing a card, make sure you identify the future use of the source. This increases the probability that future transactions will be approved.
 
 You're not required to provide SCA when [updating a credit card's expiration date or billing address](building-your-workflows.md#updating-a-credit-cards-billing-address).
 
-### Saving a credit card for future use <a href="#saving-a-credit-card-for-future-use" id="saving-a-credit-card-for-future-use"></a>
-
-In this flow, customers use their account portal to save credit card information for use in future transactions.&#x20;
+### Saving a credit card foCustomersow, customers use their account portal to save credit card information for future transactions.  <a href="#saving-a-credit-card-for-future-use" id="saving-a-credit-card-for-future-use"></a>
 
 | SCA required? | Drop-in Payments supported? | Elements supported? |   |
 | ------------- | --------------------------- | ------------------- | - |
@@ -582,7 +560,7 @@ In this flow, customers use their account portal to save credit card information
 
 **Step one**: Go to a page in your integration where customers manage their payment methods.
 
-**Step two**: In the [configuration object's `options`](payments-solutions/drop-in/drop-in-integration-guide.md#configuring-payment-methods-within-drop-in-payments), set `flow` to `managePaymentMethods` and specify a value for [`usage`](payments-solutions/drop-in/drop-in-integration-guide.md#specifying-a-sources-future-use) that identifies the likely future use of the payment source.
+**Step two**: In the [configuration object's `options`](payments-solutions/drop-in/drop-in-integration-guide.md#configuring-payment-methods-within-drop-in-payments), set `flow` to `managePaymentMethods` and specify a value for [`usage`](payments-solutions/drop-in/drop-in-integration-guide.md#specifying-a-sources-future-use) that identifies the potential future use of the payment source.
 
 ```javascript
 let configuration = {
@@ -598,15 +576,15 @@ let dropin = digitalriverpayments.createDropIn(configuration);
 
 **Step three**: Use the configuration object to [instantiate Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#using-drop-in-payments-within-your-cart-flow).
 
-**Step four**: On the account management page, [specify a container to place Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-7-place-drop-in-payments-on-your-cart-or-shopper-page).
+**Step four**: Specify[ a container to place Drop-in Payments](payments-solutions/drop-in/drop-in-integration-guide.md#step-7-place-drop-in-payments-on-your-cart-or-shopper-page) on the account management page.
 
 The modal window renders in the specified container.
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (4) (1).png>)
 
 Shoppers enter their credit card information, select the save payment agreement option and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button) add payment method button.&#x20;
 
-If the shopper completes the necessary [SCA](psd2-and-sca/) steps, then the [`onSucess` method](payments-solutions/drop-in/drop-in-integration-guide.md#the-onsuccess-event-returns-the-source) is called and Digital River returns a unique source in a [chargeable state](sources/#source-state) that is [`readyForStorage`](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess).
+If the shopper completes the necessary [SCA](psd2-and-sca/) steps, then the [`onSucess` method](payments-solutions/drop-in/drop-in-integration-guide.md#the-onsuccess-event-returns-the-source) is called, and Digital River returns a unique source in a [chargeable state](sources/#source-state) that is [`readyForStorage`](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess).
 
 ```javascript
 ...
@@ -654,7 +632,7 @@ Once the shopper provides the required SCA, a Source in a [`chargeable` state](s
 
 ### Updating a credit card's expiration date or billing address
 
-In this flow, customers use their account portal to update the expiration date or billing address on a saved credit card.
+Customers use their account portal to update their saved credit card's expiration date or billing address in this flow.
 
 | SCA required? | Drop-in Payments supported? | Elements supported? |
 | ------------- | --------------------------- | ------------------- |
@@ -662,7 +640,7 @@ In this flow, customers use their account portal to update the expiration date o
 
 {% tabs %}
 {% tab title="Drop-in Payments" %}
-[Drop-in Payments](building-your-workflows.md#drop-in-payments) does not support interacting directly with saved payment methods‌
+[Drop-in Payments](building-your-workflows.md#drop-in-payments) do not support interacting directly with saved payment methods.‌
 {% endtab %}
 
 {% tab title="Digital River with elements" %}

@@ -6,7 +6,7 @@ description: Understand the 401 Unauthorized error codes.
 
 ## `invalid_client`
 
-The provided client is invalid. Provide the correct client information and try again.
+The provided client is incorrect. Provide the correct client information and try again.
 
 ## `invalid_request`
 
@@ -29,6 +29,6 @@ The response shows you where the token originated in the `domain` field and when
 *   `Request Site ID does not match Token Site ID`
 
     The value of the Header `siteId` does not match the site ID in the token.
-*   `Invalid Token for Shopper Session`
+*   `Invalid Token for Shapper Session`
 
     The provided token is invalid.

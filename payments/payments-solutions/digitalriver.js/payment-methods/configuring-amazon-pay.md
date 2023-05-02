@@ -40,8 +40,8 @@ var options = {
         //Amazon Pay will redirect to this URL after the buyer signs in
         returnUrl: '<return.com URL>', 
         //where the shopper will be returned after authorizing at Amazon Pay (NOTE TO GALE: I'm not sure if this wording is right, you may want to verify with Product or Payment Service)
-        resultReturnUrl: 'https://<resultreturn.com URL>', 
-        //Amazon Pay will redirect to this URL if the buyer cancels sign-in on the Amazon Pay hosted page
+        resultReturnUrl: 'htPay-hostedtps://<resultreturn.com URL>', 
+        //Amazon Pay will redirect to this URL if the buyer cancels sign-in on the Amazon Pay-hosted page
         cancelUrl: '<cancel.com URL>', 
         // Placement of the Amazon Pay button on your website. One of ['Home', 'Cart', 'Product', 'Checkout', 'Other']
         placement: 'Product', 

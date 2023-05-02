@@ -4,7 +4,7 @@ description: Learn how to use fields as keys.
 
 # Fields used as keys
 
-You can use the following keys described below with Order Notification, Sales Order Activity, and Subscription Services for reporting purposes.
+For reporting purposes, you can use the following keys descried below with Order Notification, Sales Order Activity, and Subscription Services for reporting purposes.
 
 ## Email address
 
@@ -95,4 +95,4 @@ To use digital rights as a key, check the `serialNumber` and `unlockCode` elemen
 
 ## CustomerID field
 
-Use the `customerID` field as a key, when you want to attribute orders to users who have access to MyAccount where they can change their login IDs and email addresses.
+Use the `customerID` field as a key when you want to attribute orders to users who have access to MyAccount, where they can change their login IDs and email addresses.

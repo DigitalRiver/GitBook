@@ -73,7 +73,7 @@ digitalriver.createSource(data).then(function(result) {
         //handle errors
     } else {
         var source = result.source;
-        //send source to back end
+        //send the source to back end
         sendToBackend(source);
     }
 });
@@ -166,11 +166,11 @@ The `address` object must contain postal code and state/province data that [adhe
 
 ### Step 3: Authorize a PayPal source
 
-When you create a PayPal source, the customer is required to authorize the charge at PayPal. You can accomplish this by either redirecting the customer to PayPal or using the PayPal SDK to authorize the charge as part of your experience.
+When you create a PayPal source, the customer is required to authorize the charge at PayPal. You can accomplish this by redirecting the customer to PayPal or using the PayPal SDK to authorize the charge as part of your experience.
 
 #### Redirecting the customer to PayPal for authorization
 
-To redirect your customer to PayPal for authorization, use the `redirectUrl` parameter in your createSource response.
+To redirect your customer to PayPal for authorization, use the `redirectUrl` parameter in your `createSource` response.
 
 {% code overflow="wrap" %}
 ```javascript
@@ -190,7 +190,7 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
 #### **Example:**
 
 1. Include the PayPal Checkout SDK on your page and specify a location where the button will appear.
-2. &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching it to an order or cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
+2. &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, attach the source you created earlier [to an order or cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
 {% tabs %}
 {% tab title="HTML" %}
@@ -243,7 +243,7 @@ paypal.Button.render({
     },
     // Execute the payment
     onAuthorize: function(data, actions) {
-        //the payment has been authorized, use the source and attach it to your customer's account.
+        //If the payment has been authorized, attach the source to your customer's account.
         doSomething();
     },
     onCancel: function(data) {
@@ -256,7 +256,7 @@ paypal.Button.render({
 {% endtab %}
 {% endtabs %}
 
-![PayPal login](../../../../.gitbook/assets/PayPal-login.png)
+![PayPal login](../../../../.gitbook/assets/paypal-login.png)
 
 ### Step 4: Use the authorized source
 
@@ -386,7 +386,7 @@ The `address` object must contain postal code and state/province data that [adhe
 
 ### Step 3: Authorize a PayPal Billing Agreement source
 
-When you create a PayPal Billing Agreement source, the customer is required to authorize the charge through PayPal. You can accomplish this by either redirecting the customer to PayPal or using the PayPal SDK to authorize the charge as part of your experience.
+When you create a PayPal Billing Agreement source, the customer is required to authorize the charge through PayPal. You can accomplish this by redirecting the customer to PayPal or using the PayPal SDK to authorize the charge as part of your experience.
 
 #### Redirecting the customer to PayPal for authorization
 
@@ -402,7 +402,7 @@ window.location.href = sourceResponse.redirect.redirectUrl;
 {% endtab %}
 {% endtabs %}
 
-PayPal will present the customer with the transaction details where they can authorize, or cancel the transaction. A successful authorization redirects the customer to the PayPal Return URL parameter you specified when you created the source. If the customer cancels, they will return to the PayPal Cancel URL parameter you specified when you created the source.
+PayPal will present the customer with the transaction details where they can authorize or cancel the transaction. A successful authorization redirects the customer to the PayPal Return URL parameter you specified when you created the source. If the customer cancels, they will return to the PayPal Cancel URL parameter you specified when you created the source.
 
 #### Using the PayPal SDK to authorize payment
 
@@ -414,7 +414,7 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
 **Example:**
 
 1. Include the PayPal Checkout SDK on your page and specify a location where the button will appear.
-2. Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by attaching it to a shopper or customer.
+2. Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, attach the source you created earlier to a shopper or customer.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -456,7 +456,7 @@ paypal.Button.render({
     },
     // Execute the payment
     onAuthorize: function(data, actions) {
-        //the payment has been authorized, use the source and attach it to your customer's account.
+        //If the payment has been authorized, attach the source to your customer's account.
         doSomething();
     },
     onCancel: function(data) {
@@ -469,7 +469,7 @@ paypal.Button.render({
 {% endtab %}
 {% endtabs %}
 
-![PayPal login](../../../../.gitbook/assets/PayPal-login.png)
+![PayPal login](../../../../.gitbook/assets/paypal-login.png)
 
 ### Step 4: Use the authorized source
 
@@ -686,7 +686,7 @@ PayPal will present the customer with the transaction details where they can aut
 Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. This will allow you to control things like the appearance of the PayPal button and embed the entire experience into your workflow.
 
 * The PayPal SDK guide is located here: [https://developer.paypal.com/docs/archive/checkout/](https://developer.paypal.com/docs/archive/checkout/)
-* For more details on how you can customize the PayPal button, go to [https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/#](https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/)
+* For more details on how attach can customize the PayPal button, go to [https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/#](https://developer.paypal.com/docs/archive/checkout/how-to/customize-button/)
 
 **Example:**
 
@@ -695,7 +695,7 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
     <pre class="language-markup" data-overflow="wrap"><code class="lang-markup"><strong>&#x3C;script src="https://www.paypalobjects.com/api/checkout.js">&#x3C;/script>
     </strong>&#x3C;div id="paypal-button">&#x3C;/div>
     </code></pre>
-2.  &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, use the source you created earlier by [attaching it to an order or cart](broken-reference).
+2.  &#x20;Use the PayPal SDK to customize and place the PayPal button on your page. The PayPal SDK returns two functions, `onAuthorize` and `onCancel`. If the payment was authorized, se the source you created earlier [to attach it to an order or cart](broken-reference).
 
     {% code overflow="wrap" %}
     ```javascript
@@ -712,7 +712,7 @@ Use the PayPal Checkout SDK to streamline the authorizing PayPal transactions. T
         // Configure environment
         env: 'sandbox',
         // Customize button (optional)
-        locale: 'en_US',
+       locale: 'en_US',
         style: {
             label: 'credit',
             size: 'responsive',

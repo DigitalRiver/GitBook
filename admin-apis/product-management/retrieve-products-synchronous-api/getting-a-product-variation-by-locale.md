@@ -4,11 +4,11 @@ description: Learn how to get information for a product variation by locale.
 
 # Getting a product variation by locale
 
-The following [`GET /v1/products/{ProductId or ERID}/variation/{productId or ERID}/locales/{locale}`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Retrieve-Product-\(Synchronous-API\)/paths/\~1v1\~1products\~1%7BbaseProductId%7D\~1variations\~1%7BvariationId%7D\~1locales\~1%7Blocale%7D/get) request retrieves data for a specific locale associated with a specific product variation.&#x20;
+Basic The following [`GET /v1/products/{ProductId or ERID}/variation/{productId or ERID}/locales/{locale}`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Retrieve-Product-\(Synchronous-API\)/paths/\~1v1\~1products\~1%7BbaseProductId%7D\~1variations\~1%7BvariationId%7D\~1locales\~1%7Blocale%7D/get) request retrieves data for a specific locale associated with a particular product variation.&#x20;
 
 To get a product variation for a specific base product and locale, you must provide one of the following options:&#x20;
 
-* A [`productId`](../../../general-resources/common-shoppers-and-admin-apis-reference/product-identifier.md)  for the base product, the `variationProductId` for the product variation, and the `locale`.&#x20;
+* A [`productId`](../../../general-resources/common-shoppers-and-admin-apis-reference/product-identifier.md)  for the base product, the `variationProductId` for the product variation and the `locale`.&#x20;
 * An [`ERID`](../../../general-resources/common-shoppers-and-admin-apis-reference/external-reference-identifier-erid.md) for the base product, and  a `variationERID` for the product variation, and the `locale`. If the request finds multiple products associated with the `ERID`, the response will return all of them.
 
 {% tabs %}
@@ -18,7 +18,7 @@ The following example gets product variation for a specific base product and a l
 {% code overflow="wrap" %}
 ```http
 curl --location --request GET 'https://api.digitalriver.com/v1/products/{productId}/variation/{variationProductId}/locales/{locale}' \
---header 'Authorization: Bearer <API_key>' \
+--header 'Authorization: Basic <API_key>' \
 ...
 ```
 {% endcode %}
@@ -26,7 +26,7 @@ curl --location --request GET 'https://api.digitalriver.com/v1/products/{product
 An ERID request requires the `x-erid-as-pid=true` header.
 
 <pre class="language-http" data-overflow="wrap"><code class="lang-http">curl --location --request GET 'https://api.digitalriver.com/v1/products/{ERID}/variation/{variationERID}/locales/{locale}' \
---header 'Authorization: Bearer &#x3C;API_key>' \
+--header 'Authorization: Basic &#x3C;API_key>' \
 <strong>--header 'header x-erid-as-pid=true' \
 </strong><strong>...
 </strong></code></pre>
