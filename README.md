@@ -8,7 +8,7 @@ description: >-
 
 ## Working with Digital River
 
-Digital River offers more than just a worldwide payment and fraud solution; we also act as the authorized reseller of your products. This means that we assume the risk of the sale, managing taxes and regulations on your behalf. To provide these valuable services, we need to gather some basic data. This data enables us to apply the appropriate taxes, process payments, conduct fraud screenings, and comply with local regulations using our legal entities.
+Digital River offers more than just a worldwide payment and fraud solution; we also act as the merchant of record for your products. This means that we assume the risk of the sale, managing taxes and regulations on your behalf. To provide these valuable services, we need to gather some basic data. This data enables us to apply the appropriate taxes, process payments, conduct fraud screenings, and comply with local regulations using our legal entities.
 
 ## Getting started
 
