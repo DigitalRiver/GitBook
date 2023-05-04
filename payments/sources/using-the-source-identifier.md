@@ -8,7 +8,7 @@ description: Learn how to manage sources.
 
 ### Standard payment flow
 
-Use the following flow for standard payments such as [Apple Pay](../supported-payment-methods/apple-pay.md), [credit cards](../supported-payment-methods/credit-cards.md), [Google Pay](../supported-payment-methods/google-pay.md), [PayCo](../supported-payment-methods/payco.md), and [SEPA Direct Debit](../supported-payment-methods/sepa-direct-debit.md).&#x20;
+Use the following flow for standard payments: Apple[ Pay](../supported-payment-methods/apple-pay.md), [credit cards](../supported-payment-methods/credit-cards.md), [Google Pay](../supported-payment-methods/google-pay.md), [PayCo](../supported-payment-methods/payco.md), and [SEPA Direct Debit](../supported-payment-methods/sepa-direct-debit.md).&#x20;
 
 1. [Create the shopper token](../../shopper-apis/shopper-basics/common-use-cases/creating-a-customer.md).
 2. [Apply the shopper and their billing address to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post).&#x20;
@@ -20,7 +20,7 @@ Use the following flow for standard payments such as [Apple Pay](../supported-pa
 
 #### Submit a Konbini payment flow
 
-Use the following flow for delayed payments such as [Konbini](../supported-payment-methods/konbini.md).&#x20;
+Use the following flow for delayed payments, such as [Konbini](../supported-payment-methods/konbini.md).&#x20;
 
 1. Get the store details.
 2. [Create a source using DigitalRiver.js](../payments-solutions/digitalriver.js/payment-methods/konbini.md#step-2-create-a-konbini-source-using-digitalriver.js). The source `state` is `pending_funds`.
@@ -43,29 +43,29 @@ To use [Boleto ](../supported-payment-methods/boleto.md)as a payment method:&#x2
 
 #### Submit a Wire Transfer payment flow
 
-Use the following flow for delayed payments such as [Wire Transfer](../supported-payment-methods/wire-transfer.md).&#x20;
+Use the following flow for delayed payments, such as [Wire Transfer](../supported-payment-methods/wire-transfer.md).&#x20;
 
 1. [Create the shopper token](../../shopper-apis/shopper-basics/common-use-cases/creating-a-customer.md).
 2. [Apply the shopper and their billing address to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post).&#x20;
 3. [Create a source using DigitalRiver.js](../payments-solutions/digitalriver.js/payment-methods/wire-transfer.md#step-2-create-a-wire-transfer-source-using-digitalriver.js). The source `state` is `chargeable`.
 4. [Attach the source to the cart](using-the-source-identifier.md#attaching-multiple-payment-sources-to-the-cart).
 5. [Submit the cart](../../shopper-apis/cart/submitting-a-cart/).
-6. The shopper receives the payment details and completes the payment. After the shopper completes the payment, the updated order status will appear in [Global Commerce](https://gc.digitalriver.com/gc/ent/home.do).
+6. The shopper receives the payment details and completes the payment. After the shopper finalizes the payment, the updated order status will appear in [Global Commerce](https://gc.digitalriver.com/gc/ent/home.do).
 
-### Redirect then submit payment flow
+### Redirect, then submit payment flow
 
-Use the following flow for redirect and submit payment methods such as [Afterpay](../supported-payment-methods/afterpay.md), [Bancontact](../supported-payment-methods/bancontact.md), [BLIK](../supported-payment-methods/blik.md), [iDEAL](../supported-payment-methods/ideal.md), [Klarna Financing](../supported-payment-methods/klarna.md), [Klarna Pay in 3](../supported-payment-methods/klarna.md), [Klarna Pay in 4](../supported-payment-methods/klarna.md), [Klarna Pay in 30 days](../supported-payment-methods/klarna.md), [Online Banking (IBP)](../supported-payment-methods/online-banking-ibp.md), [Online Banking (FPX)](../supported-payment-methods/fpx-online-banking.md), [Online Banking (Korea Bank Transfer)](../supported-payment-methods/korea-bank-transfer-online-banking.md),  [PayPal](../supported-payment-methods/paypal.md), [PayPal Billing Agreement](../supported-payment-methods/paypal-billing-agreement.md), [PayPal Credit](../supported-payment-methods/paypal-credit.md), [PayPal Pay in 3](../supported-payment-methods/paypal-pay-in-3.md), [PayPal Pay in 4](../supported-payment-methods/paypal-pay-in-4.md), [PayPal TatenZahlung (Installment Payment)](../supported-payment-methods/paypal-ratenzahlung-installment-payment.md), and [TreviPay](../supported-payment-methods/trevipay.md).&#x20;
+Use the following flow for redirect and submit payment methods, such as [Afterpay](../supported-payment-methods/afterpay.md), [Alipay (domestic)](../supported-payment-methods/alipay-domestic.md), [Alipay+ (cross-border)](../supported-payment-methods/alipay+-cross-border.md), [Bancontact](../supported-payment-methods/bancontact.md), [BLIK](../supported-payment-methods/blik.md), [iDEAL](../supported-payment-methods/ideal.md), [Klarna Financing](../supported-payment-methods/klarna.md), [Klarna Pay in 3](../supported-payment-methods/klarna.md), [Klarna Pay in 4](../supported-payment-methods/klarna.md), [Klarna Pay in 30 days](../supported-payment-methods/klarna.md), [Online Banking (IBP)](../supported-payment-methods/online-banking-ibp.md), [Online Banking (FPX)](../supported-payment-methods/fpx-online-banking.md), [Online Banking (Korea Bank Transfer)](../supported-payment-methods/korea-bank-transfer-online-banking.md),  [PayPal](../supported-payment-methods/paypal.md), [PayPal Billing Agreement](../supported-payment-methods/paypal-billing-agreement.md), [PayPal Credit](../supported-payment-methods/paypal-credit.md), [PayPal Pay in 3](../supported-payment-methods/paypal-pay-in-3.md), [PayPal Pay in 4](../supported-payment-methods/paypal-pay-in-4.md), [PayPal TatenZahlung (Installment Payment)](../supported-payment-methods/paypal-ratenzahlung-installment-payment.md), and [TreviPay](../supported-payment-methods/trevipay.md).&#x20;
 
 1. [Create the shopper token](../../shopper-apis/shopper-basics/common-use-cases/creating-a-customer.md).
 2. [Apply the shopper and their billing address to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post).&#x20;
-3. [Create a source using DigitalRiver.js](../../general-resources/reference/digitalriver-object.md#creating-sources). The source `state` is `requires_confirmation`.
-4. [Attach the source to the cart](using-the-source-identifier.md#attaching-multiple-payment-sources-to-the-cart). The session `state` is `requires_confirmation`.
-5. [Complete the redirect authorization](../../shopper-apis/cart/redirecting-to-a-digital-river-hosted-cart.md).
+3. [Create a source using DigitalRiver.js](../../general-resources/reference/digitalriver-object.md#creating-sources). The source `state` is `pending_redirect`.
+4. [Complete the redirect authorization](../../shopper-apis/cart/redirecting-to-a-digital-river-hosted-cart.md).
+5. [Attach the source to the cart](using-the-source-identifier.md#attaching-multiple-payment-sources-to-the-cart). The session `state` is `requires_confirmation`.
 6. [Submit the cart](../../shopper-apis/cart/submitting-a-cart/).
 
 ### Submit then redirect payment flow
 
-Use the submit then redirect flow for [Amazon Pay Express Checkout](../supported-payment-methods/amazon-pay.md), and [Trustly](../supported-payment-methods/trustly.md).
+Use the submit, then redirect flow for [Amazon Pay Express Checkout](../supported-payment-methods/amazon-pay.md) and [Trustly](../supported-payment-methods/trustly.md).
 
 1. [Create the shopper token](../../shopper-apis/shopper-basics/common-use-cases/creating-a-customer.md).
 2. [Apply the shopper and their billing address to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post).&#x20;
@@ -90,7 +90,7 @@ The following Amazon Pay flow represents how your shoppers experience the paymen
 1. The shopper adds the product to the shopping cart
 2. The shopper clicks the Shopping Cart
 3. The shopper clicks the Amazon Pay button.
-4. The shopper is redirected to Amazon Pay to sign in and select the shipping address (if required), and the payment method.
+4. The shopper is redirected to Amazon Pay to sign in and select the shipping address (if required) and the payment method.
 5. The shopper clicks the Submit button to place the order.&#x20;
 6. The shopper gets a second redirect to Amazon Pay - Spinning page or Multi-factor Authentication (MFA) page. (Amazon Pay determines if the transaction requires MFA). The order will be in a [`source_pending_redirect`](./#synchronous-or-asynchronous) state. You can [get an order by its identifier](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders/operation/retrieveOrders) to check the state of the order.
 7. Optional. When you [resume the cart](../../shopper-apis/cart/resuming-cart-submission.md), the order will be in an [`accepted` state](broken-reference). &#x20;
@@ -146,21 +146,21 @@ curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/
 
 ## Primary versus secondary sources
 
-In the Commerce API, there are two broad categories of payment sources: [primary and secondary](using-the-source-identifier.md#primary-versus-secondary-sources).
+Commerce API has two broad categories of payment sources: [primary and secondary](using-the-source-identifier.md#primary-versus-secondary-sources).
 
-For both categories, after you [create a payment source](using-the-source-identifier.md#creating-payment-sources), you can always [attach it to a cart](using-the-source-identifier.md#attaching-sources-to-a-cart) so that we can use it to generate a one-time charge. You can also [detach sources](using-the-source-identifier.md#detaching-sources-from-cart) from carts.
+After you [create a payment source](using-the-source-identifier.md#creating-payment-sources) for both categories, you can [attach it to a cart](using-the-source-identifier.md#attaching-sources-to-a-cart) so we can use it to generate a one-time charge. You can also [detach sources](using-the-source-identifier.md#detaching-sources-from-cart) from carts.
 
-If the [primary source](using-the-source-identifier.md#primary-payment-sources) supports [reusability](./#reusable-or-single-use), you can [save it to a customer's account](using-the-source-identifier.md#attaching-sources-to-customers). For shoppers with multiple saved payment `sources[]`, we also provide you the ability to [set the default one](using-the-source-identifier.md#setting-the-default-payment-source).
+If the [primary source](using-the-source-identifier.md#primary-payment-sources) supports [reusability](./#reusable-or-single-use), [save it to a customer's account](using-the-source-identifier.md#attaching-sources-to-customers). For shoppers with multiple saved payment `sources[]`, we also provide you the ability to [set the default one](using-the-source-identifier.md#setting-the-default-payment-source).
 
 You can [combine primary and secondary sources](using-the-source-identifier.md#combining-primary-and-secondary-payment-sources), but how you sequence their application depends on whether or not the primary source is [reusable](./#reusable-or-single-use).
 
 And when [building your payment flows](../building-your-workflows.md), the [DigitalRiver object](../../general-resources/reference/digitalriver-object.md) exposes methods for [authenticating ](using-the-source-identifier.md#authenticating-sources)and [updating](using-the-source-identifier.md#updating-sources) sources that can be useful in purchase and account management scenarios.
 
-When [building your payment workflows](../building-your-workflows.md), you should be aware of the differences between [primary ](using-the-source-identifier.md#primary-payment-sources)and [secondary ](using-the-source-identifier.md#secondary-payment-sources)payment sources and how they affect the [payment session](../../shopper-apis/cart/payment-sessions.md).
+When [building your payment workflows](../building-your-workflows.md), you should know the differences between [primary ](using-the-source-identifier.md#primary-payment-sources)and [secondary ](using-the-source-identifier.md#secondary-payment-sources)payment sources and how they affect the [payment session](../../shopper-apis/cart/payment-sessions.md).
 
 ### Primary payment sources
 
-Primary payment [sources ](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Source)are created from traditional [payment methods](../supported-payment-methods/) such as [credit cards](../supported-payment-methods/credit-cards.md), [Google Pay](../supported-payment-methods/google-pay.md), [PayPal](../supported-payment-methods/paypal.md), and [Wire Transfers](../supported-payment-methods/wire-transfer.md). Most customers use a primary source when making a purchase, but a [cart ](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper)can only contain one.&#x20;
+Primary payment [sources ](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Source)are created from traditional [payment methods](../supported-payment-methods/) such as [credit cards](../supported-payment-methods/credit-cards.md), [Google Pay](../supported-payment-methods/google-pay.md), [PayPal](../supported-payment-methods/paypal.md), and [Wire Transfers](../supported-payment-methods/wire-transfer.md). Most customers use a primary source when purchasing, but a [cart ](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper)can only contain one.&#x20;
 
 Primary sources created from [payment methods that support reusability](../supported-payment-methods/) may be able to be [associated with a customer](./#attaching-a-payment-method-to-a-customer-or-payment-option) and then [reused ](./#reusable-or-single-use)in future transactions.
 
@@ -171,10 +171,10 @@ Alternatively, you can simply [attach a primary source to a cart](./#attaching-a
 Secondary payment [sources ](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Source)are typically used to supplement a [primary source](using-the-source-identifier.md#primary-payment-sources).
 
 {% hint style="info" %}
-For the Commerce API, [`customerCredit` ](../../shopper-apis/shopper-basics/common-use-cases/applying-store-credit.md)is currently the only type of supported secondary source.     &#x20;
+Commerce AP currently only supports the[`customerCredit`](../../shopper-apis/shopper-basics/common-use-cases/applying-store-credit.md) type of supported secondary source.     &#x20;
 {% endhint %}
 
-You can successfully submit an order entirely with secondary sources, but you need to ensure the [payment session state](../../shopper-apis/cart/payment-sessions.md#session-state) is valid and the [amount contributed is sufficient](../../shopper-apis/cart/payment-sessions.md#session-state).
+You can successfully submit an order entirely with secondary sources, but you must ensure the [payment session state](../../shopper-apis/cart/payment-sessions.md#session-state) is valid and the [amount contributed is sufficient](../../shopper-apis/cart/payment-sessions.md#session-state).
 
 You cannot edit the `amount` value for a secondary source. To change the `amount` value for the secondary source:
 
@@ -184,7 +184,7 @@ You cannot edit the `amount` value for a secondary source. To change the `amount
 4. If needed, [attach the primary source to the cart](using-the-source-identifier.md#attaching-multiple-payment-sources-to-the-cart).
 
 {% hint style="info" %}
-Always attach the secondary source to the cart first. The primary source will cover the remaining amount. If you attach the primary source first, the primary source will cover the entire amount and the secondary source will be ignored when the order is submitted.
+Attach the secondary source to the cart first. The primary source will cover the remaining amount. If you attach the primary source first, the primary source will cover the entire amount, and the secondary source will be ignored when the order is submitted.
 {% endhint %}
 
 Secondary sources do not support [reusability](./#reusable-or-single-use). Therefore, they [cannot be saved to a customer's account](using-the-source-identifier.md#restrictions-on-saving-sources). They should only be [attached to a cart](using-the-source-identifier.md#attaching-sources-to-a-cart) to create a one-time charge when that cart is converted to an order.
@@ -201,12 +201,12 @@ You create [primary sources](using-the-source-identifier.md#primary-payment-sour
 
 You create [secondary sources](using-the-source-identifier.md#secondary-payment-sources) through the [Sources API ](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources)by sending your [confidential API key](broken-reference) in a `POST/sources` request.
 
-When defining the request, you retrieve the [payment session identifier](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/creating-checkouts#payment-session-identifier) from the cart you're building. The `amount` is optional, except when the `type` is `customerCredit`. The `type` is required and we currently only support `customerCredit`. You must also send an empty hash table whose name matches the `type`.
+When defining the request, you retrieve the [payment session identifier](https://docs.digitalriver.com/digital-river-api/integration-options/checkouts/creating-checkouts#payment-session-identifier) from the cart you're building. The `amount` is optional, except when the `type` is `customerCredit`. The `type` is required, and we currently only support `customerCredit`. You must also send an empty hash table whose name matches the `type`.
 
-The `owner` hash table is optional and can be used to meet our billing address requirements. You can provide the owner information, including the address when creating a secondary source.&#x20;
+The `owner` hash table is optional and can be used to meet our billing address requirements. You can provide the owner information, including the address, when creating a secondary source.&#x20;
 
 {% hint style="info" %}
-We recommend that you do not provide an [owner object](../payments-solutions/digitalriver.js/payment-methods/common-payment-objects.md#owner-object) with the secondary source. This ensures that the wrong address is not applied to the cart which will trigger a payment auth failed error.
+We recommend not providing an [owner object](../payments-solutions/digitalriver.js/payment-methods/common-payment-objects.md#owner-object) with the secondary source. This ensures that the wrong address is not applied to the cart, which will trigger a payment auth failed error.
 {% endhint %}
 
 The `upstreamId` parameter is useful for mapping the source to your credit management system.
@@ -267,15 +267,15 @@ We currently only support `customerCredit` as a secondary source.
 
 ### Attaching multiple payment sources to the cart
 
-You can only associate one primary source with a cart. If there's a primary source in the cart and you try to attach a different primary source, [remove all attached sources](using-the-source-identifier.md#detaching-sources-from-a-cart) or [remove the attached primary payment source](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Payment-Method/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/post) directly from the cart, then attach new sources to the cart.&#x20;
+You can only associate one primary source with a cart. If there's a primary source in the cart and you try to attach a different primary source, [remove all attached sources](using-the-source-identifier.md#detaching-sources-from-a-cart) or [remove the attached primary payment source](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Payment-Method/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/post) directly from the cart, then attach new sources.&#x20;
 
 {% hint style="danger" %}
-When using multiple sources in a cart, always apply the secondary sources first. Apply the primary source last.
+Always apply the secondary sources first when using multiple sources in a cart. Apply the primary source last.
 {% endhint %}
 
 For a list of payment methods that support reusability, refer to the [Supported payment methods](../supported-payment-methods/).  &#x20;
 
-To attach two sources to a cart, choose one of the following best practices.
+Choose one of the best practices below to attach two sources to a cart.
 
 #### Best practice 1: Use /apply-payment-method
 
@@ -293,11 +293,11 @@ Use the following steps only for authenticated shoppers.
 
 ### Address information
 
-When you attach a source to the cart using the [`POST /apply-payment-method`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/post) and the cart already has address information, the system will not use the `source` address. It will use the existing address in the cart. If the cart does not have the address information, the system will copy the address from the `source` to the cart.&#x20;
+When you attach a source to the cart using the [`POST /apply-payment-method`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/post) , the cart already has address information, so the system will not use the `source` address. It will use the existing address in the cart. If the cart does not have the address information, the system will copy the address from the `source` to the cart.&#x20;
 
-This behavior applies to both primary and secondary sources. This is why we recommend that you don't include the owner information when you [create a secondary source](using-the-source-identifier.md#creating-secondary-sources).
+This behavior applies to both primary and secondary sources. This is why we recommend not including the owner information when you [create a secondary source](using-the-source-identifier.md#creating-secondary-sources).
 
-When you attach a source to a shopper using [`POST /payment-options`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Payment-Options/paths/\~1v1\~1shoppers\~1me\~1payment-options/post), the system will save the source's payment information and address to the shopper's payment options, and associate the address with the payment. When you apply a shopper to a cart using [`POST /apply-shopper`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post), the system will apply the shopper's default payment method and copy the address associated with the payment method to the card, regardless of whether the cart has an address available or not.
+When you attach a source to a shopper using [`POST /payment-options`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Payment-Options/paths/\~1v1\~1shoppers\~1me\~1payment-options/post), the system will save the source's payment information and address to the shopper's payment options and associate the address with the payment. When you apply a shopper to a cart using [`POST /apply-shopper`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post), the system will apply the shopper's default payment method and copy the address associated with the payment method to the card, regardless of whether the cart has an address available.
 
 ### Amount contributed from each payment source
 
@@ -374,7 +374,7 @@ After applying the payment source to the cart, the amount contributed by the pay
 The `paymentSession` object shows the following information for an entire order:
 
 * `amountContributed`: indicates the accumulated contributed amount of the attached payment sources.
-* `amountRemainingToBeContributed`: indicates the gap amount required to fulfill the order. If the value is not zero that means the shopper should apply an additional payment to the cart to cover the order's total amount.
+* `amountRemainingToBeContributed`: indicates the gap amount required to fulfill the order. If the value is not zero, the shopper should pay the remaining cost t cover the order's total amount.
 
 {% code title="paymentSession example" overflow="wrap" %}
 ```json
@@ -407,13 +407,13 @@ When finished, you can [attach new sources](using-the-source-identifier.md#attac
 
 ### Refunds
 
-If a customer requests a refund, the system will first refund the [primary payment source](using-the-source-identifier.md#primary-payment-sources). Once the system fully refunds the primary source, the system will use the [secondary payment source](using-the-source-identifier.md#secondary-payment-sources) to refund the remaining value.&#x20;
+The system will first refund the [primary payment source](using-the-source-identifier.md#primary-payment-sources) if a customer requests a refund. Once the system fully refunds the primary source, the system will use the [secondary payment source](using-the-source-identifier.md#secondary-payment-sources) to refund the remaining value.&#x20;
 
-For example, a customer purchased a line item quantity of 10 for $1000. They used $600 from their primary payment source (a credit card) and $400 from their secondary payment source (for example, store credit) to pay for the order. If the customer requests a refund of $400, the system refunds $400 to their credit card. If the customer requests a refund of $700, the system refunds $600 to their credit card and $100 to their store credit.
+For example, a customer purchased a line item quantity of 10 for $1000. They used $600 from their primary payment source (a credit card) and $400 from their secondary payment source (store credit) to pay for the order. If the customer requests a refund of $400, the system refunds $400 to their credit card. If the customer requests a refund of $700, the system refunds $600 to their credit card and $100 to their store credit.
 
 ## Charging a single-use payment source
 
-Your storefront may be configured so that customers are not required to create an account or sign in to make a purchase. In this case, after you submit the guest customer's payment details, [DigitalRiver.js with elements](../payments-solutions/digitalriver.js/) will [create a Source](../../general-resources/reference/digitalriver-object.md#createsource-sourcedata) and return the `sourceId` .You can then use a [`POST /apply-payment-method`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Payment-Method/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/post) request to set the `sourceId` attribute.&#x20;
+Your storefront may be configured so that customers are not required to create an account or sign in to purchase. In this case, after you submit the guest customer's payment details, [DigitalRiver.js with elements](../payments-solutions/digitalriver.js/) will [create a Source](../../general-resources/reference/digitalriver-object.md#createsource-sourcedata) and return the `sourceId` .You can then use a [`POST /apply-payment-method`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-Payment-Method/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/post) request to set the `sourceId` attribute.&#x20;
 
 {% tabs %}
 {% tab title="cURL" %}

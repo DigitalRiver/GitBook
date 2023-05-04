@@ -122,17 +122,17 @@ digitalriver.createSource(alipaySourceData ).then(function(result) {
 
 ## Step 3: Authorize an Alipay (domestic) source
 
-When you create an Alipay (domestic) source, the customer is required to authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
+When you create an Alipay (domestic) source, the customer must authorize the charge through their payment provider. You can accomplish this by redirecting the customer to their payment provider.
 
 ### Redirecting the customer for authorization
 
-To redirect your customer to the payment provider for authorization, use the `redirectUrl` parameter in your `createSource` response.
+Use the `redirectUrl` parameter in your `createResource` response to redirect your customer to the payment provider for authorization.
 
 ```javascript
 window.location.href = sourceResponse.redirect.redirectUrl;
 ```
 
-The payment provider will present the customer with the transaction details to authorize, or cancel the transaction. A successful authorization redirects the customer to the Alipay Return URL parameter you specified when you created the source.
+The payment provider will present the customer with the transaction details to authorize or cancel the transaction. A successful authorization redirects the customer to the Alipay Return URL parameter you specified when you created the source.
 
 ## Step 4: Use the authorized source
 

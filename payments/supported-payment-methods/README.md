@@ -16,6 +16,7 @@ For a complete list of payment methods you can pair with [store credit](../../sh
 | --------------------------------------------------------------------------------------- | :--------------: | :---------------------------: | :--------------------: | :----------------: | :-----------------: |
 | [Afterpay](afterpay.md)                                                                 |         ✔        |               ✔               |            ✔           |          -         |      `redirect`     |
 | [Alipay (domestic)](alipay-domestic.md)                                                 |         ✔        |               ✔               |            ✔           |          -         |      `redirect`     |
+| [Alipay+ (cross-border)](alipay+-cross-border.md)                                       |         ✔        |               ✔               |            ✔           |          ✔         |      `redirect`     |
 | [Apple Pay](apple-pay.md)                                                               |         ✔        |               ✔               |            ✔           |          -         |      `standard`     |
 | [Amazon Pay](amazon-pay.md)                                                             |         -        |               ✔               |            ✔           |          ✔         |      `redirect`     |
 | [Bancontact](bancontact.md)                                                             |         ✔        |               ✔               |            ✔           |          -         |      `redirect`     |

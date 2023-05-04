@@ -11,18 +11,16 @@ description: Learn about payment objects that are common to all payment methods.
 {% code overflow="wrap" %}
 ```javascript
 {
-	"lastName": "Doe",
-	"firstName": "John",
+	"firstName": "Otis",
+	"lastName": "Lin",
 	"email": "test@digitalriver.com",
-	"phoneNumber": "000-000-0000",
-  "organization": "Digital River",
+	"phoneNumber": "01314532211",
+        "organization": "DR",
 	"address": {
-		"line1": "1-16-24 Minami-gyotoku",
-		"line2": "Ichikawa-shi",
-		"city": "Chiba",
-		"state": "Kyongsangnamdo",
-		"postalCode": "272-0138",
-		"country": "JP"
+	  "line1": "东城区景山前街4号",
+	  "city": "北京市",
+	  "country": "CN",
+	  "postalCode": "100009"
 	}
 }
 ```

@@ -6,6 +6,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2023/5/4
+
+We added support for the [Alipay+ (cross-border)](../../payments/supported-payment-methods/alipay+-cross-border.md) payment method. Shoppers can pay in CNY from the redirect page without encountering currency conversion.
+
 ## 2023/5/2
 
 The following features allow you to query the anonymous shopper's order, download the invoice for an order, and download a refund credit memo for an order.
@@ -15,7 +19,7 @@ The following features allow you to query the anonymous shopper's order, downloa
 
 ## 2023/4/24
 
-We now support [pretty pricing](../../shopper-apis/cart/pricing/landed-costs/pretty-pricing.md) with [landed costs](../../shopper-apis/cart/pricing/landed-costs/). Digital River only supports landed cost mixed cart and landed cost pretty pricing for the API solution. Contact your Customer Success Manager for assistance with enabling both landed cost and pretty pricing.
+We now support [pretty pricing](../../shopper-apis/cart/pricing/landed-costs/pretty-pricing.md) with [landed costs](../../shopper-apis/cart/pricing/landed-costs/). Digital River only supports landed cost mixed cart and landed cost pretty pricing for the API solution. Contact your Customer Success Manager for assistance enabling landed cost and pretty pricing.
 
 ## 2023/4/5
 

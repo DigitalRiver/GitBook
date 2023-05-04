@@ -43,7 +43,7 @@ The following Amazon Pay flow represents how your shoppers experience the paymen
 3. The shopper clicks the Amazon Pay button.
 4. The shopper is redirected to Amazon Pay to sign in and select the shipping address (if required), and the payment method.
 5. The shopper clicks the Submit button to place the order.&#x20;
-6. The shopper gets a second redirect to the Amazon Pay - Spinning page or Multi-factor Authentication (MFA) page. (Amazon Pay determines if the transaction requires MFA).
+6. The shopper gets a second redirect to Amazon Pay - Spinning page or Multi-factor Authentication (MFA) page. (Amazon Pay determines if the transaction requires MFA).
 
 ## Supported markets
 
