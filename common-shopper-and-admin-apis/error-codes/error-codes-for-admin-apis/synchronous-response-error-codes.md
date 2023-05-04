@@ -20,7 +20,7 @@ All product update requests must be completed before you can change the product 
 
 * `Unable to change the product state for product [12345600] of [12345700], because there are [5] unfinished requests for [UPDATE_PRODUCT, UPDATE_PRODUCT_LIVE_CHANGE, CREATE_VARIATION].`
 
-### Cannot retrieve order details because the order is still open or waiting for transfer. If queries continue to fail, the order may not exist.
+### `Cannot retrieve order details because the order is still open or waiting for transfer. If queries continue to fail, the order may not exist.`
 
 The system cannot retrieve the order details because the order is still open or waiting for transfer. If queries continue to fail, the order may not exist.
 
