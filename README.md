@@ -6,8 +6,8 @@ description: >-
 
 # VTEX
 
-VTEX provides an enterprise commerce platform for delivering the experience consumers want. Digital River’s back-end payments, tax, fraud, and compliance services eliminate the risk and complexity of reaching new markets—and with a local selling approach.
+VTEX provides an enterprise commerce platform for delivering the experience consumers want. Digital River's back-end payments, tax, fraud, and compliance services eliminate the risk and complexity of reaching new markets—with a local selling approach.
 
-Available versions:&#x20;
+Support only:&#x20;
 
-* [Pre-1.0.0](https://app.gitbook.com/o/-LqC\_Nsz4Z-JxICCsFw3/s/fLcgMkhRHgwFtUYcUChx/)
+* [Pre-1.0.0](http://localhost:5000/o/-LqC\_Nsz4Z-JxICCsFw3/s/fLcgMkhRHgwFtUYcUChx/)
