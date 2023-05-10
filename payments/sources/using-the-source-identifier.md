@@ -8,7 +8,7 @@ description: Learn how to manage sources.
 
 ### Standard payment flow
 
-Use the following flow for standard payments: Apple[ Pay](../supported-payment-methods/apple-pay.md), [credit cards](../supported-payment-methods/credit-cards.md), [Google Pay](../supported-payment-methods/google-pay.md), [PayCo](../supported-payment-methods/payco.md), and [SEPA Direct Debit](../supported-payment-methods/sepa-direct-debit.md).&#x20;
+Use the following flow for standard payments: [Apple Pay](../supported-payment-methods/apple-pay.md), [credit cards](../supported-payment-methods/credit-cards.md), [Google Pay](../supported-payment-methods/google-pay.md), [PayCo](../supported-payment-methods/payco.md), and [SEPA Direct Debit](../supported-payment-methods/sepa-direct-debit.md).&#x20;
 
 1. [Create the shopper token](../../shopper-apis/shopper-basics/common-use-cases/creating-a-customer.md).
 2. [Apply the shopper and their billing address to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post).&#x20;
