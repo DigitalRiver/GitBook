@@ -6,20 +6,9 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
-## 2023/5/4
+## 2023/5/10
 
-We added support for the [Alipay+ (cross-border)](../../payments/supported-payment-methods/alipay+-cross-border.md) payment method. Shoppers can pay in CNY from the redirect page without encountering currency conversion.
-
-## 2023/5/2
-
-The following features allow you to query the anonymous shopper's order, download the invoice for an order, and download a refund credit memo for an order.
-
-* [Order management](../../admin-apis/order-management/) explains how to [get the order's details](../../admin-apis/order-management/getting-the-orders-details.md) and [download an invoice](../../admin-apis/order-management/downloading-the-invoice.md) for the Admin API service. We also added [Guest checkout](../../shopper-apis/shopper-basics/common-use-cases/guest-checkout.md) to [Common use cases](../../shopper-apis/shopper-basics/common-use-cases/).
-* We added information on the [`order.credit_memo.created`](../../events/events/event-types/refund-credit-memo-event.md) event and the [`order.invoice.created`](../../events/events/event-types/invoice-created-event.md) event.
-
-## 2023/4/24
-
-We now support [pretty pricing](../../shopper-apis/cart/pricing/landed-costs/pretty-pricing.md) with [landed costs](../../shopper-apis/cart/pricing/landed-costs/). Digital River only supports landed cost mixed cart and landed cost pretty pricing for the API solution. Contact your Customer Success Manager for assistance enabling landed cost and pretty pricing.
+With our [mixed cart](../../shopper-apis/cart/pricing/landed-costs/mixed-cart-support.md) feature, a shopper can create a cart that includes physical and digital products. Our feature uses the landed cost solution to calculate the total cost of your purchase, which is only determined once all items in the cart are deemed eligible. If you need help enabling landed cost and pretty pricing, don't hesitate to contact your Customer Success Manager for assistance.
 
 ## 2023/4/5
 
@@ -63,7 +52,7 @@ We now support [pretty pricing](../../shopper-apis/cart/pricing/landed-costs/pre
     \
     To receive notifications from the webhook service, enable the webhook service on your site. Contact your Digital River representatives for assistance with the service enablement and configure all self-service webhooks through [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 * We replaced the Commerce API reference with a Commerce API suite that includes the following API references:&#x20;
-  * [Shopper APIs reference](https://www.digitalriver.com/docs/commerce-shopper-api/): This API reference provides the resources for an end-to-end ecommerce experience used when our Global Commerce platform is the system of record. The Shopper APIs allow clients to build a storefront, create shopper workflows, operate their store, and display products. For more information, see [Shopper APIs](broken-reference), [Shopper APIs reference](../shopper-apis-reference/), [Common Shopper and Admin APIs](broken-reference), and [Common Shopper and Admin APIs reference](../common-shoppers-and-admin-apis-reference/).&#x20;
+  * [Shopper APIs reference](https://www.digitalriver.com/docs/commerce-shopper-api/): This API reference provides the resources for an end-to-end e-commerce experience used when our Global Commerce platform is the system of record. The Shopper APIs allow clients to build a storefront, create shopper workflows, operate their store, and display products. For more information, see [Shopper APIs](broken-reference), [Shopper APIs reference](../shopper-apis-reference/), [Common Shopper and Admin APIs](broken-reference), and [Common Shopper and Admin APIs reference](../common-shoppers-and-admin-apis-reference/).&#x20;
   * [Admin APIs reference](https://www.digitalriver.com/docs/commerce-admin-api/): This API allows administrators to programmatically create, update, deploy, and retire products on your storefront, create and edit products in bulk, manage product data, and manage sites and subscriptions. Use the Admin APIs to host the Cart and Checkout pages and manage your products via API. For more information, see [Admin APIs](broken-reference), [Admin APIs reference](../admin-apis-reference/), [Common Shopper and Admin APIs](broken-reference), and [Common Shopper and Admin APIs reference](../common-shoppers-and-admin-apis-reference/).
 * We updated the following topics:&#x20;
   * [Getting started ](../../master/getting-started/)

@@ -90,6 +90,7 @@
       * [Overriding a promotional URL offer discount](shopper-apis/cart/managing-offers-in-a-cart/dynamic-offers-personalization/overriding-a-promotional-url-offer-discount.md)
   * [Pricing](shopper-apis/cart/pricing/README.md)
     * [Landed costs](shopper-apis/cart/pricing/landed-costs/README.md)
+      * [Mixed cart support](shopper-apis/cart/pricing/landed-costs/mixed-cart-support.md)
       * [Pretty pricing](shopper-apis/cart/pricing/landed-costs/pretty-pricing.md)
   * [Redirecting to a Digital River-hosted cart](shopper-apis/cart/redirecting-to-a-digital-river-hosted-cart.md)
   * [Configuring taxes](shopper-apis/cart/configuring-taxes/README.md)
