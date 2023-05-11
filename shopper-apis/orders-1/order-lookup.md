@@ -6,21 +6,21 @@ description: Learn how to lookup orders.
 
 The [Order Lookup](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Order-Lookup) resource lets you retrieve information about an order.
 
-## Get your current order
+## Retrieve the order by order ID and order password
 
-You can retrieve your current order. This method requires an authenticated customer token, username, and password.
-
-This call can retrieve information such as the customer's email address, the last 4 digits of their payment card, and their password.
+You can [retrieve your order](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Order-Lookup/paths/\~1v1\~1shoppers\~1order-lookup/post). This request requires the [anonymous shopper token](../oauth/tokens.md#creating-an-anonymous-shopper-session-guest-checkout), an order identifier (`orderId`), and an order password (`password`).
 
 {% tabs %}
 {% tab title="cURL" %}
-<pre class="language-http" data-overflow="wrap"><code class="lang-http"><strong>curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/order-lookup' \
+<pre class="language-http" data-overflow="wrap"><code class="lang-http"><strong>curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/order-lookup?expand=all' \
 </strong>--header 'authorization: Basic ***\
+--header 'Accept: application/json' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
 ...
---data-raw '{
-     orderId=your_order_ID&#x26;&#x26;username=userName&#x26;password=orderPassword
-<strong>}'     
-</strong></code></pre>
+--data-urlencode 'orderId=order_id' \
+--data-urlencode 'password=order_password'
+
+</code></pre>
 {% endtab %}
 
 {% tab title="200 OK response" %}
@@ -90,20 +90,21 @@ This call can retrieve information such as the customer's email address, the las
 
 See the [Order lookup query parameters](../../general-resources/shopper-apis-reference/orders.md#order-lookup-query-parameters) for more information.
 
-## Retrieve the current order by email address and the last 4 digits of their payment card
+## Retrieve the order by email address and the last four digits of their payment card
 
-Use the [`POST /shoppers/order-lookup`](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Order-Lookup/paths/\~1v1\~1shoppers\~1order-lookup/post) to retrieve a customer's current order. An authenticated customer token, email address, and last 4 digits of their payment card are required.
+You can [retrieve a customer's current order](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Order-Lookup/paths/\~1v1\~1shoppers\~1order-lookup/post). This request requires the customer's [authenticated shopper token](../oauth/tokens.md#initiating-an-authenticated-session-returning-shopper-or-login-shopper), email address, and the last four digits of their payment card.
 
 {% tabs %}
 {% tab title="cURL" %}
 {% code overflow="wrap" %}
 ```http
-curl --location --request POST 'https://{host}/v1/shoppers/order-lookup?expand=all' \
+curl --location --request POST 'https://api.digitalriver.com/v1/shoppers/order-lookup?expand=all' \
 --header 'authorization: Basic ***\
+--header 'Accept: application/json' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
 ...
---data-raw '{
-creditCardLastDigits=last_4_digits_of_their_payment_card&emailAddress=shopper's_email_address
-}' 
+--data-urlencode 'creditCardLastDigits=last_4_digits_of_their_payment_card' \
+--data-urlencode 'emailAddress=shopper's_email_address'
 ```
 {% endcode %}
 {% endtab %}
