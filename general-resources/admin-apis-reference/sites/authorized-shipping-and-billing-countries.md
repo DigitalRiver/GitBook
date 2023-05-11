@@ -33,7 +33,11 @@ You can use the **Allow Billing From** attribute to choose the option you want t
 
 You can use the [`GET /v1/sites/{siteId}/authorized-billing-countries`](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Authorized-Countries/paths/\~1v1\~1sites\~1%7BsiteId%7D\~1authorized-billing-countries/get) resource to get the list of allowed billing countries and use that information to display allowed billing countries in the Country dropdown list when a shopper provides their billing details.
 
-![](../../../.gitbook/assets/Authorized-Countries-Dropdown.png)
+<div align="left">
+
+<img src="../../../.gitbook/assets/Authorized-Countries-Dropdown.png" alt="">
+
+</div>
 
 ### Shipping countries
 

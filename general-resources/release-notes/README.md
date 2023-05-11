@@ -16,29 +16,53 @@ With our [mixed cart](../../shopper-apis/cart/pricing/landed-costs/mixed-cart-su
 
     To find Lens, click the **Search** bar in the upper right corner.&#x20;
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/search-bar.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 
     Type your question in the **Search content** field and click **Lens**. You can ask Lens anything regarding Digital River features. It will give you plain English answers in seconds. For example, you can ask for an overview of a feature, and Lens will return a quick and concise answer.\
     \
     **Note**: You may need to refresh the page in your browser to see the Lens button. If that fails, clear your browser cache, then close and reopen your browser.
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/Search content Commerce API.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 
     Additionally, Lens will provide follow-up questions that you might be interested in.&#x20;
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/Follow up questions Commerce API.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 
     You can also see where Lens found the information and click to read more.
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/Information locations Commerce API.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 
     You can ask for a code snippet for an API.
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/Code example Commerce API.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 
     You can ask for the steps to perform a specific task.
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/Steps for performing a test request Commerce API.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 * We added Box Shadow as an [available custom style](../reference/elements/#available-custom-styles) when configuring [custom styles](../reference/elements/#custom-styles) for [DigitalRiver.js with Elements](../../payments/payments-solutions/digitalriver.js/).
 
 ## 2023/3/29

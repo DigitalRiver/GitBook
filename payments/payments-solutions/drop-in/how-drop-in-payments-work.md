@@ -12,7 +12,11 @@ To better understand how the process works, check out the [interactive Drop-in b
 
 {% embed url="https://player.vimeo.com/video/683888702?h=2b803b92e0" %}
 
-![](<../../../.gitbook/assets/how-drop-in-works-commerce-api (2).png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/how-drop-in-works-commerce-api (2).png" alt="">
+
+</div>
 
 ## Drop-in Payments flows
 

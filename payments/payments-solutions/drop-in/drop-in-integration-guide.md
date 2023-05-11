@@ -237,7 +237,11 @@ let configuration = {
 
 When you enable this feature, each displayed [reusable payment method](../../supported-payment-methods/) is accompanied by a box that customers must check if they want that payment information saved to their account.&#x20;
 
-![](<../../../.gitbook/assets/drop-in-save-payment (1) (1).png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/drop-in-save-payment (1) (1).png" alt="">
+
+</div>
 
 If the customers select the check box and click the [configurable button](drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button), Drop-in Payments performs the required authentication and, assuming that process is successful, the `data` object of [onSuccess ](drop-in-integration-guide.md#onsuccess)contains a source that is `readyForStorage`.
 
@@ -450,11 +454,19 @@ The actual terms depend on whether customers are making a one-time purchase or [
 
 {% tabs %}
 {% tab title="One-time purchase" %}
-![](<../../../.gitbook/assets/one time purchase terms of sale.png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/one time purchase terms of sale.png" alt="">
+
+</div>
 {% endtab %}
 
 {% tab title="Subscription acqusition" %}
-![](<../../../.gitbook/assets/sub terms of sale.png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/sub terms of sale.png" alt="">
+
+</div>
 {% endtab %}
 {% endtabs %}
 
@@ -491,7 +503,11 @@ let configuration = {
 
 Once you [create](drop-in-integration-guide.md#step-6-allow-the-shopper-to-interact-with-hydrate) and [mount](drop-in-integration-guide.md#step-7-mount-drop-in-payments-on-a-checkout-or-account-management-page) Drop-in payments, your `consents` are appended to Digital River's disclosures.
 
-![](../../../.gitbook/assets/consents.png)
+<div align="left">
+
+<img src="../../../.gitbook/assets/consents.png" alt="">
+
+</div>
 
 #### Disabling redirects <a href="#dropinviadigitalriver.js-disablingredirectswithindropin" id="dropinviadigitalriver.js-disablingredirectswithindropin"></a>
 
@@ -523,7 +539,11 @@ When Drop-in payments loads `options.expandFirstPaymentMethod` determines whethe
 {% tab title="Expanded" %}
 If `expandFirstPaymentMethod` is `true`(_default_) then the first displayed payment method is expanded.
 
-![](<../../../.gitbook/assets/expanded (1).png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/expanded (1).png" alt="">
+
+</div>
 {% endtab %}
 
 {% tab title="Collapsed" %}

@@ -1,15 +1,15 @@
 ---
-description: Learn about the file download integration processes.
+description: Understand how to use BPE.
 ---
 
-# File downloads
+# Bulk Product Export (BPE)
 
 ## Bulk Product Export (BPE)
 
 Use the Bulk Product Export (BPE) process to export a catalog for a specific site or company to a file in an XML format. The file is compatible with the BPU process.
 
 {% hint style="info" %}
-Note: BPE is non-interactive. When the BPE process finishes, there is no required notification response. When the BPE process finishes, the presence of an export file indicates the bulk file upload has finished.
+Note: BPE is non-interactive. When the BPE process finishes, there is no required notification response. When the BPE process ends, an export file indicates the bulk file upload has completed.
 {% endhint %}
 
 The BPE process is an inbound event.
@@ -30,7 +30,7 @@ The Catalog Feed API provides a complete record of the products available to a r
 
 The following steps outline how to implement the business process for the product catalog:
 
-1. The client completes the product profile form (which is included in the Business Users Guide).
+1. The client completes the product profile form (whih is included in the Business Users Guide).
 2. Digital River sets up the business process according to this form.
 3. The client implements and tests the business process on their side to ensure the business process works.
 
@@ -48,7 +48,7 @@ The business process architecture diagram for the product catalog business proce
 
 ![ICCP System Architecture](https://files.readme.io/730c6ac-Catalog\_feed.png)
 
-The client creates one file each time they run the product catalog extract. Files are located in the client’s home directory under the /PRODUCTCATALOG directory on the Digital River FTP server or the client’s FTP servers. Digital River archives files for 30 days.
+The client creates one file each time they run the product catalog extract. Files are in the client’s home directory under the /PRODUCTCATALOG directory on the Digital River FTP server or the client’s FTP servers. Digital River archives files for 30 days.
 
 {% hint style="success" %}
 **Best Practices**: Clients should also maintain an archive.
@@ -118,7 +118,7 @@ The following image shows an example of a monthly billing statement.
 
 ## Sales reporting
 
-The Sales Reporting runs once a day and always on a 2-3-day lag. It includes all the sales data for a specific site or company over a specific period. When a sale occurs, the system generates a Sales Order Activity and sends it to your endpoint. The Sales Order Activity Info contains the shipping information or returns information for all line items in a single order. &#x20;
+The Sales Reporting runs once a day and always on a 2-3-day lag. It includes all the sales data for a specific site or company over a particular period. When a sale occurs, the system generates a Sales Order Activity and sends it to your endpoint. The Sales Order Activity Info contains the shipping information or returns information for all line items in a single order. &#x20;
 
 
 
@@ -175,7 +175,7 @@ You can use Reporting to see if a report is available for downloading and downlo
 
 ### Checking the availability of a report
 
-The following example shows the Reporting call you need to send to get a list of all available reports. The response contains the list of available reports.
+The following example shows the Reporting call you must send to get a list of all available reports. The response contains the list of available reports.
 
 {% tabs %}
 {% tab title="URI" %}
@@ -200,7 +200,7 @@ GET https://api.digitalriver.com/reporting/files/all
 
 ### Downloading the report
 
-The following example shows the Reporting call that you need to send to download a specific report, where \<File Name> is the name of the zip file that contains the report.
+The following example shows the Reporting call you need to send to download a specific report, where \<File Name> is the name of the zip file containing the report.
 
 {% tabs %}
 {% tab title="URI" %}

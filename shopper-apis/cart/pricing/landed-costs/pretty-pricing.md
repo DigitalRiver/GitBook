@@ -35,11 +35,19 @@ Price lists allow you to define how to convert product prices from the default c
 
     The Create Price List page appears.&#x20;
 
+    <div align="left">
+
     <figure><img src="../../../../.gitbook/assets/Create Price List.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 4. Complete the fields, and select the **Prices Include Value Added Tax (VAT)** checkbox to enable tax-inclusive pricing. See [Create Price List](https://help.digitalriver.com/help/gc/Products/Price-Lists/Creating-a-price-list.htm?Highlight=Price%20List#CreatePriceListAttributes) attributes for more information.
 5.  Click **Save**. The Price List Details page appears.
 
+    <div align="left">
+
     <figure><img src="../../../../.gitbook/assets/Price List Details.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 6. Complete the fields on the Price List Details page. See the [Price List Details attributes](https://help.digitalriver.com/help/gc/Catalog/Pricing-and-Plans/Managing-price-list-details.htm#PriceListDetailsAttributes) for more information.
 7. Scroll down and click **Done**.
 
@@ -54,7 +62,11 @@ The Features tab on the Configure Site Settings page allows you to enable or dis
     \
     **Note**: If you need to support shipping a product to another locale within a country (non-cross border), and the locale supports the landed cost solution, contact your Customer Success Manager.
 
+    <div align="left">
+
     <figure><img src="../../../../.gitbook/assets/Input Tax-Inclusive Shipping Cost disabled.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 3. Click **Apply**.
 
 ## Landed cost without pretty pricing
@@ -99,7 +111,11 @@ See [Pricing fields](../../../../general-resources/shopper-apis-reference/carts/
 
 The callouts in the following list show the API response payloads that correspond with the pretty pricing values that appear on the Cart page.
 
+<div align="left">
+
 <figure><img src="../../../../.gitbook/assets/Cart with pretty pricing.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 1. The total calculated price for the line item with quantity ([`listPriceWithQuantity`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#list-price-with-quantity)). You can find it here in the response:\
    \
@@ -164,7 +180,11 @@ See [Pricing fields](../../../../general-resources/shopper-apis-reference/carts/
 
 The callouts in the following list show the API response payloads that correspond with the pretty pricing values that appear on the Order Review page.
 
+<div align="left">
+
 <figure><img src="../../../../.gitbook/assets/Order review pretty pricing.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 1. The final price of the order ([`orderTotal`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#order-total)). You can find it here in the response:\
    \
@@ -195,7 +215,11 @@ See [Pricing fields](../../../../general-resources/shopper-apis-reference/carts/
 
 The callouts in the following list show the API response payloads that correspond with the pretty pricing values that appear on the Thank You page.
 
+<div align="left">
+
 <figure><img src="../../../../.gitbook/assets/Thank you pretty pricing (1).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 1. The final price of the order ([`orderTotal`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#order-total)). You can find it here in the response:\
    \
@@ -214,7 +238,11 @@ See [Pricing fields](../../../../general-resources/shopper-apis-reference/carts/
 
 The callouts in the following list show the API response payloads that correspond with the pretty pricing values that appear on the Invoice.
 
+<div align="left">
+
 <figure><img src="../../../../.gitbook/assets/Invoice pretty pricing (1).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 1. The  total calculated price for the line item with quantity ([`salePriceWithQuantity`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#sale-price-with-quantity)). You can find it here in the response:\
    \

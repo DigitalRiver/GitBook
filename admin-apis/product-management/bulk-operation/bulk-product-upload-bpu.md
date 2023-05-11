@@ -1,8 +1,8 @@
 ---
-description: Learn about the file upload integration processes.
+description: Understand how to use BPU.
 ---
 
-# File uploads
+# Bulk product upload (BPU)
 
 ## Bulk Product Upload (BPU)
 
@@ -943,7 +943,7 @@ The following diagram shows an overview of the Order Create business process.
 
 Multiple orders per request are not supported at this time.
 
-If the Client inadvertently submits the same order twice (that is, the same external order ID and line items), Digital River will accept the request and return the same information via the Order Create Response that it did in the previous order submissions. If one or more of the line items has pending digital rights, Digital River will try to obtain the digital rights before sending the response.
+Suppose the Client inadvertently submits the same order twice (the same external order ID and line items). In that case, Digital River will accept the request and return the same information via the Order Create Response that it did in the previous order submissions. If one or more of the line items has pending digital rights, Digital River will try to obtain the digital rights before sending the response.
 
 Occasionally Digital River deactivates products as part of product catalog maintenance. If Digital River deactivates a product that appears in a Client's catalog, the return response contains an error code.
 
@@ -1039,10 +1039,10 @@ Use the Order Return API when a client needs to reverse the order for a customer
 
 ### Details
 
-You can use the Order Return API to reverse the transaction on the Digital River-side. The Order Return API notifies Digital River to disable the customer’s download URL.
+You can use the Order Return API to reverse the transaction on the Digital River side. The Order Return API notifies Digital River to disable the customer's download URL.
 
 {% hint style="info" %}
-**Note**: If you send an `OrderReturn` for an order that previously resulted in a 202/503 error, Digital River will submit an order cancellation.
+**Note**: If you send an order that previously resulted in a 202/503 error, Digital River will submit an order cancellation.
 {% endhint %}
 
 The Order Return business process works similarly to the Order Create business process in that it leverages XML and HTTPS and has a request and response message-passing sequence.

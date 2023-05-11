@@ -117,13 +117,6 @@
     * [Initiate an authenticated session](shopper-apis/orders-1/returns/initiate-an-authenticated-session.md)
     * [Setting up returns in Global Commerce](shopper-apis/orders-1/returns/setting-up-returns-in-global-commerce.md)
     * [Retrieving returns for a specified order](shopper-apis/orders-1/returns/retrieving-returns-for-a-specified-order.md)
-  * [File management](shopper-apis/orders-1/file-management-1/README.md)
-    * [File uploads](shopper-apis/orders-1/file-management-1/file-uploads.md)
-    * [File downloads](shopper-apis/orders-1/file-management-1/file-downloads/README.md)
-      * [Line-item level satisfaction refund](shopper-apis/orders-1/file-management-1/file-downloads/line-item-level-satisfaction-refund.md)
-      * [Order-level satisfaction refund](shopper-apis/orders-1/file-management-1/file-downloads/order-level-satisfaction-refund.md)
-      * [Auto-created line-item level return product](shopper-apis/orders-1/file-management-1/file-downloads/auto-created-line-item-level-return-product.md)
-      * [Line-item level return product](shopper-apis/orders-1/file-management-1/file-downloads/line-item-level-return-product.md)
 
 ## Admin APIs
 
@@ -185,6 +178,13 @@
     * [Getting the latest information on a product task](admin-apis/product-management/get-the-task-status-for-a-product-synchronous-api/getting-the-latest-information-on-a-product-task.md)
     * [Retrieving the tasks for a specific product](admin-apis/product-management/get-the-task-status-for-a-product-synchronous-api/retrieving-the-tasks-for-a-specific-product.md)
     * [Retrieving the tasks for products](admin-apis/product-management/get-the-task-status-for-a-product-synchronous-api/retrieving-the-tasks-for-products.md)
+  * [Bulk operation](admin-apis/product-management/bulk-operation/README.md)
+    * [Bulk product upload (BPU)](admin-apis/product-management/bulk-operation/bulk-product-upload-bpu.md)
+    * [Bulk Product Export (BPE)](admin-apis/product-management/bulk-operation/file-downloads/README.md)
+      * [Line-item level satisfaction refund](admin-apis/product-management/bulk-operation/file-downloads/line-item-level-satisfaction-refund.md)
+      * [Order-level satisfaction refund](admin-apis/product-management/bulk-operation/file-downloads/order-level-satisfaction-refund.md)
+      * [Auto-created line-item level return product](admin-apis/product-management/bulk-operation/file-downloads/auto-created-line-item-level-return-product.md)
+      * [Line-item level return product](admin-apis/product-management/bulk-operation/file-downloads/line-item-level-return-product.md)
 * [File management](admin-apis/file-management/README.md)
   * [Downloading a file](admin-apis/file-management/downloading-a-file.md)
 

@@ -10,7 +10,11 @@ The [Carts ](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Carts)r
 **Important**: All methods in this API require an anonymous (limited access) or authenticated (full access) token.
 {% endhint %}
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/2a56cbc-Digital_River_Demo_Online_Store_Checkout_cart.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ## Cart resource
 

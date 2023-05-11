@@ -70,7 +70,11 @@ curl --location --request GET 'https://api.digitalriver.com/v1/orders/{orderId}/
 {% tab title="200 OK response" %}
 You will get a `200 OK` response with the PDF file.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/Order invoice.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 {% endtab %}
 {% endtabs %}
 

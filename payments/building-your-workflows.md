@@ -342,7 +342,11 @@ let dropin = digitalriver.createDropIn(configuration);
 
 Drop-in renders in the specified container.
 
+<div align="left">
+
 <figure><img src="../.gitbook/assets/sub terms.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 Shoppers must enter their credit card information and click the [configurable](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-drop-in-button-text) Pay Now button**.**
 
@@ -493,7 +497,11 @@ let dropin = digitalriver.createDropin(configuration);
 
 The modal window renders in the specified container.
 
-![](../.gitbook/assets/MOTO.png)
+<div align="left">
+
+<img src="../.gitbook/assets/MOTO.png" alt="">
+
+</div>
 
 The merchant's representative enters the customer's credit card information and clicks the [configurable ](payments-solutions/drop-in/drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button)Pay Now button. If the payment is authorized, then the [`onSuccess` method](payments-solutions/drop-in/drop-in-integration-guide.md#onsuccess) is called, and Digital River returns a unique source in a [`chargeable` state](sources/#source-state).
 

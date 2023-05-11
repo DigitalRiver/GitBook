@@ -11,7 +11,11 @@ Offers use a POP to display the offer. A POP determines where an offer appears i
 * Bundles.
 * Buy M, Get N
 
-![](../../../../.gitbook/assets/Digital\_River\_Demo\_Online\_Store\_Checkout.png)
+<div align="left">
+
+<img src="../../../../.gitbook/assets/Digital_River_Demo_Online_Store_Checkout.png" alt="">
+
+</div>
 
 {% tabs %}
 {% tab title="cURL" %}

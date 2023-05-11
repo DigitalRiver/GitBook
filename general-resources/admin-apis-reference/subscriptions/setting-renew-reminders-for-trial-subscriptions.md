@@ -64,4 +64,8 @@ You can find and use the new schedule information by using `v1/shopper/me/subscr
 
 This new reminder schedule information is under the `customAttribute` through `GET /product`: (`timeIntervalForTrialReminderNotifications`, `timeIntervalForTrialManualReminderNotifications`).
 
-![](../../../.gitbook/assets/apiexposure.png)
+<div align="left">
+
+<img src="../../../.gitbook/assets/apiexposure.png" alt="">
+
+</div>

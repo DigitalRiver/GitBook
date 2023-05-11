@@ -344,7 +344,11 @@ The length of the ERID value in the payload exceeds the maximum number of charac
 
 The external reference identifier (number) must be unique to your company when you [enable the Product External Reference Number](https://help.digitalriver.com/help/gc/Administration/Company/Configuring-company-settings.htm) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 
-![](../../../.gitbook/assets/Product-External-Reference-Number.png)
+<div align="left">
+
+<img src="../../../.gitbook/assets/Product-External-Reference-Number.png" alt="">
+
+</div>
 
 The Commerce API can process multiple requests at the same time. This error occurs when you send multiple requests **at almost the same time** that apply the same value for the external reference number to different products. Digital River allows only one successful request (the first one) to solve this race condition issue. The remaining requests will get this error.
 

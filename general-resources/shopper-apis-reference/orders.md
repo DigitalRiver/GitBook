@@ -12,7 +12,11 @@ The [Orders ](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Orders
 **Important**: All methods in this API require an authenticated (full access) token.
 {% endhint %}
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/Digital_River_Demo_Online_Store_Order_Details (1).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ## Orders query parameters
 

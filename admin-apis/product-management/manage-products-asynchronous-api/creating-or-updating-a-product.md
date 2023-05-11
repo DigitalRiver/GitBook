@@ -683,7 +683,11 @@ Use the `taskId` in the response to verify the successful completion of the requ
 4. Click the link for the product under the **Internal Product Name** column. The Edit Product page appears.&#x20;
 5. Click **View History**. The Product History window shows the product's history.
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/Product History.jpg" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ## Reverting changes to products
 

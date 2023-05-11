@@ -32,4 +32,8 @@ description: >-
       <img src="../../.gitbook/assets/Shipping-Countries-locales.png" alt="" data-size="original">&#x20;
 8. Explain why you defined the restrictions in the [**Comments** ](../../general-resources/admin-apis-reference/sites/authorized-shipping-and-billing-countries.md#comments)field. Provide enough detail to ensure someone else can determine why you denied or allowed billing or shipping to a specific country for a specific locale.
 
-![](../../.gitbook/assets/Comments.png)
+<div align="left">
+
+<img src="../../.gitbook/assets/Comments.png" alt="">
+
+</div>

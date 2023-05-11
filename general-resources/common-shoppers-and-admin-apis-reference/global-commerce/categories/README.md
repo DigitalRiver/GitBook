@@ -12,4 +12,8 @@ You can retrieve your catalog category information by leveraging the available c
 
 The following image shows an example of a category page:
 
-![](../../../../.gitbook/assets/category-example.png)
+<div align="left">
+
+<img src="../../../../.gitbook/assets/category-example.png" alt="">
+
+</div>
