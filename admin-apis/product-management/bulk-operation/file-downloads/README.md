@@ -153,13 +153,13 @@ The following table describes the contents of a sales notification.
 
 The Sales Notification Feed contains many `amount` elements.
 
-A Line Item Satisfaction Refund allows you to refund money to the shopper because the shopper is upset or experienced undue hardship to get the product. The shopper is not required to return any product. See [Line-item level satisfaction refund](line-item-level-satisfaction-refund.md) for an example.
+A Line Item Satisfaction Refund allows you to refund money to the shopper because the shopper is upset or experienced undue hardship to get the product. The shopper is not required to return any product. See [Line-item level satisfaction refund](../../../../shopper-apis/orders-1/file-management-1/file-downloads/line-item-level-satisfaction-refund.md) for an example.
 
-An Order Level Satisfaction Refund allows you to return money to the shopper when a shopper is upset or goes through undue hardship to get the product. The shopper is not required to return any product. See [Order-level satisfaction refund](order-level-satisfaction-refund.md) for an example.
+An Order Level Satisfaction Refund allows you to return money to the shopper when a shopper is upset or goes through undue hardship to get the product. The shopper is not required to return any product. See [Order-level satisfaction refund](../../../../shopper-apis/orders-1/file-management-1/file-downloads/order-level-satisfaction-refund.md) for an example.
 
-Return receipt arrived with no prior return established. See [Auto-created line-item level return product](auto-created-line-item-level-return-product.md) for an example.
+Return receipt arrived with no prior return established. See [Auto-created line-item level return product](../../../../shopper-apis/orders-1/file-management-1/file-downloads/auto-created-line-item-level-return-product.md) for an example.
 
-Returned a quantity on a line item, or the entire quantity on the order. See [Line-item level return product](line-item-level-return-product.md) for an example.
+Returned a quantity on a line item, or the entire quantity on the order. See [Line-item level return product](../../../../shopper-apis/orders-1/file-management-1/file-downloads/line-item-level-return-product.md) for an example.
 
 ### Schemas
 

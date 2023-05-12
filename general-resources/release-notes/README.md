@@ -6,6 +6,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2023/5/12
+
+We are excited to announce our new feature, Product Combination Supporting Subscriptions for [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). This feature allows you to include subscription products in a product combination and adjust the price to match your pricing or product combination strategies. [Combining multiple SKUs from different product lines into a single product combination](https://help.digitalriver.com/help/gc/Products/Products/Creating-product-combinations-with-components.htm#top) allows you to recognize revenue for each product line based on the component price. This feature also helps you address compliance concerns and minimize revenue loss from customers trying to break bundle offers and purchase products at a reduced price.
+
 ## 2023/5/10
 
 With our [mixed cart](../../shopper-apis/cart/pricing/landed-costs/mixed-cart-support.md) feature, a shopper can create a cart that includes physical and digital products. Our feature uses the landed cost solution to calculate the total cost of your purchase, which is only determined once all items in the cart are deemed eligible. If you need help enabling landed cost and pretty pricing, don't hesitate to contact your Customer Success Manager for assistance.
