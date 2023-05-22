@@ -89,7 +89,7 @@ The request returns a task identifier (`taskId`) in the [asynchronous ](../getti
 ```
 {% endcode %}
 
-Use the `taskId` in the response to [verify the successful completion of the request](../get-the-task-status-for-a-product-synchronous-api/#verifying-the-successful-completion-of-multiple-products).&#x20;
+Use the `taskId` in the response to [verify the successful completion of the request](../get-the-task-status-for-a-product-synchronous-api/getting-the-latest-information-on-a-product-task.md). You can also verify the successful completion of the task by [checking the product history](adding-or-updating-a-product-variation.md#product-history-attributes) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). Note that there may be a delay before these changes appear in Global Commerce.&#x20;
 {% endtab %}
 {% endtabs %}
 
@@ -229,7 +229,7 @@ The request returns a task identifier (`taskId`) in the [asynchronous ](../getti
 ```
 {% endcode %}
 
-Use the `taskId` in the response to [verify the successful completion of the request](../get-the-task-status-for-a-product-synchronous-api/#verifying-the-successful-completion-of-multiple-products).&#x20;
+Use the `taskId` in the response to [verify the successful completion of the request](../get-the-task-status-for-a-product-synchronous-api/getting-the-latest-information-on-a-product-task.md). You can also verify the successful completion of the task by [checking the product history](adding-or-updating-a-product-variation.md#product-history-attributes) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). Note that there may be a delay before these changes appear in Global Commerce.&#x20;
 {% endtab %}
 {% endtabs %}
 
@@ -373,7 +373,7 @@ The request returns a task identifier (`taskId`) in the [asynchronous ](../getti
 }
 ```
 
-Use the `taskId` in the response to [verify the successful completion of the request](../get-the-task-status-for-a-product-synchronous-api/#verifying-the-successful-completion-of-multiple-products).&#x20;
+Use the `taskId` in the response to [verify the successful completion of the request](../get-the-task-status-for-a-product-synchronous-api/getting-the-latest-information-on-a-product-task.md). You can also verify the successful completion of the task by [checking the product history](adding-or-updating-a-product-variation.md#product-history-attributes) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). Note that there may be a delay before these changes appear in Global Commerce.&#x20;
 {% endtab %}
 {% endtabs %}
 

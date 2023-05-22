@@ -284,7 +284,7 @@ The request returns a task identifier (`taskId`) in the [asynchronous ](../getti
 ```
 {% endcode %}
 
-Use the `taskId` in the response to [verify the successful completion of the request](../get-the-task-status-for-a-product-synchronous-api/getting-the-latest-information-on-a-product-task.md).  You can also verify the successful completion of the task by [checking the product history](creating-or-updating-a-product.md#product-history-attributes) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). Note that there may be a delay before these changes appear in Global Commerce.&#x20;
+Use the `taskId` in the response to [verify the successful completion of the request](../get-the-task-status-for-a-product-synchronous-api/getting-the-latest-information-on-a-product-task.md). You can also verify the successful completion of the task by [checking the product history](creating-or-updating-a-product.md#product-history-attributes) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). Note that there may be a delay before these changes appear in Global Commerce.&#x20;
 {% endtab %}
 {% endtabs %}
 
@@ -413,7 +413,7 @@ The request returns a task identifier (`taskId`) in the [asynchronous ](../getti
 ```
 {% endcode %}
 
-Use the `taskId` in the response to [verify the successful completion of the request](../get-the-task-status-for-a-product-synchronous-api/getting-the-latest-information-on-a-product-task.md).  You can also verify the successful completion of the task by [checking the product history](creating-or-updating-a-product.md#product-history-attributes) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). Note that there may be a delay before these chances appear in Global Commerce.&#x20;
+Use the `taskId` in the response to [verify the successful completion of the request](../get-the-task-status-for-a-product-synchronous-api/getting-the-latest-information-on-a-product-task.md). You can also verify the successful completion of the task by [checking the product history](creating-or-updating-a-product.md#product-history-attributes) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). Note that there may be a delay before these chances appear in Global Commerce.&#x20;
 {% endtab %}
 {% endtabs %}
 
@@ -440,8 +440,8 @@ Use the `taskId` in the response to [verify the successful completion of the req
       **Note**: Save does not always mean the item changed. If you view the item and click the **Save** button without applying any changes, the system logs that change.&#x20;
   * **Status Changed to Deployed**: Indicates the state of the product changed to the Live state. The changes now appear in your store.&#x20;
   * **Status Changed to Design**: The product status changed to the Design state.
-  * **Status Changed to New**: The product status changed to the New state when you create a product.&#x20;
-  * **Took Ownership**: Indicates new user owns the right to edit a product. The name of the new user appears in the Modified By column. Ownership indicates the last person to edit the product. Another user cannot edit the product until they take ownership of the product. Ownership prevents two users from editing the product at the same time.&#x20;
+  * **Status Changed to New**: When you create a product, the product status changed to the New state.&#x20;
+  * **Took Ownership**: Indicates new user owns the right to edit a product. The name of the new user appears in the Modified By column. Ownership indicates the last person to edit the product. Another user cannot edit the product until they own it. Ownership prevents two users from editing the product at the same time.&#x20;
   * **Variation Added**: A user added a variation to the product. The variation ID, as well as the varying attributes, also appear in the Change Type column.&#x20;
   * **Variation Deleted**: A user deleted product variation. The variation ID, as well as the varying attributes, also appear in the Change Type column.
 * **Product/Variation ID**: Displays the product identifier or variation for the product.&#x20;
@@ -458,7 +458,7 @@ A locale is a designator that combines the two-letter [ISO 639-1](https://en.wik
 
 When you create or update a product, you can configure the product to use those locales and enter localized content for that product. When choosing locales, note the following:&#x20;
 
-* When you enter text for the product in the default locale, the same text appears for all supported locales until you either "override" or "specify" the default in a specific locale folder. You can override the default locales by adding a product variation after creating a base product. Or you can specify the default locales when you create a base product and its product variations simultaneously. Changing the product's default locale does not affect your store's global default locale settings.&#x20;
+* When you enter text for the product in the default locale, the same text appears for all supported locales until you either "override" or "specify" the default in a specific locale folder. You can override the default locales by adding a product variation after creating a base product. Or you can specify the default locales when creating a base product and its variations simultaneously. Changing the product's default locale does not affect your store's global default locale settings.&#x20;
 * You can provide localized content for a product. A `localizations` object appears for each supported locale where you can enter the localized information. You do not have to enter localized content for all supported locales.&#x20;
 
 {% tabs %}
@@ -583,7 +583,7 @@ The request returns a task identifier (`taskId`) in the [asynchronous ](../getti
 ```
 {% endcode %}
 
-Use the `taskId` in the response to verify the successful completion of the request.  You can also verify the successful completion of the task by [checking the product history](creating-or-updating-a-product.md#product-history-attributes) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). Note that there may be a delay before these chances appear in Global Commerce.&#x20;
+Use the `taskId` in the response to verify the successful completion of the request. You can also verify the successful completion of the task by [checking the product history](creating-or-updating-a-product.md#product-history-attributes) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). Note that there may be a delay before these chances appear in Global Commerce.&#x20;
 {% endtab %}
 {% endtabs %}
 
@@ -669,7 +669,7 @@ The request returns a task identifier (`taskId`) in the [asynchronous ](../getti
 ```
 {% endcode %}
 
-Use the `taskId` in the response to verify the successful completion of the request.  You can also verify the succchoose completion of the task by [checking the product history](creating-or-updating-a-product.md#product-history-attributes) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). Note that there may be aay before these chances appear in Global Commerce.&#x20;
+Use the `taskId` in the response to verify the successful completion of the request. You can also verify the successful completion of the task by [checking the product history](creating-or-updating-a-product.md#product-history-attributes) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do). Note that there may be a delay before these chances appear in Global Commerce.&#x20;
 {% endtab %}
 {% endtabs %}
 
