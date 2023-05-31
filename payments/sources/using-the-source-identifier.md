@@ -176,14 +176,14 @@ Alternatively, you can simply [attach a primary source to a cart](./#attaching-a
 Secondary payment [sources ](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Source)are typically used to supplement a [primary source](using-the-source-identifier.md#primary-payment-sources).
 
 {% hint style="info" %}
-Commerce AP currently only supports the[`customerCredit`](../../shopper-apis/shopper-basics/common-use-cases/applying-store-credit.md) type of supported secondary source.     &#x20;
+Commerce API currently only supports the[`customerCredit`](../../shopper-apis/shopper-basics/common-use-cases/applying-store-credit.md) type of supported secondary source.     &#x20;
 {% endhint %}
 
 You can successfully submit an order entirely with secondary sources, but you must ensure the [payment session state](../../shopper-apis/cart/payment-sessions.md#session-state) is valid and the [amount contributed is sufficient](../../shopper-apis/cart/payment-sessions.md#session-state).
 
 You cannot edit the `amount` value for a secondary source. To change the `amount` value for the secondary source:
 
-1. [Detach the primary source](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/delete) (or simply [detach all sources from the cart](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1payment/delete)).
+1. [Detach the primary source](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/delete) (or [detach all sources from the cart](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1payment/delete)).
 2. [Create a new secondary source](using-the-source-identifier.md#creating-secondary-sources) with the correct amount.
 3. [Attach the new secondary source to the cart](using-the-source-identifier.md#attaching-multiple-payment-sources-to-the-cart).
 4. If needed, [attach the primary source to the cart](using-the-source-identifier.md#attaching-multiple-payment-sources-to-the-cart).
