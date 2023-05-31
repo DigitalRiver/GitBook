@@ -16,9 +16,7 @@ Alipay (domestic) does not support recurring payments.
 
 How you configure Alipay (domestic) depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).
 
-| DigitalRiver.js with Elements                                                                                                                                       | Drop-in payments                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| [Configuring Alipay](../payments-solutions/digitalriver.js/payment-methods/alipay.md)[ (domestic)](../payments-solutions/digitalriver.js/payment-methods/alipay.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
+<table><thead><tr><th width="413">DigitalRiver.js with Elements</th><th>Drop-in payments</th></tr></thead><tbody><tr><td><a href="../payments-solutions/digitalriver.js/payment-methods/alipay.md">Configuring Alipay</a><a href="../payments-solutions/digitalriver.js/payment-methods/alipay.md"> (domestic)</a></td><td><a href="../payments-solutions/drop-in/drop-in-integration-guide.md">Drop-in Payments Integration Guide</a></td></tr></tbody></table>
 
 ## Supported markets
 

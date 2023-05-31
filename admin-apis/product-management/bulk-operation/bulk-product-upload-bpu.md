@@ -157,11 +157,7 @@ The “remove” action for products works a little differently for products wit
 
 ### Schemas
 
-| Version     | Schema Components Table                                                             | Raw Schema                                                               | Sample XML                                                                      |
-| ----------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| 7 (Current) |  [View](https://drhadmin.digitalriver.com/integration/isg/schematable/BulkLoader/7) |  [View](https://drhadmin.digitalriver.com/integration/xsd/BulkLoader/7)  | Not available                                                                   |
-| 6           |  [View](https://drhadmin.digitalriver.com/integration/isg/schematable/BulkLoader/6) |  [View](https://drhadmin.digitalriver.com/integration/xsd/BulkLoader/6)  |  [View](https://drhadmin.digitalriver.com/integration/isg/example/BulkLoader/6) |
-| 5           |  [View](https://drhadmin.digitalriver.com/integration/isg/schematable/BulkLoader/5) |  [View](https://drhadmin.digitalriver.com/integration/xsd/BulkLoader/5)  |  [View](https://drhadmin.digitalriver.com/integration/isg/example/BulkLoader/5) |
+<table><thead><tr><th>Version</th><th>Schema Components Table</th><th width="140">Raw Schema</th><th>Sample XML</th></tr></thead><tbody><tr><td>7 (Current)</td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/schematable/BulkLoader/7">View</a></td><td> <a href="https://drhadmin.digitalriver.com/integration/xsd/BulkLoader/7">View</a></td><td>Not available</td></tr><tr><td>6</td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/schematable/BulkLoader/6">View</a></td><td> <a href="https://drhadmin.digitalriver.com/integration/xsd/BulkLoader/6">View</a> </td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/example/BulkLoader/6">View</a></td></tr><tr><td>5</td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/schematable/BulkLoader/5">View</a></td><td> <a href="https://drhadmin.digitalriver.com/integration/xsd/BulkLoader/5">View</a></td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/example/BulkLoader/5">View</a></td></tr></tbody></table>
 
 ## Product association feed
 
@@ -185,10 +181,7 @@ The following list describes when you cannot create an association.
 
 The following table describes the request and response types for exporting and importing product association details.
 
-| Task                                                                                       | Request Type                        | Response Type                        |
-| ------------------------------------------------------------------------------------------ | ----------------------------------- | ------------------------------------ |
-| View the existing product association details by exporting the product association details | ProductAssociationFeedExportRequest | ProductAssociationFeedExportResponse |
-| View the existing product association details by exporting the product association details | ProductAssociationFeedImportRequest | ProductAssociationFeedImportResponse |
+<table><thead><tr><th width="243.33333333333331">Task</th><th>Request Type</th><th>Response Type</th></tr></thead><tbody><tr><td>View the existing product association details by exporting the product association details</td><td>ProductAssociationFeedExportRequest</td><td>ProductAssociationFeedExportResponse</td></tr><tr><td>View the existing product association details by exporting the product association details</td><td>ProductAssociationFeedImportRequest</td><td>ProductAssociationFeedImportResponse</td></tr></tbody></table>
 
 A Product Association Type defines the behavior of a specific type of product association. The behavior defined by the type includes but may not be limited to the following:
 
@@ -594,9 +587,7 @@ If the request failed, the following table describes the possible response codes
 
 ### Schemas
 
-| Version     | Schema Components Table                                                                         | Raw Schema                                                                          | Sample XML                                                                                  |
-| ----------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| 1 (Current) |  [View](https://drhadmin.digitalriver.com/integration/isg/schematable/ProductAssociationFeed/1) |  [View](https://drhadmin.digitalriver.com/integration/xsd/ProductAssociationFeed/1) |  [View](https://drhadmin.digitalriver.com/integration/isg/example/ProductAssociationFeed/1) |
+<table><thead><tr><th width="141">Version</th><th>Schema Components Table</th><th>Raw Schema</th><th>Sample XML</th></tr></thead><tbody><tr><td>1 (Current)</td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/schematable/ProductAssociationFeed/1">View</a></td><td> <a href="https://drhadmin.digitalriver.com/integration/xsd/ProductAssociationFeed/1">View</a></td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/example/ProductAssociationFeed/1">View</a></td></tr></tbody></table>
 
 ## Channel bulk loader
 
@@ -909,9 +900,7 @@ The following example shows additional company attributes. These attributes indi
 
 ### Schemas
 
-| Version     | Schema Components Table                                                                    | Raw Schema                                                                     | Sample XML                                                                             |
-| ----------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| 1 (Current) |  [View](https://drhadmin.digitalriver.com/integration/isg/schematable/ChannelBulkLoader/1) |  [View](https://drhadmin.digitalriver.com/integration/xsd/ChannelBulkLoader/1) |  [View](https://drhadmin.digitalriver.com/integration/isg/example/ChannelBulkLoader/1) |
+<table><thead><tr><th width="136">Version</th><th>Schema Components Table</th><th>Raw Schema</th><th>Sample XML</th></tr></thead><tbody><tr><td>1 (Current)</td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/schematable/ChannelBulkLoader/1">View</a></td><td> <a href="https://drhadmin.digitalriver.com/integration/xsd/ChannelBulkLoader/1">View</a></td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/example/ChannelBulkLoader/1">View</a></td></tr></tbody></table>
 
 ## Order create
 
@@ -1029,9 +1018,7 @@ lineItemUri="http://dealer.acme.com/lineItem/1">
 
 ### Schemas
 
-| Version     | Schema Components Table                                                                                | Raw Schema                                                                                 | Sample XML                                                                                         |
-| ----------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
-| 1 (Current) |  [View](https://drhadmin.digitalriver.com/integration/isg/schematable/IntegratedRetailerOrderCreate/1) |  [View](https://drhadmin.digitalriver.com/integration/xsd/IntegratedRetailerOrderCreate/1) |  [View](https://drhadmin.digitalriver.com/integration/isg/example/IntegratedRetailerOrderCreate/1) |
+<table><thead><tr><th width="146">Version</th><th>Schema Components Table</th><th>Raw Schema</th><th>Sample XML</th></tr></thead><tbody><tr><td>1 (Current)</td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/schematable/IntegratedRetailerOrderCreate/1">View</a></td><td> <a href="https://drhadmin.digitalriver.com/integration/xsd/IntegratedRetailerOrderCreate/1">View</a></td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/example/IntegratedRetailerOrderCreate/1">View</a></td></tr></tbody></table>
 
 ## Order return
 
@@ -1099,6 +1086,4 @@ The XML format for the Order Return's response follows a specific XML schema pro
 
 ### Schemas
 
-| Version     | Schema Components Table                                                                                | Raw Schema                                                                                 | Sample XML                                                                                         |
-| ----------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
-| 1 (Current) |  [View](https://drhadmin.digitalriver.com/integration/isg/schematable/IntegratedRetailerOrderReturn/1) |  [View](https://drhadmin.digitalriver.com/integration/xsd/IntegratedRetailerOrderReturn/1) |  [View](https://drhadmin.digitalriver.com/integration/isg/example/IntegratedRetailerOrderReturn/1) |
+<table><thead><tr><th width="146">Version</th><th>Schema Components Table</th><th>Raw Schema</th><th>Sample XML</th></tr></thead><tbody><tr><td>1 (Current)</td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/schematable/IntegratedRetailerOrderReturn/1">View</a></td><td> <a href="https://drhadmin.digitalriver.com/integration/xsd/IntegratedRetailerOrderReturn/1">View</a></td><td> <a href="https://drhadmin.digitalriver.com/integration/isg/example/IntegratedRetailerOrderReturn/1">View</a></td></tr></tbody></table>

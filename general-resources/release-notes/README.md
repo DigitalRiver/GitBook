@@ -6,6 +6,14 @@ description: Keep track of changes and updates to the Commerce API.
 
 V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
 
+## 2023/5/31
+
+We updated the following content in the Shoppers API reference:
+
+* How to [get your orders](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Order-Lookup/paths/\~1v1\~1shoppers\~1order-lookup/post).
+* Added a [`warnings` object](../../common-shopper-and-admin-apis/error-codes/warnings-object/) to [Update current cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post).
+* Added the `payment-unexpected-error` to [Update current cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post).
+
 ## 2023/5/22
 
 We have included a guide on how to [handle bulk product uploads in an asynchronous manner](../../admin-apis/product-management/bulk-operation/asynchronous-bulk-operations/).

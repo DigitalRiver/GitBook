@@ -213,6 +213,8 @@
   * [HTTP response status codes](common-shopper-and-admin-apis/error-codes/http-response-status-codes.md)
   * [Error format for Shopper APIs](common-shopper-and-admin-apis/error-codes/error-format-for-shopper-apis/README.md)
     * [Credit card error and declined messages](common-shopper-and-admin-apis/error-codes/error-format-for-shopper-apis/credit-card-error-and-declined-messages.md)
+  * [Warnings object](common-shopper-and-admin-apis/error-codes/warnings-object/README.md)
+    * [200 OK](common-shopper-and-admin-apis/error-codes/warnings-object/200-ok.md)
   * [Error codes for Shopper APIs](common-shopper-and-admin-apis/error-codes/error-codes-for-shopper-apis/README.md)
     * [400 Bad Request](common-shopper-and-admin-apis/error-codes/error-codes-for-shopper-apis/400-bad-request.md)
     * [401 Unauthorized](common-shopper-and-admin-apis/error-codes/error-codes-for-shopper-apis/401-unauthorized.md)

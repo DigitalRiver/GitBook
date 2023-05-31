@@ -140,16 +140,7 @@ Alternatively, you can:&#x20;
 
 ## Support matrix
 
-| Basics                  | Customer                                                                   | Redirect              |
-| ----------------------- | -------------------------------------------------------------------------- | --------------------- |
-|                         | Payment Type                                                               | Buy Now Pay Later B2B |
-| Requirements            | Addendum                                                                   | Yes                   |
-| Supported Product Types | Physical / Digital                                                         | Both                  |
-|                         | Captures Funds when Physical Product Shipped or Digital Product Downloaded | Yes                   |
-|                         | Chargeback                                                                 | Yes                   |
-|                         | Standard / Premium                                                         | Premium               |
-|                         | Multiple / Partial                                                         | Yes                   |
-|                         | Recurring Payments                                                         | Yes                   |
+<table data-header-hidden><thead><tr><th width="218.33333333333331"></th><th></th><th></th></tr></thead><tbody><tr><td>Basics</td><td>Customer</td><td>Redirect</td></tr><tr><td></td><td>Payment Type</td><td>Buy Now Pay Later B2B</td></tr><tr><td>Requirements</td><td>Addendum</td><td>Yes</td></tr><tr><td>Supported Product Types</td><td>Physical / Digital</td><td>Both</td></tr><tr><td></td><td>Captures Funds when Physical Product Shipped or Digital Product Downloaded</td><td>Yes</td></tr><tr><td></td><td>Chargeback</td><td>Yes</td></tr><tr><td></td><td>Standard / Premium</td><td>Premium</td></tr><tr><td></td><td>Multiple / Partial</td><td>Yes</td></tr><tr><td></td><td>Recurring Payments</td><td>Yes</td></tr></tbody></table>
 
 ## Supported markets
 

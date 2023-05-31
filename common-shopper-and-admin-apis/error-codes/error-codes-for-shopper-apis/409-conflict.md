@@ -407,6 +407,8 @@ The system cannot complete the operation. The possible error descriptions are as
 *   `Cart could not be established for request.`
 
     An error caused a cart establishment failure.
+* `Coupon Code cannot be used due to an undefined reason.`\
+  The provided coupon code failed, and the reason is unknown. The coupon code could be unknown, invalid, or expired.
 * `A service failure occurred that prevented the request from being processed`An error occurred during the process of determining the fulfiller.
 * `TAX_000001`—The address verification failed during tax computation, such as ZIP or postal code do not match.
 * `Line item could not be determined. Multiple line items found for product`When the system was going to update the line item, it found multiple product line items in the cart.
@@ -424,13 +426,20 @@ The system cannot add the product to the cart. The shopper requested more than t
 
 The order could not be submitted due to payment processing failure.
 
+## `payment-unexpected-error`
+
+The system cannot process the cart because an unexpected payment error occurred. The possible error descriptions are as follows:
+
+* `The request failed to complete.`\
+  The request failed to complete due to an unexpected payment failure.
+
 ## `paypal-failure`
 
 The system cannot process the cart because PayPal returned a failure or declined status.
 
 ## `paypal-lookup-failure`
 
-The system cannot process the cart due to a PayPal lookup processing failure. The possible error descriptions are as follows:
+Due to a PayPal lookup processing failure, the system cannot process the cart. The possible error descriptions are as follows:
 
 * `The cart could not be processed due to paypal lookup processing failure`\
   Due to a PayPal lookup processing failure, the system cannot process the cart.

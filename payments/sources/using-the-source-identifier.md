@@ -12,7 +12,7 @@ Use the following flow for standard payments: [Apple Pay](../supported-payment-m
 
 1. [Create the shopper token](../../shopper-apis/shopper-basics/common-use-cases/creating-a-customer.md).
 2. [Apply the shopper and their billing address to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post).&#x20;
-3. [Create a source with a session identifier (`paymentSessionId`)](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Source/operation/createSources). The source `state` is `chargeable`.
+3. [Create a source using DigitalRiver.js](../payments-solutions/digitalriver.js/payment-methods/konbini.md#step-2-create-a-konbini-source-using-digitalriver.js). The source `state` is `chargeable`.
 4. [Attach the source to the cart](using-the-source-identifier.md#attaching-multiple-payment-sources-to-the-cart).
 5. [Submit the cart](../../shopper-apis/cart/submitting-a-cart/).
 
@@ -26,6 +26,7 @@ Use the following flow for delayed payments, such as [Konbini](../supported-paym
 2. [Create a source using DigitalRiver.js](../payments-solutions/digitalriver.js/payment-methods/konbini.md#step-2-create-a-konbini-source-using-digitalriver.js). The source `state` is `pending_funds`.
 3. The customer transfers the funds to the Konbini payment provider.
 4. The source `state` changes to `chargeable` when the funds are received.
+5. [Submit the cart](../../shopper-apis/cart/submitting-a-cart/).
 
 #### Submit a Boleto payment flow
 
@@ -54,7 +55,7 @@ Use the following flow for delayed payments, such as [Wire Transfer](../supporte
 
 ### Redirect, then submit payment flow
 
-Use the following flow for redirect and submit payment methods, such as [Afterpay](../supported-payment-methods/afterpay.md), [Alipay (domestic)](../supported-payment-methods/alipay-domestic.md), [Alipay+ (cross-border)](../supported-payment-methods/alipay+-cross-border.md), [Bancontact](../supported-payment-methods/bancontact.md), [BLIK](../supported-payment-methods/blik.md), [iDEAL](../supported-payment-methods/ideal.md), [Klarna Financing](../supported-payment-methods/klarna.md), [Klarna Pay in 3](../supported-payment-methods/klarna.md), [Klarna Pay in 4](../supported-payment-methods/klarna.md), [Klarna Pay in 30 days](../supported-payment-methods/klarna.md), [Online Banking (IBP)](../supported-payment-methods/online-banking-ibp.md), [Online Banking (FPX)](../supported-payment-methods/fpx-online-banking.md), [Online Banking (Korea Bank Transfer)](../supported-payment-methods/korea-bank-transfer-online-banking.md),  [PayPal](../supported-payment-methods/paypal.md), [PayPal Billing Agreement](../supported-payment-methods/paypal-billing-agreement.md), [PayPal Credit](../supported-payment-methods/paypal-credit.md), [PayPal Pay in 3](../supported-payment-methods/paypal-pay-in-3.md), [PayPal Pay in 4](../supported-payment-methods/paypal-pay-in-4.md), [PayPal TatenZahlung (Installment Payment)](../supported-payment-methods/paypal-ratenzahlung-installment-payment.md), and [TreviPay](../supported-payment-methods/trevipay.md).&#x20;
+Use the following flow for redirect and submit payment methods, such as [Afterpay](../supported-payment-methods/afterpay.md), [Alipay (domestic)](../supported-payment-methods/alipay-domestic.md), [Alipay+ (cross-border)](../supported-payment-methods/alipay+-cross-border.md), [Bancontact](../supported-payment-methods/bancontact.md), [BLIK](../supported-payment-methods/blik.md), [iDEAL](../supported-payment-methods/ideal.md), [Klarna Financing](../supported-payment-methods/klarna.md), [Klarna Pay in 3](../supported-payment-methods/klarna.md), [Klarna Pay in 4](../supported-payment-methods/klarna.md), [Klarna Pay in 30 days](../supported-payment-methods/klarna.md), [Online Banking (IBP)](../supported-payment-methods/online-banking-ibp.md), [Online Banking (FPX)](../supported-payment-methods/fpx-online-banking.md), [Online Banking (Korea Bank Transfer)](../supported-payment-methods/korea-bank-transfer-online-banking.md),  [PayPal](../supported-payment-methods/paypal.md), [PayPal Billing Agreement](../supported-payment-methods/paypal-billing-agreement.md), [PayPal Credit](../supported-payment-methods/paypal-credit.md), [PayPal Pay in 3](../supported-payment-methods/paypal-pay-in-3.md), [PayPal Pay in 4](../supported-payment-methods/paypal-pay-in-4.md), [PayPal RatenZahlung (Installment Payment)](../supported-payment-methods/paypal-ratenzahlung-installment-payment.md), and [TreviPay](../supported-payment-methods/trevipay.md).&#x20;
 
 1. [Create the shopper token](../../shopper-apis/shopper-basics/common-use-cases/creating-a-customer.md).
 2. [Apply the shopper and their billing address to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post).&#x20;
@@ -164,7 +165,7 @@ When [building your payment workflows](../building-your-workflows.md), you shoul
 
 ### Primary payment sources
 
-Primary payment [sources ](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Source)are created from traditional [payment methods](../supported-payment-methods/) such as [credit cards](../supported-payment-methods/credit-cards.md), [Google Pay](../supported-payment-methods/google-pay.md), [PayPal](../supported-payment-methods/paypal.md), and [Wire Transfers](../supported-payment-methods/wire-transfer.md). Most customers use a primary source when purchasing, but a [cart ](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper)can only contain one.&#x20;
+Primary payment [sources ](https://www.digitalriver.com/docs/commerce-admin-api/#tag/Source)are created from traditional [payment methods](../supported-payment-methods/) such as [credit cards](../supported-payment-methods/credit-cards.md), [Google Pay](../supported-payment-methods/google-pay.md), [PayPal](../supported-payment-methods/paypal.md), and [Wire Transfers](../supported-payment-methods/wire-transfer.md). Most customers use a primary source when purchasing, but a [cart ](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper)can only contain one primary source.&#x20;
 
 Primary sources created from [payment methods that support reusability](../supported-payment-methods/) may be able to be [associated with a customer](./#attaching-a-payment-method-to-a-customer-or-payment-option) and then [reused ](./#reusable-or-single-use)in future transactions.
 

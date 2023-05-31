@@ -18,30 +18,4 @@ To view or configure standard Digital River reason codes and customized reason c
 
 The following return reason codes are available by default:
 
-| Reason Code                     | Description                                           | Required/Optional |
-| ------------------------------- | ----------------------------------------------------- | ----------------- |
-| FRAUD                           | Fraud                                                 | Required          |
-| MISSING\_ITEMS\_FROM\_ORDER     | Missing Items From Order                              | Required          |
-| NEVER\_RECEIVED                 | Never Received                                        | Required          |
-| CANCELLED\_BUT\_SHIPPED         | Cancelled But Shipped                                 | Optional          |
-| CANT\_DOWNLOAD                  | Cannot Download                                       | Optional          |
-| CHARGEBACK\_AVOIDANCE           | DO NOT SELECT - System Initiated Chargeback Avoidance | Optional          |
-| CUSTOMER\_ERROR                 | Customer Error                                        | Optional          |
-| CUSTOMER\_SATISFACTION\_ISSUE   | Customer Satisfaction Issue                           | Optional          |
-| DAMAGED\_PRODUCT                | Damaged Product                                       | Optional          |
-| DELAYED\_SHIPPING               | Delayed Shipping                                      | Optional          |
-| DUPLICATE\_ORDER                | Duplicate Order                                       | Optional          |
-| FEE\_CHARGED\_INCORRECTLY       | Fee Amount Charged Incorrectly                        | Optional          |
-| FEE\_EXEMPT\_CUSTOMER           | Fee Exempt Customer                                   | Optional          |
-| MATCH\_PROMOTIONAL\_PRICE       | Match Promotional Price                               | Optional          |
-| ORDERED\_WITHOUT\_PERMISSION    | Ordered Without Permission                            | Optional          |
-| ORDER\_PROCESSING\_ERROR        | Order Processing Error                                | Optional          |
-| PHONE\_ORDER\_ERROR             | Phone Order Error                                     | Optional          |
-| PRODUCT\_SHOULD\_NOT\_HAVE\_FEE | Product Should Not Have a Fee                         | Optional          |
-| PRODUCT\_TRIALWARE              | Trialware                                             | Optional          |
-| REFUSED\_ORDER                  | Refused Order                                         | Optional          |
-| TAX\_EXEMPT                     | Tax Exempt                                            | Optional          |
-| UNABLE\_TO\_SHIP\_TO\_COUNTRY   | Unable To Ship To Country                             | Optional          |
-| UNDELIVERABLE\_ADDRESS          | Undeliverable Address                                 | Optional          |
-| VENDOR\_APPROVED\_REFUND        | Vendor Approved Refund                                | Optional          |
-| WRONG\_PRODUCT                  | Wrong Product                                         | Optional          |
+<table><thead><tr><th width="291.3333333333333">Reason Code</th><th width="265">Description</th><th>Required/Optional</th></tr></thead><tbody><tr><td>FRAUD</td><td>Fraud</td><td>Required</td></tr><tr><td>MISSING_ITEMS_FROM_ORDER</td><td>Missing Items From Order</td><td>Required</td></tr><tr><td>NEVER_RECEIVED</td><td>Never Received</td><td>Required</td></tr><tr><td>CANCELLED_BUT_SHIPPED</td><td>Cancelled But Shipped</td><td>Optional</td></tr><tr><td>CANT_DOWNLOAD</td><td>Cannot Download</td><td>Optional</td></tr><tr><td>CHARGEBACK_AVOIDANCE</td><td>DO NOT SELECT - System Initiated Chargeback Avoidance</td><td>Optional</td></tr><tr><td>CUSTOMER_ERROR</td><td>Customer Error</td><td>Optional</td></tr><tr><td>CUSTOMER_SATISFACTION_ISSUE</td><td>Customer Satisfaction Issue</td><td>Optional</td></tr><tr><td>DAMAGED_PRODUCT</td><td>Damaged Product</td><td>Optional</td></tr><tr><td>DELAYED_SHIPPING</td><td>Delayed Shipping</td><td>Optional</td></tr><tr><td>DUPLICATE_ORDER</td><td>Duplicate Order</td><td>Optional</td></tr><tr><td>FEE_CHARGED_INCORRECTLY</td><td>Fee Amount Charged Incorrectly</td><td>Optional</td></tr><tr><td>FEE_EXEMPT_CUSTOMER</td><td>Fee Exempt Customer</td><td>Optional</td></tr><tr><td>MATCH_PROMOTIONAL_PRICE</td><td>Match Promotional Price</td><td>Optional</td></tr><tr><td>ORDERED_WITHOUT_PERMISSION</td><td>Ordered Without Permission</td><td>Optional</td></tr><tr><td>ORDER_PROCESSING_ERROR</td><td>Order Processing Error</td><td>Optional</td></tr><tr><td>PHONE_ORDER_ERROR</td><td>Phone Order Error</td><td>Optional</td></tr><tr><td>PRODUCT_SHOULD_NOT_HAVE_FEE</td><td>Product Should Not Have a Fee</td><td>Optional</td></tr><tr><td>PRODUCT_TRIALWARE</td><td>Trialware</td><td>Optional</td></tr><tr><td>REFUSED_ORDER</td><td>Refused Order</td><td>Optional</td></tr><tr><td>TAX_EXEMPT</td><td>Tax Exempt</td><td>Optional</td></tr><tr><td>UNABLE_TO_SHIP_TO_COUNTRY</td><td>Unable To Ship To Country</td><td>Optional</td></tr><tr><td>UNDELIVERABLE_ADDRESS</td><td>Undeliverable Address</td><td>Optional</td></tr><tr><td>VENDOR_APPROVED_REFUND</td><td>Vendor Approved Refund</td><td>Optional</td></tr><tr><td>WRONG_PRODUCT</td><td>Wrong Product</td><td>Optional</td></tr></tbody></table>

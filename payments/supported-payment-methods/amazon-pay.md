@@ -14,9 +14,7 @@ If you are interested in using Amazon Pay, contact your Customer Success Manager
 
 How you configure Amazon Pay depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).
 
-| DigitalRiver.js with Elements                                                                             | Drop-in payments |
-| --------------------------------------------------------------------------------------------------------- | ---------------- |
-| [Configuring Amazon Pay](../payments-solutions/digitalriver.js/payment-methods/configuring-amazon-pay.md) | Not supported    |
+<table><thead><tr><th width="265">DigitalRiver.js with Elements</th><th>Drop-in payments</th></tr></thead><tbody><tr><td><a href="../payments-solutions/digitalriver.js/payment-methods/configuring-amazon-pay.md">Configuring Amazon Pay</a></td><td>Not supported</td></tr></tbody></table>
 
 ## How it works
 

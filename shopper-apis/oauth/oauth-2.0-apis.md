@@ -70,10 +70,6 @@ Your API key remains completely hidden from public view. You can obfuscate or hi
 
 The following table shows the OAuth flows allowed by grant type and client type (including the application type). The table also indicates support for refresh tokens.
 
-| Grant Type         | Public Application | Confidential Application | Refresh Token Supported? |
-| ------------------ | ------------------ | ------------------------ | ------------------------ |
-| Implicit           | Yes                | No                       | No                       |
-| Client Credentials | No                 | Yes                      | No                       |
-| ROPC               | Yes                | Yes                      | Yes                      |
+<table><thead><tr><th width="135">Grant Type</th><th width="172">Public Application</th><th width="216">Confidential Application</th><th>Refresh Token Supported?</th></tr></thead><tbody><tr><td>Implicit</td><td>Yes</td><td>No</td><td>No</td></tr><tr><td>Client Credentials</td><td>No</td><td>Yes</td><td>No</td></tr><tr><td>ROPC</td><td>Yes</td><td>Yes</td><td>Yes</td></tr></tbody></table>
 
 See [Public vs. confidential application flows](oauth-2.0-apis.md#public-versus-confidential-authentication-flows) for more information.
