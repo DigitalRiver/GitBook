@@ -85,6 +85,7 @@ If your company maintains the master record for the customer login credentials, 
       "emailAddress": "jjohnson@myCompany.com",
       "locale": "en_US",
       "currency": "USD"
+      "externalReferenceId": "external_reference_ID",
    }
 }
 ```
