@@ -8,7 +8,7 @@ Financial Process Exchange (FPX) enables Malaysian shoppers to pay for online pu
 
 ## How to configure&#x20;
 
-How you configure Konbini depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/). &#x20;
+How you configure FPX Online Banking depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/). &#x20;
 
 | DigitalRiver.js with Elements                                                                                             | Drop-in payments                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
