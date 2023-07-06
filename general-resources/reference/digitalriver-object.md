@@ -999,15 +999,6 @@ The following response includes all payment methods that you configured for your
             }
         },
         {
-            "type": "bPay",
-            "flow": "receiver",
-            "supportsRecurring": false,
-            "supportsFreeTrial": false,
-            "images": {
-                "iconImage": "https://ui1.img.digitalrivercontent.net/Storefront/images/paymentMethodLogos/bpay.png"
-            }
-        },
-        {
             "type": "carrierFinancing",
             "flow": "standard",
             "supportsRecurring": false,
