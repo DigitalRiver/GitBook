@@ -1,8 +1,8 @@
 ---
 description: >-
-  Apple Pay provides a fast and secure shopping experience where the consumer
-  can quickly and seamlessly checkout with their Apple Touch authentication
-  without login details or credentials.
+  Apple Pay provides a fast and secure shopping experience where consumers can
+  quickly and seamlessly checkout with their Apple Touch authentication without
+  login details or credentials.
 ---
 
 # Apple Pay
