@@ -216,7 +216,7 @@ This method returns an object with various compliance strings and links that can
 
 ## Creating sources
 
-When creating sources, you have the option of selecting a [method that accepts an element](digitalriver-object.md#createsource-element-sourcedata) or using a [method that doesn't require an element](digitalriver-object.md#createsource-sourcedata). Both methods however require that you provide source data to tokenize. When configuring this data, you can also [specify a future use](digitalriver-object.md#specifying-a-sources-future-use) for the source.&#x20;
+When creating sources, you can select a method that accepts an element or use a [method that doesn't require an element](digitalriver-object.md#createsource-sourcedata). Both methods, however, require that you provide source data to tokenize. When configuring this data, you can [specify a future source use](digitalriver-object.md#specifying-a-sources-future-use).&#x20;
 
 For both versions, the `createSource()` method returns a promise that contains a `Result` object.  The `Result` object, in turn, contains one of two possible objects:‌
 
@@ -225,7 +225,7 @@ For both versions, the `createSource()` method returns a promise that contains a
 
 ### createSource(sourceData)
 
-Use the `createSource(sourceData)` method to create a payment source that contains information you can safely use with other Digital River APIs. This includes immediate sources (if PCI compliant), redirect sources, or delayed sources. See [Configuring payment methods](../../payments/payments-solutions/digitalriver.js/payment-methods/) for more information on the structure of these requests.‌
+Use the `createSource(sourceData)` method to create a payment source that contains information you can safely use with other Commerce APIs. This includes immediate sources (if PCI compliant), redirect sources, or delayed sources. See [Configuring payment methods](../../payments/payments-solutions/digitalriver.js/payment-methods/) for more information on the structure of these requests.‌
 
 In the following example, the method takes a single argument. The `sourceData` contains the data that you want Digital River to tokenize.
 
