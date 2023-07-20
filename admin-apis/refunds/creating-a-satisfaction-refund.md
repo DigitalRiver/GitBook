@@ -14,8 +14,8 @@ The following [`POST /orders/{orderid}/refunds`](https://www.digitalriver.com/do
 {% tab title="cURL" %}
 {% code overflow="wrap" %}
 ```javascript
-curl --location --request POST 'https://api.digitalriver.com/orders/{orderid}/refunds?token={the customer's token}' \
---header 'authorization: Basic ***\
+curl --location --request POST 'https://api.digitalriver.com/orders/{orderid}/refunds' \
+--header 'authorization: bearer {auth_token}' \
 ...
 --data-raw '{
     "type": "productRefund",
