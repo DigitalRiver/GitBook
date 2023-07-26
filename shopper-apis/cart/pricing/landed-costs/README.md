@@ -74,14 +74,14 @@ You must set the price list to tax exclusive to use the landed costs feature. Wh
 
 ### Creating a product for landed costs
 
-When [creating a product](https://help.digitalriver.com/help/gc/Products/All-Products/Creating-a-product.htm#Creating) for landed costs in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), from the [Product Settings step](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm), you must:
+When [creating a product](https://help.digitalriver.com/help/gc/Products/Products/Create-product.htm) for landed costs in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), from the [Product Settings step](https://help.digitalriver.com/help/gc/Products/Products/Product-settings.htm), you must:
 
-1. Select the [Product Classification Type](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm#ProductClassificationType) under [**Export Controls**](https://help.digitalriver.com/help/gc/Products/All-Products/Creating-a-product.htm#ExportControls).&#x20;
+1. Select the [Product Classification Type](https://help.digitalriver.com/help/gc/Products/Products/Product-settings.htm#ProductClassificationType) under [**Export Controls**](https://help.digitalriver.com/help/gc/Products/Products/Product-settings.htm#ExportControls).&#x20;
 2. Select the appropriate product classification from the list.
-3. Specify the [Harmonized System code](https://www.trade.gov/harmonized-system-hs-codes) in the [**Harmonized Tariff Schedule/Schedule B Number**](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm#Harmonized) field.
-4. Complete the physical settings under [**Physical**](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm#Physical).
-5. Select the [**Enable Landed Cost**](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm#EnableLandedCosts) checkbox.
-6. Complete the fields under [**Product Fulfillers**](https://help.digitalriver.com/help/gc/Products/All-Products/Configuring-the-product-settings.htm#ProductFulfillers).
+3. Specify the [Harmonized System code](https://www.trade.gov/harmonized-system-hs-codes) in the [**Harmonized Tariff Schedule/Schedule B Number**](https://help.digitalriver.com/help/gc/Products/Products/Product-settings.htm#Harmonized) field.
+4. Complete the physical settings under [**Physical**](https://help.digitalriver.com/help/gc/Products/Products/Product-settings.htm#Physical).
+5. Select the [**Enable Landed Cost**](https://help.digitalriver.com/help/gc/Products/Products/Product-settings.htm#EnableLandedCosts) checkbox.
+6. Complete the fields under [**Product Fulfillers**](https://help.digitalriver.com/help/gc/Products/Products/Product-settings.htm#ProductFulfillers).
 
 ### Triggering the landed cost feature
 
@@ -116,7 +116,7 @@ A landed cost calculation may fail for several reasons. For example, a customer 
 
 ### Refunding landed cost
 
-For orders with landed costs, if you need to reverse the charges, we support full [refunds](https://docs.digitalriver.com/commerce-api/returns-and-refunds-1/refunds) of the importer tax. If you want to offer partial refunds, contact your account representative.
+For orders with landed costs, if you need to reverse the charges, we support full [refunds](../../../../admin-apis/refunds/) of the importer tax. If you want to offer partial refunds, contact your account representative.
 
 ## How Digital River represents landed cost
 
