@@ -8,7 +8,7 @@ Landed cost represents the total amount your customer must pay to purchase a phy
 
 A cross-border transaction often incurs additional duties that are not displayed to the customer at the time of checkout. The customer, however, is still responsible for paying these hidden costs when the order arrives at its destination.
 
-You can use the Digital River [landed cost feature](./#digital-rivers-landed-cost-feature) to present customers with the full cost of international orders, thereby minimizing customs delays and unanticipated expenses at delivery.&#x20;
+You can use the [Digital River landed cost feature](./#digital-rivers-landed-cost-feature) to present customers with the full cost of international orders, thereby minimizing customs delays and unanticipated expenses at delivery.&#x20;
 
 Once [configured](./#configuring-the-landed-cost-feature), the feature is [automatically triggered](./#triggering-the-landed-cost-feature) on applicable orders. For these orders, [cross-border specific costs are calculated](./#calculating-landed-cost) and [built into the order total](./#collecting-landed-cost).&#x20;
 
@@ -24,7 +24,7 @@ Shipments from one EU member state to another EU member state are not considered
 
 ## Digital River's landed cost feature
 
-Once [correctly configured](./#configuring-the-landed-cost-feature), the Digital River landed cost feature automatically [calculates](./#calculating-landed-cost) and [collects](./#collecting-landed-cost) the total landed cost of [every applicable order](./#triggering-the-landed-cost-feature).&#x20;
+Once [correctly configured](./#configuring-the-landed-cost-feature), the Digital River landed cost feature automatically [calculates](./#calculating-landed-cost) and [collects ](./#collecting-landed-cost)the total landed cost of [every applicable order](./#triggering-the-landed-cost-feature).&#x20;
 
 The landed cost feature is available to anyone who integrates with the Commerce API. This is true whether you orchestrate your fulfillment or delegate the responsibility to Digital River.
 
@@ -35,7 +35,7 @@ To configure the [landed cost feature](./#digital-rivers-landed-cost-feature), y
 1. Verify your fulfiller ships packages outside their country (not all fulfillers provide this service).
 2. Verify your shipper is willing and able to prepay the landed cost on behalf of the customer and then send the invoice to you.
 3. Sign an addendum in your Digital River contract to enable landed cost.
-4. For each product in your catalog eligible for cross-border shipping, specify the correct [Harmonized System code](https://www.trade.gov/harmonized-system-hs-codes) when [creating ](./#creating-a-product-for-landed-costs)or updating the product. An incorrect Harmonized System code may result in an inaccurate landed cost calculation.
+4. For each product in your catalog eligible for cross-border shipping, specify the correct [Harmonized System code](https://www.trade.gov/harmonized-system-hs-codes) when [creating](./#creating-a-product-for-landed-costs) or updating the product. An incorrect Harmonized System code may result in an inaccurate landed cost calculation.
 5. Define the cross-border patterns (ship-to or ship-from countries) where you want to enable the landed cost feature. Digital River must support these ship-to countries and cannot include embargoed nations.
 6. Provide samples of completed customs forms to Digital River's Compliance department for approval.
 7. Provide your account manager with a list of the ship from and ship to countries for which you want to enable the collection of landed costs. Before you use the Landed Cost resource, Digital River must enable landed costs. The [Landed Cost Shipment Method](./#enabling-the-landed-costs-in-global-commerce) won't appear in Global Commerce if the landed cost is not enabled.&#x20;
@@ -106,7 +106,7 @@ Digital River makes an API call to a third-party service to calculate landed cos
 
 ### Collecting landed cost
 
-In the response, we provide an [itemized breakdown](./#how-landed-cost-is-represented) of the duties and taxes comprising the landed cost and build these individual costs into the order total. Since your customers ultimately pay the full landed cost, we recommend you display this cost breakdown to them on your storefront.&#x20;
+In the response, we provide an[ itemized breakdown](./#how-digital-river-represents-landed-cost) of the duties and taxes comprising the landed cost and build these individual costs into the order total. Since your customers ultimately pay the full landed cost, we recommend you display this cost breakdown to them on your storefront.&#x20;
 
 Once the [cart is submitted](../../submitting-a-cart/), your fulfiller relays it to your shipper, who completes the customs paperwork, ships the package to the destination country, and pays the duties and import taxes on the customer's behalf. The shipper then invoices you the shipping costs.
 
