@@ -20,7 +20,7 @@ The following table lists where Trustly is available by currency and country.
 
 ## How to configure&#x20;
 
-How you configure TreviPay depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).  &#x20;
+How you configure Trustly depends on whether you use [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).  &#x20;
 
 | DigitalRiver.js with Elements                                                                       | Drop-in payments                                                                                 |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
