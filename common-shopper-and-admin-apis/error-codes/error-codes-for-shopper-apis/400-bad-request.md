@@ -178,4 +178,6 @@ The system cannot validate the request for one of the following reasons:
 * The order is not in a returnable state.
 * The return window expired for the specified product.
 * The requested return quantity is greater than the eligible quantity for the line item.
+* The total product quantity for the current subscription plan and midterm change exceeds the product quantity restriction.
+* The total product quantity for the current subscription plan and midterm change is below the product minimum quantity restriction.
 * Cannot return the specified line item through the self-service Returns API.
