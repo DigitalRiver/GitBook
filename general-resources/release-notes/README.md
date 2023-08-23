@@ -10,6 +10,13 @@ V1 is the base version of the Commerce API. The following dates indicate when we
 
 We updated the shopper token information for the OAuth [Token ](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Token)in the [Shopper APIs reference](https://www.digitalriver.com/docs/commerce-shopper-api/).
 
+## 2023/8/22
+
+We added the following reasons to the [validation-error](../../common-shopper-and-admin-apis/error-codes/error-codes-for-shopper-apis/400-bad-request.md#validation-error) in [400 Bad Request](../../common-shopper-and-admin-apis/error-codes/error-codes-for-shopper-apis/400-bad-request.md).
+
+* The total product quantity for the current subscription plan and midterm change exceeds the product quantity restriction.
+* The total product quantity for the current subscription plan and midterm change is below the product minimum quantity restriction.
+
 ## 2023/5/31
 
 We updated the following content in the [Shoppers APIs reference](https://www.digitalriver.com/docs/commerce-shopper-api/):
