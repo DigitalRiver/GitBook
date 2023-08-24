@@ -1,16 +1,14 @@
 ---
 description: >-
   SEPA Direct Debit allows users to authorize transactions directly from their
-  bank account, which is a popular international payment method.
+  bank account, a popular international payment method.
 ---
 
 # SEPA Direct Debit
 
-Allow users to authorize transactions directly from their bank account, a popular international payment method.&#x20;
+Contact your Customer Success Manager and sign a SEPA Direct Debit addendum if you want to use SEPA Direct Debit. After you sign the Direct Debit addendum, the Customer Success Manager will send setup instructions for SEPA Direct Debit.
 
 Due to the risk of chargebacks, we don't recommend using SEPA to sell physical goods. Contact your Customer Success Manager for more information.
-
-Contact your Customer Success Manager if you want to use SEPA Direct Debit. After you sign the Direct Debit addendum, the Customer Success Manager will send setup instructions for SEPA Direct Debit.
 
 ## How to configure&#x20;
 

@@ -1,10 +1,12 @@
 ---
-description: Learn about PayPal Pay in 4
+description: >-
+  PayPal Pay in 4 is a pay later option dynamically available through the PayPal
+  Express Checkout Wallet.
 ---
 
 # PayPal Pay in 4
 
-PayPal Pay in 4 is a pay later option dynamically available through the PayPal Express Checkout Wallet. PayPal Pay in 4 allows shoppers to pay for physical goods purchases as follows:
+&#x20;PayPal Pay in 4 allows shoppers to pay for physical goods purchases as follows:
 
 * **France**: four interest-free monthly payments for purchases between €30 to €2,000, with the first payment due at checkout.
 * **United States**: four interest-free biweekly payments for purchases between $30 to $600, with the first payment due at checkout.&#x20;

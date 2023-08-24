@@ -6,9 +6,7 @@ description: >-
 
 # Google Pay
 
-This payment method adds another layer of ease of purchase for consumers to complete transactions from their Google Wallet quickly. All currencies are available in supported countries.&#x20;
-
-This guide describes creating and customizing a Google Pay element for your shoppers.
+Allow a merchant to request any credit or debit card stored in their customer's Google Pay account. This adds another layer of ease of purchase for consumers to complete transactions from their Google Wallet quickly. All currencies are available in supported countries.&#x20;
 
 You can find an example of integration [here](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/googlepay.html). &#x20;
 

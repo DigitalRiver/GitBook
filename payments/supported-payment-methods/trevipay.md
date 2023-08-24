@@ -1,6 +1,6 @@
 ---
 description: >-
-  TreviPay is a B2B net terms line of credit that integrates with ecommerce
+  TreviPay is a B2B net terms line of credit that integrates with e-commerce
   technology to allow invoicing at checkout.
 ---
 
@@ -12,7 +12,9 @@ TreviPay enables Merchants to extend a line of credit for business buyers at che
 
 TreviPay assesses creditworthiness, absorbs non-payment risk, including the localized dunning process (collections) if required, and provides online Merchant and Buyer statement management tools. TreviPay supports the following features: application processing, account administration, account self-service, thresholds, commerce experience, alerts, and dunning (collections).
 
-TreviPay processes online ecommerce orders for the following product types: physical, digital, and recurring. TreviPay does not support phone-in orders.
+TreviPay processes online e-commerce orders for physical, digital, and recurring product types. TreviPay does not support phone-in orders.
+
+Contact your Customer Success Manager and sign a TreviPay addendum if you want to use TreviPay.
 
 ## Benefits
 
@@ -28,7 +30,7 @@ How you configure TreviPay depends on whether you're using [DigitalRiver.js with
 
 ## How it works
 
-Buyers select the TreviPay option at checkout, then they either log in to the Merchant's profile to complete their purchase or apply for their line of credit. Upon approval, the buyer can complete their transaction, and manage purchases, statements, and vendor forms through the buyer portal.
+Buyers select the TreviPay option at checkout, then they either log in to the Merchant's profile to complete their purchase or apply for their line of credit. Upon approval, the buyer can complete their transaction and manage purchases, statements, and vendor forms through the buyer portal.
 
 ### Promote the TreviPay credit solution
 
@@ -78,14 +80,14 @@ When the client completes and submits the Credit Application, they will see a Co
 
 ### Phone call
 
-TreviPay will call the customer up to three times to gather information such as the customer's phone number so TreviPay can set up two-factor authentication (2FA) for the customer's account.&#x20;
+TreviPay will call the customer up to three times to gather information, such as the customer's phone number, so that TreviPay can set up two-factor authentication (2FA) for the customer's account.&#x20;
 
 ### Email notification
 
-The customer will later receive two emails. The first email will state the application has been submitted. The second email will state whether the application for their account has been approved or declined. The validated customer can complete the purchase using two-factor authentication (2FA).
+The customer will later receive two emails. The first email will say the application has been submitted. The second email will state whether the application for their account has been approved or declined. The validated customer can complete the purchase using two-factor authentication (2FA).
 
 {% hint style="info" %}
-TreviPay does not require the customer to sign in to the client portal, but they do recommend it.
+TreviPay does not require the customer to sign in to the client portal, but they recommend it.
 {% endhint %}
 
 <div align="left">
@@ -107,9 +109,9 @@ Digital River will provide the TreviPay enrollment form URL and redirect URL. Yo
 | `client_reference_id` | <p>The business identifier. This is a string without the restriction of character types and can be up to 50 characters in length. Each ecosystem (Commerce API) will be responsible for sending TreviPay a unique <code>client_reference_id</code> for shopper enrollment.</p><p>See <a href="trevipay.md#applying-the-value-for-client_reference_id-to-organizationid">Applying the value for <code>client_reference_id</code> to <code>organizationId</code></a> <code>for instructions on on how to use the value for the organizationId as the client_reference_id.</code></p> |
 | `<locale>`            | A designator that combines the two-letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO\_639-1) language code with the [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2) country code (for example, `en-US`).                                                                                                                                                                                                                                                                                                                                               |
 
-#### Including the ecommerce URL in the enrollment URL
+#### Including the e-commerce URL in the enrollment URL
 
-Include an `ecommerce_url` in the enrollment form URL when redirecting the customer to the TreviPay enrollment form. The format for the enrollment form with a redirect is:
+Include an `ecommerce_url` in the enrollment form URL when redirecting the customer to the TreviPay enrollment form. The format for the enrollment form with a redirect is as follows:
 
 `https://<white-label>.b2b.credit/<locale>/apply?client_reference_id=<business-UUID>&ecommerce_url=<www.returnURL.com>`
 
@@ -136,7 +138,7 @@ There are two ways to apply the value for the `client_reference_id` to the `orga
 Alternatively, you can:&#x20;
 
 1. [Create a source](../sources/using-the-source-identifier.md#creating-payment-sources) or a [source with payment sessions](../../shopper-apis/cart/payment-sessions.md#creating-a-source-with-payment-sessions) and provide the `client_reference_id`.
-2. [Apply the source to the cart](../sources/#attaching-a-payment-method-to-an-order-or-cart).  The `client_reference_id` value now appears as the value for the [`organizationId`](https://dispatch-dashboard.digitalriverws.net/re-docs/shopper#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post).&#x20;
+2. [Apply the source to the cart](../sources/#attaching-a-payment-method-to-an-order-or-cart). The `client_reference_id` value now appears as the value for the [`organizationId`](https://dispatch-dashboard.digitalriverws.net/re-docs/shopper#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post).&#x20;
 
 ## Support matrix
 

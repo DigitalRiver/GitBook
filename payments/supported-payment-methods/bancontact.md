@@ -1,10 +1,10 @@
 ---
-description: Learn about Bancontact
+description: >-
+  Bancontact is a Belgian debit card with no chargeback risk (a unique feature
+  for debit cards).
 ---
 
 # Bancontact
-
-Bancontact is a Belgian debit card with no chargeback risk (a unique feature for debit cards).&#x20;
 
 ## How to configure
 

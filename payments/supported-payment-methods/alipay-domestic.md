@@ -12,6 +12,8 @@ Established in 2004, Alipay (domestic) is China's leader in third-party online p
 Alipay (domestic) does not support recurring payments.
 {% endhint %}
 
+Contact your Customer Success Manager and sign an Alipay (domestic) addendum if you want to use Alipay (domestic).
+
 ## How to configure&#x20;
 
 How you configure Alipay (domestic) depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).

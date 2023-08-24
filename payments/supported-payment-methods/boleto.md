@@ -1,7 +1,7 @@
 ---
 description: >-
-  Boleto (meaning 'ticket') Bancário is an official Brazilian payment method,
-  which is regulated by the Central Bank of Brazil.
+  Boleto (meaning 'ticket') Bancário is an official Brazilian payment method
+  that the Central Bank of Brazil regulates.
 ---
 
 # Boleto
@@ -19,6 +19,8 @@ Boleto Bancário provides the following benefits:&#x20;
 * Regarding online purchases, Boleto Bancário is especially popular for high-ticket items because many consumers still do not feel secure providing their payment details online.&#x20;
 
 For [refunds](../../admin-apis/refunds/managing-a-refund-for-a-delayed-payment-method.md), the shopper who paid for the original transaction will receive the refund amount. The bank account details for the refund must match the shopper's CPF/CNPJ tax ID. The bank account owner must be identical to the bank account owner of the original request.
+
+Contact your Customer Success Manager and sign a Boleto addendum if you want to use Boleto.
 
 ## How to configure&#x20;
 

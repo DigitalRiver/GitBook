@@ -1,15 +1,16 @@
 ---
 description: >-
-  Konbini is a payment method that requires a user to complete an order by
-  making a payment at a store using a receipt number or a bank.
+  Konbini is a payment method where users pay for their orders at a convenience
+  store using a receipt number or bank. These stores, such as 7-Eleven,
+  FamilyMart, and Lawson, are very popular in Japan.
 ---
 
 # Konbini
 
-Konbini is a set of small convenience stores from different brands like Seven Eleven, FamilyMart, Lawson, etc. These stores are very popular in Japan because they are nearly on every corner, so everybody can pay for everything very quickly without the need to have a credit card or other electronic-enabled payment options. Konbini is a delayed fulfillment payment method, meaning fulfillment occurs after authorization and settlement.
+Konbini is a delayed fulfillment payment method, which means fulfillment happens after authorization and settlement.
 
 {% hint style="warning" %}
-**Additional setup required:** If you are interested in using Konbini, contact your Account Manager. The Account Manager will send instructions to file an application form to obtain a client unique ship ID from a local payment gateway and will assist in completing the form in Japanese.
+**Additional setup required:** If you are interested in using Konbini, contact your Customer Success Manager. The Customer Success Manager will send instructions to file an application form to obtain a client's unique ship ID from a local payment gateway. They will assist in completing the form in Japanese.
 {% endhint %}
 
 ## How to configure&#x20;

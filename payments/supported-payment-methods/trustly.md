@@ -4,9 +4,9 @@ description: Trustly is one of the leaders of bank transfer payments in European
 
 # Trustly
 
-Founded in Sweden in 2008, Trustly operates in 29 countries. Shoppers can use Trustly to make fast, simple, and secure payments directly from their bank accounts without the risk of fraud. With a merchant base of 8,000, Trustly integrates with 6,300 banks to collect funds locally across Europe and offers real-time reconciliation through proprietary integrations to these accounts. Shoppers can make e-commerce payments by selecting Trustly and authenticating the payments through their existing online banking interface.
-
 Trustly is a bank transfer payment service. During the online checkout process, shoppers select their bank, log into their online banking, choose the account from which they want to pay, and verify their purchase.&#x20;
+
+Founded in Sweden in 2008, Trustly operates in 29 countries. Shoppers can use Trustly to make fast, simple, and secure payments directly from their bank accounts without the risk of fraud. With a merchant base of 8,000, Trustly integrates with 6,300 banks to collect funds locally across Europe and offers real-time reconciliation through proprietary integrations to these accounts. Shoppers can make e-commerce payments by selecting Trustly and authenticating the payments through their existing online banking interface.
 
 The following table lists where Trustly is available by currency and country.
 
@@ -17,6 +17,8 @@ The following table lists where Trustly is available by currency and country.
 | GBP      | Unitied Kingdom (GB)                                                                                                                               |
 | NOK      | Norway (NO)                                                                                                                                        |
 | SEK      | Sweden (SE)                                                                                                                                        |
+
+Contact your Customer Success Manager and sign a Trustly addendum if you want to use Trustly.
 
 ## How to configure&#x20;
 

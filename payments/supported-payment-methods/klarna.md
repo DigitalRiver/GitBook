@@ -18,6 +18,8 @@ Klarna offers the following payment options:
 
 Offering a short-term loan reduces cart abandonment and improves conversions and average order values. There are unique display and entry requirements for each country. Contact your Digital River Representative for more details. &#x20;
 
+Contact your Customer Success Manager and sign a Klarna addendum if you want to use Klarna.
+
 ## How to configure &#x20;
 
 How you configure Klarna depends on whether you use [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/). &#x20;

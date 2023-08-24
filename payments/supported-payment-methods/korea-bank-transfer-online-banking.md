@@ -6,6 +6,8 @@ description: Learn about Korea Bank Transfer.
 
 Accept online bank transfers in Korea, a payment method representing 20% of the local market share. Recurring payments are supported. &#x20;
 
+Contact your Customer Success Manager and sign a Korea Bank Transfer (Online Banking) addendum if you want to use Korea Bank Transfer (Online Banking).
+
 ## How to configure&#x20;
 
 How you configure Korea Bank Transfer depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/). &#x20;

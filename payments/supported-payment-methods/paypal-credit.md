@@ -6,6 +6,8 @@ description: Learn about PayPal Credit.
 
 Allow consumers to buy online and pay later for their products. This payment method is accepted in thousands of online stores and is available everywhere PayPal is accepted (as long as the PayPal Credit and PayPal accounts are linked). PayPal Credit uses the date of birth and last four digits of SSN to approve or deny a consumer for a line of credit, and the applicant will be notified within seconds whether they have been approved or not.&#x20;
 
+Contact your Customer Success Manager and sign a PayPal Credit addendum if you want to use PayPal Credit.
+
 ## How to configure&#x20;
 
 How you configure PayPal Credit depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).  &#x20;

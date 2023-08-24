@@ -6,7 +6,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 ## 2023/8/24
 
-We added [payment flow descriptions](../../payments/sources/flows-by-payment-type.md) to ensure a smooth payment process for each payment type. These payment flows follow Digital River's recommended best practices.
+In Commerce API, we added.
+
+* [Payment flow descriptions](../../payments/sources/flows-by-payment-type.md) to ensure a smooth payment process for each payment type. These payment flows follow Digital River's recommended best practices.
+* An Addendum required column to the [Supported payment methods](broken-reference) table.
 
 ## 2023/8/23
 

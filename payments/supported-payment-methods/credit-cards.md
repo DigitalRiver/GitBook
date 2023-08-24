@@ -1,7 +1,7 @@
 ---
 description: >-
   The Credit Cards payment method is a fast and secure shopping experience where
-  the consumer can purchase goods or services on credit.
+  consumers can purchase goods or services on credit.
 ---
 
 # Credit Cards

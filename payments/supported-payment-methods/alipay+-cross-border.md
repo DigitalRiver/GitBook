@@ -12,6 +12,8 @@ Alipay+ (cross-border) is a digital wallet that redirects from the checkout page
 Alipay+ (cross-border) supports recurring payments.
 {% endhint %}
 
+Contact your Customer Success Manager and sign an Alipay+ (cross-border) addendum if you want to use Alipay+ (cross-border).
+
 ## How to configure&#x20;
 
 How you configure Alipay (domestic) depends on whether you're using [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).

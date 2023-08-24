@@ -13,18 +13,20 @@ You can find an example of integration [here](https://drh.img.digitalriver.com/D
 
 ## How to configure
 
-To offer Apple Pay on your website, you must first validate your domain with Apple before accepting transactions. To complete this validation:
+To offer Apple Pay on your website, you must validate your domain with Apple before accepting transactions. To complete this validation:
 
-1. [Download](https://drapi.io/docs/apple-pay/apple-developer-merchantid-domain-association) the `apple-developer-merchantid-domain-association` file.
-2. Save the file to the following location on the domain where you want to offer Apple Pay: `/.well-known/apple-developer-merchantid-domain-association` \
-   \
-   Repeat this step for each additional domain you want to offer Apple Pay. For example:\
-   `https://buy.mydomain.com/.well-known/apple-developer-merchantid-domain-association`\
-   `https://shop.mydomain.com/.well-known/apple-developer-merchantid-domain-association`\
-   `https://www.mydomain.com/.well-known/apple-developer-merchantid-domain-association` \
-   \
-   **Note**: You must serve the `apple-developer-merchantid-domain-association` file over HTTPS.
-3. Contact your Digital River representative with the domains you want to register.
+**Step one**: [Download](https://drapi.io/docs/apple-pay/apple-developer-merchantid-domain-association) the `apple-developer-merchantid-domain-association` file.
+
+**Step two**: Save the file to the following location on the domain where you want to offer Apple Pay: `/.well-known/apple-developer-merchantid-domain-association` \
+\
+Repeat this step for each additional domain you want to offer Apple Pay. For example:\
+`https://buy.mydomain.com/.well-known/apple-developer-merchantid-domain-association`\
+`https://shop.mydomain.com/.well-known/apple-developer-merchantid-domain-association`\
+`https://www.mydomain.com/.well-known/apple-developer-merchantid-domain-association` \
+\
+**Note**: You must serve the `apple-developer-merchantid-domain-association` file over HTTPS.
+
+**Step three**: Contact your Digital River representative with the domains you want to register.
 
 After completing these steps, the remainder of the Apple Pay configuration process depends on whether you use [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).
 

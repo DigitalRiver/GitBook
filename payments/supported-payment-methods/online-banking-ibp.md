@@ -7,7 +7,9 @@ description: >-
 
 # Online Banking (IBP)
 
-Online Banking allows customers to use the online banking service provided by their bank. &#x20;
+IBP allows customers to use the online banking service provided by their bank.&#x20;
+
+Contact your Customer Success Manager and sign an Online Banking (IBP) addendum if you want to use Online Banking (IBP).&#x20;
 
 ## Supported online banking options
 
