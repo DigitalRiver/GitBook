@@ -4,6 +4,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 # Release notes
 
+## 2023/8/24
+
+We added [payment flow descriptions](../../payments/sources/flows-by-payment-type.md) to ensure a smooth payment process for each payment type. These payment flows follow Digital River's recommended best practices.
+
 ## 2023/8/23
 
 We updated the shopper token information for the OAuth [Token ](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Token)in the [Shopper APIs reference](https://www.digitalriver.com/docs/commerce-shopper-api/).
