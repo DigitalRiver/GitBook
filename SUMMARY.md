@@ -302,6 +302,7 @@
   * [Wire Transfer](payments/supported-payment-methods/wire-transfer.md)
 * [Source basics](payments/sources/README.md)
   * [Managing sources](payments/sources/using-the-source-identifier.md)
+  * [Flows by payment type](payments/sources/flows-by-payment-type.md)
   * [Handling credit card sources](payments/sources/handling-credit-card-sources.md)
   * [Retrieving sources](payments/sources/retrieving-sources.md)
 * [Building payment workflows](payments/building-your-workflows.md)

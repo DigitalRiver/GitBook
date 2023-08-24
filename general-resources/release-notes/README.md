@@ -4,8 +4,6 @@ description: Keep track of changes and updates to the Commerce API.
 
 # Release notes
 
-V1 is the base version of the Commerce API. The following dates indicate when we released updates to this version.
-
 ## 2023/8/23
 
 We updated the shopper token information for the OAuth [Token ](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Token)in the [Shopper APIs reference](https://www.digitalriver.com/docs/commerce-shopper-api/).
@@ -15,15 +13,6 @@ We updated the shopper token information for the OAuth [Token ](https://www.digi
 We added the following reasons to the [validation-error](../../common-shopper-and-admin-apis/error-codes/error-codes-for-shopper-apis/400-bad-request.md#validation-error) in [400 Bad Request](../../common-shopper-and-admin-apis/error-codes/error-codes-for-shopper-apis/400-bad-request.md).
 
 * The total product quantity for the current subscription plan and midterm change exceeds the product quantity restriction.
-* The total product quantity for the current subscription plan and midterm change is below the product minimum quantity restriction.
-
-## 2023/5/31
-
-We updated the following content in the [Shoppers APIs reference](https://www.digitalriver.com/docs/commerce-shopper-api/):
-
-* How to [get your orders](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Order-Lookup/paths/\~1v1\~1shoppers\~1order-lookup/post).
-* Added a [`warnings` object](../../common-shopper-and-admin-apis/error-codes/warnings-object/) to [Update current cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post).
-* Added the `payment-unexpected-error` to [Update current cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Carts/paths/\~1v1\~1shoppers\~1me\~1carts\~1active/post).
 
 ## 2023/5/22
 
