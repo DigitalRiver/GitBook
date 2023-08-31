@@ -6,7 +6,9 @@ description: Keep track of changes and updates to the Commerce API.
 
 ## 2023/8/31
 
-Digital River has recently added [CCAvenue ](../../payments/supported-payment-methods/ccavenue.md)to its payment method options. CCAvenue is a payment processing option for Digital River clients with an Indian bank account. This auto-settle payment method offers various local payment options in India, such as Credit Card, Wallet, Net Banking, and UPI.
+* Digital River has recently added [CCAvenue ](../../payments/supported-payment-methods/ccavenue.md)to its payment method options. CCAvenue is a payment processing option for Digital River clients with an Indian bank account. This auto-settle payment method offers various local payment options in India, such as Credit Cards, Wallet, Net Banking, and UPI.
+* We added [Testing the CCAvenue p](../../resources/testing-scenarios.md#testing-the-ccavenue-payment-method)ayment method to [Testing scenarios](../../resources/testing-scenarios.md).
+* We also added the Payment required columns to the [Supported payment methods](../../payments/supported-payment-methods/) table.
 
 ## 2023/8/24
 
