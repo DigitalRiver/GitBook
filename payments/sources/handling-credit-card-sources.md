@@ -22,4 +22,4 @@ You can either [attach the source to a customer](./#attaching-a-payment-method-t
 Credit card sources should be used shortly after they are created. This is because CVC data expires within a few minutes. Orders created with cards that lack CVCs are more likely to be declined and pose a greater fraud risk.
 {% endhint %}
 
-Once you have attached the source to a customer or directly to a cart, it can then be used by Digital River when you [submit the Cart](https://docs.digitalriver.com/commerce-api/cart/submitting-a-cart).
+Once you have attached the source to a customer or directly to a cart, Digital River can use it when you [submit the Cart](https://docs.digitalriver.com/commerce-api/cart/submitting-a-cart).

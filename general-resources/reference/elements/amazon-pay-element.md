@@ -4,7 +4,7 @@ description: Learn how to use the Amazon Pay element.
 
 # Amazon Pay element
 
-With DigitalRiver.js, you can create an Amazon Pay collection element that will automatically retrieve and build a select dropdown that can be styled and placed on your page like other DigitalRiver.js elements.
+With DigitalRiver.js, you can create an Amazon Pay collection element that will automatically retrieve and build a select drop-down that can be styled and placed on your page like other DigitalRiver.js elements.
 
 ## Creating an Amazon Pay element
 
@@ -28,7 +28,7 @@ var options = {
     sourceData: {
         type: 'amazonPay',
         sessionId: sessionId,
-        country: 'US', // If your session does not contain shopper a country, a two-letter country code is required.
+        country: 'US', // If your session does not contain the shopper country, a two-letter country code is required.
         amazonPay: {
             //Amazon Pay will redirect the shopper to this URL after the shopper signs in.
             returnUrl: 'https://return.com', 
@@ -92,7 +92,7 @@ amazonPay.unmount();
 
 ### amazonPay.destroy();
 
-Call this function to remove the Amazon Pay element from your page as well as remove its functionality. You cannot re-add the destroyed element to your page via `mount()`.
+Call this function to remove the Amazon Pay element from your page and remove its functionality. You cannot re-add the destroyed element to your page via `mount()`.
 
 {% tabs %}
 {% tab title="Example" %}

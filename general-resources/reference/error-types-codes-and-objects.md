@@ -6,7 +6,7 @@ description: Learn about error types, codes, and objects.
 
 ## Change event error object
 
-When a DigitalRiver.js detects an error with an element, it returns an error object with the change event. This object will contain a type, code, and message.
+When DigitalRiver.js detects an error with an element, it returns an error object with the change event. This object will contain a type, code, and message.
 
 {% tabs %}
 {% tab title="Change Event Error object" %}
@@ -22,7 +22,7 @@ When a DigitalRiver.js detects an error with an element, it returns an error obj
 
 ## Create source error object
 
-DigitalRiver.js returns this error object within the [createSource ](digitalriver-object.md#digitalriver-createsource-element-sourcedata)method if an error occurs with the tokenization request. This object will contain a type and an array of messages that will explain the error in detail.
+DigitalRiver.js returns this error object within the [createSource ](digitalriver-object.md#digitalriver-createsource-element-sourcedata)method if an error occurs with the tokenization request. This object will contain a type and an array of detailed messages explaining the error.
 
 {% tabs %}
 {% tab title="Create Source Error object" %}
@@ -65,7 +65,7 @@ The following table contains a list of DigitalRiver.js error types.
 The following table contains a list of DigitalRiver.js error codes.
 
 {% hint style="info" %}
-It's important that you only indicate that the payment has been declined and do not share the code or descriptions listed below with the customer.
+You must only indicate that the payment has been declined and do not share the code or descriptions below with the customer.
 {% endhint %}
 
 | Code                                      | Description                                                                                                                                                           |

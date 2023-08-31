@@ -4,7 +4,7 @@ description: Learn the basics of sources.
 
 # Source basics
 
-In Commerce APIs, each source type has certain characteristics that determine how it is created and eventually processed. A [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) is associated with a [payment method](../supported-payment-methods/) that a customer selects to fund a transaction. Digital River retrieves data from the [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) when generating a charge.
+In Commerce APIs, each source type has certain characteristics that determine how it is created and eventually processed. A [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) is associated with a customer's [payment method](../supported-payment-methods/) that a customer uses to fund a transaction. Digital River retrieves data from the [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) when generating a charge.
 
 ## Source types
 
@@ -138,7 +138,7 @@ You should only attach a Source whose underlying payment method [supports reusab
 
 Refer to [primary and secondary sources](using-the-source-identifier.md#primary-versus-secondary-sources).
 
-### Payment method's authentication flow
+### Authentication flow
 
 A source's `flow` attribute represents how your customers experience the payment process and what actions they must take to authenticate a [payment method](./#supported-payment-methods). The enumerated values of the attribute are  `standard`, `redirect`, and `receiver`.
 

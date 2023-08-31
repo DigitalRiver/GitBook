@@ -4,7 +4,7 @@ description: Learn how to use the PayPal elements.
 
 # PayPal elements
 
-With DigitalRiver.js, you can create a PayPal element that will wrap the PayPal Checkout.js library and automatically handle payment authorization. The element follows the same creation and event structure as other DigitalRiver.js elements.
+With DigitalRiver.js, you can create a PayPal element that will wrap up the PayPal Checkout.js library and automatically handle payment authorization. The element follows the same creation and event structure as other DigitalRiver.js elements.
 
 ### Creating a PayPal element
 
@@ -90,7 +90,7 @@ paypal.mount('paypal-container');
 
 #### paypal.destroy();
 
-Use this function to remove the PayPal element from your page as well as remove its functionality. You cannot re-add the element to your page via `mount()`.
+Use this function to remove the PayPal element from your page and its functionality. You cannot re-add the element to your page via `mount()`.
 
 {% tabs %}
 {% tab title="Example" %}
@@ -197,7 +197,7 @@ paypal.on('click', function(event) {
 
 #### Cancel
 
-The Cancel event triggers when the customer closes the PayPal Element Payment Request interface.
+The Cancel event triggers when customers close the PayPal Element Payment Request interface.
 
 {% tabs %}
 {% tab title="Example" %}
@@ -221,7 +221,7 @@ paypal.on('cancel', function(event) {
 
 #### Source
 
-The Source event triggers when the Customer completes their interaction with the Payment Request interface, and creates a Payment Source. The emitted object will be a [Payment Request Response object](../digital-river-payment-objects.md#payment-request-response-object).
+The Source event triggers when the customer completes their interaction with the Payment Request interface, and creates a Payment Source. The emitted object will be a [Payment Request Response object](../digital-river-payment-objects.md#payment-request-response-object).
 
 {% tabs %}
 {% tab title="Example" %}
@@ -238,9 +238,9 @@ paypal.on('source', function(event) {
 ## Pay in 4
 
 {% hint style="info" %}
-**Additional setup required**: If you are interested in promoting Pay in 4, contact your Account Manager. The Account Manager will send setup instructions for PayPal in 4 banners.
+**Additional setup required**: If you want to promote Pay in 4, contact your Account Manager. The Account Manager will send setup instructions for PayPal in 4 banners.
 {% endhint %}
 
-Pay in 4 is a credit card installment product automatically provided by PayPal when a customer signs in to PayPal Express or PayPal Checkout. This option appears by default when a customer purchases a physical product, and the order value is between $30 and $600. When they complete their purchase, they make a down payment. They pay the rest in 3 payments–one every two weeks. This option is only available in the US.
+Pay in 4 is a credit card installment product automatically provided by PayPal when a customer signs in to PayPal Express or Pay Checkout. This option appears by default when a customer purchases a physical product, and the order value is between $30 and $600. When they complete their purchase, they make a down payment. They pay the rest in 3 payments–one every two weeks. This option is only available in the US.
 
-When a customer selects this payment method, a "soft hit" shows up in their credit report.
+When a customer selects this payment method, a "soft hit" appears in their credit report.

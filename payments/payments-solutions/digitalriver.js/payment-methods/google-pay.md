@@ -422,3 +422,7 @@ function getPrUpdateObject() {
 }
 ```
 {% endcode %}
+
+## Testing Google Pay
+
+See [Testing standard payment methods](../../../../resources/testing-scenarios.md#testing-standard-payment-methods) for testing instructions.

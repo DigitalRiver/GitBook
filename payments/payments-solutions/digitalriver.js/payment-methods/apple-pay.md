@@ -382,3 +382,7 @@ function getPrUpdateObject() {
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+## Testing Apple Pay
+
+See [Testing standard payment methods](../../../../resources/testing-scenarios.md#testing-standard-payment-methods) for testing instructions.

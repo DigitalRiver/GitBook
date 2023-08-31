@@ -8,9 +8,9 @@ description: >-
 
 Digital River offers the TreviPay payment method from Multi Service Technology Solutions, Inc.
 
-TreviPay enables Merchants to extend a line of credit for business buyers at checkout. This white-labeled solution facilitates online B2B payments by offering flexible net terms, digital statement handling, collections, credit approval management, and improving the overall B2B online buying experience. Digital River supports the following features: create user, payment capabilities, dispute and chargeback, subscription, reporting, API support, fraud, Drop-in, term code service support, and tax.
+TreviPay allows you to extend a line of credit for business buyers at checkout. This fully branded solution facilitates online B2B payments by offering flexible net terms, digital statement handling, collections, credit approval management, and improving the overall B2B online buying experience. Digital River supports the following features: create user, payment capabilities, dispute and chargeback, subscription, reporting, API support, fraud, Drop-in payments, term code service support, and tax.
 
-TreviPay assesses creditworthiness, absorbs non-payment risk, including the localized dunning process (collections) if required, and provides online Merchant and Buyer statement management tools. TreviPay supports the following features: application processing, account administration, account self-service, thresholds, commerce experience, alerts, and dunning (collections).
+TreviPay assesses creditworthiness, absorbs non-payment risk, including the localized dunning process (collections) if required, and provides online Merchant and Buyer statement management tools. TreviPay supports the following features: application processing, account administration, account self-service, thresholds, commerce experience, alerts, and dunning (collections) if required.
 
 TreviPay processes online e-commerce orders for physical, digital, and recurring product types. TreviPay does not support phone-in orders.
 
@@ -30,7 +30,9 @@ How you configure TreviPay depends on whether you're using [DigitalRiver.js with
 
 ## How it works
 
-Buyers select the TreviPay option at checkout, then they either log in to the Merchant's profile to complete their purchase or apply for their line of credit. Upon approval, the buyer can complete their transaction and manage purchases, statements, and vendor forms through the buyer portal.
+Buyers select the TreviPay option at checkout, and then they either log in to the Merchant's profile to complete their purchase or apply for their line of credit. Upon approval, the buyer can complete their transaction, and manage purchases, statements, and vendor forms through the buyer portal.
+
+TreviPay uses a [submit then redirect (STR) payment flow](../building-your-workflows/flows-by-payment-type.md#submit-then-redirect-str-payment-flow). Buyers select the TreviPay option at checkout, and then they either log in to the Merchant's profile to complete their purchase or apply for their line of credit. Upon approval, the buyer can complete their transaction and manage purchases, statements, and vendor forms through the buyer portal.
 
 ### Promote the TreviPay credit solution
 

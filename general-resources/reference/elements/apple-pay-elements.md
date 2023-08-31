@@ -94,7 +94,7 @@ if(applepay.canMakePayment()) {
 
 ### applepay.show();
 
-Call this function to show the Apple Pay Payment Request interface. This will automatically happen when using the element. If you'd like to trigger via another mechanism, you must call it as part of the user interaction (click handler).
+Call this function to show the Apple Pay Payment Request interface. This will automatically happen when using the element. If you'd like to trigger via another mechanism, call it part of the user interaction (click handler).
 
 {% tabs %}
 {% tab title="Example" %}
@@ -118,7 +118,7 @@ applepay.unmount();
 
 ### applepay.destroy();
 
-Call this function to remove the Apple Pay element from your page as well as remove its functionality. You cannot re-add the element to your page via `mount()`.
+Call this function to remove the Apple Pay element from your page and its functionality. You cannot re-add the element to your page via `mount()`.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -174,7 +174,7 @@ The Apple Pay element can receive the following events by creating an event list
 
 ### Source
 
-The Source event emits when the Customer completes their interaction with the Payment Request interface, and they create a Payment Source. The emitted object will be a [Payment Request Response object](../digital-river-payment-objects.md#payment-request-response-object).
+The Source event emits when the customer completes their interaction with the Payment Request interface, and creates a Payment Source. The emitted object will be a [Payment Request Response object](../digital-river-payment-objects.md#payment-request-response-object).
 
 {% tabs %}
 {% tab title="Example" %}

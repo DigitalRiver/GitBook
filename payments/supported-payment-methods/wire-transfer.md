@@ -6,7 +6,7 @@ description: >-
 
 # Wire Transfer
 
-When using this payment method, a customer must provide their bank with transfer information provided by the merchant to complete the payment. The transfer details include the account holder, bank name, city, country description, payment reference, bank account number, additional bank information, and the international bank account number (IBAN).&#x20;
+When using this payment method, a shopper must provide their bank with transfer information provided by the merchant to complete the payment. The transfer details include the account holder, bank name, city, country description, payment reference, bank account number, additional bank information, and the international bank account number (IBAN).&#x20;
 
 ## How to configure&#x20;
 
@@ -15,6 +15,10 @@ How you configure Wire Transfer depends on whether you're using [DigitalRiver.js
 | DigitalRiver.js with Elements                                                                       | Drop-in payments                                                                                 |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Wire Transfer](../payments-solutions/digitalriver.js/payment-methods/wire-transfer.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
+
+## How it works
+
+Wire Transfer uses a [delayed payment flow](../building-your-workflows/flows-by-payment-type.md#delayed-payment-flow).
 
 ## Supported markets
 

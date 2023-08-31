@@ -7,7 +7,7 @@ description: >-
 
 # Afterpay
 
-This payment method boasts a strong existing user base providing you direct access to their 19 million users worldwide. Afterpay also offers an opportunity to increase your shopper frequency by up to 50% and average order values by up to 40%.
+This payment method boasts a strong existing user base, providing you direct access to their 19 million users worldwide. Afterpay also offers an opportunity to increase your shopper frequency by up to 50% and average order values by up to 40%.
 
 Contact your Customer Success Manager and sign an Afterpay addendum if you want to use Afterpay.
 
@@ -20,6 +20,10 @@ How you configure Afterpay depends on whether you're using [DigitalRiver.js with
 | DigitalRiver.js with Elements                                                                         | Drop-in payments                                                                                 |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Afterpay](../payments-solutions/digitalriver.js/payment-methods/configuring-afterpay.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
+
+## How it works
+
+Afterpay uses a [submit then redirect (STR) payment flow](../building-your-workflows/flows-by-payment-type.md#submit-then-redirect-str-payment-flow).
 
 ## Supported markets
 

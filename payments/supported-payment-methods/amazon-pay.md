@@ -18,9 +18,7 @@ How you configure Amazon Pay depends on whether you're using [DigitalRiver.js wi
 
 ## How it works
 
-Digital River supports Amazon Pay's Express Checkout flow.&#x20;
-
-The shopper clicks the Amazon Pay Checkout button at checkout, and then they sign in to Amazon Pay to authorize payment and complete their purchase. &#x20;
+Digital River supports [Amazon Pay's Express Checkout flow](../building-your-workflows/flows-by-payment-type.md#submit-an-amazon-pay-flow). Amazon Pay's Express Checkout uses an [express checkout payment flow](../building-your-workflows/flows-by-payment-type.md#express-checkout-payment-flow). The shopper clicks the Amazon Pay Checkout button at checkout, and then they sign in to Amazon Pay to authorize payment and complete their purchase. &#x20;
 
 Digital River accepts the shopper's billing and shipping addresses from the shopper's Amazon account and populates the checkout or order confirmation page with that information.&#x20;
 

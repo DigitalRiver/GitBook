@@ -20,6 +20,10 @@ How you configure Alipay (domestic) depends on whether you're using [DigitalRive
 
 <table><thead><tr><th width="413">DigitalRiver.js with Elements</th><th>Drop-in payments</th></tr></thead><tbody><tr><td><a href="broken-reference">Configuring Alipay+ (cross-border)</a></td><td><a href="../payments-solutions/drop-in/drop-in-integration-guide.md">Drop-in Payments Integration Guide</a></td></tr></tbody></table>
 
+## How it works
+
+Alipay+ (cross-border) uses a [redirect then submit (RTS) payment flow](../building-your-workflows/flows-by-payment-type.md#redirect-then-submit-rts-payment-flow).
+
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

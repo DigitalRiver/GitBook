@@ -276,6 +276,10 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endtab %}
 {% endtabs %}
 
+### Testing PayPal Express Checkout (Digital Wallet)
+
+See [Testing redirect payment methods](../../../../resources/testing-scenarios.md#testing-redirect-payment-methods) for testing instructions.
+
 ## PayPal Billing Agreement
 
 The PayPal Billing Agreement allows consumers to use their PayPal account to make recurring payments when they purchase a subscription product by clicking the PayPal button. Consumers have the option to choose to auto-renew or manually renew.
@@ -508,6 +512,10 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+### Testing PayPal Billing Agreement
+
+See [Testing redirect payment methods](../../../../resources/testing-scenarios.md#testing-redirect-payment-methods) for testing instructions.
 
 ## PayPal Pay Later
 
@@ -855,3 +863,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+### Testing PayPal Pay Later
+
+See [Testing redirect payment methods](../../../../resources/testing-scenarios.md#testing-redirect-payment-methods) for testing instructions.

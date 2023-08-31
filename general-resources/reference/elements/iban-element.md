@@ -184,7 +184,7 @@ iban.on('blur', function(event) {
 
 ### ‌Change
 
-‌The Change event triggers when the IBAN element's state has changed. If an error is detected, DigitalRiver.js will return a Change Event Error object with the event payload.
+‌The Change event triggers when the IBAN element's state has changed. DigitalRiver.js will return a Change Event Error object with the event payload if it detects an error.
 
 {% tabs %}
 {% tab title="Javascript" %}

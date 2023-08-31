@@ -178,4 +178,4 @@ digitalriver.retrieveAvailablePaymentMethods({
 
 Although we generally recommend using [Drop-in Payments](../../payments/payments-solutions/drop-in/) to handle payments, you can also migrate your existing integration directly to payment sessions. For the Commerce API, [payment sessions must be enabled](payment-sessions.md#enable-payment-sessions).
 
-Once you have completed this migration process, you must [build your SCA workflows](../../payments/building-your-workflows.md) using [Drop-in Payments](../../payments/payments-solutions/drop-in/) or [DigitalRiver.js with elements](../../payments/payments-solutions/digitalriver.js/).&#x20;
+Once you have completed this migration process, you must [build your SCA workflows](../../payments/building-your-workflows/) using [Drop-in Payments](../../payments/payments-solutions/drop-in/) or [DigitalRiver.js with elements](../../payments/payments-solutions/digitalriver.js/).&#x20;

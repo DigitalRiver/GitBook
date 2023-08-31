@@ -159,3 +159,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+## Testing TreviPay
+
+See [Testing redirect payment methods](../../../../resources/testing-scenarios.md#testing-redirect-payment-methods) for testing instructions.

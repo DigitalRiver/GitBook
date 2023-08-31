@@ -62,7 +62,7 @@ compliance.unmount();
 
 ### compliance.destroy();
 
-Call this function to remove the Compliance element from your page as well as remove its functionality. You cannot re-add the destroyed element to your page via mount().
+Call this function to remove the Compliance element from your page and remove its functionality. You cannot re-add the destroyed element to your page via mount().
 
 {% tabs %}
 {% tab title="Example" %}

@@ -199,3 +199,7 @@ Once authorized, you can use the source by [attaching it to a cart](wire-transfe
 }
 ```
 {% endcode %}
+
+## Testing Trustly
+
+See [Testing redirect payment methods](../../../../resources/testing-scenarios.md#testing-redirect-payment-methods) for testing instructions.

@@ -196,4 +196,4 @@ ideal.on('change', function(event) {
 ```
 {% endcode %}
 
-In this flow, you can now use the [createSource()](../digitalriver-object.md#createsource-element-sourcedata) method to create a source using the iDEAL element.
+In this flow, you can use the [createSource()](../digitalriver-object.md#createsource-element-sourcedata) method to create a source using the iDEAL element.

@@ -218,3 +218,7 @@ Once authorized, you can use the source by&#x20;
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+## Testing PayCo
+
+See [Testing standard payment methods](../../../../resources/testing-scenarios.md#testing-standard-payment-methods) for testing instructions.

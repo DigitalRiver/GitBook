@@ -18,6 +18,10 @@ How you configure Credit Cards depends on whether you're using [DigitalRiver.js 
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Credit Cards](../payments-solutions/digitalriver.js/payment-methods/credit-cards.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
+## How it works
+
+Credit Cards use a [standard payment flow](../building-your-workflows/flows-by-payment-type.md#standard-payment-flow).
+
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

@@ -283,4 +283,4 @@ konbini.on('change', function(event) {
 {% endtab %}
 {% endtabs %}
 
-In this flow, you can now use the `createSource` method to create a source using the Konbini element.
+In this flow, you can use the `createSource` method to create a source using the Konbini element.

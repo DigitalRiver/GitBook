@@ -14,6 +14,10 @@ Configuring the PayPal Billing Agreement depends on whether you use [DigitalRive
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring PayPal Billing Agreement](../payments-solutions/digitalriver.js/payment-methods/paypal.md#paypal-billing-agreement) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
+## How it works
+
+PayPal Billing Agreement uses a [redirect then submit (RTS) payment flow](../building-your-workflows/flows-by-payment-type.md#redirect-then-submit-rts-payment-flow).
+
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

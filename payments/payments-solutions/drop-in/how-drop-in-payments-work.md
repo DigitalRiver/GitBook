@@ -1,13 +1,13 @@
 ---
-description: Learn how Drop-in Payments works.
+description: Learn how Drop-in payments works.
 ---
 
-# How Drop-in Payments work
+# How Drop-in payments work
 
-When the client goes to checkout, the client-server sends a create cart request to Digital River, and Digital River returns the cart. The client-server then sends a request to provide the payment session ID to the client's front end. The client front end instantiates Drop-in Payments with the payment session ID and configurations, and Drop-in Payments display the payment methods. When the customer selects a payment method and provides their payment details, the client front end triggers an `onSuccess` event and sends the source ID to the client server. The client-server uses the source with the cart or shopper.
+When the client goes to checkout, the client-server sends a create cart request to Digital River, and Digital River returns the cart. The client-server then sends the payment session identifier to the client's front end. The client front end uses the payment session identifier and other configuration settings to instantiate Drop-in payments. Once instantiated, transaction-applicable payment methods are displayed in a modal window. When the customer selects a payment method and provides their payment details, the client front end triggers an `onSuccess` event and sends the source identifier to the client server. The client-server uses the source with the cart and shoppers.
 
 {% hint style="info" %}
-To better understand how the process works, check out the [interactive Drop-in builder](https://drapi.io/drop-in-builder/).
+Check out the [interactive Drop-in builder](https://drapi.io/drop-in-builder/) to better understand how the process works.
 {% endhint %}
 
 {% embed url="https://player.vimeo.com/video/683888702?h=2b803b92e0" %}
@@ -18,7 +18,7 @@ To better understand how the process works, check out the [interactive Drop-in b
 
 </div>
 
-## Drop-in Payments flows
+## Drop-in payments flows
 
 The following table is meant to help you better understand your Drop-in payments embed options:
 

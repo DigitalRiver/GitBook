@@ -247,3 +247,7 @@ digitalriver.createSource(data).then(function(result) {
 {% hint style="warning" %}
 **Additional setup required**: If you want to use Klarna, contact your Account Manager. The Account Manager will send setup instructions for Klarna Banners after you sign the client addendum.
 {% endhint %}
+
+## Testing Klarna
+
+See [Testing redirect payment methods](../../../../resources/testing-scenarios.md#testing-redirect-payment-methods) for testing instructions.

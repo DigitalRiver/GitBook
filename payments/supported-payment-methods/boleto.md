@@ -30,6 +30,10 @@ How you configure Bancontact depends on whether you're using [DigitalRiver.js wi
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Boleto](../payments-solutions/digitalriver.js/payment-methods/configuring-boleto.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
+## How it works
+
+Boleto uses a [delayed payment flow](../building-your-workflows/flows-by-payment-type.md#delayed-payment-flow).
+
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

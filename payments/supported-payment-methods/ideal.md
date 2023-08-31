@@ -18,6 +18,10 @@ How you configure iDEAL depends on whether you're using [DigitalRiver.js with El
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring iDEAL](../payments-solutions/digitalriver.js/payment-methods/configuring-ideal.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
+## How it works
+
+iDEAL uses a [redirect then submit (RTS) payment flow](../building-your-workflows/flows-by-payment-type.md#redirect-then-submit-rts-payment-flow).
+
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

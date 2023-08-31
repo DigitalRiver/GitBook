@@ -1,22 +1,22 @@
 ---
-description: Create a payment form using Drop-in Payments.
+description: Create a payment form using Drop-in payments.
 ---
 
-# Drop-in Payments integration guide
+# Drop-in payments integration guide
 
 This page explains how to [get started](drop-in-integration-guide.md#getting-started) integrating [Drop-in payments](./) into both [cart flows](drop-in-integration-guide.md#using-drop-in-payments-within-your-cart-flow) and [account management flows](drop-in-integration-guide.md#using-drop-in-payments-to-collect-payment-details-on-a-my-account-page).&#x20;
 
 ## Getting started
 
-You can set up Drop-in Payments in seven steps:‌
+You can set up Drop-in payments in seven steps:‌
 
 * [Step 1: Include DigitalRiver.js](drop-in-integration-guide.md#step-1-include-digitalriver-js-on-your-page)
 * [Step 2: Include the base CSS file](drop-in-integration-guide.md#step-2-include-the-hydrate-css-file)
 * [Step 3: Initialize DigitalRiver.js with your public key](drop-in-integration-guide.md#step-3-initialize-digitalriver-js-with-your-public-key)
-* [Step 4: Create Drop-in Payments container](drop-in-integration-guide.md#step-3-initialize-digitalriver-js-with-your-public-key)
-* [Step 5: Create a Drop-in Payments configuration object](drop-in-integration-guide.md#step-5-configure-hydrate)
-* [Step 6: Use the Configuration object to create an instance of Drop-in Payments](drop-in-integration-guide.md#step-6-allow-the-shopper-to-interact-with-hydrate)
-* [Step 7: Mount Drop-in Payments on a checkouts or account management page](drop-in-integration-guide.md#step-7-place-drop-in-payments-on-your-cart-or-shopper-page)
+* [Step 4: Create Drop-in payments container](drop-in-integration-guide.md#step-4-create-a-drop-in-payments-container)
+* [Step 5: Create a Drop-in payments configuration object](drop-in-integration-guide.md#step-5-configure-hydrate)
+* [Step 6: Use the Configuration object to create an instance of Drop-in payments](drop-in-integration-guide.md#step-6-allow-the-shopper-to-interact-with-hydrate)
+* [Step 7: Mount Drop-in payments on a checkouts or account management page](drop-in-integration-guide.md#step-7-place-drop-in-payments-on-your-cart-or-shopper-page)
 
 ### Step 1: Include DigitalRiver.js <a href="#step-1-include-digitalriver-js-on-your-page" id="step-1-include-digitalriver-js-on-your-page"></a>
 
@@ -30,7 +30,7 @@ Include the following script on the pages where you want Drop-in payments to app
 
 ### Step 2: Include the base CSS file <a href="#step-2-include-the-hydrate-css-file" id="step-2-include-the-hydrate-css-file"></a>
 
-On the same pages, include the following link to the Drop-in Payments CSS file. If you'd like to customize the styles, simply override the CSS file with your own.
+Include the following link to the Drop-in payments CSS file on the same pages. If you'd like to customize the styles, override the CSS file with your own.
 
 {% code overflow="wrap" %}
 ```javascript
@@ -50,9 +50,9 @@ let digitalriver = new DigitalRiver("YOUR_PUBLIC_API_KEY", {
 ```
 {% endcode %}
 
-### Step 4: Create a Drop-in Payments container
+### Step 4: Create a Drop-in payments container
 
-Create a container element on the page where you want the Drop-in Payments to appear.
+Create a container element on the page where you want the Drop-in payments to appear.
 
 {% code overflow="wrap" %}
 ```javascript
@@ -60,9 +60,9 @@ Create a container element on the page where you want the Drop-in Payments to ap
 ```
 {% endcode %}
 
-### Step 5: Create a Drop-in Payments configuration object <a href="#step-5-configure-hydrate" id="step-5-configure-hydrate"></a>
+### Step 5: Create a Drop-in payments configuration object <a href="#step-5-configure-hydrate" id="step-5-configure-hydrate"></a>
 
-Create a `configuration` object. For details, refer to [Configuring Drop-in payments](drop-in-integration-guide.md#configuring-drop-in-payments).
+Create a `configuration` object. For details, refer to [Configuring drop-in payments](drop-in-integration-guide.md#configuring-drop-in-payments).
 
 {% code overflow="wrap" %}
 ```javascript
@@ -93,8 +93,8 @@ let configuration = {
 
 | Field                                                 | Required                                                                                                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sessionId`                                           | <p>Required for the <code>checkout</code> flow</p><p></p><p>Optional for the <code>managePaymentMethods</code> flow</p> | <p>The  <a href="../../../shopper-apis/cart/payment-sessions.md">payment session</a> identifier returned by Digital River. <br></p><p><strong>Important</strong>: The <code>sessionId</code> is required if you are using Drop-in Payments within a <a href="drop-in-integration-guide.md#initialize-and-place-drop-in-within-your-application">cart flow</a>. If you are using Drop-in Paymentsn to capture payment details on a <a href="drop-in-integration-guide.md#using-drop-in-to-collect-payment-details-on-a-my-account-page">customer portal</a>, then the <code>sessionId</code> is not required.</p> |
-| `options`                                             | Optional                                                                                                                | [Drop-in Payments configuration options](drop-in-integration-guide.md#drop-in-payments-options).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `sessionId`                                           | <p>Required for the <code>checkout</code> flow</p><p></p><p>Optional for the <code>managePaymentMethods</code> flow</p> | <p>The  <a href="../../../shopper-apis/cart/payment-sessions.md">payment session</a> identifier returned by Digital River. <br></p><p><strong>Important</strong>: The <code>sessionId</code> is required if you are using Drop-in Payments within a <a href="drop-in-integration-guide.md#initialize-and-place-drop-in-within-your-application">cart flow</a>. If you are using Drop-in paymentsn to capture payment details on a <a href="drop-in-integration-guide.md#using-drop-in-to-collect-payment-details-on-a-my-account-page">customer portal</a>, then the <code>sessionId</code> is not required.</p> |
+| `options`                                             | Optional                                                                                                                | [Drop-in payments configuration options](drop-in-integration-guide.md#drop-in-payments-options).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `billingAddress`                                      | Required                                                                                                                | The customer's billing address.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `billingAddress.firstName`                            | Required                                                                                                                | The customer's first name.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `billingAddress.lastName`                             | Required                                                                                                                | The customer's last name.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -112,11 +112,11 @@ let configuration = {
 | [`onSuccess`](drop-in-integration-guide.md#onsuccess) | ​Content                                                                                                                | The function called when the shopper has authorized payment and a payment source has been successfully created. Returns a `Source` object.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | [`onCancel`](drop-in-integration-guide.md#oncancel)   | ​Content                                                                                                                | The function called when the shopper cancels the payment process before authorizing payment.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | [`onError`](drop-in-integration-guide.md#onerror)     | ​Content                                                                                                                | The function called when an error has occurred.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| [`onReady`](drop-in-integration-guide.md#onready)     | ​Content                                                                                                                | The function called when Drop-in Payments is ready for user interaction.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [`onReady`](drop-in-integration-guide.md#onready)     | ​Content                                                                                                                | The function called when Drop-in payments is ready for user interaction.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
-### Step 6: Use the configuration object to create an instance of Drop-in Payments <a href="#step-6-allow-the-shopper-to-interact-with-hydrate" id="step-6-allow-the-shopper-to-interact-with-hydrate"></a>
+### Step 6: Use the configuration object to create an instance of Drop-in payments <a href="#step-6-allow-the-shopper-to-interact-with-hydrate" id="step-6-allow-the-shopper-to-interact-with-hydrate"></a>
 
-&#x20;Create an instance of Drop-in Payments by passing the [configuration object](drop-in-integration-guide.md#step-5-configure-hydrate) to `createDropin()`.
+&#x20;Create an instance of Drop-in payments by passing the [configuration object](drop-in-integration-guide.md#step-5-configure-hydrate) to `createDropin()`.
 
 {% code overflow="wrap" %}
 ```javascript
@@ -124,7 +124,7 @@ let dropin = digitalriver.createDropin(configuration);
 ```
 {% endcode %}
 
-### Step 7: Mount Drop-in Payments on your cart or account management page
+### Step 7: Mount Drop-in payments on your cart or account management page
 
 Add the following statement to the appropriate cart or account management page:
 
@@ -134,15 +134,15 @@ dropin.mount("drop-in");
 
 Once invoked, `mount()` displays Drop-in payments in the [designated container](drop-in-integration-guide.md#step-4-create-a-drop-in-payments-container).&#x20;
 
-## Using Drop-in Payments in a cart
+## Using Drop-in payments in a cart
 
 ### Finalize your cart
 
-Create a cart and provide the necessary information to have a final total for all amounts including taxes, shipping, duties, and fees.&#x20;
+Create a cart and provide the necessary information to have a final total for all amounts, including taxes, shipping, duties, and fees.&#x20;
 
-### Initialize and place Drop-in Payments within your application
+### Initialize and place Drop-in payments within your application
 
-From the experience page where you added the Drop-in Payments container, customers select how they want to pay. Drop-in Payments provides what is needed, including redirects to return a payment source that can be used in downstream API calls with the Commerce API.
+Customers select how they want to pay from the experience page where you added the Drop-in payments container. Drop-in payments provide what is needed, including redirects to return a payment source that can be used in downstream API calls with the Commerce API.
 
 ![](<../../../.gitbook/assets/widedropin (1).png>)
 
@@ -203,7 +203,7 @@ The following source object contains the customer's payment details for a one-ti
 
 During the [cart flow](drop-in-integration-guide.md#using-drop-in-payments-within-your-cart-flow), you can also give customers the opportunity to save their payment details for use in future transactions by enabling `showSavePaymentAgreement`.&#x20;
 
-This feature ensures that a customer's payment details are collected in a [PSD2 and SCA](../../psd2-and-sca/) compliant manner.&#x20;
+This feature ensures that a customer's payment details are collected in a [PSD2 and SCA-compliant](../../psd2-and-sca/) manner.&#x20;
 
 {% code overflow="wrap" %}
 ```json
@@ -243,17 +243,17 @@ When you enable this feature, each displayed [reusable payment method](../../sup
 
 </div>
 
-If the customers select the check box and click the [configurable button](drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button), Drop-in Payments performs the required authentication and, assuming that process is successful, the `data` object of [onSuccess ](drop-in-integration-guide.md#onsuccess)contains a source that is `readyForStorage`.
+If the customers select the checkbox and click the [configurable button](drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-payments-button), Drop-in payments performs the required authentication and, assuming that process is successful, the `data` object of [onSuccess ](drop-in-integration-guide.md#onsuccess)contains a source that is `readyForStorage`.
 
-In this case, handle `onSuccess` by passing `source.id` to your back-end and use your secret [API key](../../../resources/API-structure/#private-keys) to first [associate the source with the customer](../../sources/#attaching-a-payment-method-to-a-customer-or-payment-option) before you [associate the source with the cart](../../sources/#attaching-a-payment-method-to-an-order-or-cart).
+In this case, handle `onSuccess` by passing the `source.id`. Use your secret API key to your back end to [associate the source with the customer](../../sources/#attaching-a-payment-method-to-a-customer-or-payment-option) before you [associate the source with the cart](../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
-## Using Drop-in Payments in an account management portal
+## Using Drop-in payments in an account management portal
 
 If your integration allows customers to save payment methods outside of a [cart flow](drop-in-integration-guide.md#using-drop-in-payments-in-a-cart), you can add Drop-in payments to their account management portal.&#x20;
 
-In this flow, the Drop-in payments' configuration object doesn't require a `sessionId`. Instead, you should set `options.flow` to  `managePaymentMethods`. This informs Digital River that you're collecting and saving payment information in an account management setting. <mark style="background-color:orange;">??? Add links. ???</mark>
+In this flow, the Drop-in payments' configuration object doesn't require a `sessionId`. Instead, you should set `options.flow` to  `managePaymentMethods`. The `managePaymentMethods` informs Digital River that you're collecting and saving payment information in an account management setting.&#x20;
 
-Since you're not referencing a [payment session](../../../shopper-apis/cart/payment-sessions.md), you'll need to use the configuration object's `billingAddress` to pass the billing information you collect from customers.  <mark style="background-color:orange;">??? Add link. ???</mark>
+Because this is a `managePaymentMethods` flow, and there's no [payment session](../../../shopper-apis/cart/payment-sessions.md) to reference, you need to use the configuration object's `billingAddress` to pass the billing information you collect from customers. &#x20;
 
 There's no need to enable `showComplianceSection`, [`showTermsOfSaleDisclosure`](drop-in-integration-guide.md#show-terms-of-sale-disclosure), and [`showSavePaymentAgreement`](drop-in-integration-guide.md#show-save-payment-agreement) since those features only need to be turned on in [cart flows](drop-in-integration-guide.md#using-drop-in-payments-in-a-cart)<mark style="color:orange;">.</mark>
 
@@ -288,13 +288,13 @@ let configuration = {
 
 ### Configure and mount Drop-in payments <a href="#initialize-and-place-drop-in-within-your-application-1" id="initialize-and-place-drop-in-within-your-application-1"></a>
 
-Once the [create](drop-in-integration-guide.md#step-6-allow-the-shopper-to-interact-with-hydrate) and [mount](drop-in-integration-guide.md#step-7-mount-drop-in-payments-on-a-checkout-or-account-management-page) methods are invoked, Drop-in payments opens on the experience page that holds the container element. For more details on this process, refer to the [Getting started](drop-in-integration-guide.md#getting-started) section.
+Once the [create](drop-in-integration-guide.md#step-6-allow-the-shopper-to-interact-with-hydrate) and [mount](drop-in-integration-guide.md#step-7-mount-drop-in-payments-on-a-checkout-or-account-management-page) methods are invoked, Drop-in payments open on the container element's experience page. For more details on this process, refer to the [Getting started](drop-in-integration-guide.md#getting-started) section.
 
-Customers then select the payment method they want added to their account and agree to specific storage terms. They may also be required to complete [SCA](../../psd2-and-sca/), a process that Drop-in payments handles.&#x20;
+Customers then select the payment method to add to their account and agree to specific storage terms. They may also be required to complete [SCA](../../psd2-and-sca/), a process that Drop-in payments handles.&#x20;
 
 ### Handle `onSuccess`
 
-If Digital River successfully creates a payment source, the `data` object of [`onSuccess`](drop-in-integration-guide.md#onsuccess) contains a [source](../../sources/) that is `readyForStorage`. Handle the event by sending `source.id` to your back-end and using your [secret API key](../../../resources/API-structure/#private-keys) to [associate the source with the customer](../../sources/#attaching-a-payment-method-to-a-customer-or-payment-option).&#x20;
+If Digital River successfully creates a payment source, the `data` object of [`onSuccess`](drop-in-integration-guide.md#onsuccess) contains a [source](../../sources/) that is `readyForStorage`. Handle the event by sending `source.id` to your back end and using your [secret API key](../../../resources/API-structure/#private-keys) to [associate the source with the customer](../../sources/#attaching-a-payment-method-to-a-customer-or-payment-option).&#x20;
 
 #### The Customer provides payment details <a href="#dropinviadigitalriver.js-customerprovidespaymentdetails.1" id="dropinviadigitalriver.js-customerprovidespaymentdetails.1"></a>
 
@@ -307,7 +307,7 @@ As part of collecting payment details for future use, the customer may be presen
 This flow presents and collects any required authentications and opt-ins. When the source collects the customer's payment details, authentication details, and opt-ins, the `onSuccess` event will return this information with a `"readyForStorage": true` parameter.
 
 {% hint style="warning" %}
-The `readyForStorage` identifier signifies the creation of the source with the intention of storage, and any necessary authentications have occurred. To reuse the source, attach it to a Shopper by calling the appropriate API with your secret key.
+The `readyForStorage` identifier signifies the creation of the source with the intention of storage, and any necessary authentications have occurred. Attach the source to a Shopper by calling the appropriate API with your secret key to reuse the source.
 {% endhint %}
 
 {% code overflow="wrap" %}
@@ -405,9 +405,9 @@ Enable the `disableAutomaticRedirects` attribute if you do not want Drop-in Paym
 {% endtab %}
 {% endtabs %}
 
-### Customizing the text of the Drop-in Payments button
+### Customizing the text of the Drop-in payments button
 
-The Drop-in Payments button is customizable. You can either display pre-configured text or you can specify a unique text. In both cases, how the text is localized is determined by the `locale` you used when [initializing DigitalRiver.js](drop-in-integration-guide.md#step-3-initialize-digitalriver-js-with-your-public-key).
+The Drop-in payments button is customizable. You can either display pre-configured text, or you can specify a unique text. In both cases, how the text is localized is determined by the `locale` you used when [initializing DigitalRiver.js](drop-in-integration-guide.md#step-3-initialize-digitalriver-js-with-your-public-key).
 
 | Type                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -420,37 +420,37 @@ The Drop-in Payments button is customizable. You can either display pre-configur
 
 ### Specifying a source's future use
 
-Set `options.usage` to indicate how the [payment source](../../sources/) is likely to be used in future transactions. Passing this value increases the probability that payment providers will approve future authorization requests. The accepted values are `subscription`, `convenience`, and `unscheduled`.
+Set `options.usage` to indicate how the [payment source](../../sources/) will likely be used in future transactions. Passing this value increases the probability that payment providers will approve future authorization requests. The accepted values are `subscription`, `convenience`, and `unscheduled`.
 
-When creating a source using Drop-in Payments, you should identify the types of transactions the source will likely be used for in the future. This increases the probability that these future transactions will be approved. The `usage` value you select should be the one that most closely corresponds to your business model. The available options are [subscription](drop-in-integration-guide.md#subscription), [convenience](drop-in-integration-guide.md#convenience), and [unscheduled](drop-in-integration-guide.md#unscheduled).
+When creating a source using Drop-in Payments, you should identify the types of future transactions the source will use to increase the probability of approval... The `usage` value you select should be the one that most closely corresponds to your business model. The available options are [subscription](drop-in-integration-guide.md#subscription), [convenience](drop-in-integration-guide.md#convenience), and [unscheduled](drop-in-integration-guide.md#unscheduled).
 
 * `subscription`: The source is to be used for [recurring transactions](broken-reference), made at regular intervals, for a product or a service.
-* `convenience`: Applies mainly to saved payment sources that are used for [one-off transactions](../../building-your-workflows.md#one-off). These are scenarios where customers are typically present during the checkout flow and want to quickly access their payment information. Always select this option if you don't offer subscriptions or don't have unscheduled merchant-initiated transactions.
+* `convenience`: Applies mainly to saved payment sources that are used for [one-off transactions](../../building-your-workflows/#one-off). These are scenarios where customers are typically present during checkout and want to access their payment information quickly. Always select this option if you don't offer subscriptions or don't have unscheduled merchant-initiated transactions.
 * `unscheduled`: The source is to be used in unscheduled merchant-initiated transactions. These are contracts that occur on a non-fixed schedule using saved card information. Automatic top-ups are one such example. They occur whenever a customer's balance drops below a pre-defined amount.
 
 #### Show terms of sale disclosure
 
 #### Subscription
 
-The `options.showTermsOfSaleDisclosure` attribute determines whether Drop-in payments displays the terms of sale to customers.&#x20;
+The `options.showTermsOfSaleDisclosure` attribute determines whether Drop-in payments display the terms of sale to customers.&#x20;
 
-Set `usage` to `subscription` when you create sources that are used primarily for recurring transactions, made at regular intervals for a product or a service.
+Set `usage` to `subscription` when you create sources used primarily for recurring transactions, made at regular intervals for a product or a service.
 
 #### **Convenience**
 
-The `convenience` setting applies mainly to saved payment sources that are used for one-off transactions. These are sources where customers are typically present during the checkout flow and want to quickly access their payment information. Select this option if you don't offer [subscriptions](drop-in-integration-guide.md#subscription) or don't have [unscheduled](drop-in-integration-guide.md#unscheduled) merchant=initiated transactions
+The `convenience` setting applies mainly to saved payment sources that are used for one-off transactions. These are sources where customers are typically present during the checkout flow and want to access their payment information quickly. Select this option if you don't offer [subscriptions](drop-in-integration-guide.md#subscription) or don't have [unscheduled](drop-in-integration-guide.md#unscheduled) merchant=initiated transactions
 
-If set to `true` (_default_), then the terms of sale disclosure are displayed and customers must accept them.&#x20;
+If set to `true` (_default_), then the terms of sale disclosure are displayed, and customers must accept them.&#x20;
 
 #### Unscheduled
 
-Set `usage` to `unscheduled` when you create sources for unscheduled merchant initiated transactions. These are contracts that occur on a non-fixed schedule using saved card information. Automatic top-ups are an example of one such transaction. They occur whenever a customer's balance drops below a pre-defined amount.
+Set `usage` to `unscheduled` when you create sources for unscheduled merchant-initiated transactions. These are contracts that occur on a non-fixed schedule using saved card information. Automatic top-ups are an example of one such transaction. They occur whenever a customer's balance drops below a pre-defined amount.
 
 {% hint style="warning" %}
 The terms are localized based on how you [initialize DigitalRiver.js](drop-in-integration-guide.md#step-3-initialize-digitalriver-js-with-your-public-key).&#x20;
 {% endhint %}
 
-The actual terms depend on whether customers are making a one-time purchase or [buying a subscription product](broken-reference).&#x20;
+The terms depend on whether customers make a one-time purchase or buy[ a subscription product](broken-reference).&#x20;
 
 {% tabs %}
 {% tab title="One-time purchase" %}
@@ -511,7 +511,7 @@ Once you [create](drop-in-integration-guide.md#step-6-allow-the-shopper-to-inter
 
 #### Disabling redirects <a href="#dropinviadigitalriver.js-disablingredirectswithindropin" id="dropinviadigitalriver.js-disablingredirectswithindropin"></a>
 
-The `options.redirect` object specifies the options you want to use to disable the automatic redirect functionality built into Drop-in. Use this option if you would like to handle redirecting the customer yourself to the payment provider.&#x20;
+The `options.redirect` object specifies the options you want to use to turn off the automatic redirect functionality built into Drop-in payments. Use this option if you would like to handle redirecting the customer yourself to the payment provider.&#x20;
 
 Enable the `disableAutomaticRedirects` attribute if you do not want Drop-in payments to redirect your customer to the payment provider. Use this setting in your checkout flow if you do not want to create the order from Drop-in. In this scenario, you can allow your customer to choose their payment method, review and then authorize later by redirecting the customer to the `redirect.returnUrl` when the customer has reviewed the order totals and is ready to create their order.
 
@@ -704,9 +704,9 @@ Use the following fields to configure payment methods.
 | payPal        | `style`                         | A Style object created following the [PayPal element style option](../../../general-resources/reference/elements/paypal-elements.md#paypal-element-style-options) instructions.                                     |
 | `msts`        | `enrollment`                    | An enrollment URL created following the [TreviPay enrollment URL](../digitalriver.js/payment-methods/trevipay.md#trevipay-enrollment-form) instructions.                                                            |
 
-### Filtering payment methods shown in Drop-in Payments
+### Filtering payment methods shown in Drop-in payments
 
-In the Drop-in Payments configuration, you can optionally add a list of enabled payment methods, disabled payment methods, or both. If the list of enabled or disabled payment methods is not present, Drop-in Payments displays all the payment methods available for the payment session. The enabled list will not add any payment methods that are not available for the payment session.
+In the Drop-in Payments configuration, you can add a list of enabled payment methods, disabled payment methods, or both. If the list of enabled or disabled payment methods is absent, Drop-in Payments displays all the payment methods available for the payment session. The enabled list will not add unavailable payment methods for the payment session.
 
 {% code overflow="wrap" %}
 ```json
@@ -718,16 +718,16 @@ paymentMethodConfiguration:
 ```
 {% endcode %}
 
-## Drop-in Payments events
+## Drop-in payments events
 
-Learn how to receive real-time updates on the state of your payment methods in Drop-in Payments.
+Learn how to receive real-time updates on the state of your payment methods in Drop-in Payment.
 
-Drop-in Payments supports the following events:
+Drop-in Payment supports the following events:
 
 * [**onSuccess**](drop-in-integration-guide.md#onsuccess)–This occurs whenever a source is successfully created.
 * [**onError**](drop-in-integration-guide.md#onerror)–This occurs whenever there is a validation error.
 * [**onCancel**](drop-in-integration-guide.md#oncancel)–This occurs whenever a payment method is cancelled.
-* [**onReady**](drop-in-integration-guide.md#onready)–This occurs whenever Drop-in Payments have successfully mounted.&#x20;
+* [**onReady**](drop-in-integration-guide.md#onready)–This occurs whenever Drop-in payments have successfully mounted.&#x20;
 
 ### onSuccess
 
@@ -834,7 +834,7 @@ When your customer has provided the necessary details for payment and followed a
 
 ### onError
 
-If an error occurs, Drop-in Payments emits an event that identifies the associated payment method. Instruct your customer to provide a new method of payment.
+If an error occurs, you receive the `onError` event. The event's `data` object identifies the `paymentMethod` associated with the error. Handle this error by instructing customers to provide a new method of payment.
 
 {% code overflow="wrap" %}
 ```json
@@ -846,7 +846,7 @@ If an error occurs, Drop-in Payments emits an event that identifies the associat
 
 ### onCancel
 
-Drop-in Payments emits an event that identifies the canceled payment method when your customer chooses to pay with a specific payment method and cancel during the redirect phase.
+You receive the `onCancel` event when customers cancel the payment process (for example, during the redirect phase) before authorizing payment. The event's  `data` object identifies which `paymentMethod` was cancelled.&#x20;
 
 {% code overflow="wrap" %}
 ```json
@@ -858,7 +858,7 @@ Drop-in Payments emits an event that identifies the canceled payment method when
 
 ### onReady
 
-When ready, Drop-in Payments will emit an event that contains a `"paymentMethodTypes"` array of available payment methods.
+When ready, Drop-in payments will emit an event that contains a `"paymentMethodTypes"` array of available payment methods.
 
 {% code overflow="wrap" %}
 ```json

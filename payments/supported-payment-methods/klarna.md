@@ -28,6 +28,10 @@ How you configure Klarna depends on whether you use [DigitalRiver.js with Elemen
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Klarna](../payments-solutions/digitalriver.js/payment-methods/klarna.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
+## How it works
+
+Klarna uses a [submit then redirect (STR) payment flow](../building-your-workflows/flows-by-payment-type.md#submit-then-redirect-str-payment-flow).
+
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

@@ -16,6 +16,10 @@ How you configure Korea Bank Transfer depends on whether you're using [DigitalRi
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Korea Bank Transfer](../payments-solutions/digitalriver.js/payment-methods/korea-bank-transfer.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
+## How it works
+
+Korea Bank Transfer (Online Banking) uses a [redirect then submit (RTS) payment flow](../building-your-workflows/flows-by-payment-type.md#redirect-then-submit-rts-payment-flow).
+
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

@@ -204,3 +204,7 @@ Once authorized, you can use the source by [attaching it to a cart](broken-refer
 }
 ```
 {% endcode %}
+
+## Testing FPX Online Banking
+
+See [Testing redirect payment methods](../../../../resources/testing-scenarios.md#testing-redirect-payment-methods) for testing instructions.

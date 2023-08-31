@@ -548,7 +548,7 @@ digitalriver.retrieveSource("ee90c07c-5549-4a6b-aa5f-aabe29b1e97a","ee90c07c-554
 
 The authenticate source method determines whether the saved payment source selected by a customer during the checkout process requires [Strong Customer Authentication](../../payments/psd2-and-sca/) (SCA).
 
-You can use this method when [building workflows](../../payments/building-your-workflows.md) that allow customers to retrieve saved payment information during [one-off purchases](../../payments/building-your-workflows.md#customer-selects-saved-credit-card-during-checkout) and [subscription acquisitions](../../payments/building-your-workflows.md#customer-saves-credit-card-details-during-subscription-acquisition-checkout). &#x20;
+You can use this method when [building workflows](../../payments/building-your-workflows/) that allow customers to retrieve saved payment information during [one-off purchases](../../payments/building-your-workflows/#customer-selects-saved-credit-card-during-checkout) and [subscription acquisitions](../../payments/building-your-workflows/#customer-saves-credit-card-details-during-subscription-acquisition-checkout). &#x20;
 
 The [standard version of the method](digitalriver-object.md#DigitalRiverJS-digitalriver.authenticateSource\(data\);) accepts a configuration object that contains the data we need to authenticate the source. With the exception of the `returnUrl`, you can set the parameters of this object by [retrieving the source](digitalriver-object.md#retrieving-sources) and then getting the required data.
 
@@ -577,7 +577,7 @@ More specifically, the method returns a promise which is resolved by a source au
 
 ### `authenticateSource(data)` <a href="#digitalriverjs-digitalriver.authenticatesource-data" id="digitalriverjs-digitalriver.authenticatesource-data"></a>
 
-You can use this method to [authenticate a payment source](digitalriver-object.md#authenticating-sources) before it is applied to a transaction.&#x20;
+This method can [authenticate a payment source](digitalriver-object.md#authenticating-sources) before it is applied to a transaction.&#x20;
 
 {% code overflow="wrap" %}
 ```javascript
@@ -635,7 +635,7 @@ When updating a source, you can only update the owner and the expiration details
 This method takes two parameters:‌
 
 * `element`—An optional card expiration element for using the Elements portion of this library.
-* `sourceData`—A required data object containing additional data  required to update the payment source.
+* `sourceData`—A required data object containing additional data required to update the payment source.
 
 | Field        | Required | Type            | Description                                                                                                                                       |
 | ------------ | -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -956,7 +956,7 @@ The following example shows a request with no filters applied.
 {% code overflow="wrap" %}
 ```javascript
 digitalriver.retrieveAvailablePaymentMethods().then(function(result) {
-    //do something with the result. This could include showing or hiding specific payment methods that apply to the display
+    //do something with the result. This could include showing or hiding specific payment methods that apply to the display.
 });
 ```
 {% endcode %}
@@ -1175,7 +1175,7 @@ digitalriver.retrieveAvailablePaymentMethods({
 {% endtab %}
 {% endtabs %}
 
-The following response only returns payment methods available in the US, using the USD currency, and supporting recurring payment. &#x20;
+The following response only returns payment methods available in the US, using the USD currency, and supporting recurring payments. &#x20;
 
 {% tabs %}
 {% tab title="Response example" %}
@@ -1336,7 +1336,7 @@ If you want to display the credit card payment logo on your website, you can use
 
 Use this method to retrieve an array of available banks for a combination of [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2) country code and [ISO 4217](https://en.wikipedia.org/wiki/ISO\_4217) currency code.‌
 
-This method returns an array that will either be empty if no banks are available or will contain objects with Issuer IDs and Bank Names. DigitalRiver.js uses this data when creating an Online Banking source. This method is useful if you want to build a bank selector instead of using the Online Banking element.
+This method returns an array that will either be empty if no banks are available or contain objects with Issuer IDs and Bank Names. DigitalRiver.js uses this data when creating an Online Banking source. This method is useful if you want to build a bank selector instead of using the Online Banking element.
 
 {% tabs %}
 {% tab title="Example" %}

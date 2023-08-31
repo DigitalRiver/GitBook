@@ -16,6 +16,10 @@ How you configure PayCo depends on whether you're using [DigitalRiver.js with El
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring PayCo](../payments-solutions/digitalriver.js/payment-methods/payco.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
+## How it works
+
+PayCo uses a [standard payment flow](../sources/using-the-source-identifier.md#standard-payment-flow).
+
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

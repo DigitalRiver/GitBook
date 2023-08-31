@@ -119,7 +119,19 @@ The payment provider will present the customer with the transaction details to a
 Once authorized, you can use the source by [attaching it to a cart](../../../sources/#attaching-a-payment-method-to-an-order-or-cart).
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="POST /v1/shoppers/me/carts/active/apply-payment-method" %}
+{% code overflow="wrap" %}
+```javascript
+{
+  "paymentMethod": {
+    "sourceId": "e7ba0595-059c-460c-bad8-2812123b9313"
+  }
 
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
+
+## Testing Alipay+ (cross-border)
+
+See [Testing redirect payment methods](../../../../resources/testing-scenarios.md#testing-redirect-payment-methods) for testing instructions.

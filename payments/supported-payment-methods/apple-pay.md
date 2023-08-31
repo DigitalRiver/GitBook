@@ -26,6 +26,12 @@ Repeat this step for each additional domain you want to offer Apple Pay. For exa
 \
 **Note**: You must serve the `apple-developer-merchantid-domain-association` file over HTTPS.
 
+{% hint style="warning" %}
+The URL you specify must be public and globally accessible so that Digital River can complete its verification process.&#x20;
+
+Additionally, you'll need to serve the `apple-developer-merchantid-domain-association` file over HTTPS.
+{% endhint %}
+
 **Step three**: Contact your Digital River representative with the domains you want to register.
 
 After completing these steps, the remainder of the Apple Pay configuration process depends on whether you use [DigitalRiver.js with Elements](../payments-solutions/digitalriver.js/) or[ Drop-in payments](../payments-solutions/drop-in/).
@@ -33,6 +39,10 @@ After completing these steps, the remainder of the Apple Pay configuration proce
 | DigitalRiver.js with Elements                                                               | Drop-in payments                                                                                 |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Apple Pay](../payments-solutions/digitalriver.js/payment-methods/apple-pay.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
+
+## How it works
+
+Apple Pay uses a [standard payment flow](../building-your-workflows/flows-by-payment-type.md#standard-payment-flow).
 
 ## Supported markets <a href="#supported-geographies" id="supported-geographies"></a>
 

@@ -4,11 +4,11 @@ description: Learn how to use the offline refund element.
 
 # Offline refund element
 
-With certain payment flows such as [Boleto](../../../payments/payments-solutions/digitalriver.js/payment-methods/configuring-boleto.md), [Konbini](../../../payments/payments-solutions/digitalriver.js/payment-methods/konbini.md), [Online Banking](../../../payments/payments-solutions/digitalriver.js/payment-methods/online-banking.md), or [Wire Transfer](../../../payments/payments-solutions/digitalriver.js/payment-methods/wire-transfer.md), it may be necessary to collect details from your customer to facilitate a refund.&#x20;
+Collecting details from your customer may be necessary to facilitate a refund with certain payment flows such as [Boleto](../../../payments/supported-payment-methods/boleto.md), [Konbini](../../../payments/supported-payment-methods/konbini.md), [Online Banking](../../../payments/supported-payment-methods/online-banking-ibp.md), or [Wire Transfer](../../../payments/supported-payment-methods/wire-transfer.md).
 
 ## Creating an offline refund element
 
-To create an offline refund element, you should use the createElement function exposed through the DigitalRiver Object. This object follows the same pattern and allows for the same [custom classes](./#custom-classes) and [styles](./#custom-styles) as other elements.
+You should use the `createElement` function exposed through the DigitalRiver Object. This object follows the same pattern and allows for the same [custom classes](./#custom-classes) and [styles](./#custom-styles) as other elements.
 
 With this element, you must provide a `refundToken`, which is provided in the refund response from our APIs.
 
@@ -47,7 +47,7 @@ var offlineOptions = {
             },
         },
         complete: {
-            ':hover': {
+            ': hover': {
                 color: '#495057',
             },
         }
@@ -140,7 +140,7 @@ offlineRefund.on('ready', function(event) {
 
 ### Change
 
-A change event triggers when the offline refund element's state has changed. If using this element, you will only receive this event when the customer has filled out the form, and the data has been accepted. At this point, you may remove the element from your screen by calling `unmount()` or `destroy()`.
+A change event triggers when the offline refund element's state has changed. If using this element, you will only receive this event when the customer has filled out the form and the data has been accepted. At this point, you may remove the element from your screen by calling `unmount()` or `destroy()`.
 
 {% tabs %}
 {% tab title="Example" %}

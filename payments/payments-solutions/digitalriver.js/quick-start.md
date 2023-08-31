@@ -8,7 +8,7 @@ description: Create a payment form using DigitalRiver.js.
 
 Use DigitalRiver.js to create a payment form that securely collects sensitive payment details.
 
-To see an example of a custom payment form, go to [Payment form example](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/quick-start-form.html).
+To see a custom payment form example, go to [Payment form example](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/quick-start-form.html).
 
 To populate the fields in this example, click Populate Sample Data In Form. Then enter `4444222233331111` in the Credit Card field, `10/23` in the Expiration field, and `123` in the CVV field, and click Create Credit Card Source.
 
@@ -35,7 +35,7 @@ var digitalriver = new DigitalRiver('YOUR_PUBLIC_API_KEY');
 
 ## Step 2. Create your payment form
 
-DigitalRiver.js provides and hosts HTML elements that you can place in your payments form to securely collect credit card details. You can seamlessly integrate these elements into an outside-hosted experience.
+DigitalRiver.js provides and hosts HTML elements that you can place in your payments form to collect credit card details securely. You can seamlessly integrate these elements into an outside-hosted experience.
 
 {% code title="HTML" overflow="wrap" %}
 ```markup
@@ -109,7 +109,7 @@ cardSecurityCode.mount('card-security-code');
 
 Digital River securely transmits credit card details captured by DigitalRiver.js for tokenization. You can use these payment sources in downstream API calls to place orders or save credit cards for later purchases.
 
-Create an event handler that will interact with the DigitalRiver.js library on submit and then create a payment source. Use the [`createSource()`](../../../general-resources/reference/digitalriver-object.md#creating-sources) method to tokenize the customer's details and payment information.
+Create an event handler to interact with the DigitalRiver.js library on submit and then create a payment source. Use the [`createSource()`](../../../general-resources/reference/digitalriver-object.md#creating-sources) method to tokenize the customer's details and payment information.
 
 {% hint style="info" %}
 **Prerequisite**:  To create a Payment Source for a credit card, you must either know or capture the billing address information for the entered credit card. The `createSource()` method submits this information and uses it to create a payment source.

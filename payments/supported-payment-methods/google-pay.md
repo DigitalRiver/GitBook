@@ -6,7 +6,7 @@ description: >-
 
 # Google Pay
 
-Allow a merchant to request any credit or debit card stored in their customer's Google Pay account. This adds another layer of ease of purchase for consumers to complete transactions from their Google Wallet quickly. All currencies are available in supported countries.&#x20;
+Google Pay allows a merchant to request any credit or debit card stored in their customer's Google Pay account.  This adds another layer of ease of purchase for consumers to complete transactions from their Google Wallet quickly. All currencies are available in supported countries.&#x20;
 
 You can find an example of integration [here](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/googlepay.html). &#x20;
 
@@ -17,6 +17,10 @@ How you configure Google Pay depends on whether you're using [DigitalRiver.js wi
 | DigitalRiver.js with Elements                                                                 | Drop-in payments                                                                                 |
 | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Google Pay](../payments-solutions/digitalriver.js/payment-methods/google-pay.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
+
+## How it works
+
+Google Pay uses a [standard payment flow](../building-your-workflows/flows-by-payment-type.md#standard-payment-flow).
 
 ## Supported markets
 

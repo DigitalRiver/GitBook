@@ -486,7 +486,7 @@ Digital River returns this Error object returns with the change event when Digit
 
 ### Create source error object
 
-Digital River returns this Error object within the `createSource` method if Digital River detects an error with the tokenization request. This object contains a type and an array of messages that explain the error in detail.
+Digital River returns this Error object within the `createSource` method if Digital River detects an error with the tokenization request. This object contains a type and an array of detailed messages explaining the error.
 
 {% tabs %}
 {% tab title="Create Source Error object" %}

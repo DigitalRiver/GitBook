@@ -185,3 +185,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+## Testing SEPA Direct Debit
+
+See [Testing standard payment methods](../../../../resources/testing-scenarios.md#testing-standard-payment-methods) for testing instructions.

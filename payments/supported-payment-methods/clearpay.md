@@ -21,6 +21,10 @@ How you configure Clearpay depends on whether you're using [DigitalRiver.js with
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [Configuring Clearpay](../payments-solutions/digitalriver.js/payment-methods/configuring-clearpay.md) | [Drop-in Payments Integration Guide](../payments-solutions/drop-in/drop-in-integration-guide.md) |
 
+## How it works
+
+Clearpay uses a [submit then redirect (STR) payment flow](../building-your-workflows/flows-by-payment-type.md#submit-then-redirect-str-payment-flow).
+
 ## Supported markets
 
 For information on supported markets and currencies for Drop-in and DigitalRiver.js, go to:&#x20;

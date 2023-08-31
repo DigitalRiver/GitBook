@@ -171,3 +171,7 @@ the {
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+## Testing Credit Cards
+
+See [Testing standard payment methods](../../../../resources/testing-scenarios.md#testing-standard-payment-methods) for testing instructions.
