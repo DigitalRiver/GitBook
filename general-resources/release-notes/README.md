@@ -4,6 +4,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 # Release notes
 
+## 2023/9/28
+
+We added examples for [creating a Digital River-hosted and client-hosted shopper](../../shopper-apis/shopper-basics/common-use-cases/creating-a-customer.md#creating-a-shopper) and [initiating an authenticated session for a Digital River-hosted and client-hosted shopper](../../shopper-apis/oauth/tokens.md#initiating-an-authenticated-session-returning-shopper-or-login-shopper).
+
 ## 2023/8/31
 
 * Digital River has recently added [CCAvenue ](../../payments/supported-payment-methods/ccavenue.md)to its payment method options. CCAvenue is a payment processing option for Digital River clients with an Indian bank account. This auto-settle payment method offers various local payment options in India, such as Credit Cards, Wallet, Net Banking, and UPI.
