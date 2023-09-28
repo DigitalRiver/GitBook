@@ -151,7 +151,7 @@ Use the following steps only for authenticated shoppers.
 
 ### Address information
 
-When you attach a source to the cart using the [`POST /apply-payment-method`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/post) , the cart already has address information, so the system will not use the `source` address. It will use the existing address in the cart. If the cart does not have the address information, the system will copy the address from the `source` to the cart.&#x20;
+When you attach a source to the cart using the [`POST /apply-payment-method`](https://www.digitalriver.com/docs/commerce-api-reference/#tag/Apply-or-Detach-Payment-Methods/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-payment-method/post) The system will not use the address if the cart already has address information. It will use the existing address in the cart. If the cart does not have the address information, the system will copy the address from the `source` to the cart.&#x20;
 
 This behavior applies to both primary and secondary sources. This is why we recommend not including the owner information when you [create a secondary source](using-the-source-identifier.md#creating-secondary-sources).
 
