@@ -66,7 +66,7 @@ Use the following flow for RTS payment methods, such as [PayPal](../supported-pa
 
 ## Submit then redirect (STR) payment flow
 
-Use the STR payment flow for [Afterpay](../supported-payment-methods/afterpay.md), [Alipay (domestic)](../supported-payment-methods/alipay-domestic.md), [Alipay+ (cross-border)](../supported-payment-methods/alipay+-cross-border.md), [Amazon Pay Express Checkout](../supported-payment-methods/amazon-pay.md), [Bancontact](../supported-payment-methods/bancontact.md), [BLIK](../supported-payment-methods/blik.md), [CCAvenue](broken-reference), [Clearpay](../supported-payment-methods/clearpay.md), [iDEAL](../supported-payment-methods/ideal.md), [Klarna Financing](../supported-payment-methods/klarna.md), [Klarna Pay in 3](../supported-payment-methods/klarna.md), [Klarna Pay in 4](../supported-payment-methods/klarna.md), [Klarna Pay in 30 days](../supported-payment-methods/klarna.md), [Online Banking (IBP)](../supported-payment-methods/online-banking-ibp.md), [Online Banking (FPX)](../supported-payment-methods/fpx-online-banking.md), [Online Banking (Korea Bank Transfer)](../supported-payment-methods/korea-bank-transfer-online-banking.md), [PayCo](../supported-payment-methods/payco.md), [SEPA Direct Debit](../supported-payment-methods/sepa-direct-debit.md), and [TreviPay](../supported-payment-methods/trevipay.md), and [Trustly](../supported-payment-methods/trustly.md).&#x20;
+Use the STR payment flow for [Afterpay](../supported-payment-methods/afterpay.md), [Alipay (domestic)](../supported-payment-methods/alipay-domestic.md), [Alipay+ (cross-border)](../supported-payment-methods/alipay+-cross-border.md), [Amazon Pay Express Checkout](../supported-payment-methods/amazon-pay.md#amazon-pay-express-checkout-flow), [Bancontact](../supported-payment-methods/bancontact.md), [BLIK](../supported-payment-methods/blik.md), [CCAvenue](broken-reference), [Clearpay](../supported-payment-methods/clearpay.md), [iDEAL](../supported-payment-methods/ideal.md), [Klarna Financing](../supported-payment-methods/klarna.md), [Klarna Pay in 3](../supported-payment-methods/klarna.md), [Klarna Pay in 4](../supported-payment-methods/klarna.md), [Klarna Pay in 30 days](../supported-payment-methods/klarna.md), [Online Banking (FPX)](../supported-payment-methods/fpx-online-banking.md), [Online Banking (IBP)](../supported-payment-methods/online-banking-ibp.md), [Online Banking (Korea Bank Transfer)](../supported-payment-methods/korea-bank-transfer-online-banking.md), [PayCo](../supported-payment-methods/payco.md), [SEPA Direct Debit](../supported-payment-methods/sepa-direct-debit.md), [TreviPay](../supported-payment-methods/trevipay.md), and [Trustly](../supported-payment-methods/trustly.md).&#x20;
 
 1. [Create the shopper token](../../shopper-apis/shopper-basics/common-use-cases/creating-a-customer.md).
 2. [Apply the shopper and their billing address to a cart](https://www.digitalriver.com/docs/commerce-shopper-api/#tag/Apply-Shopper/paths/\~1v1\~1shoppers\~1me\~1carts\~1active\~1apply-shopper/post).&#x20;
@@ -75,78 +75,3 @@ Use the STR payment flow for [Afterpay](../supported-payment-methods/afterpay.md
 5. [Submit the cart](../../shopper-apis/cart/submitting-a-cart/). The session `state` is `pending_redirect`.
 6. Complete redirect authorization. The session `state` is `chargeable`.
 7. [Resume cart](broken-reference) to complete post-order processing.
-
-## Express checkout payment flow
-
-Use the express checkout payment flow for [Amazon Pay Express Checkout](../supported-payment-methods/amazon-pay.md).
-
-#### Submit an Amazon Pay flow
-
-The following image shows Amazon Pay's Express Checkout flow for Commerce API.
-
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-The following Amazon Pay flow represents how your shoppers experience the payment process.
-
-1. The shopper adds the product to the shopping cart
-2. The shopper clicks the Shopping Cart
-3. The shopper clicks the Amazon Pay button.
-4. The shopper is redirected to Amazon Pay to sign in and select the shipping address (if required) and the payment method.
-5. The shopper clicks the Submit button to place the order.&#x20;
-6. The shopper gets a second redirect to the Amazon Pay - Spinning page or Multi-factor Authentication (MFA) page. (Amazon Pay determines if the transaction requires MFA). The order will be in a [`source_pending_redirect`](../sources/#synchronous-or-asynchronous) state. You can [get an order by its identifier](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders/operation/retrieveOrders) to check the state of the order.
-7. Optional. When you [resume the cart](../../shopper-apis/cart/resuming-cart-submission.md), the order will be in an [`accepted` state](broken-reference). &#x20;
-
-{% tabs %}
-{% tab title="GET /orders/{189917880336}" %}
-{% code overflow="wrap" %}
-```http
-curl --location --request GET 'https://api.digitalriver.com/orders/189917880336' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <API_key>' \
-...
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="200 OK response" %}
-{% code overflow="wrap" %}
-```json
-{
-    "id": "189917880336",
-    ...
-    "state": "source_pending_redirect",
-    ...
-}
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
-
-{% tabs %}
-{% tab title="POST /v1/shoppers/me/carts/active/resume-cart" %}
-{% code overflow="wrap" %}
-```http
-curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/carts/active/resume-cart' \
---header 'Authorization: bearer {{access_token}}' \
-...
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="200 OK response" %}
-{% code overflow="wrap" %}
-```json
-{
-    "id": "189917880336",
-    ...
-    "state": "accepted",
-    ...
-}
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}

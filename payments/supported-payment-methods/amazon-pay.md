@@ -44,6 +44,58 @@ The following Amazon Pay flow represents how your shoppers experience the paymen
 4. The shopper is redirected to Amazon Pay to sign in and select the shipping address (if required) and the payment method.
 5. The shopper clicks the Submit button to place the order.&#x20;
 6. The shopper gets a second redirect to the Amazon Pay - Spinning page or Multi-factor Authentication (MFA) page. (Amazon Pay determines if the transaction requires MFA).
+7. Optional. When you [resume the cart](../../shopper-apis/cart/resuming-cart-submission.md), the order will be in an [`accepted` state](broken-reference). &#x20;
+
+{% tabs %}
+{% tab title="GET /orders/{189917880336}" %}
+{% code overflow="wrap" %}
+```javascript
+curl --location --request GET 'https://api.digitalriver.com/orders/189917880336' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <API_key>' \
+...
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="200 OK response" %}
+{% code overflow="wrap" %}
+```javascript
+{
+    "id": "189917880336",
+    ...
+    "state": "source_pending_redirect",
+    ...
+}
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="POST /v1/shoppers/me/carts/active/resume-cart" %}
+{% code overflow="wrap" %}
+```javascript
+curl --location -g --request POST ' https://api.digitalriver.com/v1/shoppers/me/carts/active/resume-cart' \
+--header 'Authorization: bearer {{access_token}}' \
+...
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="200 OK response" %}
+{% code overflow="wrap" %}
+```javascript
+{
+    "id": "189917880336",
+    ...
+    "state": "accepted",
+    ...
+}
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ## Supported markets
 
