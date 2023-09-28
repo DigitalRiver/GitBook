@@ -34,8 +34,8 @@ curl --location 'https://api.digitalriver.com/v1/shoppers' \
     "lastName": "Doe",
     "emailAddress": jdoe@dr.com,
     "password": "jdoepassword",
+    "currency": "USD"    
     "locale": "en_US",
-    "currency": "USD"
   }
 }'
 ```
@@ -56,8 +56,8 @@ curl --location 'dispatch-api.digitalriver.com/v1/shoppers' \
     "firstName": "Jane",
     "lastName": "Doe",
     "emailAddress": jdoe@acme.com,
+    "currency": "USD"    
     "locale": "en_US",
-    "currency": "USD",
     "externalReferenceId": "efe44307-ef82-46ed-bef4-e87ebec2ba28"
   }
 }'
