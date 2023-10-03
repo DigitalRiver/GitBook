@@ -1,29 +1,29 @@
 ---
-description: Learn how to apply landed cost with pretty pricing.
+description: Learn how to apply landed cost with pretty price.
 ---
 
-# Pretty pricing
+# Pretty price
 
-Pretty pricing is a feature that allows you to display a price that appeals to your shoppers. This guide shows you how to enable and use landed cost with pretty pricing.
+Pretty price is a feature that allows you to display a price that appeals to your shoppers. This guide shows you how to enable the pretty price with landed cost.
 
 See[ Best practice flows by payment type](../../../../payments/sources/using-the-source-identifier.md#best-practice-flows-by-payment-type) for more information.
 
 ## Prerequisites
 
 {% hint style="info" %}
-Pretty pricing is based on the [landed cost](./) feature. Customer Success must enable landed cost and pretty pricing to use this feature. Contact your Customer Success Manager for assistance.
+The pretty price is based on the [landed cost](./) feature. Customer Success must enable landed cost and pretty price to use this feature. Contact your Customer Success Manager for assistance.
 {% endhint %}
 
-To enable pretty pricing, you need to:
+To enable a pretty price, you need to:
 
 1. Work with your Customer Success Manager to enable landed cost.
 2. Work with your Customer Success Manager to enable landed cost pretty price.
-3. [Create a price list](pretty-pricing.md#creating-a-price-list-with-pretty-pricing) and enable Prices Include Value Added Tax (VAT).
-4. [Set the shipping cost to tax exclusive](pretty-pricing.md#setting-the-shipping-cost-to-tax-exclusive).
+3. [Create a price list](pretty-price.md#creating-a-price-list-with-a-pretty-price) and enable Prices Include Value Added Tax (VAT).
+4. [Set the shipping cost to tax-inclusive](pretty-price.md#setting-the-shipping-cost-to-tax-inclusive).
 
-## Creating a price list with pretty pricing
+## Creating a price list with a pretty price
 
-Price lists allow you to define how to convert product prices from the default currency to other currencies for different locales. Create a price list with Prices Include Value Added Tax (VAT) enabled to enable pretty pricing.
+Price lists allow you to define how to convert product prices from the default currency to other currencies for different locales. Create a price list with Prices Include Value Added Tax (VAT) enabled to enable pretty price.
 
 1. Sign in to [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 2. If your company has more than one site, select the site from the **Sites** field. Global Commerce automatically populates the **Site** field if your company has only one site.\
@@ -51,27 +51,27 @@ Price lists allow you to define how to convert product prices from the default c
 6. Complete the fields on the Price List Details page. See the [Price List Details attributes](https://help.digitalriver.com/help/gc/Catalog/Pricing-and-Plans/Managing-price-list-details.htm#PriceListDetailsAttributes) for more information.
 7. Scroll down and click **Done**.
 
-## Setting the shipping cost to tax exclusive
+## Setting the shipping cost to tax-inclusive
 
-The Features tab on the Configure Site Settings page allows you to enable or disable features that appear in your store. For landed cost and landed cost pretty pricing, shipping costs should be tax exclusive.
+The Features tab on the Configure Site Settings page allows you to enable or disable features that appear in your store. For landed cost and landed cost pretty price, shipping costs should be tax-inclusive.
 
 1.  From [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do), select **Administration**, select **Site**, then click **Configure Site Settings**. The Configure Site Settings page appears.
 
     <figure><img src="../../../../.gitbook/assets/Configure Site Settings.png" alt=""><figcaption></figcaption></figure>
-2.  To set the shipping cost to tax exclusive, click the **Features** tab, scroll down to **Input Tax-Inclusive Shipping Cost**, and set the toggle for **Input Tax-Inclusive Shipping** to **OFF**. Digital River will send the tax-exclusive shipping costs to the shipping carrier for the landed cost calculation. This ensures the shopper is not double-taxed by the shipping carrier.\
+2.  To set the shipping cost to tax exclusive, click the **Features** tab, scroll down to **Input Tax-Inclusive Shipping Cost**, and set the toggle for **Input Tax-Inclusive Shipping** to **ON**. Digital River will send the tax-inclusive shipping costs to the shipping carrier for the landed cost calculation. This ensures the shopper is not double-taxed by the shipping carrier.\
     \
     **Note**: If you need to support shipping a product to another locale within a country (non-cross border), and the locale supports the landed cost solution, contact your Customer Success Manager.
 
     <div align="left">
 
-    <figure><img src="../../../../.gitbook/assets/Input Tax-Inclusive Shipping Cost disabled.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/Input Tax-Inclusive Shipping Cost enabled.png" alt=""><figcaption></figcaption></figure>
 
     </div>
 3. Click **Apply**.
 
-## Landed cost without pretty pricing
+## Landed cost without pretty price
 
-When pretty pricing is disabled, the landed cost solution can only accept the Tax Exclusive Product Price. You need to manually calculate a tax-exclusive price, and then add the tax-exclusive price to the price list. If the tax-inclusive price is $1599, you can back-calculate the product price to $1279.2 without taxes. If a locale does not accept decimals, Digital River rounds the price to $1279.
+When you disable pretty price, the landed cost solution can only accept the Tax Exclusive Product Price. You need to manually calculate a tax-exclusive price, and then add the tax-exclusive price to the price list. If the tax-inclusive price is $1599, you can back-calculate the product price to $1279.2 without taxes. If a locale does not accept decimals, Digital River rounds the price to $1279.
 
 Product pricing setup:
 
@@ -79,11 +79,11 @@ Product pricing setup:
 * Shipping cost (tax exclusive): $0 (free shipping)
 * Estimated tax rate configured by Digital River: 25%
 
-In the following table, you can see the final price (`orderTotal`) is $1598.75. While its not a pretty price, it's close to the expected $1599.
+In the following table, you can see the final price (`orderTotal`) is $1598.75. While it's not a pretty price, it's close to the expected $1599.
 
 <table><thead><tr><th width="134"></th><th>Cart without address input</th><th>Cart with address / submit cart</th></tr></thead><tbody><tr><td>Physical line item</td><td><p><code>listPrice: 1279</code></p><p><code>salePrice: 1279</code></p><p><code>productTax: 319.75</code> </p><p><code>shippingTax: 0</code></p><p><code>feeTax: 0</code></p><p><code>taxRate: 0.25</code> </p><p><code>importTax: 0</code></p><p><code>importDuty: 0</code></p></td><td><p><code>listPrice: 1279</code></p><p><code>salePrice: 1279</code></p><p><code>productTax: 0</code></p><p><code>shippingTax: 0</code>  </p><p><code>feeTax: 0</code></p><p><code>taxRate: 0</code></p><p><code>importTax: 319.75</code> </p><p><code>importDuty: 0</code></p></td></tr><tr><td>Order level</td><td><p><code>subtotal: 1598.75</code></p><p><code>discount: 0</code></p><p><code>shippingAndHandling: 0</code></p><p><code>importTaxAndDuty: 0</code></p><p><code>tax: 319.75</code> </p><p><code>orderTotal: 1598.75</code> </p></td><td><p><code>subtotal: 1598.75</code></p><p><code>discount: 0</code></p><p><code>shippingAndHandling: 119</code></p><p><code>importTaxAndDuty: 319.75</code></p><p><code>tax: 0</code> </p><p><code>orderTotal: 1598.75</code> </p></td></tr><tr><td>Tax inclusive flag</td><td><code>taxinclusive: false</code></td><td><code>taxInclusive: false</code></td></tr></tbody></table>
 
-## Landed cost with pretty pricing
+## Landed cost with a pretty price
 
 Product pricing setup:
 
@@ -91,7 +91,7 @@ Product pricing setup:
 * Shipping cost (tax exclusive): $0 (free shipping)
 * Estimated tax rate configured by Digital River: 25%
 
-In the following table, you can see the pretty pricing in the final price where the `orderTotal` is $1599.&#x20;
+In the following table, you can see the pretty price in the final price where the `orderTotal` is $1599.&#x20;
 
 |                    | Cart without address input                                                                                                                                                                                                                                                    | Cart with address / submit cart                                                                                                                                                                                                                                             |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -101,11 +101,11 @@ In the following table, you can see the pretty pricing in the final price where 
 
 See [Pricing fields](../../../../general-resources/shopper-apis-reference/carts/#pricing-fields) for more information.
 
-## Pretty pricing in the shopper's checkout flow
+## Pretty price in the shopper's checkout flow
 
 ### Cart&#x20;
 
-The callouts in the following list show the API response payloads that correspond with the pretty pricing values that appear on the Cart page.
+The callouts in the following list show the API response payloads that correspond with the pretty price values that appear on the Cart page.
 
 <div align="left">
 
@@ -174,7 +174,7 @@ See [Pricing fields](../../../../general-resources/shopper-apis-reference/carts/
 
 ### Order review
 
-The callouts in the following list show the API response payloads that correspond with the pretty pricing values that appear on the Order Review page.
+The callouts in the following list show the API response payloads that correspond with the pretty price values that appear on the Order Review page.
 
 <div align="left">
 
@@ -209,7 +209,7 @@ See [Pricing fields](../../../../general-resources/shopper-apis-reference/carts/
 
 ### Thank you
 
-The callouts in the following list show the API response payloads that correspond with the pretty pricing values that appear on the Thank You page.
+The callouts in the following list show the API response payloads that correspond with the pretty price values that appear on the Thank You page.
 
 <div align="left">
 
@@ -232,7 +232,7 @@ See [Pricing fields](../../../../general-resources/shopper-apis-reference/carts/
 
 ### Invoice
 
-The callouts in the following list show the API response payloads that correspond with the pretty pricing values that appear on the Invoice.
+The callouts in the following list show the API response payloads that correspond with the pretty price values that appear on the Invoice.
 
 <div align="left">
 
@@ -278,7 +278,7 @@ The callouts in the following list show the API response payloads that correspon
    &#x20;  `},` \
    `...`\
    `}`
-4.  The order-level import taxes and duty ([`importTaxAndDuty`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-tax-and-duty)) is the sum of **all** line items' import taxes ([`importTax`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-duty)) and import duties ([`importDuty`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-duty)). For example:
+4.  The order-level import taxes and duties ([`importTaxAndDuty`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-tax-and-duty)) is the sum of **all** line items' import taxes ([`importTax`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-duty)) and import duties ([`importDuty`](../../../../general-resources/shopper-apis-reference/carts/pricing.md#import-duty)). For example:
 
     * `importDutyTax`: 75
     * `lineItem`: A
@@ -321,7 +321,7 @@ See [Pricing fields](../../../../general-resources/shopper-apis-reference/carts/
 
 ### Additional pricing information
 
-The callouts in the following list show the API response payloads that correspond with the pretty pricing values that appear on the Invoice as additional pricing information.
+The callouts in the following list show the API response payloads that correspond with the pretty price values that appear on the Invoice as additional pricing information.
 
 <figure><img src="../../../../.gitbook/assets/Invoice 2 pretty pricing with additional information.png" alt=""><figcaption></figcaption></figure>
 

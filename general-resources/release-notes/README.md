@@ -4,6 +4,13 @@ description: Keep track of changes and updates to the Commerce API.
 
 # Release notes
 
+## 2023/10/3
+
+We added support for tax-inclusive landed costs. The tax-inclusive landed cost enhancement ensures that the prices specified by the client for the product price and shipping cost become the final prices for the order. Tax-inclusive landed cost includes the following enhancements:
+
+* Users can now [set the product price](../../shopper-apis/cart/pricing/landed-costs/pretty-price.md#creating-a-price-list-with-a-pretty-price) and [shipping cost as tax-inclusive](../../shopper-apis/cart/pricing/landed-costs/pretty-price.md#setting-the-shipping-cost-to-tax-inclusive) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
+* Users can see the landed cost for the shipping charge in the payload.
+
 ## 2023/9/28
 
 We added examples for [creating a Digital River-hosted and client-hosted shopper](../../shopper-apis/shopper-basics/common-use-cases/creating-a-customer.md#creating-a-shopper) and [initiating an authenticated session for a Digital River-hosted and client-hosted shopper](../../shopper-apis/oauth/tokens.md#initiating-an-authenticated-session-returning-shopper-or-login-shopper).
@@ -33,7 +40,7 @@ We added the following reasons to the [validation-error](../../common-shopper-an
 
 ## 2023/5/22
 
-We have included a guide on how to [handle bulk product uploads in an asynchronous manner](../../admin-apis/product-management/bulk-operation/asynchronous-bulk-operations/).
+We have included a guide on how to [handle bulk product uploads asynchronously](../../admin-apis/product-management/bulk-operation/asynchronous-bulk-operations/).
 
 ## 2023/5/12
 
@@ -41,7 +48,7 @@ We are excited to announce our new feature, Product Combination Supporting Subsc
 
 ## 2023/5/10
 
-With our [mixed cart](../../shopper-apis/cart/pricing/landed-costs/mixed-cart-support.md) feature, a shopper can create a cart that includes physical and digital products. Our feature uses the landed cost solution to calculate the total cost of your purchase, which is only determined once all items in the cart are deemed eligible. If you need help enabling landed cost and pretty pricing, don't hesitate to contact your Customer Success Manager for assistance.
+With our [mixed cart](broken-reference) feature, a shopper can create a cart that includes physical and digital products. Our feature uses the landed cost solution to calculate the total cost of your purchase, which is only determined once all items in the cart are deemed eligible. If you need help enabling landed cost and pretty price, don't hesitate to contact your Customer Success Manager for assistance.
 
 ## 2023/4/5
 
