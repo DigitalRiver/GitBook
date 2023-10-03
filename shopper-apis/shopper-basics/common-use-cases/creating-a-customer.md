@@ -22,7 +22,7 @@ If Digital River maintains the master record for the customer login credentials,
 {% tab title="cURL for a Digital River-hosted shopper" %}
 {% code overflow="wrap" %}
 ```javascript
-curl --location 'https://api.digitalriver.com/v1/shoppers' \
+curl --location -g --request POST 'https://api.digitalriver.com/v1/shoppers' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic {{access_token}}' \
@@ -45,7 +45,7 @@ curl --location 'https://api.digitalriver.com/v1/shoppers' \
 {% tab title="cURL for a client-hosted shopper" %}
 {% code overflow="wrap" %}
 ```javascript
-curl --location 'dispatch-api.digitalriver.com/v1/shoppers' \
+curl --location -g --request POST 'dispatch-api.digitalriver.com/v1/shoppers' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic {{access_token}}' \
