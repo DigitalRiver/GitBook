@@ -22,7 +22,7 @@ If Digital River maintains the master record for the customer login credentials,
 {% tab title="cURL for a Digital River-hosted shopper" %}
 {% code overflow="wrap" %}
 ```javascript
-curl --location -g --request POST 'https://api.digitalriver.com/v1/shoppers' \
+curl --location --request POST 'https://api.digitalriver.com/v1/shoppers' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic {{access_token}}' \
@@ -83,7 +83,7 @@ You can get an authenticated customer token now that the base customer record ha
 {% tab title="cURL with an access token" %}
 {% code overflow="wrap" %}
 ```html
-curl --location -g --request POST 'https://api.digitalriver.com/v1/shoppers' \
+curl --location --request POST 'https://api.digitalriver.com/v1/shoppers' \
 --header 'Authorization: bearer {{access_token}}' \ 
 ...
 ```
@@ -97,7 +97,7 @@ The following example passes in your API key instead of an access token:
 {% tab title="Request sample without an access token" %}
 {% code overflow="wrap" %}
 ```http
-curl --location -g --request POST 'https://api.digitalriver.com/v1/shoppers? apiKey=your_api_key' \ 
+curl --location --request POST 'https://api.digitalriver.com/v1/shoppers? apiKey=your_api_key' \ 
 ...
 ```
 {% endcode %}
