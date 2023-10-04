@@ -91,7 +91,7 @@
   * [Pricing](shopper-apis/cart/pricing/README.md)
     * [Landed cost](shopper-apis/cart/pricing/landed-costs/README.md)
       * [Mixed cart support](shopper-apis/cart/pricing/landed-costs/mixed-cart-support.md)
-      * [Pretty price](shopper-apis/cart/pricing/landed-costs/pretty-price.md)
+      * [Tax-included pretty price](shopper-apis/cart/pricing/landed-costs/tax-included-pretty-price.md)
   * [Redirecting to a Digital River-hosted cart](shopper-apis/cart/redirecting-to-a-digital-river-hosted-cart.md)
   * [Configuring taxes](shopper-apis/cart/configuring-taxes/README.md)
     * [Managing tax identifiers](shopper-apis/cart/configuring-taxes/managing-tax-identifiers.md)

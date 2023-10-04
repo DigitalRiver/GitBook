@@ -6,9 +6,9 @@ description: Keep track of changes and updates to the Commerce API.
 
 ## 2023/10/3
 
-We added support for tax-inclusive [landed costs](../../shopper-apis/cart/pricing/landed-costs/) with a [pretty price](../../shopper-apis/cart/pricing/landed-costs/pretty-price.md). The tax-inclusive landed cost enhancement ensures that the prices specified by the client for the product price and shipping cost become the final prices for the order. Tax-inclusive landed cost includes the following enhancements:
+We added support for tax-inclusive [landed costs](../../shopper-apis/cart/pricing/landed-costs/) with a [pretty price](../../shopper-apis/cart/pricing/landed-costs/tax-included-pretty-price.md). The tax-inclusive landed cost enhancement ensures that the prices specified by the client for the product price and shipping cost become the final prices for the order. Tax-inclusive landed cost includes the following enhancements:
 
-* Users can now [set the product price](../../shopper-apis/cart/pricing/landed-costs/pretty-price.md#creating-a-price-list-with-a-pretty-price) and [shipping cost as tax-inclusive](../../shopper-apis/cart/pricing/landed-costs/pretty-price.md#setting-the-shipping-cost-to-tax-inclusive) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
+* Users can now [set the product price](../../shopper-apis/cart/pricing/landed-costs/tax-included-pretty-price.md#creating-a-price-list-with-a-pretty-price) and [shipping cost as tax-inclusive](../../shopper-apis/cart/pricing/landed-costs/tax-included-pretty-price.md#setting-the-shipping-cost-to-tax-inclusive) in [Global Commerce](https://gc.digitalriver.com/gc/ent/login.do).
 * Users can see the landed cost for the shipping charge in the payload.
 
 ## 2023/9/28

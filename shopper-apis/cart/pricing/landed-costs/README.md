@@ -15,7 +15,7 @@ Once [configured](./#configuring-the-landed-cost-feature), the feature is [autom
 Landed cost is represented by several attributes at the [cart or order level](./#cart-or-order-level-attributes) and the [line-item level](./#line-item-level-attributes). These allow you to determine the total duty paid on the order and who remits the various taxes.&#x20;
 
 {% hint style="info" %}
-Digital River only supports landed cost [mixed cart](mixed-cart-support.md) and landed cost [pretty price](pretty-price.md) for the API solution. Digital River does not support landed cost mixed cart and landed cost with pretty price integrating for the Global Commerce-hosted flow.&#x20;
+Digital River only supports landed cost [mixed cart](mixed-cart-support.md) and landed cost with [tax-inclusive pretty prices](tax-included-pretty-price.md) for the API solution. Digital River does not support landed cost mixed cart and landed cost with tax-inclusive pretty price integrating for the Global Commerce-hosted flow.&#x20;
 {% endhint %}
 
 ## Tax-inclusive or tax-exclusive landed costs
