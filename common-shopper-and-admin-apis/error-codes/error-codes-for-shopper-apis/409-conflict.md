@@ -266,6 +266,10 @@ The cart does not support the specified payment method. The possible error descr
 
 The PIN provided is invalid or incorrect.
 
+## `invalid-postal-code`
+
+If you intend to enter a [9-digit postal code](../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md#postal-codes), use the following format: #####-####.
+
 ## `invalid-product-id`
 
 The product identifier is invalid.

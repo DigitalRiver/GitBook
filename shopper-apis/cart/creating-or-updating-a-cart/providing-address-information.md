@@ -6,32 +6,32 @@ description: >-
 
 # Providing address information
 
-The [Cart ](https://docs.digitalriver.com/commerce-api/cart)resource contains attributes that allow you to set billing and shipping addresses. Digital River then uses the values to determine the correct business entity and process your order.
+The [Cart ](https://docs.digitalriver.com/commerce-api/cart)resource contains attributes that allow you to set the shopper's billing and shipping addresses. Digital River then uses the values to determine the correct business entity and process your order.&#x20;
 
 ## Basic address information
 
 The following table describes each parameter in a `billingAddress`, and `shippingAddress` :
 
-| Parameter            | Description                                                                                                                                                                                                                                                                                                                                                                                                         |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `nickName`           | The name the customer prefers.                                                                                                                                                                                                                                                                                                                                                                                      |
-| `firstName`          | The customer's first name.                                                                                                                                                                                                                                                                                                                                                                                          |
-| `lastName`           | The customer's last name.                                                                                                                                                                                                                                                                                                                                                                                           |
-| `companyName`        | The company's name.                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `line1`              | The first line of the address.                                                                                                                                                                                                                                                                                                                                                                                      |
-| `line2`              | The second line of the address.                                                                                                                                                                                                                                                                                                                                                                                     |
-| `line3`              | The third line of the address.                                                                                                                                                                                                                                                                                                                                                                                      |
-| `city`               | The city of the address.                                                                                                                                                                                                                                                                                                                                                                                            |
-| `countrySubdivision` | The [state](providing-address-information.md#us-states-and-territories), county, province, or region.                                                                                                                                                                                                                                                                                                               |
-| `postalCode`         | <p>The postal code. <br><br>For United States addresses, Digital River supports ZIP+4 codes. They consist of the last four digits of a full nine-digit ZIP code. A nine-digit ZIP Code has two parts: the initial five digits of the zip code indicating the destination post office or delivery area and the last four digits representing a specific delivery route within that overall delivery area.</p><p></p> |
-| `country`            | A two-letter [Alpha-2 country code](https://www.iban.com/country-codes) as described in the [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) international standard.                                                                                                                                                                                                                                     |
-| `countryName`        | The country's name.                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `phoneNumber`        | The customer's phone number.                                                                                                                                                                                                                                                                                                                                                                                        |
-| `countyName`         | The name of the county.                                                                                                                                                                                                                                                                                                                                                                                             |
-| `emailAddress`       | The customer's email address.                                                                                                                                                                                                                                                                                                                                                                                       |
-| `phoneticFirstName`  | The [phonetic spelling of the customer's first name](providing-address-information.md#japanese-phonetics-and-divisions) in Katakana.                                                                                                                                                                                                                                                                                |
-| `phoneticLastName`   | The[ phonetic spelling of the customer's last name](providing-address-information.md#japanese-phonetics-and-divisions) in Katakana.                                                                                                                                                                                                                                                                                 |
-| `division`           | The name of the [division within the organization](providing-address-information.md#japanese-phonetics-and-divisions) within a Japanese company.                                                                                                                                                                                                                                                                    |
+| Parameter            | Description                                                                                                                                                                     |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `nickName`           | The name the customer prefers.                                                                                                                                                  |
+| `firstName`          | The customer's first name.                                                                                                                                                      |
+| `lastName`           | The customer's last name.                                                                                                                                                       |
+| `companyName`        | The company's name.                                                                                                                                                             |
+| `line1`              | The first line of the address.                                                                                                                                                  |
+| `line2`              | The second line of the address.                                                                                                                                                 |
+| `line3`              | The third line of the address.                                                                                                                                                  |
+| `city`               | The city of the address.                                                                                                                                                        |
+| `countrySubdivision` | The [state](providing-address-information.md#us-states-and-territories), county, province, or region.                                                                           |
+| `postalCode`         | <p>The country's <a href="providing-address-information.md#postal-codes">postal code</a>. </p><p></p>                                                                           |
+| `country`            | A two-letter [Alpha-2 country code](https://www.iban.com/country-codes) as described in the [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) international standard. |
+| `countryName`        | The country's name.                                                                                                                                                             |
+| `phoneNumber`        | The customer's phone number.                                                                                                                                                    |
+| `countyName`         | The name of the county.                                                                                                                                                         |
+| `emailAddress`       | The customer's email address.                                                                                                                                                   |
+| `phoneticFirstName`  | The [phonetic spelling of the customer's first name](providing-address-information.md#japanese-phonetics-and-divisions) in Katakana.                                            |
+| `phoneticLastName`   | The[ phonetic spelling of the customer's last name](providing-address-information.md#japanese-phonetics-and-divisions) in Katakana.                                             |
+| `division`           | The name of the [division within the organization](providing-address-information.md#japanese-phonetics-and-divisions) within a Japanese company.                                |
 
 {% tabs %}
 {% tab title="Billing address example" %}
@@ -169,7 +169,9 @@ After you implement phonetic names, you will see the new fields under the billin
 
 ## US states and territories
 
-The following lists the enumerated two-letter `state` values that Digital River uses to represent states, territories, APO/FPO military addresses, and the District of Columbia. When you specify one of these `state` enumerations in a request, you must also provide `US` as the `country` parameter.
+The following lists the enumerated two-letter `state` values. Digital River uses these values to represent [states](providing-address-information.md#us-states), [territories](providing-address-information.md#us-territories), [APO/FPO military addresses](providing-address-information.md#us-apo-fpo-military-addresses), and the [District of Columbia](providing-address-information.md#us-federal-district). When you specify one of these `state` enumerations in a request, you must also provide `US` as the `country` parameter.
+
+### US  states
 
 | Two-letter Abbreviation | State Name     |
 | ----------------------- | -------------- |
@@ -221,9 +223,13 @@ The following lists the enumerated two-letter `state` values that Digital River 
 | WV                      | West Virginia  |
 | WY                      | Wyoming        |
 
+### US federal district
+
 | Two-letter Abbreviation | Federal District     |
 | ----------------------- | -------------------- |
 | DC                      | District of Columbia |
+
+### US territories
 
 | Two-letter Abbreviation | Territories              |
 | ----------------------- | ------------------------ |
@@ -233,8 +239,52 @@ The following lists the enumerated two-letter `state` values that Digital River 
 | PR                      | Puerto Rico              |
 | VI                      | U.S. Virgin Islands      |
 
+### US APO/FPO military addresses
+
 | Two-letter Abbreviation | APO/FPO Military Addresses |
 | ----------------------- | -------------------------- |
 | AE                      | Armed Forces               |
 | AP                      | Armed Forces Pacific       |
 | AA                      | Armed Forces America       |
+
+## Postal codes
+
+A postal code is a series of letters, digits, or both, sometimes including spaces or punctuation, in a postal address. The postal code format varies by country. Countries throughout the world use postal codes for sorting mail. The [US ZIP Code](providing-address-information.md#us-zip-code-and-geocode) is a type of postal code.
+
+### US ZIP Code and geocode
+
+A ZIP Code is a group of five or nine numbers added to a postal address to assist in the sorting of mail. The five-digit ZIP Code represents the US's destination post office or delivery area. The geocode consists of the last four digits of a full nine-digit ZIP Code representing a specific delivery route within that overall delivery area. Some US states use ZIP Codes and geocodes to determine taxes. This enhancement caters to states' tax calculation requirements relying on geocodes and ZIP Codes. It will greatly benefit users in states where both ZIP Codes and geocodes are crucial for accurate tax calculation.
+
+#### How it works
+
+To enable the postalCode feature, enter the [ZIP Code and geocode](https://tools.usps.com/zip-code-lookup.htm) in the following format: "xxxxx-yyyy," where the first five-digits represent the ZIP Code and the last four digits represent the geocode. Digital River uses this format when calculating taxes, resulting in more precise results.
+
+{% tabs %}
+{% tab title="Request body/response body" %}
+{% code overflow="wrap" %}
+```javascript
+"billingAddress": {
+  "postalCode": “12345-6789”,
+  "country": "US"
+}
+
+"shippingAddress": {
+  "postalCode": “12345-6789”,
+  "country": "US"
+}
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+A US shopper can provide just their five-digit ZIP Code without impact. However, we recommend providing the ZIP Code and geocode to ensure the correct tax calculation.
+{% endhint %}
+
+#### Validation for US locales
+
+If a shopper tries to enter their ZIP Code and geocode using the wrong format, such as entering the nine digits without a dash (123456789) or with a misplaced dash (for example, 1-23456789), Digital River will throw a 409 Conflict [`invalid-postal-code`](../../../common-shopper-and-admin-apis/error-codes/error-codes-for-shopper-apis/409-conflict.md#invalid-postal-code) that shows the correct format.
+
+#### Validation for non-US locales
+
+No changes or validations are introduced for non-US locales so that this update won't disrupt or alter the behavior of users operating in non-US regions.

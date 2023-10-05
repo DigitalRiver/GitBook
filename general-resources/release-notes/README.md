@@ -6,7 +6,8 @@ description: Keep track of changes and updates to the Commerce API.
 
 ## 2023/10/5
 
-We added a `tax_service_invalid_hsCode_warning` to [Warnings](../../common-shopper-and-admin-apis/warnings-object/200-ok.md#warnings) to let you know when your provided HS code is incorrect when creating a product.
+* We added a `tax_service_invalid_hsCode_warning` to [Warnings](../../common-shopper-and-admin-apis/warnings-object/200-ok.md#warnings) to let you know when your provided HS code is incorrect when creating a product.
+* Digital RIver implemented a new feature that enhances tax calculation for certain US states by [adding ZIP Codes and geocodes support](../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md#us-zip-code-and-geocode). This feature addresses the specific tax calculation needs of regions that rely on geocodes and ZIP Codes. This enhancement will significantly improve tax calculation accuracy for users in regions where both ZIP Codes and geocodes are essential. This feature is available automatically; there is no need to enable anything. We also added the [invalid-postal-code](../../common-shopper-and-admin-apis/error-codes/error-codes-for-shopper-apis/409-conflict.md#invalid-postal-code) to the list of [409 Conflict](../../common-shopper-and-admin-apis/error-codes/error-codes-for-shopper-apis/409-conflict.md) codes.
 
 ## 2023/10/3
 
