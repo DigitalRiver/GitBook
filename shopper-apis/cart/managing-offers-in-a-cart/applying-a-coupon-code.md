@@ -199,12 +199,12 @@ Typically, the next steps after applying a coupon or promo code are either [redi
 
 ## Primary versus secondary offers
 
-When using a coupon, it's important to note that it's linked to a primary offer which may also have a secondary offer, typically tied to shipping discounts. Each offer has its specific criteria, which can be evaluated separately. A [`warnings object`](../../../common-shopper-and-admin-apis/error-codes/warnings-object/) appears in the response only when neither set of criteria is met. For example, you create a discount offer with a second shipping discount as follows:
+When using a coupon, it's important to note that it's linked to a primary offer which may also have a secondary offer, typically tied to shipping discounts. Each offer has its specific criteria, which can be evaluated separately. A [`warnings object`](../../../common-shopper-and-admin-apis/warnings-object/) appears in the response only when neither set of criteria is met. For example, you create a discount offer with a second shipping discount as follows:
 
 * The primary offer is a $5 discount for Product A.
 * The secondary offer is a 50% shipping discount on orders over $200.
 
-The following table shows when the A [`warnings object`](../../../common-shopper-and-admin-apis/error-codes/warnings-object/) appears.
+The following table shows when the A [`warnings object`](../../../common-shopper-and-admin-apis/warnings-object/) appears.
 
 | Discount scenarios                                                                                             | Does the primary offer criteria match? | Does the secondary offer criteria match | Warning displayed when applying coupon in the cart |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------- | --------------------------------------- | -------------------------------------------------- |

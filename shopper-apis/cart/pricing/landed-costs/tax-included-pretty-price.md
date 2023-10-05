@@ -64,7 +64,7 @@ The Features tab on the Configure Site Settings page allows you to enable or dis
 
     <div align="left">
 
-    <figure><img src="../../../../.gitbook/assets/Input Tax-Inclusive Shipping Cost enabled.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/Input Tax-Inclusive Shipping Cost disabled.png" alt=""><figcaption></figcaption></figure>
 
     </div>
 3. Click **Apply**.

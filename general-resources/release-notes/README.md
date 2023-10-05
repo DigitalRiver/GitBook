@@ -4,6 +4,10 @@ description: Keep track of changes and updates to the Commerce API.
 
 # Release notes
 
+## 2023/10/5
+
+We added a `tax_service_invalid_hsCode_warning` to [Warnings](../../common-shopper-and-admin-apis/warnings-object/200-ok.md#warnings) to let you know when your provided HS code is incorrect when creating a product.
+
 ## 2023/10/3
 
 We added support for tax-inclusive [landed costs](../../shopper-apis/cart/pricing/landed-costs/) with a [pretty price](../../shopper-apis/cart/pricing/landed-costs/tax-included-pretty-price.md). The tax-inclusive landed cost enhancement ensures that the prices specified by the client for the product price and shipping cost become the final prices for the order. Tax-inclusive landed cost includes the following enhancements:
