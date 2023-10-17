@@ -67,13 +67,11 @@ With our [mixed cart](broken-reference) feature, a shopper can create a cart tha
 
     </div>
 
-    Type your question in the **Search content** field and click **Lens**. You can ask Lens anything regarding Digital River features. It will give you plain English answers in seconds. For example, you can ask for an overview of a feature, and Lens will return a quick and concise answer.\
-    \
-    **Note**: You may need to refresh the page in your browser to see the Lens button. If that fails, clear your browser cache, then close and reopen your browser.
+    Type your question in the **Ask or search** field and click **Ask "\{{Search content\}} using GitBook AI**. You can ask GitBook AI anything regarding Digital River features. It will give you plain English answers in seconds. For example, you can ask for an overview of a feature, and GitBook AI will return a quick and concise answer.
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/Search content Commerce API.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/Ask or search CAPI.png" alt=""><figcaption></figcaption></figure>
 
     </div>
 
@@ -81,7 +79,7 @@ With our [mixed cart](broken-reference) feature, a shopper can create a cart tha
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/Follow up questions Commerce API.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/Related queries CAPI.png" alt=""><figcaption></figcaption></figure>
 
     </div>
 
@@ -97,7 +95,7 @@ With our [mixed cart](broken-reference) feature, a shopper can create a cart tha
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/Code example Commerce API.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/Product payload example CAPI.png" alt=""><figcaption></figcaption></figure>
 
     </div>
 
@@ -105,7 +103,7 @@ With our [mixed cart](broken-reference) feature, a shopper can create a cart tha
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/Steps for performing a test request Commerce API.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/Perrforming test request CAPI.png" alt=""><figcaption></figcaption></figure>
 
     </div>
 * We added Box Shadow as an [available custom style](../reference/elements/#available-custom-styles) when configuring [custom styles](../reference/elements/#custom-styles) for [DigitalRiver.js with Elements](../../payments/payments-solutions/digitalriver.js/).
