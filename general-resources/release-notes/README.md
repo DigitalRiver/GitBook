@@ -57,9 +57,10 @@ With our [mixed cart](broken-reference) feature, a shopper can create a cart tha
 
 ## 2023/4/5
 
-*   We enabled Lens, a semantic search tool, on the Documentation Portal.&#x20;
+*   We enabled GitBook AI, a semantic search tool, on the Documentation Portal.&#x20;
 
-    To find Lens, click the **Search** bar in the upper right corner.&#x20;
+    \
+    To find GitBook AI, click the **Search** bar in the upper right corner.&#x20;
 
     <div align="left">
 
@@ -77,7 +78,7 @@ With our [mixed cart](broken-reference) feature, a shopper can create a cart tha
 
     </div>
 
-    Additionally, Lens will provide follow-up questions that you might be interested in.&#x20;
+    Additionally, GitBook AI will provide follow-up questions that you might be interested in.&#x20;
 
     <div align="left">
 
@@ -85,7 +86,7 @@ With our [mixed cart](broken-reference) feature, a shopper can create a cart tha
 
     </div>
 
-    You can also see where Lens found the information and click to read more.
+    You can also see where GitBook AI found the information and click to read more.
 
     <div align="left">
 
