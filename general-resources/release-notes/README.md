@@ -67,7 +67,9 @@ With our [mixed cart](broken-reference) feature, a shopper can create a cart tha
 
     </div>
 
-    Type your question in the **Ask or search** field and click **Ask "\{{Search content\}} using GitBook AI**. You can ask GitBook AI anything regarding Digital River features. It will give you plain English answers in seconds. For example, you can ask for an overview of a feature, and GitBook AI will return a quick and concise answer.
+    Type your question in the **Ask or search** field and click **Ask "\{{Search content\}} using GitBook AI**. You can ask GitBook AI anything regarding Digital River features. It will give you plain English answers in seconds. For example, you can ask for an overview of a feature, and GitBook AI will return a quick and concise answer.\
+    \
+    **Note**: While semantic search can provide robust answers, sometimes the answers may be wrong. If you think the answer is incorrect, use the regular search to locate information."
 
     <div align="left">
 
