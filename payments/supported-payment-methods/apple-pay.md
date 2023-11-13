@@ -9,6 +9,10 @@ description: >-
 
 A fast and secure shopping experience where the consumer can quickly and seamlessly checkout with their Apple Touch authentication without login details or credentials. Digital River will support Apple Pay as a payment method on the payment service and DigitalRiver.js. Apple Pay is currently available to consumers in 21 countries and is currently supported only on IOS devices (iPhones, Macs, and so on).&#x20;
 
+{% hint style="info" %}
+Apple Pay does not support cross-origin iframes. You can choose not to use cross-origin iframes or set the `allow=payment` attribute at the iframe. See [Support Apply Pay in cross-origin iframes with`allow=payment` attribute](https://bugs.webkit.org/show\_bug.cgi?id=226345) for more information.
+{% endhint %}
+
 You can find an example of integration [here](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/applepay.html) (only viewable on Apple devices).
 
 ## How to configure

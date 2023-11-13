@@ -14,6 +14,12 @@ If you're using[ DigitalRiver.js with Elements](../), you can create an[ Apple P
 
 For details on validating your domain with Apple, refer to [How to configure](../../../supported-payment-methods/apple-pay.md#how-to-configure) on the [Apple Pay](../../../supported-payment-methods/apple-pay.md) page.
 
+* [Click to Download](https://drapi.io/docs/apple-pay/apple-developer-merchantid-domain-association) the `apple-developer-merchantid-domain-association` file.
+* Save the file to the following location on the domain where you want to offer Apple Pay: `/.well-known/apple-developer-merchantid-domain-association` Repeat this step for each additional domain where you want to offer Apple Pay. For example: `https://buy.mydomain.com/.well-known/apple-developer-merchantid-domain-association https://shop.mydomain.com/.well-known/apple-developer-merchantid-domain-association https://www.mydomain.com/.well-known/apple-developer-merchantid-domain-association` \
+  \
+  **Note**: You must serve the `apple-developer-merchantid-domain-association` file over HTTPS.
+* Contact your Digital River representative with the list of domains you want to register.
+
 ## Step 2: Create an Apple Pay source using Digital River.js
 
 ‌To create an Apple Pay payment source, please follow the [DigitalRiver.js reference guide](../../../../general-resources/reference/).‌
@@ -48,7 +54,7 @@ var applepay = digitalriver.createElement('applepay', paymentRequestData);
 
 ### Configure the Apple Pay element to handle events
 
-The Apple Pay element will surface events, which will give you more information to facilitate what is happening within the Apple Pay experience.‌
+The Apple Pay element will surface events, giving you more information to facilitate what is happening within the Apple Pay experience.‌
 
 These events include:
 
@@ -107,7 +113,7 @@ if (applepay.canMakePayment()) {
 
 ### Apple Pay source and response examples
 
-The source event will surface a Source plus other details provided by Apple Pay, like the billing address, shipping address, and contact information of the shopper.
+The source event will surface a Source plus other shopper details Apple Pay provides, like the billing address, shipping address, and contact information.
 
 {% hint style="info" %}
 The `address` object must contain postal code and state/province data that [adheres to a standardized format](../../../../shopper-apis/cart/creating-or-updating-a-cart/providing-address-information.md) using the `state` attribute. Note that the `state` attribute listed below corresponds to the `countrySubdivision` attribute used when providing address information. The payment session manages the correct field name on the backend.
@@ -248,7 +254,7 @@ Once authorized, you can use the source by [attaching it to a cart](../../../sou
 
 ### Apple Pay example
 
-The following example shows how to place an Apple Pay element on your page. Use this in conjunction with the [DigitalRiver.js reference guide](../../../../general-resources/reference/) to build your solution.HTML
+The following example shows placing an Apple Pay element on your page. Use this in conjunction with the [DigitalRiver.js reference guide](../../../../general-resources/reference/) to build your solution.HTML
 
 {% tabs %}
 {% tab title="HTML" %}

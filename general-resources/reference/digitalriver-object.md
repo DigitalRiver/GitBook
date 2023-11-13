@@ -214,6 +214,10 @@ This method returns an object with various compliance strings and links that can
 | `californiaPrivacyRights` | California Privacy Rights identifier in English and a link to the Digital River page explaining the shopper's rights in California. This is only applicable to the en-US locale. |
 | `warrantyInformation`     | Warranty Information in Italian and a link to the Digital River page explaining warranty information to residents of Italy. This is only applicable to the it-IT locale.         |
 
+## Creating a payment request
+
+Refer to the [Payment request object](digital-river-payment-objects.md#payment-request-object) in the [Digital River payment objects](digital-river-payment-objects.md) article for details.
+
 ## Creating sources
 
 When creating sources, you can select a method that accepts an element or use a [method that doesn't require an element](digitalriver-object.md#createsource-sourcedata). Both methods, however, require that you provide source data to tokenize. When configuring this data, you can [specify a future source use](digitalriver-object.md#specifying-a-sources-future-use).&#x20;
@@ -221,7 +225,7 @@ When creating sources, you can select a method that accepts an element or use a 
 For both versions, the `createSource()` method returns a promise that contains a `Result` object.  The `Result` object, in turn, contains one of two possible objects:‌
 
 * **source** — A `Source` object created by Digital River.
-* **error** — An [error object](error-types-codes-and-objects.md#create-source-error-object) that indicates a problem with the tokenization request. It provides the data you must correct before attempting to create a source again.&#x20;
+* **error** — An [error object](error-types-codes-and-objects.md#create-source-error-object) that indicates a problem with the tokenization request. It provides the data you must correct before creating a source again.&#x20;
 
 ### createSource(sourceData)
 
