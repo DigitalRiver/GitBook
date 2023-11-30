@@ -10,7 +10,8 @@ description: >-
 
 Available versions:
 
-* [2.0](https://docs.digitalriver.com/salesforce-lightning/v/salesforce-lightning-b2b-commerce-app-2.0)
+* [2.0](https://docs.digitalriver.com/salesforce-lightning/v/salesforce-lightning-b2b-commerce-app-2.0) \
+  <mark style="color:red;">IMPORTANT: This version of the documentation is currently in pre-release status.</mark>
 * [1.6](https://docs.digitalriver.com/salesforce-lightning/v/salesforce-lightning-b2b-commerce-app-1.6)
 
 Support only:
