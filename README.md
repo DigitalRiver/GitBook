@@ -12,14 +12,13 @@ Available versions:
 
 * [3.1](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-3.1/)
 * [3.0.1](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-3.0.1)
-* [3.0](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-3.0/)
 
 Support only:
 
+* [3.0](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-3.0/)
 * [2.7](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-2.7)
 * [2.6](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-2.6/)
 * [2.5](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-2.5/)
-* [2.4](https://docs.digitalriver.com/salesforce-b2c/v/salesforce-b2c-link-cartridge-2.4/)
 
 {% embed url="https://vimeo.com/418080016" %}
 
