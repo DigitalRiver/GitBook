@@ -9,11 +9,12 @@ description: >-
 
 Available versions:
 
+* [4.2](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-4.2/)
 * [4.1](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-4.1/)
-* [4.0](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-4.0/)
 
 Support only:
 
+* [4.0](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-4.0/)
 * [3.1.3](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-3.1.3/)
 * [3.1.2](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-3.1.2/)
 * [3.1.1](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-3.1.0/)
