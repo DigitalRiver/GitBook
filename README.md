@@ -9,7 +9,7 @@ description: >-
 
 Available versions:
 
-* [4.2](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-4.2/)
+* [4.2](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-4.2/) (BETA version)
 * [4.1](https://docs.digitalriver.com/magento/v/adobe-commerce-extension-4.1/)
 
 Support only:
