@@ -10,6 +10,7 @@ Digital River's checkout solution for payments, tax, fraud, and compliance elimi
 
 Support only:
 
+* [2.0 (BETA version)](https://docs.digitalriver.com/woocommerce/v/woocommerce-extension-2.0/)
 * [1.1](https://docs.digitalriver.com/woocommerce/v/woocommerce-extension-1.1/)
 * [1.0](https://docs.digitalriver.com/woocommerce/v/1.0-1/)
 
