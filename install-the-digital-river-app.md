@@ -4,7 +4,7 @@ description: Learn how to install the Digital River app.
 
 # Install the Digital River app
 
-To install the Digital River **** app:
+To install the Digital River app:
 
 1. Use the [Quick start guide](https://docs.digitalriver.com/digital-river-api/quick-start-guide) to set up a test account and then sign in to the Digital River [Dashboard](https://dashboard.digitalriver.com/login) to access your test account, set the API version, and get your [API keys](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/api-keys). From the Dashboard:
    1. [Set the API version to 2021-02-23](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/api-keys/updating-your-api-version#updating-your-api-version-on-all-keys).
@@ -28,7 +28,7 @@ To register your API keys:
 2. Enter your test confidential key in the **Digital River Test Confidential API Key** field. These keys are available on the [Digital River Dashboard](https://dashboard.digitalriver.com/apikeys). The Digital River Production Confidential API Key field can remain empty until you provision the live site.\
    **Note**: You are not required to provide the production confidential API key. The **Digital River Production Confidential API Key** field can remain empty until you are ready to go live.
 3. Choose one of the following options:
-   *   Select the **Use Digital River Fulfillment** check box **** if you will be using Digital River managed fulfillment.
+   *   Select the **Use Digital River Fulfillment** check box if you will be using Digital River managed fulfillment.
 
        &#x20;![](.gitbook/assets/DigitalRiverapplicationtestkey.PNG)\
 
@@ -47,4 +47,8 @@ To register your API keys:
      * If the **Provide Destination-Origin shipping location combination** field is empty, then BigCommerce will apply the tax estimate origin address country\_code/locale country\_code.
 4. Click **Submit**. When you successfully register your API keys, you will see the following message:
 
-![](.gitbook/assets/Successfully-registered.png)
+<div align="left">
+
+<img src=".gitbook/assets/Successfully-registered.png" alt="">
+
+</div>

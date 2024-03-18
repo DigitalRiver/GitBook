@@ -49,7 +49,7 @@ Each time you click **Save**, BigCommerce automatically [creates a new webhook e
 {% endhint %}
 
 {% hint style="info" %}
-You must copy the same values that you entered in the fields above into your Digital River **** app.
+You must copy the same values that you entered in the fields above into your Digital River app.
 {% endhint %}
 
 {% hint style="info" %}
