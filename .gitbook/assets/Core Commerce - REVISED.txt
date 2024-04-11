@@ -1,0 +1,210 @@
+frame #lightgrey Digital River API: Core Commerce Workflow
+#begin base settings for diagram
+fontfamily arial
+lifelinestyle :2
+participantspacing equal
+autonumber
+
+#end base settings for diagram
+
+title Digital River API: OMS Acquisition
+
+#begin particpant list 
+participant "**Shopper" as shp
+participant "**Commerce Platform" as cms
+participant "**Client Integration Layer" as mdw
+participant "**Digital River" as drapi
+participant "**Redirect Payment Method" as redir
+#participant "**Entitlement System" as es
+#end particpant list
+
+#begin diagram 
+
+
+shp->cms:Enters storefront
+//activate cms
+cms-->shp:Renders storefront and product pages
+
+shp->cms:Reviews options, selects and adds products to cart
+cms-->shp:Updates UX
+
+shp->cms:Initiates checkout
+cms-->shp:Renders cart page w/pre-tax totals
+box left of shp:Cart Page
+shp->cms:Confirms cart details and continues checkout
+
+box over cms:<align:center>Requires authenticated checkout\n or allows guest checkout
+
+cms-->shp:<align:center>Renders form to collect\n shopper's basic information and address
+box left of shp:      Address collection page w/ \n<color:#DeepSkyBlue>DigitalRiver.js Compliance Element
+linear
+shp->cms:Completes and submits form
+cms->mdw:Update order event
+linear off
+
+alt authenticated checkout
+mdw-#DeepSkyBlue:3>drapi:<color:#DeepSkyBlue>Creates or Gets Customer 
+drapi--#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Customer (201 Created)
+mdw-#DeepSkyBlue:3>drapi:<color:#DeepSkyBlue>Creates Checkout
+drapi--#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Checkout (201 Created)
+
+
+else guest checkout
+mdw-#DeepSkyBlue:3>drapi:<color:#DeepSkyBlue>Creates Checkout
+drapi--#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Checkout (201 Created)
+end
+
+linear 
+mdw-->cms:<align:center>Updates commerce platform order with tax details\n     and assigned selling entity from <color:#DeepSkyBlue>Checkout
+cms-->shp:<align:center>Renders updated tax details and \n <color:#DeepSkyBlue>Compliance Element
+linear off
+
+shp->cms:Proceeds to payment 
+cms-->shp:<align:center>Renders <color:#DeepSkyBlue>DigitalRiver.js Drop-in \nand Compliance Element</color>
+box left of shp:<align:center>Payment collection page w/ \n<color:#DeepSkyBlue>Drop-in and Compliance Element 
+shp->cms:Submits required information and (optionally) \n           saves payment to account
+cms-#DeepSkyBlue:3>drapi:<color:#DeepSkyBlue>Drop-in creates Source
+drapi--#DeepSkyBlue:3>cms:<color:#DeepSkyBlue>onSuccess event contains Source
+cms->mdw:Sends Source id 
+
+
+
+
+alt shopper opts to save payment info to account
+mdw-#DeepSkyBlue:3>drapi:<color:#DeepSkyBlue>Attaches Source to Customer
+drapi--#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Source (200 OK)
+mdw-#DeepSkyBlue:3>drapi:<color:#DeepSkyBlue>Updates Checkout with Source 
+drapi--#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Checkout (200 OK)
+
+
+else shoppers opts not to save payment info to account
+mdw-#DeepSkyBlue:3>drapi:<color:#DeepSkyBlue>Updates Checkout with Source
+drapi--#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Checkout (200 OK)
+
+end
+linear 
+mdw-->cms:Updates commerce platform order with tax details\n     and assigned selling entity from <color:#DeepSkyBlue>Checkout
+
+
+cms-->shp:<align:center>Renders order summary\n  and updates <color:#DeepSkyBlue>Compliance Element
+box left of shp:<align:center>Order review page w/\n<color:#DeepSkyBlue>Compliance Element
+linear
+shp->cms:Confirms details and clicks submit order button
+cms->mdw:Submit order event
+linear off
+mdw-#DeepSkyBlue:3>drapi:<color:#DeepSkyBlue>Creates Order (i.e, payment auth request)
+
+alt 409 status code
+drapi--#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Error (409 Conflict)
+linear 
+mdw-->cms:Updates commerce platform order\n   with returned payment failure
+cms-->shp:Renders payment failure message
+linear off
+else 201 status code
+activate drapi
+drapi--#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Order (201 Created)
+
+box over mdw:Captures <color:#DeepSkyBlue>Order state</color> (which is either accepted, \n<align:center>in_review, or pending_payment)
+linear
+mdw-->cms:Updates commerce platform order \n<align:center>with captured <color:#DeepSkyBlue>Order state
+alt order state = accepted or in_review or (order state = pending_payment AND payment.session.state = pending or pending_funds)
+
+cms-->shp:Renders Thank You (i.e., order confirmation) page
+box left of shp:<align:center>Thank You page w/\n<color:#DeepSkyBlue>DigitalRiver.js \nDelayed Payment Element
+alt payment.session.state = pending_funds and payment.session.nextAction.action = show_payment_instructions
+cms->shp:<align:center>Renders <color:#DeepSkyBlue>Delayed Payment Instructions Element</color> \n<align:center>on Thank You page
+end
+else payment.session.state = pending_redirect
+cms->redir:Redirects to payment.session.nextAction.data.redirectUrl
+cms<-redir:Loads returnUrl
+cms->mdw:Refresh order event
+mdw-#DeepSkyBlue:3>drapi:<color:#DeepSkyBlue>POST /orders/{orderId}/refresh
+drapi--#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Order (200 OK)
+box over mdw:Captures<color:#DeepSkyBlue> Order state
+alt Order state = accepted or in_review_or (state = pending_payment AND (payment.session.sate = pending or pending_funds))
+mdw-->cms:Updates commerce platform order \n<align:center>with captured<color:#DeepSkyBlue> Order state
+cms-->shp:Renders Thank You (i.e., order confirmation) page
+box left of shp:<align:center>Thank You page\n**
+else Order state is a different value (i.e., payment is cancelled or abandoned or fraud is suspected) 
+
+
+mdw->cms:Updates commerce platform order\n   with returned payment failure
+
+
+mdw-#DeepSkyBlue:3>drapi:<color:#DeepSkyBlue>Creates a copy of Checkout
+drapi--#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Checkout (201 Created)
+mdw-->cms: Updates commerce platform order with **final** tax details\n     and assigned selling entity from <color:#DeepSkyBlue>Checkout
+cms-->shp:Renders update of taxes, <color:#DeepSkyBlue>Compliance Element</color>, and <color:#DeepSkyBlue>Drop-in</color>, \n       so shopper can select a new payment method
+ note left of shp:<align:center>Payment collection page w/ \n<color:#DeepSkyBlue>Drop-in and Compliance Element
+end
+end
+
+linear off
+end
+space 3
+autoactivation off
+group When Order's state is pending_review
+alt order reviewed and approved
+box over drapi:Order passes fraud review
+drapi-#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Sends event with type of order.accepted to webhook
+box over mdw:Captures <color:#DeepSkyBlue>Order state</color> 
+mdw->cms:Updates commerce platform order \n<align:center>with captured <color:#DeepSkyBlue>Order state
+box over cms:order ready to fulfill
+else order reviewed and rejected
+box over drapi:Order fails fraud review
+drapi-#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Sends event with type of order.blocked to webhook
+box over mdw:Captures <color:#DeepSkyBlue>Order state</color> 
+mdw->cms:Updates commerce platform order \n<align:center>with captured <color:#DeepSkyBlue>Order state
+box over cms:order canceled
+end
+end
+
+group when Order's state is pending_payment
+alt shopper completes delayed payment instructions
+box over drapi:<align:center>Shopper completes instructions\n and payment is authorized
+drapi-#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Sends event with type of order.accepted to webhook
+box over mdw:Captures <color:#DeepSkyBlue>Order state</color>
+mdw->cms:Updates commerce platform order \n<align:center>with captured <color:#DeepSkyBlue>Order state
+box over cms:order ready to fulfill
+else shopper does not complete delayed payment instructions
+box over drapi:<align:center>Shopper does not complete instructions \nand payment window closes without funds
+drapi-#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Sends event with type of order.charge.failed to webhook
+box over mdw:Captures <color:#DeepSkyBlue>Order state</color>
+mdw->cms:Updates commerce platform order \n<align:center>with captured <color:#DeepSkyBlue>Order state
+box over cms:order canceled
+end
+end
+
+
+group when Order's state is accepted (i.e. ready to fulfill)
+alt Successful fulfillment
+
+box over cms:Line item fulfilled
+cms->cms:Updates status of line item(s)
+cms->mdw:Order status change event
+
+mdw-#DeepSkyBlue:3>drapi:<color:#DeepSkyBlue><align:center>Creates Fulfillment with\n shipped quantity of line items
+activate drapi
+drapi--#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Fulfillment
+deactivate drapi
+deactivate ful
+drapi->drapi:Captures charges on items
+else Cancelled fulfillment
+box over cms:Line item cancelled
+cms->cms:Updates status of line item(s)
+cms->mdw:Order status change event
+
+mdw-#DeepSkyBlue:3>drapi:<color:#DeepSkyBlue><align:center>Creates Fulfillment with\n cancelled quantity of line items
+activate drapi
+drapi--#DeepSkyBlue:3>mdw:<color:#DeepSkyBlue>Fulfillment
+deactivate drapi
+deactivate ful
+drapi->drapi:Cancels charges on items
+
+end
+end
+bottomparticipants
+#end diagram
+
+bottomparticipants 
+
