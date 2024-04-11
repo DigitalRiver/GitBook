@@ -12,7 +12,7 @@ Our [Getting started](quick-start-guide.md) guide walks you through the basics o
 
 To better understand some of Digital River's core services and how to use them, we recommend you review the [Using our services](using-our-services/) page.&#x20;
 
-You can also review our various checkout solutions and then select whichever option, or combination of options, best fits your business objectives:&#x20;
+You can also review our various checkout solutions and select whichever option, or combination of options, best fits your business objectives:&#x20;
 
 * [Low-code checkouts](integration-options/low-code-checkouts/): The quickest, easiest way to integrate. Add a turnkey Digital River-hosted checkout experience with minimal code or construct unique checkout flows with our components.
 * [Direct Integrations](integration-options/checkouts/): A more customizable way to build your user experience. Use our ready-to-display features and flexible API suite.
