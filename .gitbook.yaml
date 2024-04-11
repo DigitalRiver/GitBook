@@ -1,7 +1,9 @@
 root: ./
 
+redirects:
+  digital-river-api/integration-options/low-code-checkouts/using-a-shipping-endpoint: digital-river-api/integration-options/low-code-checkouts.md
+
 structure:  
     readme: README.md  
     summary: SUMMARY.md​
-redirects:
-  digital-river-api/order-management/returns-and-refunds-1/disputes-and-chargebacks: digital-river-api/developer-resources/digital-river-api-reference/payment-charges.md
+
