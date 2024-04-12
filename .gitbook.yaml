@@ -1,7 +1,7 @@
 root: ./
 
 redirects:
-  digital-river-api/integration-options/low-code-checkouts/using-a-shipping-endpoint: digital-river-api/developer-resources/digital-river-api-reference.md
+  digital-river-api/payments/payment-sources: digital-river-api/payments/payment-sources/using-the-source-identifier.md
 
 structure:  
     readme: README.md  
