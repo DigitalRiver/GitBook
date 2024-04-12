@@ -1,7 +1,7 @@
 root: ./
 
 redirects:
-  digital-river-api/payments/payment-sources: digital-river-api/payments/payment-sources/using-the-source-identifier.md
+  digital-river-api/developer-resources/digitalrivercheckout.js-reference/digitalrivercheckout-object/components/address-component: digital-river-api/developer-resources/digitalrivercheckout.js-reference/digitalrivercheckout-object/components/shipping-component.md
 
 structure:  
     readme: README.md  
