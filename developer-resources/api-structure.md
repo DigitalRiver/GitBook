@@ -4,7 +4,7 @@ description: Understand the Digital River API structure.
 
 # API structure
 
-The Digital River API is a [RESTful API](https://restfulapi.net). That means we designed the API to allow you to create, read, update, and delete objects with the`POST`, `GET`, `PUT` and `DELETE` [HTTP methods](https://www.restapitutorial.com/lessons/httpmethods.html).
+The Digital River API is a [RESTful API](https://restfulapi.net). That means we designed the API to allow you to create, read, update, and delete objects with `POST`, `GET`, `PUT` and `DELETE` [HTTP methods](https://www.restapitutorial.com/lessons/httpmethods.html).
 
 The Digital River API speaks exclusively in [JSON](https://www.json.org/json-en.html). So in order to ensure the API accepts and processes your requests, always set the `Content-Type` header to `application/json` .
 
