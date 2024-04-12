@@ -1,4 +1,4 @@
-root: ./home/
+root: ./
 
 redirects:
   digital-river-api/integration-options/low-code-checkouts/using-a-shipping-endpoint: digital-river-api/integration-options/low-code-checkouts
