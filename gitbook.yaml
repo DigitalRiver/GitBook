@@ -1,9 +1,0 @@
-root: ./digital-river-api/
-
-redirects:
-  integration-options/low-code-checkouts/using-a-shipping-endpoint: developer-resources/digital-river-api-reference.md
-
-structure:  
-    readme: README.md  
-    summary: SUMMARY.md​
-
