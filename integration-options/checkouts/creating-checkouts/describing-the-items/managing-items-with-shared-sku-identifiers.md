@@ -129,7 +129,7 @@ The returned checkout `id` can then be used to [create an Order](https://www.dig
 
 Perhaps you have a customer who wants to purchase an auto-renew digital magazine subscription for himself and another, nearly identical subscription for a friend. The only difference is that the subscription for the friend must be manually renewed.
 
-In the [create Checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createCheckouts) or [create Invoice](../../../../developer-resources/digital-river-api-reference/invoices.md#creating-an-invoice) request, assign each item the same `skuId` but different `autoRenewal` and `subscriptionId` values.
+In the [create Checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createCheckouts) or [create Invoice](../../subscriptions/invoices.md#creating-an-invoice) request, assign each item the same `skuId` but different `autoRenewal` and `subscriptionId` values.
 
 {% tabs %}
 {% tab title="curl" %}

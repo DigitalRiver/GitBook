@@ -6,13 +6,13 @@ description: Learn how to manage payment sources
 
 In th Digital River API, [payment sources](./) fall into two broad categories: [primary and secondary](using-the-source-identifier.md#primary-versus-secondary-sources).
 
-For both categories, after [source creation](using-the-source-identifier.md#creating-payment-sources), you can always [attach a source to a checkout](using-the-source-identifier.md#attaching-sources-to-checkouts) so that Digital River can attempt to generate a [charge](../../developer-resources/digital-river-api-reference/payment-charges.md) after you [create the order](../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier). You can also [detach sources from checkouts](using-the-source-identifier.md#detaching-sources-from-checkouts).
+For both categories, after [source creation](using-the-source-identifier.md#creating-payment-sources), you can always [attach a source to a checkout](using-the-source-identifier.md#attaching-sources-to-checkouts) so that Digital River can attempt to generate a [charge](../../order-management/orders/payment-charges/) after you [create the order](../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier). You can also [detach sources from checkouts](using-the-source-identifier.md#detaching-sources-from-checkouts).
 
 If a [primary source](using-the-source-identifier.md#primary-payment-sources) supports [reusability](./#reusable-or-single-use), you may also be able to [save it to a customer's account](using-the-source-identifier.md#attaching-sources-to-customers). For [customers](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Customers) with multiple `sources[]`, we also provide you the ability to [set the default one](using-the-source-identifier.md#setting-the-default-payment-source).
 
 You can [combine primary and secondary sources](using-the-source-identifier.md#combining-primary-and-secondary-payment-sources), but how you sequence their application depends on whether or not the primary source is [reusable](./#reusable-or-single-use).
 
-And when [building your payment flows](../../integration-options/checkouts/building-you-workflows/), the [Digital River object](../../developer-resources/reference/digitalriver-object.md) exposes methods for [authenticating](using-the-source-identifier.md#authenticating-sources) and [updating](using-the-source-identifier.md#updating-sources) sources that can be useful in purchase and account management scenarios.
+And when [building your payment flows](../../integration-options/checkouts/building-you-workflows/), the [Digital River object](../payment-integrations-1/digitalriver.js/reference/digitalriver-object.md) exposes methods for [authenticating](using-the-source-identifier.md#authenticating-sources) and [updating](using-the-source-identifier.md#updating-sources) sources that can be useful in purchase and account management scenarios.
 
 ## Primary versus secondary sources
 
@@ -24,7 +24,7 @@ Primary payment [sources](https://www.digitalriver.com/docs/digital-river-api-re
 
 Primary sources created from [payment methods that support reusability](../supported-payment-methods/) may be able to be [associated with a customer](using-the-source-identifier.md#attaching-sources-to-customers) and then [reused](./#reusable-or-single-use) in future transactions.
 
-Alternatively, you can simply [attach a primary source to a checkout](using-the-source-identifier.md#attaching-sources-to-checkouts), thereby enabling Digital River to submit a [charge authorization request](../../developer-resources/digital-river-api-reference/payment-charges.md#how-a-charge-is-created) after you [create the order](../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier).
+Alternatively, you can simply [attach a primary source to a checkout](using-the-source-identifier.md#attaching-sources-to-checkouts), thereby enabling Digital River to submit a [charge authorization request](../../order-management/orders/payment-charges/#how-a-charge-is-created) after you [create the order](../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier).
 
 Once a [checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) contains a primary source, the [necessary payment preconditions](../../integration-options/checkouts/creating-checkouts/payment-sessions.md#how-to-determine-when-to-create-an-order) are met to [convert that checkout to an order](../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier).&#x20;
 
@@ -36,7 +36,7 @@ In the Digital River APIs, secondary sources have a [`type`](./#supported-paymen
 
 If a [checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) only contains secondary `sources[]`, you may be able to successfully [create the order](../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier), but before doing so, you need to ensure the [necessary payment preconditions are met](../../integration-options/checkouts/creating-checkouts/payment-sessions.md#how-to-determine-when-to-create-an-order). &#x20;
 
-Secondary sources do not support [reusability](./#reusable-or-single-use). Therefore, they [cannot be saved to a customer's account](using-the-source-identifier.md#restrictions-on-saving-sources). Rather, they can only be [attached to a checkout](using-the-source-identifier.md#attaching-sources-to-checkouts) to create a one-time [charge](../../developer-resources/digital-river-api-reference/payment-charges.md) upon [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) creation.&#x20;
+Secondary sources do not support [reusability](./#reusable-or-single-use). Therefore, they [cannot be saved to a customer's account](using-the-source-identifier.md#restrictions-on-saving-sources). Rather, they can only be [attached to a checkout](using-the-source-identifier.md#attaching-sources-to-checkouts) to create a one-time [charge](../../order-management/orders/payment-charges/) upon [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) creation.&#x20;
 
 ## Creating payment sources
 
@@ -61,11 +61,11 @@ A [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/#ta
 
 In [checkouts](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts), you can combine a secondary source with any primary source that has one of the following [`type`](./#supported-payment-methods) values: `alipayCn`, `creditCard`, `googlePay`, `applePay`, `payPal`, `payPalCredit`, `payPalBilling`, `wireTransfer`, `klarnaCredit`, `klarnaCreditRecurring`, `alipay`, `konbini`, `directDebit` and `onlineBanking`.
 
-You can also use secondary sources with any of the above primary payment sources in [invoices](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices). Just make sure you turn off [billing optimization](../../developer-resources/digital-river-api-reference/invoices.md#invoice-billing). For details, refer to [supported payment methods with invoices](../../developer-resources/digital-river-api-reference/invoices.md#supported-payment-methods).
+You can also use secondary sources with any of the above primary payment sources in [invoices](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices). Just make sure you turn off [billing optimization](../../integration-options/checkouts/subscriptions/invoices.md#invoice-billing). For details, refer to [supported payment methods with invoices](../../integration-options/checkouts/subscriptions/invoices.md#supported-payment-methods).
 
 When [building your workflows](../../integration-options/checkouts/building-you-workflows/), make sure you're properly sequencing the application of primary and secondary sources. The sequence depends on whether you use [secondary sources with a single-use primary source](using-the-source-identifier.md#using-secondary-sources-with-a-single-use-primary-source) or [secondary sources with a saved primary source](using-the-source-identifier.md#using-secondary-sources-with-a-saved-primary-source).
 
-Also, you should be aware of [how Digital River handle captures, cancels, and refunds](using-the-source-identifier.md#how-we-handle-captures-cancels-and-refunds) when an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) contains multiple [`charges[]`](../../developer-resources/digital-river-api-reference/payment-charges.md).
+Also, you should be aware of [how Digital River handle captures, cancels, and refunds](using-the-source-identifier.md#how-we-handle-captures-cancels-and-refunds) when an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) contains multiple [`charges[]`](../../order-management/orders/payment-charges/).
 
 ### Using secondary sources with a single use primary source
 
@@ -99,15 +99,15 @@ When [combining secondary sources with a primary source](using-the-source-identi
 
 #### Captures
 
-Digital River first [captures](../../developer-resources/digital-river-api-reference/payment-charges.md#captures) the [charge(s)](../../developer-resources/digital-river-api-reference/payment-charges.md) created from [secondary sources](using-the-source-identifier.md#secondary-payment-sources) and then the single charge created from the [primary source](using-the-source-identifier.md#primary-payment-sources).&#x20;
+Digital River first [captures](../../order-management/orders/payment-charges/#captures) the [charge(s)](../../order-management/orders/payment-charges/) created from [secondary sources](using-the-source-identifier.md#secondary-payment-sources) and then the single charge created from the [primary source](using-the-source-identifier.md#primary-payment-sources).&#x20;
 
 #### Cancels
 
-Digital River first [cancels](../../developer-resources/digital-river-api-reference/payment-charges.md#cancels) the single [charge](../../developer-resources/digital-river-api-reference/payment-charges.md) created from the [primary source](using-the-source-identifier.md#primary-payment-sources) and then the charge(s) created from [secondary sources](using-the-source-identifier.md#secondary-payment-sources).&#x20;
+Digital River first [cancels](../../order-management/orders/payment-charges/#cancels) the single [charge](../../order-management/orders/payment-charges/) created from the [primary source](using-the-source-identifier.md#primary-payment-sources) and then the charge(s) created from [secondary sources](using-the-source-identifier.md#secondary-payment-sources).&#x20;
 
 #### Refunds
 
-Digital River first [refunds](../../developer-resources/digital-river-api-reference/payment-charges.md#refunds) the single [charge](../../developer-resources/digital-river-api-reference/payment-charges.md) created from the [primary source](using-the-source-identifier.md#primary-payment-sources) and then the charge(s) created from [secondary sources](using-the-source-identifier.md#secondary-payment-sources).&#x20;
+Digital River first [refunds](../../order-management/orders/payment-charges/#refunds) the single [charge](../../order-management/orders/payment-charges/) created from the [primary source](using-the-source-identifier.md#primary-payment-sources) and then the charge(s) created from [secondary sources](using-the-source-identifier.md#secondary-payment-sources).&#x20;
 
 ## Attaching sources to checkouts
 
@@ -257,7 +257,7 @@ With [Drop-in payments](../payment-integrations-1/drop-in/), you can use `readyF
 
 ### Restrictions on using saved sources
 
-A [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) saved to a [customer](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Customers) can't be used to [generate a charge](../../developer-resources/digital-river-api-reference/payment-charges.md#how-a-charge-is-created) unless you associate the [customer](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Customers) with the [checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts).&#x20;
+A [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) saved to a [customer](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Customers) can't be used to [generate a charge](../../order-management/orders/payment-charges/#how-a-charge-is-created) unless you associate the [customer](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Customers) with the [checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts).&#x20;
 
 If a [customer](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Customers) has a saved `sources[]`, and you [associate that source with the checkout](using-the-source-identifier.md#attaching-sources-to-checkouts) but neglect to [associate that customer with the checkout](../../integration-options/checkouts/creating-checkouts/using-the-checkout-identifier.md#registered-checkouts-or-invoices), you'll receive the following error when you [convert the checkout to an order](../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier).
 
@@ -280,7 +280,7 @@ If a [customer](https://www.digitalriver.com/docs/digital-river-api-reference/#t
 
 ## Removing sources from customers <a href="#detaching-sources-from-customers" id="detaching-sources-from-customers"></a>
 
-If you'd like to detach a payment [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) saved to a [customer](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Customers), you can send a [`DELETE/customers/{id}/sources/{sourcesId}`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/deleteCustomerSource) request. When you do so, the source's [`state`](./#source-state) becomes `cancelled` and the resource can't be used to [create any future charges](../../developer-resources/digital-river-api-reference/payment-charges.md#how-a-charge-is-created).
+If you'd like to detach a payment [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) saved to a [customer](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Customers), you can send a [`DELETE/customers/{id}/sources/{sourcesId}`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/deleteCustomerSource) request. When you do so, the source's [`state`](./#source-state) becomes `cancelled` and the resource can't be used to [create any future charges](../../order-management/orders/payment-charges/#how-a-charge-is-created).
 
 If you attempt to reattach this source to a customer, you'll receive the following error:
 
@@ -309,8 +309,8 @@ The first [source you attach to a customer](using-the-source-identifier.md#attac
 
 ## Authenticating sources
 
-After you [retrieve a source](retrieving-sources.md), you can pass its identifier, [payment session](../../integration-options/checkouts/creating-checkouts/payment-sessions.md) identifier, and client secret to the [authenticate source method](../../developer-resources/reference/digitalriver-object.md#authenticating-sources) in the [DigitalRiver.js](https://github.com/DigitalRiver/GitBook/blob/Digital-River-API-latest/payments/payment-integrations-1/digitalriver.js#getting-started) library. This operation is especially helpful when [building workflows](../../integration-options/checkouts/building-you-workflows/) that allow customers to retrieve saved credit card information during [one-off purchases](../../integration-options/checkouts/building-you-workflows/#customer-selects-saved-credit-card-during-checkout) or [subscription acquisitions](../../integration-options/checkouts/building-you-workflows/#customer-saves-credit-card-details-during-subscription-acquisition-checkout).
+After you [retrieve a source](retrieving-sources.md), you can pass its identifier, [payment session](../../integration-options/checkouts/creating-checkouts/payment-sessions.md) identifier, and client secret to the [authenticate source method](../payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#authenticating-sources) in the [DigitalRiver.js](https://github.com/DigitalRiver/GitBook/blob/Digital-River-API-latest/payments/payment-integrations-1/digitalriver.js#getting-started) library. This operation is especially helpful when [building workflows](../../integration-options/checkouts/building-you-workflows/) that allow customers to retrieve saved credit card information during [one-off purchases](../../integration-options/checkouts/building-you-workflows/#customer-selects-saved-credit-card-during-checkout) or [subscription acquisitions](../../integration-options/checkouts/building-you-workflows/#customer-saves-credit-card-details-during-subscription-acquisition-checkout).
 
 ## Updating sources
 
-After you [retrieve a source](retrieving-sources.md), you can pass its identifier, [payment session](../../integration-options/checkouts/creating-checkouts/payment-sessions.md) identifier, and client secret to the [update source method](../../developer-resources/reference/digitalriver-object.md#updating-sources) in the [DigitalRiver.js](https://github.com/DigitalRiver/GitBook/blob/Digital-River-API-latest/payments/payment-integrations-1/digitalriver.js#getting-started) library. This operation is useful when [building workflows](../../integration-options/checkouts/building-you-workflows/) that allow customers to [update a credit card's expiration date or billing address](../../integration-options/checkouts/building-you-workflows/#updating-a-credit-cards-expiration-date-or-billing-address).
+After you [retrieve a source](retrieving-sources.md), you can pass its identifier, [payment session](../../integration-options/checkouts/creating-checkouts/payment-sessions.md) identifier, and client secret to the [update source method](../payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#updating-sources) in the [DigitalRiver.js](https://github.com/DigitalRiver/GitBook/blob/Digital-River-API-latest/payments/payment-integrations-1/digitalriver.js#getting-started) library. This operation is useful when [building workflows](../../integration-options/checkouts/building-you-workflows/) that allow customers to [update a credit card's expiration date or billing address](../../integration-options/checkouts/building-you-workflows/#updating-a-credit-cards-expiration-date-or-billing-address).

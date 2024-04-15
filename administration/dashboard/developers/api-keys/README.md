@@ -14,11 +14,7 @@ Digital River uses your account's API keys to authenticate your API requests. If
 
 Use the **Update version on all keys** button on the Keys and versioning pane to [select a version and update all keys to that version](updating-your-api-version.md). You can select to update all API keys to the latest API version or a previous API version. When you update all keys, the API version column for standard keys and restricted keys displays the version you selected.
 
-<div align="left">
-
-<img src="../../../../.gitbook/assets/APIKeysUpdate.png" alt="">
-
-</div>
+<figure><img src="../../../../.gitbook/assets/1 Keys and versioning.png" alt=""><figcaption></figcaption></figure>
 
 ## Standard keys
 
@@ -28,11 +24,7 @@ The public API keys identify your account with Digital River and allow you to cr
 
 The confidential (secret) API keys allow you to send an API request to Digital River without restriction. Keep these secret keys confidential and only store them on your servers.
 
-<div align="left">
-
-<img src="../../../../.gitbook/assets/APIKeysStandardKeys.png" alt="">
-
-</div>
+<figure><img src="../../../../.gitbook/assets/2 Standard Keys.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Note**: Limit access to your API keys and secrets to those who need them. Do not store them in a version control system.
@@ -42,8 +34,4 @@ The confidential (secret) API keys allow you to send an API request to Digital R
 
 Restrict API keys when you want to limit an application, batch job, or partner to a specific API version. You can also use it to allow your teams to choose when they want to upgrade their API version. You can [create](creating-a-restricted-key.md), [edit](editing-a-restricted-key.md), [delete](deleting-a-restricted-key.md), and [rotate restricted keys](rotating-keys.md).
 
-<div align="left">
-
-<img src="../../../../.gitbook/assets/Restricted-Keys.png" alt="">
-
-</div>
+<figure><img src="../../../../.gitbook/assets/3 Restricted Keys (1).png" alt=""><figcaption></figcaption></figure>

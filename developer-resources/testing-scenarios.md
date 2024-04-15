@@ -19,9 +19,9 @@ For details on evaluating VAT implementations, refer to the [test tax identifier
 
 ## Getting started
 
-Always use your [test API keys](api-structure.md#test-and-production-environments) to evaluate your integration. This prevents direct interactions with payment services and ensures that input data doesn't result in the creation of an actual [charge](digital-river-api-reference/payment-charges.md) or the transfer of funds.
+Always use your [test API keys](api-structure.md#test-and-production-environments) to evaluate your integration. This prevents direct interactions with payment services and ensures that input data doesn't result in the creation of an actual [charge](../order-management/orders/payment-charges/) or the transfer of funds.
 
-When testing in the Digital River APIs, use your [confidential (secret) test key](api-structure.md#confidential-keys) and your [public test key](api-structure.md#public-keys) to create [payment sources ](../payments/payment-sources/)in [DigitalRiver.js](reference/) and [DigitalRiverCheckout.js](digitalrivercheckout.js-reference/).
+When testing in the Digital River APIs, use your [confidential (secret) test key](api-structure.md#confidential-keys) and your [public test key](api-structure.md#public-keys) to create [payment sources ](../payments/payment-sources/)in [DigitalRiver.js](../payments/payment-integrations-1/digitalriver.js/reference/) and [DigitalRiverCheckout.js](digitalrivercheckout.js-reference/).
 
 How you test a payment method depends on whether its resulting [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) has an [authentication flow](../payments/payment-sources/#authentication-flow) of [standard](testing-scenarios.md#testing-standard-payment-methods), [redirect](testing-scenarios.md#testing-redirect-payment-methods), or [receiver](testing-scenarios.md#testing-receiver-payment-methods). You can find it on the Supported payment methods page if you don't know this.
 
@@ -35,7 +35,7 @@ In this section, you'll find information on testing payment methods whose result
 
 ### Credit cards
 
-The following card numbers are only valid for testing. They do not create a real [charge](digital-river-api-reference/payment-charges.md) or result in a transfer of funds.
+The following card numbers are only valid for testing. They do not create a real [charge](../order-management/orders/payment-charges/) or result in a transfer of funds.
 
 #### Success scenarios
 
@@ -91,7 +91,7 @@ Before you test Google Pay, you need to:
 * Have a [Google Account](https://support.google.com/accounts/answer/27441?hl=en).
 * Join the [Google Pay API Test Cards Allowlist](https://groups.google.com/g/googlepay-test-mode-stub-data) group. Once you've joined, a[ test card suite](https://developers.google.com/pay/api/android/guides/resources/test-card-suite) is enabled in your Google account.
 
-Any credit card in this suite can create a [source](../payments/payment-sources/), [charge](digital-river-api-reference/payment-charges.md), [capture](digital-river-api-reference/payment-charges.md#captures), and [refund](../order-management/returns-and-refunds-1/refunds/).&#x20;
+Any credit card in this suite can create a [source](../payments/payment-sources/), [charge](../order-management/orders/payment-charges/), [capture](../order-management/orders/payment-charges/#captures), and [refund](../order-management/returns-and-refunds-1/refunds/).&#x20;
 
 However, the customer's last name must be a specific value to evaluate whether your application properly handles failures and [Strong Customer Authentication](../payments/psd2-and-sca/). Use the table below to determine the scenario you want to test and the value that triggers the behavior.
 
@@ -99,15 +99,15 @@ However, the customer's last name must be a specific value to evaluate whether y
 Digital River's [low-code checkout solutions](../integration-options/low-code-checkouts/) don't currently support testing Google Pay failures and SCA.
 {% endhint %}
 
-| Scenario                                                                                                                                                                                                                                                                                                                                           | Last name   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| The [source ](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources)is created but its `state` is `failed`                                                                                                                                                                                                                    | SourceFail  |
-| The [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) is successfully created but the [charge's](digital-river-api-reference/payment-charges.md) `state` is `failed`                                                                                                                                            | ChargeFail  |
-| Both the [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) and [charge](digital-river-api-reference/payment-charges.md) are successfully created but the [capture's](digital-river-api-reference/payment-charges.md#captures) `state` is `failed`                                                               | CaptureFail |
-| The [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) and [charge](digital-river-api-reference/payment-charges.md) are successfully created by the [cancel's](digital-river-api-reference/payment-charges.md#cancels) `state` is `failed`                                                                       | CancelFail  |
-| The [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources), [charge](digital-river-api-reference/payment-charges.md), and [capture](digital-river-api-reference/payment-charges.md#captures) are successfully created but the [refund's](digital-river-api-reference/payment-charges.md#refunds) `state` is `failed` | RefundFail  |
-| The [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) is successfully created and the user is challenged                                                                                                                                                                                                        | SCATest     |
-| The [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) is successfully created and the user is challenged but the [charge's](digital-river-api-reference/payment-charges.md) `state` is `failed`                                                                                                                 | SCATestFail |
+| Scenario                                                                                                                                                                                                                                                                                                                                  | Last name   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| The [source ](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources)is created but its `state` is `failed`                                                                                                                                                                                                           | SourceFail  |
+| The [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) is successfully created but the [charge's](../order-management/orders/payment-charges/) `state` is `failed`                                                                                                                                      | ChargeFail  |
+| Both the [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) and [charge](../order-management/orders/payment-charges/) are successfully created but the [capture's](../order-management/orders/payment-charges/#captures) `state` is `failed`                                                            | CaptureFail |
+| The [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) and [charge](../order-management/orders/payment-charges/) are successfully created by the [cancel's](../order-management/orders/payment-charges/#cancels) `state` is `failed`                                                                    | CancelFail  |
+| The [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources), [charge](../order-management/orders/payment-charges/), and [capture](../order-management/orders/payment-charges/#captures) are successfully created but the [refund's](../order-management/orders/payment-charges/#refunds) `state` is `failed` | RefundFail  |
+| The [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) is successfully created and the user is challenged                                                                                                                                                                                               | SCATest     |
+| The [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) is successfully created and the user is challenged but the [charge's](../order-management/orders/payment-charges/) `state` is `failed`                                                                                                           | SCATestFail |
 
 ## Testing redirect payment methods
 

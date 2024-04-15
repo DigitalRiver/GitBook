@@ -313,7 +313,7 @@ The following is the `symbol` for Jordanian Dinars:
 
 #### Target output in UI
 
-![](<../../.gitbook/assets/image (17).png>)
+![](<../../.gitbook/assets/image (17) (1).png>)
 {% endtab %}
 {% endtabs %}
 
@@ -338,7 +338,7 @@ If `decimalPlaces` is `0` and [`currencyNumberFormat`](offering-local-pricing.md
 
 | decimalPlaces value | Target output in UI                                                          |
 | ------------------- | ---------------------------------------------------------------------------- |
-| `0`                 | ![](<../../.gitbook/assets/image (18).png>)                                  |
+| `0`                 | ![](<../../.gitbook/assets/image (18) (1).png>)                              |
 | `2`                 | <img src="../../.gitbook/assets/image (89).png" alt="" data-size="original"> |
 | `3`                 | ![](<../../.gitbook/assets/image (21).png>)                                  |
 

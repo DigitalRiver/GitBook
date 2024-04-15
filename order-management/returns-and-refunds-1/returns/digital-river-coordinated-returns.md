@@ -38,7 +38,7 @@ In the request, you should also set `upstreamId` to the [identifier of the upstr
 
 ### Upstream data sent in a `POST` fulfillment return request
 
-When defining a `POST/fulfillment-returns` request, you can retrieve the required data from the following upstream [Order](../../../developer-resources/digital-river-api-reference/orders/) and [Fulfillment Order](../../../integration-options/checkouts/handling-digital-river-coordinated-fulfillments/global-fulfillments.md#a-fulfillment-order) resources.
+When defining a `POST/fulfillment-returns` request, you can retrieve the required data from the following upstream [Order](../../orders/) and [Fulfillment Order](../../../integration-options/checkouts/handling-digital-river-coordinated-fulfillments/global-fulfillments.md#a-fulfillment-order) resources.
 
 | Upstream API       | Attribute    |       | Fulfillment Returns API          |
 | ------------------ | ------------ | ----- | -------------------------------- |

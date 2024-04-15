@@ -11,12 +11,8 @@ The Payouts page lists the following information for individual payouts or a lis
 * Which one of Digital River’s entities paid the client
 * Which one of the client’s entities Digital River paid
 
-<figure><img src="../../../../.gitbook/assets/01_01 Payout List Refresh.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/1 Payout page details page.png" alt=""><figcaption></figcaption></figure>
 
-Click the "i" Information icon to open a list of column descriptions:
-
-<div align="left">
-
-<img src="../../../../.gitbook/assets/payoutcolumndescriptions (2) (1) (2) (2).png" alt="">
-
-</div>
+Click the "i" Information icon to open a list of column descriptions:\
+\
+![](<../../../../.gitbook/assets/2 Payout column desc.png>)

@@ -8,14 +8,15 @@ You can rotate a webhook's secret in your [Digital River Dashboard](https://dash
 
 To rotate a webhook's secret:
 
-1. From the **Webhooks** page on the [Dashboard](https://dashboard.digitalriver.com), click **More options** (vertical ellipses) associated with the key you want to rotate and click **Rotate**.\
-   ![](<../../../../.gitbook/assets/editrotatedeletewebhook (1) (2) (1) (3).png>)
-2. Choose the expiration time from the **Choose expiration** list.\
-   ![](../../../../.gitbook/assets/RotateWHSigSecret.png)
-3. Enter your password and click **Rotate webhook signature secret**. The Webhooks page will display signing secret and **New** next to the modified webhook.
+1.  From the **Webhooks** page on the [Dashboard](https://dashboard.digitalriver.com), click **More options** (vertical ellipses) associated with the key you want to rotate and click **Rotate**.\
 
-<div align="left">
 
-<img src="../../../../.gitbook/assets/WebhooksRotateSecret.png" alt="">
+    <figure><img src="../../../../.gitbook/assets/1 Rotating a webhook - options drpdown.png" alt=""><figcaption></figcaption></figure>
+2.  Choose the expiration time from the **Choose expiration** list.\
 
-</div>
+
+    <figure><img src="../../../../.gitbook/assets/2 Rotating a webhook - rotate modal.png" alt=""><figcaption></figcaption></figure>
+3.  Enter your password and click **Rotate webhook signature secret**. The Webhooks page will display signing secret and **New** next to the modified webhook.\
+
+
+    <figure><img src="../../../../.gitbook/assets/3 Rotating a webhook - rotate new complete.png" alt=""><figcaption></figcaption></figure>

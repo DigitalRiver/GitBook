@@ -6,7 +6,7 @@ description: >-
 
 # Payment reauthorizations
 
-You have a higher risk of [chargebacks](returns-and-refunds-1/disputes-and-chargebacks.md) when selling pre-ordered goods or managing other types of delayed fulfillments. This is due to the often-lengthy period of time between payment authorization and [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures).
+You have a higher risk of [chargebacks](returns-and-refunds-1/disputes-and-chargebacks.md) when selling pre-ordered goods or managing other types of delayed fulfillments. This is due to the often-lengthy period of time between payment authorization and [capture](orders/payment-charges/#captures).
 
 If you'd like to minimize your chargeback risks, your account can be setup so that Digital River never initiates the capture and settlement process without first possessing a valid authorization. There are however potential downsides to selecting this option. For details, refer to [Managing chargeback risks](payment-reauthorizations.md#managing-chargeback-risks).
 
@@ -14,13 +14,13 @@ Although Digital River's payment reauthorization feature has other use cases, th
 
 ## Managing chargeback risks
 
-An [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) whose [`state`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) moves to `accepted` indicates that the issuing bank has given approval for the transaction to proceed. But that authorization remains valid for only a limited amount of time. If it expires before a [create fulfillment request](informing-digital-river-of-a-fulfillment.md#post-fulfillments) is submitted that results in Digital River attempting to fully or partially [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) an order's [`charges[]`](../developer-resources/digital-river-api-reference/payment-charges.md), then the issuing bank may initiate a [late presentment chargeback](../general-resources/glossary.md#late-presentment-chargebacks).  &#x20;
+An [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) whose [`state`](orders/the-order-lifecycle.md#order-states-and-events) moves to `accepted` indicates that the issuing bank has given approval for the transaction to proceed. But that authorization remains valid for only a limited amount of time. If it expires before a [create fulfillment request](informing-digital-river-of-a-fulfillment.md#post-fulfillments) is submitted that results in Digital River attempting to fully or partially [capture](orders/payment-charges/#captures) an order's [`charges[]`](orders/payment-charges/), then the issuing bank may initiate a [late presentment chargeback](../general-resources/glossary.md#late-presentment-chargebacks).  &#x20;
 
 To manage this, we can configure your account to be [chargeback risk tolerant](payment-reauthorizations.md#risk-tolerant) or [chargeback risk averse](payment-reauthorizations.md#risk-averse). The option you instruct your Digital River representative to select helps determine the balance between the frequency of chargebacks you receive and the amount of revenue you earn. &#x20;
 
 ### Risk tolerant
 
-If your account is configured to be risk tolerant, then Digital River attempts to [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) and settle using the original authorization, even when it has expired and we're unable to create a new one to replace it.  &#x20;
+If your account is configured to be risk tolerant, then Digital River attempts to [capture](orders/payment-charges/#captures) and settle using the original authorization, even when it has expired and we're unable to create a new one to replace it.  &#x20;
 
 By default, all accounts are set up to be risk tolerant.&#x20;
 
@@ -28,7 +28,7 @@ In most cases, this option ensures your revenue opportunities are being optimize
 
 ### Risk averse
 
-If your account is configured to be risk averse, then Digital River only attempts to [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) a [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges) when (1) the original payment authorization has yet to expire or (2) we're able to secure a new authorization to replace the expired one. In other words, Digital River never attempts to force settle on an expired authorization.&#x20;
+If your account is configured to be risk averse, then Digital River only attempts to [capture](orders/payment-charges/#captures) a [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges) when (1) the original payment authorization has yet to expire or (2) we're able to secure a new authorization to replace the expired one. In other words, Digital River never attempts to force settle on an expired authorization.&#x20;
 
 With this option, you can minimize [late presentment chargebacks](../general-resources/glossary.md#late-presentment-chargebacks). However, by setting up your account to be risk averse, you do run the risk of losing out on potential revenue. This is because a high percentage of expired authorization capture attempts are ultimately approved by the issuing bank.&#x20;
 
@@ -87,7 +87,7 @@ curl --location --request POST 'https://api.digitalriver.com/fulfillments' \
 
 Whether Digital River (1) attempts to capture and settle on the original payment authorization because it has yet to expire, (2) successfully creates a new authorization to replace the expired one or (3) fails to create a new authorization and then force settles on the original, expired one, your request immediately returns a [fulfillment](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments) and this results in the creation of an [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) whose [`type`](events-and-webhooks-1/events-1/#event-types) is  `order.charge.capture.pending` and whose [`data.object`](events-and-webhooks-1/events-1/#event-data) is a [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges).&#x20;
 
-Both of these notifications indicate that Digital River is in the process of attempting to [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) that [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges).
+Both of these notifications indicate that Digital River is in the process of attempting to [capture](orders/payment-charges/#captures) that [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges).
 
 {% tabs %}
 {% tab title="Fulfillment" %}
@@ -150,7 +150,7 @@ Both of these notifications indicate that Digital River is in the process of att
 {% endtab %}
 {% endtabs %}
 
-Once the payment processor informs Digital River whether the [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) succeeded or failed, we create an [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) whose [`type`](events-and-webhooks-1/events-1/#event-types) is either `order.charge.capture.complete` or `order.charge.capture.failed`, respectively. &#x20;
+Once the payment processor informs Digital River whether the [capture](orders/payment-charges/#captures) succeeded or failed, we create an [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) whose [`type`](events-and-webhooks-1/events-1/#event-types) is either `order.charge.capture.complete` or `order.charge.capture.failed`, respectively. &#x20;
 
 Both of them could be used to trigger a function that updates the status of the payment in your system. Additionally, you might use the failed event's `captures[].fulfillmentId` to look up the [fulfillment](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments) and then send a request to your fulfiller that attempts to cancel shipment of those goods. &#x20;
 
@@ -237,7 +237,7 @@ If Digital River determines that the original payment authorization has yet to e
 {% endtab %}
 {% endtabs %}
 
-Both of these notifications indicate that we're in the process of attempting to [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) the [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges).&#x20;
+Both of these notifications indicate that we're in the process of attempting to [capture](orders/payment-charges/#captures) the [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges).&#x20;
 
 At this point, you should send a request to your fulfiller instructing them to ship the goods and, once they notify you that they're in transit, [update the fulfillment with tracking data](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments/operation/updateFulfillments).&#x20;
 
@@ -262,7 +262,7 @@ curl --location 'https://api.digitalriver.com/fulfillments/ful_8b9cfa72-0f04-46a
 }'
 ```
 
-Once the payment processor informs Digital River whether the [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) succeeded or failed, we create an [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) whose [`type`](events-and-webhooks-1/events-1/#event-types) is either `order.charge.capture.complete` or `order.charge.capture.failed`, respectively. &#x20;
+Once the payment processor informs Digital River whether the [capture](orders/payment-charges/#captures) succeeded or failed, we create an [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) whose [`type`](events-and-webhooks-1/events-1/#event-types) is either `order.charge.capture.complete` or `order.charge.capture.failed`, respectively. &#x20;
 
 Both of them could be used to trigger a function that updates the status of the payment in your system. Additionally, you might use the failed event's `captures[].fulfillmentId` to look up the [fulfillment](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments) and then send a request to your fulfiller that attempts to cancel shipment of those goods.&#x20;
 
@@ -270,7 +270,7 @@ Both of them could be used to trigger a function that updates the status of the 
 
 If Digital River determines that the original payment authorization has expired and is unable to get the issuing bank to grant a new authorization, then your `POST/ fulfillments` request immediately returns an error with a [`code`](https://www.digitalriver.com/docs/digital-river-api-reference/#section/Response-status-codes/Error-codes) of `payment_authorization_failed` and this results in the creation of an [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) whose [`type`](events-and-webhooks-1/events-1/#event-types) is `order.charge.reauth.failed` and whose [`data.object`](events-and-webhooks-1/events-1/#event-data) is the [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders). &#x20;
 
-Both of these notifications indicate that we won't be able to [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) the [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges).
+Both of these notifications indicate that we won't be able to [capture](orders/payment-charges/#captures) the [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges).
 
 {% tabs %}
 {% tab title="Error" %}

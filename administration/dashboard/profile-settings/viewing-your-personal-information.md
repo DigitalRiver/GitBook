@@ -10,7 +10,7 @@ description: >-
 
 Your **Personal information** (registered first name and last name and email address) appears in the upper portion of this page.
 
-![](<../../../.gitbook/assets/MFA\_personal\_information (1).png>)
+<figure><img src="../../../.gitbook/assets/1 nu Profile settings modal.png" alt=""><figcaption></figcaption></figure>
 
 From this page, **Account security** settings are available. You can [change your password](updating-your-phone-number.md) or [enable multi-factor authentication](enabling-two-factor-authentication.md), as well as [update your trusted mobile number](updating-your-phone-number.md).
 

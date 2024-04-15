@@ -271,7 +271,7 @@ If you're using [Drop-in payments](../../../payments/payment-integrations-1/drop
 {% endtab %}
 
 {% tab title="Elements" %}
-If you're using [DigitalRiver.js with elements](../../../payments/payment-integrations-1/digitalriver.js/quick-start.md), present our standardized subscription terms and save payment agreement by calling the [get compliance details method](../../../developer-resources/reference/digitalriver-object.md#digitalriver.compliance.getdetails-businessentitycode-locale), retrieving `autorenewalPlanTerms.localizedText` and then displaying that text with an appropriate acceptance control.
+If you're using [DigitalRiver.js with elements](../../../payments/payment-integrations-1/digitalriver.js/quick-start.md), present our standardized subscription terms and save payment agreement by calling the [get compliance details method](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#digitalriver.compliance.getdetails-businessentitycode-locale), retrieving `autorenewalPlanTerms.localizedText` and then displaying that text with an appropriate acceptance control.
 
 ![](<../../../.gitbook/assets/DR js terms.png>)
 
@@ -355,7 +355,7 @@ For details, refer to the [Drop-in payments integration guide](../../../payments
 {% endtab %}
 
 {% tab title="Elements" %}
-After [building a checkout with subscription information](digital-river-coordinated-subscriptions.md#creating-a-subscription), send the checkout's [payment session identifier](../creating-checkouts/#payment-session-identifier) to your front end and use it to set `sessionId` in the configuration object of [`retrieveAvailablePaymentMethods()`](../../../developer-resources/reference/digitalriver-object.md#digitalriverjs-retrieveavailablepaymentmethodsresponsewithusingfilters).
+After [building a checkout with subscription information](digital-river-coordinated-subscriptions.md#creating-a-subscription), send the checkout's [payment session identifier](../creating-checkouts/#payment-session-identifier) to your front end and use it to set `sessionId` in the configuration object of [`retrieveAvailablePaymentMethods()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#digitalriverjs-retrieveavailablepaymentmethodsresponsewithusingfilters).
 
 ```javascript
 ...
@@ -422,13 +422,13 @@ If the request is successful, the response contains the payment methods that are
 ```
 {% endcode %}
 
-Based on these payment methods, [create the appropriate elements](../../../developer-resources/reference/digitalriver-object.md#creating-elements) to collect the customer's sensitive payment information.
+Based on these payment methods, [create the appropriate elements](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-elements) to collect the customer's sensitive payment information.
 
-After customers select a payment method, [accept the terms](digital-river-coordinated-subscriptions.md#displaying-terms-and-acquiring-consent) and submit their payment information, configure [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources):
+After customers select a payment method, [accept the terms](digital-river-coordinated-subscriptions.md#displaying-terms-and-acquiring-consent) and submit their payment information, configure [`createSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources):
 
 * Set `type` to the payment method selected by the customer
 * Use the checkout's [payment session identifier](../creating-checkouts/#payment-session-identifier) to set `sessionId`.
-* Set [`usage`](../../../developer-resources/reference/digitalriver-object.md#specifying-a-sources-future-use) to `subscription` and `futureUse` to `true`
+* Set [`usage`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#specifying-a-sources-future-use) to `subscription` and `futureUse` to `true`
 * Use the [agreed upon terms](digital-river-coordinated-subscriptions.md#displaying-terms-and-acquiring-consent) to set `mandate.terms`
 * If your integration passes a customer's billing information in the [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) `billTo`, then it's not necessary to send `billingAddress`
 
@@ -475,7 +475,7 @@ You should also retrieve `mandate.terms` from the source and use this value to s
 [Drop-in payments](../../../payments/payment-integrations-1/drop-in/) does not currently support retrieving saved payment methods.
 {% endhint %}
 
-If you give customers the option to select a saved payment source during subscription acquisitions, then after [building a checkout with subscription information](digital-river-coordinated-subscriptions.md#creating-a-subscription), send the [payment session identifier](../creating-checkouts/#payment-session-identifier) to your front end and use it to set `sessionId` in the configuration object of [`retrieveAvailablePaymentMethods()`](../../../developer-resources/reference/digitalriver-object.md#digitalriverjs-retrieveavailablepaymentmethodsresponsewithusingfilters).
+If you give customers the option to select a saved payment source during subscription acquisitions, then after [building a checkout with subscription information](digital-river-coordinated-subscriptions.md#creating-a-subscription), send the [payment session identifier](../creating-checkouts/#payment-session-identifier) to your front end and use it to set `sessionId` in the configuration object of [`retrieveAvailablePaymentMethods()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#digitalriverjs-retrieveavailablepaymentmethodsresponsewithusingfilters).
 
 {% tabs %}
 {% tab title="Request" %}
@@ -548,7 +548,7 @@ digitalRiver.retrieveAvailablePaymentMethods({
 
 For each payment method contained in the response, determine if its `type` matches the `type` of one or more of the [customer's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Customers) `sources[]`. If it does, you can retrieve those saved `sources[]` from the [customer](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Customers) and display them as options on your payments page.
 
-If the customer selects a saved source, pass its `sources[].id` and `sources[].clientSecret` (along with the checkout's [payment session identifier](../creating-checkouts/#payment-session-identifier)) to [`authenticateSource()`](../../../developer-resources/reference/digitalriver-object.md#authenticating-sources). This method determines whether [strong customer authentication](../../../payments/psd2-and-sca/) is required.
+If the customer selects a saved source, pass its `sources[].id` and `sources[].clientSecret` (along with the checkout's [payment session identifier](../creating-checkouts/#payment-session-identifier)) to [`authenticateSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#authenticating-sources). This method determines whether [strong customer authentication](../../../payments/psd2-and-sca/) is required.
 
 {% tabs %}
 {% tab title="Customer" %}

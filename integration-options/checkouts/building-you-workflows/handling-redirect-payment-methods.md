@@ -21,7 +21,7 @@ On this page, you find:
 
 ## How to implement a submit then redirect flow
 
-In the  [`createDropin()`](../../../developer-resources/reference/digitalriver-object.md#creating-an-instance-of-drop-in) method's [configuration object](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#configuring-drop-in-payments), set the [`redirect`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#dropinviadigitalriver.js-disablingredirectswithindropin) object's `disableAutomaticRedirects` to `true` and assign the same value to both `returnUrl` and `cancelUrl`.
+In the  [`createDropin()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-an-instance-of-drop-in) method's [configuration object](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#configuring-drop-in-payments), set the [`redirect`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#dropinviadigitalriver.js-disablingredirectswithindropin) object's `disableAutomaticRedirects` to `true` and assign the same value to both `returnUrl` and `cancelUrl`.
 
 If customers select a redirect payment method, the `data` returned by [`onSuccess`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#onsuccess) contains a [source](../../../payments/payment-sources/) whose [`state`](../../../payments/payment-sources/#source-state) is `pending_redirect`. When you receive this event, retrieve `source.id` from `data`.
 
@@ -216,7 +216,7 @@ curl --location 'https://api.digitalriver.com/orders' \
 ```
 {% endcode %}
 
-If you get back a `201 Created`, and the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) is `pending_payment`, then check [`payment.session.state`](../creating-checkouts/payment-sessions.md#session-state). &#x20;
+If you get back a `201 Created`, and the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../../../order-management/orders/the-order-lifecycle.md#order-states-and-events) is `pending_payment`, then check [`payment.session.state`](../creating-checkouts/payment-sessions.md#session-state). &#x20;
 
 {% code title="Order" %}
 ```json
@@ -263,7 +263,7 @@ curl --location --request POST 'https://api.digitalriver.com/orders/240354510336
 --data-raw ''
 ```
 
-If you get a `200 OK`, check the order's [`state`](../../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) and [`payment.session.state`](../creating-checkouts/payment-sessions.md#session-state).
+If you get a `200 OK`, check the order's [`state`](../../../order-management/orders/the-order-lifecycle.md#order-states-and-events) and [`payment.session.state`](../creating-checkouts/payment-sessions.md#session-state).
 
 {% code title="Order" %}
 ```json
@@ -290,11 +290,11 @@ If you get a `200 OK`, check the order's [`state`](../../../developer-resources/
 ```
 {% endcode %}
 
-If (1) [`state`](../../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) is `accepted` or `in_review` or (2) `state` is `pending_payment` and [`payment.session.state`](../creating-checkouts/payment-sessions.md#session-state) is `pending` or `pending_funds`, then a [`charges[]`](../../../developer-resources/digital-river-api-reference/payment-charges.md) on the [`sources[]`](../../../payments/payment-sources/) whose [`flow`](../../../payments/payment-sources/#authentication-flow) is `redirect` has been successfully authorized, and you should display an order confirmation page and send a[ confirmation email](../../../order-management/customer-notifications.md#order-confirmation).
+If (1) [`state`](../../../order-management/orders/the-order-lifecycle.md#order-states-and-events) is `accepted` or `in_review` or (2) `state` is `pending_payment` and [`payment.session.state`](../creating-checkouts/payment-sessions.md#session-state) is `pending` or `pending_funds`, then a [`charges[]`](../../../order-management/orders/payment-charges/) on the [`sources[]`](../../../payments/payment-sources/) whose [`flow`](../../../payments/payment-sources/#authentication-flow) is `redirect` has been successfully authorized, and you should display an order confirmation page and send a[ confirmation email](../../../order-management/customer-notifications.md#order-confirmation).
 
 At this point, you can initiate [fulfillment operations](../../../order-management/fulfillments.md).&#x20;
 
-Any other (1) [`state`](../../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md) value or (2) combination of `state` and [`payment.session.state`](../creating-checkouts/payment-sessions.md#session-state) values indicates that the [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) can't be recovered. As a result, you'll need to recreate the [checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) and send customers back to the payment collection stage. For details, refer to [Handling rejected orders](../../../order-management/resubmitting-an-order.md).&#x20;
+Any other (1) [`state`](../../../order-management/orders/the-order-lifecycle.md) value or (2) combination of `state` and [`payment.session.state`](../creating-checkouts/payment-sessions.md#session-state) values indicates that the [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) can't be recovered. As a result, you'll need to recreate the [checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) and send customers back to the payment collection stage. For details, refer to [Handling rejected orders](../../../order-management/resubmitting-an-order.md).&#x20;
 
 ## Submit and redirect sequence diagram
 

@@ -18,7 +18,7 @@ Before or after customers initiate checkout, use a control (such as a radio butt
 
 If customers are making the purchase as a business entity, then your form needs to collect their organization/company name. Otherwise, that field isn't needed.&#x20;
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)
 
 Add a click event handler to the form's submit button that uses the data it collects to set the [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) [`customerType`](setting-the-customer-type.md), [`shipTo`](providing-address-information.md#ship-to-address) and/or [`billTo`](providing-address-information.md#bill-to-address).
 

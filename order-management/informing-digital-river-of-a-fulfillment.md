@@ -6,7 +6,7 @@ description: >-
 
 # Capturing and cancelling charges
 
-Once you [create an order](creating-and-updating-an-order.md), and [handle the necessary events](informing-digital-river-of-a-fulfillment.md#receiving-the-necessary-events), you can use the [Fulfillments API](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments) to notify Digital River of fulfilled and/or cancelled items. Each time you [define](informing-digital-river-of-a-fulfillment.md#defining-fulfillments) and [submit](informing-digital-river-of-a-fulfillment.md#submitting-fulfillment-and-cancellation-requests) a [`POST/fulfillments`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createFulfillments) request, you're informing our payment services how many items in an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) are fulfilled and/or cancelled. We then use that information to [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) or [cancel](../developer-resources/digital-river-api-reference/payment-charges.md#cancels) the appropriate amount of an order's payment [charges](../developer-resources/digital-river-api-reference/payment-charges.md).
+Once you [create an order](creating-and-updating-an-order.md), and [handle the necessary events](informing-digital-river-of-a-fulfillment.md#receiving-the-necessary-events), you can use the [Fulfillments API](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments) to notify Digital River of fulfilled and/or cancelled items. Each time you [define](informing-digital-river-of-a-fulfillment.md#defining-fulfillments) and [submit](informing-digital-river-of-a-fulfillment.md#submitting-fulfillment-and-cancellation-requests) a [`POST/fulfillments`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createFulfillments) request, you're informing our payment services how many items in an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) are fulfilled and/or cancelled. We then use that information to [capture](orders/payment-charges/#captures) or [cancel](orders/payment-charges/#cancels) the appropriate amount of an order's payment [charges](orders/payment-charges/).
 
 Once you submit a `POST/fulfillments`, your integration should also be set up to [handle fulfillment-related events](informing-digital-river-of-a-fulfillment.md#using-fulfillment-related-events).
 
@@ -14,15 +14,15 @@ Once you submit a `POST/fulfillments`, your integration should also be set up to
 
 Before you submit a [`POST/fulfillment`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createFulfillments) request, you must first receive and handle the necessary events. The specific events you must process depend on the order's [fulfillment model](fulfillments.md):
 
-|                                                                                                   Upstream requirement                                                                                                   | Digital River coordinated fulfillments (distributed model) | Digital River coordinated fulfillments (orchestrated model) | Third party coordinated fulfillments |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------: | :---------------------------------------------------------: | :----------------------------------: |
-| An [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) in an [`accepted`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) state |                              ✔                             |                                                             |                   ✔                  |
-|           The [`fulfillment_order.shipped`](../integration-options/checkouts/handling-digital-river-coordinated-fulfillments/global-fulfillments.md#listening-and-responding-to-fulfillment-order-events) event          |                              ✔                             |                                                             |                                      |
-|         The [`fulfillment_order.cancelled`](../integration-options/checkouts/handling-digital-river-coordinated-fulfillments/global-fulfillments.md#listening-and-responding-to-fulfillment-order-events) event​         |                              ✔                             |                                                             |                                      |
+|                                                                                           Upstream requirement                                                                                           | Digital River coordinated fulfillments (distributed model) | Digital River coordinated fulfillments (orchestrated model) | Third party coordinated fulfillments |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------: | :---------------------------------------------------------: | :----------------------------------: |
+|                   An [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) in an [`accepted`](orders/the-order-lifecycle.md#order-states-and-events) state                  |                              ✔                             |                                                             |                   ✔                  |
+|   The [`fulfillment_order.shipped`](../integration-options/checkouts/handling-digital-river-coordinated-fulfillments/global-fulfillments.md#listening-and-responding-to-fulfillment-order-events) event  |                              ✔                             |                                                             |                                      |
+| The [`fulfillment_order.cancelled`](../integration-options/checkouts/handling-digital-river-coordinated-fulfillments/global-fulfillments.md#listening-and-responding-to-fulfillment-order-events) event​ |                              ✔                             |                                                             |                                      |
 
 ### Third party coordinated fulfillments
 
-In [third-party coordinated fulfillments](fulfillments.md#third-party-coordinated-fulfillments), you need to [synchronously](creating-and-updating-an-order.md#accepted) or [asynchronously](creating-and-updating-an-order.md#listening-for-the-order-accepted-event) receive an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) in an [`accepted`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) state.
+In [third-party coordinated fulfillments](fulfillments.md#third-party-coordinated-fulfillments), you need to [synchronously](creating-and-updating-an-order.md#accepted) or [asynchronously](creating-and-updating-an-order.md#listening-for-the-order-accepted-event) receive an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) in an [`accepted`](orders/the-order-lifecycle.md#order-states-and-events) state.
 
 In most integrations, you respond to this order state change by sending a fulfillment request to your logistics partner and when the products are shipped, your partner sends you a shipment notification. You should respond to this notification by [defining a `POST/fulfillments`](informing-digital-river-of-a-fulfillment.md#defining-fulfillments) with the `quantity` of each shipped line item and then [submitting the payment capture request](informing-digital-river-of-a-fulfillment.md#submitting-fulfillment-and-cancellation-requests).
 
@@ -34,25 +34,25 @@ In [Digital River coordinated fulfillments](fulfillments.md#digital-river-coordi
 
 #### Distributed model
 
-In the [distributed model](fulfillments.md#assisted-fulfillment-model), you need to handle an [`accepted`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) order by [creating a fulfillment order](../integration-options/checkouts/handling-digital-river-coordinated-fulfillments/global-fulfillments.md#creating-a-fulfillment-order). You must then wait to receive a [`fulfillment_order.shipped`](../integration-options/checkouts/handling-digital-river-coordinated-fulfillments/global-fulfillments.md#shipped-events) event before handling that by [defining a `POST/fulfillments`](informing-digital-river-of-a-fulfillment.md#defining-fulfillments) with the `quantity` of each shipped line item and then [submitting the payment capture request](informing-digital-river-of-a-fulfillment.md#submitting-fulfillment-and-cancellation-requests).
+In the [distributed model](fulfillments.md#assisted-fulfillment-model), you need to handle an [`accepted`](orders/the-order-lifecycle.md#order-states-and-events) order by [creating a fulfillment order](../integration-options/checkouts/handling-digital-river-coordinated-fulfillments/global-fulfillments.md#creating-a-fulfillment-order). You must then wait to receive a [`fulfillment_order.shipped`](../integration-options/checkouts/handling-digital-river-coordinated-fulfillments/global-fulfillments.md#shipped-events) event before handling that by [defining a `POST/fulfillments`](informing-digital-river-of-a-fulfillment.md#defining-fulfillments) with the `quantity` of each shipped line item and then [submitting the payment capture request](informing-digital-river-of-a-fulfillment.md#submitting-fulfillment-and-cancellation-requests).
 
 Similarly, in this model, you must also wait to receive a [`fulfillment_order.cancelled`](../integration-options/checkouts/handling-digital-river-coordinated-fulfillments/global-fulfillments.md#cancelled-events) event before handling that by [defining a `POST/fulfillments`](informing-digital-river-of-a-fulfillment.md#defining-fulfillments) with the `cancelQuantity` of each cancelled line item and then [submitting the payment cancel request](informing-digital-river-of-a-fulfillment.md#submitting-fulfillment-and-cancellation-requests).
 
 #### Orchestrated model
 
-In the [orchestrated model](fulfillments.md#automated-fulfillment-model)**,** you don't need to respond to any of these events. Our orchestration service monitors the key commerce and fulfillment events and then handles the payment [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) and [cancel](../developer-resources/digital-river-api-reference/payment-charges.md#cancels) process.
+In the [orchestrated model](fulfillments.md#automated-fulfillment-model)**,** you don't need to respond to any of these events. Our orchestration service monitors the key commerce and fulfillment events and then handles the payment [capture](orders/payment-charges/#captures) and [cancel](orders/payment-charges/#cancels) process.
 
 ## Defining fulfillments
 
 Once you [receive and handle the necessary events](informing-digital-river-of-a-fulfillment.md#receiving-the-necessary-events), define a [`POST /fulfillments`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createFulfillments) request.
 
-You do this by providing an [order identifier](../developer-resources/digital-river-api-reference/orders/#unique-identifier), information about [each fulfilled and/or cancelled item](informing-digital-river-of-a-fulfillment.md#fulfilled-and-cancelled-items), as well as any [shipment identifiers](informing-digital-river-of-a-fulfillment.md#shipment-identifiers) and [tracking data](informing-digital-river-of-a-fulfillment.md#shipment-identifiers) provided by your fulfiller.
+You do this by providing an [order identifier](orders/#unique-identifier), information about [each fulfilled and/or cancelled item](informing-digital-river-of-a-fulfillment.md#fulfilled-and-cancelled-items), as well as any [shipment identifiers](informing-digital-river-of-a-fulfillment.md#shipment-identifiers) and [tracking data](informing-digital-river-of-a-fulfillment.md#shipment-identifiers) provided by your fulfiller.
 
 ### Fulfilled and cancelled items
 
-In the request's `items` array, you specify each [line item's](../developer-resources/digital-river-api-reference/orders/#line-items) unique identifier and the quantity fulfilled and/or cancelled. The request doesn't need to specify both a `quantity` and `cancelQuantity`, but it must contain one or the other.
+In the request's `items` array, you specify each [line item's](orders/#line-items) unique identifier and the quantity fulfilled and/or cancelled. The request doesn't need to specify both a `quantity` and `cancelQuantity`, but it must contain one or the other.
 
-If you specify a `quantity`, thereby informing our payment services that these items are fulfilled, we attempt to [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) the appropriate amount of the [payment charge](../developer-resources/digital-river-api-reference/payment-charges.md). Conversely, if you specify a `cancelQuantity`, we attempt to [cancel](../developer-resources/digital-river-api-reference/payment-charges.md#cancels) the relevant charge amount.
+If you specify a `quantity`, thereby informing our payment services that these items are fulfilled, we attempt to [capture](orders/payment-charges/#captures) the appropriate amount of the [payment charge](orders/payment-charges/). Conversely, if you specify a `cancelQuantity`, we attempt to [cancel](orders/payment-charges/#cancels) the relevant charge amount.
 
 ### Shipment identifiers
 
@@ -157,10 +157,10 @@ Your integration should be set up to handle [`order.charge.capture.complete`](in
 
 #### Successful charge captures
 
-An `order.charge.capture.complete` event indicates that Digital River fully or partially captured one of an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [charges](../developer-resources/digital-river-api-reference/payment-charges.md).
+An `order.charge.capture.complete` event indicates that Digital River fully or partially captured one of an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [charges](orders/payment-charges/).
 
 {% hint style="info" %}
-In the following example, the charge's [`state`](../developer-resources/digital-river-api-reference/payment-charges.md#the-charge-lifecycle) remains `capturable` because the [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) is only partially fulfilled.
+In the following example, the charge's [`state`](orders/payment-charges/#the-charge-lifecycle) remains `capturable` because the [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) is only partially fulfilled.
 {% endhint %}
 
 {% tabs %}
@@ -379,7 +379,7 @@ _We billed your `creditCard.brand` ending in `creditCard.lastFourDigits` in the 
 
 #### Failed charge captures
 
-In rare cases, a [capture](../developer-resources/digital-river-api-reference/payment-charges.md#the-charge-lifecycle) fails. If this happens, Digital River creates an `order.charge.capture.failed` event.
+In rare cases, a [capture](orders/payment-charges/#the-charge-lifecycle) fails. If this happens, Digital River creates an `order.charge.capture.failed` event.
 
 To handle this event, we recommend that you:
 
@@ -388,7 +388,7 @@ To handle this event, we recommend that you:
   Make sure you check with your fulfiller to determine whether they have the ability to cancel a shipment within a certain window of time. If you're using [Digital River's fulfillment service](fulfillments.md#digital-river-coordinated-fulfillments), refer to [Cancelling physical fulfillments](../integration-options/checkouts/handling-digital-river-coordinated-fulfillments/instructing-digital-to-cancel-items.md).&#x20;
 * Contact the customer to arrange a return or alternate payment.
 
-Failed captures are usually due to expired charge authorizations. This might happen when you're running a pre-order sale and there's a lengthy period between submission of a [`POST/orders`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createOrders) that [authorizes the charge](../developer-resources/digital-river-api-reference/payment-charges.md#how-a-charge-is-created) and a [`POST/fulfillments`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createFulfillments) that [captures](../developer-resources/digital-river-api-reference/payment-charges.md#captures) payment.
+Failed captures are usually due to expired charge authorizations. This might happen when you're running a pre-order sale and there's a lengthy period between submission of a [`POST/orders`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createOrders) that [authorizes the charge](orders/payment-charges/#how-a-charge-is-created) and a [`POST/fulfillments`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createFulfillments) that [captures](orders/payment-charges/#captures) payment.
 
 Failed captures might also be due to fulfillment delays on the part of your logistics partner.
 
@@ -440,7 +440,7 @@ On the [Testing scenarios](../developer-resources/testing-scenarios.md) page, we
 The failed capture event contains a `failureCode`. We also provide a `failureMessage` that may help diagnose the issue. To access this message:
 
 1. Save the unique `id` of the event's capture.
-2. Retrieve the event's `data.object.id`, which uniquely identifies the [charge](../developer-resources/digital-river-api-reference/payment-charges.md).
+2. Retrieve the event's `data.object.id`, which uniquely identifies the [charge](orders/payment-charges/).
 3. Send this charge identifier as a path parameter in a [`GET/charges/{id}`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/retrieveCharges).
 4. In the `200 OK` response, use the saved capture identifier to search `captures[]` for the appropriate element and retrieve its `failureMessage`.
 
@@ -578,7 +578,7 @@ If your integration is set up to respond to shipment notifications from your ful
 
 ### The order complete event <a href="#handling-the-order-complete-event" id="handling-the-order-complete-event"></a>
 
-When the [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) moves into a [`complete`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) state, an `order.complete` event is fired. Upon receipt of this event, use the event's `data.object.id` or `data.object.upstreamId` to look up the order in your system and set its status to complete.
+When the [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) moves into a [`complete`](orders/the-order-lifecycle.md#order-states-and-events) state, an `order.complete` event is fired. Upon receipt of this event, use the event's `data.object.id` or `data.object.upstreamId` to look up the order in your system and set its status to complete.
 
 {% hint style="info" %}
 If you use a third-party service to generate customer notifications, refer to [How Digital River returns product data](../integration-options/checkouts/creating-checkouts/describing-the-items/#how-digital-river-returns-product-data) for details on how that service can use this event.

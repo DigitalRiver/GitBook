@@ -11,9 +11,9 @@ To export your sales summaries as CSV:
 1. Click **Sales summaries** in the left navigation. The Sales summaries page appears.
 2. [Filter your sales summaries](filtering-your-sales-summaries.md), if needed.
 3. Click the down arrow ![](<../../../../.gitbook/assets/down-arrow (2).png>) and select **Export as CSV**.\
-   ![](../../../../.gitbook/assets/ExportAsCSVDropdown.png)
+   ![](<../../../../.gitbook/assets/1 sales summ export dropdown csv.png>)
 4. Click the **Export as CSV** button (not the arrow).\
-   ![](../../../../.gitbook/assets/ExportAsCSV.png)\
+   ![](<../../../../.gitbook/assets/2 sales summ export csv.png>)\
    The **Save As** dialog appears.
 5. Choose a location and file name to save the file.
 
@@ -24,8 +24,8 @@ To export your sales summaries as JSON:
 1. Click **Sales summaries** in the left navigation. The Sales summaries page appears.
 2. [Filter your sales summaries](filtering-your-sales-summaries.md), if needed.
 3. Click the down arrow ![](<../../../../.gitbook/assets/down-arrow (2).png>) and click **Export as JSON**.\
-   ![](../../../../.gitbook/assets/ExportAsJSONDropdown.png)
+   ![](<../../../../.gitbook/assets/3 sales summ export dropdown json.png>)
 4. Click the **Export as JSON** button (not the arrow).\
-   ![](../../../../.gitbook/assets/ExportasJSON.png)\
+   ![](<../../../../.gitbook/assets/4 sales summ export json.png>)\
    The **Save As** dialog appears.
 5. Choose a location and file name to save the file.

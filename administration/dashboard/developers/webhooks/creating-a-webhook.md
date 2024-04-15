@@ -26,31 +26,78 @@ When creating a webhook from the Digital River Dashboard, you need to determine 
 
 ### Create a webhook requiring basic authentication
 
-1. From the Webhooks page, click **Create Webhook**.\
-   \
-   **Note:** An event triggers a webhook to send a notification to you. The Create webhook page lists and describes the available events. \
+1.  From the Webhooks page, click **Create Webhook**.\
+    \
+    **Note:** An event triggers a webhook to send a notification to you. The Create webhook page lists and describes the available events. \
 
+
+    <div align="left">
+
+    <figure><img src="../../../../.gitbook/assets/1 Creating webhooks.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 2. Toggle **Disabled** to **Enabled**.
-3. If required, select the API version you want to associate with events from the **API Version** dropdown list. By default, the confidential key version is selected.\
-   ![](../../../../.gitbook/assets/WebhookAPIVers.png)
-4. Click **HTTP** for the **Authentication method** and complete the **Username** and **Password** fields. ![](../../../../.gitbook/assets/HTTPWebhookTransType.png)
+3.  If required, select the API version you want to associate with events from the **API Version** dropdown list. By default, the confidential key version is selected.\
+
+
+    <div align="left">
+
+    <figure><img src="../../../../.gitbook/assets/2 Creating webhooks - api version.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
+4.  Click **HTTP** for the **Authentication method** and complete the **Username** and **Password** fields. \
+
+
+    <div align="left">
+
+    <figure><img src="../../../../.gitbook/assets/3 Creating webhooks - transport type.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 5. Enter the URL for the endpoint in the **Endpoint URL** field.
 6. Select the check box next to each event you want to associate with the endpoint or select the **Events Selected** check box to select all events. At least one event type must be selected.
 7. Scroll down and click **Save**.
 
 ### Create a webhook requiring OAuth authentication
 
-1. From the Webhooks page, click **Create Webhook**.
+1.  From the Webhooks page, click **Create Webhook**.\
+
+
+    <div align="left">
+
+    <figure><img src="../../../../.gitbook/assets/1 Creating webhooks.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 2. Toggle **Disabled** to **Enabled**.
-3. If required, select the API version you want to associate with events from the **API Version** dropdown list. By default, the confidential key version is selected.\
-   ![](<../../../../.gitbook/assets/API-Version (1).png>)
-4. Click **OAuth** for the **Authentication method**.\
-   ![](../../../../.gitbook/assets/Create-OAuth-webhook.png)
-5. Select one of the following options from the Grant type dropdown list and complete the \*\*\*\* fields.
-   * **Password**\
-     <img src="../../../../.gitbook/assets/Grant-type-Password.png" alt="" data-size="original">
-   * **Client credentials**\
-     ![](../../../../.gitbook/assets/Grant-type-Client-credentials.png)
+3.  If required, select the API version you want to associate with events from the **API Version** dropdown list. By default, the confidential key version is selected.\
+
+
+    <div align="left">
+
+    <figure><img src="../../../../.gitbook/assets/4 Creating webhooks - api version2.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
+4.  Click **OAuth** for the **Authentication method**.\
+
+
+    <div align="left">
+
+    <figure><img src="../../../../.gitbook/assets/image (249).png" alt=""><figcaption></figcaption></figure>
+
+    </div>
+5.  Select one of the following options from the Grant type dropdown list and complete the \*\*\*\* fields.\
+
+
+    <div align="left">
+
+    <figure><img src="../../../../.gitbook/assets/6 Creating webhooks - grant type dropdown.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
+
+    * **Password**\
+      ![](<../../../../.gitbook/assets/7 Creating webhooks - grant type pw.png>)
+    * **Client credentials**\
+      \
+      ![](<../../../../.gitbook/assets/8 Creating webhooks - grant type clientcreds.png>)
 6. [Select the check box next to each event](../../../../order-management/events-and-webhooks-1/events-1/event-types.md) you want to associate with the endpoint or select the **Events Selected** check box to select [all events](../../../../order-management/events-and-webhooks-1/events-1/all-event-types.md). At least one event type must be selected.
 7. Scroll down and click **Save**.
 

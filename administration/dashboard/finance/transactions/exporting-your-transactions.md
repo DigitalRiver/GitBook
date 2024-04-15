@@ -10,11 +10,10 @@ To export your transactions as CSV:
 
 1. Click **Transactions** in the left navigation. The Transactions page appears.
 2. [Filter your transactions](filtering-your-transactions.md), if needed.
-3.  Click the down arrow ![](<../../../../.gitbook/assets/down-arrow (2).png>) and select **Export as CSV**.
-
-    <img src="../../../../.gitbook/assets/ExportAsCSVDropdown.png" alt="" data-size="original">
+3. Click the down arrow ![](<../../../../.gitbook/assets/down-arrow (2).png>) and select **Export as CSV**.\
+   ![](<../../../../.gitbook/assets/1 transaction export dropdown csv.png>)
 4. Click the **Export as CSV** button (not the arrow).\
-   ![](../../../../.gitbook/assets/ExportAsCSV.png)\
+   ![](<../../../../.gitbook/assets/2 transaction export csv.png>)\
    The **Save As** dialog appears.
 5. Choose a location and file name to save the file.
 
@@ -25,9 +24,10 @@ To export your transactions as JSON:
 1. Click **Transactions** in the left navigation. The Transactions page appears.
 2. [Filter your transactions](filtering-your-transactions.md), if needed.
 3. Click the down arrow ![](<../../../../.gitbook/assets/down-arrow (2).png>) and click **Export as JSON**.\
-   ![](../../../../.gitbook/assets/ExportAsJSONDropdown.png)
+   ![](<../../../../.gitbook/assets/3 transaction export dropdown json.png>)\
+
 4. Click the **Export as JSON** button (not the arrow).\
-   ![](../../../../.gitbook/assets/ExportasJSON.png)\
+   ![](<../../../../.gitbook/assets/4 transaction export json.png>)\
    The **Save As** dialog appears.
 5. Choose a location and file name to save the file.
 

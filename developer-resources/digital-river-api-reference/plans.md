@@ -21,7 +21,7 @@ When [creating a plan](https://www.digitalriver.com/docs/digital-river-api-refer
 
 ### Name
 
-A [plan's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Plans) `name` should describe the [subscription](subscriptions.md) products that belong to it. We recommend that you select a `name` specific enough for inclusion in [customer notifications](../../order-management/customer-notifications.md). When Digital River creates a [draft invoice](invoices.md#the-invoice-lifecycle) at the start of each billing cycle, we use the plan's `name` to set the [invoice's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices) `description` . We then add `invoice.description` to the [`data.object`](../../order-management/events-and-webhooks-1/events-1/#event-data) of [events](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) with the [`type`](../../order-management/events-and-webhooks-1/events-1/#event-types) of [`subscription.extended`](../../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.extended), [`subscription.payment_failed`](../../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.payment\_failed), and [`subscription.reminder`](../../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.reminder).
+A [plan's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Plans) `name` should describe the [subscription](subscriptions.md) products that belong to it. We recommend that you select a `name` specific enough for inclusion in [customer notifications](../../order-management/customer-notifications.md). When Digital River creates a [draft invoice](../../integration-options/checkouts/subscriptions/invoices.md#the-invoice-lifecycle) at the start of each billing cycle, we use the plan's `name` to set the [invoice's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices) `description` . We then add `invoice.description` to the [`data.object`](../../order-management/events-and-webhooks-1/events-1/#event-data) of [events](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) with the [`type`](../../order-management/events-and-webhooks-1/events-1/#event-types) of [`subscription.extended`](../../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.extended), [`subscription.payment_failed`](../../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.payment\_failed), and [`subscription.reminder`](../../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.reminder).
 
 ### Terms
 
@@ -85,7 +85,7 @@ This defines a subscription with a binding length of one month. The customer is 
 
 ### Billing offset days <a href="#billing-offset" id="billing-offset"></a>
 
-The `billingOffsetDays` represents how many days before the end of the billing period that Digital River [opens an invoice](invoices.md#invoice-states). For example, if you want Digital River to start attempting to capture payment ten days before the billing period ends, set this parameter to `10`.
+The `billingOffsetDays` represents how many days before the end of the billing period that Digital River [opens an invoice](../../integration-options/checkouts/subscriptions/invoices.md#invoice-states). For example, if you want Digital River to start attempting to capture payment ten days before the billing period ends, set this parameter to `10`.
 
 The `billingOffsetDays` cannot be greater than the [`collectionPeriodDays`](plans.md#collection-period-days). Such a configuration could potentially result in the billing process concluding without a successful payment capture but with time still remaining in the current cycle.
 
@@ -108,17 +108,17 @@ The `billingOffsetDays` cannot be greater than the [`collectionPeriodDays`](plan
 
 The `reminderOffsetDays` represents the number of days prior to the initiation of billing that Digital River sends you the [renewal reminder event](../../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.reminder). This event should trigger a corresponding event in your system that sends a reminder to the customer.
 
-For example, if you want to set up your system to email a customer one week before Digital River [opens an invoice](invoices.md#invoice-states), set `reminderOffsetDays` to `7`.
+For example, if you want to set up your system to email a customer one week before Digital River [opens an invoice](../../integration-options/checkouts/subscriptions/invoices.md#invoice-states), set `reminderOffsetDays` to `7`.
 
 The `reminderOffsetDays` cannot be greater than the [`contractBindingDays`](plans.md#contract-length-and-interval).
 
 ### Collection period days
 
-The `collectionPeriodDays` represents the number of days that Digital River attempts to collect payment. If you set this parameter to `0` or `1` , we make a single attempt to bill the customer. But if you provide a value greater than `1`, and the first billing attempt fails, our [smart autorenewal service](invoices.md#invoice-billing) continues making collection attempts for the number of days you specify.
+The `collectionPeriodDays` represents the number of days that Digital River attempts to collect payment. If you set this parameter to `0` or `1` , we make a single attempt to bill the customer. But if you provide a value greater than `1`, and the first billing attempt fails, our [smart autorenewal service](../../integration-options/checkouts/subscriptions/invoices.md#invoice-billing) continues making collection attempts for the number of days you specify.
 
 ### Billing optimization
 
-Once a plan is created, `billingOptimization` indicates whether our [smart autorenewal service](invoices.md#billing-optimization) is activated for that plan's subscriptions.
+Once a plan is created, `billingOptimization` indicates whether our [smart autorenewal service](../../integration-options/checkouts/subscriptions/invoices.md#billing-optimization) is activated for that plan's subscriptions.
 
 ### State
 

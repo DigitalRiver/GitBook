@@ -15,7 +15,7 @@ A payment session tracks a transaction's payment. On this page, you'll find info
 
 Payment sessions allow you to [gain access to Drop-in payments](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md). This solution lessens your front-end development burden. To take just one example, [Drop-in payments](../../../payments/payment-integrations-1/drop-in/) automatically retrieves a transaction's applicable [payment methods](../../../payments/supported-payment-methods/) and then presents them to customers during the payment collection stage of a checkout.
 
-Additionally, payment sessions simplify [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) creation. Without them, you'll need to retrieve numerous data points from the [checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) and ensure they're properly formatted before passing them to [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#createsource-element-sourcedata). With payment sessions however you simply retrieve the [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) `payment.session.id` and then pass that value to the appropriate [source creation method](../../../payments/payment-sources/using-the-source-identifier.md#creating-payment-sources), thereby minimizing your data transfer requirements
+Additionally, payment sessions simplify [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) creation. Without them, you'll need to retrieve numerous data points from the [checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) and ensure they're properly formatted before passing them to [`createSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#createsource-element-sourcedata). With payment sessions however you simply retrieve the [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) `payment.session.id` and then pass that value to the appropriate [source creation method](../../../payments/payment-sources/using-the-source-identifier.md#creating-payment-sources), thereby minimizing your data transfer requirements
 
 Payment sessions also allow you to comply with [PSD2 and SCA](../../../payments/psd2-and-sca/) regulations. If you reference this object when creating [credit card sources](../../../payments/payment-integrations-1/digitalriver.js/payment-methods/credit-cards.md), Digital River, when necessary, automatically collects a customer's authentication data.
 
@@ -40,7 +40,7 @@ The following [elements](../../../developer-resources/reference/elements/) all c
 
 ### Retrieve available payment methods
 
-If you're using [DigitalRiver.js with elements](../../../payments/payment-integrations-1/digitalriver.js/) to collect payment, you can call [`retrieveAvailablePaymentMethods()`](../../../developer-resources/reference/digitalriver-object.md#retrieving-available-payment-methods) to get a transaction's applicable payment methods and then present them as options during checkouts.&#x20;
+If you're using [DigitalRiver.js with elements](../../../payments/payment-integrations-1/digitalriver.js/) to collect payment, you can call [`retrieveAvailablePaymentMethods()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#retrieving-available-payment-methods) to get a transaction's applicable payment methods and then present them as options during checkouts.&#x20;
 
 To configure this method, retrieve the [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) `payment.session.id` and pass it to `sessionId`.&#x20;
 
@@ -123,7 +123,7 @@ Before [creating an order](../../../order-management/creating-and-updating-an-or
 
 ### Determine next action
 
-If you [create an order](../../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier) and its [`state`](../../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) is `pending_payment`, then this indicates that the [charge](../../../developer-resources/digital-river-api-reference/payment-charges.md) on the [primary payment `sources[]`](../../../payments/payment-sources/using-the-source-identifier.md#primary-versus-secondary-sources) isn't authorized and the goods shouldn't be fulfilled yet.
+If you [create an order](../../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier) and its [`state`](../../../order-management/orders/the-order-lifecycle.md#order-states-and-events) is `pending_payment`, then this indicates that the [charge](../../../order-management/orders/payment-charges/) on the [primary payment `sources[]`](../../../payments/payment-sources/using-the-source-identifier.md#primary-versus-secondary-sources) isn't authorized and the goods shouldn't be fulfilled yet.
 
 To handle this `state` change event, check the value of the order's [`payment.session.nextAction.action`](payment-sessions.md#next-action).
 
@@ -162,7 +162,7 @@ If a [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/
 * No [primary `sources[]`](../../../payments/payment-sources/using-the-source-identifier.md#primary-payment-sources) is associated with the checkout or
 * The aggregated `amount` of any [secondary `sources[]`](../../../payments/payment-sources/using-the-source-identifier.md#secondary-payment-sources) associated with the checkout is less than the checkout's `totalAmount`.
 
-In both cases, Digital River won't be able to generate an aggregated `amount` of [`charges[]`](../../../developer-resources/digital-river-api-reference/payment-charges.md) large enough to cover the [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) `totalAmount`. As a result, the [`amountRemainingToContribute`](payment-sessions.md#amount-contributed-and-amount-remaining-to-be-contributed) remains greater than `0.0` and any attempt to [create an order](../../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier) is blocked.
+In both cases, Digital River won't be able to generate an aggregated `amount` of [`charges[]`](../../../order-management/orders/payment-charges/) large enough to cover the [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) `totalAmount`. As a result, the [`amountRemainingToContribute`](payment-sessions.md#amount-contributed-and-amount-remaining-to-be-contributed) remains greater than `0.0` and any attempt to [create an order](../../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier) is blocked.
 
 #### `requires_confirmation`
 
@@ -194,7 +194,7 @@ A `pending` payment session `state` means that customers have completed all the 
 
 #### `complete`
 
-Once all of an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) payment [`charges[]`](../../../developer-resources/digital-river-api-reference/payment-charges.md) are [`capturable`](../../../developer-resources/digital-river-api-reference/payment-charges.md#the-charge-lifecycle), its `payment.session.state` typically transitions to `complete`.
+Once all of an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) payment [`charges[]`](../../../order-management/orders/payment-charges/) are [`capturable`](../../../order-management/orders/payment-charges/#the-charge-lifecycle), its `payment.session.state` typically transitions to `complete`.
 
 ### Amount contributed and remaining <a href="#amount-contributed-and-amount-remaining-to-be-contributed" id="amount-contributed-and-amount-remaining-to-be-contributed"></a>
 
@@ -293,11 +293,11 @@ If you collect payment by using [DigitalRiver.js with elements](../../../payment
 To collect payment, we generally recommend that you use [Drop-in payments](../../../payments/payment-integrations-1/drop-in/).
 {% endhint %}
 
-In the Digital River APIs, payment sessions are automatically enabled. This means that each time you [create a checkout](./#creating-and-updating-the-checkout), the response contains a payment session identifier that you use to configure [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources).
+In the Digital River APIs, payment sessions are automatically enabled. This means that each time you [create a checkout](./#creating-and-updating-the-checkout), the response contains a payment session identifier that you use to configure [`createSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources).
 
 ### Update your code
 
-You'll need to update your code to integrate with payment sessions. For each of your enabled [payment methods](../../../payments/supported-payment-methods/), add `sessionId` to the payload that gets passed to [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources).
+You'll need to update your code to integrate with payment sessions. For each of your enabled [payment methods](../../../payments/supported-payment-methods/), add `sessionId` to the payload that gets passed to [`createSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources).
 
 You'll also need to remove some parameters. The specific parameters that must be removed depends on the payment method.
 

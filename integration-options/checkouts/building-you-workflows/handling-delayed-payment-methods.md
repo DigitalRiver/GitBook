@@ -12,7 +12,7 @@ If customers opt to fund a transaction with a [payment method](../../../payments
 This page is only applicable to those who build their checkout experience using the [Direct Integrations](../) approach. If you implement a [low-code checkout option](../../low-code-checkouts/), then Digital River displays the delayed payment instructions to customers.
 {% endhint %}
 
-To provide customers with these instructions, first [submit the create order request](../../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier). If you get back a `201 Created` and [`state`](../../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) is `pending_payment`, then check the value of [`payment.session.nextAction.action`](../creating-checkouts/payment-sessions.md#next-action).&#x20;
+To provide customers with these instructions, first [submit the create order request](../../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier). If you get back a `201 Created` and [`state`](../../../order-management/orders/the-order-lifecycle.md#order-states-and-events) is `pending_payment`, then check the value of [`payment.session.nextAction.action`](../creating-checkouts/payment-sessions.md#next-action).&#x20;
 
 {% hint style="info" %}
 For details on other `state` values and how to handle them, refer to [Handling the `POST/ orders` response](../../../order-management/creating-and-updating-an-order.md#processing-the-post-orders-response).&#x20;

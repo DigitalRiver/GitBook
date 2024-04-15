@@ -23,7 +23,10 @@ The following table lists the parameters you can define when you filter your tra
 You can filter the list on the Transactions page to display the information you want to view. To filter the results in the Transactions list:
 
 1. Click **Transactions** in the left navigation. The Transaction page appears.
-2.  Click the **Filter** dropdown menu. The Filters dialog appears.
+2.  Click the **Filter** dropdown menu. The Filters dialog appears.\
+    \
+    ![](<../../../../.gitbook/assets/1 filtering transactions.png>)\
 
-    <img src="../../../../.gitbook/assets/TransactionFilterImage.png" alt="" data-size="original">
+
+
 3. Complete all or some of the fields and click **Apply**. The **Filter** button displays how many changes you applied to the Filter settings while you are on the page. The Filter settings return to their default settings when you leave the page. To clear the settings on the filter, click **Filter** and then click **Clear**.

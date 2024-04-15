@@ -10,9 +10,11 @@ description: >-
 To view a Prebuilt Checkout link's details from the Prebuilt Checkout links page:
 
 1. Click **Prebuilt Checkout links** in the left navigation. The **Prebuilt Checkout links** page appears.
-2. &#x20;Use the Search link ID feature or scroll to find the SKU whose details you want to view. Click **ID.** The **Prebuilt Checkout link details** page appears with all the link information.
+2.  &#x20;Use the Search link ID feature or scroll to find the link whose details you want to view. Click **ID.** The **Prebuilt Checkout link details** page appears with all the link information.\
+    \
 
-<figure><img src="../../../../.gitbook/assets/12_15 PBC links details page (1).png" alt=""><figcaption></figcaption></figure>
+
+    <figure><img src="../../../../.gitbook/assets/1 PBCO links details.png" alt=""><figcaption></figcaption></figure>
 
 The information displayed is link ID information and additional information you entered when creating the link. This information includes the following:
 
@@ -23,7 +25,7 @@ The information displayed is link ID information and additional information you 
 
 ### Delete a checkout link
 
-If you have an Administrator role, you can delete reusable or one-time-use Prebuilt Checkout links to remove them from circulation.
+If you have an [Administrator role](../../settings/users-and-roles/), you can delete reusable or one-time-use Prebuilt Checkout links to remove them from circulation.
 
 Use the following procedure to delete a Prebuilt Checkout link while on the **Prebuilt Checkout links** page:
 
@@ -33,7 +35,9 @@ Use the following procedure to delete a Prebuilt Checkout link while on the **Pr
     \
 
 
-    <figure><img src="../../../../.gitbook/assets/image (237).png" alt=""><figcaption></figcaption></figure>
-4. Click **Confirm** to delete the link.
+    <div align="left">
 
-\
+    <figure><img src="../../../../.gitbook/assets/2 Work and view PBC checkout details.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
+4. Click **Confirm** to delete the link.

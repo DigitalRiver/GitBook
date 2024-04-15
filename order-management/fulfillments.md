@@ -12,7 +12,7 @@ Digital River offers numerous fulfillment-related APIs. The specific APIs that y
 
 If you have a third-party fulfillment system in place, meaning Digital River does not orchestrate the delivery of your goods, then the [Fulfillments API](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments) is what you'll primarily use to handle an order's fulfillment.
 
-For every order, by [submitting one or more `POST/fulfillments` requests](informing-digital-river-of-a-fulfillment.md), you're informing Digital River which products, and in what quantity, have been fulfilled or cancelled. Depending on the data you provide, we then attempt to [capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) or [cancel](../developer-resources/digital-river-api-reference/payment-charges.md#cancels) the appropriate [payment charge](../developer-resources/digital-river-api-reference/payment-charges.md).
+For every order, by [submitting one or more `POST/fulfillments` requests](informing-digital-river-of-a-fulfillment.md), you're informing Digital River which products, and in what quantity, have been fulfilled or cancelled. Depending on the data you provide, we then attempt to [capture](orders/payment-charges/#captures) or [cancel](orders/payment-charges/#cancels) the appropriate [payment charge](orders/payment-charges/).
 
 For third-party coordinated fulfillments, the following diagram outlines the major steps in creating, processing, and delivering orders to customers that contain physical and digital goods.
 

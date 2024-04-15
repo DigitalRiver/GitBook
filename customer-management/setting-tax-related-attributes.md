@@ -268,7 +268,7 @@ If your site intends to offer tax-exempt purchases, provide a form for customers
 
 You'll also need to give customers a way to upload a copy of their certificate. Restrict the format of the uploaded file to PDF, JPG, or PNG and its size to 10 MB or less.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Certificates of exemption must be addressed to Digital River. This is because we act as the [reseller of record](../general-resources/glossary.md#merchant-of-record-seller-of-record-mor-sor). The correct address depends on the [selling entity](../integration-options/checkouts/creating-checkouts/selling-entities.md) that is facilitating the transaction. So, during the checkout process, use `sellingEntity.id` or `sellingEntity.name` to determine the appropriate address disclosure to display to customers:
 
@@ -281,7 +281,7 @@ After you collect the document, use it to [create a tax certificate file](settin
 
 ### Creating tax certificate files
 
-Once customers upload their tax certificate, submit a [`POST /files`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createFiles) request to create a [file](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Files) in Digital River's system. In the request, make sure you define [`file`](../developer-resources/digital-river-api-reference/files.md#file-and-purpose) and set [`purpose`](../developer-resources/digital-river-api-reference/files.md#file-and-purpose) to `tax_document_customer_upload`.
+Once customers upload their tax certificate, submit a [`POST /files`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createFiles) request to create a [file](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Files) in Digital River's system. In the request, make sure you define [`file`](../order-management/files-and-file-links-1/files.md#file-and-purpose) and set [`purpose`](../order-management/files-and-file-links-1/files.md#file-and-purpose) to `tax_document_customer_upload`.
 
 From the response, retrieve `id` and use it to [add the tax certificate to the customer](setting-tax-related-attributes.md#adding-a-tax-certificate).
 

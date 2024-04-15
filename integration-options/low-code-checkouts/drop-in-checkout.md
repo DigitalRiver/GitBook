@@ -222,7 +222,7 @@ If you send [`customerId`](../../developer-resources/digital-river-api-reference
 
 {% tabs %}
 {% tab title="Save address option" %}
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Saved addresses" %}
@@ -290,7 +290,7 @@ Once customers provide payment, agree to the terms, and successfully submit the 
 
 If you pass a [`customerId`](../../developer-resources/digital-river-api-reference/checkout-sessions.md#customer-identifier) in the [create checkout session request](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createDropInCheckoutSession), we retrieve and display any transaction-applicable payment [`sources[]`](../../payments/payment-sources/) that are saved to the referenced [customer](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Customers).&#x20;
 
-![](<../../.gitbook/assets/image (19).png>)
+![](<../../.gitbook/assets/image (19) (1).png>)
 
 #### Save a payment method for future purchases
 

@@ -57,7 +57,7 @@ The `weee` hash table only contains the `weeeRegistrationID` parameter. This reg
 
 Each Fee must be associated with a [SKU](../skus.md#skus). You do this by providing the [unique identifier of a SKU](../creating-and-updating-skus.md#unique-identifier) in a `POST/fees` or `POST/fees/{id}`. A single SKU can be associated with one or more Fees.
 
-![](<../../.gitbook/assets/image (4) (1).png>)
+![](<../../.gitbook/assets/image (4) (1) (1).png>)
 
 ### Category
 

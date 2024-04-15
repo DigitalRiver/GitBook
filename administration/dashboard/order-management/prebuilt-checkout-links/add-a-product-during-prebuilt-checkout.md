@@ -21,13 +21,14 @@ To create and add a new product to the **Create Prebuilt Checkout links** page, 
 {% endhint %}
 
 1. In the **Required information** section of the **Create Prebuilt Checkout links** page, provide the 3-character currency code in the **Product** subsection of the page.
-2. In the **Required information** section of the **Create Prebuilt Checkout links** page, click **Add product(s)** to display the **Add product** modal.\
-   ![](<../../../../.gitbook/assets/first add product modal - DICO Gen links (1).png>)\
+2.  In the **Required information** section of the **Create Prebuilt Checkout links** page, click **Add product(s)** to display the **Add product** modal.\
 
-3. Select **Create new product** to expand the **Add product** modal. If your account has no SKU groups, you cannot use the Create new product option when the modal opens. You will only have the ability to choose from current products.\
-   \
-   ![](<../../../../.gitbook/assets/Add\_new\_product\_modal\_9\_29 (1).png>)\
 
+    <figure><img src="../../../../.gitbook/assets/1 Add a new product during PBCO.png" alt=""><figcaption></figcaption></figure>
+3.  Select **Create new product** to expand the **Add product** modal. If your account has no SKU groups, you cannot use the Create new product option when the modal opens. You will only have the ability to choose from current products.\
+
+
+    <figure><img src="../../../../.gitbook/assets/2 Add a new product during PBCO modal.png" alt=""><figcaption></figcaption></figure>
 4. Add the requested information in the **Required information** subsection section of the modal. You must complete every field in this section to add the new product**.** The information required is the following:
    * [**ID**](../../customers/) - Product ID.
    * **Name** - Name of the product.
@@ -47,21 +48,34 @@ To create and add a new product to the **Create Prebuilt Checkout links** page, 
 To add a current product to the **Create Prebuilt Checkout links** page, do the following:
 
 1. In the **Required information** section of the **Create Prebuilt Checkout links** page, provide the three-character currency code in the **Product** subsection of the page.
-2. In the **Required information** section of the **Create Prebuilt Checkout links** page, click **Add product(s)** to display the **Add product** modal.\
-   ![](<../../../../.gitbook/assets/first add product modal - DICO Gen links (1).png>)
-3. Select **Choose from current products** to expand the **Add product** modal.\
-   ![](../../../../.gitbook/assets/add\_existing\_product\_modal\_DICO\_links.png)
-4. Enter the **Product ID** in the provided field. Click **SKU list page** if you want to look up the **Product ID** of the current product you wish to add. If you want to add additional SKUs, click **Add additional SKU,** and another Product ID field will be added to let you enter the required information. If you change your mind and want to remove a product from this modal, click the **Delete** icon<img src="../../../../.gitbook/assets/image (78).png" alt="" data-size="original"> next to the added item.
-5. Click **Continue** when you are done with this modal. You are returned to the **Create Prebuilt Checkout links** page, where you will see a success message and the product information displayed in the Product section of that page. If you change your mind and want to remove a product from this modal, click the Delete icon <img src="../../../../.gitbook/assets/image (78).png" alt="" data-size="original">next to the listed product.
+2.  In the **Required information** section of the **Create Prebuilt Checkout links** page, click **Add product(s)** to display the **Add product** modal.\
+
+
+    <div align="left">
+
+    <figure><img src="../../../../.gitbook/assets/3 Add a current product.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
+3.  Select **Choose from current products** to expand the **Add product** modal.\
+
+
+    <div align="left">
+
+    <figure><img src="../../../../.gitbook/assets/4 Add a current product during PBCO modal.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
+4. Enter the **Product ID** in the provided field. Click [**SKU list page**](../../catalog/skus/) if you want to look up the **Product ID** of the current product you wish to add. If you want to add additional SKUs, click **Add additional SKU,** and another Product ID field will be added to let you enter the required information. If you change your mind and want to remove a product from this modal, click the **Delete** icon<img src="../../../../.gitbook/assets/image (78).png" alt="" data-size="original"> next to the added item.
+5. Click **Continue** when you are done with this modal. You are returned to the [**Create Prebuilt Checkout links**](generate-prebuilt-checkout-links.md) page, where you will see a success message and the product information displayed in the Product section of that page. If you change your mind and want to remove a product from this modal, click the Delete icon <img src="../../../../.gitbook/assets/image (78).png" alt="" data-size="original">next to the listed product.
 
 ## Change the product on the **Create Prebuilt Checkout links** page
 
-To change any of the products you have already added to the **Create Prebuilt Checkout links** page, do the following:
+To change any of the products you have already added to the [**Create Prebuilt Checkout links**](generate-prebuilt-checkout-links.md) page, do the following:
 
 1. After you have already added a product to the **Create Prebuilt Checkout links** page, click **Change product** in the **Product** subsection of the **Required information** section to redisplay the **Add product** modal.
-2. Select **Choose from current products** to expand the list of the current products. Enter the product SKU ID to add the SKU manually or click **SKU list page** to go to the SKUs list page and search for the SKU you are looking for .\
-   ![](../../../../.gitbook/assets/change\_product\_DICO\_links\_page.png)\
+2.  Select **Choose from current products** to expand the list of the current products. Enter the product SKU ID to add the SKU manually or click [**SKU list page**](../../catalog/skus/) to go to the SKUs list page and search for the SKU you are looking for.\
 
+
+    <figure><img src="../../../../.gitbook/assets/5 Change the producst on the links page (1).png" alt=""><figcaption></figcaption></figure>
 3. If you change your mind and want to remove a product from this modal, click the Delete icon <img src="../../../../.gitbook/assets/image (78).png" alt="" data-size="original"> next to the added item.&#x20;
 4. To add an additional product to the page, click **Add additional current SKU.** Another **SKU ID** field is added to let you enter the required information.&#x20;
 5. Click **Continue** when you are done with this modal. You are returned to the **Create Prebuilt Checkout links** page, where you will see the changed product information displayed in the **Product** subsection (based on your changes). If you change your mind and still want to remove a product from this page, click the Delete icon<img src="../../../../.gitbook/assets/image (78).png" alt="" data-size="original">next to the listed product.

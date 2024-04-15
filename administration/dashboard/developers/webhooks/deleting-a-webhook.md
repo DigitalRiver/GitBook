@@ -7,12 +7,16 @@ description: Learn how to delete a webhook.
 To delete a webhook:
 
 1. Click **Webhooks** in the left navigation. The Webhooks page appears.
-2. Click **More options** (vertical ellipses) associated with the restricted key you want to delete and click **Delete**.\
-   ![](<../../../../.gitbook/assets/editrotatedeletewebhook (1) (2) (1) (2) (4).png>)
-3. Complete the fields in the **Delete webhook** dialog and click **Delete webhook**.
+2.  Click **More options** (vertical ellipses) associated with the restricted key you want to delete and click **Delete**.\
 
-<div align="left">
 
-<img src="../../../../.gitbook/assets/DeleteWebhook.png" alt="">
+    <figure><img src="../../../../.gitbook/assets/1 delete webhooks - dropdown.png" alt=""><figcaption></figcaption></figure>
+3.  Complete the fields in the **Delete webhook** dialog and click **Delete webhook**.\
+    \
 
-</div>
+
+    <div align="left">
+
+    <figure><img src="../../../../.gitbook/assets/2 delete webhooks - delete modal.png" alt=""><figcaption></figcaption></figure>
+
+    </div>

@@ -6,7 +6,7 @@ description: >-
 
 # Authorization declines
 
-At the time of [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) creation, Digital River submits a request to authorize a [charge](../developer-resources/digital-river-api-reference/payment-charges.md) on the transaction's [payment source](payment-sources/). Sometimes, however, this authorization request is declined.
+At the time of [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) creation, Digital River submits a request to authorize a [charge](../order-management/orders/payment-charges/) on the transaction's [payment source](payment-sources/). Sometimes, however, this authorization request is declined.
 
 Digital River's proprietary solution maximizes billing success with multiple credit card processors. If an authorization attempt fails with the first credit card processor, we may try billing against a different processor.
 

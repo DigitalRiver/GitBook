@@ -12,7 +12,7 @@ For more details on how to use the element with specific [selling entities](../.
 
 To use the element, you'll typically collect enough information from customers during [checkouts](../../../integration-options/checkouts/creating-checkouts/) so that Digital River can determine the appropriate [selling entity](../../../integration-options/checkouts/creating-checkouts/selling-entities.md). At this point, you can [create an invoice attribute element](invoice-attribute-element.md#createelement-invoiceattribute-options).
 
-This prompts [DigitalRiver.js](../) to call to our [country specification service](../../../integration-options/checkouts/creating-checkouts/country-specs.md) to get the schemas it needs to build a data collection form. Once the form loads on your front end, customers select the appropriate options, enter their personal information, and click the submit button.
+This prompts [DigitalRiver.js](../../../payments/payment-integrations-1/digitalriver.js/reference/) to call to our [country specification service](../../../integration-options/checkouts/creating-checkouts/country-specs.md) to get the schemas it needs to build a data collection form. Once the form loads on your front end, customers select the appropriate options, enter their personal information, and click the submit button.
 
 DigitalRiver.js then packages the form's data in a create invoice attribute request sent to our tax service. If that service successfully creates an invoice attribute, you receive the [on complete](invoice-attribute-element.md#on-complete-handler) event. That event's payload contains the invoice attribute's unique identifier.&#x20;
 
@@ -215,7 +215,7 @@ The configuration object's `invoiceAttribute` contains the following properties:
 {% endtab %}
 
 {% tab title="email specified" %}
-![](<../../../.gitbook/assets/image (8).png>)
+![](<../../../.gitbook/assets/image (8) (1).png>)
 {% endtab %}
 {% endtabs %}
 

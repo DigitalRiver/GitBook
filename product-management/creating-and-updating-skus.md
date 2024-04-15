@@ -26,7 +26,7 @@ For details, refer to [how products are classified as physical or digital](skus.
 
 A [SKU's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/SKUs) unique identifier is represented by `id`.
 
-A product's identifier in your system should ideally match the SKU's `id` in ours. This ensures that synchronization is possible and that SKUs work properly throughout an [order's lifecycle](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md). Therefore, we recommend that you specify your own `id` and ensure it matches your product's universally unique identifier.
+A product's identifier in your system should ideally match the SKU's `id` in ours. This ensures that synchronization is possible and that SKUs work properly throughout an [order's lifecycle](../order-management/orders/the-order-lifecycle.md). Therefore, we recommend that you specify your own `id` and ensure it matches your product's universally unique identifier.
 
 If you don't specify `id` in the body of a [create SKU request](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/SKUs/operation/createSkus), then Digital River generates and returns a unique value.
 

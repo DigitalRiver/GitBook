@@ -8,8 +8,6 @@ The Finance section displays payouts, sales summaries, and transactions. You'll 
 
 Digital River encourages you to actively check each of your payouts and drill-down into its corresponding details. You can review not only the amounts you get paid but also the underlying transactions included in the payout by using the following three pages: [Payouts](payouts/), [Sales summaries](sales-summaries/), and [Transactions](transactions/).
 
-{% embed url="https://vimeo.com/428580362" %}
-
 ## Transactions
 
 Once an order has been fulfilled and invoiced, you can use the [Transactions ](transactions/)section to review the financial details of the order, including totals in both the shopping currency and in the payout currency designated in your contract with Digital River. You can also examine how impending payout amounts were calculated for a specific transaction, including deductions and adjustments such as tax, shipping, fees, Digital River share, or shipping discount.

@@ -18,7 +18,7 @@ On this page, you'll find information on both [order notifications](customer-not
 
 ## Order notifications
 
-In this section, you'll find basic information on what notifications to send to customers throughout an [order's lifecycle](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md):
+In this section, you'll find basic information on what notifications to send to customers throughout an [order's lifecycle](orders/the-order-lifecycle.md):
 
 * [Order confirmation](customer-notifications.md#order-confirmation)
 * [Shipment notification](customer-notifications.md#shipment-notification)

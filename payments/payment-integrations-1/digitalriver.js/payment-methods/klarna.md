@@ -191,7 +191,7 @@ Once authorized, you can use the source by [attaching it to a checkout.](../../.
 ## Step 5: Support recurring payments
 
 {% hint style="info" %}
-**Note**: To support recurring payments, use a payment type of `klarnaCreditRecurring` in the [createSource request](../../../../developer-resources/reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata). Only use the Klarna Recurring payment type for recurring payments. Klarna Recurring uses a different type of agreement with the lender, Klarna, to facilitate the recurring payments.
+**Note**: To support recurring payments, use a payment type of `klarnaCreditRecurring` in the [createSource request](../reference/digitalriver-object.md#digitalriver-createsource-element-sourcedata). Only use the Klarna Recurring payment type for recurring payments. Klarna Recurring uses a different type of agreement with the lender, Klarna, to facilitate the recurring payments.
 
 For standard payments, you must use the Klarna payment type.
 {% endhint %}

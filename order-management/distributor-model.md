@@ -12,7 +12,7 @@ Before deploying, you’ll need to provide us with some basic information about 
 
 <figure><img src="../.gitbook/assets/Distribution model seq diagram.png" alt=""><figcaption></figcaption></figure>
 
-After customers place an order, a [payment charge](../developer-resources/digital-river-api-reference/payment-charges.md#how-a-charge-is-created) is authorized and a line item ships, your commerce platform needs to send the agreed upon identifier of the distributor, their up-to-date costs of goods, shipping costs (if applicable), and preferred payout currency in a [`POST /fulfillments`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments/operation/createFulfillments) request (which triggers a [charge capture](../developer-resources/digital-river-api-reference/payment-charges.md#captures) attempt).
+After customers place an order, a [payment charge](orders/payment-charges/#how-a-charge-is-created) is authorized and a line item ships, your commerce platform needs to send the agreed upon identifier of the distributor, their up-to-date costs of goods, shipping costs (if applicable), and preferred payout currency in a [`POST /fulfillments`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments/operation/createFulfillments) request (which triggers a [charge capture](orders/payment-charges/#captures) attempt).
 
 {% hint style="success" %}
 If a fulfillment involves multiple line items and different distributors are assigned to each, then your request can pass their data in separate `items[]`.&#x20;

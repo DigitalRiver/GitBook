@@ -6,7 +6,7 @@ description: >-
 
 # Handling external subscription acquisitions
 
-If you're not using [our subscription service](../../../using-our-services/subscriptions.md), you can still use the Digital River APIs and [DigitalRiver.js](../../../developer-resources/reference/) to handle recurring billing, display and acquire acceptance of a subscription's terms, and comply with [PSD2 and SCA](../../../payments/psd2-and-sca/) mandates.
+If you're not using [our subscription service](../../../using-our-services/subscriptions.md), you can still use the Digital River APIs and [DigitalRiver.js](../../../payments/payment-integrations-1/digitalriver.js/reference/) to handle recurring billing, display and acquire acceptance of a subscription's terms, and comply with [PSD2 and SCA](../../../payments/psd2-and-sca/) mandates.
 
 Integrations that use a third-party subscription service can:
 
@@ -154,7 +154,7 @@ For more details on required disclosures, refer to the [Subscriptions and Auto-R
 
 {% tabs %}
 {% tab title="Drop-in payments" %}
-In [checkouts](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts), set each subscription line item's [`autoRenewal`](subscription-information-1.md#auto-renewal) to `true`. In the [`createDropin()`](../../../developer-resources/reference/digitalriver-object.md#creating-an-instance-of-drop-in) method's configuration [`options`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#drop-in-options-1), set [`showTermsOfSaleDisclosure`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#show-terms-of-sale-disclosure) to `true`.
+In [checkouts](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts), set each subscription line item's [`autoRenewal`](subscription-information-1.md#auto-renewal) to `true`. In the [`createDropin()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-an-instance-of-drop-in) method's configuration [`options`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#drop-in-options-1), set [`showTermsOfSaleDisclosure`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#show-terms-of-sale-disclosure) to `true`.
 
 These settings prompt [Drop-in payments](../../../payments/payment-integrations-1/drop-in/) to display the combined autorenewal and save payment agreement.
 
@@ -166,13 +166,13 @@ If the customer consents and a [source](../../../payments/payment-sources/) is s
 {% endtab %}
 
 {% tab title="DigitalRiver.js" %}
-If you're using DigitalRiver.js, you can present our standardized subscription terms and save payment agreement by calling the [get compliance details method](../../../developer-resources/reference/digitalriver-object.md#digitalriver-compliance-getdetails-businessentitycode-locale), retrieving `autorenewalPlanTerms.localizedText` and then displaying that text with an appropriate acceptance control. Your code should be written so that customers must accept these terms before the checkout can proceed.
+If you're using DigitalRiver.js, you can present our standardized subscription terms and save payment agreement by calling the [get compliance details method](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#digitalriver-compliance-getdetails-businessentitycode-locale), retrieving `autorenewalPlanTerms.localizedText` and then displaying that text with an appropriate acceptance control. Your code should be written so that customers must accept these terms before the checkout can proceed.
 
-You should then pass `autorenewalPlanTerms.localizedText` to `mandate.terms` in the [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources) method's configuration object.
+You should then pass `autorenewalPlanTerms.localizedText` to `mandate.terms` in the [`createSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources) method's configuration object.
 {% endtab %}
 {% endtabs %}
 
-If you configure your workflow correctly, then the customer accepted autorenewal terms are returned in the [`onSuccess`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#onsuccess) event's `data` or the response to the [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources) method.
+If you configure your workflow correctly, then the customer accepted autorenewal terms are returned in the [`onSuccess`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#onsuccess) event's `data` or the response to the [`createSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources) method.
 
 In either case, retrieve `mandate.terms` and use this value to set each of the [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) [`items[].subscriptionInfo.terms`](subscription-information-1.md#terms). This ensures that the subscription's terms are added to the [billing agreement](subscription-information-1.md#billing-agreement-identifier).
 
@@ -218,7 +218,7 @@ Once the checkout's [`payment.session.state`](../creating-checkouts/payment-sess
 
 ### Notifying customers of a subscription acquisition
 
-When the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) is [`accepted`](../../../order-management/creating-and-updating-an-order.md#handling-accepted-orders), notify customers that their subscription acquisition has been successfully processed. In the [Subscription Notifications](https://digitalriver.service-now.com/kb?id=kb\_article\_view\&sys\_kb\_id=785fc80adbd8341046e8d6aa48961907) article (_refer to_ [_Learning tools_](../../../general-resources/standards-and-certifications/compliance-requirements.md#accessing-the-learning-tools) _for access information_), you can find a complete list of what is required in this notification.‌
+When the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../../../order-management/orders/the-order-lifecycle.md#order-states-and-events) is [`accepted`](../../../order-management/creating-and-updating-an-order.md#handling-accepted-orders), notify customers that their subscription acquisition has been successfully processed. In the [Subscription Notifications](https://digitalriver.service-now.com/kb?id=kb\_article\_view\&sys\_kb\_id=785fc80adbd8341046e8d6aa48961907) article (_refer to_ [_Learning tools_](../../../general-resources/standards-and-certifications/compliance-requirements.md#accessing-the-learning-tools) _for access information_), you can find a complete list of what is required in this notification.‌
 
 ## Next steps
 

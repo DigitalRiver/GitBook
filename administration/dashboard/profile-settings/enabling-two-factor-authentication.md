@@ -15,13 +15,10 @@ You can choose from the following authentication factors to provide additional s
 **Note:** The Digital River Dashboard application provides multifactor authentication (MFA) to ensure maximum security. Choose your phone number or Google Authenticator [to set up MFA](enabling-two-factor-authentication.md). If you are using both Digital River Dashboard and eCompass, you are required to set up MFA for both applications. Use the same username and password for both applications, so you only need to set up MFA once. Your credentials are applied to both applications in the same way.
 {% endhint %}
 
-To enable these settings, go to your **Profile settings** page after you have created your Digital River account. Scroll to **Multi-factor authentication** in the **Account security** section. The default setting for both methods is **Off.**
+To enable these settings, go to your **Profile settings** page after you have created your Digital River account. Scroll to **Multi-factor authentication** in the **Account security** section. The default setting for both methods is **Off.**\
 
-<div align="left">
 
-<img src="../../../.gitbook/assets/MFA1_both_intro (1).png" alt="">
-
-</div>
+<figure><img src="../../../.gitbook/assets/1 nu mfa settings.png" alt=""><figcaption></figcaption></figure>
 
 ## Use SMS authentication
 
@@ -31,16 +28,19 @@ To do that, you provide access to your mobile phone by adding your mobile phone 
 
 To enable SMS authentication, use the following steps:
 
-1. On the **Profile settings** page, scroll to **Multi-factor authentication** in the **Account security** section and select **On** from the drop-down next to the **SMS** choice.\
-   \
-   ![](<../../../.gitbook/assets/MFA\_sms\_on\_update\_phone (2).png>)\
+1.  On the **Profile settings** page, scroll to **Multi-factor authentication** in the **Account security** section and select **On** from the drop-down next to the **SMS** choice.\
 
-2. In the supplied dialog, enter the trusted contact **Mobile phone number** to be used during authentication. You also must provide your account password.
-3. Click **Add mobile phone number** to save the trusted phone number. The **SMS** selection now provides an **Update** link to click if you ever need to [update your phone number](updating-your-phone-number.md).\
-   \
-   ![](../../../.gitbook/assets/MFA\_sms\_on\_update\_phone.png)
 
-A code is sent to your mobile phone number each time you sign in to help verify your identity. You need to enter this code to complete the sign-in process.
+    <figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+2. In the supplied dialog, enter the trusted contact **Mobile phone number** to be used during authentication. You also must provide your account password.\
+   \
+   ![](<../../../.gitbook/assets/3 nu change phone change num modal.png>)
+3.  Click **Add mobile phone number** to save the trusted phone number. The **SMS** selection now provides an **Update** link to click if you ever need to [update your phone number](updating-your-phone-number.md).\
+
+
+    <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+    A code is sent to your mobile phone number each time you sign in to help verify your identity. You need to enter this code to complete the sign-in process.
 
 You may return to this page anytime to turn **Off** this feature using the same drop-down.&#x20;
 
@@ -63,7 +63,6 @@ To enable Google authentication, use the following steps:
 1. On the **Profile settings** page, scroll to **Multi-factor authentication** in the **Account security** section and select **On** from the drop-down next to the **Google authentication** choice.
 2. When the Setup Google Authenticator modal appears, use the mobile device you are using to authenticate the displayed QR code. Scan this and follow the instructions to set up your account and begin generating security codes. Click **Activate.**\
    \
-   ![](../../../.gitbook/assets/MFA\_google\_setup.png)\
-
+   ![](<../../../.gitbook/assets/4 nu mfa google auth enabeled setting.png>)
 
 For the complete steps on setting up Google Authentication on your mobile device using the app, refer to [Get verification codes with Google Authentication](https://support.google.com/accounts/answer/1066447) in the Google Help Center. &#x20;

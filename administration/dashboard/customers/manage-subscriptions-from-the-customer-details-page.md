@@ -21,7 +21,7 @@ To use this feature, you must have access privileges that let you view and edit 
 
 The following is an example of the subscription information found in the **Subscriptions** subsection of the **Customer Details** page.
 
-![](<../../../.gitbook/assets/cancel\_subs\_active\_grayed\_subs mangment (2).png>)
+<figure><img src="../../../.gitbook/assets/1 manage subcsrip.png" alt=""><figcaption></figcaption></figure>
 
 For more information on subscriptions, refer to [Managing subscriptions](../../../integration-options/checkouts/subscriptions/).
 
@@ -63,8 +63,11 @@ To cancel an Active customer subscription, do the following:
 2. Use the [Search](searching-for-customers.md) feature or scroll to find the customer whose details you want to view or change.
 3. Click the **Customer ID.** The **Customer details** page appears. The customer's current subscription information can be viewed in the **Subscriptions** subsection of the page.&#x20;
 4. Click the **Cancel subscription** link in the section for that subscription. Active cancellation links are blue and underlined.&#x20;
-5. Click **Cancel subscription** on the **Cancel subscription** modal to confirm and complete your cancellation. Once a subscription has been canceled, its **State** field in the **Subscriptions** summary is changed from **Active** to **Cancelled**. The **Cancel subscription** link is also grayed out so that it cannot be used again.
+5.  Click **Cancel subscription** on the **Cancel subscription** modal to confirm and complete your cancellation. Once a subscription has been canceled, its **State** field in the **Subscriptions** summary is changed from **Active** to **Cancelled**. The **Cancel subscription** link is also grayed out so that it cannot be used again.\
 
-![](../../../.gitbook/assets/subscription\_section\_customer\_details\_active.png)
 
-![\`](../../../.gitbook/assets/subscription\_section\_customer\_details\_cancelled.png)
+    <figure><img src="../../../.gitbook/assets/2 manage subcsrip active.png" alt=""><figcaption></figcaption></figure>
+
+
+
+    <figure><img src="../../../.gitbook/assets/3 manage subcsrip cancelled.png" alt=""><figcaption></figcaption></figure>

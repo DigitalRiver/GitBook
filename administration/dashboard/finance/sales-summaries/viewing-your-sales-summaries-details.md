@@ -11,4 +11,4 @@ To view your sales summary details:
 3.  To view the related data linked to the sales summary, click the Transaction ID link or Order ID link.\
 
 
-    <figure><img src="../../../../.gitbook/assets/image (183).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/1 vu sales summaries details.png" alt=""><figcaption></figcaption></figure>

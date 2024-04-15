@@ -15,8 +15,10 @@ To download an invoice:
 1. Click **Orders** in the left navigation. The Orders page appears.
 2. [Filter your orders](filtering-your-orders.md), if needed.
 3. Click the order ID link under the **ID** column. The Order details page appears.
-4. To download an invoice, click the **Download invoice** link in the upper right corner of the Order details page.\
-   ![](../../../../.gitbook/assets/Dowload-Invoice.png)
+4.  To download an invoice, click the **Download invoice** link in the upper right corner of the Order details page.\
+
+
+    <figure><img src="../../../../.gitbook/assets/image (259).png" alt=""><figcaption></figcaption></figure>
 5. Click the invoice you want to download.\
    ![](../../../../.gitbook/assets/Invoice-PDF.png)\
    The file will open in Adobe Acrobat reader.

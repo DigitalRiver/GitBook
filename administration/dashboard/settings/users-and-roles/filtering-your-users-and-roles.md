@@ -19,7 +19,13 @@ The following table lists the parameters you can define when you filter your use
 To filter the users and roles in the Users and roles list:
 
 1. Click **Filter**. The Filters dialog appears.\
-   ![](../../../../.gitbook/assets/UsersRolesFilter.png)
+   \
+   ![](<../../../../.gitbook/assets/1 Filter group 1.png>)\
+   \
+   ![](<../../../../.gitbook/assets/2 Filter group 2.png>)\
+   \
+   ![](<../../../../.gitbook/assets/3 Filter group 3 (1).png>)\
+
 2. Complete all or some of the fields and click **Apply**.
 
 The Filter button displays how many changes you applied to the Filter settings while you are on the page. The Filter settings return to their default settings when you leave the page. To clear the settings on the filter, click **Filter** and then click **Clear**.

@@ -21,7 +21,13 @@ The following table lists the parameters you can define when you filter your pay
 
 You can filter the list on the Payouts page to display the information you want to view. To filter the results in the Payouts list:
 
-1. Click **Payouts** in the left navigation. The Payouts page appears.
+1.  Click **Payouts** in the left navigation. The Payouts page appears.\
+    \
+
+
+    <figure><img src="../../../../.gitbook/assets/1 Payout page details page (1).png" alt=""><figcaption></figcaption></figure>
 2. Click the **Filter** dropdown menu. The Filters dialog appears.\
-   ![](../../../../.gitbook/assets/FilteringPayoutImage.png)
+   \
+   ![](<../../../../.gitbook/assets/2 Payouts filtering.png>)\
+
 3. Complete all or some of the fields and click **Apply**. The **Filter** button displays how many changes you applied to the Filter settings while you are on the page. The Filter settings return to their default settings when you leave the page. To clear the settings on the filter, click **Filter** and then click **Clear**.

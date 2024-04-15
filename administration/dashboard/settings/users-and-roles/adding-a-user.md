@@ -7,7 +7,7 @@ description: Learn how to add a user.
 To add a user:
 
 1. Before adding a user, ensure you are in the correct account.\
-   ![](../../../../.gitbook/assets/AccountUsersRoles.png)
+   ![](<../../../../.gitbook/assets/1 adding users - correct account.png>)
 2. Click **Users and roles**. The Users and roles page appears.
 3. Click **Add user**.
 4. Complete the fields.
@@ -19,8 +19,12 @@ To add a user:
    * **Customer service** – enables management of orders, returns, and refunds.&#x20;
    * **Finance Manager** – enables management of finance and order screens.\
      \
-     ![](../../../../.gitbook/assets/AddNewUser.png)
+     ![](<../../../../.gitbook/assets/2 adding users - user form modal.png>)\
+     \
+
 7. Click **Next**.
 8. Click **Confirm** to add the user.\
-   ![](../../../../.gitbook/assets/AddUserPrompt.png)\
+   \
+   ![](<../../../../.gitbook/assets/3 adding users - addition confirm.png>)\
+   \
    If the user is new to the Digital River Dashboard, they will receive an activation email. If the user has access to another account in the Dashboard, they will be automatically added to the current account.

@@ -104,7 +104,7 @@ Once Digital River has enough data points to make a determination, we populate t
 You can use `sellingEntity.id` to:
 
 * Create a [compliance element](../../../developer-resources/reference/elements/compliance-elements.md) to display Digital River's required disclosures.
-* Configure the [get compliance details method](../../../developer-resources/reference/digitalriver-object.md#digitalriver.compliance.getdetails-businessentitycode-locale), which returns individual disclosures that can be displayed on your front-end.
+* Configure the [get compliance details method](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#digitalriver.compliance.getdetails-businessentitycode-locale), which returns individual disclosures that can be displayed on your front-end.
 * Create a [tax identifier element](../../../developer-resources/reference/elements/tax-identifier-element.md) to validate the format of tax identification numbers entered by customers.
 
 ## Multiple selling entity scenarios

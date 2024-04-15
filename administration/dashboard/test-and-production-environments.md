@@ -9,18 +9,14 @@ In the test environment, you can test Digital River's features without affecting
 The test and production environments behave similarly with the following exceptions:
 
 * You can only use test payment information in the test environment. Card networks and payment providers do not process payments in a test environment.
-* The flow is different for some payment methods using the Sources resource in the production environment. They may require more steps when in the test environment.
+* The flow is different for some payment methods using the source resources in the production environment. They may require more steps when in the test environment.
 * In the test environment, Digital River retries webhooks three times over a few hours (as opposed to 72 hours for the production environment) when it does not receive a successful acknowledgment.
 
 You can tell which environment you are in by looking at the Test/Production toggle.
 
-Test:
-
-<div align="left">
-
-<img src="../../.gitbook/assets/TestDropdown (1).png" alt="">
-
-</div>
+Test:\
+\
+![](<../../.gitbook/assets/image (257).png>)
 
 Production:
 
@@ -30,12 +26,8 @@ Production:
 
 </div>
 
-Click the dropdown menu to toggle between the two environments.
-
-<div align="left">
-
-<img src="../../.gitbook/assets/TestandProductionDropdown.png" alt="">
-
-</div>
+Click the drop-down menu to toggle between the two environments.\
+\
+![](<../../.gitbook/assets/image (258).png>)
 
 Only paid accounts can toggle to the Production environment.

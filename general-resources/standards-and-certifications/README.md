@@ -90,7 +90,7 @@ Here you'll find important resources to assist you in building your commerce con
 * [Payments processing](../../integration-options/checkouts/process-flow.md#creating-a-source-and-order)
 * [Strong customer authentication](../../payments/psd2-and-sca/)
 * [Recurring billing and subscriptions](../../integration-options/checkouts/subscriptions/subscription-information-1.md)
-* [Invoices](../../developer-resources/digital-river-api-reference/invoices.md) and [files](broken-reference)
+* [Invoices](../../integration-options/checkouts/subscriptions/invoices.md) and [files](broken-reference)
 * [Fulfillments and cancellations](../../order-management/fulfillments.md)
 * [Returns and refunds](integration-checklists/reversals.md)
 

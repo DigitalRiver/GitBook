@@ -4,7 +4,7 @@ description: Learn how to specify the type of charge.
 
 # Initiating a charge
 
-When [creating](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createCheckouts) or [updating](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/updateCheckouts) a Checkout or [creating ](../../../developer-resources/digital-river-api-reference/invoices.md#creating-an-invoice)an Invoice, you can use the `chargeType` parameter to tell Digital River whether you expect the [payment source](../../../payments/payment-sources/) to be used for a [customer-initiated](initiating-a-charge.md#customer-initiated), [merchant-initiated](initiating-a-charge.md#merchant-initiated), or [mail/telephone-initiated](initiating-a-charge.md#mail-order-telephone-order) transaction.
+When [creating](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createCheckouts) or [updating](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/updateCheckouts) a Checkout or [creating ](../subscriptions/invoices.md#creating-an-invoice)an Invoice, you can use the `chargeType` parameter to tell Digital River whether you expect the [payment source](../../../payments/payment-sources/) to be used for a [customer-initiated](initiating-a-charge.md#customer-initiated), [merchant-initiated](initiating-a-charge.md#merchant-initiated), or [mail/telephone-initiated](initiating-a-charge.md#mail-order-telephone-order) transaction.
 
 ## Customer initiated
 

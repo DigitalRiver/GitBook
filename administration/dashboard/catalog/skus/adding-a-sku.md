@@ -10,7 +10,7 @@ To add a SKU:
 2.  Click the **Add SKU** button at the top right of the page. The Add SKU page appears.\
 
 
-    <figure><img src="../../../../.gitbook/assets/4_18_Add_SKU_Crums_EECN_TaxCode.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/1 adding a sku.png" alt=""><figcaption></figcaption></figure>
 3. Enter the required SKU information. The Metadata and Additional information sections are optional.\
    **Note:** You must provide one of the following:
    * **ECCN** and **Tax Code** (both pieces of information)
@@ -66,7 +66,7 @@ Select the correct datatype of the metadata from the dropdown list. Choose eithe
 
 #### Value
 
-Provides the actual value of the metadata that will be shared. Click **Add row** to add another metadata value. Click the Trash ![](<../../../../.gitbook/assets/image (6).png>)icon to delete a metadata value.
+Provides the actual value of the metadata that will be shared. Click **Add row** to add another metadata value. Click the Trash ![](<../../../../.gitbook/assets/image (6) (2).png>)icon to delete a metadata value.
 
 ### Additional information (optional)
 
@@ -111,4 +111,4 @@ Add multiple Item breadcrumb paths by clicking the **Add row** link underneath t
 
 [Edit ](editing-a-sku.md)the Item breadcrumb when the SKU details page is in [Edit mode](editing-a-sku.md). Click **Save**.
 
-Delete the Item breadcrumb by clicking the Trash icon![](<../../../../.gitbook/assets/image (6).png>) next to an Item breadcrumb row. Click **Save**.
+Delete the Item breadcrumb by clicking the Trash icon![](<../../../../.gitbook/assets/image (6) (2).png>) next to an Item breadcrumb row. Click **Save**.

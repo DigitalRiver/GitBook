@@ -18,7 +18,7 @@ For details on using the element in checkout flows, refer to [Displaying complia
 
 ## Creating a compliance element
 
-To create a compliance element, pass `'compliance'` and its [configuration object](compliance-elements.md#compliance-element-configuration-object) to `createElement()`, which is exposed by the [`DigitalRiver` object](../digitalriver-object.md#creating-a-digitalriver-object).
+To create a compliance element, pass `'compliance'` and its [configuration object](compliance-elements.md#compliance-element-configuration-object) to `createElement()`, which is exposed by the [`DigitalRiver` object](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-a-digitalriver-object).
 
 ```javascript
 var compliance = digitalRiver.createElement('compliance', complianceOptions);

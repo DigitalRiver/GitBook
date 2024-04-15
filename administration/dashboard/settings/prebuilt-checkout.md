@@ -66,9 +66,10 @@ Once a Prebuilt Checkout configuration has been created and saved, administrator
 Before creating and saving your Prebuilt Checkout configuration, choose the options and settings you want to save in your configuration. Use the following steps:
 
 1. &#x20;Go to **Settings** in the left navigation of the Dashboard and click **Prebuilt Checkout** to go to the correct page.&#x20;
-2. Choose your options and settings from the following selections:
+2.  Choose your options and settings from the following selections:\
 
-<figure><img src="../../../.gitbook/assets/PBC virgin custom options (1).png" alt=""><figcaption></figcaption></figure>
+
+    <figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 The following sections describe each option and setting.
 
@@ -116,9 +117,10 @@ The Prebuilt Checkout page is where you create, save, update, or replace a scope
 
 Once you have chosen the options you want in your configuration, create the configuration by saving the settings and options.
 
-To create a new Prebuilt Checkout configuration or manage an existing configuration, go to **Settings** in the left navigation of the Dashboard and click **Prebuilt Checkout** to go to the correct page. Make sure that you have already chosen your options and settings. The following is an example of a Prebuilt Checkout page with chosen settings:
+To create a new Prebuilt Checkout configuration or manage an existing configuration, go to **Settings** in the left navigation of the Dashboard and click **Prebuilt Checkout** to go to the correct page. Make sure that you have already chosen your options and settings. The following is an example of a Prebuilt Checkout page with chosen settings:\
 
-<figure><img src="../../../.gitbook/assets/settings_1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/2 pbco settings save.png" alt=""><figcaption></figcaption></figure>
 
 Use the following steps to create a new Prebuilt Checkout configuration on the Prebuilt Checkout page:
 
@@ -146,9 +148,10 @@ Use the following steps to create a new Prebuilt Checkout configuration on the P
 
 ### Edit and update an existing Prebuilt Checkout configuration
 
-You can change or update the settings if you previously saved Prebuilt Checkout. Use the following steps to edit or update a current Prebuilt Checkout:
+You can change or update the settings if you previously saved Prebuilt Checkout. Use the following steps to edit or update a current Prebuilt Checkout:\
 
-<figure><img src="../../../.gitbook/assets/settings_2.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/3 pbco settings edit.png" alt=""><figcaption></figcaption></figure>
 
 1. Go to **Settings** in the Dashboard left navigation and click **Prebuilt Checkout**.
 2. In the previously saved configuration, an **Edit** button appears instead of a Save button in the upper right corner of the **Prebuilt Checkout** configuration page.

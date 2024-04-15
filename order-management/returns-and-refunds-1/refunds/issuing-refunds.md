@@ -22,13 +22,13 @@ Before submitting a [`POST/refunds`](https://www.digitalriver.com/docs/digital-r
 
 The [Refunds API](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Refunds) should only be used once an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) is partially or completely fulfilled.&#x20;
 
-This is due to the fact that [refunds](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Refunds) can only be created on [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) with [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges) [`captures[]`](../../../developer-resources/digital-river-api-reference/payment-charges.md#captures) in a `state` of `complete`. To be notified of this `state` change event, you can subscribe to [`order.charge.capture.complete`](../../informing-digital-river-of-a-fulfillment.md#successful-charge-captures).
+This is due to the fact that [refunds](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Refunds) can only be created on [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) with [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges) [`captures[]`](../../orders/payment-charges/#captures) in a `state` of `complete`. To be notified of this `state` change event, you can subscribe to [`order.charge.capture.complete`](../../informing-digital-river-of-a-fulfillment.md#successful-charge-captures).
 
 {% hint style="info" %}
-If you'd like to [cancel a charge](../../../developer-resources/digital-river-api-reference/payment-charges.md#cancels) before it's captured, use the [Fulfillments API](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments). For details, refer to [Capturing and cancelling payment charges](../../informing-digital-river-of-a-fulfillment.md).
+If you'd like to [cancel a charge](../../orders/payment-charges/#cancels) before it's captured, use the [Fulfillments API](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments). For details, refer to [Capturing and cancelling payment charges](../../informing-digital-river-of-a-fulfillment.md).
 {% endhint %}
 
-Once a [capture](../../../developer-resources/digital-river-api-reference/payment-charges.md#captures) is `complete`, Digital River increases [`availableToRefundAmount`](issuing-refunds.md#available-to-refund-amount).
+Once a [capture](../../orders/payment-charges/#captures) is `complete`, Digital River increases [`availableToRefundAmount`](issuing-refunds.md#available-to-refund-amount).
 
 {% code title="Order" %}
 ```javascript
@@ -104,7 +104,7 @@ The value of `availableToRefundAmount` reflects both [pending](issuing-refunds.m
 
 At a high level, Digital River calculates these values by using the following formula:
 
-`availableToRefundAmount =` [`charge(s)`](../../../developer-resources/digital-river-api-reference/payment-charges.md)`amount` [`captured`](../../../developer-resources/digital-river-api-reference/payment-charges.md#captures) `− (`[`completed refunds`](issuing-refunds.md#completed-refunds) `amount +` [`pending refunds`](issuing-refunds.md#pending-refunds) `amount)`
+`availableToRefundAmount =` [`charge(s)`](../../orders/payment-charges/)`amount` [`captured`](../../orders/payment-charges/#captures) `− (`[`completed refunds`](issuing-refunds.md#completed-refunds) `amount +` [`pending refunds`](issuing-refunds.md#pending-refunds) `amount)`
 
 If you submit a `POST/refunds` whose `amount` is greater than the [order's `availableToRefundAmount`](issuing-refunds.md#available-to-refund-amount-order-level), or whose `items[].amount` is greater than that [`items[].availableToRefundAmount`](issuing-refunds.md#available-to-refund-amount-item-level), then a `400 Bad Request` is thrown:
 
@@ -125,7 +125,7 @@ If you submit a `POST/refunds` whose `amount` is greater than the [order's `avai
 
 #### Available to refund amount: order-level
 
-At the order-level, `availableToRefundAmount` reflects the unrefunded portion of an order's [`capturedAmount`](../../../developer-resources/digital-river-api-reference/payment-charges.md#captures). This `availableToRefundAmount` may include product prices, along with any expenses related to shipping, duties, fees, and assessed taxes.
+At the order-level, `availableToRefundAmount` reflects the unrefunded portion of an order's [`capturedAmount`](../../orders/payment-charges/#captures). This `availableToRefundAmount` may include product prices, along with any expenses related to shipping, duties, fees, and assessed taxes.
 
 {% code title="Order" %}
 ```json
@@ -142,7 +142,7 @@ At the order-level, `availableToRefundAmount` reflects the unrefunded portion of
 
 #### Available to refund amount: item-level
 
-In [orders](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders), `items[].availableToRefundAmount` reflects the unrefunded portion of that line item's [captured](../../../developer-resources/digital-river-api-reference/payment-charges.md#captures) `amount` plus its `tax.amount`. It _doesn't_ include expenses related to shipping, duties, or fees.
+In [orders](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders), `items[].availableToRefundAmount` reflects the unrefunded portion of that line item's [captured](../../orders/payment-charges/#captures) `amount` plus its `tax.amount`. It _doesn't_ include expenses related to shipping, duties, or fees.
 
 {% hint style="success" %}
 If you'd like to refund shipping costs associated with an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) individual `items[]`, then you can determine what customers paid by accessing `items[].shipping.amount` and `items[].shipping.taxAmount`.

@@ -6,7 +6,7 @@ description: >-
 
 # Elements
 
-An Element is a UI component that [DigitalRiver.js](../) creates to collect sensitive customer information without having the data touch your servers. You can customize and stylize these components to seamlessly integrate them into your user experience or purchase flow. The library collects and tokenizes the data contained in these elements without exposing you to PCI-compliance liability.‌
+An Element is a UI component that [DigitalRiver.js](../../../payments/payment-integrations-1/digitalriver.js/reference/) creates to collect sensitive customer information without having the data touch your servers. You can customize and stylize these components to seamlessly integrate them into your user experience or purchase flow. The library collects and tokenizes the data contained in these elements without exposing you to PCI-compliance liability.‌
 
 ## element.mount();
 

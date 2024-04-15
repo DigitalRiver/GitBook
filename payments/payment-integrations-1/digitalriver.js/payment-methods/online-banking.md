@@ -111,7 +111,7 @@ onlineBankingElement.mount('online-banking');
 ```
 {% endcode %}
 
-To create an online banking source, you must reference the created element and the supplemental data in your [createSource ](../../../../developer-resources/reference/digitalriver-object.md#creating-sources)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
+To create an online banking source, you must reference the created element and the supplemental data in your [createSource ](../reference/digitalriver-object.md#creating-sources)request. DigitalRiver.js will retrieve and assemble the request on your behalf.
 
 {% hint style="info" %}
 The `address` object must contain [postal code](../../../../integration-options/checkouts/creating-checkouts/providing-address-information.md#postal-code-validations) and [state/province](../../../../integration-options/checkouts/creating-checkouts/providing-address-information.md#states-and-province-validations) data that [adheres to a standardized format](../../../../integration-options/checkouts/creating-checkouts/providing-address-information.md#postal-code-and-state-province-validations).

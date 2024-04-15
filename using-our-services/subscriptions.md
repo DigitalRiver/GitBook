@@ -167,7 +167,7 @@ For free trial plans, set `billingOffsetDays` to `0`. This configuration results
 
 The value you give `reminderOffsetDays` determines when the [`subscription.reminder`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.reminder) event is created. For example, a `reminderOffsetDays` of `3` results in the creation of a `subscription.reminder` event three days before the trial period's conclusion.
 
-Use `collectionPeriodDays` to define the number of days Digital River should attempt to capture payment. Once the trial period ends, Digital River will initially attempt to charge the customer's designated [payment source](../payments/payment-sources/). If this proves unsuccessful, our [billing optimization service](../developer-resources/digital-river-api-reference/invoices.md#billing-optimization) will continue making capture attempts for the number of days you specify.
+Use `collectionPeriodDays` to define the number of days Digital River should attempt to capture payment. Once the trial period ends, Digital River will initially attempt to charge the customer's designated [payment source](../payments/payment-sources/). If this proves unsuccessful, our [billing optimization service](../integration-options/checkouts/subscriptions/invoices.md#billing-optimization) will continue making capture attempts for the number of days you specify.
 
 {% code title="Plan" %}
 ```javascript

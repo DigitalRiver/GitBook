@@ -538,7 +538,7 @@ Before initiating the payment collection process, you obtain the customer's bill
 
 Once you initiate payment collection, [Drop-in payments](../../payments/payment-integrations-1/drop-in/) only display payment methods applicable to that currency and bill to country.
 
-If you're using [DigitalRiver.js with elements](../../payments/payment-integrations-1/digitalriver.js/quick-start.md) to collect payment, make sure that only applicable payment methods are presented to customers by calling [`retrieveAvailablePaymentMethods()`](../../developer-resources/reference/digitalriver-object.md#retrieving-available-payment-methods).
+If you're using [DigitalRiver.js with elements](../../payments/payment-integrations-1/digitalriver.js/quick-start.md) to collect payment, make sure that only applicable payment methods are presented to customers by calling [`retrieveAvailablePaymentMethods()`](../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#retrieving-available-payment-methods).
 
 For details, refer to:
 
@@ -549,7 +549,7 @@ For details, refer to:
 
 ## Submitting the order
 
-Once the necessary preconditions are met, you can [convert the checkout to an order](../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier). After the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) either [synchronously](../../order-management/creating-and-updating-an-order.md#accepted) or [asynchronously](../../order-management/creating-and-updating-an-order.md#listening-for-the-order-accepted-event) moves to `accepted`, [send a ship request](../../order-management/managing-a-global-logistics-order.md#sending-the-ship-request) to your [third-party logistics](../../general-resources/glossary.md#third-party-logistics) (3PL) provider.
+Once the necessary preconditions are met, you can [convert the checkout to an order](../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier). After the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../../order-management/orders/the-order-lifecycle.md#order-states-and-events) either [synchronously](../../order-management/creating-and-updating-an-order.md#accepted) or [asynchronously](../../order-management/creating-and-updating-an-order.md#listening-for-the-order-accepted-event) moves to `accepted`, [send a ship request](../../order-management/managing-a-global-logistics-order.md#sending-the-ship-request) to your [third-party logistics](../../general-resources/glossary.md#third-party-logistics) (3PL) provider.
 
 For details, refer to [Managing a Global Logistics order](../../order-management/managing-a-global-logistics-order.md).
 

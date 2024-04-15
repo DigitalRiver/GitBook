@@ -163,7 +163,7 @@ If the [primary source](../../../payments/payment-sources/using-the-source-ident
 
 ## Store credit in orders
 
-If a [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) only `sources[]` has a `type` of `customerCredit`, then, upon [order creation](../../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier), Digital River uses that [source](../../../payments/payment-sources/) to generate a single [charge](../../../developer-resources/digital-river-api-reference/payment-charges.md).
+If a [checkout's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) only `sources[]` has a `type` of `customerCredit`, then, upon [order creation](../../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier), Digital River uses that [source](../../../payments/payment-sources/) to generate a single [charge](../../../order-management/orders/payment-charges/).
 
 On the other hand, if you [pair store credit with a primary source in a checkout](applying-store-credit-legacy.md#pairing-store-credit-with-a-primary-payment-source), and then create the [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders), Digital River generates two charges. In the following example, the `sources[]` with a `type` of `customerCredit` is used to generate one of the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `charges[]` and the `creditCredit` source is used to generate the other.&#x20;
 
@@ -240,11 +240,11 @@ When[ pairing store credit with a primary payment source](applying-store-credit-
 
 ### How we capture store credit
 
-When you [notify Digital River that an order is partially or completely fulfilled](../../../order-management/informing-digital-river-of-a-fulfillment.md), we attempt to [capture](../../../developer-resources/digital-river-api-reference/payment-charges.md#captures) the [charge](../../../developer-resources/digital-river-api-reference/payment-charges.md) created from the `customerCredit` [source](../../../payments/payment-sources/) _before_ capturing the charge generated from the [primary payment source](../../../payments/payment-sources/using-the-source-identifier.md#primary-payment-sources).
+When you [notify Digital River that an order is partially or completely fulfilled](../../../order-management/informing-digital-river-of-a-fulfillment.md), we attempt to [capture](../../../order-management/orders/payment-charges/#captures) the [charge](../../../order-management/orders/payment-charges/) created from the `customerCredit` [source](../../../payments/payment-sources/) _before_ capturing the charge generated from the [primary payment source](../../../payments/payment-sources/using-the-source-identifier.md#primary-payment-sources).
 
 The following example [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) demonstrates this concept. The order contains a single `items[]` with a `quantity` of `2` and its `totalAmount` is `26.89`. The order was created with a `creditAmount` of `11.0` and a supplemental credit card to cover the shortfall. As a result, two objects are contained in its `charges[]`.
 
-So, in this example, when a [`POST /fulfillments`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments/operation/createFulfillments) with a `quantity` of `1` gets submitted, thereby notifying Digital River of a partial fulfillment, we completely capture the charge `amount` created from `customerCredit` and move that charge's [`state`](../../../developer-resources/digital-river-api-reference/payment-charges.md#the-charge-lifecycle) to `complete`.&#x20;
+So, in this example, when a [`POST /fulfillments`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments/operation/createFulfillments) with a `quantity` of `1` gets submitted, thereby notifying Digital River of a partial fulfillment, we completely capture the charge `amount` created from `customerCredit` and move that charge's [`state`](../../../order-management/orders/payment-charges/#the-charge-lifecycle) to `complete`.&#x20;
 
 But, since not all of the order's `items[]` are fulfilled, the charge `amount` created from the `creditCard` is only partially captured. As a result, that charge's `state` remains `capturable`.
 
@@ -344,7 +344,7 @@ But, since not all of the order's `items[]` are fulfilled, the charge `amount` c
 
 ### How we cancel store credit
 
-When you [notify us that an order is partially or completely cancelled](../../../order-management/informing-digital-river-of-a-fulfillment.md), we attempt to [cancel](../../../developer-resources/digital-river-api-reference/payment-charges.md#cancels) the [charge](../../../developer-resources/digital-river-api-reference/payment-charges.md) created from the [primary payment source](../../../payments/payment-sources/using-the-source-identifier.md#primary-payment-sources) _before_ cancelling the charge generated from the `customerCredit`.
+When you [notify us that an order is partially or completely cancelled](../../../order-management/informing-digital-river-of-a-fulfillment.md), we attempt to [cancel](../../../order-management/orders/payment-charges/#cancels) the [charge](../../../order-management/orders/payment-charges/) created from the [primary payment source](../../../payments/payment-sources/using-the-source-identifier.md#primary-payment-sources) _before_ cancelling the charge generated from the `customerCredit`.
 
 The following example [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) demonstrates this concept. The order contains a single `items[]` with a `quantity` of `2` and its `totalAmount` is `20.0`. The order was created with a `creditAmount` of `5.0` and a supplemental credit card to cover the shortfall. As a result, two objects are contained in its `charges[]`.
 
@@ -431,7 +431,7 @@ T{
 
 When you [issue a refund](../../../order-management/returns-and-refunds-1/refunds/issuing-refunds.md) on an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) that uses store credit, the refund is first applied to the [primary payment source](../../../payments/payment-sources/using-the-source-identifier.md#primary-payment-sources) and then the store credit.
 
-The following example [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) demonstrates this concept. The order was funded with store credit and a supplemental credit card. It was completely fulfilled, meaning both of its [`charges[]`](../../../developer-resources/digital-river-api-reference/payment-charges.md) were fully [captured](../../../developer-resources/digital-river-api-reference/payment-charges.md#captures) and moved into a [`complete`](../../../developer-resources/digital-river-api-reference/payment-charges.md#the-charge-lifecycle) state.
+The following example [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) demonstrates this concept. The order was funded with store credit and a supplemental credit card. It was completely fulfilled, meaning both of its [`charges[]`](../../../order-management/orders/payment-charges/) were fully [captured](../../../order-management/orders/payment-charges/#captures) and moved into a [`complete`](../../../order-management/orders/payment-charges/#the-charge-lifecycle) state.
 
 After being fulfilled, the client system submitted an [order-level refund](../../../order-management/returns-and-refunds-1/refunds/issuing-refunds.md#order-level-percent-refund-request) of 50 percent.
 

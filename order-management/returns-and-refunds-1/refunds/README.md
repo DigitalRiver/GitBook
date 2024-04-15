@@ -6,7 +6,7 @@ description: Learn the basics of issuing refunds
 
 A smooth, easy to use refund process can provide your customers a positive experience. Being able to deliver timely refunds can also help minimize your risk of [chargebacks](../disputes-and-chargebacks.md).
 
-The [Refunds API](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Refunds) allows you to issue customers full or partial refunds on product costs, shipping expenses, taxes, duties, and fees. The API also gives you the ability to refund the same [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges) multiple times. You cannot however [issue a refund](issuing-refunds.md) that's greater than the combined amount of an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [charges](../../../developer-resources/digital-river-api-reference/payment-charges.md).
+The [Refunds API](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Refunds) allows you to issue customers full or partial refunds on product costs, shipping expenses, taxes, duties, and fees. The API also gives you the ability to refund the same [charge](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges) multiple times. You cannot however [issue a refund](issuing-refunds.md) that's greater than the combined amount of an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [charges](../../orders/payment-charges/).
 
 You can also [create refunds manually](../../../administration/dashboard/order-management/orders/creating-a-refund.md) through [Digital River Dashboard](../../../administration/dashboard/).
 

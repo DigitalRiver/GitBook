@@ -29,13 +29,13 @@ These integration standards relate to disclosures and compliance statements:
 
 In the footer of all checkout pages, your integration must have a [compliance element](../../../developer-resources/reference/elements/compliance-elements.md) that automatically retrieves and renders the required links to Digital River's policies, notices, and terms.
 
-When you pass this compliance element to the [`createElement()`](../../../developer-resources/reference/digitalriver-object.md#creating-elements) method, you can include two parameters: `locale` and `entity.` By specifying these parameters, the compliance element returns localized text and hyperlinks.
+When you pass this compliance element to the [`createElement()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-elements) method, you can include two parameters: `locale` and `entity.` By specifying these parameters, the compliance element returns localized text and hyperlinks.
 
 The optional `locale` sets the language of the disclosure information presented to the customer. The required `entity` should be the Digital River [selling entity](../../../integration-options/checkouts/creating-checkouts/selling-entities.md) that is facilitating the transaction. During the checkout process, retrieve the [`locale`](../../../integration-options/checkouts/creating-checkouts/designating-a-locale.md) and `sellingEntity.id` returned by the [Checkouts API](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) and then pass these values to the `createElement()` method.
 
 ### Present reseller disclosure terms and acquire acceptance
 
-In the footer of all your checkout pages, you should use the [get compliance details method ](../../../developer-resources/reference/digitalriver-object.md#digitalriver-compliance-getdetails-businessentitycode-locale)to render the required links to Digital River's policies, notices, and terms. Each `url` returned by this method is contained within an easily identifiable hash table (such as `termsOfSale`, `privacyPolicy` or `legalNotice`) that simplifies placement.
+In the footer of all your checkout pages, you should use the [get compliance details method ](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#digitalriver-compliance-getdetails-businessentitycode-locale)to render the required links to Digital River's policies, notices, and terms. Each `url` returned by this method is contained within an easily identifiable hash table (such as `termsOfSale`, `privacyPolicy` or `legalNotice`) that simplifies placement.
 
 {% hint style="warning" %}
 In some regions and locales, additional disclosures may be required. For your convenience, they are also returned by the compliance method.
@@ -49,7 +49,7 @@ On the same page, use `confirmDisclosure.localizedText` to provide Digital River
 
 At certain stages in the order life cycle, your integration should respond to [Digital River emitted events](../../../order-management/events-and-webhooks-1/events-1/) by sending email notifications to the customer. At a minimum, you should email the customer when the order is confirmed, cancelled, shipped, and refunded. Either [programmatically](../../../order-management/events-and-webhooks-1/webhooks/creating-a-webhook.md#create-a-webhook-programmatically) or in [Digital River Dashboard](../../../order-management/events-and-webhooks-1/webhooks/creating-a-webhook.md#create-a-webhook-from-the-dashboard), you can configure webhooks to detect these events, and then your integration can respond by emailing the customer.
 
-Customer emails must also contain the required disclosures, similar to those in the [footer of your checkout experience pages](disclosures-compliance-statements-and-emails.md#present-reseller-disclosure-terms-and-acquire-acceptance), that you retrieve with the [get compliance details method.](../../../developer-resources/reference/digitalriver-object.md#digitalriver-compliance-getdetails-businessentitycode-locale)
+Customer emails must also contain the required disclosures, similar to those in the [footer of your checkout experience pages](disclosures-compliance-statements-and-emails.md#present-reseller-disclosure-terms-and-acquire-acceptance), that you retrieve with the [get compliance details method.](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#digitalriver-compliance-getdetails-businessentitycode-locale)
 
 ### Send subscription notifications
 
@@ -61,7 +61,7 @@ When customers purchase an auto-renewing subscription, you must disclose the ter
 
 ## API interfaces
 
-| Documentation                                                                                                                                            | Direct API | PHP SDK |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------- |
-| [DigitalRiver.js](https://github.com/DigitalRiver/GitBook/blob/Digital-River-API-latest/payments/payment-integrations-1/digitalriver.js#getting-started) |            |         |
-| [dr.js compliance](../../../developer-resources/reference/digitalriver-object.md#digitalriver-compliance-getdetails-businessentitycode-locale)           |            |         |
+| Documentation                                                                                                                                                              | Direct API | PHP SDK |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------- |
+| [DigitalRiver.js](https://github.com/DigitalRiver/GitBook/blob/Digital-River-API-latest/payments/payment-integrations-1/digitalriver.js#getting-started)                   |            |         |
+| [dr.js compliance](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#digitalriver-compliance-getdetails-businessentitycode-locale) |            |         |

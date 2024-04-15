@@ -24,4 +24,4 @@ You can either [attach the Source to a Customer](using-the-source-identifier.md#
 Credit card sources should be used shortly after they are created. This is because CVC data expires within a few minutes. Orders created with cards that lack CVCs are more likely to be declined and pose a greater fraud risk.
 {% endhint %}
 
-Once you have attached the Source to a Customer or directly to a Checkout, Digital River can then use it to create a [Charge object](../../developer-resources/digital-river-api-reference/payment-charges.md) when you [submit an Order](../../order-management/creating-and-updating-an-order.md).
+Once you have attached the Source to a Customer or directly to a Checkout, Digital River can then use it to create a [Charge object](../../order-management/orders/payment-charges/) when you [submit an Order](../../order-management/creating-and-updating-an-order.md).

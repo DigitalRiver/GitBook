@@ -14,7 +14,7 @@ When you create an account in Digital River Dashboard, it is assigned to the [Te
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/addnewaccount (1) (2) (2).png" alt="">
+<figure><img src="../../../.gitbook/assets/1  account new add new account with nav.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 

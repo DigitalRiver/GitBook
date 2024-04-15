@@ -10,16 +10,18 @@ The **Order details** page shows the details of the order. It includes the date 
 If the order status is <mark style="color:red;">`Disputed`</mark>, some actions cannot be completed until this order is resolved. Digital River Dashboard will disable the Cancel items and Fulfill items links, and the Create return and Create refund buttons. If you try to programmatically [capture or cancel payment](../../../../order-management/informing-digital-river-of-a-fulfillment.md), [issue refunds](../../../../order-management/returns-and-refunds-1/refunds/issuing-refunds.md), or [process returns](../../../../order-management/returns-and-refunds-1/returns/) on that order, you will be redirected to the **Order details** page.
 {% endhint %}
 
-<figure><img src="../../../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/1 nu orders order details.png" alt=""><figcaption></figcaption></figure>
 
 To view the order details:
 
 1. Click **Orders** in the left navigation. The Orders page appears.
 2. [Filter your orders](filtering-your-orders.md), if needed.
 3. Click the order ID link under the **ID** column. The Order details page appears.
-4. To view fees, [landed cost](../../../../integration-options/checkouts/creating-checkouts/landed-costs.md) (including importer duty and importer tax), discount, tax, and metadata for a line item, expand the row. The summary displays the total fees, discounts, and taxes
+4.  To view fees, [landed cost](../../../../integration-options/checkouts/creating-checkouts/landed-costs.md) (including importer duty and importer tax), discount, tax, and metadata for a line item, expand the row. The summary displays the total fees, discounts, and taxes.\
+    \
 
-![](<../../../../.gitbook/assets/order\_details\_small\_SKU\_changes (1).png>)
+
+    <figure><img src="../../../../.gitbook/assets/2 nu order details partial.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Note:** An order item is either identified by a **SKU ID** or **Product ID** - not both. A Product ID is the identifier of the product in the upstream system. This identifier can appear instead of SKU ID if the item uses SKU groups.

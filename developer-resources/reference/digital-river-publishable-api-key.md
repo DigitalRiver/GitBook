@@ -4,7 +4,7 @@ description: Learn how to use your public API key to initialize DigitalRiver.js
 
 # Initializing DigitalRiver.js
 
-‌Use `DigitalRiver(publishableAPIKey)` to create an instance of the [`DigitalRiver` object](digitalriver-object.md). The function requires a [public API key](../api-structure.md#api-keys).&#x20;
+‌Use `DigitalRiver(publishableAPIKey)` to create an instance of the [`DigitalRiver` object](../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md). The function requires a [public API key](../api-structure.md#api-keys).&#x20;
 
 {% code overflow="wrap" %}
 ```javascript

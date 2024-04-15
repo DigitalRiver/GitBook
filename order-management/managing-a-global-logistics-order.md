@@ -13,7 +13,7 @@ On this page, you'll find an [overview of the order management process](managing
 
 ## Overview
 
-After the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md) moves to `accepted`, you must [send a ship request](managing-a-global-logistics-order.md#sending-the-ship-request) to your [third-party logistics](../general-resources/glossary.md#third-party-logistics) (3PL) provider so that the goods can be picked and packed at the appropriate warehouse. When ready to ship, your 3PL needs to [send a label request to Digital River](managing-a-global-logistics-order.md#defining-and-sending-the-shipping-label-request), which we route to the appropriate [global logistics provider (GLP)](../using-our-services/global-logistics.md#global-logistics-providers).
+After the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](orders/the-order-lifecycle.md) moves to `accepted`, you must [send a ship request](managing-a-global-logistics-order.md#sending-the-ship-request) to your [third-party logistics](../general-resources/glossary.md#third-party-logistics) (3PL) provider so that the goods can be picked and packed at the appropriate warehouse. When ready to ship, your 3PL needs to [send a label request to Digital River](managing-a-global-logistics-order.md#defining-and-sending-the-shipping-label-request), which we route to the appropriate [global logistics provider (GLP)](../using-our-services/global-logistics.md#global-logistics-providers).
 
 The GLP generates one or more shipping labels, sends those labels back to Digital River and we relay them to your 3PL.
 
@@ -27,7 +27,7 @@ Once the shipping labels are generated, you can also use GL to [track an order's
 
 ## Sending the ship request
 
-Once the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) moves to [`accepted`](creating-and-updating-an-order.md#handling-accepted-orders), you should use its data to send a ship request to your [3PL](../general-resources/glossary.md#third-party-logistics).
+Once the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](orders/the-order-lifecycle.md#order-states-and-events) moves to [`accepted`](creating-and-updating-an-order.md#handling-accepted-orders), you should use its data to send a ship request to your [3PL](../general-resources/glossary.md#third-party-logistics).
 
 At a minimum, this request must include the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `id` as well as the `id` and `quantity` of each of the order's [physical](../product-management/skus.md#how-to-identify-a-physical-or-digital-sku) `items[]`.&#x20;
 
@@ -656,7 +656,7 @@ The `rmaNumber` represents the [return merchandise authorization](https://en.wik
 
 #### Product information
 
-Each `itemId` references an [`items[]`](../developer-resources/digital-river-api-reference/orders/#line-items) in the [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) in Digital River's system. We also provide the [`productDetails`](../product-management/using-product-details.md) associated with that line item.
+Each `itemId` references an [`items[]`](orders/#line-items) in the [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) in Digital River's system. We also provide the [`productDetails`](../product-management/using-product-details.md) associated with that line item.
 
 Additionally, when the goods arrive back at the GLP's facility, their personnel inspect them and record their `condition`.
 

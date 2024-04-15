@@ -8,6 +8,6 @@ The Checkouts list displays all [checkouts](https://www.digitalriver.com/docs/di
 
 The most recent checkouts appear at the top of the list. Each checkout in the list includes a unique identifier, the creation date, the customer's email address, and the order total.
 
-<figure><img src="../../../../.gitbook/assets/image (191).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/1 checkouts page list.png" alt=""><figcaption></figcaption></figure>
 
 Click the **Refresh** icon to update the list information.

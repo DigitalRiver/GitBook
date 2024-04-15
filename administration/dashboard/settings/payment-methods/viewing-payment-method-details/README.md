@@ -9,10 +9,8 @@ The payment method details include the currencies enabled for the payment method
 To view the payment method details:
 
 1. Click **Payment methods** in the left navigation. The Payment methods page appears.
-2. Click the down arrow <img src="../../../../../.gitbook/assets/Arrowsymbol.PNG" alt="" data-size="line"> to the left of the payment method to view the details. The expanded payment method details appear.
+2.  Click the down arrow <img src="../../../../../.gitbook/assets/Arrowsymbol.PNG" alt="" data-size="line"> to the left of the payment method to view the details. The expanded payment method details appear.\
+    \
 
-<div align="left">
 
-<img src="../../../../../.gitbook/assets/Paymentmethoddetails.png" alt="">
-
-</div>
+    <figure><img src="../../../../../.gitbook/assets/1 viewing pay method details.png" alt=""><figcaption></figcaption></figure>

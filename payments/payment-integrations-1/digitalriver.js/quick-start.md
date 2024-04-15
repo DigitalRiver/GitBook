@@ -4,7 +4,7 @@ description: Create a payment form using DigitalRiver.js.
 
 # Elements integration guide
 
-Use [DigitalRiver.js](../../../developer-resources/reference/) to create a payment form that securely collects sensitive payment details.
+Use [DigitalRiver.js](reference/) to create a payment form that securely collects sensitive payment details.
 
 To see a custom payment form example, go to the  [Payment form example](https://drh.img.digitalriver.com/DRHM/Storefront/Site/drdod15/pb/multimedia/quick-start-form.html).
 
@@ -19,7 +19,7 @@ Integrate the DigitalRiver.js into your app or website in four easy steps:
 
 ## Step 1. Include DigitalRiver.js on your page
 
-To use [DigitalRiver.js](../../../developer-resources/reference/) as part of your experience, you must include the library and your API key. The key shown in the following example is your public API key. The DigitalRiver.js [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources) and [`createElement()`](../../../developer-resources/reference/digitalriver-object.md#creating-elements) methods use the `var` that you assign.
+To use [DigitalRiver.js](reference/) as part of your experience, you must include the library and your API key. The key shown in the following example is your public API key. The DigitalRiver.js [`createSource()`](reference/digitalriver-object.md#creating-sources) and [`createElement()`](reference/digitalriver-object.md#creating-elements) methods use the `var` that you assign.
 
 {% code title="HTML" %}
 ```markup
@@ -59,7 +59,7 @@ DigitalRiver.js provides and hosts HTML elements that you can place in your paym
 
 ## Step 3. Create and embed elements
 
-Use the DigitalRiver.js library to [create](../../../developer-resources/reference/digitalriver-object.md#creating-elements) and [mount](../../../developer-resources/reference/elements/#element-mount) an element to the container created in [step 2](quick-start.md#step-2-create-your-payment-form).
+Use the DigitalRiver.js library to [create](reference/digitalriver-object.md#creating-elements) and [mount](../../../developer-resources/reference/elements/#element-mount) an element to the container created in [step 2](quick-start.md#step-2-create-your-payment-form).
 
 {% code title="HTML" %}
 ```markup
@@ -107,7 +107,7 @@ cardSecurityCode.mount('card-security-code');
 
 Digital River securely transmits credit card details captured by DigitalRiver.js for tokenization. You can use these payment sources in downstream API calls to place orders or save credit cards for later purchasing.
 
-Create an event handler to interact with the DigitalRiver.js library on submit and then create a payment source. Use the [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources) method to tokenize the customer's details and payment information.
+Create an event handler to interact with the DigitalRiver.js library on submit and then create a payment source. Use the [`createSource()`](reference/digitalriver-object.md#creating-sources) method to tokenize the customer's details and payment information.
 
 {% hint style="info" %}
 **Prerequisite**: To create a Payment Source for a credit card, you must either know or capture the billing address information for the entered credit card. The `createSource` method submits this information and uses it to create a payment source.

@@ -11,7 +11,7 @@ description: >-
 The following [`GET/sources/{id}`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/retrieveSources) request retrieves a source by supplying its unique identifier as a path parameter.
 
 {% hint style="info" %}
-This identifier was returned when you used the [DigitalRiver.js](https://github.com/DigitalRiver/GitBook/blob/Digital-River-API-latest/payments/payment-integrations-1/digitalriver.js#getting-started) library to [create the source](../../developer-resources/reference/digitalriver-object.md#creating-sources).
+This identifier was returned when you used the [DigitalRiver.js](https://github.com/DigitalRiver/GitBook/blob/Digital-River-API-latest/payments/payment-integrations-1/digitalriver.js#getting-started) library to [create the source](../payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources).
 {% endhint %}
 
 {% tabs %}

@@ -127,7 +127,7 @@ From the response's payload, retrieve the [order's](https://www.digitalriver.com
 
 ![](<../.gitbook/assets/201 Created\_pending\_payment (2).svg>)
 
-If an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `state` is `pending_payment`, then the fraud review process has been successfully completed but the [payment charge](../developer-resources/digital-river-api-reference/payment-charges.md) is not yet authorized. For more details, refer to [handling pending payment orders](creating-and-updating-an-order.md#handling-pending-payment-orders).
+If an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `state` is `pending_payment`, then the fraud review process has been successfully completed but the [payment charge](orders/payment-charges/) is not yet authorized. For more details, refer to [handling pending payment orders](creating-and-updating-an-order.md#handling-pending-payment-orders).
 
 #### In review
 
@@ -139,11 +139,11 @@ If an [order's ](https://www.digitalriver.com/docs/digital-river-api-reference/#
 
 ![](<../.gitbook/assets/201 Created\_accepted.svg>)
 
-If an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `state` is `accepted`, then the transaction has successfully passed fraud review and the [payment charge](../developer-resources/digital-river-api-reference/payment-charges.md) is authorized. For more information, refer to [handling accepted orders](creating-and-updating-an-order.md#handling-accepted-orders).
+If an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `state` is `accepted`, then the transaction has successfully passed fraud review and the [payment charge](orders/payment-charges/) is authorized. For more information, refer to [handling accepted orders](creating-and-updating-an-order.md#handling-accepted-orders).
 
 ## Events early in an order's lifecycle <a href="#listening-for-and-handling-order-related-webhook-events" id="listening-for-and-handling-order-related-webhook-events"></a>
 
-Whether you're using [Drop-in Checkout](../integration-options/low-code-checkouts/drop-in-checkout.md), [Low-code components](../integration-options/low-code-checkouts/implementing-a-components-checkout.md) or [Direct integrations](../integration-options/checkouts/), you'll need to [configure webhooks](../administration/dashboard/developers/webhooks/creating-a-webhook.md) to listen for some key [events](events-and-webhooks-1/events-1/) that occur early in an [order's lifecycle](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md).
+Whether you're using [Drop-in Checkout](../integration-options/low-code-checkouts/drop-in-checkout.md), [Low-code components](../integration-options/low-code-checkouts/implementing-a-components-checkout.md) or [Direct integrations](../integration-options/checkouts/), you'll need to [configure webhooks](../administration/dashboard/developers/webhooks/creating-a-webhook.md) to listen for some key [events](events-and-webhooks-1/events-1/) that occur early in an [order's lifecycle](orders/the-order-lifecycle.md).
 
 These events notify you of:
 
@@ -160,9 +160,9 @@ Each time you're notified of one of these events, retrieve the [order's](https:/
 
 ![](<../.gitbook/assets/order.charge.failed event.svg>)
 
-An asynchronous [charge authorization](../developer-resources/digital-river-api-reference/payment-charges.md#how-a-charge-is-created) failure triggers an `order.charge.failed` event.
+An asynchronous [charge authorization](orders/payment-charges/#how-a-charge-is-created) failure triggers an `order.charge.failed` event.
 
-If you receive this event, you can iterate over the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `payment.charges[]` and inspect them for a [failure code or message](../developer-resources/digital-river-api-reference/payment-charges.md#handling-failures). The `failureMessage` however is not always available. But when it is, you can use it to provide more specific payment failure information to customers.
+If you receive this event, you can iterate over the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `payment.charges[]` and inspect them for a [failure code or message](orders/payment-charges/#handling-failures). The `failureMessage` however is not always available. But when it is, you can use it to provide more specific payment failure information to customers.
 
 {% hint style="danger" %}
 Do not display the `failureCode` to end customers. Doing so potentially aids malicious and fraudulent actors.
@@ -172,13 +172,13 @@ Do not display the `failureCode` to end customers. Doing so potentially aids mal
 
 ![](<../.gitbook/assets/order.blocked event.svg>)
 
-When Digital River detects an anomaly during its [fraud review](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#fraud-review), or we determine that the customer is on the [Denied Persons List](https://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list), we create an `order.blocked` event. The payload of this event consists of an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) whose [`state`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) is `blocked`. The order's [`fraudState`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#fraud-review) is also `blocked`. Since these are both terminal states, you should inform end customers that the transaction has failed.
+When Digital River detects an anomaly during its [fraud review](orders/the-order-lifecycle.md#fraud-review), or we determine that the customer is on the [Denied Persons List](https://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list), we create an `order.blocked` event. The payload of this event consists of an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) whose [`state`](orders/the-order-lifecycle.md#order-states-and-events) is `blocked`. The order's [`fraudState`](orders/the-order-lifecycle.md#fraud-review) is also `blocked`. Since these are both terminal states, you should inform end customers that the transaction has failed.
 
 ### The pending charge authorization event <a href="#the-pending-payment-event" id="the-pending-payment-event"></a>
 
 ![](<../.gitbook/assets/order.pending\_payment event.svg>)
 
-An `order.pending_payment` event indicates that Digital River detected no fraudulent activity during its [fraud review](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#fraud-review). However, don't use this event as a trigger to initiate fulfillment operations. This is because the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `payment.charges[]` are not yet fully authorized.
+An `order.pending_payment` event indicates that Digital River detected no fraudulent activity during its [fraud review](orders/the-order-lifecycle.md#fraud-review). However, don't use this event as a trigger to initiate fulfillment operations. This is because the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `payment.charges[]` are not yet fully authorized.
 
 For more information, refer to [handling pending payment orders](creating-and-updating-an-order.md#handling-pending-payment-orders).
 
@@ -186,7 +186,7 @@ For more information, refer to [handling pending payment orders](creating-and-up
 
 ![](<../.gitbook/assets/order.review\_opened event.svg>)
 
-An `order.review_opened` event indicates that Digital River is conducting a secondary fraud review and has moved the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `state` to [`in_review`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events). Since the fraud review process is not yet complete, don't use this event as a trigger to initiate fulfillment operations.
+An `order.review_opened` event indicates that Digital River is conducting a secondary fraud review and has moved the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `state` to [`in_review`](orders/the-order-lifecycle.md#order-states-and-events). Since the fraud review process is not yet complete, don't use this event as a trigger to initiate fulfillment operations.
 
 For more information, refer to [handling in review orders](creating-and-updating-an-order.md#handling-in-review-orders).
 
@@ -194,7 +194,7 @@ For more information, refer to [handling in review orders](creating-and-updating
 
 ![](<../.gitbook/assets/order.accepted event.svg>)
 
-When all of an order's [`payment.charges[]`](../developer-resources/digital-river-api-reference/payment-charges.md#how-a-charge-is-created) are authorized and no irregularities are detected during the [fraud review](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#fraud-review), Digital River creates an [`order.accepted`](events-and-webhooks-1/events-1/event-types.md#order.accepted) event. Respond to this event by moving the commerce platform's order into a ready to fulfill state.
+When all of an order's [`payment.charges[]`](orders/payment-charges/#how-a-charge-is-created) are authorized and no irregularities are detected during the [fraud review](orders/the-order-lifecycle.md#fraud-review), Digital River creates an [`order.accepted`](events-and-webhooks-1/events-1/event-types.md#order.accepted) event. Respond to this event by moving the commerce platform's order into a ready to fulfill state.
 
 Unless you [synchronously receive an order in an `accepted` state](creating-and-updating-an-order.md#accepted), your integration should wait until it receives `order.accepted` before initiating [fulfillment operations](fulfillments.md). Doing so reduces the risk of fraud and the frequency of [disputes and chargebacks](returns-and-refunds-1/disputes-and-chargebacks.md).
 
@@ -204,15 +204,15 @@ For more information, refer to [handling accepted orders](creating-and-updating-
 
 ### The order cancelled event
 
-When an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) moves to `cancelled`, Digital River creates an [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) whose [`type`](events-and-webhooks-1/events-1/#event-types) is [`order.cancelled`](events-and-webhooks-1/events-1/event-types.md#order.cancelled) and whose [`data.object`](events-and-webhooks-1/events-1/#event-data) contains that [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders).
+When an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](orders/the-order-lifecycle.md#order-states-and-events) moves to `cancelled`, Digital River creates an [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) whose [`type`](events-and-webhooks-1/events-1/#event-types) is [`order.cancelled`](events-and-webhooks-1/events-1/event-types.md#order.cancelled) and whose [`data.object`](events-and-webhooks-1/events-1/#event-data) contains that [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders).
 
-If you decide to build your integration so that customers can submit line-item level cancellation requests (as opposed to the more standard full order cancellations), then you can’t always use `order.cancelled` to trigger [notifications that inform customers their request was successfully processed](customer-notifications.md#successful-cancellation). This is due to the fact that an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `state` doesn't move to `cancelled` until the [`state`](../developer-resources/digital-river-api-reference/payment-charges.md#the-charge-lifecycle) of all of its [`payment.charges[]`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges) is also `cancelled`.
+If you decide to build your integration so that customers can submit line-item level cancellation requests (as opposed to the more standard full order cancellations), then you can’t always use `order.cancelled` to trigger [notifications that inform customers their request was successfully processed](customer-notifications.md#successful-cancellation). This is due to the fact that an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `state` doesn't move to `cancelled` until the [`state`](orders/payment-charges/#the-charge-lifecycle) of all of its [`payment.charges[]`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Charges) is also `cancelled`.
 
 You should also be aware that `order.cancelled` is often created when customers fail to transfer payment by a designated date and time. This applies to [wire transfers](../payments/supported-payment-methods/wire-transfer.md), [Konibini](../payments/supported-payment-methods/konbini.md), and other [`type`](../payments/payment-sources/#supported-payment-methods)(s) of [sources](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) that have a [`flow`](../payments/payment-sources/#authentication-flow) of `receiver`.
 
-For example, after an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) with a [primary source](../payments/payment-sources/using-the-source-identifier.md#primary-payment-sources) [`type`](../payments/payment-sources/#supported-payment-methods) of `wireTransfer` is created, that order's [`state`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) typically becomes `pending_payment`. As a result, customers are provided instructions on how to authorize payment. For details, refer to [Handling pending payments](creating-and-updating-an-order.md#handling-pending-payment-orders).&#x20;
+For example, after an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) with a [primary source](../payments/payment-sources/using-the-source-identifier.md#primary-payment-sources) [`type`](../payments/payment-sources/#supported-payment-methods) of `wireTransfer` is created, that order's [`state`](orders/the-order-lifecycle.md#order-states-and-events) typically becomes `pending_payment`. As a result, customers are provided instructions on how to authorize payment. For details, refer to [Handling pending payments](creating-and-updating-an-order.md#handling-pending-payment-orders).&#x20;
 
-If these instructions aren't followed (i.e., the funds aren't pushed within the allotted time), then the [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) expires, no [charge authorization](../developer-resources/digital-river-api-reference/payment-charges.md#how-a-charge-is-created) is created, and Digital River creates `order.cancelled`.&#x20;
+If these instructions aren't followed (i.e., the funds aren't pushed within the allotted time), then the [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) expires, no [charge authorization](orders/payment-charges/#how-a-charge-is-created) is created, and Digital River creates `order.cancelled`.&#x20;
 
 For more details, refer to [Handling cancelled orders](creating-and-updating-an-order.md#handling-the-order.cancelled-event).
 
@@ -222,7 +222,7 @@ The following provides information on how to handle [pending payment](creating-a
 
 ### Handling pending payment orders
 
-If an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `state` is `pending_payment`, then the [charge](../developer-resources/digital-river-api-reference/payment-charges.md) on the [primary payment `sources[]`](../payments/payment-sources/using-the-source-identifier.md#primary-versus-secondary-sources) is not yet authorized and the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) goods should not be fulfilled.
+If an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `state` is `pending_payment`, then the [charge](orders/payment-charges/) on the [primary payment `sources[]`](../payments/payment-sources/using-the-source-identifier.md#primary-versus-secondary-sources) is not yet authorized and the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) goods should not be fulfilled.
 
 To handle this `state` change event, determine the value of the order's [`payment.session.nextAction.action`](../integration-options/checkouts/creating-checkouts/payment-sessions.md#next-action).
 
@@ -231,11 +231,11 @@ To handle this `state` change event, determine the value of the order's [`paymen
 
 ### Handling in review orders
 
-[Orders](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) that are `in_review` should _not_ be fulfilled. After an order transitions out of this [`state`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events), Digital River creates either [`order.accepted`](creating-and-updating-an-order.md#listening-for-the-order-accepted-event) or [`order.blocked`](creating-and-updating-an-order.md#the-fraud-review-failure-event). So make sure your integration is set up to handle both of these events.
+[Orders](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) that are `in_review` should _not_ be fulfilled. After an order transitions out of this [`state`](orders/the-order-lifecycle.md#order-states-and-events), Digital River creates either [`order.accepted`](creating-and-updating-an-order.md#listening-for-the-order-accepted-event) or [`order.blocked`](creating-and-updating-an-order.md#the-fraud-review-failure-event). So make sure your integration is set up to handle both of these events.
 
 ### Handling accepted orders
 
-When an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) becomes `accepted`, move the order in your system into a ready to fulfill state.
+When an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](orders/the-order-lifecycle.md#order-states-and-events) becomes `accepted`, move the order in your system into a ready to fulfill state.
 
 Depending on whether the order is [synchronously](creating-and-updating-an-order.md#201-created) or [asynchronously](creating-and-updating-an-order.md#listening-for-the-order-accepted-event) accepted, you should also redirect customers to an order confirmation page and/or send them an [order confirmation notification](customer-notifications.md#order-confirmation).
 

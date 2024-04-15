@@ -21,7 +21,7 @@ You can also use [shipments](https://www.digitalriver.com/docs/digital-river-api
 In the [distributed model](./#distributed-model)**,** once you either [synchronously](../../../order-management/creating-and-updating-an-order.md#accepted) or [asynchronously](../../../order-management/creating-and-updating-an-order.md#listening-for-the-order-accepted-event) receive an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) in an [`accepted`](../../../order-management/creating-and-updating-an-order.md#handling-accepted-orders) state, your integration should [handle the order state change event](../../../order-management/creating-and-updating-an-order.md#handling-accepted-orders) by sending a create fulfillment order request. This [`POST/fulfillment-orders`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/createFulfillmentOrders) request initiates the fulfillment of a transaction's [SKU-inventory item pairs](../../../product-management/common-attributes.md).
 
 {% hint style="success" %}
-In the [orchestrated model](./#orchestrated-model), we listen for an [`accepted`](../../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) order and handle this state change event by internally submitting a create fulfillment order request.
+In the [orchestrated model](./#orchestrated-model), we listen for an [`accepted`](../../../order-management/orders/the-order-lifecycle.md#order-states-and-events) order and handle this state change event by internally submitting a create fulfillment order request.
 {% endhint %}
 
 The following describes the request's required data and optional data:
@@ -34,7 +34,7 @@ For a full list of specifications, refer to the [Fulfillment Orders APIs](https:
 
 Every `POST/fulfillment-orders` request must include [currency](global-fulfillments.md#currency), [created time](global-fulfillments.md#upstream-order-time), [shipping address](global-fulfillments.md#ship-to-address), [shipping method](global-fulfillments.md#shipping-choices), and [product](global-fulfillments.md#product-information) data.
 
-This required data can be retrieved from an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) in an [`accepted`](../../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) state:
+This required data can be retrieved from an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) in an [`accepted`](../../../order-management/orders/the-order-lifecycle.md#order-states-and-events) state:
 
 | Order in an `accepted` state  |       | `POST/fulfillment-orders` |
 | ----------------------------- | ----- | ------------------------- |
@@ -50,7 +50,7 @@ This required data can be retrieved from an [order](https://www.digitalriver.com
 
 In addition to other optional data, a `POST/fulfillment-orders` request accepts [product](global-fulfillments.md#product-information), [customer](global-fulfillments.md#customer-information), [ship to](global-fulfillments.md#ship-to-address), upstream order identifier, and locale data. If you placed a hold on products, you should also [attach the reservation identifier](global-fulfillments.md#attaching-a-reservation).
 
-This optional data can be retrieved from an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) in an [`accepted`](../../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) state:
+This optional data can be retrieved from an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) in an [`accepted`](../../../order-management/orders/the-order-lifecycle.md#order-states-and-events) state:
 
 | `items[].id`                    | **➔** | `items[].upstreamId`      |
 | ------------------------------- | :---: | ------------------------- |
@@ -270,7 +270,7 @@ In the event's payload, `fulfillmentOrderUpstreamId` represents the [order's](gl
 {% endtab %}
 {% endtabs %}
 
-In the [distributed model](./#distributed-model), respond to this event by sending a [`POST /fulfillments`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments/operation/updateFulfillments), which [captures](../../../developer-resources/digital-river-api-reference/payment-charges.md#captures) the appropriate amount of an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) payment[ charges](../../../developer-resources/digital-river-api-reference/payment-charges.md).
+In the [distributed model](./#distributed-model), respond to this event by sending a [`POST /fulfillments`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments/operation/updateFulfillments), which [captures](../../../order-management/orders/payment-charges/#captures) the appropriate amount of an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) payment[ charges](../../../order-management/orders/payment-charges/).
 
 The following table lists the data to retrieve from the event and then pass in a `POST /fulfillments`.
 
@@ -290,7 +290,7 @@ The source of these events are either [`POST/fulfillment-cancellations`](https:/
 
 In the event's payload, `upstreamId` represents the [order's](global-fulfillments.md#creating-a-fulfillment-order) [unique identifier](../../../order-management/creating-and-updating-an-order.md#unique-identifier) and `items[].upstreamId` represents a [line item's identifier](../../../order-management/creating-and-updating-an-order.md#line-items) in an [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders).
 
-In the [distributed model](./#distributed-model), _every time_ you receive `fulfillment_order.cancelled`, retrieve data from the event and send it in a [`POST/fulfillments`](../../../order-management/informing-digital-river-of-a-fulfillment.md) request. This request instructs Digital River to [cancel](../../../developer-resources/digital-river-api-reference/payment-charges.md#cancels) the appropriate amount of an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) payment[ charges](../../../developer-resources/digital-river-api-reference/payment-charges.md).
+In the [distributed model](./#distributed-model), _every time_ you receive `fulfillment_order.cancelled`, retrieve data from the event and send it in a [`POST/fulfillments`](../../../order-management/informing-digital-river-of-a-fulfillment.md) request. This request instructs Digital River to [cancel](../../../order-management/orders/payment-charges/#cancels) the appropriate amount of an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) payment[ charges](../../../order-management/orders/payment-charges/).
 
 {% hint style="success" %}
 In the [orchestrated model](./#orchestrated-model), we listen for the cancelled event and respond to it by submitting an internal payment cancel request.

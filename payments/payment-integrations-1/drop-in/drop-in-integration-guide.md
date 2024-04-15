@@ -83,7 +83,7 @@ let configuration = {
 
 ### Step 6: Use the configuration object to create an instance of Drop-in payments <a href="#step-6-allow-the-shopper-to-interact-with-hydrate" id="step-6-allow-the-shopper-to-interact-with-hydrate"></a>
 
-Create an instance of Drop-in payments by passing the [configuration object](drop-in-integration-guide.md#configuring-drop-in-payments) to [`createDropin()`](../../../developer-resources/reference/digitalriver-object.md#creating-an-instance-of-drop-in).
+Create an instance of Drop-in payments by passing the [configuration object](drop-in-integration-guide.md#configuring-drop-in-payments) to [`createDropin()`](../digitalriver.js/reference/digitalriver-object.md#creating-an-instance-of-drop-in).
 
 ```javascript
 let dropin = digitalriver.createDropin(configuration);
@@ -165,7 +165,7 @@ Depending on which payment method customers select, they may be redirected to a 
 
 If customers supply the required information, click the [configurable button](drop-in-integration-guide.md#customizing-the-text-of-the-drop-in-button), and payment is successfully authorized, you should handle [`onSuccess`](drop-in-integration-guide.md#onsuccess) by passing `source.id` to your back-end and using your [secret API key](../../../developer-resources/api-structure.md#confidential-keys) to [associate the source with the checkout](../../payment-sources/using-the-source-identifier.md#attaching-sources-to-checkouts).&#x20;
 
-In the following example, the `data` object of `onSuccess` contains a [`source`](../../payment-sources/) whose [`state`](../../payment-sources/#source-state) is `chargeable`. Since `readyForStorage` is `false`, this source can only be used one-time (i.e., it can't generate multiple [charges](../../../developer-resources/digital-river-api-reference/payment-charges.md)).&#x20;
+In the following example, the `data` object of `onSuccess` contains a [`source`](../../payment-sources/) whose [`state`](../../payment-sources/#source-state) is `chargeable`. Since `readyForStorage` is `false`, this source can only be used one-time (i.e., it can't generate multiple [charges](../../../order-management/orders/payment-charges/)).&#x20;
 
 ```javascript
 {
@@ -579,7 +579,7 @@ With this configuration, if customers select a redirect payment method, then [`o
 
 At this point, you can [associate the source with the checkout](../../payment-sources/using-the-source-identifier.md#attaching-sources-to-checkouts) and allow customers to review the transaction's details. If they decide to purchase, [create the order](../../../order-management/creating-and-updating-an-order.md#creating-an-order-with-the-checkout-identifier) and then redirect them to the payment provider's portal. \
 \
-While there, customers approve or cancel the transfer of funds. Once they complete either of these actions, they're sent to the location you specified in `returnUrl` and `cancelUrl`. When this resource loads, call a function that triggers a server-side refresh order request and then, in the response, check the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) and the [payment session's](../../../integration-options/checkouts/creating-checkouts/payment-sessions.md) [`state`](../../../integration-options/checkouts/creating-checkouts/payment-sessions.md#session-state). Use these values to determine whether to (1) display the order confirmation page (i.e., the "thank you" page) or (2) recreate the [checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) and redo the payment collection stage.
+While there, customers approve or cancel the transfer of funds. Once they complete either of these actions, they're sent to the location you specified in `returnUrl` and `cancelUrl`. When this resource loads, call a function that triggers a server-side refresh order request and then, in the response, check the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../../../order-management/orders/the-order-lifecycle.md#order-states-and-events) and the [payment session's](../../../integration-options/checkouts/creating-checkouts/payment-sessions.md) [`state`](../../../integration-options/checkouts/creating-checkouts/payment-sessions.md#session-state). Use these values to determine whether to (1) display the order confirmation page (i.e., the "thank you" page) or (2) recreate the [checkout](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Checkouts) and redo the payment collection stage.
 
 For details, refer to [Handling redirect payment methods](../../../integration-options/checkouts/building-you-workflows/handling-redirect-payment-methods.md).
 

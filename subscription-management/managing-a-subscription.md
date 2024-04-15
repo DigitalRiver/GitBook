@@ -18,7 +18,7 @@ If you're using [Digital River's subscription service](../using-our-services/sub
 
 ## Activating a subscription
 
-After the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md) moves to `accepted`, you can activate a [subscription](../developer-resources/digital-river-api-reference/subscriptions.md). To do this, retrieve each `items[].subscriptionInfo.subscriptionId` from the [`data.object`](../order-management/events-and-webhooks-1/events-1/#event-data) of the [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) with a [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) of [`order.accepted`](../order-management/events-and-webhooks-1/events-1/event-types.md#order.accepted) and send it as a path parameter in a [`POST  /subscriptions/{subscriptionId}`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/updateSubscriptions).&#x20;
+After the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../order-management/orders/the-order-lifecycle.md) moves to `accepted`, you can activate a [subscription](../developer-resources/digital-river-api-reference/subscriptions.md). To do this, retrieve each `items[].subscriptionInfo.subscriptionId` from the [`data.object`](../order-management/events-and-webhooks-1/events-1/#event-data) of the [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) with a [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) of [`order.accepted`](../order-management/events-and-webhooks-1/events-1/event-types.md#order.accepted) and send it as a path parameter in a [`POST  /subscriptions/{subscriptionId}`](https://www.digitalriver.com/docs/digital-river-api-reference/#operation/updateSubscriptions).&#x20;
 
 {% hint style="info" %}
 If you're using the [Direct Integrations](../integration-options/checkouts/) checkout solution, you could also get each `items[].subscriptionInfo.subscriptionId` from the body of the [`POST/ orders`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders/operation/createOrders) response.&#x20;
@@ -55,7 +55,7 @@ No other values can be sent in the body of this request. If you attempt to do so
 
 You can activate a subscription any time after an [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) `state` moves to `accepted`. For example, if you're selling a digital service subscription that requires no provisioning, you might build your integration so that the activation request is immediately submitted. In other scenarios, such as when a customer must install and initialize a device, you may decide to build a delay into the activation process.
 
-When you activate the subscription, we search the acquisition [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) for the [primary payment source](../payments/payment-sources/using-the-source-identifier.md#primary-payment-sources), retrieve its identifier, and assign that value to `sourceId` in the [subscription object](../developer-resources/digital-river-api-reference/subscriptions.md). On the [next invoice date](../developer-resources/digital-river-api-reference/subscriptions.md#date-of-next-invoice), we then both [create a charge](../developer-resources/digital-river-api-reference/payment-charges.md#how-a-charge-is-created) and attempt to [capture payment](../developer-resources/digital-river-api-reference/payment-charges.md#captures) using this reusable source.
+When you activate the subscription, we search the acquisition [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) for the [primary payment source](../payments/payment-sources/using-the-source-identifier.md#primary-payment-sources), retrieve its identifier, and assign that value to `sourceId` in the [subscription object](../developer-resources/digital-river-api-reference/subscriptions.md). On the [next invoice date](../developer-resources/digital-river-api-reference/subscriptions.md#date-of-next-invoice), we then both [create a charge](../order-management/orders/payment-charges/#how-a-charge-is-created) and attempt to [capture payment](../order-management/orders/payment-charges/#captures) using this reusable source.
 
 After activation, the following [key subscription attributes](../developer-resources/digital-river-api-reference/subscriptions.md) are populated: `contractBindingUntil`, `nextReminderDate`, `currentPeriodEndDate`, `nextInvoiceDate`, and `activated`.
 
@@ -109,7 +109,7 @@ On a [subscription's](https://www.digitalriver.com/docs/digital-river-api-refere
 
 ### Sending a reminder
 
-Before attempting to collect a recurring payment, our subscription service determines whether the necessary pre-conditions are met. If they are, the service opens a [`draft` invoice](../developer-resources/digital-river-api-reference/invoices.md#the-invoice-lifecycle) and, on the subscription's [`nextRemiderDate`](../developer-resources/digital-river-api-reference/subscriptions.md#date-of-next-reminder), creates an [event](../order-management/events-and-webhooks-1/events-1/) with a [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) of [`subscription.reminder`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.reminder).
+Before attempting to collect a recurring payment, our subscription service determines whether the necessary pre-conditions are met. If they are, the service opens a [`draft` invoice](../integration-options/checkouts/subscriptions/invoices.md#the-invoice-lifecycle) and, on the subscription's [`nextRemiderDate`](../developer-resources/digital-river-api-reference/subscriptions.md#date-of-next-reminder), creates an [event](../order-management/events-and-webhooks-1/events-1/) with a [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) of [`subscription.reminder`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.reminder).
 
 {% hint style="info" %}
 You can configure when you receive this event by setting the plan's [`reminderOffsetDays`](../developer-resources/digital-river-api-reference/plans.md#renewal-reminders).
@@ -145,7 +145,7 @@ _We noticed that your credit card ending in_ `lastFourDigits` _is set to expire_
 
 To be notified of a successful billing attempt, [configure a webhook](../administration/dashboard/developers/webhooks/creating-a-webhook.md) to listen for the [event](../order-management/events-and-webhooks-1/events-1/) with a [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) of [`subscription.extended`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.extended).
 
-The event's [`data.object`](../order-management/events-and-webhooks-1/events-1/#event-data) contains the [`subscription`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions) along with the [`invoice`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices) used to [capture payment](../developer-resources/digital-river-api-reference/payment-charges.md#captures). Since settlement has successfully occurred, the invoice's [`state`](../developer-resources/digital-river-api-reference/invoices.md#invoice-states) is `paid`.&#x20;
+The event's [`data.object`](../order-management/events-and-webhooks-1/events-1/#event-data) contains the [`subscription`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions) along with the [`invoice`](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices) used to [capture payment](../order-management/orders/payment-charges/#captures). Since settlement has successfully occurred, the invoice's [`state`](../integration-options/checkouts/subscriptions/invoices.md#invoice-states) is `paid`.&#x20;
 
 You could handle `subscription.extended` by calling a function that moves the subscription in your system into a ready to fulfill state and then initiates the fulfillment process.
 
@@ -179,7 +179,7 @@ If you don't send this update request during the grace period (i.e., the [`colle
 
 #### Payment failures <a href="#subscription.payment_failed" id="subscription.payment_failed"></a>
 
-An [event](../order-management/events-and-webhooks-1/events-1/) with a [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) of [`subscription.payment_failed`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.payment\_failed) indicates that Digital River's [autorenewal service](../developer-resources/digital-river-api-reference/invoices.md#invoice-billing) made an unsuccessful attempt to [capture payment](../developer-resources/digital-river-api-reference/payment-charges.md#captures).&#x20;
+An [event](../order-management/events-and-webhooks-1/events-1/) with a [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) of [`subscription.payment_failed`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.payment\_failed) indicates that Digital River's [autorenewal service](../integration-options/checkouts/subscriptions/invoices.md#invoice-billing) made an unsuccessful attempt to [capture payment](../order-management/orders/payment-charges/#captures).&#x20;
 
 The event's [`data.object`](../order-management/events-and-webhooks-1/events-1/#event-data) contains both the `subscription` and the `invoice`.
 
@@ -207,7 +207,7 @@ If customers click the link, redirect them to a page where they can provide a ne
 For details, refer to [Account management flows](../integration-options/checkouts/building-you-workflows/#account-management-flows) on the [Building payment workflows](../integration-options/checkouts/building-you-workflows/) page.
 {% endhint %}
 
-Once you create a new [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) or [authenticate an existing source](../developer-resources/reference/digitalriver-object.md#authenticating-sources), make sure you [associate it with the customer](../payments/payment-sources/using-the-source-identifier.md#attaching-sources-to-customers).&#x20;
+Once you create a new [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) or [authenticate an existing source](../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#authenticating-sources), make sure you [associate it with the customer](../payments/payment-sources/using-the-source-identifier.md#attaching-sources-to-customers).&#x20;
 
 You'll also need to pass the source's identifier in the body of an [update subscription request](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions).
 
@@ -225,7 +225,7 @@ Prior to the next billing attempt, Digital River voids the invoice that we weren
 
 #### Subscription failures <a href="#subscription.failed" id="subscription.failed"></a>
 
-An [event](../order-management/events-and-webhooks-1/events-1/) with a [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) of [`subscription.failed`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.failed) indicates that our autorenewal service was unable to [capture payment](../developer-resources/digital-river-api-reference/payment-charges.md#captures) during the [designated collection period](../developer-resources/digital-river-api-reference/plans.md#collection-period-days). As a result, the [invoice](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices) has become [`uncollectible`](../developer-resources/digital-river-api-reference/invoices.md#the-invoice-lifecycle) and the [subscription](../developer-resources/digital-river-api-reference/subscriptions.md) has moved into a terminally [`failed`](../developer-resources/digital-river-api-reference/subscriptions.md#lifecycle-of-a-subscription) state.
+An [event](../order-management/events-and-webhooks-1/events-1/) with a [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) of [`subscription.failed`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.failed) indicates that our autorenewal service was unable to [capture payment](../order-management/orders/payment-charges/#captures) during the [designated collection period](../developer-resources/digital-river-api-reference/plans.md#collection-period-days). As a result, the [invoice](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices) has become [`uncollectible`](../integration-options/checkouts/subscriptions/invoices.md#the-invoice-lifecycle) and the [subscription](../developer-resources/digital-river-api-reference/subscriptions.md) has moved into a terminally [`failed`](../developer-resources/digital-river-api-reference/subscriptions.md#lifecycle-of-a-subscription) state.
 
 We recommend you handle [`subscription.failed`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.failed) by setting the status of the subscription in your own system to failed as well.&#x20;
 
@@ -358,7 +358,7 @@ After you submit this request, the [subscription's](../developer-resources/digit
 ```
 {% endcode %}
 
-On the [`nextReminderDate`](../developer-resources/digital-river-api-reference/subscriptions.md#date-of-next-reminder), Digital River creates an [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) whose [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) is [`subscription.reminder`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.reminder) and whose [`data.object`](../order-management/events-and-webhooks-1/events-1/#event-data) contains an [invoice](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices) in a [`draft`](../developer-resources/digital-river-api-reference/invoices.md#invoice-states) state.
+On the [`nextReminderDate`](../developer-resources/digital-river-api-reference/subscriptions.md#date-of-next-reminder), Digital River creates an [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) whose [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) is [`subscription.reminder`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.reminder) and whose [`data.object`](../order-management/events-and-webhooks-1/events-1/#event-data) contains an [invoice](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices) in a [`draft`](../integration-options/checkouts/subscriptions/invoices.md#invoice-states) state.
 
 Assuming you updated the [subscription's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions) `items[].price` or `items[].aggregatePrice`, the invoice's `totalAmount` will be greater than zero and equal to the aggregated price of all the subscription's `items[]`, plus taxes and fees calculated by Digital River.
 
@@ -374,14 +374,14 @@ We recommend that you use [`subscription.reminder`](../order-management/events-a
 
 #### Sending a trial conversion notification
 
-On the [`nextInvoiceDate`](../developer-resources/digital-river-api-reference/subscriptions.md#date-of-next-invoice), Digital River moves the [invoice](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices) to [`open`](../developer-resources/digital-river-api-reference/invoices.md#invoice-states) and the [subscription](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions) to [`activePendingInvoice`](../developer-resources/digital-river-api-reference/subscriptions.md#lifecycle-of-a-subscription) and then attempts to collect payment for the number of days specified by the [trial period plan's](../using-our-services/subscriptions.md#trial-period-plans) `collectionPeriodDays`.
+On the [`nextInvoiceDate`](../developer-resources/digital-river-api-reference/subscriptions.md#date-of-next-invoice), Digital River moves the [invoice](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices) to [`open`](../integration-options/checkouts/subscriptions/invoices.md#invoice-states) and the [subscription](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions) to [`activePendingInvoice`](../developer-resources/digital-river-api-reference/subscriptions.md#lifecycle-of-a-subscription) and then attempts to collect payment for the number of days specified by the [trial period plan's](../using-our-services/subscriptions.md#trial-period-plans) `collectionPeriodDays`.
 
-If any of these collection attempts are successful, Digital River marks the invoice as [`paid`](../developer-resources/digital-river-api-reference/invoices.md#invoice-states) and the [subscription](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions) as [`active`](../developer-resources/digital-river-api-reference/subscriptions.md#lifecycle-of-a-subscription), populates the [subscription's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions) `activated` timestamp and creates an [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) whose [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) is [`subscription.extended`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.extended).
+If any of these collection attempts are successful, Digital River marks the invoice as [`paid`](../integration-options/checkouts/subscriptions/invoices.md#invoice-states) and the [subscription](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions) as [`active`](../developer-resources/digital-river-api-reference/subscriptions.md#lifecycle-of-a-subscription), populates the [subscription's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions) `activated` timestamp and creates an [event](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events) whose [`type`](../order-management/events-and-webhooks-1/events-1/#event-types) is [`subscription.extended`](../order-management/events-and-webhooks-1/events-1/event-types.md#subscription.extended).
 
 You should use `subscription.extended` as a trigger to [notify customers that the trial has been converted into a paid subscription](../order-management/customer-notifications.md#trial-conversion-notification).&#x20;
 
 {% hint style="info" %}
-If payment capture fails, then the [invoice](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices) becomes [`uncollectible`](../developer-resources/digital-river-api-reference/invoices.md#invoice-states) and the [subscription](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions) moves into a [`failed`](../developer-resources/digital-river-api-reference/subscriptions.md#lifecycle-of-a-subscription) state. To learn more, refer to [Handling failed renewals](managing-a-subscription.md#handling-failed-renewals).
+If payment capture fails, then the [invoice](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Invoices) becomes [`uncollectible`](../integration-options/checkouts/subscriptions/invoices.md#invoice-states) and the [subscription](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions) moves into a [`failed`](../developer-resources/digital-river-api-reference/subscriptions.md#lifecycle-of-a-subscription) state. To learn more, refer to [Handling failed renewals](managing-a-subscription.md#handling-failed-renewals).
 {% endhint %}
 
 ### Ending trial subscriptions
@@ -532,7 +532,7 @@ If customers opt to edit their billing information, present them with a form to 
 
 #### Card expiration date
 
-If customers opt to edit their credit card's expiration date, use a [`cardexpiration` element](../developer-resources/reference/digitalriver-object.md#digitalriver-createelement) to provide them with an input field.
+If customers opt to edit their credit card's expiration date, use a [`cardexpiration` element](../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#digitalriver-createelement) to provide them with an input field.
 
 <div align="left">
 
@@ -542,7 +542,7 @@ If customers opt to edit their credit card's expiration date, use a [`cardexpira
 
 #### Configuring the update source method
 
-Once customers enter and save their changes, pass the submitted data to [`updateSource()`](../developer-resources/reference/digitalriver-object.md#updating-sources). Make sure you configure the appropriate version of the method, depending on whether customers submit updated (a) billing address information, (b) card expiration information or (c) both. In both versions, you need to add the [source's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) `id` and `clientSecret` to the method's configuration object.
+Once customers enter and save their changes, pass the submitted data to [`updateSource()`](../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#updating-sources). Make sure you configure the appropriate version of the method, depending on whether customers submit updated (a) billing address information, (b) card expiration information or (c) both. In both versions, you need to add the [source's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) `id` and `clientSecret` to the method's configuration object.
 
 ### Replace an existing source with a new source
 
@@ -608,7 +608,7 @@ Pass the configuration object to [`createDropin()`](../payments/payment-integrat
 
 Each payment method and its disclosures are displayed in the window. If customers click the button without accepting these agreements and terms, Drop-in blocks the transaction from proceeding.
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 If customers accept the terms, submit their information and the resulting create source request is successful, the [`onSuccess`](../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#onsuccess) event contains a [source](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Sources) that is [`readyForStorage`](../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#onsuccess) and [`chargeable`](../payments/payment-sources/#source-state).
 
@@ -616,7 +616,7 @@ For more details, refer to the [Drop-in payments integration guide](../payments/
 {% endtab %}
 
 {% tab title="Elements" %}
-Configure [`retrieveAvailablePaymentMethods()`](../developer-resources/reference/digitalriver-object.md#digitalriverjs-retrieveavailablepaymentmethodsresponsewithusingfilters) using the following filters:
+Configure [`retrieveAvailablePaymentMethods()`](../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#digitalriverjs-retrieveavailablepaymentmethodsresponsewithusingfilters) using the following filters:
 
 * Set `currency` to the same value as the [subscription's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions) `currency`
 * Use the billing address country you collect from customers to set `country`&#x20;
@@ -689,13 +689,13 @@ If the request is successful, the response contains the transaction's eligible p
 
 For each available payment method:
 
-* [Create the appropriate elements](../developer-resources/reference/digitalriver-object.md#creating-elements) to collect the customer's sensitive payment information.
+* [Create the appropriate elements](../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-elements) to collect the customer's sensitive payment information.
 * Retrieve `defaultMandate.terms` and display that text with some sort of acceptance control. Your code should be written so that customers must accept these terms before the transaction can proceed.
 
-When customers submit their information, configure and call the [`createSource()`](../developer-resources/reference/digitalriver-object.md#creating-sources) method:
+When customers submit their information, configure and call the [`createSource()`](../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources) method:
 
 * Set `type` to the payment method selected by the customer
-* Set [`usage`](../developer-resources/reference/digitalriver-object.md#specifying-a-sources-future-use) to `subscription` and `futureUse` to `true`
+* Set [`usage`](../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#specifying-a-sources-future-use) to `subscription` and `futureUse` to `true`
 * Use that payment method's `defaultMandate.terms` to set `mandate.terms`
 * Since this is an [account management flow](../integration-options/checkouts/building-you-workflows/#account-management-flows), you can't provide a checkout's [payment session identifier](../integration-options/checkouts/creating-checkouts/#payment-session-identifier). As a result, you must pass the billing information you collect from customers in `billingAddress`.
 
@@ -890,7 +890,7 @@ No other values can be passed in the body of a cancellation request. If you atte
 {% endtab %}
 {% endtabs %}
 
-Only `active` , `activeFree`, and `activePendingInvoice` subscriptions can be cancelled. When you cancel an [`activePendingInvoice`](../developer-resources/digital-river-api-reference/subscriptions.md#lifecycle-of-a-subscription) subscription, the underlying [`open`](../developer-resources/digital-river-api-reference/invoices.md#the-invoice-lifecycle) invoice is moved into a [`void`](../developer-resources/digital-river-api-reference/invoices.md#invoice-states) state.
+Only `active` , `activeFree`, and `activePendingInvoice` subscriptions can be cancelled. When you cancel an [`activePendingInvoice`](../developer-resources/digital-river-api-reference/subscriptions.md#lifecycle-of-a-subscription) subscription, the underlying [`open`](../integration-options/checkouts/subscriptions/invoices.md#the-invoice-lifecycle) invoice is moved into a [`void`](../integration-options/checkouts/subscriptions/invoices.md#invoice-states) state.
 
 A successful cancellation request returns a `200 OK`, moves the subscription into a [`cancelled`](../developer-resources/digital-river-api-reference/subscriptions.md#lifecycle-of-a-subscription) state and prevents billing from occurring on the [`nextInvoiceDate`](../developer-resources/digital-river-api-reference/subscriptions.md#date-of-next-invoice).
 

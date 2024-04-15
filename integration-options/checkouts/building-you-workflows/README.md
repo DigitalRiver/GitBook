@@ -8,14 +8,14 @@ description: >-
 
 Using [Drop-in payments](../../../payments/payment-integrations-1/drop-in/) or [Elements](../../../payments/payment-integrations-1/digitalriver.js/), you can create [Strong Customer Authentication (SCA)](../../../payments/psd2-and-sca/) compliant workflows for both [purchase transactions](./#purchase-flows) and [account management](./#account-management-flows).
 
-Whichever payment solution you're using, all SCA requirements are managed by Digital River. Two-factor authentication is handled by our [authenticate source method](../../../developer-resources/reference/digitalriver-object.md#authenticating-sources). And our card acquirers use the [3-D Secure](https://en.wikipedia.org/wiki/3-D\_Secure) protocol to communicate with issuing banks. This protocol operates "behind-the-scenes" and requires no developer interaction.
+Whichever payment solution you're using, all SCA requirements are managed by Digital River. Two-factor authentication is handled by our [authenticate source method](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#authenticating-sources). And our card acquirers use the [3-D Secure](https://en.wikipedia.org/wiki/3-D\_Secure) protocol to communicate with issuing banks. This protocol operates "behind-the-scenes" and requires no developer interaction.
 
 ## Key settings and methods <a href="#key-settings-and-methods" id="key-settings-and-methods"></a>
 
 The following chart lists some of the key settings and methods you should use when building purchase and account management flows. It's meant to be read from left-to-right and top-to-bottom. For example:
 
-* In [one-off purchase flows](./#one-off) in which customers [save a new payment source to their account](./#credit-card-details-saved-by-customer-during-checkout), you should set the checkout's [`chargeType`](../creating-checkouts/initiating-a-charge.md) to `customer_initiated`. If you're using [Drop-in payments](../../../payments/payment-integrations-1/drop-in/), use the [`createDropIn()`](../../../developer-resources/reference/digitalriver-object.md#creating-an-instance-of-drop-in) method's [configurable `options`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#drop-in-options-1) to set [`flow`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#flow) to `checkout` and [`usage`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#specifying-a-sources-future-use) to `convenience`. With [DigitalRiver.js with elements](../../../payments/payment-integrations-1/digitalriver.js/quick-start.md), use the [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources) method's configuration object to set `futureUse` to `true` and [`usage`](../../../developer-resources/reference/digitalriver-object.md#specifying-a-sources-future-use) to `convenience`.
-* When customers are [acquiring an auto-renewing subscription](./#subscription), and decide to [retrieve a payment source saved to their account](./#customer-saves-credit-card-details-during-subscription-acquisition-checkout), set the checkout's `chargeType` to `customer_initiated` and [`autoRenewal`](../subscriptions/subscription-information-1.md#auto-renewal) to `true`. In this flow type, [Drop-in payments](../../../payments/payment-integrations-1/drop-in/) is not supported. Instead, you'll need to use the [`authenticateSource()`](../../../developer-resources/reference/digitalriver-object.md#authenticating-sources) method.
+* In [one-off purchase flows](./#one-off) in which customers [save a new payment source to their account](./#credit-card-details-saved-by-customer-during-checkout), you should set the checkout's [`chargeType`](../creating-checkouts/initiating-a-charge.md) to `customer_initiated`. If you're using [Drop-in payments](../../../payments/payment-integrations-1/drop-in/), use the [`createDropIn()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-an-instance-of-drop-in) method's [configurable `options`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#drop-in-options-1) to set [`flow`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#flow) to `checkout` and [`usage`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#specifying-a-sources-future-use) to `convenience`. With [DigitalRiver.js with elements](../../../payments/payment-integrations-1/digitalriver.js/quick-start.md), use the [`createSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources) method's configuration object to set `futureUse` to `true` and [`usage`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#specifying-a-sources-future-use) to `convenience`.
+* When customers are [acquiring an auto-renewing subscription](./#subscription), and decide to [retrieve a payment source saved to their account](./#customer-saves-credit-card-details-during-subscription-acquisition-checkout), set the checkout's `chargeType` to `customer_initiated` and [`autoRenewal`](../subscriptions/subscription-information-1.md#auto-renewal) to `true`. In this flow type, [Drop-in payments](../../../payments/payment-integrations-1/drop-in/) is not supported. Instead, you'll need to use the [`authenticateSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#authenticating-sources) method.
 
 ![Click to enlarge image](<../../../.gitbook/assets/flow configurations.png>)
 
@@ -67,7 +67,7 @@ let configuration = {
 }
 ```
 
-**Step three**: Pass the configuration object to the [create Drop-in method](../../../developer-resources/reference/digitalriver-object.md#creating-an-instance-of-drop-in).
+**Step three**: Pass the configuration object to the [create Drop-in method](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-an-instance-of-drop-in).
 
 ```javascript
 let dropin = digitalriver.createDropin(configuration);
@@ -97,7 +97,7 @@ onSuccess: function (data) { doSometingWithTheSource(data) },
 
 **Step one:** [Build a checkout](../creating-checkouts/) with all tax, shipping, duty and fee amounts in a final state and a [`chargeType`](../creating-checkouts/initiating-a-charge.md) that is `customer_initiated`.
 
-**Step two:** Retrieve the [payment session identifier ](../creating-checkouts/#payment-session-identifier)and assign it to `sessionId` in the [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources) method's configuration object. You should also set `futureUse` to `false` and [`usage`](../../../developer-resources/reference/digitalriver-object.md#specifying-a-sources-future-use) to `convenience`.
+**Step two:** Retrieve the [payment session identifier ](../creating-checkouts/#payment-session-identifier)and assign it to `sessionId` in the [`createSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources) method's configuration object. You should also set `futureUse` to `false` and [`usage`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#specifying-a-sources-future-use) to `convenience`.
 
 ```javascript
 let payload = {
@@ -152,7 +152,7 @@ let configuration = {
 }
 ```
 
-**Step three**: Pass the configuration object to the [create Drop-in method](../../../developer-resources/reference/digitalriver-object.md#creating-an-instance-of-drop-in).
+**Step three**: Pass the configuration object to the [create Drop-in method](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-an-instance-of-drop-in).
 
 ```javascript
 let dropin = digitalriver.createDropIn(configuration);
@@ -184,7 +184,7 @@ onSuccess: function (data) { doSometingWithTheSource(data) },
 
 **Step one:** [Build a checkout](../creating-checkouts/) with a [registered customer](../creating-checkouts/using-the-checkout-identifier.md#registered-checkouts-or-invoices) and all tax, shipping, duty and fee amounts in a final state. The [`chargeType`](../creating-checkouts/initiating-a-charge.md) should be `customer_initiated`.
 
-**Step two:** Retrieve the [payment session identifier ](../creating-checkouts/#payment-session-identifier)and assign it to `sessionId` in the [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources) method's configuration object.  You should also set `futureUse` to `true` and [`usage`](../../../developer-resources/reference/digitalriver-object.md#specifying-a-sources-future-use) to `convenience`. Use `mandate.terms` to pass the save payment agreement that the customer accepts.
+**Step two:** Retrieve the [payment session identifier ](../creating-checkouts/#payment-session-identifier)and assign it to `sessionId` in the [`createSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources) method's configuration object.  You should also set `futureUse` to `true` and [`usage`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#specifying-a-sources-future-use) to `convenience`. Use `mandate.terms` to pass the save payment agreement that the customer accepts.
 
 ```javascript
 var payload = {
@@ -221,7 +221,7 @@ After the method is called and customers complete any SCA that may be required, 
 
 #### Customers retrieve their payment information <a href="#customer-selects-saved-credit-card-during-checkout" id="customer-selects-saved-credit-card-during-checkout"></a>
 
-In this one-off purchase flow, customers select a payment method that they previously saved to their account. The key step is to call the [authenticate source method](../../../developer-resources/reference/digitalriver-object.md#authenticating-sources).
+In this one-off purchase flow, customers select a payment method that they previously saved to their account. The key step is to call the [authenticate source method](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#authenticating-sources).
 
 | SCA required? | Drop-in payments supported? | Elements supported? |
 | ------------- | --------------------------- | ------------------- |
@@ -239,7 +239,7 @@ In this one-off purchase flow, customers select a payment method that they previ
 
 **Step two:** [Retrieve the customer's payment sources](../../../payments/payment-sources/retrieving-sources.md#obtain-a-customers-sources) and display them during the checkout process.
 
-**Step three**: If the customer opts to use a saved payment method, you'll need to determine whether SCA is required. To do this, configure and call the [`authenticateSource()`](../../../developer-resources/reference/digitalriver-object.md#authenticating-sources) method.
+**Step three**: If the customer opts to use a saved payment method, you'll need to determine whether SCA is required. To do this, configure and call the [`authenticateSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#authenticating-sources) method.
 
 ```javascript
 ...
@@ -300,7 +300,7 @@ let configuration = {
 }
 ```
 
-**Step three**: Pass the configuration object to the [create Drop-in method](../../../developer-resources/reference/digitalriver-object.md#creating-an-instance-of-drop-in).
+**Step three**: Pass the configuration object to the [create Drop-in method](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-an-instance-of-drop-in).
 
 ```javascript
 let dropin = digitalriver.createDropIn(configuration);
@@ -332,7 +332,7 @@ onSuccess: function (data) { doSometingWithTheSource(data) },
 
 **Step one**: [Build a checkout](../creating-checkouts/) with a [registered customer](../creating-checkouts/using-the-checkout-identifier.md#registered-checkouts-or-invoices) and all tax, shipping, duty and fee amounts in a final state. Set [`chargeType`](../creating-checkouts/initiating-a-charge.md) to `customer_initiated` and `autoRenewal` to `true`.
 
-**Step two:** Once the customer selects the option to save the payment method and agrees to the displayed terms, retrieve the [payment session identifier ](../creating-checkouts/#payment-session-identifier)and assign it to `sessionId` in the [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources) method's configuration object. You should also set `futureUse` to `true` and [`usage`](../../../developer-resources/reference/digitalriver-object.md#specifying-a-sources-future-use) to `subscription`. Use `mandate.terms` to pass the save payment agreement that the customer accepts.
+**Step two:** Once the customer selects the option to save the payment method and agrees to the displayed terms, retrieve the [payment session identifier ](../creating-checkouts/#payment-session-identifier)and assign it to `sessionId` in the [`createSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources) method's configuration object. You should also set `futureUse` to `true` and [`usage`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#specifying-a-sources-future-use) to `subscription`. Use `mandate.terms` to pass the save payment agreement that the customer accepts.
 
 ```javascript
 var payload = {
@@ -371,7 +371,7 @@ After the method is called and customers complete any SCA that may be required, 
 
 In this flow, customers select a credit card they previously saved to their account and use it to acquire an auto-renewing subscription.
 
-‌The key step is to call the [authenticate source method](../../../developer-resources/reference/digitalriver-object.md#authenticating-sources).
+‌The key step is to call the [authenticate source method](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#authenticating-sources).
 
 | SCA required? | Drop-in payments supported? | Elements supported? |
 | ------------- | --------------------------- | ------------------- |
@@ -389,7 +389,7 @@ In this flow, customers select a credit card they previously saved to their acco
 
 **Step two:** [Retrieve the customer's payment sources](../../../payments/payment-sources/retrieving-sources.md#obtain-a-customers-sources) and display them to the customer during the checkout process.
 
-**Step three**: If the customer opts to use a saved payment method, configure and call the [`authenticateSource()`](../../../developer-resources/reference/digitalriver-object.md#authenticating-sources) method.
+**Step three**: If the customer opts to use a saved payment method, configure and call the [`authenticateSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#authenticating-sources) method.
 
 ```javascript
 ...
@@ -447,7 +447,7 @@ let configuration = {
 }
 ```
 
-**Step three**: Pass the configuration object to the [create Drop-in method](../../../developer-resources/reference/digitalriver-object.md#creating-an-instance-of-drop-in).
+**Step three**: Pass the configuration object to the [create Drop-in method](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-an-instance-of-drop-in).
 
 ```javascript
 let dropin = digitalriver.createDropin(configuration);
@@ -475,7 +475,7 @@ onSuccess: function (data) { doSometingWithTheSource(data) },
 
 **Step one**: [Build a checkout](../creating-checkouts/) with a [charge type](../creating-checkouts/initiating-a-charge.md) of `moto` and all tax, shipping, duty and fee amounts in a final state.
 
-**Step two:** Retrieve the [payment session identifier ](../creating-checkouts/#payment-session-identifier)and assign it to `sessionId` in the [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources) method's configuration object. You should also set `futureUse` to `false` and [`usage`](../../../developer-resources/reference/digitalriver-object.md#specifying-a-sources-future-use) to `convenience`.
+**Step two:** Retrieve the [payment session identifier ](../creating-checkouts/#payment-session-identifier)and assign it to `sessionId` in the [`createSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources) method's configuration object. You should also set `futureUse` to `false` and [`usage`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#specifying-a-sources-future-use) to `convenience`.
 
 ```javascript
 let payload = {
@@ -531,7 +531,7 @@ If customers are replacing an active subscription's recurring billing instrument
 Because this is a `managePaymentMethods` flow, and there's no [payment session](../creating-checkouts/payment-sessions.md) to reference, you shouldn't provide a [`sessionId`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#drop-in-options). As a result, you'll need to pass the billing information you collect from customers in [`billingAddress`](../../../payments/payment-integrations-1/drop-in/drop-in-integration-guide.md#billing-address).\
 
 
-**Step three**: Pass the configuration object to the [create Drop-in method](../../../developer-resources/reference/digitalriver-object.md#creating-an-instance-of-drop-in).
+**Step three**: Pass the configuration object to the [create Drop-in method](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-an-instance-of-drop-in).
 
 ```javascript
 let dropin = digitalriver.createDropIn(configuration);
@@ -557,9 +557,9 @@ onSuccess: function (data) { doSometingWithTheSource(data) },
 {% tab title="Elements" %}
 **Prerequisites**: Refer to the [Elements prerequisites](./#elements-prerequisites) section. You also need to display the save payment agreement and acquire the customer's active acceptance.
 
-**Step one**: Once a customer selects the option to save a payment method and agrees to the displayed terms, use the [`createSource()`](../../../developer-resources/reference/digitalriver-object.md#creating-sources) method's configuration object to set `futureUse` to `true`.&#x20;
+**Step one**: Once a customer selects the option to save a payment method and agrees to the displayed terms, use the [`createSource()`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources) method's configuration object to set `futureUse` to `true`.&#x20;
 
-Make sure you also assign a value to [`usage`](../../../developer-resources/reference/digitalriver-object.md#specifying-a-sources-future-use) that identifies the future use of the payment source and pass the `mandate.terms` that the customer agreed to on your storefront.
+Make sure you also assign a value to [`usage`](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#specifying-a-sources-future-use) that identifies the future use of the payment source and pass the `mandate.terms` that the customer agreed to on your storefront.
 
 ```javascript
 var payload = {
@@ -609,6 +609,6 @@ In this flow, customers use their account portal to update the expiration date o
 
 The customer selects the payment method to update.
 
-**Step two:** Capture the updated expiration date or billing address from the customer and pass it to the [update source method](../../../developer-resources/reference/digitalriver-object.md#updating-sources).
+**Step two:** Capture the updated expiration date or billing address from the customer and pass it to the [update source method](../../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#updating-sources).
 {% endtab %}
 {% endtabs %}

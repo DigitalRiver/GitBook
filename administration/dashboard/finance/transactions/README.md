@@ -6,15 +6,11 @@ description: Learn how to manage your transactions.
 
 Digital River uses costing to calculate a brand's purchase price per the contract terms for a fulfilled order line item and displays them in the transactions list.
 
-<figure><img src="../../../../.gitbook/assets/image (180).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/1 transactions.png" alt=""><figcaption></figcaption></figure>
 
-Click the "i" Information icon to open a list of column descriptions.
-
-<div align="left">
-
-<img src="../../../../.gitbook/assets/Column-description.png" alt="">
-
-</div>
+Click the "i" Information icon to open a list of column descriptions.\
+\
+![](<../../../../.gitbook/assets/2 transactions column descriptions.png>)
 
 {% hint style="info" %}
 **Note:** If your application supports the use of metadata, and you want to see it in your transaction data export, we provide metadata support for orders and line items. This metadata is reported in your CSV or JSON export of Transaction information but is NOT visible on the Digital River Dashboard Transactions page.

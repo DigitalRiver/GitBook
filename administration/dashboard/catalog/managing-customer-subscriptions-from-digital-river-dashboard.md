@@ -4,6 +4,19 @@ description: Learn how to manage customer subscriptions from the Digital River D
 
 # Managing customer subscriptions from Digital River Dashboard
 
+#### Strengths
+
+* **Clarity and Directness:** The document is clear and direct about what Digital River offers in terms of PSD2 and SCA compliant subscription management services.
+* **Functionality Description:** It provides a concise description of the functionalities available on the Customer details page, detailing what users can do with subscription information.
+* **Accessibility Enhancements:** The recent update enabling subscription management directly through the Dashboard, in addition to API calls, broadens accessibility for various user roles.
+
+#### Weaknesses
+
+* **Lack of Step-by-Step Instructions:** While it mentions the functionalities, it doesn't provide step-by-step instructions on how to perform actions like viewing or cancelling subscriptions, which could hinder less tech-savvy users.
+* **Missing Visuals:** The document could be enhanced with screenshots or diagrams for better understanding, especially in guiding users through the Dashboard interface.
+* **Role Specifics Not Detailed:** It mentions that certain roles have access to these features but does not specify the permissions or limitations each role may have beyond subscription viewing and cancellation.
+* **Technical Jargon:** Terms like PSD2, SCA, and even API could be confusing for readers unfamiliar with these acronyms. A brief explanation or reference to more detailed explanations could make the document more accessible.
+
 Digital River offers a [PSD2 and SCA](../../../payments/psd2-and-sca/) compliant [subscription management](../../../integration-options/checkouts/subscriptions/) service that automatically schedules and processes recurring payments.
 
 You can view and manage current customer subscriptions in the Dashboard from the **Customer details** page. You can do the following with the subscription information found on this page:
@@ -32,9 +45,9 @@ To view customer subscription data:
 1. Click **All customers** in the Dashboard left navigation. The **Customers** page appears.
 2. Use the [Search](../customers/searching-for-customers.md) feature or scroll to find the customer whose subscription details you want to view.
 3. Click the **Customer ID.** The **Customer details** page appears.
-4. In the **Subscriptions** section at the bottom of the **Customer details** page you can see the following subscription details:
+4.  In the **Subscriptions** section at the bottom of the **Customer details** page you can see the following subscription details:
 
-![](<../../../.gitbook/assets/subscription\_section\_customer\_details\_active (3).png>)
+    <figure><img src="../../../.gitbook/assets/1a manage subcsrip active.png" alt=""><figcaption></figcaption></figure>
 
 The section displays the complete details for each subscription. For customers with multiple subscriptions, the **Subscriptions** section has a sub-section for each separate subscription's details - whether **Active** or **Cancelled**.
 
@@ -64,4 +77,4 @@ After you click **Cancel Subscription**, you receive a system modal that tells y
 
 When your cancellation is successful, the **Cancel subscription** link is "grayed out" and can no longer be used. The **State** field in the subscription's displayed details also changes from **Active** to **Cancelled** to verify the success of the cancellation.
 
-![](<../../../.gitbook/assets/subscription\_section\_customer\_details (1).png>)
+<figure><img src="../../../.gitbook/assets/2a manage subcsrip cancelled (1).png" alt=""><figcaption></figcaption></figure>

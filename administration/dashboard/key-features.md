@@ -10,17 +10,17 @@ Digital River Dashboard is an administrative tool that allows you to test, manag
 
 ## Test accounts
 
-You can use a test account to test an integration without affecting any Digital River data. A test account allows you to access and test the [Dashboard ](https://dashboard.digitalriver.com/login)and Digital River API.
+You can use a test account to test an integration without affecting Digital River data. A test account allows you to access and test the [Dashboard ](https://dashboard.digitalriver.com/login)and Digital River API.
 
 Want to test the Digital River API? [Create a free test account](https://dashboard.digitalriver.com/signup). For more information, see the [Getting started guide](../../quick-start-guide.md).
 
 ## Test and production environments
 
-Dashboard provides common workflows for reports, integration tools, and settings that you can use to manage your business. You can use the Test / Production toggle to view data from a test or production environment. Digital River uses unique API keys to distinguish between the test and production environments. Only paid accounts can use the production environment.
+Dashboard provides common workflows for reports, integration tools, and settings that you can use to manage your business. You can use the Test / Production toggle to view test or production environment data. Digital River uses unique API keys to distinguish between the test and production environments. Only paid accounts can use the production environment.
 
 ## Reporting
 
-You can create reports for payouts, sales summaries, and sales summary details from the [Finance ](finance/)section. The Filter feature allows you to set the parameters for your report. After you create the report, you can then export the report to CSV or JSON.
+You can create reports for payouts, sales summaries, and sales summary details from the [Finance ](finance/)section. The Filter feature allows you to set the parameters for your report. After creating the report, export it to CSV or JSON.
 
 {% hint style="info" %}
 **Example**: You can create a payouts report for January and then export that report as a CSV or JSON file.
@@ -28,7 +28,7 @@ You can create reports for payouts, sales summaries, and sales summary details f
 
 ## Orders
 
-You can manage your customers' orders from the [Order management](order-management/) section. The [Orders ](order-management/orders/)page allows you to view order details, manage returns and refunds, and view an order's timeline. The [Checkouts ](order-management/checkouts/)page displays all checkouts and allows you to view order details.
+You can manage your customers' orders from the [Order management](order-management/) section. The [Orders ](order-management/orders/)page lets you view order details, manage returns and refunds, and view an order's timeline. The [Checkouts ](order-management/checkouts/)page displays all checkouts and allows you to view order details.
 
 ## Integration
 

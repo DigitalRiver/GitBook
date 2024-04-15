@@ -4,13 +4,10 @@ description: Learn how to manage your webhooks.
 
 # Webhooks
 
-Digital River uses webhooks to notify your application (endpoint URL) when events occur. A webhook contains the event and timestamp for the event. You can use the Webhooks section to view, edit, create, and delete webhooks.
+Digital River uses webhooks to notify your application (endpoint URL) when events occur. A webhook contains the event and timestamp for the event. You can use the Webhooks section to view, edit, create, and delete webhooks.\
 
-<div align="left">
 
-<img src="../../../../.gitbook/assets/Webhooks.png" alt="">
-
-</div>
+<figure><img src="../../../../.gitbook/assets/1 Webhooks.png" alt=""><figcaption></figcaption></figure>
 
 When you register your webhook URLs with Digital River, Digital River creates an [Event ](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Events)object and sends webhook events that notify your application any time an event occurs. You can also assign the webhook to a specific API version.
 

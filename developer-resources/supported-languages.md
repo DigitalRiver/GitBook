@@ -22,7 +22,7 @@ Depending on whether you create your checkout experience using [Prebuilt Checkou
 
 {% tab title="Direct Integrations" %}
 * [Initializing DigitalRiver.js](reference/digital-river-publishable-api-key.md)&#x20;
-* [Getting compliance details](reference/digitalriver-object.md#digitalriver.compliance.getdetails-businessentitycode-locale) on the [`DigitalRiver` object](reference/digitalriver-object.md) page
+* [Getting compliance details](../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#digitalriver.compliance.getdetails-businessentitycode-locale) on the [`DigitalRiver` object](../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md) page
 * [Compliance element](reference/elements/compliance-elements.md)
 * [Localizing invoices and credit memos](../integration-options/checkouts/creating-checkouts/designating-a-locale.md)
 {% endtab %}

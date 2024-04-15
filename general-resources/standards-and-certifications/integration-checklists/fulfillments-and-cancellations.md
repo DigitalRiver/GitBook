@@ -21,7 +21,7 @@ These integration standards relate to fulfillments and cancellations:
 
 Once you either [synchronously](../../../order-management/creating-and-updating-an-order.md#accepted) or [asynchronously](../../../order-management/creating-and-updating-an-order.md#listening-for-the-order-accepted-event) receive an order in an `accepted` state, your integration can use the [Fulfillments API](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Fulfillments) to submit a [`POST/fulfillments`](../../../order-management/informing-digital-river-of-a-fulfillment.md) with a fulfilled quantity.
 
-When all the items in an order are fulfilled, the [order transitions](../../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md) to a `state` of `complete` and an `order.complete` event is emitted. After you receive this event, you should update the order status in your system to match its `state` in our system.
+When all the items in an order are fulfilled, the [order transitions](../../../order-management/orders/the-order-lifecycle.md) to a `state` of `complete` and an `order.complete` event is emitted. After you receive this event, you should update the order status in your system to match its `state` in our system.
 
 ### Provide required cancellation data
 

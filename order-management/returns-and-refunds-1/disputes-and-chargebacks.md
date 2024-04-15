@@ -4,7 +4,7 @@ description: Learn about the order dispute and chargeback process
 
 # Disputes and chargebacks
 
-A chargeback is a [charge](../../developer-resources/digital-river-api-reference/payment-charges.md) that is reversed by a customer's bank. In the Digital River APIs, chargebacks can occur on credit cards and [debit cards](../../payments/payment-integrations-1/digitalriver.js/payment-methods/direct-debit.md) as well as certain types of [wire transfer](https://www.digitalriver.com/payment-types/wire-transfer/), [bank transfer](https://www.digitalriver.com/payment-types/bank-transfer/), [buy now pay later](https://www.digitalriver.com/payment-types/buy-now-pay-later/), and [digital wallet](https://www.digitalriver.com/payment-types/digital-wallet/) payments.
+A chargeback is a [charge](../orders/payment-charges/) that is reversed by a customer's bank. In the Digital River APIs, chargebacks can occur on credit cards and [debit cards](../../payments/payment-integrations-1/digitalriver.js/payment-methods/direct-debit.md) as well as certain types of [wire transfer](https://www.digitalriver.com/payment-types/wire-transfer/), [bank transfer](https://www.digitalriver.com/payment-types/bank-transfer/), [buy now pay later](https://www.digitalriver.com/payment-types/buy-now-pay-later/), and [digital wallet](https://www.digitalriver.com/payment-types/digital-wallet/) payments.
 
 Chargeback requests received by Digital River most often originate with customers noticing what they believe to be an unauthorized transaction on their statement and then contacting their bank to dispute the charge. Other common reasons for chargeback requests include:
 
@@ -15,7 +15,7 @@ Chargeback requests received by Digital River most often originate with customer
 
 Once the dispute process is initiated, the bank, acting on behalf of the customer, may contact the merchant and ask for more details. Depending on the results of that inquiry, the bank then sends a separate request to the payment processors that either seeks additional information or pushes for a chargeback. The payment processors, serving as intermediaries, relay the bank's request to Digital River.
 
-Once Digital River receives the relayed request, we move the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md#order-states-and-events) into `dispute`, create an `order.dispute` event, and populate `stateTransitions.dispute` with a timestamp. This is true whether the bank is requesting a chargeback or simply seeking more information.
+Once Digital River receives the relayed request, we move the [order's](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) [`state`](../orders/the-order-lifecycle.md#order-states-and-events) into `dispute`, create an `order.dispute` event, and populate `stateTransitions.dispute` with a timestamp. This is true whether the bank is requesting a chargeback or simply seeking more information.
 
 {% code title="order.dispute" %}
 ```
@@ -256,7 +256,7 @@ If you attempt to submit a [`POST/fulfillments`](https://www.digitalriver.com/do
 
 Digital River's chargeback team then works with the merchant to investigate the disputed transaction and prepare a response. This typically involves gathering proof of delivery receipts, customer acceptance emails, order invoices, as well as any other relevant documentation, and then sending that information to the payment processors so they can relay it to the bank.
 
-Once the dispute is resolved, the [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) resumes its [lifecycle](../../developer-resources/digital-river-api-reference/orders/the-order-lifecycle.md), transitioning to a non-dispute `state`. This results in the creation of an `order.dispute.resolved` event.
+Once the dispute is resolved, the [order](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Orders) resumes its [lifecycle](../orders/the-order-lifecycle.md), transitioning to a non-dispute `state`. This results in the creation of an `order.dispute.resolved` event.
 
 ```
 {

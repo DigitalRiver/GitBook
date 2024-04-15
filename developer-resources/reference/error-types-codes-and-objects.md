@@ -22,7 +22,7 @@ When DigitalRiver.js detects an error with an element, it returns an error objec
 
 ## Create source error object
 
-DigitalRiver.js returns this error object within the [createSource](digitalriver-object.md#creating-sources) method if an error occurs with the tokenization request. This object will contain a type and an array of detailed messages explaining the error.
+DigitalRiver.js returns this error object within the [createSource](../../payments/payment-integrations-1/digitalriver.js/reference/digitalriver-object.md#creating-sources) method if an error occurs with the tokenization request. This object will contain a type and an array of detailed messages explaining the error.
 
 {% tabs %}
 {% tab title="Create Source Error object" %}
