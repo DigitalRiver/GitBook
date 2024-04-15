@@ -78,6 +78,6 @@ You can [create a webhook](../administration/dashboard/developers/webhooks/creat
 
 ### Testing a version with a single API request
 
-You can test a single API request without upgrading your API key. Select a version of the library to change the API version used and [create a webhook endpoint](../administration/dashboard/developers/webhooks/creating-a-webhook.md) with the same API version as the `DigitalRiver.API_VERSION` property in the library. Use the [Release notes](release-notes/) to find the API version you need and view all breaking changes.
+You can test a single API request without upgrading your API key. Select a version of the library to change the API version used and [create a webhook endpoint](../administration/dashboard/developers/webhooks/creating-a-webhook.md) with the same API version as the `DigitalRiver.API_VERSION` property in the library. Use the [Release notes](release-notes.md) to find the API version you need and view all breaking changes.
 
 To set an API version with a specific request, send the version number in the header: `digitalriver-version=2020-09-30`

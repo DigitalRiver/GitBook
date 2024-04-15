@@ -32,4 +32,4 @@ When the update is finished, the Standard and Restricted keys tables display the
 
 ## Release notes
 
-The [Release notes](../../../../general-resources/release-notes/) link takes you to the list of breaking changes in the API. New additions and non-breaking changes don’t need a new API version and will not appear on this list.
+The [Release notes](../../../../general-resources/release-notes.md) link takes you to the list of breaking changes in the API. New additions and non-breaking changes don’t need a new API version and will not appear on this list.

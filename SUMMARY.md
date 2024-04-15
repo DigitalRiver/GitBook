@@ -408,7 +408,7 @@
 
 * [eCompass](https://ecompass.digitalriver.com/)
 * [eCompass documentation](https://docs.digitalriver.com/ecompass)
-* [Release notes](general-resources/release-notes/README.md)
+* [Release notes](general-resources/release-notes.md)
   * [2023](general-resources/release-notes/2023.md)
   * [2022](general-resources/release-notes/2022.md)
   * [2021](general-resources/release-notes/2021.md)
