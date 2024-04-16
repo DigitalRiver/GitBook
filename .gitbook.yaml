@@ -1,5 +1,5 @@
-root: ./
+root: ./digital-river-api/
 
 redirects:
-  digital-river-api/developer-resources/digitalrivercheckout.js-reference/digitalrivercheckout-object/components/address-component: digital-river-api/developer-resources/digitalrivercheckout.js-reference/digitalrivercheckout-object/components/shipping-component.md
+  developer-resources/digitalrivercheckout.js-reference/digitalrivercheckout-object/components/address-component: developer-resources/digitalrivercheckout.js-reference/digitalrivercheckout-object/components/shipping-component.md
 
