@@ -18,7 +18,7 @@ During checkouts, GL allows you to present customers with a menu of shipping quo
 
 On this page, you'll find information on [how GL works](global-logistics.md#how-global-logistics-works), Digital River's [guaranteed landed cost feature](global-logistics.md#guaranteed-landed-cost), and our [GLPs](global-logistics.md#global-logistics-providers). You can also read about [the pre-deployment process](global-logistics.md#pre-deployment).
 
-How you interact with GL during checkouts depends on your selected integration path(s). Use the following table to access the appropriate article:
+How you interact with GL during checkouts depends on the integration path you select. Use the following table to access the appropriate article:
 
 | Checkout solution                                                | Article                                                                                                                              |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
