@@ -17,7 +17,7 @@ Use this feature to:
 **Note:** Currently, you can only view a subscription's current state or cancel a specific active subscription to change its state from **Active** to **Canceled**.
 {% endhint %}
 
-To use this feature, you must have access privileges that let you view and edit customer information. &#x20;
+To use this feature, you must have access privileges that let you view and edit customer information.
 
 The following is an example of the subscription information found in the **Subscriptions** subsection of the **Customer Details** page.
 
@@ -36,7 +36,7 @@ To view the complete collection of customer subscription information, do the fol
 The customer subscription information displayed in each subsection is the following:
 
 * Subscription ID
-* Plan ID&#x20;
+* Plan ID
 * Plan name
 * State (Active or Canceled)
 * Locale
@@ -49,7 +49,7 @@ The customer subscription information displayed in each subsection is the follow
 * Next reminder date
 * SKU ID
 * Product ID (SKU group)
-* Name&#x20;
+* Name
 * Description
 * Qty (quantity)
 * Price per item
@@ -61,13 +61,10 @@ To cancel an Active customer subscription, do the following:
 
 1. Click **All customers** in the left navigation. The **Customers** page appears.
 2. Use the [Search](searching-for-customers.md) feature or scroll to find the customer whose details you want to view or change.
-3. Click the **Customer ID.** The **Customer details** page appears. The customer's current subscription information can be viewed in the **Subscriptions** subsection of the page.&#x20;
-4. Click the **Cancel subscription** link in the section for that subscription. Active cancellation links are blue and underlined.&#x20;
-5.  Click **Cancel subscription** on the **Cancel subscription** modal to confirm and complete your cancellation. Once a subscription has been canceled, its **State** field in the **Subscriptions** summary is changed from **Active** to **Cancelled**. The **Cancel subscription** link is also grayed out so that it cannot be used again.\
-
+3. Click the **Customer ID.** The **Customer details** page appears. The customer's current subscription information can be viewed in the **Subscriptions** subsection of the page.
+4. Click the **Cancel subscription** link in the section for that subscription. Active cancellation links are blue and underlined.
+5.  Click **Cancel subscription** on the **Cancel subscription** modal to confirm and complete your cancellation. Once a subscription has been canceled, its **State** field in the **Subscriptions** summary is changed from **Active** to **Cancelled**. The **Cancel subscription** link is also grayed out so that it cannot be used again.
 
     <figure><img src="../../../.gitbook/assets/2 manage subcsrip active.png" alt=""><figcaption></figcaption></figure>
-
-
 
     <figure><img src="../../../.gitbook/assets/3 manage subcsrip cancelled.png" alt=""><figcaption></figcaption></figure>

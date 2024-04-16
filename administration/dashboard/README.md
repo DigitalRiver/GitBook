@@ -24,8 +24,7 @@ To create your free test account, follow these steps:
 1. Go to [https://dashboard.digitalriver.com/signup](https://dashboard.digitalriver.com/signup).
 2. Complete the fields in the form.\
    \
-   ![](<../../.gitbook/assets/11 DRDB QS Create Test account.png>)\
-
+   ![](<../../.gitbook/assets/11 DRDB QS Create Test account.png>)
 3. Click **Try it out for free**. You'll see a message that the account is created and receive an activation email.
 4. In the email message, click the **Activate your account** link to open a dialog box. Enter the requested information and click **Complete account activation**.\
    \
@@ -43,7 +42,7 @@ After Digital River provisions your account, you receive an activation email. Cl
 
 ## Step 3: Complete your sign up
 
-Set up your password as requested to complete your sign up. Click **Complete account activation**.&#x20;
+Set up your password as requested to complete your sign up. Click **Complete account activation**.
 
 If you [forget your password](reset-your-password.md) later on, you can add a mobile phone number to your **Profile settings.** This lets you have a password reset request sent to your phone. This should be done after you complete your initial sign-up.\
 \

@@ -12,14 +12,12 @@ Rotating API keys is a widely accepted best practice recommended by security exp
 
 To rotate a key:
 
-1.  From the **API keys** page on the [Dashboard](https://dashboard.digitalriver.com), click **More options** (vertical ellipses) associated with the key you want to rotate and click **Rotate**.\
-
+1.  From the **API keys** page on the [Dashboard](https://dashboard.digitalriver.com), click **More options** (vertical ellipses) associated with the key you want to rotate and click **Rotate**.
 
     <figure><img src="../../../../.gitbook/assets/1 rotate options.png" alt=""><figcaption></figcaption></figure>
 2. Choose the expiration time from the **Choose expiration** list.\
    \
-   ![](<../../../../.gitbook/assets/image (246).png>)\
-
+   ![](<../../../../.gitbook/assets/image (246).png>)
 3. Complete the fields and click **Rotate API Key**. The Restricted Keys table will display the creation date for **Newest Token** and **Expiring Token**, and the expiration date for **Expiring Token**.
 
 {% hint style="warning" %}

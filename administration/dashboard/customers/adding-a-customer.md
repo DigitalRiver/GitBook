@@ -7,8 +7,7 @@ description: Learn how to add a customer.
 To add a customer:
 
 1. Click **All customers** in the left navigation. The Customers page appears.
-2.  Click the **Add customer** button at the top right of the page. The Add customer page appears.\
-
+2.  Click the **Add customer** button at the top right of the page. The Add customer page appears.
 
     <figure><img src="../../../.gitbook/assets/doc-324 Customer Type Add Customer.png" alt=""><figcaption></figcaption></figure>
 3. Enter the required information.\

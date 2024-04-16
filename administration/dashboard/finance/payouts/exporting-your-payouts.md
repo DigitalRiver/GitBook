@@ -11,8 +11,7 @@ To export your payouts as CSV:
 1. Click **Payouts** in the left navigation. The Payouts page appears.
 2. [Filter your payouts](filtering-your-payouts.md), if needed.
 3. Click the down arrow ![](<../../../../.gitbook/assets/down-arrow (2).png>) and select **Export as CSV**.\
-   ![](<../../../../.gitbook/assets/1 Payouts export dropdown csv (1).png>)\
-
+   ![](<../../../../.gitbook/assets/1 Payouts export dropdown csv (1).png>)
 4. Click the **Export as CSV** button (not the arrow).\
    ![](<../../../../.gitbook/assets/2 Payouts export csv.png>)\
    The **Save As** dialog appears.

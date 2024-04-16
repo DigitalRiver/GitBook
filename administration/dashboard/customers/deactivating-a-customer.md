@@ -12,7 +12,6 @@ To disable a customer:
 2. [Search](searching-for-customers.md) or scroll to find the customer you want to disable.
 3. Click the customer ID link under the **Customer** **ID** column. The Customer details page appears.
 4.  Click the toggle underneath **Enabled** to change the setting to False. The Disable customer dialog box appears.\
-    \
 
 
     <figure><img src="../../../.gitbook/assets/1 Disabling a customer.png" alt=""><figcaption></figcaption></figure>

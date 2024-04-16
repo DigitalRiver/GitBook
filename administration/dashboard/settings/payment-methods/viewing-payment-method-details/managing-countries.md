@@ -16,7 +16,5 @@ To manage countries for a payment method:
 4. Select the countries you want to add to or remove from the **Enabled countries** column.
 5. Click the **Add** and **Remove** buttons to add or remove countries.\
    \
-   ![](<../../../../../.gitbook/assets/2 managing countries - addremove.png>)\
-   \
-
+   ![](<../../../../../.gitbook/assets/2 managing countries - addremove.png>)
 6. Click **Update.**

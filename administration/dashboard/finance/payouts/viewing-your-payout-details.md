@@ -6,8 +6,7 @@ description: Learn how to view your payout details.
 
 To view your payout details:
 
-1.  Click the **Payouts** link in the left menu column. The Payouts page appears.\
-
+1.  Click the **Payouts** link in the left menu column. The Payouts page appears.
 
     <figure><img src="../../../../.gitbook/assets/1 Viewing Payout details page.png" alt=""><figcaption></figcaption></figure>
 2. Click the **Refresh** icon to update the list.

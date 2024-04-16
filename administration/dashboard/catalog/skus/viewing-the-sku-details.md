@@ -8,7 +8,6 @@ To view a SKU's details from the K[.](./ "mention"):
 
 1. Click **SKUs** in the left navigation. The [SKUs](./) page appears.
 2.  Use the [Search](searching-for-skus.md) feature or scroll to find the SKU you want to view. Click the **SKU ID.** The SKU details page appears with all the SKU information.\
-    \
 
 
     <figure><img src="../../../../.gitbook/assets/image (242).png" alt=""><figcaption></figcaption></figure>

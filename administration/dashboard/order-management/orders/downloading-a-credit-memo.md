@@ -24,8 +24,7 @@ To download a credit memo:
 1. Click **Orders** in the left navigation. The Orders page appears.
 2. [Filter your orders](filtering-your-orders.md), if needed.
 3. Click the order ID link under the **ID** column. The Order details page appears.
-4.  To download a credit memo, click the **Download credit memo** link in the upper right corner of the Order details page.\
-
+4.  To download a credit memo, click the **Download credit memo** link in the upper right corner of the Order details page.
 
     <figure><img src="../../../../.gitbook/assets/image (260).png" alt=""><figcaption></figcaption></figure>
 5. Click the credit memo you want to download.\

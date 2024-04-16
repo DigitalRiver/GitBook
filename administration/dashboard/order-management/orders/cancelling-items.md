@@ -23,6 +23,5 @@ To cancel items:
 6. Click **Review and submit.**
 7. The Cancellation items dialog box opens for you to review and confirm the cancellation. Click **Confirm**.\
    \
-   ![](<../../../../.gitbook/assets/3 nu cancellation items review modal.png>)\
-
+   ![](<../../../../.gitbook/assets/3 nu cancellation items review modal.png>)
 8. A green **Cancellation successful** dialog box will appear in the screen's bottom left corner.

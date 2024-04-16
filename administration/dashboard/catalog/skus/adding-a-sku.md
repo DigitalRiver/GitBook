@@ -7,14 +7,13 @@ description: Learn how to add a SKU.
 To add a SKU:
 
 1. Click **SKUs** in the left navigation. The SKUs page appears.
-2.  Click the **Add SKU** button at the top right of the page. The Add SKU page appears.\
-
+2.  Click the **Add SKU** button at the top right of the page. The Add SKU page appears.
 
     <figure><img src="../../../../.gitbook/assets/1 adding a sku.png" alt=""><figcaption></figcaption></figure>
 3. Enter the required SKU information. The Metadata and Additional information sections are optional.\
    **Note:** You must provide one of the following:
    * **ECCN** and **Tax Code** (both pieces of information)
-   * **SKU group**. Select one from the dropdown list.&#x20;
+   * **SKU group**. Select one from the dropdown list.
 4. Click **Save** at the top right of the page.
 5. A green **SKU added** dialog box will appear in the bottom left corner of the screen.
 
@@ -96,13 +95,13 @@ Provides a summary description of a product.
 
 Specifies the [address ](../../../../product-management/creating-and-updating-skus.md#image-and-url)of a resource that contains the product's description.
 
-#### Image URL&#x20;
+#### Image URL
 
 Specifies the URL of a resource that holds the product's [image](../../../../product-management/creating-and-updating-skus.md#image-and-url). This resource should link to one or more images you want to display to customers while they are reviewing products in a store.
 
 #### Item breadcrumb
 
-Specifies a path that serves as a navigational and tax classification aid for the product associated with this SKU. Create a text path to the current product in relation to the product's site structure, starting from the top level to the current product.&#x20;
+Specifies a path that serves as a navigational and tax classification aid for the product associated with this SKU. Create a text path to the current product in relation to the product's site structure, starting from the top level to the current product.
 
 The correct format for this item is `TopCategory > SubCategory1 > SubCategory2 > SubCategory3`. A space ( ) should precede and follow each angle bracket (>), for example:\
 `Sports & Outdoors > Exercise & Fitness > Wearable Technology > Fitness Trackers`. Do not use a semicolon (;) character in your item. The category string has a 100-character limit. The total item breadcrumb string has a 4000-character limit.

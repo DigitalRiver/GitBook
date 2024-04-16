@@ -13,7 +13,6 @@ To edit a customer's account information:
 
     \
     ![](<../../../.gitbook/assets/2 editing Customer info.png>)\
-    \
 
 
     <figure><img src="../../../.gitbook/assets/1 Editing Customer info.png" alt=""><figcaption></figcaption></figure>

@@ -11,8 +11,7 @@ To edit a user:
 3. Click the **More options** (vertical ellipses) in the rightmost column of the Users table.\
    ![](<../../../../.gitbook/assets/1 Editing user - options modal.png>)
 4. To change or update the user's role, click **Edit**.
-5.  From the **Edit user access** dialog, choose the user role you want to assign to the user, and click **Update**.\
-
+5.  From the **Edit user access** dialog, choose the user role you want to assign to the user, and click **Update**.
 
     <div align="left">
 

@@ -24,6 +24,5 @@ You can filter the list on the Sales summaries page to display the information y
 1. Click **Sales summaries** in the left navigation. The Sales summaries page appears.
 2. Click the **Filter** dropdown menu. The **Filters** dialog appears.\
    \
-   ![](<../../../../.gitbook/assets/1 filtering sales summaries.png>)\
-
+   ![](<../../../../.gitbook/assets/1 filtering sales summaries.png>)
 3. Complete all or some of the fields and click **Apply**. The **Filter** button displays how many changes you applied to the Filter settings while you are on the page. The Filter settings return to their default settings when you leave the page. To clear the settings on the filter, click **Filter** and then click **Clear**.

@@ -8,9 +8,7 @@ description: >-
 
 ## Updating your API version on all keys
 
-Use the **Update version on all keys** button on the Keys and versioning pane to [select a version and update all keys to that version](updating-your-api-version.md). You can select to update all API keys to the latest API version or a previous API version. When you update all keys, the API version column for standard keys and restricted keys displays the version you selected.\
-\
-
+Use the **Update version on all keys** button on the Keys and versioning pane to [select a version and update all keys to that version](updating-your-api-version.md). You can select to update all API keys to the latest API version or a previous API version. When you update all keys, the API version column for standard keys and restricted keys displays the version you selected.
 
 <figure><img src="../../../../.gitbook/assets/1 Update versioning.png" alt=""><figcaption></figcaption></figure>
 
@@ -19,8 +17,7 @@ Use the **Update version on all keys** button on the Keys and versioning pane to
 3. Click the **Release notes** link to review the latest changes. If required, apply the necessary changes to your system before you continue.
 4. Select a version from the **API Version** dropdown list and click **Update all keys in test mode** or **Update all keys in production mode.**\
    \
-   ![](<../../../../.gitbook/assets/2 Update versioning modal 1.png>)\
-
+   ![](<../../../../.gitbook/assets/2 Update versioning modal 1.png>)
 
 {% hint style="warning" %}
 The key won't be available for immediate use. It takes up to 10 minutes for the key to fully propagate.

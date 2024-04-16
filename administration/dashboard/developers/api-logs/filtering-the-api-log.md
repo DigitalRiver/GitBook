@@ -22,8 +22,7 @@ You can filter the list on the Event logs page to display the information you wa
 1. Click **API logs** in the left navigation. The API logs page appears.
 2. Click **Filter**. The Filters dialog appears.\
    \
-   ![](<../../../../.gitbook/assets/1 API log filters.png>)\
-
+   ![](<../../../../.gitbook/assets/1 API log filters.png>)
 3. If desired, specify a **Date range** filter. To do this, first specify a range **Start Date** by clicking the calendar icon on the right side of the **Start Date** field. You are presented with the calendar page dialog.
 4. In the calendar page, choose the date, month, and year that you want for your **Start Date**. To assist you with selecting your date, click the left/right chevrons to go back and forth in time on the calendar page .
 5. Click your desired date and the Time selection clock modal appears to let you pick a time if more filtering precision is needed.

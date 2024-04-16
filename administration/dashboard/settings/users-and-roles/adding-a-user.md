@@ -12,15 +12,14 @@ To add a user:
 3. Click **Add user**.
 4. Complete the fields.
 5. Select the type of user: **Client** or **Partner**.
-6. Select the role. Your options are as follows:&#x20;
-   * **Administrator** – has complete access.&#x20;
-   * **User manager** – enables management of user accounts and roles.&#x20;
-   * **Developer** – has access to the developer section: APIs, webhooks, event logs, and API logs.&#x20;
-   * **Customer service** – enables management of orders, returns, and refunds.&#x20;
+6. Select the role. Your options are as follows:
+   * **Administrator** – has complete access.
+   * **User manager** – enables management of user accounts and roles.
+   * **Developer** – has access to the developer section: APIs, webhooks, event logs, and API logs.
+   * **Customer service** – enables management of orders, returns, and refunds.
    * **Finance Manager** – enables management of finance and order screens.\
      \
      ![](<../../../../.gitbook/assets/2 adding users - user form modal.png>)\
-     \
 
 7. Click **Next**.
 8. Click **Confirm** to add the user.\

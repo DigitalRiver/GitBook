@@ -4,7 +4,7 @@ description: Learn how to reset your password if you forgot it.
 
 # Reset your password
 
-If you forget your password, you can reset it by having instructions sent to your registered phone number (if multi-factor authentication is enabled) or the email address you entered during activation.&#x20;
+If you forget your password, you can reset it by having instructions sent to your registered phone number (if multi-factor authentication is enabled) or the email address you entered during activation.
 
 {% hint style="info" %}
 **Note:** To have instructions sent to your registered phone number, you must have [multi-factor authentication enabled](profile-settings/enabling-two-factor-authentication.md).
@@ -14,8 +14,7 @@ To reset your password:
 
 1. Go to the [Sign in](https://dashboard.digitalriver.com/login) page, enter your email address, and click **Next**.\
    \
-   ![](<../../.gitbook/assets/6 DRDB new account signin (2).png>)\
-
+   ![](<../../.gitbook/assets/6 DRDB new account signin (2).png>)
 2. Click the **Forgot?** link and the following is displayed\
    \
    <img src="../../.gitbook/assets/Forgot-password-return-to-sign-in-email.png" alt="" data-size="original">

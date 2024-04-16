@@ -18,7 +18,6 @@ To view the order details:
 2. [Filter your orders](filtering-your-orders.md), if needed.
 3. Click the order ID link under the **ID** column. The Order details page appears.
 4.  To view fees, [landed cost](../../../../integration-options/checkouts/creating-checkouts/landed-costs.md) (including importer duty and importer tax), discount, tax, and metadata for a line item, expand the row. The summary displays the total fees, discounts, and taxes.\
-    \
 
 
     <figure><img src="../../../../.gitbook/assets/2 nu order details partial.png" alt=""><figcaption></figcaption></figure>

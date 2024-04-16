@@ -11,8 +11,7 @@ To add a tax certificate to a customer:
 1. Click **All customers** in the left navigation. The Customers page appears.
 2. [Search](../searching-for-customers.md) or scroll to find the customer you want to edit.
 3. Click the customer ID link under the **Customer** **ID** column. The Customer details page appears.
-4.  Click the **Add tax certificate** button in the Tax section. If a tax certificate exists, click the **Add tax certificate** link under the existing ID. The Add tax certificate dialog box appears.\
-
+4.  Click the **Add tax certificate** button in the Tax section. If a tax certificate exists, click the **Add tax certificate** link under the existing ID. The Add tax certificate dialog box appears.
 
     <figure><img src="../../../../.gitbook/assets/1 adding a tax certificate.png" alt=""><figcaption></figcaption></figure>
 

@@ -24,8 +24,7 @@ To export your transactions as JSON:
 1. Click **Transactions** in the left navigation. The Transactions page appears.
 2. [Filter your transactions](filtering-your-transactions.md), if needed.
 3. Click the down arrow ![](<../../../../.gitbook/assets/down-arrow (2).png>) and click **Export as JSON**.\
-   ![](<../../../../.gitbook/assets/3 transaction export dropdown json.png>)\
-
+   ![](<../../../../.gitbook/assets/3 transaction export dropdown json.png>)
 4. Click the **Export as JSON** button (not the arrow).\
    ![](<../../../../.gitbook/assets/4 transaction export json.png>)\
    The **Save As** dialog appears.

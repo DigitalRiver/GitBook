@@ -12,8 +12,7 @@ If you have an Administrator role, you can create and add a new customer or choo
 
 To create and add a new customer to the **Create Prebuilt Checkout links** page, do the following:
 
-1.  &#x20;In the **Optional information** section of the **Create Prebuilt Checkout links** page, click **Add Customer** to display the **Add customers** modal.\
-    \
+1.  In the **Optional information** section of the **Create Prebuilt Checkout links** page, click **Add Customer** to display the **Add customers** modal.\
 
 
     <div align="left">
@@ -22,7 +21,6 @@ To create and add a new customer to the **Create Prebuilt Checkout links** page,
 
     </div>
 2.  Select **Create new customer** to expand the **Add customers** modal.\
-    \
 
 
     <div align="left">
@@ -31,12 +29,10 @@ To create and add a new customer to the **Create Prebuilt Checkout links** page,
 
     </div>
 3. Add the **Customer ID** and customer **Email address**.
-4.  Click **Continue** to add the customer to the **Customer** subsection of the **Optional information** section of the **Create Prebuilt Checkout links** page.\
-
+4.  Click **Continue** to add the customer to the **Customer** subsection of the **Optional information** section of the **Create Prebuilt Checkout links** page.
 
     <figure><img src="../../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
-5.  Select the type of customer you are adding. Choose either **Individual** or a **Business**.\
-
+5.  Select the type of customer you are adding. Choose either **Individual** or a **Business**.
 
     <figure><img src="../../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
@@ -46,19 +42,16 @@ To create and add a new customer to the **Create Prebuilt Checkout links** page,
 
 To add an existing customer to the **Create Prebuilt Checkout links** page, do the following:
 
-1.  In the **Optional information** section of the **Create Prebuilt Checkout links** page, click **Add Customer** to display the **Add customers** modal.\
-
+1.  In the **Optional information** section of the **Create Prebuilt Checkout links** page, click **Add Customer** to display the **Add customers** modal.
 
     <figure><img src="../../../../.gitbook/assets/5 Add current customer to PBCO links (3).png" alt=""><figcaption></figcaption></figure>
-2.  Select **Choose from current customers** to expand the **Add customers** modal.\
-
+2.  Select **Choose from current customers** to expand the **Add customers** modal.
 
     <figure><img src="../../../../.gitbook/assets/6 Add a current customer info to PBCO links.png" alt=""><figcaption></figcaption></figure>
-3. Enter the **Customer ID** or customer **Email address** to search for a current customer.&#x20;
+3. Enter the **Customer ID** or customer **Email address** to search for a current customer.
 4. Press **Enter**.
 5. Select the customer you want to add from your search results.
-6.  Click **Continue** to add the selected customer to the **Customer** subsection of the **Optional information** section.\
-
+6.  Click **Continue** to add the selected customer to the **Customer** subsection of the **Optional information** section.
 
     <figure><img src="../../../../.gitbook/assets/7 Add current customer optional info.png" alt=""><figcaption></figcaption></figure>
 
@@ -66,4 +59,4 @@ To add an existing customer to the **Create Prebuilt Checkout links** page, do t
 
 To change the customer that has already been added to the **Create Prebuilt Checkout links** page, do the following:
 
-1. After you added a customer to the Create Prebuilt Checkout links page, click **Change customer** in the **Customer** subsection of the **Optional information** section to redisplay the **Add customers** modal.  [Create and add a new customer](add-a-customer-during-prebuilt-checkout.md#create-and-add-a-new-customer-to-the-create-drop-in-checkout-links-page) or select a [current customer](add-a-customer-during-prebuilt-checkout.md#add-a-current-customer-to-the-create-drop-in-checkout-links-page).
+1. After you added a customer to the Create Prebuilt Checkout links page, click **Change customer** in the **Customer** subsection of the **Optional information** section to redisplay the **Add customers** modal. [Create and add a new customer](add-a-customer-during-prebuilt-checkout.md#create-and-add-a-new-customer-to-the-create-drop-in-checkout-links-page) or select a [current customer](add-a-customer-during-prebuilt-checkout.md#add-a-current-customer-to-the-create-drop-in-checkout-links-page).

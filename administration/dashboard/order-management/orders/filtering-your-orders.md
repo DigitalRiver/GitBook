@@ -19,6 +19,5 @@ To filter the results in the Orders list:
 
 1. Click **Orders** in the left navigation. The Orders page appears.
 2. Click **Filter**. The Filters dialog appears.\
-   ![](<../../../../.gitbook/assets/2 nu orders filtering filter all.png>)\
-
+   ![](<../../../../.gitbook/assets/2 nu orders filtering filter all.png>)
 3. Complete all or some of the fields and click **Apply**. The **Filter** button displays how many changes you applied to the Filter settings while you are on the page. The Filter settings return to their default settings when you leave the page. To clear the settings on the filter, click **Filter** and then click **Clear**.

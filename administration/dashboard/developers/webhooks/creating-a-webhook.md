@@ -28,8 +28,7 @@ When creating a webhook from the Digital River Dashboard, you need to determine 
 
 1.  From the Webhooks page, click **Create Webhook**.\
     \
-    **Note:** An event triggers a webhook to send a notification to you. The Create webhook page lists and describes the available events. \
-
+    **Note:** An event triggers a webhook to send a notification to you. The Create webhook page lists and describes the available events.&#x20;
 
     <div align="left">
 
@@ -37,16 +36,14 @@ When creating a webhook from the Digital River Dashboard, you need to determine 
 
     </div>
 2. Toggle **Disabled** to **Enabled**.
-3.  If required, select the API version you want to associate with events from the **API Version** dropdown list. By default, the confidential key version is selected.\
-
+3.  If required, select the API version you want to associate with events from the **API Version** dropdown list. By default, the confidential key version is selected.
 
     <div align="left">
 
     <figure><img src="../../../../.gitbook/assets/2 Creating webhooks - api version.png" alt=""><figcaption></figcaption></figure>
 
     </div>
-4.  Click **HTTP** for the **Authentication method** and complete the **Username** and **Password** fields. \
-
+4.  Click **HTTP** for the **Authentication method** and complete the **Username** and **Password** fields.
 
     <div align="left">
 
@@ -59,8 +56,7 @@ When creating a webhook from the Digital River Dashboard, you need to determine 
 
 ### Create a webhook requiring OAuth authentication
 
-1.  From the Webhooks page, click **Create Webhook**.\
-
+1.  From the Webhooks page, click **Create Webhook**.
 
     <div align="left">
 
@@ -68,24 +64,21 @@ When creating a webhook from the Digital River Dashboard, you need to determine 
 
     </div>
 2. Toggle **Disabled** to **Enabled**.
-3.  If required, select the API version you want to associate with events from the **API Version** dropdown list. By default, the confidential key version is selected.\
-
+3.  If required, select the API version you want to associate with events from the **API Version** dropdown list. By default, the confidential key version is selected.
 
     <div align="left">
 
     <figure><img src="../../../../.gitbook/assets/4 Creating webhooks - api version2.png" alt=""><figcaption></figcaption></figure>
 
     </div>
-4.  Click **OAuth** for the **Authentication method**.\
-
+4.  Click **OAuth** for the **Authentication method**.
 
     <div align="left">
 
     <figure><img src="../../../../.gitbook/assets/image (249).png" alt=""><figcaption></figcaption></figure>
 
     </div>
-5.  Select one of the following options from the Grant type dropdown list and complete the \*\*\*\* fields.\
-
+5.  Select one of the following options from the Grant type drop-down list and complete the associated fields.
 
     <div align="left">
 
@@ -121,4 +114,4 @@ To verify signatures, you need to retrieve your endpoint's token from the [Dashb
 1. From the Webhooks page on the Dashboard, click the **Reveal secret** token associated with the endpoint you want to verify.
 2. Provide your credentials and click **Authenticate**. The **Token** field under **Signing secret** will display the token.
 
-See [Digital River signature](broken-reference) for more information.
+See [Digital River signature](broken-reference/) for more information.

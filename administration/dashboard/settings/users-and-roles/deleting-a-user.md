@@ -10,9 +10,8 @@ To delete a user:
 2. [Filter your users](filtering-your-users-and-roles.md), if needed.
 3. Click the **More options** (vertical ellipses) in the rightmost column of the Users table.\
    \
-   ![](<../../../../.gitbook/assets/1 Deleting a user - options modal.png>)\
-
+   ![](<../../../../.gitbook/assets/1 Deleting a user - options modal.png>)
 4. To delete a user, click **Delete**.
 5. Click **Delete** to confirm the change.\
    \
-   ![](<../../../../.gitbook/assets/2 deleting a user modal.png>)\
+   ![](<../../../../.gitbook/assets/2 deleting a user modal.png>)

@@ -12,24 +12,22 @@ You can [fulfill ](fulfilling-items.md)an order fully or partially from the [Ord
 
 To fulfill items:
 
-1.  Click **Orders** in the left navigation. The Orders page appears.\
-
+1.  Click **Orders** in the left navigation. The Orders page appears.
 
     <figure><img src="../../../../.gitbook/assets/1 nu fulfill orders orders page.png" alt=""><figcaption></figcaption></figure>
-2. [Search for your orders](searching-for-orders.md).&#x20;
+2. [Search for your orders](searching-for-orders.md).
 3. [Filter your search results](filtering-your-orders.md) for Accepted orders.
 4. Click the accepted order ID link under the **ID** column. The Order details page appears.
 5. Select the items and quantities to fulfill the order.\
    \
-   ![](<../../../../.gitbook/assets/2 nu fulfill order details partial (1).png>)\
-
+   ![](<../../../../.gitbook/assets/2 nu fulfill order details partial (1).png>)
 6. Click **Fulfill items**. The Create fulfillment page appears.\
    \
    ![](<../../../../.gitbook/assets/3 nu fulfill order fulfill modal.png>)
-7. Select the items and quantities to fulfill. \
+7. Select the items and quantities to fulfill.\
    \
    ![](<../../../../.gitbook/assets/4 nu fulfill order select fulfill modal.png>)
-8. Add optional shipping and tracking information in the Optional information section. The optional fields are as follows:&#x20;
+8. Add optional shipping and tracking information in the Optional information section. The optional fields are as follows:
    * Shipment ID: The seller and shipper of goods provide a unique alpha-numeric string that identifies the shipment.
    * Tracking company: The name of the company tracking the item.
    * Tracking number: The tracking company assigns a unique string to a package when shipping it. Tracking numbers are useful for knowing the location of time-sensitive deliveries.

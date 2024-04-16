@@ -13,7 +13,6 @@ To view a SKU's tariff code:
 1. Click **SKUs** in the left navigation. The SKUs page appears.
 2. Use the [Search](searching-for-skus.md) feature or scroll to find the SKU you want to view. Click the **SKU ID.** The SKU details page appears with the SKU information.
 3.  Scroll down to the bottom of the [SKU details page](viewing-the-sku-details.md). Tariff codes associated with the SKU are displayed in the **Tariff code** subsection of the SKU details page.\
-    \
 
 
     <figure><img src="../../../../.gitbook/assets/1 vu product tarrif codes (1).png" alt=""><figcaption></figcaption></figure>
