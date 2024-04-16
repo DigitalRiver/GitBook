@@ -1,9 +1,0 @@
-root: ./
-
-redirects:
-  digital-river-api/developer-resources/digitalrivercheckout.js-reference/digitalrivercheckout-object/components/address-component: digital-river-api/developer-resources/digitalrivercheckout.js-reference/digitalrivercheckout-object/components/shipping-component.md
-
-structure:  
-    readme: README.md  
-    summary: SUMMARY.md​
-
