@@ -1,4 +1,4 @@
-root: ./digital-river-api/
+root: ./
 
 ​structure:
   readme: README.md
