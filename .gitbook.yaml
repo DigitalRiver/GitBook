@@ -1,0 +1,9 @@
+root: ./digital-river-api/
+
+​structure:
+  readme: README.md
+  summary: SUMMARY.md​
+
+redirects:
+  developer-resources/digital-river-api-reference/subscriptions: digital-river-apis-reference/s8PjaECtf9kQtTXu8xRQ/subscriptions.md
+  https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions: digital-river-apis-reference/s8PjaECtf9kQtTXu8xRQ/subscriptions.md
