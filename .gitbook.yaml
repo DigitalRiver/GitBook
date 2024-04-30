@@ -7,5 +7,5 @@ root: ./
 redirects:
   developer-resources/digital-river-api-reference/subscriptions: digital-river-apis-reference/s8PjaECtf9kQtTXu8xRQ/subscriptions.md
   https://www.digitalriver.com/docs/digital-river-api-reference/#tag/Subscriptions: digital-river-apis-reference/s8PjaECtf9kQtTXu8xRQ/subscriptions.md
-  quick-start-guide: administration/dashboard/quick-start-guide
+  quick-start-guide: administration/dashboard/quick-start-guide.md
   general-resources/glossary#tariff-code: general-resources/glossary#cross-border.md
