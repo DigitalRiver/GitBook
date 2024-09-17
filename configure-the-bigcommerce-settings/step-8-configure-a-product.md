@@ -4,9 +4,11 @@ description: Learn how to configure a product for your store.
 
 # Step 8: Configure a product
 
+To configure a product in BigCommerce for Digital River integration, follow the steps outlined in this guide. It  includes setting up basic product information, identifiers, pricing details, custom fields, and customs information. Proper configuration ensures seamless product management and compliance with Digital River requirements.
+
 ## Adding a product
 
-You can configure the product as you normally would in BigCommerce with some exceptions. This task walks you through product requirements for Digital River.
+You can configure the product as you normally would in BigCommerce with some exceptions. This task walks you through the product requirements for Digital River.
 
 To add a product:
 
@@ -15,13 +17,13 @@ To add a product:
 2.  Click **Add** to create a new product.
 
     ![](../.gitbook/assets/Add.png)
-3.  Under **Basic Information**, enter the values for **Product Name**, **Default Price**, and **Weight**.
+3.  Under **Basic Information**, enter the **Product Name**, **Default Price**, and **Weight** values.
 
     ![](../.gitbook/assets/Basic-Information.png)
-4.  Under **Product Identifiers**, enter the values for **SKU** and the **Manufacturer Part Number (MPN)**. Your fulfillment partner can provide the manufacturer part number if you are using Digital River's Managed Fulfillment.
+4.  Under **Product Identifiers**, enter the values for **SKU** and the **Manufacturer Part Number (MPN)**. If you are using Digital River's Managed Fulfillment, your fulfillment partner can provide the manufacturer's part number.
 
     ![](../.gitbook/assets/Product-Identifiers.png)
-5.  Under **Pricing**, enter the default price of the product (including tax), select **Default Tax Class** from the **Tax Class** dropdown, and provide a code in the **Tax Provider Tax Code** field. See [Tax code](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#tax-code) in [Managing SKUs](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus) for more information. ****&#x20;
+5.  Under **Pricing**, enter the product's default price (including tax), select **Default Tax Class** from the **Tax Class** drop-down, and provide a code in the **Tax Provider Tax Code** field. See [Tax code](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#tax-code) in [Managing SKUs](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus) for more information.&#x20;
 
     ![](../.gitbook/assets/Pricing.png)
 6.  Under **Custom Fields**, click **Add Custom Fields**.
@@ -31,16 +33,16 @@ To add a product:
 
     **Note**: In BigCommerce, you must enter the number without the decimal points.\
     ![](<../.gitbook/assets/Custom Fields (1).png>)
-8.  A **skuGroupId** field is required if you are using the Digital River app for landed cost. To create a [SKU Group ID](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#sku-group-identifier) field, enter `skuGroupID` in the **Custom Name** field and enter the skuGroupId value in the **Custom Field Value** field.  The `skuGroupId` uniquely identifies the [SKU group](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/SKUs) associated with the SKU.  See [Grouping SKUs](https://docs.digitalriver.com/digital-river-api/product-management/setting-up-sku-groups) for more information.
+8.  A **skuGroupId** field is required if you are using the Digital River app for landed cost. To create a [**SKU Group ID**](https://docs.digitalriver.com/digital-river-api/product-management/creating-and-updating-skus#sku-group-identifier) field, enter `skuGroupID` the **Custom Name** field and the skuGroupId value in the **Custom Field Value** field. The `skuGroupId` uniquely identifies the [SKU group](https://www.digitalriver.com/docs/digital-river-api-reference/#tag/SKUs) associated with the SKU. See [Grouping SKUs](https://docs.digitalriver.com/digital-river-api/product-management/setting-up-sku-groups) for more information.
 
     {% hint style="info" %}
     When updating the `skuGroupId`, you must also update or change the **Basic Product** details. When the webhook triggers, this ensures the product details are synchronized with Digital River.
     {% endhint %}
 9. In the left navigation, click **Customs Information** under **Fulfillment**.
-10. Select the **Manage customs information** check box.
+10. Select the **Manage customs information** checkbox.
 
     ![](<../.gitbook/assets/Customs Information.png>)
-11. Select a country from the **Country of origin** dropdown.&#x20;
+11. Select a country from the **Country of origin** drop-down.&#x20;
 12. Optional. Type a brief description of the product in the **Commodity description** field.
 13. Click **Save**.
 

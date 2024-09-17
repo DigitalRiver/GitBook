@@ -24,15 +24,15 @@ Form Checklist&#x20;
 To style the Pay button within the Digital River drop-in component:
 
 1. Click **Store Setup** in the app menu on the left and then click **Themes**.
-2. Under **Current Theme**, click **Advanced**. and select **Make a Copy** from the dropdown list.\
+2. Under **Current Theme**, click **Advanced**, and select **Make a Copy** from the drop-down list.\
    ![](.gitbook/assets/Themes.png)
 3. Enter a name for the theme in the **Theme Name** field and click **Save a Copy**. \
    ![](.gitbook/assets/Make-a-Copy.png)\
 
-4. Under **Themes**, click more options on the theme you just created and select **Edit Theme Files**.\
+4. Under **Themes**, click more options on your created theme and select **Edit Theme Files**.\
    ![](.gitbook/assets/More-options-Themes.png)
-5. Click the **Do not show me again** check box and click **Edit theme files**. ![](.gitbook/assets/Edit-your-theme-files.png)
-6. From the **Stencil File Editor** tab on your browser, click **assets**, click **scss**, and then click **optimized-checkout.scss**.\
+5. Click the **Do not show me again** checkbox and click **Edit theme files**. ![](.gitbook/assets/Edit-your-theme-files.png)
+6. From your browser's **Stencil File Editor** tab, click **assets**, click **scss**, and then click **optimized-checkout.scss**.\
    &#x20;![](.gitbook/assets/optimized-checkout-css.png)
 7. Copy the following text and paste it at the bottom of the optimized-checkout.scss file.\
    \
@@ -42,7 +42,11 @@ To style the Pay button within the Digital River drop-in component:
    `.DR-button-text{`\
    &#x20;   `color: RED !important;`\
    `}`\
-   ``**Important**: You must add the `!important` rule to the CSS line.
+   **Important**: You must add the `!important` rule to the CSS line.
 8. Click **Save File**. The results will look like this:
 
-![](.gitbook/assets/Payment-final-example.png)
+<div align="left">
+
+<img src=".gitbook/assets/Payment-final-example.png" alt="">
+
+</div>

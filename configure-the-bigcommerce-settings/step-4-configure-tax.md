@@ -4,6 +4,8 @@ description: Learn how to configure tax for your store.
 
 # Step 4: Configure tax
 
+Configuring tax settings is crucial to ensure accurate tax calculation and compliance with regional tax laws. This guide will walk you through setting up tax services, defining tax labels, and configuring display settings. By following these instructions, you can streamline your tax management and provide clarity to your customers during checkout.
+
 ## Configure tax settings
 
 To configure tax settings:
@@ -13,35 +15,35 @@ To configure tax settings:
 
     ![](<../.gitbook/assets/Digitalriverenabled (1).PNG>)
 3. Click **Edit** under **Tax Settings**.
-4.  In the **Tax Label** field, type the label you want to use to describe this tax option.
+4.  Type the label in the **Tax Label** field to describe this tax option.
 
     <img src="../.gitbook/assets/Tax-Label.png" alt="" data-size="original">
 5.  Under **Prices Entered With Tax**, and choose **No, I will enter prices exclusive of tax**.&#x20;
 
-    **Note**: You must set **** the **Prices Entered with Tax** dropdown to **No, I will enter prices exclusive of tax.**&#x20;
+    **Note**: You must set the **Prices Entered with Tax** drop-down to **No, I will enter prices exclusive of tax.**&#x20;
 
     ![](../.gitbook/assets/Pricesenteredwithtax.PNG)
 6.  Under **Fallback Tax**, and choose **Use my manual Tax settings**.
 
     ![](../.gitbook/assets/Fallbacktax.PNG)
-7. Select the specified option from each of the following dropdown menus:
+7. Select the specified option from each of the following drop-down menus:
    * **Calculate Tax Based on**: Destination Address
    * **Shipping Tax Class**: Shipping
    *   **Gift Wrapping Tax Class**: Gift Wrapping\
 
 
-       ****![](../.gitbook/assets/Calculatetaxbasedon.PNG)****
-8. Under **Configure Tax Display Settings**, select the specified option from each of the following dropdown menus:
+       ![](../.gitbook/assets/Calculatetaxbasedon.PNG)
+8. Under **Configure Tax Display Settings**, select the specified option from each of the following drop-down menus:
    * **Show Prices Within Control Panel**: Excluding Tax
    * **Show Prices on Invoices**: Excluding Tax
    * **Show Tax Charges in Cart and Checkout**: Broken down by tax rate
    *   **Show Tax Charges on Orders and Invoices**: Broken down by tax rate
 
        ![](../.gitbook/assets/Configuretaxdisplay.PNG)
-9.  Optional. Under **Configure Default Tax Address**, select a country from the dropdown menu.
+9.  Optional. Under **Configure Default Tax Address**, select a country from the drop-down menu.
 
     ![](../.gitbook/assets/Configure-Default-Tax-Address.png)
-10. Optional. Select a state from the dropdown menu, if applicable.
+10. Optional. Select a state from the drop-down menu, if applicable.
 11. Optional. Enter a postal code, if applicable.
 12. Click **Save**.
 
@@ -64,7 +66,7 @@ To configure the tax rates and zones:
     ![](../.gitbook/assets/Countries-list.png)
 7.  Choose the  **All customers in my store option** for **Tax Zone Applies to**.
 
-    ****![](<../.gitbook/assets/Tax-Zone-Applies-to (1).png>)****
+    ![](<../.gitbook/assets/Tax-Zone-Applies-to (1).png>)
 8.  Select the **Enable this tax zone** check box.
 
     ![](../.gitbook/assets/Enable-this-tax-zone.png)

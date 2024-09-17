@@ -4,7 +4,7 @@ description: Learn how to test the BigCommerce app.
 
 # Test the app
 
-After all the steps are executed and the server is started, the BigCommerce app should seamlessly call Digital River APIs in checkout pages.
+After you complete all the steps and start the server, the BigCommerce app should seamlessly call Digital River APIs on the checkout pages.
 
 The following steps show the stages where you can test the installed BigCommerce app.
 
@@ -14,7 +14,7 @@ The following steps show the stages where you can test the installed BigCommerce
    <img src=".gitbook/assets/Successfully-Registered-2.png" alt="" data-size="original">\
 
 3. When you successfully [configure the API keys for the currency selection](configure-the-bigcommerce-settings/step-2-configure-payments.md):
-   1. Big Commerce will show the updated settings under **Notifications** on the **Digital River Settings** tab on refresh.\
+   1. On refresh, Big Commerce will show the updated settings under **Notifications** on the Digital **River Settings** tab.\
       &#x20;![](.gitbook/assets/Notifications.png)
    2. The [Webhooks ](https://docs.digitalriver.com/digital-river-api/administration/dashboard/developers/webhooks)page on the [Digital River Dashboard ](https://dashboard.digitalriver.com/)will confirm the endpoint (notification URL), username, and password.\
       &#x20;![](.gitbook/assets/Webhooks.png)

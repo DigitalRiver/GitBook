@@ -4,14 +4,16 @@ description: Learn how to configure payments for your store.
 
 # Step 2: Configure payments
 
+To ensure a seamless payment experience on your BigCommerce storefront, follow the steps below to configure Digital River payments. This guide will walk you through the essential settings for integrating Digital River, including currency configuration, API key setup, and warehouse location entry. Properly configuring these settings will enable you to handle multiple currencies and streamline your eCommerce operations.
+
 {% hint style="warning" %}
-For the [Drop-in](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) to work, you have to configure the currency on the BigCommerce storefront and also enable the payment method on the **Digital River Settings** tab. You must complete this task for each supported currency listed in the **Show payment methods** dropdown list.&#x20;
+For the [Drop-in payments](https://docs.digitalriver.com/digital-river-api/payments/payment-integrations-1/drop-in) to work, you must configure the currency on the BigCommerce storefront and enable the payment method on the **Digital River Settings** tab. You must complete this task for each supported currency listed in the **Show payment methods** drop-down list.&#x20;
 {% endhint %}
 
 To configure payments:
 
 1. Click **Settings** in the app menu on the left and then click **Payments**.
-2. From the **Checkout Payment Settings** tab, select the supported currency from the dropdown list under **Show payment methods**. \
+2. From the **Checkout Payment Settings** tab, select the supported currency from the drop-down list under **Show payment methods**. \
    ![](../.gitbook/assets/Show-payment-methods.png)
 3. Disable all non-Digital River payment methods, if applicable.
 4.  Scroll down to **Online Payment Methods** and expand the pane.
@@ -27,10 +29,10 @@ To configure payments:
 
     ![](<../.gitbook/assets/APIkeys (1).PNG>)
 
-    * **Production Confidential Key**–Your Production Confidential Key provided to you by Digital River
-    * **Production Public Key**–Your Production Public Key provided to you by Digital River
-    * **Test Confidential Key**–Your Test Confidential Key (or “evaluation confidential key”) provided to you by Digital River
-    *   **Test Public Key**–Your Test Public Key (or “evaluation public key”) provided to you by Digital River
+    * **Production Confidential Key**–Provide your Digital River production confidential key.
+    * **Production Public Key**–Your Digital River production public key.u by Digital River
+    * **Test Confidential Key**–Your Digital River test confidential key (or “evaluation confidential key”).
+    *   **Test Public Key**–Your Digital River test public key (or “evaluation public key”).
 
         **Note**: The same values that you entered for the fields above must also be copied into your Digital River Payments, Fraud, Tax & Compliance Management app.
 8.  Select **Yes** from the **Test Mode** dropdown menu. **Test Mode** determines whether your store is in test mode. When you are ready to take payments, change this value to **No** (recommended).

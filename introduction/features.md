@@ -4,7 +4,7 @@ description: Learn about the features for the Digital River app.
 
 # Features
 
-The Digital River **** app provides the following features:
+The Digital River app provides the following features:
 
 * Transaction processing
 * Order cancellation
@@ -20,7 +20,7 @@ The Digital River **** app provides the following features:
 * External return integration
 * Order cancellation integration
 * Refund orchestration
-* Tax exclusive and inclusive pricing and display
+* Tax-exclusive and inclusive pricing and display
 * Translations support
 * Automated one-way catalog sync&#x20;
 * Cross-border shipping

@@ -31,11 +31,11 @@ Assuming the following statements are true, you can start accepting payment on y
 * You are on a BigCommerce paid plan.
 * The [Digital River Payments, Fraud, Tax & Compliance Management app is installed](install-the-digital-river-app.md) on your store.
 * You [created a Digital River account](https://docs.digitalriver.com/digital-river-api/administration/dashboard/quick-start-guide#step-1-creating-a-free-test-account).
-* Digital River has [passed your certification](https://docs.digitalriver.com/digital-river-api/developer-resources/standards-and-certifications). You will work with a Digital River Project Manager to set a timeline launch, including scheduling Checkout Certification.
+* Digital River has [passed your certification](https://docs.digitalriver.com/digital-river-api/developer-resources/standards-and-certifications). You will work with a Digital River Project Manager to set a timeline for the launch, including scheduling Checkout Certification.
 
 ### How long until the funds are transferred to my bank?
 
-Contact Digital River for more information. Details will be provided in your Digital River contract.
+You can find the fund transfer details in your Digital River contract. Contact Digital River for more information.&#x20;
 
 ### Will I or my customers receive an additional email or invoice from the payment gateway?
 
@@ -53,13 +53,13 @@ See [Troubleshooting Orders](https://support.bigcommerce.com/s/article/Troublesh
 
 See [Issuing Refunds](https://docs.digitalriver.com/digital-river-api/order-management/returns-and-refunds-1/refunds/issuing-refunds).
 
-### Is there an amount of time after which I cannot perform a refund?
+### Is there any time after which I cannot perform a refund?
 
 &#x20;See [Issuing Refunds](https://docs.digitalriver.com/digital-river-api/order-management/returns-and-refunds-1/refunds/issuing-refunds).
 
 ### What are the limitations around refunds?
 
-Once you [apply an order level refund](https://support.bigcommerce.com/s/article/Processing-Refunds?language=en\_US#refund-order), you may then only refund the remaining order amount afterward. If you **Refund individual items** at this point, you will receive an error.&#x20;
+Once you [apply an order level-refund](https://support.bigcommerce.com/s/article/Processing-Refunds?language=en\_US#refund-order), you may then only refund the remaining order amount afterward. If you **Refund individual items** at this point, you will receive an error.&#x20;
 
 If you want to issue a refund for fees, or importer of record (IOR) tax and duties for cross-border orders, you must initiate this refund from within Digital River.
 
@@ -73,7 +73,7 @@ No. Digital River only supports multiple shipments when shipping all items on th
 
 ### Does the Digital River payment integration automatically check if I have the correct app installed?
 
-Once you download the Digital River **** app from the marketplace, Big Commerce will display all the relevant settings for the storefront. If you do not configure the app settings and ONLY configure the payment settings, there is no additional validation that will flag the store admin that something was not set up for the app to work.
+Once you download the Digital River app from the marketplace, Big Commerce will display all the relevant storefront settings. If you do not configure the app settings and ONLY configure the payment settings, no additional validation will flag the store admin that something was not set up for the app to work.
 
 ## Additional Features&#x20;
 
@@ -93,7 +93,7 @@ Authorize-only is supported. Subscriptions are not supported.
 
 ### How are payment disputes handled?
 
-Digital River will handle chargebacks. Other payment disputes (that is, damaged product on delivery) will need to be handled by the merchant. ****&#x20;
+Digital River will handle chargebacks. The merchant will need to handle other payment disputes (e.g., damaged product on delivery).&#x20;
 
 During the implementation process with your Digital River project manager, you will be set up with access to the Solutions Center and introduced to your Digital River direct contacts.
 
@@ -101,7 +101,7 @@ During the implementation process with your Digital River project manager, you w
 
 To find contact information, click [Support](support.md).
 
-### Can I use my VAT ID in order to get a tax exemption?
+### Can I use my VAT ID to get a tax exemption?
 
 No. The integration does not support VAT ID.
 

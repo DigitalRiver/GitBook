@@ -4,11 +4,13 @@ description: Learn how to configure transactional emails in the BigCommerce App.
 
 # Step 9: Configure transactional emails
 
+Configuring transactional emails allows you to automate and customize customer communication regarding their orders. These emails include notifications for order creation, status updates, and order submissions. Following the steps outlined below, you can efficiently set up and tailor these emails to enhance customer experience and streamline your order management process.
+
 The following task shows you how to create transactional email for:
 
-* **Order Status Update**–Sent when the status of an order is changed.
-* **Order Email**–Sent when an order is created.
-* **Order Notification**–Sent when a shopper submits an order.
+* **Order Status Update**: Sent when the status of an order is changed.
+* **Order Email**: Sent when an order is created.
+* **Order Notification**: Sent when a shopper submits an order.
 
 To create transactional emails:
 

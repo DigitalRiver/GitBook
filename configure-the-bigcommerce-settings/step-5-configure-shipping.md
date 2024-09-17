@@ -4,6 +4,8 @@ description: Learn how to configure shipping for your store.
 
 # Step 5: Configure shipping
 
+Configuring shipping settings in your application is essential to ensure accurate and timely delivery of products to your customers. This section provides step-by-step instructions on setting up your shipping address and adding various country zones to streamline your shipping process. By correctly configuring these settings, you can manage shipping origins, set up shipping zones, and enable static and real-time shipping quotes for a seamless checkout experience.
+
 ## Configuring the shipping address
 
 To configure the shipping address:
@@ -11,19 +13,19 @@ To configure the shipping address:
 1. Click **Settings** in the app menu on the left and then click **Shipping**. The Shipping Manager page appears.
 2.  Under **Shipping Origin**, click **Edit**. The **Configure Shipping Address** dialog appears.
 
-    **Note**: You must select the same country for both [Default country](step-1-configure-the-store-profile.md) and Shipping Origin (ship-from address). If this is not set correctly, the totals displayed to the shopper during checkout and order submission will be different.&#x20;
+    **Note**: You must select the same country for both [Default country](step-1-configure-the-store-profile.md) and Shipping Origin (ship-from address). If you do not set it correctly, the totals displayed to the shopper during checkout and order submission will be different.&#x20;
 
     ![](../.gitbook/assets/Configure-shipping-address.png)\
 
-3. Complete the fields and click **Submit**. Note that the required fields are **Address**, **City Postcode**, and **Country**.
+3. Complete the fields and click **Submit**. The required fields are **Address**, **City Postcode**, and **Country**.
 
 ## Adding a country zone
 
-1.  Under **Checkout Shipping Options** on the **Shipping Manager** page, select **Add a country zone** from the **Add shipping zone** dropdown.
+1.  Under **Checkout Shipping Options** on the **Shipping Manager** page, select **Add a country zone** from the **Add shipping zone** drop-down.
 
     To **Add a country zone**:&#x20;
 
-    1.  Select a country from the **Country** dropdown and click **Submit**. This will add a single country as a valid shipping destination.  For more complex zones like multiple countries, states, or postcodes, set up a [custom zone](step-5-configure-shipping.md#adding-a-custom-zone).
+    1.  Select a country from the **Country** drop-down and click **Submit**. This will add a single country as a valid shipping destination. For more complex zones like multiple countries, states, or postcodes, set up a [custom zone](step-5-configure-shipping.md#adding-a-custom-zone).
 
         ![](../.gitbook/assets/Add-Country-Zone.png)
     2. To configure shipping quotes for a country, click **Configure** next to the country you added.
@@ -38,7 +40,7 @@ To configure the shipping address:
 
 To add a custom zone:&#x20;
 
-1. Under **Checkout Shipping Options** on the **Shipping Manager** page, select **Add a custom zone** from the **Add shipping zone** dropdown. The Add custom zone dialog appears.
+1. Under **Checkout Shipping Options** on the **Shipping Manager** page, select **Add a custom zone** from the **Add shipping zone** drop-down. The Add custom zone dialog will then appear.
 2.  Complete the fields under the **Zone** and **Handling fee** tabs and click **Submit**.
 
     ![](../.gitbook/assets/Add-custom-zone-zone.png)
